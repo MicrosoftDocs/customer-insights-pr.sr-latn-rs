@@ -4,16 +4,16 @@ description: Radite sa prilagođenim modelima iz Azure mašinskog učenja u uslu
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668920"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267251"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli mašinskog učenja
 
@@ -46,15 +46,15 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
 1. Izaberite Machine Learning Studio (klasična) veb-uslugu ili kanal Azure mašinskog učenja u padajućem meniju **Veb-usluga koja sadrži vaš model**. Zatim izaberite **Sledeće**.
    - Saznajte više o [objavljivanju veb-usluge u Machine Learning Studio (klasičnom)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saznajte više o [objavljivanju kanala u Azure mašinskom učenju pomoću dizajnera](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [ SDK-a](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Vaš kanal mora biti objavljen pod [krajnjom tačkom kanala](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Saznajte više o [objavljivanju kanala u Azure mašinskom učenju pomoću dizajnera](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [ SDK-a](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom tačkom kanala](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Unos veb-usluge**, izaberite odgovarajući **Entitet** iz uvida o korisnicima i izaberite **Dalje**.
+   > [!NOTE]
+   > Tok posla prilagođenog modela primenjivaće heuristiku za mapiranje polja za unos veb-usluga u atribute entiteta na osnovu imena i tipa podataka polja. Videćete grešku ako polje veb-usluge ne može da se preslika na entitet.
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurisanje toka posla](media/intelligence-screen2-updated.png "Konfigurisanje toka posla")
-
+   
 1. U koraku **Izlazni parametri modela** postavite sledeća svojstva:
    - Machine Learning Studio (klasični)
       1. Unesite izlaz **Naziv entiteta** u koji želite da se prenose izlazni rezultati veb-usluga.
@@ -95,7 +95,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
       1. Izaberite **Naziv izlaznog parametra putanje** za probni kanal.
 
 1. Izaberite odgovarajući atribut iz padajuće liste **ID klijenta u rezultatima** koja identifikuje klijente i izaberite **Sačuvaj**.
-   Morate da odaberete atribut iz izlaza zaključka sa vrednostima sličnim koloni sa ID-om klijenta entiteta klijenta. Ako nemate takvu kolonu skupu podataka, odaberite atribut koji jedinstveno identifikuje red.
+   Morate da odaberete atribut iz izlaza zaključka sa vrednostima sličnim koloni sa ID-om klijenta entiteta „Klijent“. Ako nemate takvu kolonu skupu podataka, odaberite atribut koji jedinstveno identifikuje red.
 
 ## <a name="run-a-workflow"></a>Pokretanje toka posla
 
@@ -112,3 +112,6 @@ Tok posla se takođe pokreće automatski sa svakim zakazanim osvežavanjem. Sazn
 1. Izaberite **Izbriši** i potvrdite brisanje.
 
 Vaš tok posla će biti izbrisan. [Entitet](entities.md) koji je kreiran kada ste kreirali tok posla opstaje i može se pregledati sa stranice **Entiteti**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

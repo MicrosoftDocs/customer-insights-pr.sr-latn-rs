@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 8cdec4edd599b0249fcf144b5e5c0124504e1e14
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: b9b2e7fa862b595c6a364a7208e42295b4f9df83
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406808"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268887"
 ---
 # <a name="similar-customers-preview"></a>Slični kupci (verzija za pregled)
 
@@ -79,3 +79,6 @@ Model mašinskog učenja binarne klasifikacije dodeljuje rezultat kupcima u sli�
 - Rezultati sličnosti između 0,85 - 1 su kupci koje je sistem klasifikovo *vrlo slično*
 
 Kupci sa rezultatima sličnosti ispod 0,4 nisu uključeni u izlaznu vrednost modela. Sistem ih ne smatra dovoljno sličnim izvornim segmentima.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

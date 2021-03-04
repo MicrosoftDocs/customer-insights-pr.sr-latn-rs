@@ -1,30 +1,26 @@
 ---
-title: Mogućnost uvida o korisnicima
-description: Pregled mogućnosti uvida o korisnicima u usluzi Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
+description: Pregled uvida o korisnicima za Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406810"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477012"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Dynamics 365 Customer Insights mogućnost uvida o korisnicima
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 
-Korisničko iskustvo predstavlja suštinu ambicija digitalne transformacije svake organizacije. Da se takmičile na današnjem tržištu, organizacije moraju da izgrade smislene odnose sa klijentima na ličnom nivou. Efikasno personalizovanje na širokom nivou zahteva potpun, objedinjen prikaz klijenta.
+Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite podatke iz raznih transakcionih, posmatračkih i izvora ponašanja da biste kreirali sveobuhvatni prikaz klijenta. Koristite ove uvide da biste podstakli iskustva i procese koji se fokusiraju na klijenta. Objedinite i razumite podatke o klijentima i iskoristite ih za inteligentan uvid i radnje.
 
-Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite podatke iz raznih transakcionih, posmatračkih i izvora ponašanja da biste kreirali sveobuhvatni prikaz klijenta. Koristite ove uvide da biste podstakli iskustva i procese koji se fokusiraju na klijenta.
-
-**Objedinite i razumite podatke o klijentima i iskoristite ih za inteligentan uvid i radnje.**
-
-Uz uvide o korisnicima, organizacije mogu da urade sledeće:  
+## <a name="main-benefits"></a>Glavne prednosti 
 
 - **Eliminišite podatke i ujedinite podatke o klijentima**
 
@@ -33,15 +29,15 @@ Uz uvide o korisnicima, organizacije mogu da urade sledeće:
 
 - **Obogaćeno obaveštavanjem o ciljnim grupama sadržanim u programu Microsoft Graph**
 
-  - Izgradite bogatije profile klijenata tako što ćete obuhvatiti obaveštavanje o klijentima sadržano u okviru programa Microsoft Graph.  
+  - Izgradite bogatije profile klijenata tako što ćete [obuhvatiti obaveštavanje o klijentima sadržano u okviru programa Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Pojačajte poslovne procese i personalizovana iskustava klijenata**
 
   - Podstaknite personalizovano angažovanje preko kanala – podrška profesionalcima na polju marketinga, prodaje i usluga pomoću unapred pripremljenih, kontekstualnih uvida o klijentima i prilagođene kartice sa profilima klijenata koje se koriste u poslovnim aplikacijama koje oni već svakodnevno koriste
   - Automatizovanje iskustava i procese koji se zasnivaju na klijentima na osnovu prilagodljivih profila, poslovnih mera i segmenata.
-  - Omogućite i proširite poslovne doživljaje napravljene na Microsoft Power Platform. Brzo gradite aplikacije sa ugrađenim uvidima koristeći moćan pristup bez mnogo programiranja koji nudi PowerApps.  
+  - Omogućite i proširite poslovne doživljaje napravljene na platformi [Microsoft Power Platform](https://powerplatform.microsoft.com/). Brzo gradite aplikacije sa ugrađenim uvidima koristeći moćan pristup bez mnogo programiranja koji nudi PowerApps.  
 
-Uvidi o korisnicima će uključivati mogućnosti za sledeće ključne korisnike:
+## <a name="key-audiences"></a>Ključni korisnici
 
 - **Analitičari podataka / administratori:**
 
@@ -58,5 +54,8 @@ Uvidi o korisnicima će uključivati mogućnosti za sledeće ključne korisnike:
 
 - **Poslovni analitičari:**
 
-  - Napravite prilagodljive profile, definišite mere i kreirajte segmente da biste dobili sveobuhvatan prikaz vašeg klijenta, specifičan za vašu organizaciju.  
-  - Koristite spremne konektore za PowerApps ili Microsoft Power BI ili API-ji za otkrivanje uvida u vaše poslovne aplikacije ili BI rešenja.  
+  - Napravite prilagodljive profile, definišite mere, kreirajte segmente i ostvarite prednost od prediktivne analitike da biste dobili sveobuhvatan prikaz vašeg klijenta, specifičan za vašu organizaciju.  
+  - Koristite gotove konektore za nekoliko Microsoft ili nezavisnih aplikacija ili API-je za dalju obradu uvida.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

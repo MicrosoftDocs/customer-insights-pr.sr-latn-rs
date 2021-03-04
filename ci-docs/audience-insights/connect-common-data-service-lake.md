@@ -4,17 +4,17 @@ description: Uvoz podataka iz Common Data Service upravljanog jezera podataka.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643415"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267831"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Povežite se sa podacima u Common Data Service upravljanom jezeru podataka
 
@@ -34,7 +34,10 @@ Podaci uskladišteni u mrežnim uslugama, kao što je Azure Data Lake Storage, m
 
 3. Izaberite **Povezivanje sa uslugom Common Data Service** i izaberite **Sledeće**.
 
-4. Unesite **Naziv** izvora podataka i izaberite **Sledeće**.
+4. Unesite **Naziv** izvora podataka i izaberite **Sledeće**. Smernice za nazive: 
+   - Započnite slovom.
+   - Koristite samo slova i brojeve. Posebni znakovi i razmaci nisu dozvoljeni.
+   - Koristite između 3 i 64 znaka.
 
 5. Navedite **Adresu servera** za vašu Common Data Service organizaciju i izaberite **Prijavite se**.
 
@@ -65,3 +68,6 @@ Da biste se povezali sa drugom uslugom Common Data Service, [kreirajte novi izvo
 3. Izaberite opciju **Uredi** sa liste.
 
 4. Izaberite dodatne entitete s dostupne liste entiteta i izaberite **Sačuvaj**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

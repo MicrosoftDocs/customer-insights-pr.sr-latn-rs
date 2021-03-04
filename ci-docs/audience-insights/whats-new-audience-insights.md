@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 11/02/2020
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 07b4bee0445f9cd7d53a37cd405af839feb07ae3
-ms.sourcegitcommit: 4004eadac7a65e50e0a409cb925958523c2b6348
+ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "4650021"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270449"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
@@ -30,6 +30,77 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="january-2021-updates"></a>Ispravke za januar 2021. godine
+
+Ispravke u januaru 2021. uključuju nekoliko funkcija, nadogradnje performansi i ispravke grešaka.
+
+#### <a name="extensibility"></a>Proširivost
+
+- **Proširena funkcionalnost i poboljšane performanse za SFTP izvoz** Sada možete da izvezete sve izlazne entitete iz usluge Customer Insights na SFTP host. Ranije je izvoz bio ograničen na entitete segmenta. Pored toga, performanse SFTP izvoza omogućavaju veći obim podataka za manje vremena, u zavisnosti od performansi vašeg SFTP hosta.    
+  Za više informacija pogledajte [Konektor za SFTP (pregled)](export-sftp.md).  
+
+#### <a name="segments"></a>Segmenti
+
+- **Predloženi segmenti koje omogućava mašinsko učenje za poboljšanje metrike** Postoji nov način otkrivanja i kreiranja segmenata. Sistem koristi model veštačke inteligencije da predloži segmente koji mogu pomoći u poboljšanju KPI (mere) koji već pratite. Prikazujemo stepen uticaja atributa koje ste odabrali na meru ili neki drugi primarni atribut. Ove informacije pomažu u pronalaženju potencijalnih segmenata koji predstavljaju mogućnosti za poslovanje.    
+  Za više informacija, pogledajte [Predloženi segmenti (pregled)](suggested-segments.md).
+
+#### <a name="data-unification"></a>Ujednačavanje podataka
+
+- **Poboljšano iskustvo podudaranja** U oblasti objedinjavanja podataka, ažurirano je iskustvo podudaranja. Ono vam omogućava da konfigurišete i pregledate pravila podudaranja, uključujući detaljne statistike kako biste dalje objasnili kako podudaranje funkcioniše. Postoje opcije za onemogućavanje pravila podudaranja, tako da ono više nije aktivno, ali zadržava konfiguraciju, pravila podudaranja za prevlačenje i ispuštanje i još mnogo toga.
+  Za više informacija, pogledajte članak [Podudaranje entiteta](match-entities.md).
+
+- **Izlaz postupka uklanjanja duplikata iz procesa podudaranja dostupan je kao entitet** Izlaz postupka uklanjanja duplikata iz procesa podudaranja sada je zapisan u zasebni entitet za dalju analizu. Ovaj entitet se sastoji od polja koja se koriste u procesu uklanjanja duplikata i dobitnih zapisa i odgovarajućih alternativnih zapisa koji se objedinjavaju sa dobitnim zapisom.
+  Za više informacija pogledajte [Izlaz postupka uklanjanja duplikata kao entitet](match-entities.md#deduplication-output-as-an-entity).
+
+#### <a name="system-administration"></a>Administracija sistema
+
+- **Jednostavno delite podatke sa platformom Microsoft Dataverse** Sada možete da delite izlaz iz usluge Customer Insights sa Microsoft Dataverse aplikacijama koje koriste Microsoft Dataverse Managed Data Lake. Kada povežete Dataverse okruženje sa uslugom Customer Insights, dobijate opciju da omogućite deljenje podataka.
+  Više informacija potražite u članku [Upravljanje okruženjem](manage-environments.md).
+
+
+## <a name="december-2020-updates"></a>Ispravke za decembar 2020.
+
+Ispravke u decembru 2020. uključuju nekoliko funkcija, nadogradnje performansi i ispravke grešaka.
+
+### <a name="new-and-updated-features-in-december-2020"></a>Nove i ažurirane funkcije u decembru 2020.
+
+#### <a name="data-enrichment"></a>Obogaćivanje podataka
+
+- **Poboljšano obogaćivanje afiniteta prema brendu i interesovanju**
+  
+  Pojednostavili smo ocene afiniteta kako bismo ih učinili lakšim za razumevanje i korišćenje. Sada možete brzo da identifikujete klijente na osnovu toga koliko imaju afiniteta prema datom brendu ili interesovanju.
+
+  Pored toga, dodali smo nove opcije konfiguracije da bismo bolje kontrolisali kako želite da vaši profili klijenata budu obogaćeni. 
+
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md).
+
+- **Kontrolišite koje profile da obogatite**
+
+  Sada možete da obogatite samo podskup svojih korisničkih profila sa opcijom izbora entiteta segmenta umesto podrazumevanog entiteta klijenta. Kreirajte segment sa profilima klijenata koje želite da obogatite i izaberite ga u konfiguraciji obogaćivanja za skup podataka svog klijenta.
+  Ova funkcija je trenutno dostupna samo za obogaćivanja koja pružaju Experian i HERE Technologies. Uskoro ćemo omogućiti ovu mogućnost za više obogaćivanja.
+
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata demografskim podacima kompanije Experian](enrichment-experian.md) ili [Obogaćivanje profila klijenata uz HERE Technologies](enrichment-here.md).
+
+#### <a name="extensibility"></a>Proširivost
+
+- **Aktivirajte segmente putem usluge Autopilot**
+
+  Izvezite segmente u Autopilot i koristite ih u marketinške svrhe. Za više informacija pogledajte [Konektor za Autopilot (pregled)](export-autopilot.md).
+
+- **Aktivirajte segmente putem usluge SendGrid**
+
+  Izvezite segmente u SendGrid i koristite ih u marketinške svrhe. Za više informacija pogledajte [Konektor za SendGrid](export-sendgrid.md).
+
+#### <a name="system-administration"></a>Administracija sistema
+
+- **Ažurirano iskustvo upravljanja okruženjem**
+  
+  Sada možete da kreirate, uređujete, brišete i resetujete okruženja direktno iz birača okruženja u zaglavlju aplikacije. 
+  
+  Pored toga, okruženje koje koristite biće zakačeno na vrhu table okruženja, tako da više ne morate da ga tražite.
+
+  Više informacija potražite u članku [Upravljanje okruženjem](manage-environments.md).
 
 ## <a name="november-2020-updates"></a>Ispravke za novembar 2020
 
@@ -165,7 +236,7 @@ Za više informacija pogledajte [Obogatite profile klijenata demografskim podaci
 Okno sa detaljima zadataka omogućava vam da vidite detalje o zadacima koje sistem pokreće. To je zgodan način da identifikujete probleme sa konfiguracijom i pronađete rešenja.
 Pregledajte poruke o greškama i pogledajte kako da rešite potencijalne probleme.
  
-- **Obrada informacija dodatih na dodatne stranice**
+- **Obrada informacija dodatih na više stranica**
 
 Ovo poboljšanje dodaje informacije o statusu vaših entiteta na stranicama **Entiteti** i **Klijenti**.
  
@@ -202,9 +273,9 @@ Ispravke u avgustu 2020. uključuju nekoliko funkcija, nadogradnje performansi i
 
 #### <a name="enrichment"></a>Obogaćivanje
 
-- **Obogaćivanje afiniteta interesovanja dostupno je na dodatnim tržištima**
+- **Obogaćivanje afiniteta za interesovanja dostupno na više tržišta**
 
-  Proširujemo dostupnost obogaćivanja afiniteta izvan Sjedinjenih Država na pet dodatnih tržišta: Kanada, Australija, Ujedinjeno Kraljevstvo, Francuska i Nemačka. Ovim proširenjem možete obogatiti podatke o klijentima dodatnim interesovanjima primenljivim na ovim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
+  Proširujemo dostupnost obogaćivanja afiniteta za interesovanja izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete obogatiti podatke o klijentima sa više interesovanja koja su primenljiva na ovim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
   Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md)
 
 
@@ -223,9 +294,9 @@ Ispravke u julu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
 
 #### <a name="enrichment"></a>Obogaćivanje
 
-- **Obogaćivanje afiniteta brendova je dostupno na dodatnim tržištima**
+- **Obogaćivanje afiniteta za brendove dostupno na više tržišta**
 
-  Dostupnost obogaćivanja afiniteta brendova proširujemo izvan Sjedinjenih Država na pet dodatnih tržišta: Kanada, Australija, Ujedinjeno Kraljevstvo, Francuska i Nemačka. Ovim proširenjem možete da obogatite podatke o klijentima lokalnim brendovima na tim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
+  Proširujemo dostupnost obogaćivanja afiniteta za brendove izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete da obogatite podatke o klijentima lokalnim brendovima na tim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
   Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md)
 
 ## <a name="june-2020-updates"></a>Ispravke za jun 2020. godine
@@ -238,7 +309,7 @@ Ispravke u junu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
 
 - **Obogaćivanje podacima kompanije iz usluge Leadspace**
   
-  Definišite polja u objedinjenim profilima klijenata koja se koriste za traženje podataka srodnih kompanija iz usluge Leadspace. Nakon pokretanja postupka obogaćivanja, B2B profili su obogaćeni dodatnim atributima, uključujući veličinu kompanije, lokaciju, delatnost i još mnogo toga.    
+  Definišite polja u objedinjenim profilima klijenata koja se koriste za traženje podataka srodnih kompanija iz usluge Leadspace. Nakon pokretanja procesa obogaćivanja, B2B profili se obogaćuju sa više atributa, uključujući veličinu kompanije, lokaciju, delatnost i još mnogo toga.    
   Ova saradnja omogućava vam da poboljšate kvalitet svojih podataka unosom usluga trećih strana. Da biste iskoristili ovo obogaćenje, potrebna vam je licenca kompanije Leadspace za pristup B2B podacima kompanije. Sistem će koristiti tu licencu da vaše podatke neprekidno obogaćuje.    
   Za više informacija, pogledajte [Obogaćivanje profila kompanije pomoću usluge Leadspace](enrichment-leadspace.md).
 
@@ -264,7 +335,7 @@ Ispravke u junu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
   Nova kontrola Dynamics 365 dodatka za karticu klijenta omogućava vam da prikažete obogaćivanje brendova i interesovanja na svojim kontaktima u aplikacijama za angažovanje klijenata u sistemu Dynamics 365.    
   Za više informacija pogledajte [Dodatak kartice klijenta](customer-card-add-in.md).
 
-- **Dodatni Power Automate okidači**
+- **Više Power Automate okidača**
 
   Produžili smo naše okidače za Power Automate i dodali sledeće okidače:
   - Dobijte obaveštenje ili izvršite radnju kada se dovrši automatsko potpuno osvežavanje (izvori podataka, objedinjavanje, segmenti, mere, izvoz)
@@ -295,12 +366,12 @@ Ispravke u junu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
   
   Pronađite slične klijente u svojoj korisničkoj bazi koristeći veštačku inteligenciju. Model mašinskog učenja binarne klasifikacije dodeljuje ocenu sličnosti klijentima u proširenom segmentu. Rezultat je zasnovan na sličnosti sa kupcima u izvornom segmentu. U zavisnosti od ocene sličnosti, profili klijenata se dodaju u novokreirani segment.
 
-  U digitalnom marketingu se ponekad nazivajući i modelom sličnosti, on koristi model veštačke inteligencije da bi pomogao da pronađete klijente koji su nalik drugom segmentu vaših klijenata, uzimajući u obzir dodatne atribute. To ne samo da vam omogućava da odaberete atribute, već vam omogućava da odredite maksimalni broj klijenata koji bi trebalo da budu u ovom novom segmentu. Model veštačke inteligencije će zatim izračunati ocene sličnosti za svakog klijenta na osnovu izabranih atributa i pronaći klijente sa višom prosečnom ocenom sličnosti. Rezultujući segment će uključiti klijente koji izgledaju slično klijentima u vašem originalnom segmentu.    
+  U digitalnom marketingu to se ponekad naziva modeliranjem po sličnosti, koristi se model veštačke inteligencije kako bi se lakše pronašli klijenti koji su slični drugom segmentu vaših klijenata tako što se u obzir uzima više atributa. To ne samo da vam omogućava da odaberete atribute, već vam omogućava da odredite maksimalni broj klijenata koji bi trebalo da budu u ovom novom segmentu. Model veštačke inteligencije će zatim izračunati ocene sličnosti za svakog klijenta na osnovu izabranih atributa i pronaći klijente sa višom prosečnom ocenom sličnosti. Rezultujući segment će uključiti klijente koji izgledaju slično klijentima u vašem originalnom segmentu.    
   Za više informacija pogledajte članak [Slični klijenti](find-similar-customer-segments.md).
 
 - **Preklapanje segmenata i diferencijatori**
 
-  Preklapanje segmenata omogućava vam da vidite koliko je klijenata zajedničko za dva ili više segmenata. Na primer, kako se segment velikih potrošača preklapa sa segmentom klijenata sa velikim zadovoljstvom ili kako se segment gubitka klijenata preklapa sa segmentom kupaca sa malim zadovoljstvom. Pored toga, možete analizirati kako se preklapanje menja na osnovu nekog dodatnog atributa po vašem izboru.
+  Preklapanje segmenata omogućava vam da vidite koliko je klijenata zajedničko za dva ili više segmenata. Na primer, kako se segment velikih potrošača preklapa sa segmentom klijenata sa velikim zadovoljstvom ili kako se segment gubitka klijenata preklapa sa segmentom kupaca sa malim zadovoljstvom. Pored toga, možete analizirati kako se preklapanje menja na osnovu dodatnog atributa po vašem izboru.
 
   Diferencijatori segmenata otkrivaju šta razlikuje jedan segment od ostatka vaših klijenata ili drugog segmenta. Sve što treba da uradite je da identifikujete segment i sistem će identifikovati atribute profila i mere koje razlikuju segment u obrascu rangirane liste diferencijatora – od najjačeg diferencijatora do najslabijeg.    
   Za više informacija, pogledajte članak [Uvidi u segmente (pregled)](segment-insights.md).
@@ -333,7 +404,7 @@ Ispravke maj 2020. obuhvataju nekoliko funkcija, nadogradnje performansi i popra
 
 - **Ažurirana vremenska linija i straničenje na dodatku kartice klijenta**
 
-  Vremenska osa rešenja programskog dodatka za karticu klijenta podudara se sa vremenskom osom aktivnosti. Poboljšano je straničenje vremenske linije, prikazuje do 50 aktivnosti odjednom. Takođe omogućava učitavanje dodatnih aktivnosti na vremenskoj traci.    
+  Vremenska osa rešenja programskog dodatka za karticu klijenta podudara se sa vremenskom osom aktivnosti. Poboljšano je straničenje vremenske linije, prikazuje do 50 aktivnosti odjednom. Takođe omogućava učitavanje više aktivnosti u vremensku osu.    
   Za više informacija pogledajte [Dodatak kartice klijenta](customer-card-add-in.md).
 
 - **Power Automate okidač za promene segmenta**
@@ -412,7 +483,7 @@ Ispravke za april 2020. obuhvataju nekoliko funkcija, nadogradnje performansi i 
 
 - **Izvezi u LiveRamp**
 
-  Aktivirajte svoje podatke u usluzi LiveRamp® da biste se povezali sa preko 500 platformi u digitalnim, društvenim i TV ekosistemima. Upotrebite svoje podatke u LiveRamp za ciljanje, suzbijanje i personalizovanje oglasnih kampanja.    
+  Aktivirajte svoje podatke u usluzi LiveRamp® da biste se povezali sa preko 500 platformi u digitalnim, društvenim i TV ekosistemima. Koristite svoje podatke u usluzi LiveRamp za ciljanje, suzbijanje i personalizaciju oglasnih kampanja.    
   Više informacija potražite u [LiveRamp&reg; konektoru](export-liveramp.md).
 
 - **Customer Insights programski dodatak za Teams**
@@ -433,7 +504,7 @@ Ispravke za april 2020. obuhvataju nekoliko funkcija, nadogradnje performansi i 
 
 #### <a name="segments"></a>Segmenti
 
-- **Dodatni činilac**
+- **Drugi operater**
   
   Činilac u skupu dozvoljava segmentaciju za kupce po nekoliko mogućih vrednosti niski. Pre nego što je dodeljen ovaj činilac, morali ste da konstruišete takve segmente sa višestrukim uslovima ILI. Činilac u skupu vam omogućava da to uradite sa jednim uslovom.    
   Više informacija potražite u odeljku [Kreiranje i upravljanje segmentima](segments.md).
@@ -444,3 +515,6 @@ Ispravke za april 2020. obuhvataju nekoliko funkcija, nadogradnje performansi i 
   
   Kopirajte svoju konfiguraciju iz jednog okruženja u drugo. Dok kreirate novo okruženje, možete odabrati postojeće okruženje iz kojeg želite da kopirate konfiguraciju. Trenutno podržavamo izvore podataka, objedinjavanje podataka, odnose, mere i segmente za kopiranje. Akreditivi izvora podataka i stvarni podaci se ne kopiraju.    
   Više informacija potražite u članku [Upravljanje okruženjem](manage-environments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

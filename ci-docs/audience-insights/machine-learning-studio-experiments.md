@@ -4,17 +4,17 @@ description: Koristite modele Machine Learning Studio (klasični) u usluzi Dynam
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669035"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270221"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Koristite modele koji se zasnivaju na usluzi Azure Machine Learning Studio (klasični)
 
@@ -171,3 +171,6 @@ Celom [eksperimentu preporuke proizvoda može se pristupiti u Azure AI Gallery.]
 Da biste koristili ta predviđanja u usluzi Customer Insights, morate da **izvezete** predviđanja zajedno sa ID-ovima klijenata. [Izvezite ih na istu lokaciju Azure skladišta blob objekata](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) na koju izvozite izvorne podatke. Veb-usluga predviđanja može se redovno prikazivati i ažurirati ocene.
 
 Podaci koje generiše prilagođeni model mogu se koristiti za dodatno obogaćivanje podataka o klijentima. Za više informacija pogledajte [Prilagođeni modeli mašinskog učenja](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644420"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268335"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Predviđanje gubitka transakcija (verzija za pregled)
 
@@ -85,7 +85,7 @@ Predviđanje gubitka transakcija pomaže u predviđanju da li klijent više neć
 
 1. Ako polja u nastavku nisu popunjena, konfigurišite odnos između entiteta istorije kupovine i entiteta klijenta.
     1. Izaberite **Entitet istorije kupovine**.
-    1. Izaberite **Polje** koje identifikuje klijenta u entitetu istorije kupovine. Mora da se odnosi na primarni ID klijenta entiteta klijenta.
+    1. Izaberite **Polje** koje identifikuje klijenta u entitetu istorije kupovine. Mora da se odnosi na primarni ID klijenta entiteta „Klijent“.
     1. Izaberite **Entitet klijenta** koji odgovara primarnom entitetu klijenta.
     1. Unesite ime koje opisuje odnos.
 
@@ -97,10 +97,12 @@ Predviđanje gubitka transakcija pomaže u predviđanju da li klijent više neć
 
 1. Mapirajte semantička polja sa atributima u entitetu aktivnosti klijenata i izaberite **Sledeće**. Za opis polja pogledajte [preduslove](#prerequisites).
 
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapirajte polja klijenata za podatke o transakcijama.":::
+
 1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurišete. Izaberite **Kreiraj novo** i odaberite dostupni tip aktivnosti ili kreirajte novi.
 
 1. Treba da konfigurišete odnos između entiteta aktivnosti klijenta i entiteta klijenta.
-    1. Izaberite polje koje identifikuje klijenta na tabeli aktivnosti klijenata. Može biti direktno povezano sa primarnim ID-om klijenta entiteta klijenta.
+    1. Izaberite polje koje identifikuje klijenta na tabeli aktivnosti klijenata. Može biti direktno povezano sa primarnim ID-om klijenta entiteta „Klijent“.
     1. Izaberite Entitet klijenta koji odgovara primarnom entitetu klijenta
     1. Unesite ime koje opisuje odnos.
 
@@ -127,7 +129,7 @@ Predviđanje gubitka transakcija pomaže u predviđanju da li klijent više neć
 1. Izaberite predviđanje koje želite da pregledate.
    - **Naziv predviđanja:** Naziv predviđanja naveden pri njegovom kreiranju.
    - **Tip predviđanja:** Tip modela koji se koristi za predviđanje
-   - **Izlazni entitet:** Naziv entiteta za skladištenje predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
+   - **Izlazni entitet:** Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
    - **Predviđeno polje:** Ovo polje je popunjeno samo za neke tipove predviđanja i ne koristi se za predviđanje gubitka.
    - **Status:** Status pokretanja predviđanja.
         - **U redu:** Predviđanje čeka da se pokrenu drugi procesi.
@@ -185,3 +187,6 @@ Brisanjem predviđanja uklanja se i njegov izlazni entitet.
 1. Odaberite uspravne tri tačke pored predviđanja koje želite da izbrišete.
 
 1. Izaberite **Izbriši**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

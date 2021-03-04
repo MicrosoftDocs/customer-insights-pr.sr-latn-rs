@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406822"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269898"
 ---
 # <a name="relationships-between-entities"></a>Relacije između entiteta
 
@@ -28,8 +28,8 @@ Tokom procesa podudaranja i spajanja, sistemske relacije se kreiraju se iza scen
 > ![Kreiranje relacije](media/relationships-entities-merge.png "Kreiranje relacije")
 
 - **Relacija *CustomerToContact*** je kreirana između entiteta Klijent i kontaktnog entiteta. Entitet Klijent dobija ključno polje **Contact_contactId** da stupi u relaciju sa poljem ključa entiteta Kontakt **contactId**.
-- **Relacija _CustomerToContact_** je kreirana između entiteta Klijent i entiteta Poslovni kontakt. Entitet Klijent dobija polje ključa **Account_accountId** da stupi u relaciju sa poljem ključa entiteta Poslovni kontakt **accountId**.
-- **Relacija _CustomerToWebAccount_** je kreirana između entiteta Klijent i entiteta WebAccount. Entitet Klijent dobija polje ključa **WebAccount_webaccountId** da stupi u relaciju sa poljem ključa entiteta WebAccount **webaccountId**.
+- **Relacija *CustomerToContact*** je kreirana između entiteta Klijent i entiteta Poslovni kontakt. Entitet Klijent dobija polje ključa **Account_accountId** da stupi u relaciju sa poljem ključa entiteta Poslovni kontakt **accountId**.
+- **Relacija *CustomerToWebAccount*** je kreirana između entiteta Klijent i entiteta WebAccount. Entitet Klijent dobija polje ključa **WebAccount_webaccountId** da stupi u relaciju sa poljem ključa entiteta WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Kreiranje odnosa
 
@@ -69,3 +69,6 @@ Definišite prilagođene relacije na stranici **Relacije**. Svaka relacija se sa
 ## <a name="next-step"></a>Sledeći korak
 
 Sistemske i prilagođene relacije se koriste za kreiranje segmenata na osnovu više izvora podataka koji se više ne biraju. Za više informacija, pogledajte članak [Segmenti](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

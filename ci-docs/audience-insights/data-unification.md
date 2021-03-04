@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 24321e9e11f9fd4e800526673726e5146ed33674
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 44f97696ec91dc488dd6a7528e186abb99c8288b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406784"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269669"
 ---
-# <a name="data-unification"></a>Ujednačavanje podataka
+# <a name="data-unification-overview"></a>Pregled ujednačavanja podataka
 
 Posle[ podešavanja izvora podataka](data-sources.md), možete objediniti podatke. Ujednačavanje podataka uključuje tri koraka: **Mapiranje**, **Podudaranje** i **Objedinjavanje**.
 
@@ -31,3 +31,6 @@ Nakon dovršetka ujednačavanja podataka, opcionalno možete
 - [postavite relacije između entiteta](relationships.md) da biste napravili sofisticirane segmente
 - [obogatite svoje podatke](enrichment-hub.md) da biste dobili širi spektar uvida o svojim klijentima
 - [definišite aktivnosti](activities.md) od nekih unetih atributa
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

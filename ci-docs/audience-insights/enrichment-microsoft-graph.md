@@ -1,20 +1,20 @@
 ---
 title: Obogatite profile klijenata pomoću usluge Microsoft Graph
 description: Koristite vlasničke podatke iz programa Microsoft Graph da biste obogatili podatke o klijentima s afinitetima brenda i interesovanja.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406788"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269347"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatite profile klijenata afinitetima brenda i interesovanja (pregled)
 
@@ -35,16 +35,21 @@ Mi koristimo podatke o pretraživanju na mreži iz programa Microsoft Graph da b
 
 [Saznajte više o usluzi Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Ocena i pouzdanost afiniteta
+## <a name="affinity-level-and-score"></a>Nivo afiniteta i rezultat
 
-**Ocena afiniteta** se izračunava se na skali od 100 poena, gde 100 predstavlja segment koji ima najveći afinitet prema brendu ili interesovanju.
+Na svakom obogaćenom profilu klijenta pružamo dve povezane vrednosti – nivo afiniteta i ocenu afiniteta. Ove vrednosti vam pomažu da utvrdite koliko je jak afinitet prema demografskom segmentu tog profila, prema brendu ili interesovanju u poređenju sa drugim demografskim segmentima.
 
-Parametar **pouzdanosti afiniteta** takođe se izračunava na skali od 100 poena. To ukazuje na nivo pouzdanosti sistema da segment ima afinitet prema brendu ili interesovanju. Nivo pouzdanosti se zasniva na veličini segmenta i granularnosti segmenta. Veličina segmenta određuje se količinom podataka koju imamo za određeni segment. Granularnost segmenta se određuje po broju atributa (starost, pol, lokacija) koji postoje na profilu.
+*Nivo afiniteta* sastoji se od četiri nivoa, a *ocena afiniteta* se izračunava na skali od 100 poena koja se preslikava na nivo afiniteta.
 
-Ne normalizujemo rezultate za vaš skup podataka. Zbog toga možda nećete videti sve moguće vrednosti ocene afiniteta za svoj skup podataka. Na primer, u vašim podacima možda neće biti obogaćenog profila klijenta sa ocenom afiniteta 100. To je moguće ako u demografskom segmentu nema klijenata koji su postigli 100 za određeni brend ili interesovanje.
 
-> [!TIP]
-> Kada [kreirate segmente](segments.md) pomoću ocena afiniteta, pregledajte raspodelu ocena afiniteta za svoj skup podataka pre nego što odlučite o odgovarajućim graničnim vrednostima ocena. Na primer, ocena afiniteta od 10 može se smatrati značajnom u skupu podataka koji ima najviši rezultat afiniteta od samo 25 za dati brend ili interesovanje.
+|Nivo afiniteta |Ocena afiniteta  |
+|---------|---------|
+|Veoma visoko     | 85-100       |
+|Visok     | 70-84        |
+|Srednje     | 35-69        |
+|Nizak     | 1-34        |
+
+U zavisnosti od granularnosti kojom želite da merite afinitet, možete da koristite nivo afiniteta ili rezultat. Ocena afiniteta vam daje precizniju kontrolu.
 
 ## <a name="supported-countriesregions"></a>Podržane zemlje/regioni
 
@@ -54,17 +59,13 @@ Da biste izabrali zemlju, otvorite **Obogaćivanje brendova** ili **Obogaćivanj
 
 ### <a name="implications-related-to-country-selection"></a>Posledice koje se odnose na izbor zemlje
 
-- Kada [odaberete sopstvene brendove](#define-your-brands-or-interests), obezbedićemo predloge na osnovu odabrane zemlje/regiona.
+- Kada [birate sopstvene brendove](#define-your-brands-or-interests), sistem pruža predloge na osnovu izabrane zemlje ili regiona.
 
-- Kada [birate delatnost](#define-your-brands-or-interests), identifikovaćemo najrelevantnije brendove ili interesovanja na osnovu izabrane zemlje/regiona.
+- Kada [birate delatnost](#define-your-brands-or-interests), dobićete najrelevantnije brendove ili interesovanja na osnovu izabrane zemlje ili regiona.
 
-- Kada [mapirate polja](#map-your-fields), ako polje Zemlja/Region nije mapirano, koristićemo Microsoft Graph podatke iz izabrane zemlje/regiona da bismo obogatili vaše profile klijenta. Taj izbor ćemo iskoristiti i za obogaćivanje profila klijenata koji nemaju dostupne podatke o zemlji/regionu.
-
-- Kada [obogaćujete profile](#refresh-enrichment), obogatićemo sve profile klijenata za koje imamo dostupne Microsoft Graph podatke za izabrane brendove i interesovanja, uključujući profile koji nisu u izabranoj zemlji/regionu. Na primer, ako ste izabrali Nemačku, obogatićemo profile smeštene u Sjedinjenim Državama ako imamo Microsoft Graph podatke za izabrane brendove i interesovanja u SAD.
+- Kada [obogaćujemo profile](#refresh-enrichment), obogatićemo sve profile klijente za koje dobijamo podatke za izabrane brendove i interesovanja. To uključuje profile koji nisu u izabranoj zemlji ili regionu. Na primer, ako ste izabrali Nemačku, obogatićemo profile smeštene u Sjedinjenim Državama ako imamo Microsoft Graph podatke za izabrane brendove i interesovanja u SAD.
 
 ## <a name="configure-enrichment"></a>Konfigurisanje obogaćivanja
-
-Konfigurisanje obogaćivanja za brendove ili interesovanja se sastoji od dva koraka:
 
 ### <a name="define-your-brands-or-interests"></a>Definisanje brendova ili interesovanja
 
@@ -75,9 +76,19 @@ Izaberite neku od sledećih opcija:
 
 Da biste dodali brend ili interesovanje, unesite ga u polje za unos da biste dobili predloge na osnovu termina koji se podudaraju. Ako ne navedemo brend ili interesovanje koje tražite, pošaljite nam povratne informacije koristeći vezu **Predloži**.
 
+### <a name="review-enrichment-preferences"></a>Pregled željenih podešavanja za obogaćivanje
+
+Pregledajte podrazumevane postavke obogaćivanja i ažurirajte ih po potrebi.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Snimak ekrana prozora za željena podešavanja obogaćivanja.":::
+
+### <a name="select-entity-to-enrich"></a>Izaberite entitet koji želite da obogatite
+
+Izaberite **Obogaćeni entitet** i odaberite skup podataka koji želite da obogatite podacima o preduzeću iz usluge Microsoft Graph. Možete izabrati entitet Klijent da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
+
 ### <a name="map-your-fields"></a>Mapiranje polja
 
-Mapirajte polja vašeg objedinjenog entiteta klijenta u najmanje dva atributa da biste definisali demografski segment koji želite da upotrebimo za obogaćivanje podataka o klijentima. Izaberite **Uredi** da biste definisali mapiranje polja i izaberite **Primeni** kada završite. Izaberite **Sačuvaj** da biste dovršili mapiranje polja.
+Mapirajte polja iz vašeg objedinjenog entiteta klijenta da biste definisali demografski segment koji želite da sistem koristi za obogaćivanje podataka o klijentima. Mapirajte zemlju/region i barem atribute „Datum rođenja“ ili „Pol“. Pored toga, morate da mapirate najmanje jedan grad (i državu/pokrajinu) ili poštanski broj. Izaberite **Uredi** da biste definisali mapiranje polja i izaberite **Primeni** kada završite. Izaberite **Sačuvaj** da biste dovršili mapiranje polja.
 
 Sledeći formati i vrednosti su podržani, vrednosti ne razlikuju velika i mala slova:
 
@@ -120,3 +131,6 @@ Afiniteti prema brendu i interesovanju mogu se takođe videti na karticama pojed
 ## <a name="next-steps"></a>Sledeći koraci
 
 Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md), [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da biste pružili personalizovana iskustva svojim klijentima.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

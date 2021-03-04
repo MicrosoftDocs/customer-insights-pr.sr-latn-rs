@@ -1,20 +1,20 @@
 ---
 title: Power Automate konektor | Microsoft Docs
 description: Kreirajte tokove u usluzi Microsoft Power Automate iz usluge Dynamics 365 Customer Insights.
-ms.date: 08/03/2020
+ms.date: 01/20/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: philk
 manager: shellyha
-ms.openlocfilehash: ffe92414365b0b777691a4a2d585100e4fbea591
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406776"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268841"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate konektor (pregled)
 
@@ -22,7 +22,7 @@ Pokrenite određene događaje koji se pojavljuju automatski kada se promene poda
 
 ## <a name="power-automate-triggers"></a>Power Automate okidači
 
-Možete koristiti razne okidače koji vam omogućavaju da kreirate tokove za automatizaciju zadataka koji se ponavljaju, poput obaveštenja ili naprednijih radnji. 
+Koristite okidače da kreirate tokove u oblaku i automatizujete ponavljajuće zadatke, kao što su obaveštenja ili naprednije radnje. 
 
 - Pokrenite kada ne uspe osvežavanje izvora podataka. 
 - Pokrenite kada uspe osvežavanje izvora podataka.
@@ -36,14 +36,20 @@ Možete koristiti razne okidače koji vam omogućavaju da kreirate tokove za aut
 ## <a name="power-automate-actions"></a>Power Automate radnje
 Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više informacija pogledajte [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
 
-## <a name="create-a-power-automate-flow-in-audience-insights"></a>Kreirajte Power Automate tok u uvidima o korisnicima
+## <a name="create-a-power-automate-flow"></a>Kreiranje Power Automate toka
 
-1. U uvidima o korisnicima idite na **Administrator** > **Sistem**.
+1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
 
-1. Na stranici **Sistem** izaberite karticu **Status**.
+1. Na pločici **Power Automate** izaberite **Podesi**.
 
-1. U odeljku **Izvori podataka** izaberite **Tokovi** i izaberite **Kreiranje toka** iz padajuće liste.
-   > [!div class="mx-imgBorder"]
-   > ![Power Automate konektor koji prikazuje radnju „Kreiraj tok“](media/power-automate-connector-create-flow.png "Power Automate konektor koji prikazuje radnju „Kreiraj tok“")
+1. Otvara se Customer Insights konektor (pregled) u usluzi Power Automate. **Prijavite se** u Power Automate.
 
-1. U usluzi Power Automate, izaberite jedan od dostupnih okidača da biste kreirali željeni tok. Ako kreirate prvi tok, prvo ćete morati da potvrdite identitet pomoću Power Automate konektora.
+1. Izaberite jedan od dostupnih okidača i dodajte još koraka svom novom toku. Za više informacija pogledajte [Kreiranje toka u oblaku u usluzi Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+
+Primeri korišćenja tokova: 
+- Pošaljite poruku na Microsoft Teams kanal ako osvežavanje izvora podataka ne uspe. 
+- Pošaljite e-poruku vlasnicima podataka kada se pređe prag na segmentu.
+
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

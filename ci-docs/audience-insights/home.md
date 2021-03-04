@@ -1,7 +1,7 @@
 ---
 title: Stranica Početak u uvidima o korisnicima
 description: Počnite da istražujete aplikaciju na stranici Početak.
-ms.date: 09/30/2020
+ms.date: 01/07/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: bd16966eabb126d9c9945ededc53273df02c3369
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 7cc767f5d80b213a4c1bb5b2e8062bd44c15279b
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406806"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477058"
 ---
 # <a name="create-a-new-environment"></a>Napravite novo okruženje
 
@@ -29,6 +29,8 @@ Možete da se upišete za probnu verziju na [stranici za upisivanje za probnu ve
 
 1. Navedite poslovnu ili školsku adresu e-pošte, recite nam više o sebi i izaberite **Dalje**.
 
+   :::image type="content" source="media/trial-signup-dialog.png" alt-text="Dijalog za registraciju za probnu instancu":::
+
 1. Obezbedite **Ime** za novo okruženje. 
 
 1. Izaberite tip probne verzije.
@@ -41,34 +43,34 @@ Možete da se upišete za probnu verziju na [stranici za upisivanje za probnu ve
 
 Nakon kreiranja okruženja, videćete **Demo** okruženje koje vam omogućava da istražite aplikaciju sa fiktivnim podacima. Uzorke podataka možete promeniti tako da odgovaraju vašoj delatnosti. Izaberite ikonu **Podešavanja** u zaglavlju i izaberite **Podešavanja demo verzije**. Pored toga, možete da promenite vizuelnu temu. 
 
-[Prebacujete se na okruženje](#change-between-environments) koje ste kreirali tokom procesa registracije da biste radili sa sopstvenim podacima.
+[Prebacujete se na okruženje](#switch-environments) koje ste kreirali tokom procesa registracije da biste radili sa sopstvenim podacima.
 
 ## <a name="create-a-new-production-or-sandbox-environment"></a>Kreirajte novo proizvodno ili Sandbox okruženje
 
-U svom okruženju odaberite ikonu **Podešavanja** u zaglavlju i izaberite **Novo okruženje**.
+U svom okruženju izaberite birač **Okruženja** u zaglavlju aplikacije i izaberite **Novo**.
 
-Pratite korake kao da [kreirate probno okruženje](#create-a-trial-environment). Dobijate dodatnu opciju prilikom izbora **Naprednih podešavanja** za čuvanje podataka u usluzi Azure Data Lake. Navedite ime i ključ naloga da biste uspostavili vezu sa uslugom Azure Data Lake. Podaci se podrazumevano čuvaju u jezeru podataka kojim upravlja Customer Insights.
+Pratite korake kao da [kreirate probno okruženje](#create-a-trial-environment). Podaci se podrazumevano čuvaju u jezeru podataka kojim upravlja Customer Insights. Dobijate dodatnu opciju prilikom izbora **Naprednih podešavanja** za čuvanje podataka u usluzi Azure Data Lake. Navedite ime i ključ naloga da biste uspostavili vezu sa uslugom Azure Data Lake. 
 
 > [!IMPORTANT]
 > Čuvanjem podataka u usluzi Azure Data Lake Storage, slažete se da će podaci biti preneti i uskladišteni na odgovarajućoj geografskoj lokaciji za taj Azure nalog za skladištenje, koja može da se razlikuje od mesta skladištenja podataka u usluzi Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost.](https://www.microsoft.com/trust-center)
 
 ## <a name="explore-the-home-page"></a>Istražite matičnu stranicu
 
-Možete [da pristupite Customer Insights okruženju](https://home.ci.ai.dynamics.com/) na sledećem URL-u:[https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
-Stranica **Početak** prikazuje pregled baze klijenata i ključne pokazatelje za praćenje stanja vašeg poslovanja.
+Možete da [pristupite uvidima o korisnicima iz usluge Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na sledećoj URL adresi: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+Stranica **Početak** prikazuje pregled segmenata, mera i podataka o obogaćivanju (ako su konfigurisani) nakon dovršavanja faza [mapiranja](map-entities.md), [podudaranja](match-entities.md) i [objedinjavanja](merge-entities.md).
 
 > [!div class="mx-imgBorder"] 
 > ![Uvidi na matičnoj stranici](media/home-page-insights.png "Uvidi na matičnoj stranici")
 
-U odeljku **Nedavni segmenti**, vidite grupe klijenata na osnovu atributa demografije, ponašanja ili transakcija koje ste definisali. [Pravljenje segmenata](segments.md) vam pomaže da bolje ciljate poslovne aktivnosti.
+U odeljku **Nedavni segmenti**, vidite grupe klijenata na osnovu atributa demografije, ponašanja ili transakcija koje ste definisali. [Kreiranje segmenata](segments.md) pomaže vam da grupišete bazu klijenata i bolje ciljate svoje poslovne aktivnosti.
 
-**Nedavne mere** prikazuju pločice sa [merama](measures.md). Mere su indikatori ključnih performansi (KPI-ovi) koje ste definisali. Na primer, prosečna verovatnoća gubitka klijenta ili prosečna potrošnja na mreži po klijentu.
+**Najnovije mere** pokazuju pločice sa [indikatorima ključnih performansi (KPI-ovi)](measures.md) koje ste definisali. Na primer, prosečna verovatnoća da se klijent odbaci ili prosečna potrošnja na mreži po klijentu.
 
-Odeljak **Nedavna obogaćivanja** navodi rezultate pokretanja obogaćivanja koja su nedavno završena. Obogaćivanja dodaju informacije o vašoj bazi klijenata. Na primer, razumevanjem interesa i brendova za koje imaju sklonost. Ove informacije možete da otključate pomoću mogućnosti [obogaćivanja](enrichment-microsoft-graph.md), nakon završetka faza [mapa](map-entities.md), [podudaranje](match-entities.md) i [spajanje](merge-entities.md).
+Odeljak **Nedavna obogaćivanja** navodi rezultate pokretanja obogaćivanja koja su nedavno završena. [Obogaćivanja](enrichment-hub.md) dodaju informacije o vašoj bazi klijenata. Na primer, razumevanjem interesa i brendova za koje imaju sklonost.
 
-## <a name="change-between-environments"></a>Promena između okruženja
+## <a name="switch-environments"></a>Zamena okruženja
 
-Kada podesite i konfigurišete [izvore podataka](data-sources.md), možete da pređete iz demo okruženja u živo okruženje. Korišćenje proizvodnog okruženja omogućava vam rad sa sopstvenim podacima o klijentima. Izaberite kontrolu **Okruženje** u gornjem desnom uglu stranice da biste promenili okruženje.
+Izaberite kontrolu **Okruženje** u gornjem desnom uglu stranice da biste promenili okruženje.
 
 > [!div class="mx-imgBorder"] 
 > ![Promeni okruženje](media/home-page-environment-switcher.png "Promeni okruženje")
@@ -78,3 +80,6 @@ Administratori mogu da kreiraju [više okruženja](manage-environments.md) i upr
 ## <a name="next-step"></a>Sledeći korak
 
 Da biste videli sopstvene uvide na početnoj stranici, prvo morate da [dodate izvore podataka](data-sources.md) i [objedinite](data-unification.md) podatke kako biste napravili korisničke profile.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

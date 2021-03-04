@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689192"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270297"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u realnom vremenu (pregled)
 
@@ -83,6 +83,7 @@ Detalji ovog API-ja, uključujući parametre i odgovore, mogu se naći u odeljku
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje upotrebe u realnom vremenu pomoću telemetrije
 
-Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete da [pristupite telemetriji u realnom vremenu](system.md#api-usage-tab) odlaskom na **Administrator** > **Sistem** > **Upotreba API-ja**. U tabeli **Operacije** redovi za API operacije koje koriste metode u realnom vremenu sadrže dugme za prikaz upotrebe API-ja u realnom vremenu. Dugme je vizuelno predstavljeno simbolom dvogleda. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.
+Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete [pristupati telemetriji u realnom vremenu](system.md#api-usage-tab). 
 
-Koristiti birač **Grupiši prema** da biste odabrali kako da najbolje predstavite interakcije u realnom vremenu na vremenskoj osi u rasponu od poslednja 24 sata do poslednjih 30 dana. Možete grupisati podatke prema API metodi, nazivu kvalifikovanog entiteta (uneti entitet), vremenu kreiranja (izvor događaja), rezultatu (uspelo ili neuspelo) ili kodovima grešaka. Podaci su dostupni kao vremenski grafikon i tabela.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 9032d99357db86e66588eda544211a5f8eb2f23b
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 63caa2ebdd7d637d14ac9c9cc7972095803aee2f
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643880"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477150"
 ---
-# <a name="export-destinations-preview"></a>Odredišta za izvoz (pregled)
+# <a name="export-destinations-preview-overview"></a>Pregled odredišta za izvoz (pregled)
 
 Stranica **Odredišta za izvoz** prikazuje sve lokacije na koje ste postavili izvoz podataka. Takođe možete dodati nova odredišta za izvoz. Pored toga, prikazuje izvoz trenutno dostupnih opcija. Preuzmite brzi pregled, opis i saznajte šta možete uraditi sa svakom opcijom proširivosti. Izvezite objedinjene profile, mere i segmente u podržane aplikacije relevantne za vaše poslovanje.
 
@@ -27,10 +27,13 @@ Idite na **Administrator** > **Izvoz odredišta** da biste pronašli sledeće op
 - [Power Automate konektor](export-power-automate.md)
 - [Power Apps konektor](export-power-apps.md)
 - [Power BI konektor](export-power-bi.md)
+- [Autopilot](export-autopilot.md)
 - [DotDigital](export-dotdigital.md)
 - [Dynamics 365 Sales](export-dynamics365-sales.md)
 - [Dynamics 365 Marketing](export-dynamics365-marketing.md)
 - [Azure skladište blob objekta](export-azure-blob-storage.md)
+- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
+- [SendGrid](export-sendgrid.md)
 - [LiveRamp&reg; konektor](export-liveramp.md)
 - [Robot za Microsoft Teams](export-teams-bot.md)
 - [Mailchimp](export-mailchimp.md)
@@ -95,3 +98,6 @@ Da biste uklonili odredište za izvoz, počnite iz glavne stranice **Odredišta 
 2. Izaberite **Ukloni** iz padajućeg menija.
 
 3. Potvrdite uklanjanje odabirom **Ukloni** na ekranu za potvrdu.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

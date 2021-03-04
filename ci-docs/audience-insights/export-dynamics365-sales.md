@@ -1,20 +1,20 @@
 ---
 title: Izvezite Customer Insights podatke u Dynamics 365 Sales
 description: Saznajte kako da konfigurišete vezu sa uslugom Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643835"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269025"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Konektor za Dynamics 365 Sales (pregled)
 
@@ -24,7 +24,10 @@ Koristite podatke o klijentima da biste kreirali marketinške spiskove, pratili 
 
 ## <a name="prerequisite"></a>Preduslov
 
-Zapisi kontakata [iz Dynamics 365 Sales unetih pomoću usluge Common Data Service](connect-power-query.md).
+1. Zapisi kontakata moraju biti prisutni u usluzi Dynamics 365 Sales da biste mogli da izvezete segment iz usluge Customer Insights u Sales. Pročitajte više o tome kako se unose kontakti u [Dynamics 365 Sales pomoću usluge Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Izvoz segmenata iz uvida o korisnicima u Sales neće kreirati nove zapise kontakata u instancama usluge Sales. Evidencija kontakata iz usluge Sales mora se uneti u uvid o korisnicima i koristiti kao izvor podataka. Takođe ih treba uključiti u jedinstveni entitet klijenta da bi se ID-ovi klijenata mapirali u ID-ove kontakata da bi segmenti mogli da se izvezu.
 
 ## <a name="configure-the-connector-for-sales"></a>Konfigurišite konektor za Sales
 
@@ -49,3 +52,6 @@ Zapisi kontakata [iz Dynamics 365 Sales unetih pomoću usluge Common Data Servic
 ## <a name="export-the-data"></a>Izvoz podataka
 
 Možete da [izvezete podatke na zahtev](export-destinations.md). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

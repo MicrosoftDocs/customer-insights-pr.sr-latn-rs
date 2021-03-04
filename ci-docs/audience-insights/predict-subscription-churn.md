@@ -5,16 +5,16 @@ ms.date: 08/19/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 03178fc1bfe611b1b0ced08bbbef876035875825
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: c12adab2e4573b1315d74f2111cf13b9f4ee6045
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643745"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268381"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitka pretplata (pregled)
 
@@ -76,7 +76,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. Izaberite **Dodaj podatke** za **Istorija pretplate** i odaberite entitet koji pruža informacije o istoriji pretplate kao što je definisano u [preduslovima](#prerequisites).
 1. Ako polja ispod nisu popunjena, konfigurišite odnos između entiteta istorije pretplate i entiteta klijenta.
     1. Izaberite **Entitet istorije pretplate**.
-    1. Izaberite **Polje** koji identifikuje klijenta u entitetu istorije pretplate. Mora da se odnosi na primarni ID klijenta entiteta klijenta.
+    1. Izaberite **Polje** koji identifikuje klijenta u entitetu istorije pretplate. Mora da se odnosi na primarni ID klijenta entiteta „Klijent“.
     1. Izaberite **Entitet klijenta** koji odgovara primarnom entitetu klijenta.
     1. Unesite ime koje opisuje odnos.
        > [!div class="mx-imgBorder"]
@@ -88,7 +88,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. Izaberite **Dodaj podatke** za **Aktivnosti klijenta** i odaberite entitet koji pruža informacije o aktivnostima klijenta kao što je definisano u preduslovima.
 1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurišete.  Izaberite **Kreiraj novu** i navedite ime ako ne vidite opciju koja odgovara vrsti aktivnosti koja vam je potrebna.
 1. Treba da konfigurišete odnos između entiteta aktivnosti klijenta i entiteta klijenta.
-    1. Izaberite polje koje identifikuje klijenta u tabeli sa aktivnostima klijenta, koji može da bude direktno povezan sa primarnim ID-om klijenta entiteta klijenta.
+    1. Izaberite polje koje identifikuje klijenta u tabeli sa aktivnostima klijenta, koji može da bude direktno povezan sa primarnim ID-om klijenta entiteta „Klijent“.
     1. Izaberite Entitet klijenta koji odgovara primarnom entitetu klijenta
     1. Unesite ime koje opisuje odnos.
 1. Izaberite **Sledeće**.
@@ -113,7 +113,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. Izaberite predviđanje koje želite da pregledate.
    - **Naziv predviđanja:** Naziv predviđanja koji ste naveli prilikom njegovog kreiranja.
    - **Vrsta predviđanja:** Tip modela koji se koristi za predviđanje
-   - **Izlazni entitet:** Naziv entiteta za skladištenje predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
+   - **Izlazni entitet:** Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
    - **Predviđeno polje:** Ovo polje se popunjava samo za neke vrste predviđanja i ne koristi se u predviđanju gubitka pretplata.
    - **Status:** Trenutni status pokretanja predviđanja.
         - **U redu:** Predviđanje trenutno čeka da se pokrenu i drugi procesi.
@@ -164,3 +164,6 @@ Predviđanja se automatski osvežavaju prema istom [rasporedu za osvežavanje po
 
 > [!NOTE]
 > Brisanje predviđanja će ukloniti njegov izlazni entitet.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

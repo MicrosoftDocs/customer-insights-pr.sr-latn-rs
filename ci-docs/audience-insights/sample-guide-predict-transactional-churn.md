@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643610"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269807"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje gubitka transakcija (verzija za pregled)
 
@@ -49,7 +49,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka
    [!div class="mx-imgBorder"]
    ![Transformiši datum rođenja u datum](media/ecommerce-dob-date.PNG "transformacija datuma rođenja u datum")
 
-1. U polju „Ime“ u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kontakti**
+1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kontakti**
 
 1. Sačuvajte izvor podataka.
 
@@ -66,7 +66,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka
    - **Kupljeno dana**: Datum/vreme
    - **Ukupna cena**: Valuta
    
-1. U polju „Ime“ u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kupovine**.
+1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kupovine**.
 
 1. Sačuvajte izvor podataka.
 
@@ -84,7 +84,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka
    - **Nagradni poeni**: Ceo broj
    - **Kreirano**: Datum/vreme
 
-1. U polju „Ime“ u desnom oknu preimenujte izvor podataka iz **Upit** u **Lojalni klijenti**.
+1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **Lojalni klijenti**.
 
 1. Sačuvajte izvor podataka.
 
@@ -166,7 +166,7 @@ Kada su objedinjeni profilima klijenata spremni, sada možemo pokrenuti predviđ
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Izaberite regulatore modela Vremenski period predviđanja i Definicija gubitka.":::
 
-1. Izaberite **Istorija kupovine (obavezno)** i **Dodajte podatke** za istoriju pretplata.
+1. Izaberite **Istorija kupovine (obavezno)** i **Dodajte podatke** za istoriju kupovine.
 
 1. Dodajte entitet **eCommerce kupovine: eCommerce** i mapirajte polja iz platforme eCommerce sa odgovarajućim poljima koje traži model.
 
@@ -204,3 +204,6 @@ Možete da kreirate novi segment na osnovu entiteta koji je kreirao model.
 Sada imate segment koji se dinamički ažurira i koji identifikuje klijente sa visokim rizikom od gubitka za ovu uslugu pretplate.
 
 Više informacija potražite u odeljku [Kreiranje i upravljanje segmentima](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

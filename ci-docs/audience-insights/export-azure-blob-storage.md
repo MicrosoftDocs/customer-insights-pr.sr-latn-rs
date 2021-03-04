@@ -5,16 +5,16 @@ ms.date: 09/18/2020
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 925b53260e7c633e17d7f172d2dd2d581e982e10
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: ecacf20365e78ced8859dfa54b1b16cb923c00eb
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667156"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269209"
 ---
 # <a name="connector-for-azure-blob-storage-preview"></a>Konektor za Azure skladište blob objekata (pregled)
 
@@ -47,4 +47,7 @@ Izvezeni podaci se čuvaju u kontejneru Azure skladišta blob objekata koji ste 
 
 ## <a name="export-the-data"></a>Izvoz podataka
 
-Možete da [izvezete podatke na zahtev](/export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
+Možete da [izvezete podatke na zahtev](export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

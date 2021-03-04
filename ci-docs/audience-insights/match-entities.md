@@ -4,17 +4,17 @@ description: Podudarite entitete da biste kreirali objedinjene profile klijenata
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406817"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267495"
 ---
 # <a name="match-entities"></a>Podudaranje entiteta
 
@@ -22,7 +22,7 @@ Kada završite fazu mapiranja, spremni ste za podudaranje sa entitetima. Faza po
 
 ## <a name="specify-the-match-order"></a>Navedite redosled podudaranja
 
-Idi na **Ujednačavanje** > **Podudaranje** i izaberite **Podesite redosled** da biste započeli fazu podudaranja.
+Idi na **Podaci** > **Ujednačavanje** > **Podudaranje** i izaberite **Podesi redosled** da započnete fazu podudaranja.
 
 Svako podudaranje objedinjuje dva ili više entiteta u jedan entitet, istovremeno zadržavajući svaki jedinstveni zapis korisnika. U sledećem primeru odabrali smo tri entiteta: **ContactCSV: TestData** kao **Primarni** entitet, **WebAccountCSV: TestData** kao **Entitet 2** i **CallRecordSmall: TestData** kao **Entitet 3**. Dijagram iznad izbora ilustruje kako će se redosled podudaranja izvršiti.
 
@@ -136,7 +136,7 @@ Kada se deduplicirani zapis identifikuje, on će se zatim koristiti u procesu un
 
 1. Pokretanje procesa podudaranja sada grupiše zapise na osnovu uslova definisanih u pravilima deduplikacije. Nakon grupisanja zapisa, primenjuju se smernice objedinjavanja za identifikovanje dobitnog zapisa.
 
-1. Dobitni zapis se zatim prosleđuje unakrsnom podudaranju entiteta.
+1. Dobitni zapis se zatim prosleđuje na podudaranje sa entitetima, zajedno sa zapisima koji nisu dobitni (na primer, alternativni ID-ovi) radi poboljšanja kvaliteta podudaranja.
 
 1. Prilagođena pravila podudaranja definisana „podudaraj uvek“ i „ne podudaraj nikada“ zamenjuju pravila deduplikacije. Ako pravilo deduplikacije identifikuje podudarne zapise, a prilagođeno pravilo podudaranja je podešeno da se nikada ne podudara sa tim zapisima, onda se ova dva zapisa neće podudarati.
 
@@ -157,6 +157,17 @@ Proces prvog podudaranja dovodi do kreiranja jedinstvenog master entiteta. Sva n
 
 > [!TIP]
 > Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+
+## <a name="deduplication-output-as-an-entity"></a>Izlaz postupka uklanjanja duplikata kao entitet
+Pored objedinjenog glavnog entiteta kreiranog kao deo podudaranja sa entitetima, postupak uklanjanja duplikata takođe generiše novi entitet za svaki entitet iz redosleda podudaranja kako bi se identifikovali zapisi iz kojih su uklonjeni duplikati. Ovi entiteti se mogu naći zajedno sa **ConflationMatchPairs:CustomerInsights** u odeljku **Sistem** na stranici **Entiteti**, sa imenom **Deduplication_Datasource_Entity**.
+
+Izlazni entitet uklanjanja duplikata sadrži sledeće informacije:
+- ID-ovi/Ključevi
+  - Polje primarnog ključa i njegovo polje alternativnih ID-ova. Polje alternativnih ID-ova sastoji se od svih alternativnih ID-ova identifikovanih za zapis.
+  - Polje Deduplication_GroupId prikazuje grupu ili klaster identifikovane u okviru entiteta koji grupiše sve slične zapise na osnovu navedenih polja uklanjanja duplikata. Ovo se koristi u svrhe obrade sistema. Ako nisu navedena ručna pravila za uklanjanje duplikata i ako se primenjuju sistemski definisana pravila za uklanjanje duplikata, ovo polje možda nećete pronaći u izlaznom entitetu uklanjanja duplikata.
+  - Deduplication_WinnerId: Ovo polje sadrži ID pobednika iz identifikovanih grupa ili klastera. Ako je Deduplication_WinnerId ista kao vrednost primarnog ključa za zapis, to znači da je taj zapis dobitni.
+- Polja koja se koriste za definisanje pravila za uklanjanje duplikata.
+- Odredite pravila i ocenite polja da označite koja su od pravila za uklanjanje duplikata primenjena i koji rezultat vraća algoritam za podudaranje.
 
 ## <a name="review-and-validate-your-matches"></a>Pregledajte i potvrdite svoja podudaranja
 
@@ -200,6 +211,11 @@ Povećajte kvalitet tako što ćete ponovo konfigurisati neke parametre podudara
   > [!div class="mx-imgBorder"]
   > ![Duplirajte pravilo](media/configure-data-duplicate-rule.png "Dupliranje pravila")
 
+- **Deaktivirajte pravilo** da zadržite pravilo podudaranja dok ga isključujete iz procesa podudaranja.
+
+  > [!div class="mx-imgBorder"]
+  > ![Deaktiviranje pravila](media/configure-data-deactivate-rule.png "Deaktiviranje pravila")
+
 - **Uređujte pravila** izborom simbola **Uredi**. Možete primeniti sledeće promene:
 
   - Promenite atribute za uslov: Izaberite nove atribute u određenom redu uslova.
@@ -229,6 +245,8 @@ Možete da navedete uslove za koje bi određena pravila trebalo uvek da se podud
     - Entity2Key: 34567
 
    Ista datoteka predloška može odrediti zapise prilagođenih podudaranja iz više entiteta.
+   
+   Ako želite da navedete prilagođeno podudaranje za uklanjanje duplikata na entitetu, navedite isti entitet kao i Entity1 i Entity2 i postavite različite vrednosti primarnog ključa.
 
 5. Kada dodate sva zamenjivanja koja želite da primenite, sačuvajte datoteku šablona.
 
@@ -250,3 +268,6 @@ Možete da navedete uslove za koje bi određena pravila trebalo uvek da se podud
 ## <a name="next-step"></a>Sledeći korak
 
 Kada dovršite postupak podudaranja za najmanje jedan par podudaranja, možete rešiti moguće protivrečnosti u podacima tako što ćete proći kroz temu [**Objedinjavanje**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

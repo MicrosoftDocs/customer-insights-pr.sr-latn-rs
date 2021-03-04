@@ -4,17 +4,17 @@ description: Radite sa Common Data Model podacima koristeći Azure Data Lake Sto
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643475"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267877"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 
@@ -38,17 +38,25 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Izaberite **Dodaj izvor podataka**.
 
-1. Izaberite **Povežite se sa Common Data Model fasciklom**, unesite **Ime** za izvor podataka i izaberite **Sledeće**.
+1. Izaberite **Povežite se sa Common Data Model fasciklom**, unesite **Ime** za izvor podataka i izaberite **Sledeće**. Smernice za nazive: 
+   - Započnite slovom.
+   - Koristite samo slova i brojeve. Posebni znakovi i razmaci nisu dozvoljeni.
+   - Koristite između 3 i 64 znaka.
 
 1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite informacije o **Kontejneru** i izaberite **Sledeće**.
    > [!div class="mx-imgBorder"]
-   > ![Dijalog za unos detalja veze za Azure Data Lake](media/enter-new-storage-details.png)
-
-1. U dijalogu **Izaberite Common Data Model fasciklu**, izaberite datoteku model.json iz koje želite da uvezete podatke i izaberite **Sledeće**.
+   > ![Dijalog za unos novih detalja veze za Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Nijedna model.json datoteka povezana sa drugim izvorom podataka u okruženju neće se prikazati na listi.
+   > Potrebna vam je jedna od sledećih uloga u kontejneru ili nalogu za skladištenje pomenutom gore da biste mogli da se povežete i kreirate izvor podataka:
+   >  - Čitač podataka skladišta blob objekta
+   >  - Vlasnik podataka skladišta blob objekta
+   >  - Saradnik za podatke skladišta blob objekta
 
-1. U izabranoj datoteci model.json dobićete listu dostupnih entiteta. Možete da pregledate entitete i izaberete ih sa liste dostupnih entiteta, pa izaberite **Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
+1. U dijalogu **Izaberite Common Data Model fasciklu**, izaberite datoteku model.json ili manifest.json iz koje želite da uvezete podatke, pa izaberite **Sledeće**.
+   > [!NOTE]
+   > Nijedna datoteka model.json ili manifest.json povezana sa drugim izvorom podataka u okruženju neće se prikazati na listi.
+
+1. Listu dostupnih entiteta dobićete u izabranoj datoteci model.json ili manifest.json. Možete da pregledate entitete i izaberete ih sa liste dostupnih entiteta, pa izaberite **Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijalog koji prikazuje listu entiteta iz datoteke model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 9. Kada sačuvate izabrane opcije, otvoriće se stranica **Izvori podataka**. Sada bi trebalo da vidite vezu Common Data Model fascikle kao izvor podataka.
 
 > [!NOTE]
-> Datoteka model.json može se povezati samo sa jednim izvorom podataka u istom okruženju. Međutim, ista datoteka model.json može se koristiti za izvore podataka u više okruženja.
+> Datoteka model.json ili manifest.json može se povezati samo sa jednim izvorom podataka u istom okruženju. Međutim, ista datoteka model.json ili manifest.json može se koristiti za izvore podataka u više okruženja.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Uredite izvor podataka Common Data Model fascikle
 
-Možete da ažurirate pristupni ključ za nalog za skladištenje koji sadrži Common Data Model fasciklu. Takođe možete da promenite datoteku model.json. Da biste se povezali na drugi kontejner sa naloga za skladištenje ili da promenite ime naloga, [kreirajte novu vezu sa izvorom podataka](#connect-to-a-common-data-model-folder).
+Možete da ažurirate pristupni ključ za nalog za skladištenje koji sadrži Common Data Model fasciklu. Takođe možete promeniti datoteku model.json ili manifest.json. Da biste se povezali na drugi kontejner sa naloga za skladištenje ili da promenite ime naloga, [kreirajte novu vezu sa izvorom podataka](#connect-to-a-common-data-model-folder).
 
 1. U uvidima o korisnicima idite na **Podaci** > **Izvori podataka**.
 
@@ -77,13 +85,24 @@ Možete da ažurirate pristupni ključ za nalog za skladištenje koji sadrži Co
 
 5. Po želji možete da ažurirate sa veze ključa naloga na vezu zasnovanu na resursima ili pretplati. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Ne možete promeniti informacije o **kontejneru** prilikom ažuriranja veze.
    > [!div class="mx-imgBorder"]
-   > ![Dijalog za unos detalja veze za Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Opcionalno, odaberite drugu datoteku model.json sa različitim skupom entiteta iz kontejnera.
+   > ![Dijalog za unos detalja veze usluge Azure Data Lake sa postojećim nalogom za skladištenje](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Potrebna vam je jedna od sledećih uloga u kontejneru ili nalogu za skladištenje pomenutom gore da biste mogli da se povežete i kreirate izvor podataka:
+   >  - Čitač podataka skladišta blob objekta
+   >  - Vlasnik podataka skladišta blob objekta
+   >  - Saradnik za podatke skladišta blob objekta
+
+
+6. Opcionalno, odaberite drugu datoteku model.json ili manifest.json sa različitim skupom entiteta iz kontejnera.
 
 7. Po želji možete odabrati dodatne entitete za unos. Takođe možete ukloniti sve već odabrane entitete ako nema zavisnih elemenata.
 
    > [!IMPORTANT]
-   > Ako postoje zavisnosti od postojeće datoteke model.json i skupa entiteta, videćete poruku o grešci i nećete moći da odaberete drugu datoteku model.json. Uklonite te zavisnosti pre nego što promenite datoteku model.json ili kreirate novi izvor podataka sa datotekom model.json koji želite da upotrebite da biste izbegli uklanjanje zavisnosti.
+   > Ako postoje zavisnosti od postojeće datoteke model.json ili manifest.json i skupa entiteta, videćete poruku o grešci i ne možete da izaberete drugu datoteku model.json ili manifest.json. Uklonite te zavisnosti pre promene datoteke model.json ili manifest.json ili kreirajte novi izvor podataka sa datotekom model.json ili manifest.json koju želite da koristite da biste izbegli uklanjanje zavisnosti.
 
 8. Po želji možete odabrati dodatne atribute ili entitete kako biste omogućili profilisanje podataka ili onemogućili već odabrane.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

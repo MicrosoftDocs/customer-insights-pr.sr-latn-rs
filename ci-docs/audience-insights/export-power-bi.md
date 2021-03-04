@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406781"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477105"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor za Power BI (pregled)
 
@@ -31,7 +31,7 @@ Napravite vizuelizacije za svoje podatke pomoću usluge Power BI Desktop. Generi
 
 1. Izaberite **Prikaži još** i potražite **Dynamics 365 Customer Insights**
 
-1. Izaberite rezultat i izaberite **Poveži se**.
+1. Izaberite **Poveži se**.
 
 1. **Prijavite se** sa istim organizacionim nalogom koji koristite za Customer Insights i izaberite **Poveži se**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Customer Insights konektor za Power BI je dizajniran da radi za skupove podataka
 ### <a name="work-with-a-subset-of-data"></a>Rad sa podskupom podataka
 
 Razmislite o radu sa podskupom podataka. Na primer, možete da kreirate[ segmente](segments.md) umesto da izveze sve evidencije klijenata u Power BI.
+
+## <a name="troubleshooting"></a>Rešavanje problema
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Customer Insights okruženje se ne prikazuje u usluzi Power BI
+
+Okruženja koja imaju više od jedne [relacije](relationships.md) definisane između dva identična entiteta u uvidima o korisnicima neće biti dostupna u Power BI konektoru.
+
+Možete identifikovati i ukloniti duplikate relacija.
+
+1. U uvidima o korisnicima, idite na **Podaci** > **Relacije** na okruženje koje vam nedostaje u usluzi Power BI.
+2. Identifikujte duplikate relacija:
+   - Proverite da li postoji više relacija definisanih između ista dva entiteta.
+   - Proverite da li postoji relacija kreirana između dva entiteta koja su oba uključena u proces objedinjavanja. Definisana je implicitna relacija između svih entiteta uključenih u proces ujedinjenja.
+3. Uklonite sve prepoznate duplikate relacija.
+
+Kada uklonite duplikate relacija, pokušajte da ponovo konfigurišete Power BI konektor. Okruženje bi trebalo da bude dostupno već sada.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

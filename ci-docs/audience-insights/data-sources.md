@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643970"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269715"
 ---
-# <a name="overview-about-data-sources"></a>Pregled izvora podataka
+# <a name="data-sources-overview"></a>Pregled izvora podataka
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -47,9 +47,9 @@ Videćete naziv svakog unetog izvora podataka, njegov status i poslednji put kad
 |Uspešno   |Izvor podataka je uspešno unet ako je vreme navedeno u koloni **Osveženo**.
 |Nije započeto   |Izvor podataka još nema unetih podataka ili je još uvek u režimu radne verzije.         |
 |Osvežavanje    |Unos podataka je u toku. Ovu operaciju možete otkazati ako izaberete **Zaustavi osvežavanje** u koloni **Radnje**. Zaustavljanje osvežavanja izvora podataka vratiće ga u poslednje stanje osvežavanja.       |
-|Neuspela     |Unos podataka je naišao na greške.         |
+|Neuspeh     |Unos podataka je naišao na greške.         |
 
-Izaberite **Osveži status** da biste pregledali više detalja o statusu osvežavanja, uključujući detalje o greškama i nadogradnje procesa.
+Izaberite vrednost u koloni **Status** bilo kog izvora podataka da biste pregledali više detalja. U oknu **Detalji napretka**, proširite stavku **Izvori podataka**. Izaberite **Pogledaj detalje** da biste dobili više informacija o statusu osvežavanja, uključujući detalje o greškama i nadogradnje procesa.
 
 Učitavanje podataka može da potraje. Nakon uspešnog osvežavanja, uneseni podaci mogu se pregledati sa stranice **Entiteti**. Za više informacija, pogledajte članak [Entiteti](entities.md).
 
@@ -76,3 +76,6 @@ Da biste osvežili izvor podataka na zahtev, sledite ove korake:
 2. Izaberite uspravne tri tačke pored izvora podataka koji želite da uklonite i izaberite **Izbriši** iz padajućeg menija.
 
 3. Potvrdite brisanje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

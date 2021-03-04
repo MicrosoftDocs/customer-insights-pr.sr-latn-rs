@@ -1,20 +1,20 @@
 ---
 title: Povežite se sa Azure Data Lake Storage Gen2 nalog pomoću principala usluge
-description: koristite principal Azure usluge za uvide u korisnike da biste se povezali sa sopstvenim jezerom podataka kada ga priložite uvidima u korisnike.
-ms.date: 11/24/2020
+description: Koristite principal Azure usluge za uvide u korisnike da biste se povezali sa sopstvenim jezerom podataka kada ga priložite uvidima u korisnike.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644105"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267739"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povežite se sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge za uvide u ciljnu grupu
 
@@ -22,7 +22,9 @@ Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ogranič
 
 Principal usluge možete koristiti za sigurno [dodavanje ili uređivanje Common Data Model fascikle kao izvora podataka](connect-common-data-model.md) ili [kreirajte novo ili ažurirajte postojeće okruženje](manage-environments.md#create-an-environment-in-an-existing-organization).
 
-Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali principal usluge.
+> [!IMPORTANT]
+> - Azure Data Lake Gen2 nalog za skladištenje koji namerava da koristi principala usluge mora da ima [omogućenu funkciju hijerarhijskog prostora imena (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali principal usluge.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Napravite principal Azure usluge za uvide u korisnike
 
@@ -83,7 +85,7 @@ Priložite Azure Data Lake nalog za skladištenje u uvide o korisnicima radi [č
 
 Sledite korake u nastavku da biste pružili potrebne informacije o odabranom pristupu.
 
-### <a name="resounce-based-storage-account-connection"></a>Povezivanje naloga za skladištenje zasnovanog na resursima
+### <a name="resource-based-storage-account-connection"></a>Povezivanje naloga za skladištenje zasnovano na resursima
 
 1. Idite na [Azure portal za administraciju](https://portal.azure.com), prijavite se na svoju pretplatu i otvorite nalog za skladištenje.
 
@@ -108,7 +110,8 @@ Sledite korake u nastavku da biste pružili potrebne informacije o odabranom pri
 1. Pregledajte **Pretplata**,**Grupa resursa** i **Ime** naloga za skladištenje kako biste bili sigurni da ste izabrali prave vrednosti u uvidima o korisnicima.
 
 1. U uvidu o korisnicima odaberite vrednosti ili odgovarajuća polja prilikom prilaganja naloga za skladištenje.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Unesite informacije o ID-u resursa naloga za skladištenje.":::
    
 1. Nastavite sa preostalim koracima u uvidima o korisnicima da biste priložili nalog za skladištenje.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

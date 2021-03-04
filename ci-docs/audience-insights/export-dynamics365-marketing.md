@@ -1,20 +1,20 @@
 ---
 title: Izvezite Customer Insights podatke u Dynamics 365 Marketing
 description: Saznajte kako da konfigurišete vezu sa uslugom Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643790"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269071"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Konektor za Dynamics 365 Marketing (pregled)
 
@@ -24,7 +24,10 @@ Koristite [segmente](segments.md) da biste generisali kampanje i kontaktirali od
 
 ## <a name="prerequisite"></a>Preduslov
 
-Zapisi kontakata [iz Dynamics 365 Marketing uneti pomoću usluge Common Data Service](connect-power-query.md).
+- Zapisi kontakata moraju biti prisutni u usluzi Dynamics 365 Marketing da biste mogli da izvezete segment iz usluge Customer Insights u Marketing. Pročitajte više o tome kako se unose kontakti u [Dynamics 365 Marketing pomoću usluge Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Izvoz segmenata iz uvida o korisnicima u Marketing neće kreirati nove zapise kontakata u instancama usluge Marketing. Evidencija kontakata iz usluge Marketing mora se uneti u uvid o korisnicima i koristiti kao izvor podataka. Takođe ih treba uključiti u jedinstveni entitet klijenta da bi se ID-ovi klijenata mapirali u ID-ove kontakata da bi segmenti mogli da se izvezu.
 
 ## <a name="configure-the-connector-for-marketing"></a>Konfigurišite konektor za Marketing
 
@@ -49,3 +52,6 @@ Zapisi kontakata [iz Dynamics 365 Marketing uneti pomoću usluge Common Data Ser
 ## <a name="export-the-data"></a>Izvoz podataka
 
 Možete da [izvezete podatke na zahtev](export-destinations.md). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

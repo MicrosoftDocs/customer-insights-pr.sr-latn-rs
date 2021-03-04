@@ -1,20 +1,20 @@
 ---
 title: Kreiranje okruženja i upravljanje njima
 description: Saznajte kako se registrujete za uslugu i kako da upravljate okruženjima.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644150"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270129"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -46,9 +46,9 @@ Postoje dva načina za kreiranje novog okruženja. Možete da navedete potpuno n
 
 Da biste kreirali okruženja:
 
-1. Izaberite simbol **Podešavanja** u zaglavlju aplikacije.
+1. Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
-1. Izaberite **Novo okruženje**.
+1. Izaberite **Novo**.
 
    > [!div class="mx-imgBorder"]
    > ![Podešavanja okruženja](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Da biste kreirali okruženja:
 
    - Za opciju Azure Data Lake Storage Gen2, možete da birate između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Naziv **kontejnera** se ne može promeniti i biće „uvidi o korisnicima“.
    
-   - Ako želite da koristite [predviđanja](predictions.md), unesite URL Common Data Service instance u polje **Adresa servera** u odeljku **Koristite predviđanja**.
+   - Ako želite da koristite [predviđanja](predictions.md) ili konfigurišete deljenje podataka sa aplikacijama i rešenjima zasnovano na platformi Microsoft Dataverse, obezbedite URL adresu Microsoft Dataverse okruženja u delu **Konfigurišite deljenje podataka sa platformom Microsoft Dataverse i omogućite dodatne mogućnosti**. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću usluge Microsoft Dataverse Managed Data Lake.
+
+     > [!NOTE]
+     > - Deljenje podataka pomoću usluge Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke čuvate u sopstvenom Azure Data Lake Storage.
+     > - [Predviđanje vrednosti koje nedostaju u entitetu](predictions.md) trenutno nije podržano kada omogućite deljenje podataka sa uslugom Microsoft Dataverse Managed Data Lake.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opcije konfiguracije za omogućavanje deljenja podataka sa uslugom Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Kada pokrenete procese, poput unosa podataka ili kreiranja segmenta, na nalogu za skladištenje koji ste gore naveli kreiraće se odgovarajuće mape. Datoteke podataka i datoteke model.json će biti kreirane i dodate u odgovarajuće potfasikle na osnovu procesa koji pokrećete.
 
@@ -86,7 +93,7 @@ Da biste kreirali okruženja:
 Kopiraju se sledeća podešavanja konfiguracije:
 
 - Konfiguracije funkcija
-- Obrađeni/uvezeni izvori podataka
+- Uneseni/uvezeni izvori podataka
 - Konfiguracija objedinjavanja podataka (mapa, podudaranje, spajanje)
 - Segmenti
 - Mere
@@ -120,11 +127,11 @@ Kada objedinjavanje podataka bude dovršeno, idite na **Mere** i **Segmenti** da
 
 Možete da izmenite neke detalje postojećih okruženja.
 
-1. Idite u **Administracija** > **Sistem** > **Osnovni podaci**.
+1.  Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
-2. Izaberite **Uredi**.
+2.  Izaberite ikonu **Uređivanje**.
 
-3. Možete da ažurirate **Ime za prikaz** okruženja, ali ne možete da promenite **Region** ni **Tip**.
+3. U okviru **Uredi okruženje** možete ažurirati okruženje **Ime za prikaz** okruženja, ali ne možete da promenite **Region** ili **Tip**.
 
 4. Ako je okruženje konfigurisano za čuvanje podataka Azure Data Lake Storage Gen2, možete da ažurirate **Ključ naloga**. Međutim, ne možete promeniti **Ime naloga** ni ime **kontejnera**.
 
@@ -132,19 +139,27 @@ Možete da izmenite neke detalje postojećih okruženja.
 
 ## <a name="reset-an-existing-environment"></a>Uspostavljanje početnih vrednosti postojećeg okruženja
 
-Možete da vratite okruženje na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
+Kao administrator, možete da vratite okruženje na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
 
-1.  Idite u **Administracija** > **Sistem** > **Osnovni podaci**.
+1.  Izaberite birač **Okruženje** u zaglavlju aplikacije. 
 
-2.  Izaberite **Resetuj**. 
+2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke **...**. 
 
-3.  Da biste potvrdili brisanje, unesite ime okruženja i izaberite **Resetuj**.
+3. Izaberite opciju **Resetuj**. 
+
+4.  Da biste potvrdili brisanje, unesite ime okruženja i izaberite **Resetuj**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Izbrišite postojeće okruženje (dostupno samo za administratore)
+
+Kao administrator možete da izbrišete okruženje kojim administrirate.
+
+1.  Izaberite birač **Okruženje** u zaglavlju aplikacije.
+
+2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke **...**. 
+
+3. Odaberite opciju **Izbriši**. 
+
+4.  Da biste potvrdili brisanje, unesite naziv okruženja i izaberite **Izbriši**.
 
 
-## <a name="delete-an-existing-environment"></a>Brisanje postojećeg okruženja
-
-1. Idite u **Administracija** > **Sistem** > **Osnovni podaci**.
-
-1. Izaberite **Izbriši**.
-
-1. Da biste potvrdili brisanje, unesite naziv okruženja i izaberite **Izbriši**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
