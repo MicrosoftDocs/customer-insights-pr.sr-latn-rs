@@ -1,19 +1,20 @@
 ---
 title: Prilagođeni modeli mašinskog učenja | Microsoft Docs
 description: Radite sa prilagođenim modelima iz Azure mašinskog učenja u usluzi Dynamics 365 Customer Insights.
-ms.date: 11/19/2020
-ms.reviewer: zacook
-ms.service: dynamics-365-ai
+ms.date: 03/22/2021
+ms.reviewer: mhart
+ms.service: customer-insights
+ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
+author: zacookmsft
+ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
+ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267251"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "5700685"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli mašinskog učenja
 
@@ -21,13 +22,18 @@ ms.locfileid: "5267251"
 
 ## <a name="responsible-ai"></a>Odgovorni AI
 
-Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, poboljšanje poslovnih prilika i tokova prihoda. Preporučujemo vam da uravnotežite vrednost predviđanja sa uticajem koji ima i odstupanjima koja se mogu uvesti na etičan način. Saznajte više o tome kako Microsoft [primenjuje odgovoran AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Takođe možete saznati o [tehnikama i procesima za odgovorno mašinsko učenje](https://docs.microsoft.com/azure/machine-learning/concept-responsible-ml) specifičnim za Azure mašinsko učenje.
+Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, poboljšanje poslovnih prilika i tokova prihoda. Preporučujemo vam da uravnotežite vrednost predviđanja sa uticajem koji ima i odstupanjima koja se mogu uvesti na etičan način. Saznajte više o tome kako Microsoft [primenjuje odgovoran AI](https://www.microsoft.com/ai/responsible-ai?activetab=pivot1%3aprimaryr6). Takođe možete saznati o [tehnikama i procesima za odgovorno mašinsko učenje](/azure/machine-learning/concept-responsible-ml) specifičnim za Azure mašinsko učenje.
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Trenutno ova funkcija podržava veb-usluge objavljene putem [Machine Learning Studio (klasičnog)](https://studio.azureml.net) i [grupnih kanala Azure mašinskog učenja](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines).
+- Trenutno ova funkcija podržava veb-usluge objavljene putem [Machine Learning Studio (klasičnog)](https://studio.azureml.net) i [grupnih kanala Azure mašinskog učenja](/azure/machine-learning/concept-ml-pipelines).
 
-- Da biste koristili ovu funkciju, potreban vam je Azure Data Lake Gen2 nalog za skladištenje povezan sa Azure Studio instancom. Za više informacija pogledajte [Napravite Azure Data Lake Storage Gen2 nalog za skladištenje podataka](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)
+- Da biste koristili ovu funkciju, potreban vam je Azure Data Lake Gen2 nalog za skladištenje povezan sa Azure Studio instancom. Za više informacija, pogledajte članak [Kreiranje Azure Data Lake Storage Gen2 naloga za skladištenje](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
+
+- Za Azure radne prostore za mašinsko učenje sa kanalima, trebaju vam administratorske dozvole vlasnika ili korisnika da biste pristupili Azure radnom prostoru za mašinsko učenje.
+
+   > [!NOTE]
+   > Podaci se prenose između Customer Insights instanci i izabranih Azure veb-usluga ili kanala u toku posla. Kada prenosite podatke u Azure uslugu, uverite se da je usluga konfigurisana da obrađuje podatke na način neophodan za poštovanje svih zakonskih ili regulatornih zahteva za te podatke za vašu organizaciju, kao i na lokaciji koja je za to neophodna.
 
 ## <a name="add-a-new-workflow"></a>Dodavanje novog toka posla
 
@@ -45,8 +51,8 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 1. Izaberite **Radne prostore** povezane sa vašom veb-uslugom. Navedena su dva odeljka, jedan za Azure mašinsko učenje v1 (Machine Learning Studio (klasični)) i Azure mašinsko učenje v2 (Azure mašinsko učenje). Ako niste sigurni koji je radni prostor pravi za vašu Machine Learning Studio (klasičan) veb-uslugu, izaberite **Bilo koji**.
 
 1. Izaberite Machine Learning Studio (klasična) veb-uslugu ili kanal Azure mašinskog učenja u padajućem meniju **Veb-usluga koja sadrži vaš model**. Zatim izaberite **Sledeće**.
-   - Saznajte više o [objavljivanju veb-usluge u Machine Learning Studio (klasičnom)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Saznajte više o [objavljivanju kanala u Azure mašinskom učenju pomoću dizajnera](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [ SDK-a](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom tačkom kanala](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Saznajte više o [objavljivanju veb-usluge u Machine Learning Studio (klasičnom)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
+   - Saznajte više o [objavljivanju kanala u Azure mašinskom učenju pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [ SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom tačkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Unos veb-usluge**, izaberite odgovarajući **Entitet** iz uvida o korisnicima i izaberite **Dalje**.
    > [!NOTE]
@@ -54,7 +60,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
    > [!div class="mx-imgBorder"]
    > ![Konfigurisanje toka posla](media/intelligence-screen2-updated.png "Konfigurisanje toka posla")
-   
+
 1. U koraku **Izlazni parametri modela** postavite sledeća svojstva:
    - Machine Learning Studio (klasični)
       1. Unesite izlaz **Naziv entiteta** u koji želite da se prenose izlazni rezultati veb-usluga.
@@ -62,12 +68,12 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
       1. Unesite izlaz **Naziv entiteta** u koji želite da se prenose izlazni rezultati kanala.
       1. Izaberite **Naziv izlaznog parametra skladišta podataka** za grupni kanal iz padajućeg menija.
       1. Izaberite **Naziv izlaznog parametra putanje** za grupni kanal iz padajućeg menija.
-      
+
       > [!div class="mx-imgBorder"]
       > ![Okno izlaznih parametara modela](media/intelligence-screen3-outputparameters.png "Okno izlaznih parametara modela")
 
 1. Izaberite odgovarajući atribut iz padajuće liste **ID klijenta u rezultatima** koja identifikuje klijente i izaberite **Sačuvaj**.
-   
+
    > [!div class="mx-imgBorder"]
    > ![Povežite rezultate sa oknom podataka klijenata](media/intelligence-screen4-relatetocustomer.png "Povežite rezultate sa oknom podataka klijenata")
 
@@ -95,7 +101,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
       1. Izaberite **Naziv izlaznog parametra putanje** za probni kanal.
 
 1. Izaberite odgovarajući atribut iz padajuće liste **ID klijenta u rezultatima** koja identifikuje klijente i izaberite **Sačuvaj**.
-   Morate da odaberete atribut iz izlaza zaključka sa vrednostima sličnim koloni sa ID-om klijenta entiteta „Klijent“. Ako nemate takvu kolonu skupu podataka, odaberite atribut koji jedinstveno identifikuje red.
+   Odaberite atribut iz izlaza zaključka sa vrednostima sličnim koloni sa ID-om klijenta entiteta klijenta. Ako nemate takvu kolonu skupu podataka, odaberite atribut koji jedinstveno identifikuje red.
 
 ## <a name="run-a-workflow"></a>Pokretanje toka posla
 
@@ -113,5 +119,28 @@ Tok posla se takođe pokreće automatski sa svakim zakazanim osvežavanjem. Sazn
 
 Vaš tok posla će biti izbrisan. [Entitet](entities.md) koji je kreiran kada ste kreirali tok posla opstaje i može se pregledati sa stranice **Entiteti**.
 
+## <a name="results"></a>Rezultati
+
+Rezultati iz toka posla se čuvaju u entitetu konfigurisanom tokom faze izlaznih parametara modela. Ovim podacima možete pristupiti sa [stranice entiteta](entities.md) ili pomoću [API pristupa](apis.md).
+
+### <a name="api-access"></a>API pristup
+
+Da bi određeni OData upit dobio podatke iz entiteta prilagođenog modela, koristite sledeći format:
+
+`https://api.ci.ai.dynamics.com/v1/instances/<your instance id>/data/<custom model output entity name>%3Ffilter%3DCustomerId%20eq%20'<guid value>'`
+
+1. Zamenite `<your instance id>` sa ID-om vašeg Customer Insights okruženja, koji ćete pronaći u adresnoj traci svog pregledača kada pristupite usluzi Customer Insights.
+
+1. Zamenite `<custom model output entity>` nazivom entiteta koje ste naveli tokom koraka parametara izlaznih parametara modela prilagođene konfiguracije modela.
+
+1. Zamenite `<guid value>` ID-om klijenta čijem zapisu želite da pristupite. Taj ID obično možete pronaći na [stranica profila klijenta](customer-profiles.md) u polju CustomerID.
+
+## <a name="frequently-asked-questions"></a>Najčešća pitanja
+
+- Zašto ne mogu da vidim svoj kanal prilikom podešavanja toka posla prilagođenog modela?    
+  Ovaj problem je često uzrokovan problemom konfiguracije u kanalu. Uverite se da je [ulazni parametar konfigurisan](azure-machine-learning-experiments.md#dataset-configuration) i da su [izlazni parametri skladišta podataka i putanje](azure-machine-learning-experiments.md#import-pipeline-data-into-customer-insights) takođe konfigurisani.
+
+- Šta znači greška „Ne mogu da sačuvam tok posla obaveštavanja“?    
+  Korisnici obično vide ovu poruku o grešci ako u radnom prostoru nemaju administratorske privilegije pristupa za vlasnika ili korisnika. Korisniku je potreban viši nivo dozvola da omogući usluzi Customer Insights da obradi tok posla kao uslugu, umesto da koristi korisničke akreditive za naredna pokretanja toka posla.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

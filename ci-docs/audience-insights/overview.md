@@ -2,19 +2,19 @@
 title: Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 description: Pregled uvida o korisnicima za Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477012"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598647"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 
@@ -25,7 +25,7 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
 - **Eliminišite podatke i ujedinite podatke o klijentima**
 
   - Povežite i objedinite podatke sa lakoćom – unesite transakcione, posmatračke i podatke o ponašanju iz popularnih [izvora podataka tako što ćete koristiti unapred napravljene konektore](data-sources.md).
-  - Inteligentno transformišite podatke o klijentu – gradite objedinjene profile klijenata u skladu sa [platformom Common Data Model](https://docs.microsoft.com/common-data-model/). Rešite identitete klijenata sa preporukama zasnovanim na AI/ML.
+  - Inteligentno transformišite podatke o klijentu – gradite objedinjene profile klijenata u skladu sa [platformom Common Data Model](/common-data-model/). Rešite identitete klijenata sa preporukama zasnovanim na AI/ML.
 
 - **Obogaćeno obaveštavanjem o ciljnim grupama sadržanim u programu Microsoft Graph**
 
@@ -42,7 +42,7 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
 - **Analitičari podataka / administratori:**
 
   - Pristup bogatoj kolekciji konektora da biste uneli sve podatke o klijentima.
-  - Mogućnost ujedinjavanja podataka klijenata i njihovo pretvaranje u format [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Mogućnost ujedinjavanja podataka klijenata i njihovo pretvaranje u format [Common Data Model](/common-data-model/).
   - Obogatite informacije o klijentima uvidima iz obaveštavanja o ciljnim grupama koji se nalaze u programu Microsoft Graph, kao što su afinitet prema brendu i interesovanja.
   - Konfiguracija „klikovi-bez-kodiranja“ i iskustvo otklanjanja grešaka u cilju lakšeg konfigurisanja uvida o korisnicima i identifikovanje potencijalnih problema.
   - Očistite i standardizujte podatke o klijentima preko različitih izvora sa preporukama koje obezbeđuje AI.  
