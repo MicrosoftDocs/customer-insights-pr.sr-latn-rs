@@ -1,34 +1,34 @@
 ---
 title: Podržani jezici za uvid o korisnicima
 description: Razumevanje i konfigurisanje jezičke podrške.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268197"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595489"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Podržani jezici za mogućnost uvida o korisnicima
 
-Dynamics 365 Customer Insights mogućnost uvida o korisnicima podržava nekoliko jezika. U ovoj temi se navode dostupni jezici i pruža podrška za promenu između njih, kao i pregled sadržaja koji je preveden.
+Usluga Uvidi o korisnicima za Dynamics 365 Customer Insights je prevedena na mnoge jezike. Sledeća lista sadrži dostupne jezike i informacije o tome šta je prevedeno. Takođe možete saznati više o tome kako da promenite jezička podešavanja. 
 
 ## <a name="languages"></a>Jezici
 
 | Ime jezika (engleski)|  Ime jezika (maternji jezik) |
 | ------------- | ------------- |
 | baskijski | euskara |
-| bugarski | Bъlgarski |
+| bugarski | bъlgarski |
 | katalonski | català |
 | kineski (pojednostavljeni) | 中文(简体) |
-| kineski (tradicionalni) | 中文(繁體) |
+| tradicionalni kineski | 中文(繁體) |
 | hrvatski | hrvatski |
 | češki | Čeština |
 | danski | dansk |
@@ -42,20 +42,20 @@ Dynamics 365 Customer Insights mogućnost uvida o korisnicima podržava nekoliko
 | grčki | Ελληνικά |
 | hindi | हिंदी |
 | mađarski | magyar |
-| indonežanski | Bahasa Indonesia |
+| indonežanski | Indonezija |
 | italijanski | italiano |
 | japanski | 日本語 |
-| kazaški | Қazaқ |
+| kazaški | қazaқ tіlі |
 | korejski | 한국어 |
 | letonski | latviešu |
 | litvanski | lietuvių |
-| malajski | Bahasa Melayu |
-| norveški (Bokmål) | norsk (bokmål) |
-| poljski | Polski |
+| malajski | Melayu |
+| norveški (bukmol) | norsk bokmål |
+| poljski | polski |
 | portugalski (Brazil) | português |
 | portugalski (Portugalija) | português |
 | rumunski | română |
-| ruski | Russkiй |
+| ruski | pусский |
 | srpski (ćirilica) | srpski |
 | srpski (latinica) | srpski |
 | slovački | slovenčina |

@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270221"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598356"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Koristite modele koji se zasnivaju na usluzi Azure Machine Learning Studio (klasični)
 
@@ -37,7 +37,7 @@ U prvom koraku treba da kreiramo radni prostor i otvorimo Machine Learning Studi
 
 1. Pretražite **Radni prostor studija za mašinsko učenje** i izaberite **Kreiraj**.
 
-1. Unesite potrebne detalje u [kreiranje radnog prostora](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Izaberite **Nivo cena planova veb-usluga** na osnovu količine podataka koju planirate da uvezete. Za najbolje performanse, izaberite **lokaciju** koja vam je geografski najbliža.
+1. Unesite potrebne detalje u [kreiranje radnog prostora](/azure/machine-learning/studio/create-workspace). Izaberite **Nivo cena planova veb-usluga** na osnovu količine podataka koju planirate da uvezete. Za najbolje performanse, izaberite **lokaciju** koja vam je geografski najbliža.
 
 1. Nakon kreiranja resursa, prikazaće se kontrolna tabla radnog prostora studija za mašinsko učenje. Izaberite **Pokrenite studio za mašinsko učenje**.
 
@@ -65,7 +65,7 @@ Sada možete da kreirate novi eksperiment ili uvezete postojeći predložak eksp
 
    ![Postavljanje veb-usluge predviđanja](media/predictive-webservice-control.png)
 
-1. Kada eksperiment veb-usluge predviđanja bude uspešan, možete ga primeniti za automatsko zakazivanje. Da bi veb-usluga radila sa uslugom Customer Insights, izaberite **Primeni veb-uslugu** > **Pregled primene veb-usluge [Novo]**. [Saznajte više o primeni veb-usluge](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. Kada eksperiment veb-usluge predviđanja bude uspešan, možete ga primeniti za automatsko zakazivanje. Da bi veb-usluga radila sa uslugom Customer Insights, izaberite **Primeni veb-uslugu** > **Pregled primene veb-usluge [Novo]**. [Saznajte više o primeni veb-usluge](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Primena veb-usluge predviđanja](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Sledeća slika prikazuje kanal obuke i ocenjivanja modela iz Azure studija za ma
 
 ![Model odliva u Azure studiju za mašinsko učenje](media/azure-machine-learning-model.png)
 
-Takođe primenjujemo i tehniku pod nazivom **Značaj funkcije permutacije**, važan aspekt optimizacije modela. Ugrađeni modeli imaju malo ili nimalo uvida u uticaj bilo koje posebne funkcije na konačno predviđanje. Kalkulator važnosti funkcije koristi prilagođeni algoritam za izračunavanje uticaja pojedinih karakteristika na ishod određenog modela. Značaj funkcije je normalizovan između +1 i -1. Negativan uticaj znači da odgovarajuća karakteristika ima kontraintuitivni uticaj na ishod i da je treba ukloniti iz modela. Pozitivan uticaj ukazuje na to da funkcija značajno doprinosi predviđanju. Ove vrednosti nisu koeficijenti korelacije, jer su to različiti pokazatelji. Za više informacija pogledajte [Značaj funkcije permutacije](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+Takođe primenjujemo i tehniku pod nazivom **Značaj funkcije permutacije**, važan aspekt optimizacije modela. Ugrađeni modeli imaju malo ili nimalo uvida u uticaj bilo koje posebne funkcije na konačno predviđanje. Kalkulator važnosti funkcije koristi prilagođeni algoritam za izračunavanje uticaja pojedinih karakteristika na ishod određenog modela. Značaj funkcije je normalizovan između +1 i -1. Negativan uticaj znači da odgovarajuća karakteristika ima kontraintuitivni uticaj na ishod i da je treba ukloniti iz modela. Pozitivan uticaj ukazuje na to da funkcija značajno doprinosi predviđanju. Ove vrednosti nisu koeficijenti korelacije, jer su to različiti pokazatelji. Za više informacija pogledajte [Značaj funkcije permutacije](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Čitav [eksperiment odliva dostupan je u Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Celom [eksperimentu preporuke proizvoda može se pristupiti u Azure AI Gallery.]
 
 ## <a name="integrate-custom-models"></a>Integracija prilagođenih modela
 
-Da biste koristili ta predviđanja u usluzi Customer Insights, morate da **izvezete** predviđanja zajedno sa ID-ovima klijenata. [Izvezite ih na istu lokaciju Azure skladišta blob objekata](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) na koju izvozite izvorne podatke. Veb-usluga predviđanja može se redovno prikazivati i ažurirati ocene.
+Da biste koristili ta predviđanja u usluzi Customer Insights, morate da **izvezete** predviđanja zajedno sa ID-ovima klijenata. [Izvezite ih na istu lokaciju Azure skladišta blob objekata](/azure/storage/common/storage-import-export-data-from-blobs) na koju izvozite izvorne podatke. Veb-usluga predviđanja može se redovno prikazivati i ažurirati ocene.
 
 Podaci koje generiše prilagođeni model mogu se koristiti za dodatno obogaćivanje podataka o klijentima. Za više informacija pogledajte [Prilagođeni modeli mašinskog učenja](custom-models.md).
 

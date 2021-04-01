@@ -2,19 +2,19 @@
 title: Predviđanje trajne vrednosti klijenta (CLV)
 description: Predvidite potencijalni prihod za aktivne klijente u budućnosti.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268611"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595826"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predviđanje trajne vrednosti klijenta (CLV) (pregled)
 
@@ -194,11 +194,11 @@ Postoje tri primarna odeljka podataka na stranici sa rezultatima.
   
   - **Stopa uspešnosti predviđanja klijenata visoke vrednosti**
 
-  Pogledajte razliku u predviđanju klijenata velike vrednosti koristeći model veštačke inteligencije u poređenju sa osnovnim modelom. Na primer, stopa uspešnosti od 84% znači da je od svih klijenata visoke vrednosti u podacima o obuci, model veštačke inteligencije uspeo da tačno uhvati 84%. Zatim upoređujemo ovu stopu uspešnosti sa stopom uspešnosti osnovnog modela da bismo prijavili relativnu promenu. Ova vrednost se koristi za dodeljivanje klase modelu.
+    Pogledajte razliku u predviđanju klijenata velike vrednosti koristeći model veštačke inteligencije u poređenju sa osnovnim modelom. Na primer, stopa uspešnosti od 84% znači da je od svih klijenata visoke vrednosti u podacima o obuci, model veštačke inteligencije uspeo da tačno uhvati 84%. Zatim upoređujemo ovu stopu uspešnosti sa stopom uspešnosti osnovnog modela da bismo prijavili relativnu promenu. Ova vrednost se koristi za dodeljivanje klase modelu.
 
   - **Metrike grešaka**
     
-  Drugi pokazatelj vam omogućava da pregledate ukupne performanse modela u smislu greške u predviđanju budućih vrednosti. Za procenu ove greške koristimo opštu metriku osnovnog srednjeg kvadrata (RMSE). RMSE je standardni način merenja greške modela u predviđanju kvantitativnih podataka. RMSE modela veštačke inteligencije se upoređuje sa RMSE osnovnog modela i izveštava se o relativnoj razlici.
+    Drugi pokazatelj vam omogućava da pregledate ukupne performanse modela u smislu greške u predviđanju budućih vrednosti. Za procenu ove greške koristimo opštu metriku osnovnog srednjeg kvadrata (RMSE). RMSE je standardni način merenja greške modela u predviđanju kvantitativnih podataka. RMSE modela veštačke inteligencije se upoređuje sa RMSE osnovnog modela i izveštava se o relativnoj razlici.
 
   Model veštačke inteligencije daje prioritet tačnom rangiranju klijenata prema vrednosti koju oni donose u vaše poslovanje. Dakle, samo se stopa uspešnosti predviđanja klijenata velike vrednosti koristi za izvođenje konačne klase modela. RMSE metrika je osetljiva na izvanredne vrednosti. U scenarijima gde imate mali procenat klijenata sa izuzetno visokim vrednostima kupovine, ukupna RMSE metrika možda neće dati potpunu sliku performansi modela.   
 

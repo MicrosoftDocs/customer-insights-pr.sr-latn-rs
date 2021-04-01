@@ -2,19 +2,19 @@
 title: Power Apps konektor
 description: Povežite se sa uslugama Power Apps i Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268933"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598172"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Microsoft Power Apps konektor (pregled)
 
@@ -22,9 +22,9 @@ Uvedite objedinjene korisničke profile u svoje personalizovane aplikacije pomo�
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Povežite Power Apps i Dynamics 365 Customer Insights
 
-Customer Insights je jedan od mnogih [dostupnih izvora za podatke u programu Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights je jedan od mnogih [dostupnih izvora za podatke u programu Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Pogledajte Power Apps dokumentaciju da biste saznali kako da [dodate prenos podataka u aplikaciju](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Preporučujemo da takođe pregledate [kako Power Apps koristi delegiranje za obradu velikih skupova podataka u aplikacijama sa podlogom](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Pogledajte Power Apps dokumentaciju da biste saznali kako da [dodate prenos podataka u aplikaciju](/powerapps/maker/canvas-apps/add-data-connection). Preporučujemo da takođe pregledate [kako Power Apps koristi delegiranje za obradu velikih skupova podataka u aplikacijama sa podlogom](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Dostupni entiteti
 
@@ -47,11 +47,11 @@ Delegiranje radi za entitet Klijent i entitet Objedinjena aktivnost.
 
 - Delegiranje za entitet **Objedinjena aktivnost**: Delegiranje za ovaj entitet radi samo za polja **ActivityId** i **CustomerId**.  
 
-- Za više informacija o delegiranju, pogledajte [Power Apps prenosive funkcije i operacije](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Za više informacija o delegiranju, pogledajte [Power Apps prenosive funkcije i operacije](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Primer kontrole galerije
 
-Na primer, dodajete profile klijenata u [kontrolu galerije](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+Na primer, dodajete profile klijenata u [kontrolu galerije](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Dodajte kontrolu **Galerija** u aplikaciju koju gradite.
 

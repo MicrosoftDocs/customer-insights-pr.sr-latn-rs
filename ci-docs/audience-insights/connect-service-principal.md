@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267739"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596516"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povežite se sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge za uvide u ciljnu grupu
 
@@ -23,7 +23,7 @@ Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ogranič
 Principal usluge možete koristiti za sigurno [dodavanje ili uređivanje Common Data Model fascikle kao izvora podataka](connect-common-data-model.md) ili [kreirajte novo ili ažurirajte postojeće okruženje](manage-environments.md#create-an-environment-in-an-existing-organization).
 
 > [!IMPORTANT]
-> - Azure Data Lake Gen2 nalog za skladištenje koji namerava da koristi principala usluge mora da ima [omogućenu funkciju hijerarhijskog prostora imena (HNS)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Azure Data Lake Gen2 nalog za skladištenje koji namerava da koristi principala usluge mora da ima [omogućenu funkciju hijerarhijskog prostora imena (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
 > - Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali principal usluge.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Napravite principal Azure usluge za uvide u korisnike
@@ -48,7 +48,7 @@ Pre nego što napravite nov principal usluge za uvide u korisnike, proverite da 
 
 ### <a name="create-a-new-service-principal"></a>Kreiraj nov principal usluge
 
-1. Instalirajte najnoviju verziju **Azure Active Directory PowerShell za Graph**. Za više informacija pogledajte [Instalirajte Azure Active Directory PowerShell za Graph](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instalirajte najnoviju verziju **Azure Active Directory PowerShell za Graph**. Za više informacija pogledajte [Instalirajte Azure Active Directory PowerShell za Graph](/powershell/azure/active-directory/install-adv2).
    - Na računaru izaberite Windows taster na tastaturi i potražite **Windows PowerShell** i **Pokreni kao administrator**.
    
    - U PowerShell prozoru koji se otvori unesite `Install-Module AzureAD`.

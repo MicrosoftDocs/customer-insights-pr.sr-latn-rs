@@ -2,19 +2,19 @@
 title: Power Automate konektor | Microsoft Docs
 description: Kreirajte tokove u usluzi Microsoft Power Automate iz usluge Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268841"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597942"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate konektor (pregled)
 
@@ -34,7 +34,7 @@ Koristite okidače da kreirate tokove u oblaku i automatizujete ponavljajuće za
 [Konfigurisanje okidača u usluzi Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>Power Automate radnje
-Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više informacija pogledajte [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više informacija pogledajte [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Kreiranje Power Automate toka
 
@@ -44,7 +44,7 @@ Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više in
 
 1. Otvara se Customer Insights konektor (pregled) u usluzi Power Automate. **Prijavite se** u Power Automate.
 
-1. Izaberite jedan od dostupnih okidača i dodajte još koraka svom novom toku. Za više informacija pogledajte [Kreiranje toka u oblaku u usluzi Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Izaberite jedan od dostupnih okidača i dodajte još koraka svom novom toku. Za više informacija pogledajte [Kreiranje toka u oblaku u usluzi Power Automate](/power-automate/get-started-logic-flow).
 
 Primeri korišćenja tokova: 
 - Pošaljite poruku na Microsoft Teams kanal ako osvežavanje izvora podataka ne uspe. 

@@ -2,23 +2,23 @@
 title: Unos podataka putem Power Query konektora
 description: Konektori za izvore podataka zasnovane na rešenju Power Query.
 ms.date: 09/29/2020
-ms.reviewer: adkuppa
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: b9a1b30e37c3792aa7bdfcfc177da9e8a32c324d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267790"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596930"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje sa Power Query izvorom podataka
 
-Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora podržava Dynamics 365 Customer Insights. Dodavanje izvora podataka na osnovu Power Query konektora uglavnom sledi korake navedene u sledećem odeljku. Međutim, u zavisnosti od konektora koji koristite, potrebne su različite informacije. Za više informacija pogledajte dokumentaciju o pojedinačnim konektorima u [referenci Power Query konektora](https://docs.microsoft.com/power-query/connectors/).
+Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora podržava Dynamics 365 Customer Insights. Dodavanje izvora podataka na osnovu Power Query konektora uglavnom sledi korake navedene u sledećem odeljku. Međutim, u zavisnosti od konektora koji koristite, potrebne su različite informacije. Za više informacija pogledajte dokumentaciju o pojedinačnim konektorima u [referenci Power Query konektora](/power-query/connectors/).
 
 ## <a name="create-a-new-data-source"></a>Kreiranje novog izvora podataka
 
@@ -44,7 +44,7 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
    > [!div class="mx-imgBorder"]
    > ![Dijalog za uređivanje upita](media/data-manager-configure-edit-queries.png "Dijalog za uređivanje upita")
 
-1. Takođe možete da transformišete svoje podatke. Izaberite entitet za uređivanje ili transformisanje. Koristite opcije u Power Query prozoru kako biste primenili transformacije. Svaka transformacija se navodi u okviru **Primenjenih koraka**. Power Query pruža brojne unapred napravljene mogućnosti transformacije. Za više informacija, pogledajte [Power Query transformacije](https://docs.microsoft.com/power-query/power-query-what-is-power-query#transformations).
+1. Takođe možete da transformišete svoje podatke. Izaberite entitet za uređivanje ili transformisanje. Koristite opcije u Power Query prozoru kako biste primenili transformacije. Svaka transformacija se navodi u okviru **Primenjenih koraka**. Power Query pruža brojne unapred napravljene mogućnosti transformacije. Za više informacija, pogledajte [Power Query transformacije](/power-query/power-query-what-is-power-query#transformations).
 
 1. Možete dodati dodatne entitete u izvor podataka ako izaberete **Preuzmi podatke** u dijalogu **Uređivanje upita**.
 
@@ -59,7 +59,7 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
 
 ## <a name="available-power-query-data-sources"></a>Dostupni Power Query izvori podataka
 
-Pogledajte [referencu Power Query konektora](https://docs.microsoft.com/power-query/connectors/) za ažuriranu listu konektora koje možete izabrati za uvoz podataka u Customer Insights. 
+Pogledajte [referencu Power Query konektora](/power-query/connectors/) za ažuriranu listu konektora koje možete izabrati za uvoz podataka u Customer Insights. 
 
 Konektori sa znakom potvrde u koloni **Customer Insights (tokovi podataka)** su dostupni za kreiranje novih izvora podataka zasnovanih na rešenju Power Query. Pregledajte dokumentaciju određenog konektora da biste saznali više o njegovim preduslovima, ograničenjima i ostalim detaljima.
 

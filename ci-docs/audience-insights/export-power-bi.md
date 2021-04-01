@@ -2,19 +2,19 @@
 title: Power BI konektor
 description: Saznajte kako da koristite Dynamics 365 Customer Insights konektor u usluzi Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477105"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596056"
 ---
 # <a name="connector-for-power-bi-preview"></a>Konektor za Power BI (pregled)
 
@@ -23,7 +23,7 @@ Napravite vizuelizacije za svoje podatke pomoću usluge Power BI Desktop. Generi
 ## <a name="prerequisites"></a>Preduslovi
 
 - Imate objedinjene profile klijenata.
-- Najnovija verzija usluge [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je instalirana na vašem računaru. [Saznajte više o Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Najnovija verzija aplikacije [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) je instalirana na vašem računaru. [Saznajte više o Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Konfigurišite konektor za Power BI
 
@@ -47,7 +47,7 @@ Napravite vizuelizacije za svoje podatke pomoću usluge Power BI Desktop. Generi
 
 ## <a name="large-data-sets"></a>Veliki skupovi podataka
 
-Customer Insights konektor za Power BI je dizajniran da radi za skupove podataka koji sadrže do 1 milion korisničkih profila. Uvoz većih skupova podataka može da funkcioniše, ali to traje dugo. Pored toga, proces bi mogao naići na vremensko ograničenje zbog Power BI ograničenja. Za više informacija, pogledajte [Power BI: Preporuke za velike skupove podataka](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Customer Insights konektor za Power BI je dizajniran da radi za skupove podataka koji sadrže do 1 milion korisničkih profila. Uvoz većih skupova podataka može da funkcioniše, ali to traje dugo. Pored toga, proces bi mogao naići na vremensko ograničenje zbog Power BI ograničenja. Za više informacija, pogledajte [Power BI: Preporuke za velike skupove podataka](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Rad sa podskupom podataka
 
@@ -70,4 +70,3 @@ Možete identifikovati i ukloniti duplikate relacija.
 Kada uklonite duplikate relacija, pokušajte da ponovo konfigurišete Power BI konektor. Okruženje bi trebalo da bude dostupno već sada.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

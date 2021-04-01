@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270449"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598482"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
 Takođe možete pogledati sledeći video da biste saznali više o mogućnostima planiranim za poslednjih šest meseci.
 
@@ -30,6 +30,40 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Ispravke za februar 2021.
+
+Ispravke u februaru 2021. uključuju nekoliko funkcija, nadogradnje performansi i ispravke grešaka.
+
+#### <a name="extensibility"></a>Proširivost
+
+- **Izvoz segmenata u AdRoll**
+
+  Proširili smo svoja izvozna odredišta tako da uključuju i AdRoll. Sada možete izvesti segmente iz usluge Customer Insights u AdRoll ciljnu grupu i koristiti ih kao osnovu za oglašavanje. Za više informacija, pogledajte [Konektor za AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmenti
+ 
+- **Dupliranje segmenta**
+  
+  Da biste kreirali novi segment na osnovu postojećeg, sada možete da duplirate segment i uredite duplirani segment da biste ga dalje precizirali. 
+
+- **Dodajte dodatne atribute u segment**
+
+  Sada možete da uključite atribute u izlaz segmenta, čak i ako ti atributi nisu deo korisničkog profila. Na primer, uključite ID-ove pretplate u segment iako je deo entiteta pretplate koji ima relaciju M:1 sa entitetom klijenta. Sve dok atribut pripada entitetu povezanom sa entitetom klijenta, sada možete uključiti te atribute.  
+
+#### <a name="predictions"></a>Predviđanja
+
+- **Kreiranje prediktivnih preporuka proizvoda**
+
+  Razumevanje za šta su klijenti zainteresovani u toku kupovine jedan je od prvih koraka potrebnih za poboljšanje poslovnog prihoda i izgradnju lojalnosti klijenata kroz personalizaciju i angažovanje. Davanje preporuka za proizvode koji nisu usklađeni sa interesima vašeg klijenta može kreirati osećaj prekida veze između klijenta i preduzeća, a na kraju i ograničiti klijentu ukupan potencijalni prihod i iskustvo. 
+
+  Koristeći sopstvene podatke, sada možete da kreirate predviđanja za proizvode koje će vaši klijenti verovatno kupiti u budućnosti. Za više informacija, pogledajte [Predviđanje preporuka proizvoda](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administracija sistema
+
+- **Okruženje za kopiranje podržava više vrsta izvora podataka**
+
+  Administratori mogu da kopiraju konfiguracije okruženja u novo okruženje u istoj organizaciji. Ova funkcija proširuje funkcionalnost okruženja za kopiranje za slučajeve u kojima se koriste izvori podataka zasnovani na Common Data Service jezeru podataka ili fascikli Common Data Model.
 
 ## <a name="january-2021-updates"></a>Ispravke za januar 2021. godine
 
