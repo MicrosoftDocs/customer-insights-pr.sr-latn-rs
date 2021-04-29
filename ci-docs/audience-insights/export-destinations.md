@@ -1,7 +1,7 @@
 ---
-title: Odrdišta za izvoz
-description: Izvezite podatke i upravljajte odredištima za izvoz.
-ms.date: 07/21/2020
+title: Izvoz podataka iz usluge Customer Insights
+description: Upravljajte izvozima da biste delili podatke.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596103"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896160"
 ---
-# <a name="export-destinations-preview-overview"></a>Pregled odredišta za izvoz (pregled)
+# <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
-Stranica **Odredišta za izvoz** prikazuje sve lokacije na koje ste postavili izvoz podataka. Takođe možete dodati nova odredišta za izvoz. Pored toga, prikazuje izvoz trenutno dostupnih opcija. Preuzmite brzi pregled, opis i saznajte šta možete uraditi sa svakom opcijom proširivosti. Izvezite objedinjene profile, mere i segmente u podržane aplikacije relevantne za vaše poslovanje.
+Stranica **Izvoz** prikazuje sve konfigurisane izvoze. Izvozi dele određene podatke sa raznim aplikacijama. Mogu da uključuju profile klijenata ili entitete, šeme i detalje o mapiranju. Svaki izvoz zahteva [vezu koju je postavio administrator radi upravljanja potvrdom identiteta i pristupom](connections.md).
 
-Idite na **Administrator** > **Izvoz odredišta** da biste pronašli sledeće opcije proširenja:
+> [!NOTE]
+> Do marta 2021. godine, izvozi su automatski kreirali vezu sa odgovarajućom uslugom. Izvozi sada zahtevaju [vezu koju kreira i deli administrator](connections.md) pre nego što budete mogli da ih kreirate.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Adobe platforma iskustva](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Azure skladište blob objekta](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Robot za Microsoft Teams](export-teams-bot.md)
-- [Customer Insights API](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (programski dodatak za karticu klijenta)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 čvorište za prodaju (programski dodatak za karticu klijenta)](customer-card-add-in.md)
-- [Facebook menadžer oglasa](export-facebook.md)
-- [Google oglasi](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Idite na **Podaci** > **Izvozi** da biste videli stranicu izvoza. Sve korisničke uloge imaju pristup za prikaz konfigurisanih izvoza. Koristite polje za pretragu na komandnoj traci da biste pronalazili izvoze prema njihovom nazivu, nazivu veze ili tipu veze.
 
-## <a name="add-a-new-export-destination"></a>Dodavanje novog odredišta za izvoz
+## <a name="set-up-a-new-export"></a>Podešavanje novog izvoza
 
-Da biste dodali odredišta za izvoz, imate [administratorske dozvole](permissions.md). Ako izvozite u Microsoft usluge, pretpostavljamo da su obe usluge u istoj organizaciji.
+Da biste podesili ili uredili izvoz, moraju vam biti dostupne veze. Veze zavise od vaše [korisničke uloge](permissions.md):
+- Administratori imaju pristup svim vezama. Oni takođe mogu da kreiraju nove veze prilikom podešavanja izvoza.
+- Saradnici mogu imati pristup određenim vezama. Oni zavise od administratora da konfigurišu i dele veze. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Gledaoci mogu samo da vide postojeće izvoze, ali ne i da ih kreiraju.
 
-1. Idite na **Administrator** > **Odredišta za izvoz**.
+1. Idite na **Podaci** > **Izvozi**.
 
-1. Prebacite se na karticu **Moja odredišta za izvoz**.
+1. Izaberite **Dodaj izvoz** da biste kreirali novo odredište za izvoz.
 
-1. Izaberite **Dodavanje odredišta** da biste kreirali novo odredište za izvoz.
+1. U oknu **Podešavanje izvoza**, izaberite koju vezu da koristite. [Vezama](connections.md) upravljaju administratori. 
 
-1. U oknu **Dodavanje odredišta**, izaberite **Tip** odredišta za izvoz u padajućoj listi.
+1. Navedite potrebne detalje i izaberite **Sačuvati** da biste kreirali izvoz.
 
-1. Navedite potrebne detalje i izaberite **Sledeće** da kreirate odredište za izvoz.
-
-Takođe možete da izaberete **Podešavanje** na pločici na kartici **Otkrivanje**.
-
-## <a name="view-export-destinations"></a>Prikaz odredišta za izvoz
-
-Kada kreirate odredišta za izvoz, naći ćete ih u tabeli na kartici **Moja odredišta za izvoz**. Ova tabela ima tri kolone:
-
-- **Ime za prikaz**: Ime koje ste uneli prilikom kreiranja odredišta.
-- **Tip**: Vrsta odredišta za izvoz koju ste postavili prilikom kreiranja odredišta.
-- **Kreirano**: Datum kad ste kreirali odredište.
-
-## <a name="edit-an-export-destination"></a>Uređivanje odredišta za izvoz
+### <a name="edit-an-export"></a>Uređivanje izvoza
 
 1. Izaberite vertikalne tri tačke za odredište za izvoz koje želite da uređujete.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikalne tri tačke](media/export-destinations-page-ellipsis.png "Vertikalne tri tačke")
+1. U padajućem meniju izaberite **Uredi**.
 
-1. Izaberite **Uređuj** iz padajućeg menija.
+1. Promenite vrednosti koje želite da ažurirate i izaberite **Sačuvaj**.
 
-1. Promenite vrednosti za koje je potrebno ažuriranje i izaberite **Sačuvaj**.
+## <a name="view-exports-and-export-details"></a>Prikaz izvoza i detalji o izvozu
 
-## <a name="export-data-on-demand"></a>Izvoz podataka na zahtev
+Nakon kreiranja odredišta za izvoz, ona su navedena na stranici **Podaci** > **Izvoz**. Svi korisnici mogu videti koji se podaci dele i koji je njihov najnoviji status.
 
-Nakon konfigurisanja konektora za odredište za izvoz, izvozi će se pokrenuti sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).
+1. Idite na **Podaci** > **Izvozi**.
 
-Da biste izvezli podatke bez čekanja na zakazano osvežavanje, idite na karticu **Moja odredišta za izvoz** u dijalogu **Administrator** > **Odredišta za izvoz**.
+1. Korisnici bez dozvole za uređivanje biraju **Prikaži** umesto **Uredi** da bi videli detalje o izvozu.
 
-> [!div class="mx-imgBorder"]
-> ![Vertikalne tri tačke](media/export-destinations-page-ellipsis.png "Vertikalne tri tačke")
+1. Ovo bočno okno prikazuje podešavanje ovog izvoza. Bez dozvola za uređivanje ne možete menjati vrednosti. Izaberite **Zatvori** da biste se vratili na stranicu izvoza.
 
-- Izaberite **Izvezi** iznad liste da biste istovremeno pokrenuli izvoz u sva odredišta za izvoz.
-- Izaberite tri tačke (...) nakon stavke liste, a zatim odaberite opciju **Izvezi** za pokretanje izvoza za jedno odredište za izvoz.
+## <a name="run-exports-on-demand"></a>Pokretanje izvoza na zahtev
 
-## <a name="remove-an-export-destination"></a>Uklanjanje odredište za izvoz
+Nakon konfigurisanja, izvoz će se pokrenuti sa svakim [zakazanim osvežavanjem](system.md#schedule-tab) sve dok ima funkcionalnu vezu.
 
-Da biste uklonili odredište za izvoz, počnite iz glavne stranice **Odredišta za izvoz**.
+Da biste izvezli podatke bez čekanja na zakazano osvežavanje, idite na stranicu **Podaci** > **Izvoz**. Na raspolaganju su vam dve opcije:
 
-1. Odaberite vertikalne tri tačke za odredište za izvoz koje želite da uklonite.
+- Da biste pokrenuli sve izvoze, izaberite **Pokreni sve** u komandnoj traci. 
+- Da biste pokrenuli pojedinačni izvoz, izaberite tri tačke (...) na stavci liste, a zatim odaberite **Pokreni**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Vertikalne tri tačke](media/export-destinations-page-ellipsis.png "Vertikalne tri tačke")
+## <a name="remove-an-export"></a>Uklanjanje izvoza
 
-2. Izaberite **Ukloni** iz padajućeg menija.
+1. Idite na **Podaci** > **Izvozi**.
 
-3. Potvrdite uklanjanje odabirom **Ukloni** na ekranu za potvrdu.
+1. Odaberite vertikalne tri tačke za izvoz koji želite da uklonite.
+
+1. Izaberite **Ukloni** iz padajućeg menija.
+
+1. Potvrdite uklanjanje odabirom **Ukloni** na ekranu za potvrdu.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

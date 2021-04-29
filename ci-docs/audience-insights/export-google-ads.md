@@ -1,67 +1,35 @@
 ---
 title: Izvezite Customer Insights podatke u Google oglasima
-description: Saznajte kako da konfigurišete vezu sa Google oglasima.
-ms.date: 11/18/2020
-ms.reviewer: mhart
+description: Saznajte kako da konfigurišete vezu i izvezete u Google Ads.
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598264"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759710"
 ---
-# <a name="connector-for-google-ads-preview"></a>Konektor za Google oglase (verzija za pregled)
+# <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (verzija za pregled)
 
 Izvezite segmente objedinjenih profila klijenata u listu korisnika Google oglasa i koristite ih za oglašavanje u Google pretrazi, na Gmail-u, YouTube-u i Google mreži multimedijalnog oglašavanja. 
 
-## <a name="prerequisites"></a>Preduslovi
+## <a name="prerequisites-for-connection"></a>Preduslovi za vezu
 
 -   Imate [nalog Google oglasa](https://ads.google.com/) i odgovarajuće akreditive administratora.
+-   Vi imate [odobreni token za Google Ads programera](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Ispunjavate zahteve [politike podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717)
+-   Ispunjavate zahteve [veličine lista za ponovno oglašavanje](https://support.google.com/google-ads/answer/7558048) 
+
 -   Postoji postojeća publika u Google oglasima i odgovarajući ID-ovi. Za više informacija pogledajte [Korisnici Google oglasa](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Imate [konfigurisane segmente](segments.md)
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime
-
-## <a name="connect-to-google-ads"></a>Povežite se sa Google oglasima
-
-1. Idite na **Administrator** > **Odredišta za izvoz**.
-
-1. U odeljku **Google oglasi**, izaberite **Podesi**.
-
-1. Dajte odredištu za izvoz prepoznatljivo ime u polju **Ime za prikaz**.
-
-1. Unesite **[ID klijenta za Google oglase](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Unesite **[token odobrenog programera za Google oglase](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
-
-1. Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.
-
-1. Unesite **[ID korisnika za Google oglase](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i izaberite **Povežite se** da biste započeli povezivanje sa Google oglasima.
-
-1. Izaberite **Potvrdite identitet u Google oglasima** i navedite akreditive za Google oglase.
-
-1. Izaberite **Dodajte sebe kao korisnika za izvoz** i obezbedite svoje akreditive za Customer Insights.
-
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Izvezite snimak ekrana za vezu sa Google oglasima":::
-
-1. Izaberite **Sledeće** da biste konfigurisali izvoz.
-
-## <a name="configure-the-connector"></a>Konfigurisanje konektora
-
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite iste korake za polja **Ime** i **Prezime**.
-
-1. Izaberite segmente koje želite da izvezete. U Google oglasima možete ukupno izvesti do 1 milion korisničkih profila.
-
-1. Izaberite stavku **Sačuvaj**.
-
-## <a name="export-the-data"></a>Izvoz podataka
-
-Možete da [izvezete podatke na zahtev](export-destinations.md). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab). U Google oglasima sada možete pronaći segmente u odeljku [Korisnici Google oglasa](https://support.google.com/google-ads/answer/7558048?hl=en/).
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
@@ -69,6 +37,48 @@ Možete da [izvezete podatke na zahtev](export-destinations.md). Izvoz će se ta
 - Izvoz u Google oglase je ograničen na segmente.
 - Izvoz segmenata sa ukupno 1 milion profila može trajati do 5 minuta zbog ograničenja na strani dobavljača. 
 - Podudaranje u Google oglasima može da potraje do 48 sati.
+
+## <a name="set-up-connection-to-google-ads"></a>Podešavanje veze sa uslugom Google Ads
+
+1. Idite na **Administrator** > **Veze**.
+
+1. Izaberite **Dodaj vezu** i birajte **Google Ads** da biste konfigurisali vezu.
+
+1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
+
+1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Unesite **[ID klijenta za Google oglase](https://support.google.com/google-ads/answer/1704344)**.
+
+1. Unesite **[token odobrenog programera za Google oglase](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
+
+1. Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.
+
+1. Izaberite **Potvrdite identitet u Google oglasima** i navedite akreditive za Google oglase.
+
+1. Izaberite **Dodajte sebe kao korisnika za izvoz** i obezbedite svoje akreditive za Customer Insights.
+
+1. Izaberite **Sačuvaj** da biste kreirali vezu. 
+
+## <a name="configure-an-export"></a>Konfigurisanje izvoza
+
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Google Ads. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+
+1. Unesite **[ID korisnika za Google oglase](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i izaberite **Povežite se** da biste započeli povezivanje sa Google oglasima.
+
+1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite iste korake za polja **Ime** i **Prezime**.
+
+1. Izaberite segmente koje želite da izvezete. U Google oglasima možete ukupno izvesti do 1 milion korisničkih profila.
+
+Čuvanje izvoza ne pokreće izvoz odmah.
+
+Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
 

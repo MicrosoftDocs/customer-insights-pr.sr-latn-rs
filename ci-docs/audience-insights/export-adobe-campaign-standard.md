@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Adobe Campaign Standard
 description: Saznajte kako se koriste segmenti uvida u korisnike u usluzi Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596332"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760298"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Korišćenje Customer Insights segmenata u usluzi Adobe Campaign Standard (verzija za pregled)
 
@@ -48,15 +48,21 @@ E-poruka sa ponudom koju želite da pošaljete sadrži ime, prezime i datum zavr
 
 ## <a name="export-your-target-audience"></a>Izvezite svoju ciljnu grupu
 
+### <a name="configure-a-connection"></a>Konfigurisanje veze
+
 Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o korisnicima na nalog Azure skladišta blob objekta.
 
-1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
+1. U uvidima u ciljne grupe, idite na **Administrator** > **Veze**.
 
-1. Na pločici **Adobe Campaign** izaberite **Podesi**.
+1. Izaberite **Dodaj vezu** i birajte **Adobe Campaign** da biste konfigurisali vezu ili izaberite **Podešavanje** na pločici **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Pločica za konfiguraciju za Adobe Campaign Standard.":::
 
-1. Navedite **ime za prikaz** za ovo novo odredište za izvoz, a zatim unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** naloga Azure skladišta blob objekta u koji želite da izvezete segment.  
+1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
+
+1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** za vaš nalog za Azure skladište blob objekta u koji želite da izvezete segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimak ekrana konfiguracije naloga skladišta. "::: 
 
@@ -64,7 +70,17 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
 
    - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Izaberite **Sledeće**.
+1. Izaberite **Sačuvaj** da biste kreirali vezu.
+
+### <a name="configure-an-export"></a>Konfigurisanje izvoza
+
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.
+
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Adobe Campaign. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
 1. Odaberite segment koje želite da izvezete. U ovom primeru, to je **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
 
 1. Izaberite stavku **Sačuvaj**.
 
-Kada sačuvate odredište za izvoz, pronaći ćete ga na listi **Administrator** > **Izvozi** > **Moja odredišta za izvoz**.
+Kada sačuvate odredište za izvoz, pronaći ćete ga u dijalogu **Podaci** > **Izvozi**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Snimak ekrana sa istaknutom listom izvoza i uzorkom segmenta.":::
-
-Sada možete da [izvozite segment na zahtev](export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
+Sada možete da [izvozite segment na zahtev](export-destinations.md#run-exports-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
 
 > [!NOTE]
 > Uverite se da je broj zapisa u izvezenom segmentu unutar dozvoljenog ograničenja vaše Adobe Campaign Standard licence.

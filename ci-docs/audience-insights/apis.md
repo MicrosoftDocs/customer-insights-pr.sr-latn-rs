@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
-ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
+ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
+ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "5710477"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "5873679"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
@@ -78,7 +78,7 @@ Možete da koristite ID aplikacije/klijenta za registraciju ove aplikacije u Mic
 
 :::image type="content" source="media/grant-admin-consent.gif" alt-text="Animirani GIF za davanje saglasnosti administratora.":::
 
-Za više informacija o MSAL-u, pogledajte [Pregled Microsoft Authentication Library (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+Za više informacija o MSAL-u, pogledajte [Pregled Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
 Za više informacija o registraciji aplikacija u usluzi Azure pogledajte [Novo iskustvo registracije aplikacija za Azure portal](/azure/active-directory/develop/app-registration-portal-training-guide).
 

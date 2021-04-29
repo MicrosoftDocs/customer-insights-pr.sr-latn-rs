@@ -1,7 +1,7 @@
 ---
 title: LiveRamp konektor
-description: Saznajte kako da izvezete podatke u LiveRamp.
-ms.date: 12/02/2020
+description: Saznajte kako da konfigurišete vezu i izvezete u LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597574"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760344"
 ---
-# <a name="liverampreg-connector-preview"></a>LiveRamp&reg; konektor (pregled)
+# <a name="export-segments-to-liverampreg-preview"></a>Izvoz segmenata u LiveRamp&reg; (verzija za pregled)
 
-Aktivirajte svoje podatke u usluzi LiveRamp da biste se povezali sa preko 500 platformi u digitalnim, društvenim i TV ekosistemima. Radite sa svojim podacima u usluzi LiveRamp da biste ciljali, potisnuli i personalizovali oglasne kampanje.
+Aktivirajte svoje podatke u usluzi LiveRamp da biste se povezali sa preko 500 platformi na digitalnim, društvenim i televizijskim sistemima. Radite sa svojim podacima u usluzi LiveRamp da biste ciljali, potisnuli i personalizovali oglasne kampanje.
 
-## <a name="prerequisites"></a>Preduslovi
+## <a name="prerequisites-for-a-connection"></a>Preduslovi za vezu
 
 - Za upotrebu ovog konektora potrebna vam je pretplata na LiveRamp.
 - Da biste dobili pretplatu, [kontaktirajte LiveRamp](https://liveramp.com/contact/) direktno. [Saznajte više o usluzi LiveRamp Onboarding](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Povezivanje na LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Podešavanje veze u usluzi LiveRamp
 
-1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
+1. Idite na **Administrator** > **Veze**.
 
-1. Na pločici **LiveRamp** izaberite **Podesi**.
+1. Izaberite **Dodaj vezu** i birajte **LiveRamp** da biste konfigurisali vezu.
 
-1. Dajte odredištu prepoznatljivo ime u polju **Ime za prikaz**.
+1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
+
+1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Obezbedite **Korisničko ime** i **Lozinku** za svoj LiveRamp Secure FTP (SFTP) nalog.
 Ovi akreditivi mogu biti različiti od vaših akreditiva za LiveRamp Onboarding.
@@ -40,15 +42,25 @@ Ovi akreditivi mogu biti različiti od vaših akreditiva za LiveRamp Onboarding.
 
 1. Nakon uspešne verifikacije, dajte svoj pristanak za **Privatnost podataka i usaglašenost** tako što ćete izabrati polje za potvrdu **Slažem se**.
 
-1. Izaberite **Sledeće** da podesite LiveRamp konektor.
+1. Izaberite **Sačuvaj** da biste kreirali vezu.
 
-## <a name="configure-the-connector"></a>Konfigurisanje konektora
+## <a name="configure-an-export"></a>Konfigurisanje izvoza
+
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka LiveRamp. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
 1. U polju **Odaberite svoj identifikator ključa**, izaberite **E-pošta**, **Ime i adresa** ili **Telefon** za slanje u LiveRamp radi rešavanja identiteta.
+   > [!div class="mx-imgBorder"]
+   > ![LiveRamp konektor sa mapiranjem atributa](media/export-liveramp-segments.png "LiveRamp konektor sa mapiranjem atributa")
 
 1. Mapirajte odgovarajuće atribute vašeg objedinjenog entiteta klijenta za izabrani identifikator ključa.
 
-1. Izaberite **Dodaj atribut** da biste mapirali dodatne atribute koje treba poslati u LiveRamp.
+1. Izaberite **Dodaj atribut** da biste mapirali više atributa za slanje u LiveRamp.
 
    > [!TIP]
    > Ako pošaljete više ključnih atributa identifikatora u LiveRamp, verovatno će dobiti višu stopu podudaranja.
@@ -57,13 +69,10 @@ Ovi akreditivi mogu biti različiti od vaših akreditiva za LiveRamp Onboarding.
 
 1. Izaberite stavku **Sačuvaj**.
 
-> [!div class="mx-imgBorder"]
-> ![LiveRamp konektor sa mapiranjem atributa](media/export-liveramp-segments.png "LiveRamp konektor sa mapiranjem atributa")
+Čuvanje izvoza ne pokreće izvoz odmah.
 
-## <a name="export-the-data"></a>Izvoz podataka
+Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
 
-Izvoz će početi uskoro ako su ispunjeni svi preduslovi za izvoz. Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
-Nakon što je izvoz uspešno završen, možete se prijaviti u LiveRamp Onboarding da biste aktivirali i distribuirali svoje podatke.
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
 

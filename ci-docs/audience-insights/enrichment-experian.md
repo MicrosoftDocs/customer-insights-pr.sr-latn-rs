@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje pomoću obogaćivanja treće strane Experian
 description: Opšte informacije o Experian obogaćivanju treće strane.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597804"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896390"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogatite profile klijenata demografskim podacima kompanije Experian (verzija za pregled)
 
@@ -25,10 +25,10 @@ Experian je globalni lider u izveštavanju o potrošačkim i poslovnim kreditima
 Da biste konfigurisali Experian, moraju da se ispune sledeći preduslovi:
 
 - Imate aktivnu pretplatu na Experian. Da biste dobili pretplatu, [obratite se kompaniji Experian](https://www.experian.com/marketing-services/contact) direktno. [Saznajte više o Experian obogaćivanju podataka](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Imate ID korisnika, ID stranke i broj modela za SSH omogućeni Secure Transport (ST) nalog koji je Experian kreirao za vas.
-- Imate [administratorske](permissions.md#administrator) dozvole u uvidima o korisnicima.
 
-## <a name="configuration"></a>Konfigurisanje
+- Administrator je već konfigurisao Experian vezu *ili* imate dozvole [administratora](permissions.md#administrator). Takođe su vam potrebni ID korisnika, ID stranke i broj modela za vaš nalog za bezbedni transport (ST) koji omogućava SSH i koji je Experian kreirao za vas.
+
+## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 
 1. Idite do kartice **Podaci** > **Obogaćivanje** i izaberite karticu **Otkrij**.
 
@@ -36,26 +36,46 @@ Da biste konfigurisali Experian, moraju da se ispune sledeći preduslovi:
 
    > [!div class="mx-imgBorder"]
    > ![Experian pločica](media/experian-tile.png "Experian pločica")
+   > 
 
-1. Izaberite **Započnite** i unesite ID korisnika, ID stranke i broj modela za vaš Experian Secure Transport nalog. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usaglašenost** tako što ćete izabrati polje za potvrdu **Slažem se**. Potvrdite sve unose izborom **Primeni**.
+1. Izaberite [vezu](connections.md) iz padajuće liste. Ako veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete da napravite ako izaberete **Dodaj vezu** i birate Experian iz padajućeg menija. 
 
-## <a name="map-your-fields"></a>Mapiranje polja
+1. Izaberite **Povežite se sa uslugom Experian** da potvrdite izbor veze.
 
-1.  Izaberite **Dodaj podatke** i izaberite **Skup podataka o klijentima** koji želite da obogatite demografskim podacima kompanije Experian. Možete izabrati entitet **Klijent** da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
+1.  Izaberite **Sledeće** i odaberite **Skup podataka klijenta** koji želite da obogatite demografskim podacima usluge Experian. Možete izabrati entitet **Klijent** da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
 
-1. Izaberite svoje ključne identifikatore iz polja **Ime i adresa**, **E-adresa** ili **Telefon** koje ćete poslati kompaniji Experian radi rešavanja identiteta.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Snimak ekrana prilikom odabira skupa podataka o klijentima.":::
 
-   > [!TIP]
-   > Više atributa ključnih identifikatora poslatih u Experian verovatno daje veću stopu podudaranja.
+1. Izaberite **Sledeće** i definišite koji tip polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka iz usluge Experian. Obavezno je barem jedno od polja **Ime i adresa**, **Telefon** ili **E-pošta**. Za veću preciznost podudaranja, mogu se dodati još dva polja. Ovaj izbor će uticati na polja za mapiranje kojima imate pristup u sledećem koraku.
 
-1. Izaberite **Sledeće** i mapirajte odgovarajuće atribute iz vašeg objedinjenog entiteta klijenta za izabrana polja ključnog identifikatora.
+    > [!TIP]
+    > Više atributa ključnih identifikatora poslatih u Experian verovatno daje veću stopu podudaranja.
 
-1. Izaberite **Dodaj atribut** da biste mapirali sve dodatne atribute koje biste želeli da pošaljete kompaniji Experian.
+1. Izaberite **Sledeće** da biste započeli mapiranje polja.
 
-1.  Izaberite **Sačuvaj** da biste dovršili mapiranje polja.
+1. Definišite koji tip polja iz vaših objedinjenih profila treba koristiti za traženje odgovarajućih demografskih podataka iz usluge Experian. Obavezna polja su označena.
 
-    > [!div class="mx-imgBorder"]
-    > ![Mapiranje polja za Experian](media/experian-field-mapping.png "Mapiranje polja za Experian")
+1. Obezbedite naziv za obogaćivanje i naziv za izlazni entitet.
+
+1. Izaberite **Sačuvaj obogaćivanje** nakon pregleda vaših izbora.
+
+## <a name="configure-the-connection-for-experian"></a>Konfigurišite vezu za Experian 
+
+Morate biti administrator da biste konfigurisali veze. Izaberite **Dodaj vezu** prilikom konfigurisanja obogaćivanja *ili* idite na **Administrator** > **Veze** i izaberite **Podešavanje** na pločici Experian.
+
+1. Izaberite **Prvi koraci**.
+
+1. Unesite naziv veze u polje **Ime za prikaz**.
+
+1. Unesite važeći ID korisnika, ID stranke i broj modela za svoj nalog za Experian bezbedni transport.
+
+1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usaglašenost** tako što ćete izabrati polje za potvrdu **Slažem se**
+
+1. Izaberite **Verifikuj** da biste proverili valjanost konfiguracije.
+
+1. Po završetku verifikacije, izaberite **Sačuvaj**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Okno za konfiguraciju veze za Experian.":::
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 

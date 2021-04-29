@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598482"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896252"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598482"
 
 Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
-Takođe možete pogledati sledeći video da biste saznali više o mogućnostima planiranim za poslednjih šest meseci.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu da vide funkcije pre drugih. Ako nije drugačije navedeno, ne trebate ništa da preduzimate a mi ćemo automatski ažurirati aplikaciju bez prekida rada.
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Ispravke za mart 2021.
+
+Ispravke u martu 2021. uključuju nekoliko funkcija, nadogradnje performansi i ispravke grešaka.
+
+### <a name="activities"></a>Aktivnosti
+
+- **Čarobnjak za aktivnosti i semantički tipovi** Poboljšali smo i ažurirali iskustvo mapiranja aktivnosti kako bismo vodili i pojednostavili kreiranje mapiranja aktivnosti. U ovom novom iskustvu, korisnici dobijaju vođeno iskustvo koje pomaže u dovršavanju svakog koraka procesa. U koraku mapiranja aktivnosti, pored izbora između mnogih vrsta aktivnosti, korisnik može odabrati i semantičko mapiranje podataka za *Pretplatu* i / ili *Detalj ulazne porudžbine* prema šemama industrijskog standarda, koje se mogu koristiti u naknadnoj potrošnji.    
+  Za više informacija pogledajte [aktivnosti klijenta](activities.md).
+
+### <a name="data-ingestion"></a>Unos podataka
+
+- **Povežite se na lokalne izvore podataka koristeći Power Platform tokove podataka i mrežne prolaze** Zadovoljstvo nam je da najavimo verziju za pregled Power Platform tokova podataka i lokalnog povezivanja pomoću mrežnih prolaza u usluzi Customer Insights sa pridruženom uslugom Power Platform ili Dataverse okruženjem. Svi novi izvor podataka kreiran u Customer Insights okruženju sa povezanim Dataverse okruženjem će podrazumevano biti Power Platform tokovi podataka koji donose lokalnu povezanost podataka i bogat skup konektora i mogućnosti transformacije.
+
+### <a name="extensibility"></a>Proširivost
+
+- **Izvozi organizovani u vezama i izvozima** Promenili smo naziv stranice **Odredišta za izvoz** u **Veze** i dodali smo posebnu stranicu za **Izvoze**. Kao deo ove ispravke, prebacićemo postojeći izvoz u parove veze i izvoz koji koristi tu vezu. Administratori sada imaju više jasnoće u odnosu na odlazne podatke na stranici **Veze**. Sve korisničke uloge imaju pristup stranici **Izvoz**, ali samo administratori mogu da odluče da dozvole saradnicima da uređuju određene izvore pomoću deljenih veza.     
+  Za više informacija, pogledajte [Pregled veza](connections.md) i [Pregled izvoza](export-destinations.md).
+
+- **Izvoz segmenata u Campaign Monitor** Proširili smo svoja odredišta za izvoz tako da uključuju i Campaign Monitor. Sada možete izvesti segmente iz usluge Customer Insights u Campaign Monitor liste i koristiti ih kao osnovu za vaše marketinške kampanje.    
+   Za više informacija, pogledajte [Izvoz u Campaign Monitor](export-campaign-monitor.md).
+
+- **Izvoz segmenata u Constant Contact** Proširili smo svoja odredišta za izvoz tako da uključuju i Constant Contact. Sada možete izvesti segmente iz usluge Customer Insights u Constant Contact liste i koristiti ih kao osnovu za vaše marketinške kampanje.   
+   Za više informacija, pogledajte [Izvoz u Constant Contact](export-constant-contact.md).
+
+- **Izvoz segmenata u RollWorks** Proširili smo svoja odredišta za izvoz tako da uključuju i RollWorks. Sada možete izvesti segmente iz usluge Customer Insights u RollWorks ciljne grupe i koristiti ih kao osnovu za vaše B2B oglašavanje.    
+   Za više informacija, pogledajte [Izvoz podataka u RollWorks ](export-rollworks.md).
+
+- **Izvoz segmenata u Snapchat** Proširili smo svoja odredišta za izvoz tako da uključuju i Snapchat. Sada možete izvesti segmente iz usluge Customer Insights u Snapchat ciljne grupe i koristiti ih kao osnovu za vaše marketinške kampanje.     
+   Za više informacija, pogledajte [Izvoz podataka u Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Predviđanja
+
+- **Koristite filtere za proizvode u prediktivnim preporukama za proizvode** U model preporuka za proizvode smo dodali mogućnost upotrebe filtera za proizvode. Sada možete da kreirate predviđanje koje koristi samo podskup vaših proizvoda.    
+   Za više informacija, pogledajte odeljak [Konfigurisanje filtera proizvoda](predict-product-recommendation.md#configure-product-filters).
+
+- **Kreiranje segmenata na osnovu predviđanja modela** Dodali smo brz način za kreiranje segmenata pomoću rezultata modela predviđanja. Na stranici rezultata modela, možete lako kreirati novi segment izborom nove opcije **Kreiraj segment**.    
+  Za više informacija, pogledajte članak [Kreiranje segmenta na osnovu modelu predviđanja](prediction-based-segment.md).
+
+- **Objašnjenja za preporuke proizvoda** Dodali smo informacije koje objašnjavaju ključne faktore koje je model veštačke inteligencije naučio da bi generisao preporuke za proizvode i stepen u kojem ti faktori doprinose preporukama za proizvode. Ove informacije se dodaju na ekran rezultata modela.    
+   Za više informacija pogledajte [Pregledajte status i rezultate predviđanja](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Ispravke za februar 2021.
 
@@ -107,7 +144,7 @@ Ispravke u decembru 2020. uključuju nekoliko funkcija, nadogradnje performansi 
 
   Pored toga, dodali smo nove opcije konfiguracije da bismo bolje kontrolisali kako želite da vaši profili klijenata budu obogaćeni. 
 
-  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md).
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
 
 - **Kontrolišite koje profile da obogatite**
 
@@ -309,8 +346,8 @@ Ispravke u avgustu 2020. uključuju nekoliko funkcija, nadogradnje performansi i
 
 - **Obogaćivanje afiniteta za interesovanja dostupno na više tržišta**
 
-  Proširujemo dostupnost obogaćivanja afiniteta za interesovanja izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete obogatiti podatke o klijentima sa više interesovanja koja su primenljiva na ovim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
-  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md)
+  Proširujemo dostupnost obogaćivanja afiniteta za interesovanja izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete obogatiti podatke o klijentima sa više interesovanja koja su primenljiva na ovim tržištima. Takođe ćemo obogatiti profile klijenata koji se nalaze na ovim tržištima koristeći lokalne zaštićene podatke kompanije Microsoft.
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Ispravke za jul 2020.
@@ -330,8 +367,8 @@ Ispravke u julu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
 
 - **Obogaćivanje afiniteta za brendove dostupno na više tržišta**
 
-  Proširujemo dostupnost obogaćivanja afiniteta za brendove izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete da obogatite podatke o klijentima lokalnim brendovima na tim tržištima. Takođe ćemo obogatiti vaše profile klijenata koji se nalaze na tim tržištima koristeći lokalne privatne podatke iz usluge Microsoft Graph.
-  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md)
+  Proširujemo dostupnost obogaćivanja afiniteta za brendove izvan Sjedinjenih Država na pet drugih tržišta: Kanadu, Australiju, Ujedinjeno Kraljevstvo, Francusku i Nemačku. Ovim proširenjem možete da obogatite podatke o klijentima lokalnim brendovima na tim tržištima. Takođe ćemo obogatiti profile klijenata koji se nalaze na ovim tržištima koristeći lokalne zaštićene podatke kompanije Microsoft.
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Ispravke za jun 2020. godine
 
@@ -355,7 +392,7 @@ Ispravke u junu 2020. uključuju nekoliko funkcija, nadogradnje performansi i is
 - **Zasebno obogaćivanje afiniteta brendova i interesovanja**
 
   Afiniteti za brendove i interesovanja sada su dostupni kao dva nezavisna obogaćivanja. Zasebna obogaćivanja daju vam fleksibilnost da ih samostalno konfigurišete i upravljate njima, u zavisnosti od vaših poslovnih zahteva ili potreba.    
-  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft-graph.md).
+  Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Proširivost
 

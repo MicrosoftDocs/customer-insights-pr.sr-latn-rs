@@ -9,12 +9,12 @@ ms.topic: overview
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8fdfe16d609fbebd53703b56f4e0252125bedf8f
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598647"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896482"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 
@@ -27,9 +27,9 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
   - Povežite i objedinite podatke sa lakoćom – unesite transakcione, posmatračke i podatke o ponašanju iz popularnih [izvora podataka tako što ćete koristiti unapred napravljene konektore](data-sources.md).
   - Inteligentno transformišite podatke o klijentu – gradite objedinjene profile klijenata u skladu sa [platformom Common Data Model](/common-data-model/). Rešite identitete klijenata sa preporukama zasnovanim na AI/ML.
 
-- **Obogaćeno obaveštavanjem o ciljnim grupama sadržanim u programu Microsoft Graph**
+- **Obogatite obaveštavanjem o ciljnim grupama**
 
-  - Izgradite bogatije profile klijenata tako što ćete [obuhvatiti obaveštavanje o klijentima sadržano u okviru programa Microsoft Graph](enrichment-microsoft-graph.md).  
+  - Izgradite bogatije profile klijenata tako što ćete [uključiti obogaćene podatke](enrichment-hub.md).  
 
 - **Pojačajte poslovne procese i personalizovana iskustava klijenata**
 
@@ -43,7 +43,7 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
 
   - Pristup bogatoj kolekciji konektora da biste uneli sve podatke o klijentima.
   - Mogućnost ujedinjavanja podataka klijenata i njihovo pretvaranje u format [Common Data Model](/common-data-model/).
-  - Obogatite informacije o klijentima uvidima iz obaveštavanja o ciljnim grupama koji se nalaze u programu Microsoft Graph, kao što su afinitet prema brendu i interesovanja.
+  - Obogatite informacije o klijentima uvidima iz obaveštavanja o ciljnim grupama, kao što su afinitet prema brendu i interesovanja.
   - Konfiguracija „klikovi-bez-kodiranja“ i iskustvo otklanjanja grešaka u cilju lakšeg konfigurisanja uvida o korisnicima i identifikovanje potencijalnih problema.
   - Očistite i standardizujte podatke o klijentima preko različitih izvora sa preporukama koje obezbeđuje AI.  
 

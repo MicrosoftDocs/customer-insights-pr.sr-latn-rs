@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u Adobe platformu iskustva
 description: Saznajte kako se koriste segmenti uvida o korisnicima u Adobe platformi iskustva.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596286"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760118"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Korišćenje Customer Insights segmenata u Adobe platformi iskustva (verzija za pregled)
 
@@ -51,21 +51,36 @@ E-poruka sa ponudom koju želite da pošaljete sadrži ime, prezime i datum zavr
 
 Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o korisnicima na nalog Azure skladišta blob objekta.
 
-1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
+### <a name="configure-a-connection"></a>Konfigurisanje veze
 
-1. Na pločici **Azure skladište blob objekta** izaberite **Podesi**.
+1. Idite na **Administrator** > **Veze**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure skladište blob objekta.":::
+1. Izaberite **Dodaj vezu** i odaberite **Azure skladište blob objekta** ili izaberite **Podesi** na pločici **Azure skladište blob objekta**:
 
-1. Navedite **ime za prikaz** za ovo novo odredište za izvoz, a zatim unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** naloga Azure skladišta blob objekta u koji želite da izvezete segment.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure skladište blob objekta."::: da biste konfigurisali vezu.
+
+1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
+
+1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** za vaš nalog za skladište blob objekta u koji želite da izvezete segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimak ekrana konfiguracije naloga skladišta. "::: 
+   
+    - Da biste saznali više o tome kako da pronađete naziv naloga skladišta blob objekta i ključ naloga, pogledajte [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
+    - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte [Upravljajte podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
+1. Izaberite **Sačuvaj** da biste kreirali vezu. 
 
-   - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Konfigurisanje izvoza
 
-1. Izaberite **Sledeće**.
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.
+
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
 1. Odaberite segment koje želite da izvezete. U ovom primeru, to je **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
 
 1. Izaberite stavku **Sačuvaj**.
 
-Kada sačuvate odredište za izvoz, pronaći ćete ga na listi **Administrator** > **Izvozi** > **Moja odredišta za izvoz**.
+Kada sačuvate odredište za izvoz, pronaći ćete ga u dijalogu **Podaci** > **Izvozi**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Snimak ekrana sa istaknutom listom izvoza i uzorkom segmenta.":::
-
-Sada možete da [izvozite segment na zahtev](export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
+Sada možete da [izvozite segment na zahtev](export-destinations.md#run-exports-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
 
 > [!NOTE]
 > Uverite se da je broj zapisa u izvezenom segmentu unutar dozvoljenog ograničenja vaše Adobe Campaign Standard licence.

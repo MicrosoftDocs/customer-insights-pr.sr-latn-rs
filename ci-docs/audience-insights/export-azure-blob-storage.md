@@ -1,7 +1,7 @@
 ---
-title: Izvezite Customer Insights podatke u Azure skladište blob objekata
-description: Saznajte kako da konfigurišete vezu sa Azure skladištem blob objekata.
-ms.date: 09/18/2020
+title: Izvoz Customer Insights podataka u Azure skladište blob objekta
+description: Saznajte kako da konfigurišete vezu i izvezete sadržaj u skladište blob objekta.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,45 +9,57 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0986ee5caf5fa079994ca584fb2c4d9294ddb80b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 294feff2f77c3756fbadb36c90aab430454f5967
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596194"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760252"
 ---
-# <a name="connector-for-azure-blob-storage-preview"></a>Konektor za Azure skladište blob objekata (pregled)
+# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz liste segmenata i drugih podataka u Azure skladište blob objekta (pregled)
 
-Uskladištite Customer Insights podatke u Azure skladište blob objekata ili ih koristite za prenos podataka u druge aplikacije.
+Skladištite Customer Insights podatke u skladište blob objekta ili ih koristite za prenos podataka u druge aplikacije.
 
-## <a name="configure-the-connector-for-azure-blob-storage"></a>Konfigurisanje konektora za Azure skladište blob objekata
+## <a name="set-up-the-connection-to-blob-storage"></a>Podesite vezu sa skladištem blob objekta
 
-1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
+1. Idite na **Administrator** > **Veze**.
 
-1. U odeljku **Azure skladište blob objekata** izaberite **Podesi**.
+1. Izaberite **Dodaj vezu** i birajte **Azure skladište blob objekta** da biste konfigurisali vezu.
 
-1. Unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** za vaš nalog za Azure skladište blob objekata.
-    - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte [Upravljajte podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
+1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
+
+1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** za svoj nalog skladišta blob objekta.
+    - Da biste saznali više o tome kako da pronađete naziv naloga skladišta blob objekta i ključ naloga, pogledajte [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
     - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Dajte odredištu prepoznatljivo ime u polju **Ime za prikaz**.
+1. Izaberite **Sačuvaj** da biste kreirali vezu. 
 
-1. Izaberite **Sledeće**.
+## <a name="configure-an-export"></a>Konfigurisanje izvoza
+
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Idite na **Podaci** > **Izvozi**.
+
+1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
+
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
 1. Izaberite polje pored svakog entiteta koji želite da izvezete na ovo odredište.
 
 1. Izaberite stavku **Sačuvaj**.
 
-Izvezeni podaci se čuvaju u kontejneru Azure skladišta blob objekata koji ste konfigurisali. Sledeće putanje fasciklu se automatski kreiraju u vašem kontejneru:
+Čuvanje izvoza ne pokreće izvoz odmah.
+
+Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).     
+Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
+
+Izvezeni podaci se čuvaju u kontejneru skladišta blob objekta koji ste konfigurisali. Sledeće putanje fasciklu se automatski kreiraju u vašem kontejneru:
 
 - Za izvorne entitete i entitete koje generiše sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Datoteka model.json za izvezene entitete nalaziće se na nivou %ExportDestinationName%
+- Datoteka model.json za izvezene entitete biće na nivou %ExportDestinationName%
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
-
-## <a name="export-the-data"></a>Izvoz podataka
-
-Možete da [izvezete podatke na zahtev](export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
