@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u SFTP hostove
-description: Naučite kako da konfigurišete vezu na SFTP hostom.
-ms.date: 01/27/2021
+description: Saznajte kako da konfigurišete vezu i izvezete na SFTP lokaciju.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,61 +9,70 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9ec14fafa8f99e34b95349371298082e166535d0
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 96c6026aded315008439740646827ca910cead90
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598402"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760436"
 ---
-# <a name="connector-for-sftp-preview"></a><span data-ttu-id="175f0-103">Konektor za SFTP (pregled)</span><span class="sxs-lookup"><span data-stu-id="175f0-103">Connector for SFTP (preview)</span></span>
+# <a name="export-segment-lists-and-other-data-to-sftp-preview"></a><span data-ttu-id="dbd56-103">Izvoz lista segmenata i ostalih podataka u SFTP (verzija za pregled)</span><span class="sxs-lookup"><span data-stu-id="dbd56-103">Export segment lists and other data to SFTP (preview)</span></span>
 
-<span data-ttu-id="175f0-104">Koristite podatke o klijentima u nezavisnim aplikacijama tako što ćete ih izvesti na Secure File Transfer Protocol (SFTP) host.</span><span class="sxs-lookup"><span data-stu-id="175f0-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) host.</span></span>
+<span data-ttu-id="dbd56-104">Koristite podatke o klijentima u nezavisnim aplikacijama tako što ćete ih izvesti na lokaciju protokola za bezbedni prenos datoteka (SFTP).</span><span class="sxs-lookup"><span data-stu-id="dbd56-104">Use your customer data in third-party applications by exporting them to a Secure File Transfer Protocol (SFTP) location.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="175f0-105">Preduslovi</span><span class="sxs-lookup"><span data-stu-id="175f0-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="dbd56-105">Preduslovi za vezu</span><span class="sxs-lookup"><span data-stu-id="dbd56-105">Prerequisites for connection</span></span>
 
-- <span data-ttu-id="175f0-106">Dostupnost SFTP hosta i odgovarajućih akreditiva.</span><span class="sxs-lookup"><span data-stu-id="175f0-106">Availability of an SFTP host and corresponding credentials.</span></span>
+- <span data-ttu-id="dbd56-106">Dostupnost SFTP hosta i odgovarajućih akreditiva.</span><span class="sxs-lookup"><span data-stu-id="dbd56-106">Availability of an SFTP host and corresponding credentials.</span></span>
 
-## <a name="connect-to-sftp"></a><span data-ttu-id="175f0-107">Povezivanje sa SFTP</span><span class="sxs-lookup"><span data-stu-id="175f0-107">Connect to SFTP</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="dbd56-107">Poznata ograničenja</span><span class="sxs-lookup"><span data-stu-id="dbd56-107">Known limitations</span></span>
 
-1. <span data-ttu-id="175f0-108">Idite na **Administrator** > **Odredišta za izvoz**.</span><span class="sxs-lookup"><span data-stu-id="175f0-108">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="dbd56-108">Vreme izvoženja zavisi od performansi vašeg sistema.</span><span class="sxs-lookup"><span data-stu-id="dbd56-108">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="dbd56-109">Preporučujemo dva jezgra procesora i 1 GB memorije kao minimalnu konfiguraciju vašeg servera.</span><span class="sxs-lookup"><span data-stu-id="dbd56-109">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
+- <span data-ttu-id="dbd56-110">Izvoz entiteta sa do 100 miliona korisničkih profila može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija sa dva jezgra procesora i 1 GB memorije.</span><span class="sxs-lookup"><span data-stu-id="dbd56-110">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
 
-1. <span data-ttu-id="175f0-109">Pod **SFTP**, izaberite **Postavi**.</span><span class="sxs-lookup"><span data-stu-id="175f0-109">Under **SFTP**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-sftp"></a><span data-ttu-id="dbd56-111">Podešavanje veze sa SFTP</span><span class="sxs-lookup"><span data-stu-id="dbd56-111">Set up connection to SFTP</span></span>
 
-1. <span data-ttu-id="175f0-110">Dajte odredištu prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="175f0-110">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="dbd56-112">Idite na **Administrator** > **Veze**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-112">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="175f0-111">Navedite **korisničko ime**, **lozinku**, **ime hosta** i **fasciklu za izvoz** za SFTP nalog.</span><span class="sxs-lookup"><span data-stu-id="175f0-111">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
+1. <span data-ttu-id="dbd56-113">Izaberite **Dodaj vezu** i birajte **SFTP** da biste konfigurisali vezu.</span><span class="sxs-lookup"><span data-stu-id="dbd56-113">Select **Add connection** and choose **SFTP** to configure the connection.</span></span>
 
-1. <span data-ttu-id="175f0-112">Izaberite **Verifikuj** da testirate vezu.</span><span class="sxs-lookup"><span data-stu-id="175f0-112">Select **Verify** to test the connection.</span></span>
+1. <span data-ttu-id="dbd56-114">Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-114">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="dbd56-115">Ime za prikaz i vrsta veze opisuju ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="dbd56-115">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="dbd56-116">Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.</span><span class="sxs-lookup"><span data-stu-id="dbd56-116">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="175f0-113">Nakon uspešne verifikacije, izaberite da li želite da izvezete podatke u obliku **Gzipped** ili **Raspakovano** i izaberite **graničnik polja** za izvezene datoteke.</span><span class="sxs-lookup"><span data-stu-id="175f0-113">After successful verification, choose if you want to export your data **Gzipped** or **Unzipped**, and select the **field delimiter** for the exported files.</span></span>
+1. <span data-ttu-id="dbd56-117">Odaberite ko može da koristi ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="dbd56-117">Choose who can use this connection.</span></span> <span data-ttu-id="dbd56-118">Ako ništa ne preduzmete, podrazumevani će biti Administratori.</span><span class="sxs-lookup"><span data-stu-id="dbd56-118">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="dbd56-119">Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="dbd56-119">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="175f0-114">Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.</span><span class="sxs-lookup"><span data-stu-id="175f0-114">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="dbd56-120">Navedite **korisničko ime**, **lozinku**, **ime hosta** i **fasciklu za izvoz** za SFTP nalog.</span><span class="sxs-lookup"><span data-stu-id="dbd56-120">Provide a **Username**, **Password**, **Hostname**, and **Export folder** for your SFTP account.</span></span>
 
-1. <span data-ttu-id="175f0-115">Izaberite **Sledeće** da biste započeli konfigurisanje izvoza.</span><span class="sxs-lookup"><span data-stu-id="175f0-115">Select **Next** to start configuring the export.</span></span>
+1. <span data-ttu-id="dbd56-121">Izaberite **Verifikuj** da testirate vezu.</span><span class="sxs-lookup"><span data-stu-id="dbd56-121">Select **Verify** to test the connection.</span></span>
 
-## <a name="configure-the-export"></a><span data-ttu-id="175f0-116">Konfigurisanje izvoza</span><span class="sxs-lookup"><span data-stu-id="175f0-116">Configure the export</span></span>
+1. <span data-ttu-id="dbd56-122">Odaberite da li želite da izvezete podatke **spakovano** ili **raspakovano** i **separator polja** za izvezene datoteke.</span><span class="sxs-lookup"><span data-stu-id="dbd56-122">Choose if you want to export your data **Gzipped** or **Unzipped** and the **field delimiter** for the exported files.</span></span>
 
-1. <span data-ttu-id="175f0-117">Izaberite entitete, na primer segmente koje želite da izvezete.</span><span class="sxs-lookup"><span data-stu-id="175f0-117">Select the entities, for example segments, you want to export.</span></span>
+1. <span data-ttu-id="dbd56-123">Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-123">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+
+1. <span data-ttu-id="dbd56-124">Izaberite **Sačuvaj** da biste kreirali vezu.</span><span class="sxs-lookup"><span data-stu-id="dbd56-124">Select **Save** to complete the connection.</span></span>
+
+## <a name="configure-an-export"></a><span data-ttu-id="dbd56-125">Konfigurisanje izvoza</span><span class="sxs-lookup"><span data-stu-id="dbd56-125">Configure an export</span></span>
+
+<span data-ttu-id="dbd56-126">Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste.</span><span class="sxs-lookup"><span data-stu-id="dbd56-126">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="dbd56-127">Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="dbd56-127">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
+
+1. <span data-ttu-id="dbd56-128">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-128">Go to **Data** > **Exports**.</span></span>
+
+1. <span data-ttu-id="dbd56-129">Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-129">To create a new export, select **Add destination**.</span></span>
+
+1. <span data-ttu-id="dbd56-130">U polju **Veza za izvoz**, odaberite vezu iz odeljka SFTP.</span><span class="sxs-lookup"><span data-stu-id="dbd56-130">In the **Connection for export** field, choose a connection from the SFTP section.</span></span> <span data-ttu-id="dbd56-131">Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.</span><span class="sxs-lookup"><span data-stu-id="dbd56-131">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="dbd56-132">Izaberite entitete, na primer segmente koje želite da izvezete.</span><span class="sxs-lookup"><span data-stu-id="dbd56-132">Select the entities, for example segments, you want to export.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="175f0-118">Svaki izabrani entitet će imati do pet izlaznih datoteka prilikom izvoza.</span><span class="sxs-lookup"><span data-stu-id="175f0-118">Each selected entity will be up to five output files when exported.</span></span> 
+   > <span data-ttu-id="dbd56-133">Svaki izabrani entitet biće podeljen na do pet izlaznih datoteka prilikom izvoza.</span><span class="sxs-lookup"><span data-stu-id="dbd56-133">Each selected entity will be split up into up to five output files when exported.</span></span> 
 
-1. <span data-ttu-id="175f0-119">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="175f0-119">Select **Save**.</span></span>
+1. <span data-ttu-id="dbd56-134">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="dbd56-134">Select **Save**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="175f0-120">Izvoz podataka</span><span class="sxs-lookup"><span data-stu-id="175f0-120">Export the data</span></span>
+<span data-ttu-id="dbd56-135">Čuvanje izvoza ne pokreće izvoz odmah.</span><span class="sxs-lookup"><span data-stu-id="dbd56-135">Saving an export doesn't run the export immediately.</span></span>
 
-<span data-ttu-id="175f0-121">Možete da [izvezete podatke na zahtev](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="175f0-121">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="175f0-122">Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="175f0-122">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+<span data-ttu-id="dbd56-136">Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="dbd56-136">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="dbd56-137">Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="dbd56-137">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
 
-## <a name="known-limitations"></a><span data-ttu-id="175f0-123">Poznata ograničenja</span><span class="sxs-lookup"><span data-stu-id="175f0-123">Known limitations</span></span>
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="dbd56-138">Privatnost podataka i usaglašenost</span><span class="sxs-lookup"><span data-stu-id="dbd56-138">Data privacy and compliance</span></span>
 
-- <span data-ttu-id="175f0-124">Vreme izvoženja zavisi od performansi vašeg sistema.</span><span class="sxs-lookup"><span data-stu-id="175f0-124">The runtime of an export depends on your system performance.</span></span> <span data-ttu-id="175f0-125">Preporučujemo dva jezgra procesora i 1 GB memorije kao minimalnu konfiguraciju vašeg servera.</span><span class="sxs-lookup"><span data-stu-id="175f0-125">We recommend two CPU cores and 1 Gb of memory as minimal configuration of your server.</span></span> 
-- <span data-ttu-id="175f0-126">Izvoz entiteta sa do 100 miliona korisničkih profila može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija sa dva jezgra procesora i 1 GB memorije.</span><span class="sxs-lookup"><span data-stu-id="175f0-126">Exporting entities with up to 100 million customer profiles can take 90 minutes when using the recommended minimal configuration of two CPU cores and 1 Gb of memory.</span></span> 
-
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="175f0-127">Privatnost podataka i usaglašenost</span><span class="sxs-lookup"><span data-stu-id="175f0-127">Data privacy and compliance</span></span>
-
-<span data-ttu-id="175f0-128">Kada omogućite da Dynamics 365 Customer Insights prenosi podatke putem SFTP-a, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci.</span><span class="sxs-lookup"><span data-stu-id="175f0-128">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="175f0-129">Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da odredište za izvoz ispunjava sve obaveze privatnosti ili bezbednosti koje imate.</span><span class="sxs-lookup"><span data-stu-id="175f0-129">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="175f0-130">Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="175f0-130">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="175f0-131">Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni odredište za izvoz kako biste prestali sa korišćenjem ove funkcionalnosti.</span><span class="sxs-lookup"><span data-stu-id="175f0-131">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
-
+<span data-ttu-id="dbd56-139">Kada omogućite da Dynamics 365 Customer Insights prenosi podatke putem SFTP-a, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci.</span><span class="sxs-lookup"><span data-stu-id="dbd56-139">When you enable Dynamics 365 Customer Insights to transmit data via SFTP, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="dbd56-140">Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da odredište za izvoz ispunjava sve obaveze privatnosti ili bezbednosti koje imate.</span><span class="sxs-lookup"><span data-stu-id="dbd56-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that the export destination meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="dbd56-141">Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="dbd56-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="dbd56-142">Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni odredište za izvoz kako biste prestali sa korišćenjem ove funkcionalnosti.</span><span class="sxs-lookup"><span data-stu-id="dbd56-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

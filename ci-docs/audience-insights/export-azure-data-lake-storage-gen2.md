@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Azure Data Lake Storage Gen2
 description: Saznajte kako da konfigurišete vezu sa uslugom Azure Data Lake Storage Gen2.
-ms.date: 02/04/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,35 +9,47 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 7c0eef575f745efa6312d7141a6dd96607f9797e
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596655"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760068"
 ---
-# <a name="connector-for-azure-data-lake-storage-gen2-preview"></a><span data-ttu-id="a25b1-103">Konektor za Azure Data Lake Storage Gen2 (pregled)</span><span class="sxs-lookup"><span data-stu-id="a25b1-103">Connector for Azure Data Lake Storage Gen2 (preview)</span></span>
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a><span data-ttu-id="caacb-103">Podešavanje veze sa aplikacijom Azure Data Lake Storage Gen2 (verzija za pregled)</span><span class="sxs-lookup"><span data-stu-id="caacb-103">Set up the connection to Azure Data Lake Storage Gen2 (preview)</span></span>
 
-<span data-ttu-id="a25b1-104">Skladištite podatke Customer Insights podataka u uslugu Azure Data Lake Storage Gen2 ili ih koristite za prenos podataka u druge aplikacije.</span><span class="sxs-lookup"><span data-stu-id="a25b1-104">Store your Customer Insights data in Azure Data Lake Storage Gen2 or use it to transfer your data to other applications.</span></span>
+1. <span data-ttu-id="caacb-104">Idite na **Administrator** > **Veze**.</span><span class="sxs-lookup"><span data-stu-id="caacb-104">Go to **Admin** > **Connections**.</span></span>
 
-## <a name="configure-the-connector-for-azure-data-lake-storage-gen2"></a><span data-ttu-id="a25b1-105">Konfigurišite konektor za Azure Data Lake Storage Gen2</span><span class="sxs-lookup"><span data-stu-id="a25b1-105">Configure the connector for Azure Data Lake Storage Gen2</span></span>
+1. <span data-ttu-id="caacb-105">Izaberite **Dodaj vezu** i birajte **Azure Data Lake Gen 2** da biste konfigurisali vezu.</span><span class="sxs-lookup"><span data-stu-id="caacb-105">Select **Add connection** and choose **Azure Data Lake Gen 2** to configure the connection.</span></span>
 
-1. <span data-ttu-id="a25b1-106">U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.</span><span class="sxs-lookup"><span data-stu-id="a25b1-106">In audience insights, go to **Admin** > **Export destinations**.</span></span>
+1. <span data-ttu-id="caacb-106">Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="caacb-106">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="caacb-107">Ime za prikaz i vrsta veze opisuju ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="caacb-107">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="caacb-108">Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.</span><span class="sxs-lookup"><span data-stu-id="caacb-108">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="a25b1-107">Uz odeljku **Azure Data Lake Storage Gen2** izaberite **Podesi**.</span><span class="sxs-lookup"><span data-stu-id="a25b1-107">Under **Azure Data Lake Storage Gen2**, select **Set up**.</span></span>
+1. <span data-ttu-id="caacb-109">Odaberite ko može da koristi ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="caacb-109">Choose who can use this connection.</span></span> <span data-ttu-id="caacb-110">Ako ništa ne preduzmete, podrazumevani će biti Administratori.</span><span class="sxs-lookup"><span data-stu-id="caacb-110">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="caacb-111">Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="caacb-111">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="a25b1-108">Dajte odredištu prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="a25b1-108">Give your destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="caacb-112">Unesite **Naziv poslovnog kontakta**, **Ključ poslovnog kontakta** i **Kontejner** za vaš Azure Data Lake Storage Gen2.</span><span class="sxs-lookup"><span data-stu-id="caacb-112">Enter **Account name**, **Account key**, and **Container** for your Azure Data Lake Storage Gen2.</span></span>
+    - <span data-ttu-id="caacb-113">Da biste saznali kako da napravite nalog za skladištenje sa kojim ćete koristiti Azure Data Lake Storage Gen2, pogledajte članak [Kreiranje naloga za skladištenje](/azure/storage/blobs/create-data-lake-storage-account).</span><span class="sxs-lookup"><span data-stu-id="caacb-113">To learn how to create a storage account to use with Azure Data Lake Storage Gen2, see [Create storage account](/azure/storage/blobs/create-data-lake-storage-account).</span></span> 
+    - <span data-ttu-id="caacb-114">Da biste saznali više o nazivu naloga Azure Data Lake Gen2 skladišta i ključu skladišta, pogledajte [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="caacb-114">To learn more about Azure Data Lake Gen2 storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
 
-1. <span data-ttu-id="a25b1-109">Unesite **Naziv poslovnog kontakta**, **Ključ poslovnog kontakta** i **Kontejner** za vaš Azure Data Lake Storage Gen2.</span><span class="sxs-lookup"><span data-stu-id="a25b1-109">Enter **Account name**, **Account key**, and **Container** for your Azure Data Lake Storage Gen2.</span></span>
-    - <span data-ttu-id="a25b1-110">Da biste saznali kako da napravite nalog za skladištenje sa kojim ćete koristiti Azure Data Lake Storage Gen2, pogledajte članak [Kreiranje naloga za skladištenje](/azure/storage/blobs/create-data-lake-storage-account).</span><span class="sxs-lookup"><span data-stu-id="a25b1-110">To learn how to create a storage account to use with Azure Data Lake Storage Gen2, see [Create storage account](/azure/storage/blobs/create-data-lake-storage-account).</span></span> 
-    - <span data-ttu-id="a25b1-111">Da biste saznali više o tome kako da pronađete ime poslovnog kontakta za Azure Data Lake Gen2 skladište, pogledajte članak [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).</span><span class="sxs-lookup"><span data-stu-id="a25b1-111">To learn more about how to find the Azure Data Lake Gen2 storage account name and account key, see [Manage storage account settings in the Azure portal](/azure/storage/common/storage-account-manage).</span></span>
+1. <span data-ttu-id="caacb-115">Izaberite **Sačuvaj** da biste kreirali vezu.</span><span class="sxs-lookup"><span data-stu-id="caacb-115">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="a25b1-112">Izaberite **Sledeće**.</span><span class="sxs-lookup"><span data-stu-id="a25b1-112">Select **Next**.</span></span>
+## <a name="configure-an-export"></a><span data-ttu-id="caacb-116">Konfigurisanje izvoza</span><span class="sxs-lookup"><span data-stu-id="caacb-116">Configure an export</span></span>
 
-1. <span data-ttu-id="a25b1-113">Izaberite polje pored svakog entiteta koji želite da izvezete na ovo odredište.</span><span class="sxs-lookup"><span data-stu-id="a25b1-113">Select the box next to each of the entities you want to export to this destination.</span></span>
+<span data-ttu-id="caacb-117">Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste.</span><span class="sxs-lookup"><span data-stu-id="caacb-117">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="caacb-118">Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="caacb-118">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-1. <span data-ttu-id="a25b1-114">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="a25b1-114">Select **Save**.</span></span>
+1. <span data-ttu-id="caacb-119">Idite na **Podaci** > **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="caacb-119">Go to **Data** > **Exports**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="a25b1-115">Izvoz podataka</span><span class="sxs-lookup"><span data-stu-id="a25b1-115">Export the data</span></span>
+1. <span data-ttu-id="caacb-120">Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.</span><span class="sxs-lookup"><span data-stu-id="caacb-120">To create a new export, select **Add export**.</span></span>
 
-<span data-ttu-id="a25b1-116">Možete da [izvezete podatke na zahtev](export-destinations.md#export-data-on-demand).</span><span class="sxs-lookup"><span data-stu-id="a25b1-116">You can [export data on demand](export-destinations.md#export-data-on-demand).</span></span> <span data-ttu-id="a25b1-117">Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="a25b1-117">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span>
+1. <span data-ttu-id="caacb-121">U polju **Veza za izvoz**, odaberite vezu iz odeljka **Azure Data Lake**.</span><span class="sxs-lookup"><span data-stu-id="caacb-121">In the **Connection for export** field, choose a connection from the **Azure Data Lake** section.</span></span> <span data-ttu-id="caacb-122">Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.</span><span class="sxs-lookup"><span data-stu-id="caacb-122">If you don't see this section name, there are no connections of this type available to you.</span></span>
+
+1. <span data-ttu-id="caacb-123">Izaberite polje pored svakog entiteta koji želite da izvezete na ovo odredište.</span><span class="sxs-lookup"><span data-stu-id="caacb-123">Select the box next to each of the entities you want to export to this destination.</span></span>
+
+1. <span data-ttu-id="caacb-124">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="caacb-124">Select **Save**.</span></span>
+
+<span data-ttu-id="caacb-125">Čuvanje izvoza ne pokreće izvoz odmah.</span><span class="sxs-lookup"><span data-stu-id="caacb-125">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="caacb-126">Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="caacb-126">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="caacb-127">Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="caacb-127">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+<span data-ttu-id="caacb-128">Izvezeni podaci se čuvaju u Azure Data Lake Gen 2 kontejneru za skladištenje koji ste konfigurisali.</span><span class="sxs-lookup"><span data-stu-id="caacb-128">Exported data is stored in the Azure Data Lake Gen 2 storage container you configured.</span></span> 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

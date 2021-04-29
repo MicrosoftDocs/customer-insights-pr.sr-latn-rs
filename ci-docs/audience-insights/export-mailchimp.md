@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Mailchimp
-description: Saznajte kako da konfigurišete vezu sa uslugom Mailchimp.
-ms.date: 10/26/2020
+description: Saznajte kako da konfigurišete vezu i izvezete u Mailchimp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,71 +9,78 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 9f86616731c3cc3d26370727103ea9c5d4288c8d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598218"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759895"
 ---
-# <a name="connector-for-mailchimp-preview"></a><span data-ttu-id="a4cf1-103">Konektor za Mailchimp (verzija za pregled)</span><span class="sxs-lookup"><span data-stu-id="a4cf1-103">Connector for Mailchimp (preview)</span></span>
+# <a name="export-segment-lists-to-mailchimp-preview"></a><span data-ttu-id="bd7e5-103">Izvoz listi segmenata u Mailchimp (verzija za pregled)</span><span class="sxs-lookup"><span data-stu-id="bd7e5-103">Export segment lists to Mailchimp (preview)</span></span>
 
-<span data-ttu-id="a4cf1-104">Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste kreirali biltene i kampanje e-pošte.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
+<span data-ttu-id="bd7e5-104">Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste kreirali biltene i kampanje e-pošte.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-104">Export segments of unified customer profiles to Mailchimp to create newsletters and email campaigns.</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="a4cf1-105">Preduslovi</span><span class="sxs-lookup"><span data-stu-id="a4cf1-105">Prerequisites</span></span>
+## <a name="prerequisites-for-connection"></a><span data-ttu-id="bd7e5-105">Preduslovi za vezu</span><span class="sxs-lookup"><span data-stu-id="bd7e5-105">Prerequisites for connection</span></span>
 
--   <span data-ttu-id="a4cf1-106">Imate [Mailchimp nalog](https://mailchimp.com/) i odgovarajuće akreditive administratora.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
--   <span data-ttu-id="a4cf1-107">Postoji postojeća publika u Mailchimp-u i odgovarajući ID-ovi.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="a4cf1-108">Za više informacija pogledajte [Mailchimp korisnici](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="a4cf1-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
--   <span data-ttu-id="a4cf1-109">Imate [konfigurisane segmente](segments.md)</span><span class="sxs-lookup"><span data-stu-id="a4cf1-109">You have [configured segments](segments.md)</span></span>
--   <span data-ttu-id="a4cf1-110">Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
+-   <span data-ttu-id="bd7e5-106">Imate [Mailchimp nalog](https://mailchimp.com/) i odgovarajuće akreditive administratora.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-106">You have a [Mailchimp account](https://mailchimp.com/) and corresponding administrator credentials.</span></span>
+-   <span data-ttu-id="bd7e5-107">Postoji postojeća publika u Mailchimp-u i odgovarajući ID-ovi.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-107">There are existing audiences in Mailchimp and the corresponding IDs.</span></span> <span data-ttu-id="bd7e5-108">Za više informacija pogledajte [Mailchimp korisnici](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-108">For more information, see [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+-   <span data-ttu-id="bd7e5-109">Imate [konfigurisane segmente](segments.md)</span><span class="sxs-lookup"><span data-stu-id="bd7e5-109">You have [configured segments](segments.md)</span></span>
+-   <span data-ttu-id="bd7e5-110">Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-110">Unified customer profiles in the exported segments contain a field representing an email address.</span></span>
 
-## <a name="connect-to-mailchimp"></a><span data-ttu-id="a4cf1-111">Povežite sa uslugom Mailchimp</span><span class="sxs-lookup"><span data-stu-id="a4cf1-111">Connect to Mailchimp</span></span>
+## <a name="known-limitations"></a><span data-ttu-id="bd7e5-111">Poznata ograničenja</span><span class="sxs-lookup"><span data-stu-id="bd7e5-111">Known limitations</span></span>
 
-1. <span data-ttu-id="a4cf1-112">Idite na **Administrator** > **Odredišta za izvoz**.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-112">Go to **Admin** > **Export destinations**.</span></span>
+- <span data-ttu-id="bd7e5-112">Do 1 milion profila po izvozu u usluzi Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-112">Up to 1 million profiles per export to Mailchimp.</span></span>
+- <span data-ttu-id="bd7e5-113">Izvoz u Mailchimp je ograničen na segmente.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-113">Exporting to Mailchimp is limited to segments.</span></span>
+- <span data-ttu-id="bd7e5-114">Izvoz segmenata sa 1 milion profila može trajati do tri sata.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-114">Exporting segments with 1 million profiles can take up to three hours.</span></span> 
+- <span data-ttu-id="bd7e5-115">Broj profila koje možete da izvezete u Mailchimp zavisi od i ograničen je vašim ugovorom sa kompanijom Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-115">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
 
-1. <span data-ttu-id="a4cf1-113">Pod **Mailchimp**, izaberite **Podesi**.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-113">Under **Mailchimp**, select **Set up**.</span></span>
+## <a name="set-up-connection-to-mailchimp"></a><span data-ttu-id="bd7e5-116">Podešavanje veze sa uslugom Mailchimp</span><span class="sxs-lookup"><span data-stu-id="bd7e5-116">Set up connection to Mailchimp</span></span>
 
-1. <span data-ttu-id="a4cf1-114">Dajte odredištu za izvoz prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-114">Give your export destination a recognizable name in the **Display name** field.</span></span>
+1. <span data-ttu-id="bd7e5-117">Idite na **Administrator** > **Veze**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-117">Go to **Admin** > **Connections**.</span></span>
 
-1. <span data-ttu-id="a4cf1-115">Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-115">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
+1. <span data-ttu-id="bd7e5-118">Izaberite **Dodaj vezu** i birajte **Autopilot** da biste konfigurisali vezu.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-118">Select **Add connection** and choose **Autopilot** to configure the connection.</span></span>
 
-1. <span data-ttu-id="a4cf1-116">Unesite **[Mailchimp ID korisnika](https://mailchimp.com/help/find-audience-id/)** i izaberite **Povežite se** da biste započeli povezivanje sa Mailchimp-om.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-116">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)** and select **Connect** to initialize the connection to Mailchimp.</span></span>
+1. <span data-ttu-id="bd7e5-119">Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-119">Give your connection a recognizable name in the **Display name** field.</span></span> <span data-ttu-id="bd7e5-120">Ime za prikaz i vrsta veze opisuju ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-120">The name and the type of the connection describe this connection.</span></span> <span data-ttu-id="bd7e5-121">Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-121">We recommend choosing a name that explains the purpose and target of the connection.</span></span>
 
-1. <span data-ttu-id="a4cf1-117">Izaberite **Potvrdite identitet u Mailchimp-u** i navedite akreditive za Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-117">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
+1. <span data-ttu-id="bd7e5-122">Odaberite ko može da koristi ovu vezu.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-122">Choose who can use this connection.</span></span> <span data-ttu-id="bd7e5-123">Ako ništa ne preduzmete, podrazumevani će biti Administratori.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-123">If you take no action, the default will be Administrators.</span></span> <span data-ttu-id="bd7e5-124">Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-124">For more information, see [Allow contributors to use a connection for exports](connections.md#allow-contributors-to-use-a-connection-for-exports).</span></span>
 
-1. <span data-ttu-id="a4cf1-118">Izaberite **Dodajte sebe kao korisnika za izvoz** i obezbedite svoje akreditive za Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-118">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
+1. <span data-ttu-id="bd7e5-125">Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-125">Select **I agree** to confirm the **Data privacy and compliance**.</span></span>
 
-   :::image type="content" source="media/export-connect-mailchimp.png" alt-text="Izvezite snimak ekrana za vezu sa uslugom Mailchimp":::
+1. <span data-ttu-id="bd7e5-126">Izaberite **Povežite se** da bi se inicijalizovala veza sa uslugom Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-126">Select **Connect** to initialize the connection to Mailchimp.</span></span>
 
-1. <span data-ttu-id="a4cf1-120">Izaberite **Sledeće** da biste konfigurisali izvoz.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-120">Select **Next** to configure the export.</span></span>
+1. <span data-ttu-id="bd7e5-127">Izaberite **Potvrdite identitet u Mailchimp-u** i navedite akreditive za Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-127">Select **Authenticate with Mailchimp** and provide your Mailchimp credentials.</span></span>
 
-## <a name="configure-the-connector"></a><span data-ttu-id="a4cf1-121">Konfigurisanje konektora</span><span class="sxs-lookup"><span data-stu-id="a4cf1-121">Configure the connector</span></span>
+1. <span data-ttu-id="bd7e5-128">Izaberite **Dodajte sebe kao korisnika za izvoz** i obezbedite svoje akreditive za Customer Insights.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-128">Select **Add yourself as export user** and provide your Customer Insights credentials.</span></span>
 
-1. <span data-ttu-id="a4cf1-122">U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-122">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
+1. <span data-ttu-id="bd7e5-129">Izaberite **Sačuvaj** da biste kreirali vezu.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-129">Select **Save** to complete the connection.</span></span> 
 
-1. <span data-ttu-id="a4cf1-123">Po želji možete da izvezete **Ime** i **Prezime** kao dodatna polja za stvaranje personalizovanih e-poruka.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-123">Optionally, you can export **First name** and **Last name** as additional fields to create more personalized emails.</span></span> <span data-ttu-id="a4cf1-124">Izaberite **Dodaj atribut** za mapiranje ovih polja.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-124">Select **Add attribute** to map these fields.</span></span>
+## <a name="configure-the-connector"></a><span data-ttu-id="bd7e5-130">Konfigurisanje konektora</span><span class="sxs-lookup"><span data-stu-id="bd7e5-130">Configure the connector</span></span>
 
-1. <span data-ttu-id="a4cf1-125">Izaberite segmente koje želite da izvezete.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-125">Select the segments you want to export.</span></span> <span data-ttu-id="a4cf1-126">U usluzi Mailchimp možete ukupno izvesti do 1 milion korisničkih profila.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-126">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
+<span data-ttu-id="bd7e5-131">Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-131">You can configure this export if you have access to a connection of this type.</span></span> <span data-ttu-id="bd7e5-132">Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-132">For more information, see [Permissions needed to configure an export](export-destinations.md#set-up-a-new-export).</span></span>
 
-   :::image type="content" source="media/export-segments-mailchimp.png" alt-text="Izaberite polja i segmente za izvoz u Mailchimp":::
+1. <span data-ttu-id="bd7e5-133">Idite na **Podaci**> **Izvozi**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-133">Go to **Data**> **Exports**.</span></span>
 
-1. <span data-ttu-id="a4cf1-128">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-128">Select **Save**.</span></span>
+1. <span data-ttu-id="bd7e5-134">Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-134">To create a new export, select **Add destination**.</span></span>
 
-## <a name="export-the-data"></a><span data-ttu-id="a4cf1-129">Izvoz podataka</span><span class="sxs-lookup"><span data-stu-id="a4cf1-129">Export the data</span></span>
+1. <span data-ttu-id="bd7e5-135">U polju **Veza za izvoz**, odaberite vezu iz odeljka Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-135">In the **Connection for export** field, choose a connection from the Mailchimp section.</span></span> <span data-ttu-id="bd7e5-136">Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-136">If you don't see this section name, there are no connections of this type available to you.</span></span>
 
-<span data-ttu-id="a4cf1-130">Možete da [izvezete podatke na zahtev](export-destinations.md).</span><span class="sxs-lookup"><span data-stu-id="a4cf1-130">You can [export data on demand](export-destinations.md).</span></span> <span data-ttu-id="a4cf1-131">Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="a4cf1-131">The export will also run with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="a4cf1-132">U Mailchimp-u sada možete pronaći segmente u odeljku [Mailchimp korisnici](https://mailchimp.com/help/create-audience/).</span><span class="sxs-lookup"><span data-stu-id="a4cf1-132">In Mailchimp, you can now find your segments under [Mailchimp audiences](https://mailchimp.com/help/create-audience/).</span></span>
+1. <span data-ttu-id="bd7e5-137">Unesite **[ID ciljne grupe za Mailchimp](https://mailchimp.com/help/find-audience-id/)**</span><span class="sxs-lookup"><span data-stu-id="bd7e5-137">Enter your **[Mailchimp audience ID](https://mailchimp.com/help/find-audience-id/)**</span></span>
 
-## <a name="known-limitations"></a><span data-ttu-id="a4cf1-133">Poznata ograničenja</span><span class="sxs-lookup"><span data-stu-id="a4cf1-133">Known limitations</span></span>
+3. <span data-ttu-id="bd7e5-138">U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-138">In the **Data matching** section, in the **Email** field, select the field in your unified customer profile that represents a customer's email address.</span></span> 
 
-- <span data-ttu-id="a4cf1-134">Do 1 milion profila po izvozu u usluzi Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-134">Up to 1 million profiles per export to Mailchimp.</span></span>
-- <span data-ttu-id="a4cf1-135">Izvoz u Mailchimp je ograničen na segmente.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-135">Exporting to Mailchimp is limited to segments.</span></span>
-- <span data-ttu-id="a4cf1-136">Izvoz segmenata sa ukupno 1 milion profila može trajati do tri sata zbog ograničenja na strani dobavljača.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-136">Exporting segments with a total of 1 million profiles can take up to three hours due to limitations on the provider side.</span></span> 
-- <span data-ttu-id="a4cf1-137">Broj profila koje možete da izvezete u Mailchimp zavisi od i ograničen je vašim ugovorom sa kompanijom Mailchimp.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-137">The number of profiles that you can export to Mailchimp is dependent and limited on your contract with Mailchimp.</span></span>
+1. <span data-ttu-id="bd7e5-139">Opcionalno, možete da izvezete **Ime** i **Prezime** da biste kreirali personalizovanije e-poruke.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-139">Optionally, you can export **First name** and **Last name** to create more personalized emails.</span></span> <span data-ttu-id="bd7e5-140">Izaberite **Dodaj atribut** za mapiranje ovih polja.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-140">Select **Add attribute** to map these fields.</span></span>
 
-## <a name="data-privacy-and-compliance"></a><span data-ttu-id="a4cf1-138">Privatnost podataka i usaglašenost</span><span class="sxs-lookup"><span data-stu-id="a4cf1-138">Data privacy and compliance</span></span>
+1. <span data-ttu-id="bd7e5-141">Izaberite segmente koje želite da izvezete.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-141">Select the segments you want to export.</span></span> <span data-ttu-id="bd7e5-142">U usluzi Mailchimp možete ukupno izvesti do 1 milion korisničkih profila.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-142">You can export up to 1 million customer profiles in total to Mailchimp.</span></span>
 
-<span data-ttu-id="a4cf1-139">Kada omogućite da Dynamics 365 Customer Insights prenosi podatke u Mailchimp, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-139">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="a4cf1-140">Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da Mailchimp ispunjava sve obaveze privatnosti ili bezbednosti koje imate.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-140">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="a4cf1-141">Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="a4cf1-141">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
-<span data-ttu-id="a4cf1-142">Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni odredište za izvoz kako biste prestali sa korišćenjem ove funkcionalnosti.</span><span class="sxs-lookup"><span data-stu-id="a4cf1-142">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
+1. <span data-ttu-id="bd7e5-143">Izaberite stavku **Sačuvaj**.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-143">Select **Save**.</span></span>
 
+<span data-ttu-id="bd7e5-144">Čuvanje izvoza ne pokreće izvoz odmah.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-144">Saving an export doesn't run the export immediately.</span></span>
+
+<span data-ttu-id="bd7e5-145">Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-145">The export runs with every [scheduled refresh](system.md#schedule-tab).</span></span> <span data-ttu-id="bd7e5-146">Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-146">You can also [export data on demand](export-destinations.md#run-exports-on-demand).</span></span> 
+
+## <a name="data-privacy-and-compliance"></a><span data-ttu-id="bd7e5-147">Privatnost podataka i usaglašenost</span><span class="sxs-lookup"><span data-stu-id="bd7e5-147">Data privacy and compliance</span></span>
+
+<span data-ttu-id="bd7e5-148">Kada omogućite da Dynamics 365 Customer Insights prenosi podatke u Mailchimp, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-148">When you enable Dynamics 365 Customer Insights to transmit data to Mailchimp, you allow transfer of data outside of the compliance boundary for Dynamics 365 Customer Insights, including potentially sensitive data such as Personal Data.</span></span> <span data-ttu-id="bd7e5-149">Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da Mailchimp ispunjava sve obaveze privatnosti ili bezbednosti koje imate.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-149">Microsoft will transfer such data at your instruction, but you are responsible for ensuring that Mailchimp meets any privacy or security obligations you may have.</span></span> <span data-ttu-id="bd7e5-150">Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).</span><span class="sxs-lookup"><span data-stu-id="bd7e5-150">For more information, see [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?linkid=396732).</span></span>
+<span data-ttu-id="bd7e5-151">Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni odredište za izvoz kako biste prestali sa korišćenjem ove funkcionalnosti.</span><span class="sxs-lookup"><span data-stu-id="bd7e5-151">Your Dynamics 365 Customer Insights Administrator can remove this export destination at any time to discontinue use of this functionality.</span></span>
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
