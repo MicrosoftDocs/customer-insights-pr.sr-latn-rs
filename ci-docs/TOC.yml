@@ -66,6 +66,8 @@
           href: audience-insights/enrichment-hub.md
         - name: Afiniteti prema brendu i interesovanjima
           href: audience-insights/enrichment-microsoft.md
+        - name: Poboljšane adrese
+          href: audience-insights/enrichment-enhanced-addresses.md
         - name: Obogatite uz HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obogaćivanje uz Leadspace
@@ -76,14 +78,20 @@
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenti i mere
       items:
-        - name: Kreiranje segmenata i grupa klijenata
+        - name: Pregled segmenata
           href: audience-insights/segments.md
+        - name: Kreiranje segmenata i grupa klijenata
+          href: audience-insights/segment-builder.md
+        - name: Predloženi segmenti zasnovani na merama
+          href: audience-insights/suggested-segments.md
+        - name: Predloženi segmenti zasnovani na aktivnosti
+          href: audience-insights/suggested-segments-activity.md
         - name: Dobijte uvid u segmente
           href: audience-insights/segment-insights.md
-        - name: Pogledajte predložene segmente
-          href: audience-insights/suggested-segments.md
         - name: Pronađi slične klijente
           href: audience-insights/find-similar-customer-segments.md
+    - name: Mere
+      items:
         - name: Definisanje mera i KPI-ova
           href: audience-insights/measures.md
     - name: Predviđanja
@@ -116,7 +124,7 @@
       items:
         - name: Izvozi
           items:
-            - name: Pregled izvoza (verzija za pregled)
+            - name: Pregled izvoza
               href: audience-insights/export-destinations.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
@@ -126,6 +134,8 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
+            - name: Azure Synapse analitika
+              href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
             - name: Adobe platforma iskustva
@@ -160,9 +170,7 @@
               href: audience-insights/export-sftp.md
         - name: Druge upotrebe
           items:
-            - name: Dynamics 365 Customer Service (programski dodatak)
-              href: audience-insights/customer-card-add-in.md
-            - name: Dynamics 365 Čvorište za prodaju (programski dodatak)
+            - name: Programski dodatak za karticu klijenta za Dynamics 365
               href: audience-insights/customer-card-add-in.md
             - name: Microsoft Teams (robot)
               href: audience-insights/export-teams-bot.md
@@ -178,7 +186,7 @@
           href: audience-insights/system.md
         - name: Dodela dozvola korisnika
           href: audience-insights/permissions.md
-        - name: Pregled veza (verzija za pregled)
+        - name: Pregled veza
           href: audience-insights/connections.md
         - name: Upravljanje sa više okruženja
           href: audience-insights/manage-environments.md
