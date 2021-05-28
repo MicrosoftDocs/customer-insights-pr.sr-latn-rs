@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
+ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5887957"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049267"
 ---
 # <a name="define-and-manage-measures"></a>Definišite i upravljajte merama
 
@@ -34,7 +34,7 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
 
 1. Izaberite **Uređivanje naziva** i navedite **Naziv** za meru. 
    > [!NOTE]
-   > Ako vaša nova konfiguracija mere ima samo dva polja, za primer, CustomerID i jedan proračun, izlaz će biti dodat kao nova kolona sistemski generisanom entitetu pod nazivom Customer_Measure. I moći ćete da vidite vrednost mere u objedinjenom profilu klijenta. Druge mere će generisati sopstvene entitete.
+   > Ako vaša nova konfiguracija mere ima samo dva polja, npr. CustomerID i jedan proračun, izlaz će biti dodat kao nova kolona sistemski generisanom entitetu pod nazivom Customer_Measure. I moći ćete da vidite vrednost mere u objedinjenom profilu klijenta. Druge mere će generisati sopstvene entitete.
 
 1. U oblasti konfiguracije, odaberite agregatnu funkciju iz padajućeg menija **Izaberite funkciju**. Agregatne funkcije uključuju: 
    - **Sum**

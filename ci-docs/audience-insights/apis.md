@@ -1,7 +1,7 @@
 ---
 title: Rad sa API-jima
 description: Koristite API-je i shvatite ograničenja.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873679"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016637"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
@@ -90,19 +90,13 @@ Za informacije o korišćenju API-ja i naših klijentskih biblioteka, pogledajte
 
 1. Pri registraciji aplikacije na Azure portalu idite na **Dozvole za API-je**.
 
-1. Izaberite **Dodajte dozvolu** i izaberite **Customer Insights** u bočnom oknu.
+1. Izaberite **Dodaj dozvolu**. 
+
+1. Izaberite karticu **API-ji koje koristi moja organizacija** karticu i sa liste izaberite **Dynamics 365 AI za Customer Insights**. 
 
 1. Za **Tip dozvole**, izaberite **Dozvole za aplikacije** i izaberite dozvolu **CustomerInsights.Api.All**.
 
 1. Izaberite stavku **Dodajte dozvole**.
-
-1. Da biste dali saglasnost administratora za ovu dozvolu za aplikaciju, morate da dodate principal usluge.
-
-   1. Instalirajte Azure Active Directory (AD) PowerShell modul: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Povežite se na AD nalog: `Connect-AzureAD -TenantId <your tenant id>`. Možete pronaći svoj ID zakupca **Pregled** > **Azure Active Directory**.
-   1. Pokrenite sledeću komandu da biste dodali Azure AD principal usluge: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Parametar AppId odnosi se na aplikaciju Customer Insights API.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Uzorak principala usluge":::
 
 1. Na novoj registraciji aplikacije vratite se na **Dozvole za API-je**.
 

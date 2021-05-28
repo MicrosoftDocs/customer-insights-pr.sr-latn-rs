@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596424"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049411"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima o korisnicima
 
@@ -35,14 +35,14 @@ Stranica **Entiteti** navodi entitete i sadrži nekoliko kolona:
 Izaberite entitet da biste istražili različita polja i zapise koji su uključeni u taj entitet.
 
 > [!div class="mx-imgBorder"]
-> ![Izaberite entitet](media/data-manager-entities-data.png "Izaberite entitet")
+> ![Izbor entiteta](media/data-manager-entities-data.png "Izaberite entitet")
 
-- Kartica **Podaci** je podrazumevano izabrana i prikazuje tabelu u kojoj su navedeni detalji o pojedinačnim zapisima entiteta.
+- Kartica **Podaci** prikazuje detalje listinga tabela o pojedinačnim zapisima entiteta.
 
 > [!div class="mx-imgBorder"]
 > ![Tabela polja](media/data-manager-entities-fields.PNG "Tabela polja")
 
-- Kartica **Polja** prikazuje tabelu za pregled detalja za odabrani entitet, kao što su imena polja, tipovi podataka i tipovi. Kolona **Tip** prikazuje tipove povezane sa Common Data Model, koje sistem automatski prepoznaje ili ih korisnici [ručno mapiraju](map-entities.md). Ovo su semantički tipovi koji se mogu razlikovati od tipova podataka atributa – na primer, polje *E-pošta* u nastavku je tipa podataka *Tekst*, ali njegov (semantički) Common Data Model tip može biti *E-pošta* ili *Adresa e-pošte*.
+- Kartica **Atributi** je podrazumevano izabrana i prikazuje tabelu za pregled detalja za izabrani entitet, kao što su imena polja, tipovi podataka i tipovi. Kolona **Tip** prikazuje tipove povezane sa Common Data Model, koje sistem automatski prepoznaje ili ih korisnici [ručno mapiraju](map-entities.md). Ovo su semantički tipovi koji se mogu razlikovati od tipova podataka atributa – na primer, polje *E-pošta* u nastavku je tipa podataka *Tekst*, ali njegov (semantički) Common Data Model tip može biti *E-pošta* ili *Adresa e-pošte*.
 
 > [!NOTE]
 > Obe tabele prikazuju samo uzorak podataka vašeg entiteta. Da biste videli ceo skup podataka, idite na stranicu **Izvori podataka**, izaberite entitet, izaberite **Uredi**, a zatim pregledajte podatke ovog entiteta pomoću Power Query uređivača, kao što je objašnjeno u članku [Izvori podataka](data-sources.md).

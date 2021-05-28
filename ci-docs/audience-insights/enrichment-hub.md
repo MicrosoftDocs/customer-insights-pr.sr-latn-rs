@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896022"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954504"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
 
@@ -29,6 +29,7 @@ Na kartici **Otkrivanje** ćete pronaći sledeća obogaćivanja:
 
 - [Brendove](enrichment-microsoft.md) obezbeđuje Microsoft
 - [Interesovanja](enrichment-microsoft.md) obezbeđuje Microsoft
+- [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft
 - [Podaci o kompaniji](enrichment-leadspace.md) koje pruža Leadspace
 - [Demografski podaci](enrichment-experian.md) koje pruža Experian
 - [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies

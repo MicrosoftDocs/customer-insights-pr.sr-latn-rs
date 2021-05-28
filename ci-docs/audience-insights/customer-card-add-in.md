@@ -1,7 +1,7 @@
 ---
-title: Instalirajte i konfigurišite Dodatak za karticu klijenta
-description: Instalirajte i konfigurišite dodatak za karticu klijenta za Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Programski dodatak za karticu klijenta za Dynamics 365 aplikacije
+description: Prikažite podatke iz uvida u ciljnu grupu u Dynamics 365 aplikacijama sa ovim programskim dodatkom.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597344"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059605"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikacijama. Prikažite demografske podatke, uvide i vremenske rokove aktivnosti pomoću dodatka kartice klijenta.
+Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikacijama. Kada je programski dodatak za klijentsku karticu instaliran u podržanoj Dynamics 365 aplikaciji, možete odabrati da prikazujete demografske podatke, uvide i vremenske ose aktivnosti. Programski dodatak će preuzeti podatke iz usluge Customer Insights bez uticaja na podatke u povezanoj Dynamics 365 aplikaciji. 
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Aplikacija Dynamics 365 (kao što je Čvorište za prodaju ili čvorište korisničke službe), verzije 9.0 i novije sa omogućenim objedinjenim interfejsom.
-- Profili klijenata [uneti iz aplikacije Dynamics 365 pomoću usluge Common Data Service](connect-power-query.md).
-- Korisnici Dodatka za karticu klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima o korisnicima.
-- [Konfigurisane mogućnosti pretraživanja i filtriranja](search-filter-index.md).
-- Demografska kontrola: Demografska polja (kao što su starost ili pol) dostupna su u objedinjenom profilu klijenta.
-- Kontrola obogaćivanja: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata.
-- Kontrola obaveštavanja: Zahteva podatke generisane pomoću Azure mašinskog učenja ([predviđanja](predictions.md) ili [prilagođeni modeli](custom-models.md))
-- Kontrola mere: Zahteva [konfigurisane mere](measures.md).
-- Kontrola vremenske linije: Zahteva[ konfigurisane aktivnosti](activities.md).
+- Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
+- Da bi se vaši Dynamics 365 podaci mapirali u korisničke profile uvida u ciljnu grupu, oni treba da budu [uneti iz Dynamics 365 aplikacije pomoću Common Data Service konektora](connect-power-query.md).
+- Svi Dynamics 365 korisnici programskog dodatka za kartice klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima u ciljnu grupu da biste videli podatke.
+- [Konfigurisane mogućnosti pretrage i filtriranja](search-filter-index.md) u uvidima u ciljnu grupu su potrebne da bi pronalaženje podataka funkcionisalo.
+- Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima u ciljnu grupu:
+  - Kontrola mere: Zahteva [konfigurisane mere](measures.md).
+  - Kontrola obaveštavanja: Zahteva podatke generisane korišćenjem [predviđanja](predictions.md) ili [prilagođenih modela](custom-models.md).
+  - Demografska kontrola: Demografska polja (kao što su starost ili pol) dostupna su u objedinjenom profilu klijenta.
+  - Kontrola obogaćivanja: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata.
+  - Kontrola vremenske linije: Zahteva[ konfigurisane aktivnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalirajte i koristite dodatak za karticu klijenta
 
@@ -56,9 +57,9 @@ Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
    > [!NOTE]
    > Proverite da li blokator iskačućih prozora pregledača ne blokira prozor za potvrdu identiteta kada izaberete dugme **Prijavljivanje**.
 
-1. Izaberite okruženje iz kojeg želite da preuzmete podatke.
+1. Izaberite instancu Customer Insights okruženja iz kojeg želite da preuzmete podatke.
 
-1. Definišite koje se mapiranje polja snima u aplikaciji Dynamics 365.
+1. Definišite mapiranje polja na zapise u Dynamics 365 aplikaciji. U zavisnosti od vaših podataka u usluzi Customer Insights, možete odabrati da mapirate sledeće opcije:
    - Da biste mapirali kontakt, odaberite polje u entitetu klijenta koje se podudara sa ID-om vašeg entiteta kontakta.
    - Da biste mapirali poslovni kontakt, odaberite polje u entitetu klijenta koje se podudara sa ID-om vašeg entiteta poslovnog kontakta.
 

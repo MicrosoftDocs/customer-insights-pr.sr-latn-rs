@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595581"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085639"
 ---
 # <a name="match-entities"></a>Podudaranje entiteta
 
@@ -103,6 +103,18 @@ Pravila za podudaranje predstavljaju skupove uslova. Da biste podudarili entitet
 
 > [!NOTE]
 > Redosled pravila je važan. Algoritam podudaranja pokušava da podudari sadržaj na osnovu vašeg prvog pravila i nastavlja na drugo pravilo samo ako sa prvim pravilom nije identifikovano nijedno podudaranje.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Promena redosleda entiteta u pravilima podudaranja
+
+Možete promeniti redosled entiteta za pravila podudaranja da biste promenili redosled obrade. Pravila koja su u suprotnosti zbog promenjenog redosleda biće uklonjena. Uklonjena pravila morate ponovo kreirati pomoću ažurirane konfiguracije.
+
+1. Idi na **Podaci** > **Ujednačavanje** > **Podudaranje** i izaberite **Uredi**.
+
+1. U oknu **Uređivanje pravila**, izaberite kontrolu **Pomeri nagore/nadole** ili prevucite i ispustite entitete da biste im promenili redosled.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opcije za promenu redosleda obrade entiteta u fazi podudaranja.":::
+
+1. Izaberite **Gotovo** da biste sačuvali pravilo.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definišite deduplikaciju na entitetu podudaranja
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595826"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954596"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Predviđanje trajne vrednosti klijenta (CLV) (pregled)
 
@@ -38,11 +38,11 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
 - Identifikator klijenata: Jedinstveni identifikator koji podudara transakcije sa pojedinačnim klijentom
 
 - Istorija transakcija: Dnevnik istorije transakcija sa semantičkom šemom podataka ispod
-    - ID transakcije: Jedinstveni identifikator svake transakcije
-    - Datum transakcije: Datum, po mogućnosti vremenski žig svake transakcije
-    - Iznos transakcije: Monetarna vrednost (na primer, prihod ili marža profita) svake transakcije
-    - Oznaka koja se dodeljuje za povraćaj (opcionalno): Logička vrednost koja označava da li je transakcija povraćaj 
-    - ID proizvoda (opcionalno): ID proizvoda koji je uključen u transakciju
+    - **ID transakcije**: Jedinstveni identifikator svake transakcije
+    - **Datum transakcije**: Datum, po mogućnosti vremenski žig svake transakcije
+    - **Iznos transakcije**: Monetarna vrednost (na primer, prihod ili marža profita) svake transakcije
+    - **Oznaka koja se dodeljuje za povraćaj** (opcionalno): Logička vrednost koja označava da li je transakcija povraćaj 
+    - **ID proizvoda** (opcionalno): ID proizvoda koji je uključen u transakciju
 
 - Dodatni podaci (opcionalno), na primer
     - Veb-aktivnosti: istorija poseta veb-lokaciji, istorija e-pošte
@@ -53,10 +53,20 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
     - Identifikatori klijenata za mapiranje aktivnosti na klijente
     - Informacije o aktivnostima koje sadrže ime i datum aktivnosti
     - Šema semantičkih podataka za aktivnosti uključuje: 
-        - Primarni ključ: Jedinstveni identifikator aktivnosti
-        - Vremenska oznaka: Datum i vreme događaja koje identifikuje primarni ključ
-        - Događaj (naziv aktivnosti): Ime događaja koji želite da koristite
-        - Detalji (iznos ili vrednost): Detalji o aktivnosti kupca
+        - **Primarni ključ**: Jedinstveni identifikator aktivnosti
+        - **Vremenska oznaka**: Datum i vreme događaja koje identifikuje primarni ključ
+        - **Događaj (naziv aktivnosti)**: Naziv događaja koji želite da koristite
+        - **Detalji (iznos ili vrednost)**: Detalji o aktivnosti klijenta
+
+- Predložene karakteristike podataka:
+    - Dovoljno istorijskih podataka: Najmanje jedna godina transakcionih podataka. Poželjno je dve do tri godine podataka o transakcijama da bi se predvidela trajna vrednost klijenta za jednu godinu.
+    - Više kupovina po klijentu: U idealnom slučaju, najmanje dve do tri transakcije po ID-u klijenta, po mogućnosti tokom više datuma.
+    - Broj klijenata: Najmanje 100 jedinstvenih klijenata, po mogućnosti više od 10.000 klijenata. Model neće uspeti sa manje od 100 klijenata i nedovoljnom količinom istorijskih podataka
+    - Kompletnost podataka: Manje od 20% nedostajućih vrednosti u obaveznim poljima u ulaznim podacima   
+
+> [!NOTE]
+> - Model zahteva istoriju transakcija vaših klijenata. Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta za kupovinu/transakcije, spojite ih u Power Query pre unosa podataka.
+> - Međutim, za dodatne podatke o aktivnostima klijenata (opcionalno) možete dodati onoliko entiteta aktivnosti klijenata koliko želite da ih model uzme u obzir.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kreiranje predviđanja trajne vrednosti klijenta
 
@@ -76,7 +86,7 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
    Podrazumevano, jedinica je podešena na mesece. Možete je promeniti u godine da biste gledali dalje u budućnost.
 
    > [!TIP]
-   > Da biste tačno predvideli CLV za vremenski period koji ste postavili, potreban vam je uporediv period istorijskih podataka. Na primer, ako želite da predviđate za narednih 12 meseci, preporučuje se da imate najmanje 18–24 meseca istorijskih podataka.
+   > Da biste tačno predvideli CLV za vremenski period koji ste postavili, potreban vam je uporediv period istorijskih podataka. Na primer, ako želite da predvidite trajnu vrednost klijenta za narednih 12 meseci, preporučuje se da imate najmanje 18–24 meseca istorijskih podataka.
 
 1. Navedite šta **Aktivni klijenti** znače za vaše poslovanje. Podesite vremenski okvir u kojem je klijent morao imati najmanje jednu transakciju da bi se smatrao aktivnim. Model će predvideti CLV samo za aktivne klijente. 
    - **Neka model izračuna interval kupovine (preporučeno)**: Model analizira vaše podatke i određuje vremenski period na osnovu istorijskih kupovina.
@@ -181,14 +191,14 @@ Postoje tri primarna odeljka podataka na stranici sa rezultatima.
   Koristeći definiciju klijenata velike vrednosti navedenu tokom konfigurisanja predviđanja, sistem procenjuje kako se model veštačke inteligencije pokazao u predviđanju klijenata velike vrednosti u poređenju sa osnovnim modelom.    
 
   Klase se određuju na osnovu sledećih pravila:
-  - A kada je model tačno predvideo barem 5% više klijenata visoke vrednosti u poređenju sa osnovnim modelom.
-  - B kada je model tačno predvideo 0–5% više klijenata visoke vrednosti u poređenju sa osnovnim modelom.
-  - C kada je model tačno predvideo manje klijenata visoke vrednosti u poređenju sa osnovnim modelom.
+  - **A** kada je model tačno predvideo barem 5% više klijenata visoke vrednosti u poređenju sa osnovnim modelom.
+  - **B** kada je model tačno predvideo 0–5% više klijenata visoke vrednosti u poređenju sa osnovnim modelom.
+  - **V** kada je model tačno predvideo manje klijenata visoke vrednosti u poređenju sa osnovnim modelom.
 
   Okno **Ocena modela** prikazuje dalje detalje o performansama modela veštačke inteligencije i osnovnog modela. Osnovni model koristi pristup koji nije zasnovan na veštačkoj inteligenciji da bi izračunao trajnu vrednost klijenta na osnovu prevashodno istorijskih kupovina koje su obavili klijenti.     
   Standardna formula koja se koristi za izračunavanje CLV po osnovnom modelu:    
 
-  *CLV za svakog klijenta = Prosečna mesečna kupovina koju je klijent obavio u aktivnom prozoru klijenta * Broj meseci u periodu predviđanja * Ukupna stopa zadržavanja svih klijenata*
+  _**Trajna vrednost za svakog klijenta** = Prosečna mesečna kupovina koju je klijent obavio u aktivnom prozoru klijenta * Broj meseci u periodu predviđanja * Ukupna stopa zadržavanja svih klijenata*_
 
   Model veštačke inteligencije se upoređuje sa osnovnim modelom na osnovu dva pokazatelja performansi modela.
   

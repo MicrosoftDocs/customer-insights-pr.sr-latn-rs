@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b94a8e8b6bb867ca04a64007d592b22fbd700618
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 35848998e738c7ecc1642f2b75912ff78d85f79e
+ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759895"
+ms.lasthandoff: 05/04/2021
+ms.locfileid: "5976172"
 ---
 # <a name="export-segment-lists-to-mailchimp-preview"></a>Izvoz listi segmenata u Mailchimp (verzija za pregled)
 
@@ -23,7 +23,7 @@ Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste kreirali b
 ## <a name="prerequisites-for-connection"></a>Preduslovi za vezu
 
 -   Imate [Mailchimp nalog](https://mailchimp.com/) i odgovarajuće akreditive administratora.
--   Postoji postojeća publika u Mailchimp-u i odgovarajući ID-ovi. Za više informacija pogledajte [Mailchimp korisnici](https://mailchimp.com/help/create-audience/).
+-   Postoji postojeća publika u usluzi Mailchimp i odgovarajući ID-ovi. Za više informacija pogledajte [Mailchimp korisnici](https://mailchimp.com/help/create-audience/).
 -   Imate [konfigurisane segmente](segments.md)
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
@@ -48,7 +48,7 @@ Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste kreirali b
 
 1. Izaberite **Povežite se** da bi se inicijalizovala veza sa uslugom Mailchimp.
 
-1. Izaberite **Potvrdite identitet u Mailchimp-u** i navedite akreditive za Mailchimp.
+1. Izaberite **Potvrdite identitet u usluzi Mailchimp** i navedite akreditive za Mailchimp.
 
 1. Izaberite **Dodajte sebe kao korisnika za izvoz** i obezbedite svoje akreditive za Customer Insights.
 

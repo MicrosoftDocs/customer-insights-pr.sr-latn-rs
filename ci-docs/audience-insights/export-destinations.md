@@ -6,22 +6,19 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c1078ed0ba259a6e9cde3c7ede3570890ae48e67
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896160"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016653"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
 Stranica **Izvoz** prikazuje sve konfigurisane izvoze. Izvozi dele određene podatke sa raznim aplikacijama. Mogu da uključuju profile klijenata ili entitete, šeme i detalje o mapiranju. Svaki izvoz zahteva [vezu koju je postavio administrator radi upravljanja potvrdom identiteta i pristupom](connections.md).
-
-> [!NOTE]
-> Do marta 2021. godine, izvozi su automatski kreirali vezu sa odgovarajućom uslugom. Izvozi sada zahtevaju [vezu koju kreira i deli administrator](connections.md) pre nego što budete mogli da ih kreirate.
 
 Idite na **Podaci** > **Izvozi** da biste videli stranicu izvoza. Sve korisničke uloge imaju pristup za prikaz konfigurisanih izvoza. Koristite polje za pretragu na komandnoj traci da biste pronalazili izvoze prema njihovom nazivu, nazivu veze ili tipu veze.
 
