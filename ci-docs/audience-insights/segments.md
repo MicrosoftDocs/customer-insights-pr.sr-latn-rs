@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034029"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111404"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -32,22 +32,13 @@ Postoji više načina za kreiranje novog segmenta:
 - Predlozi omogućeni veštačkom inteligencijom zasnovani na merama ili atributima: [Predloženi segmenti za poboljšanje mera](suggested-segments.md)
 - Predlozi zasnovani na aktivnostima: [Predloženi segmenti na osnovu aktivnosti klijenata](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Steknite uvide u postojeće segmente
-
-Otkrijte dodatne informacije o postojećim segmentima pomoću [Uvida u segmente](segment-insights.md). Otkrijte šta razlikuje dva segmenta ili šta imaju zajedničko.
-
-## <a name="find-similar-customers"></a>Pronađi slične klijente
-
-Uz pomoć veštačke inteligencije pronađite klijente koji su slični članovima izabranog segmenta. Za više informacija, pogledajte članak [Slični klijenti](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Upravljanje postojećim segmentima
 
 Idite na stranicu **Segmenti** da biste prikazali sve sačuvane segmente i upravljali njima.
 
 Svaki segment predstavljen je redom koji sadrži dodatne informacije o segmentu.
 
-> [!div class="mx-imgBorder"]
-> ![Opcije za upravljanje postojećim segmentom](media/segments-selected-segment.png "Opcije za upravljanje postojećim segmentom")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Izabrani segment sa padajućom listom opcija i dostupnim opcijama.":::
 
 Sledeća radnja je dostupna kada odaberete segment:
 
@@ -59,7 +50,7 @@ Sledeća radnja je dostupna kada odaberete segment:
   Alternativno, možete da koristite funkcionalnost **Isplaniraj za kasnije** u padajućoj listi **Aktiviraj/Deaktiviraj** da navedete budući datum i vreme za aktivaciju i deaktivaciju određenog segmenta.
 - **Preimenujte** segment.
 - **Preuzmite** listu članova kao .CSV datoteku.
-- Opcija **Dodaj u** šalje listu ID-ova klijenata u segmentu na obradu u drugoj aplikaciji.
+- **Upravljanje izvozima** da biste videli segment povezan sa izvozom i upravljali njime. [Saznajte više o izvozima.](export-destinations.md)
 - **Izbrišite** segment.
 
 ## <a name="refresh-segments"></a>Osvežavanje segmenata
@@ -68,6 +59,24 @@ Možete da osvežite sve segmente odjednom ako izaberete **Osvežite sve** na st
 
 > [!TIP]
 > Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+
+## <a name="export-segments"></a>Izvoz segmenata
+
+Segment možete izvesti sa stranice segmenata ili [stranica izvoza](export-destinations.md). 
+
+1. Idite na stranicu **Segmenti**.
+
+1. Izaberite **Prikaži još [...]** za segment koji želite da izvezete.
+
+1. Izaberite **Upravljanje izvozima** iz padajuće liste radnji.
+
+1. Otvara se stranica **Izvozi (pregled) za segment**. Možete da vidite sve konfigurisane izvoze grupisane prema izvozima koji sadrže trenutni segment ili ga ne sadrže.
+
+   1. Da biste izabrani segment dodali u izvoz, izaberite izvoz na listi i izaberite **Dodaj segment**.
+
+   1. Da biste kreirali novi izvoz sa izabranim segmentom, izaberite **Dodaj izvoz**. Za više informacija o kreiranju izvoza, pogledajte [Podešavanje novog izvoza](export-destinations.md#set-up-a-new-export).
+
+1. Izaberite **Nazad** da se vratite na glavnu stranicu za segmente.
 
 ## <a name="view-processing-history-and-segment-members"></a>Pogledajte istoriju obrade i članove segmenta
 

@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje profila klijenata podacima kompanije Microsoft
 description: Koristite zaštićene podatke kompanije Microsoft da biste obogatili podatke o klijentima afinitetima prema brendu i interesovanjima.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064908"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245724"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatite profile klijenata afinitetima brenda i interesovanja (pregled)
 
@@ -69,12 +69,10 @@ Vođeno iskustvo vam pomaže u konfiguraciji obogaćivanja.
 
 ### <a name="define-your-brands-or-interests"></a>Definisanje brendova ili interesovanja
 
-Izaberite neku od sledećih opcija:
+Izaberite do pet brendova ili interesovanja pomoću jedne ili obe ove opcije:
 
-- **Delatnost**: Sistem identifikuje najbolje brendove ili interesovanja koja su relevantna za vašu delatnost i obogaćuje vaše podatke o klijentima.
-- **Odaberite sopstveno**: Izaberite do pet stavki sa liste brendova ili interesovanja koja su najrelevantnija za vašu organizaciju.
-
-Da biste dodali brend ili interesovanje, unesite ga u polje za unos da biste dobili predloge na osnovu termina koji se podudaraju. Ako ne navedemo brend ili interesovanje koje tražite, pošaljite nam povratne informacije koristeći vezu **Predloži**.
+- **Delatnost**: Izaberite svoju delatnost sa padajuće liste, a zatim odaberite vodeće brendove ili interesovanja za tu delatnost.
+- **Izaberite svoje**: Unesite brend ili interesovanje koji su relevantni za vašu organizaciju, a zatim odaberite među predlozima za podudaranje. Ako ne navedemo brend ili interesovanje koje tražite, pošaljite nam povratne informacije koristeći vezu **Predloži**.
 
 ### <a name="review-enrichment-preferences"></a>Pregled željenih podešavanja za obogaćivanje
 

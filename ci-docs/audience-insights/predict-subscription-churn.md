@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906919"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095665"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitka pretplata (pregled)
 
@@ -147,30 +147,9 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
        > [!div class="mx-imgBorder"]
        > ![Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka](media/subscription-churn-influentialfactors.PNG "Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka")
 
-## <a name="fix-a-failed-prediction"></a>Ispravljanje neuspelog predviđanja
+## <a name="manage-predictions"></a>Upravljanje predviđanjima
 
-1. Idite na karticu **Moja predviđanja** u delu **Obaveštavanje** > **Predviđanja**.
-1. Odaberite predviđanje za koje želite da pregledate evidenciju grešaka i izaberite **Evidencije**.
-   > [!div class="mx-imgBorder"]
-   > ![Prikaz trake menija sa rezultatima koja sadrži dugmad za zatvaranje, uređivanje modela i evidencije](media/subscription-churn-logsbutton.PNG "Prikaz trake menija sa rezultatima koja sadrži dugmad za zatvaranje, uređivanje modela i evidencije")
-1. Pregledajte sve greške. Može se pojaviti nekoliko vrsta grešaka i one opisuju uslov koji je doveo do greške. Na primer, greška u kojoj nema dovoljno podataka za tačno predviđanje obično se rešava učitavanjem dodatnih podataka.
-
-## <a name="refresh-a-prediction"></a>Osvežavanje predviđanja
-
-Predviđanja se automatski osvežavaju prema istom [rasporedu za osvežavanje podataka](system.md#schedule-tab), kao što je konfigurisano u podešavanjima.
-
-1. Idite na karticu **Moja predviđanja** u delu **Obaveštavanje** > **Predviđanja**.
-1. Odaberite uspravne tri tačke pored predviđanja koje želite da osvežite.
-1. Izaberite **Osveži**.
-
-## <a name="delete-a-prediction"></a>Brisanje predviđanja
-
-1. Idite na karticu **Moja predviđanja** u delu **Obaveštavanje** > **Predviđanja**.
-1. Odaberite uspravne tri tačke pored predviđanja koje želite da izbrišete.
-1. Izaberite **Izbriši**.
-
-> [!NOTE]
-> Brisanje predviđanja će ukloniti njegov izlazni entitet.
+Predviđanja je moguće optimizovati, rešavati, osvežiti ili izbrisati. Pregledajte izveštaj o upotrebljivosti ulaznih podataka da biste saznali kako da predviđanje učinite bržim i pouzdanijim. Još informacija potražite u članku [Upravljanje predviđanjima](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
