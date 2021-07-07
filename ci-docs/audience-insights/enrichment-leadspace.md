@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895930"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305219"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila preduzeća uz Leadspace (pregled)
 
@@ -36,7 +36,7 @@ Da biste konfigurisali Leadspace, morate da ispunite sledeće preduslove:
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Snimak ekrana Leadspace pločice.":::
 
-1. Izaberite [vezu](connections.md) iz padajuće liste. Ako veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete kreirati izborom **Dodaj vezu** i biranjem opcije **Leadspace**. 
+1. Izaberite [vezu](connections.md) sa padajuće liste. Ako veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete kreirati izborom **Dodaj vezu** i biranjem opcije **Leadspace**. 
 
 1. Izaberite **Povežite se sa uslugom Leadspace** da biste potvrdili izbor veze.
 
@@ -57,13 +57,13 @@ Da biste konfigurisali Leadspace, morate da ispunite sledeće preduslove:
 
 Morate biti administrator da biste konfigurisali veze. Izaberite **Dodaj vezu** prilikom konfigurisanja obogaćivanja *ili* idite na **Administrator** > **Veze** i izaberite **Podešavanje** na pločici Leadspace.
 
-1. Izaberite **Prvi koraci** 
+1. Izaberite **Prvi koraci**. 
 
 1. Unesite naziv veze u polje **Ime za prikaz**.
 
 1. Navedite važeći token za Leadspace.
 
-1. Pregledajte i dajte svoj pristanak za **Privatnost podataka i usaglašenost** tako što ćete izabrati polje za potvrdu **Slažem se**
+1. Pregledajte i dajte saglasnost za **Privatnost podataka i usklađenost** izborom opcije **Slažem se**.
 
 1. Izaberite **Verifikuj** da biste proverili valjanost konfiguracije.
 
@@ -81,12 +81,12 @@ Više informacija potražite u članku [Leadspace API-ji](https://support.leadsp
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md), [mere](measures.md), pa čak i [izvezite podatke](export-destinations.md) da biste pružili personalizovana iskustva svojim klijentima.
+Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md) i [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da pružite personalizovana iskustva svojim klijentima.
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
 
 Kada omogućite da Dynamics 365 Customer Insights prenosi podatke u Leadspace, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci. Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da Leadspace ispunjava sve obaveze privatnosti ili bezbednosti koje imate. Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
+Vaš Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

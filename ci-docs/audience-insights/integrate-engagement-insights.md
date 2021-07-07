@@ -1,7 +1,7 @@
 ---
 title: Integrisanje veb-podataka iz uvida o angažovanju sa uvidima o korisnicima
 description: Donesite veb-informacije o kupcima iz uvida o angažovanju sa uvidima o korisnicima.
-ms.date: 12/17/2020
+ms.date: 06/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: mukeshpo
 ms.author: mukeshpo
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 9a4cb77bb4c6ef0d88b3f00802f66baab5520a07
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 76a53a897e90152707a7c1255ed5ed93a5f3b5a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896436"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305035"
 ---
 # <a name="integrate-web-data-from-engagement-insights-with-audience-insights"></a>Integrisanje veb-podataka iz uvida o angažovanju sa uvidima o korisnicima
 
-Klijenti često svakodnevno obavljaju transakcije na mreži koristeći veb-stranice. Sposobnost uvida u angažman u usluzi Dynamics 365 Customer Insights je zgodno rešenje za integrisanje veb-podataka kao izvora. Pored podataka o transakcijama, demografskim podacima ili ponašanju, aktivnosti na vebu možemo videti i u objedinjenim profilima klijenata. Ovaj profil možemo koristiti za sticanje dodatnih uvida poput segmenata, mera ili predviđanja za aktivaciju korisnika.
+Klijenti često svakodnevno obavljaju transakcije na mreži koristeći veb-stranice. Mogućnost uvida u angažovanje (verzija za pregled) u usluzi Dynamics 365 Customer Insights je zgodno rešenje za integrisanje veb-podataka kao izvora. Pored podataka o transakcijama, demografskim podacima ili ponašanju, aktivnosti na vebu možemo videti i u objedinjenim profilima klijenata. Ove profile možemo koristiti za sticanje dodatnih uvida poput segmenata, mera ili predviđanja za aktivaciju ciljne grupe.
 
 Ovaj članak opisuje korake za unošenje podataka o veb-aktivnostima vaših klijenata iz uvida u angažovanja u vaše postojeće okruženje za uvide o korisnicima.
 
@@ -30,30 +30,30 @@ Sada želimo da znamo da li klijent posećuje naše veb-proizvode i razume njiho
 
 Da bi se integrisali podaci iz uvida u angažovanje, potrebno je ispuniti nekoliko preduslova: 
 
-- Integrišite SDK za uvid u angažovanje sa svojom veb-lokacijom. Za više informacija, pogledajte [Započnite rad sa paketom za razvoj softvera na vebu](../engagement-insights/instrument-website.md).
-- Izvoz veb-događaja iz uvida o angažovanju zahteva pristup nalogu za skladištenje ADLS Gen 2 koji će se koristiti za unos podataka o veb-događajima u uvidima o korisnicima. Za više informacija, pogledajte članak [Izvoz događaja](../engagement-insights/export-events.md).
+- Integrišite SDK za uvid u angažovanje sa svojom veb-lokacijom. Za više informacija, pogledajte [Pregled resursa za programere](../engagement-insights/developer-resources.md).
+- Izvoz veb-događaja iz uvida o angažovanju zahteva pristup Azure Data Lake Storage nalogu koji će se koristiti za unos podataka o veb-događajima u uvide o ciljnim grupama. Za više informacija, pogledajte članak [Izvoz događaja](../engagement-insights/export-events.md).
 
 ## <a name="configure-refined-events-in-engagement-insights"></a>Konfigurisanje preciziranih događaja u uvidima o angažovanju
 
-Kada administrator opremi veb-lokaciju SDK-om za uvide u angažovanje, *osnovni događaji* se prikupljaju kada korisnik pregleda veb-stranicu ili klikne negde. Osnovni događaji obično sadrže brojne detalje. U zavisnosti od slučaja upotrebe, potreban vam je podskup podataka samo u osnovnom događaju. Uvidi o angažovanju omogućavaju vam da kreirate *precizirane događaje* koji sadrže samo svojstva osnovnog događaja koji ste izabrali.     
+Kada administrator opremi veb-lokaciju sa SDK-om za uvid u angažovanje, *osnovni događaji* se sakupljaju kada korisnik pregleda veb-stranicu ili klikne negde. Osnovni događaji obično sadrže brojne detalje. U zavisnosti od slučaja upotrebe, potreban vam je podskup podataka samo u osnovnom događaju. Uvidi o angažovanju omogućavaju vam da kreirate *precizirane događaje* koji sadrže samo svojstva osnovnog događaja koji ste izabrali.     
 
 Za više informacija, pogledajte [Kreiranje i izmena preciziranih događaja](../engagement-insights/refined-events.md).
 
 Razmatranja prilikom kreiranja preciziranih događaja: 
 
-- Navedite smisleno ime za precizirani događaj. Koristi se kao naziv aktivnosti u uvidima o korisnicima.
+- Navedite smisleno ime za precizirani događaj. Koristiće se kao naziv aktivnosti u uvidima u ciljnu grupu.
 - Izaberite barem sledeća svojstva da biste kreirali aktivnost u uvidima o korisnicima: 
-    - Signal.Action.Name – označava detalje aktivnosti
-    - Signal.User.Id – koristi se za mapiranje sa ID-om klijenta
-    - Signal.View.Uri – koristi se kao veb-adresa kao osnova za segmente ili mere
-    - Signal.Export.Id – da se koristi kao primarni ključ za događaje
-    - Signal.Timestamp – za određivanje datuma i vremena aktivnosti
+    - Signal.Action.Name – ukazuje na detalje o aktivnostima.
+    - Signal.User.Id – koristi se za mapiranje sa ID-om klijenta.
+    - Signal.View.Uri – koristi se kao veb-adresa kao osnova za segmente ili mere.
+    - Signal.Export.Id – koristi se kao primarni ključ za događaje.
+    - Signal.Timestamp – određuje datum i vreme za aktivnost.
 
 Izaberite filtere da biste se usredsredili na događaje i stranice koji su važni za vaš slučaj upotrebe. U ovom primeru ćemo koristiti naziv radnje „Promocija e-poštom“.
 
-## <a name="export-the-refined-web-events"></a>Izvezite precizirane veb-događaje 
+## <a name="export-the-refined-web-events"></a>Izvoz preciziranih veb-događaja 
 
-Nakon definisanja preciziranog događaja, morate konfigurisati izvoz podataka događaja u Azure Data Lake Storage, koji se može postaviti kao izvor podataka za unos u uvide o korisnicima. Izvozi se dešavaju neprestano dok događaji proističu iz veb-svojstva.
+Nakon definisanja preciziranog događaja, morate da konfigurišete izvoz podataka o događaju u Azure Data Lake Storage, koji se može postaviti kao izvor podataka za unos u uvidima u ciljnu grupu. Izvozi se dešavaju neprestano dok događaji proističu iz veb-svojstva.
 
 Za više informacija, pogledajte članak [Izvoz događaja](../engagement-insights/export-events.md).
 
@@ -61,7 +61,7 @@ Za više informacija, pogledajte članak [Izvoz događaja](../engagement-insight
 
 Sada kada ste definisali precizirani događaj i konfigurisali njegov izvoz, prelazimo na unošenje podataka u uvide o korisnicima. Treba da kreirate novi izvor podataka zasnovan na Common Data Model fascikli. Unesite detalje za nalog skladišta u koji izvozite događaje. U datoteci *default.cdm.json* izaberite precizirani događaj koji ćete uneti i kreirajte entitet u uvidima o korisnicima.
 
-Za više informacija, pogledajte [Povezivanje sa Common Data Model fasciklom pomoću Azure Data Lake naloga](connect-common-data-model.md)
+Za više informacija, pogledajte [Povezivanje sa Common Data Model fasciklom pomoću Azure Data Lake naloga](connect-common-data-model.md).
 
 
 ## <a name="relate-refined-event-data-as-an-activity-of-a-customer-profile"></a>Povežite precizirane podatke o događajima kao aktivnost profila klijenta
@@ -74,20 +74,19 @@ Za više informacija pogledajte [aktivnosti klijenta](activities.md).
 
 Konfigurišite novu aktivnost sa sledećim mapiranjem: 
 
-- **Primarni ključ:** Signal.Export.Id, jedinstveni ID koji je dostupan za svaki zapis događaja u uvidima o angažovanju. Ovo svojstvo se automatski generiše.
+- **Primarni ključ**: Signal.Export.Id, jedinstveni ID koji je dostupan za svaki zapis događaja u uvidima o angažovanju. Ovo svojstvo se automatski generiše.
 
-- **Vremenska oznaka:** Signal.Timestamp u svojstvu događaja.
+- **Vremenska oznaka**: Signal.Timestamp u svojstvu događaja.
 
-- **Događaj:** Signal.Name, naziv događaja koji želite da pratite.
+- **Događaj**: Signal.Name, naziv događaja koji želite da pratite.
 
-- **Veb-adresa:** Signal.View.Uri koji se odnosi na URI stranice koja je kreirala događaj.
+- **Veb-adresa**: Signal.View.Uri koji se odnosi na URI stranice koja je kreirala događaj.
 
-- **Detalji:** Signal.Action.Name da predstavlja informacije koje treba povezati sa događajem. Izabrano svojstvo u ovom slučaju označava da je događaj namenjen promociji putem e-pošte.
+- **Detalji**: Signal.Action.Name da predstavlja informacije koje treba povezati sa događajem. Izabrano svojstvo u ovom slučaju označava da je događaj namenjen promociji putem e-pošte.
 
-- **Tip aktivnosti:** U ovom primeru biramo postojeći tip aktivnosti WebLog. Ovaj izbor je korisna opcija filtera za pokretanje modela predviđanja ili kreiranje segmenata na osnovu ove vrste aktivnosti.
+- **Tip aktivnosti**: U ovom primeru biramo postojeći tip aktivnosti WebLog. Ovaj izbor je korisna opcija filtera za pokretanje modela predviđanja ili kreiranje segmenata na osnovu ove vrste aktivnosti.
 
-- **Uspostavljanje relacije:** Ovo važno podešavanje veže aktivnost za postojeće profile klijenata. **Signal.User.Id** je identifikator konfigurisan u SDK-u koji se prikuplja i koji se odnosi na korisnički ID u drugim izvorima podataka koji su konfigurisani u uvidima o klijentima. U ovom primeru konfigurišemo relaciju između Signal.User.Id i RetailCustomers:CustomerRetailId, što je primarni ključ koji je definisan u koraku mape u procesu objedinjavanja podataka.
-
+- **Uspostavljanje relacije**: Ovo važno podešavanje veže aktivnost za postojeće profile klijenata. **Signal.User.Id** je identifikator konfigurisan u SDK-u koji se prikuplja i koji se odnosi na korisnički ID u drugim izvorima podataka koji su konfigurisani u uvidima o klijentima. U ovom primeru konfigurišemo vezu između Signal.User.Id i RetailCustomers:CustomerRetailId, što je primarni ključ koji je identifikovan u koraku mape u procesu objedinjavanja podataka.
 
 Nakon obrade aktivnosti, možete pregledati evidenciju klijenata i otvoriti karticu klijenta da biste na vremenskoj osi videli aktivnosti iz uvida u angažovanje. 
 

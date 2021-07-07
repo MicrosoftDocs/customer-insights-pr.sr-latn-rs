@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085593"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305671"
 ---
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
@@ -34,7 +34,7 @@ Da biste videli atribute koji su uključeni u jedan od vaših automatski objedin
 
 Možete da promenite način na koji sistem obrađuje objedinjene atribute da generiše ujednačeni korisnički profil. Izaberite **Prikaži više** i izaberite šta želite da promenite.
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcije u padajućem meniju „Prikaži više“ za upravljanje objedinjenim atributima.":::
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opcije u padajućem meniju „Prikaži još“ za upravljanje objedinjenim atributima.":::
 
 Pogledajte sledeće odeljke za više informacija.
 

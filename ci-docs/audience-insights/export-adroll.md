@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124382"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304851"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Izvoz segmenata u AdRoll (verzija za pregled)
 
@@ -28,11 +28,11 @@ Izvezite segmente objedinjenih profila klijenata u AdRoll i koristite ih za ogla
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- U uslugu AdRoll možete da izvezete ukupno do 250.000 profila po izvozu.
+- Odjednom možete da izvezete najviše 250.000 profila u AdRoll.
 - U AdRoll ne možete da izvezete segmente sa manje od 100 profila. 
 - Izvoz u AdRoll je ograničen na segmente.
 - Izvoz do 250.000 profila u AdRoll može da potraje do 10 minuta. 
-- Broj profila koje možete da izvezete u AdRoll zavisi od i ograničen je vašim ugovorom sa kompanijom AdRoll.
+- Broj profila koje možete da izvezete u AdRoll zavisi od vašeg ugovora sa uslugom AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Podešavanje veze u usluzi AdRoll
 
@@ -62,9 +62,9 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka AdRoll. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka AdRoll. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
 
-1. Unesite svoj **ID AdRoll oglašavača** Za više informacija, pogledajte članak [Profili AdRoll oglašavača](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Unesite svoj **ID AdRoll oglašavača**. Za više informacija, pogledajte članak [Profili AdRoll oglašavača](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. To je potrebno za izvoz segmenata u AdRoll.
 
@@ -74,7 +74,9 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 Čuvanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
+Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). 
+
+Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost

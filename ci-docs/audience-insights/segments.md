@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
-ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
+ms.openlocfilehash: 336cab8619c0b80b7b8a38035cae99620baf2873
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "6111404"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306274"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -68,7 +68,7 @@ Segment možete izvesti sa stranice segmenata ili [stranica izvoza](export-desti
 
 1. Izaberite **Prikaži još [...]** za segment koji želite da izvezete.
 
-1. Izaberite **Upravljanje izvozima** iz padajuće liste radnji.
+1. Izaberite **Upravljanje izvozom** sa padajuće liste radnji.
 
 1. Otvara se stranica **Izvozi (pregled) za segment**. Možete da vidite sve konfigurisane izvoze grupisane prema izvozima koji sadrže trenutni segment ili ga ne sadrže.
 

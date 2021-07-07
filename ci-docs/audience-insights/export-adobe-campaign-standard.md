@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760298"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305403"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Korišćenje Customer Insights segmenata u usluzi Adobe Campaign Standard (verzija za pregled)
 
-Kao korisnik uvida o korisnicima za Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim tako što ćete ciljati relevantne ciljne grupe. Da biste koristili segment iz uvida o korisnicima u Adobe platformi iskustva i aplikacijama poput Adobe Campaign Standard, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
+Kao korisnik uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim ciljajući relevantne ciljne grupe. Da biste koristili segment iz uvida o korisnicima u Adobe platformi iskustva i aplikacijama poput Adobe Campaign Standard, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
@@ -54,7 +54,7 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
 
 1. U uvidima u ciljne grupe, idite na **Administrator** > **Veze**.
 
-1. Izaberite **Dodaj vezu** i birajte **Adobe Campaign** da biste konfigurisali vezu ili izaberite **Podešavanje** na pločici **Adobe Campaign**
+1. Izaberite **Dodaj vezu** i birajte **Adobe kampanja** da biste konfigurisali vezu ili izaberite **Podešavanje** na pločici **Adobe kampanja**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Pločica za konfiguraciju za Adobe Campaign Standard.":::
 
@@ -66,7 +66,7 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimak ekrana konfiguracije naloga skladišta. "::: 
 
-   - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte [Upravljajte podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
+   - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte članak [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
 
    - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -80,7 +80,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Adobe Campaign. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Adobe Campaign. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
 
 1. Odaberite segment koje želite da izvezete. U ovom primeru, to je **ChurnProneCustomers**.
 
@@ -118,7 +118,7 @@ Kada se izveze segment iz uvida u korisnike, on sadrži kolone koje ste izabrali
 
 Da bismo koristili segment u usluzi Adobe Campaign Standard, treba da proširimo šemu profila u usluzi Adobe Campaign Standard tako da uključuje dva dodatna polja. Saznajte kako da [produžite resurs profila](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) sa novim poljima u usluzi Adobe Campaign Standard.
 
-U našem primeru, ova polja su *Naziv segmenta i Datum segmenta (opcionalno).*
+U našem primeru, ova polja su *Naziv segmenta i Datum segmenta (opcionalno)*.
 
 Ova polja ćemo koristiti za identifikaciju profila u programu Adobe Campaign Standard koje želimo da ciljamo za ovu kampanju.
 
@@ -128,7 +128,7 @@ Ako u programu Adobe Campaign Standard ne postoje drugi zapisi osim onih koje ć
 
 Sada kada je sve na svom mestu, moramo pripremiti podatke o korisnicima iz uvida u korisnike u usluzi Adobe Campaign Standard da bismo kreirali profile. Saznajte [kako da uvezete profile u Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) koristeći tok posla.
 
-Tok posla uvoza na donjoj slici konfigurisan je za pokretanje svakih 8 sati i traži izvezene segmente uvida u korisnike (.csv datoteka u Azure skladištu blob objekta). Tok posla izdvaja sadržaj .csv datoteke u navedenom redosledu kolona. Ovaj tok posla napravljen je da obavi osnovno rukovanje greškama i osigura da svaki zapis ima adresu e-pošte pre popune podacima u usluzi Adobe Campaign Standard. Tok posla takođe izdvaja ime segmenta iz imena datoteke pre dodavanja u podatke ACS profila.
+Tok posla uvoza na donjoj slici konfigurisan je da se pokreće svakih osam sati i traži izvezene segmente uvida u ciljnu grupu (.csv datoteka u Azure skladištu blob objekta). Tok posla izdvaja sadržaj .csv datoteke u navedenom redosledu kolona. Ovaj tok posla napravljen je da obavi osnovno rukovanje greškama i osigura da svaki zapis ima adresu e-pošte pre popune podacima u usluzi Adobe Campaign Standard. Tok posla takođe izdvaja naziv segmenta iz naziva datoteke pre dodavanja u podatke o Adobe Campaign Standard profilu.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Snimak ekrana toka posla uvoza u korisničkom interfejsu usluge Adobe Campaign Standard.":::
 

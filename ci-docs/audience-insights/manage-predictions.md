@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095746"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315895"
 ---
 # <a name="manage-predictions"></a>Upravljanje predviđanjima
 
@@ -35,9 +35,6 @@ Ovaj članak govori o nekim zadacima koje deli većina scenarija predviđanja.
 Izveštaj o upotrebljivosti ulaznih podataka pruža konsolidovani prikaz grešaka i upozorenja koja mogu proizvesti vaša gotova predviđanja. Takođe daje preporuke kako da poboljšate performanse modela.
 
 Izveštaj je dostupan nakon što model završi svoj proces obuke. Kreira se za svaki model posebno, bez obzira na to da li je uspešno završen ili ne.
-
-> [!NOTE]
-> Trenutno, ova funkcija radi samo za model gubitka transakcija.
 
 ### <a name="view-the-input-data-usability-report"></a>Pogledajte izveštaj o upotrebljivosti ulaznih podataka
 

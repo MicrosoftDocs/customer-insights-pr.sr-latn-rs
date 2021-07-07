@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253057"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305495"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
 Stranica **Izvoz** prikazuje sve konfigurisane izvoze. Izvozi dele određene podatke sa raznim aplikacijama. Mogu da uključuju profile klijenata ili entitete, šeme i detalje o mapiranju. Svaki izvoz zahteva [vezu koju je postavio administrator radi upravljanja potvrdom identiteta i pristupom](connections.md).
 
-Idite na **Podaci** > **Izvozi** da biste videli stranicu izvoza. Sve korisničke uloge imaju pristup za prikaz konfigurisanih izvoza. Koristite polje za pretragu na komandnoj traci da biste pronalazili izvoze prema njihovom nazivu, nazivu veze ili tipu veze.
+Idite na **Podaci** > **Izvozi** da biste videli stranicu izvoza. Sve korisničke uloge mogu pregledati konfigurisane izvoze. Koristite polje za pretragu na komandnoj traci da biste pronašli izvoze prema njihovom nazivu, nazivu veze ili tipu veze.
 
 ## <a name="set-up-a-new-export"></a>Podešavanje novog izvoza
 
@@ -65,7 +65,7 @@ Nakon kreiranja odredišta za izvoz, ona su navedena na stranici **Podaci** > **
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Korisnici bez dozvole za uređivanje biraju **Prikaži** umesto **Uredi** da bi videli detalje o izvozu.
+1. Korisnici bez dozvole za uređivanje biraju **Prikaz** umesto **Uređivanje** da videli detalje o izvozu.
 
 1. Bočno okno prikazuje konfiguraciju izvoza. Bez dozvola za uređivanje ne možete menjati vrednosti. Izaberite **Zatvori** da biste se vratili na stranicu izvoza.
 
@@ -73,7 +73,7 @@ Nakon kreiranja odredišta za izvoz, ona su navedena na stranici **Podaci** > **
 
 Svaki izvoz koji konfigurišete ima raspored osvežavanja. Tokom osvežavanja, sistem traži nove ili ažurirane podatke koje će uključiti u izvoz. Podrazumevano se izvozi kao deo svakog [zakazanog osvežavanja sistema](system.md#schedule-tab). Možete prilagoditi raspored osvežavanja ili ga isključiti za ručno pokretanje izvoza.
 
-Rasporedi izvoza zavise od statusa vašeg okruženja. Ako postoje ispravke [zavisnosti](system.md#refresh-policies) u toku kada treba da započne planirani izvoz, sistem će prvo dovršiti zavisnosti, a zatim pokrenuti izvoz. U koloni **Osveženo** možete videti kada je izvoz poslednji put osvežen.
+Rasporedi izvoza zavise od statusa vašeg okruženja. Ako su u toku ažuriranja [zavisnih elemenata](system.md#refresh-policies) kada treba da započne planirani izvoz, sistem će prvo dovršiti ažuriranja, a zatim pokrenuti izvoz. U koloni **Osveženo** možete videti kada je izvoz poslednji put osvežen.
 
 ### <a name="schedule-exports"></a>Raspored izvoza
 

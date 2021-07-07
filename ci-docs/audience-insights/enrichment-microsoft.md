@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245724"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305173"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatite profile klijenata afinitetima brenda i interesovanja (pregled)
 
-Koristite zaštićene podatke kompanije Microsoft da biste obogatili podatke o klijentima afinitetima prema brendu i interesovanjima. Ovi afiniteti se određuju na osnovu podataka ljudi sa sličnom demografijom kao i vaši klijenti. Ove informacije vam pomažu da bolje razumete i segmentirate svoje klijente na osnovu njihovih afiniteta prema određenim brendovima i interesovanjima.
+Koristite zaštićene podatke kompanije Microsoft da biste obogatili podatke o klijentima afinitetima prema brendu i interesovanjima. Ovi afiniteti su zasnovani na podacima od osoba sa sličnim demografskim kategorijama kao vaši klijenti. Ove informacije vam pomažu da bolje razumete i segmentirate svoje klijente na osnovu njihovih afiniteta prema određenim brendovima i interesovanjima.
 
 U uvidima o korisnicima, idite na **Podaci** > **Obogaćivanje** da biste [konfigurisali i pregledali obogaćivanja](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Da biste konfigurisali obogaćivanje afiniteta za brendove, idite na karticu **O
 Da biste konfigurisali obogaćivanje afiniteta interesovanja, idite na karticu **Otkrijte** i izaberite **Obogati moje podatke** na pločici **Interesovanja**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločice Brendovi i interesovanja](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i interesovanja")
+   > ![Pločice Brendovi i Interesovanja](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i Interesovanja")
 
 ## <a name="how-we-determine-affinities"></a>Kako utvrđujemo afinitete
 
@@ -35,7 +35,7 @@ Koristimo podatke za pretragu na mreži kompanije Microsoft za pronalaženje afi
 
 ## <a name="affinity-level-and-score"></a>Nivo afiniteta i rezultat
 
-Na svakom obogaćenom profilu klijenta pružamo dve povezane vrednosti – nivo afiniteta i ocenu afiniteta. Ove vrednosti vam pomažu da utvrdite koliko je jak afinitet prema demografskom segmentu tog profila, prema brendu ili interesovanju u poređenju sa drugim demografskim segmentima.
+Na svakom obogaćenom korisničkom profilu pružamo dve povezane vrednosti: nivo afiniteta i ocenu afiniteta. Ove vrednosti vam pomažu da utvrdite koliko je jak afinitet prema demografskom segmentu tog profila, prema brendu ili interesovanju u poređenju sa drugim demografskim segmentima.
 
 *Nivo afiniteta* sastoji se od četiri nivoa, a *ocena afiniteta* se izračunava na skali od 100 poena koja se preslikava na nivo afiniteta.
 
@@ -53,7 +53,7 @@ U zavisnosti od granularnosti kojom želite da merite afinitet, možete da koris
 
 Trenutno podržavamo sledeće opcije zemlje/regiona: Australija, Kanada (engleski), Francuska, Nemačka, Ujedinjeno Kraljevstvo ili Sjedinjene Države (engleski).
 
-Da biste izabrali zemlju, otvorite **Obogaćivanje brendova** ili **Obogaćivanje kamata** i izaberite **Promeni** pored stavke **Država/region**. U oknu **Podešavanja zemlje/regiona** odaberite opciju i izaberite **Primeni**.
+Da biste izabrali zemlju ili region, otvorite **Obogaćivanje brendova** ili **Obogaćivanje interesovanja** i izaberite opciju **Promeni** pored **Država / region**. U oknu **Podešavanja zemlje/regiona** odaberite opciju i izaberite **Primeni**.
 
 ### <a name="implications-related-to-country-selection"></a>Posledice koje se odnose na izbor zemlje
 
@@ -61,7 +61,7 @@ Da biste izabrali zemlju, otvorite **Obogaćivanje brendova** ili **Obogaćivanj
 
 - Kada [birate delatnost](#define-your-brands-or-interests), dobićete najrelevantnije brendove ili interesovanja na osnovu izabrane zemlje ili regiona.
 
-- Kada [obogaćujemo profile](#refresh-enrichment), obogatićemo sve profile klijente za koje dobijamo podatke za izabrane brendove i interesovanja. To uključuje profile koji nisu u izabranoj zemlji ili regionu. Na primer, ako ste izabrali Nemačku, obogatićemo profile koji se nalaze u Sjedinjenim Državama ako imamo podatke o izabranim brendovima i interesovanjima u SAD.
+- Kada [obogaćujete profile](#refresh-enrichment), obogatićemo sve profile klijenata za koje dobijamo podatke za izabrane brendove i interesovanja, uključujući profile koji nisu u izabranoj zemlji ili regionu. Na primer, ako ste izabrali Nemačku, obogatićemo profile koji se nalaze u Sjedinjenim Državama ako imamo podatke o izabranim brendovima i interesovanjima u SAD.
 
 ## <a name="configure-enrichment"></a>Konfigurisanje obogaćivanja
 
@@ -71,7 +71,7 @@ Vođeno iskustvo vam pomaže u konfiguraciji obogaćivanja.
 
 Izaberite do pet brendova ili interesovanja pomoću jedne ili obe ove opcije:
 
-- **Delatnost**: Izaberite svoju delatnost sa padajuće liste, a zatim odaberite vodeće brendove ili interesovanja za tu delatnost.
+- **Delatnost**: Izaberite svoju delatnost sa padajuće liste, a zatim odaberite najbolje brendove ili interesovanja za tu delatnost.
 - **Izaberite svoje**: Unesite brend ili interesovanje koji su relevantni za vašu organizaciju, a zatim odaberite među predlozima za podudaranje. Ako ne navedemo brend ili interesovanje koje tražite, pošaljite nam povratne informacije koristeći vezu **Predloži**.
 
 ### <a name="review-enrichment-preferences"></a>Pregled željenih podešavanja za obogaćivanje
@@ -88,12 +88,12 @@ Izaberite **Obogaćeni entitet** i odaberite skup podataka koji želite da oboga
 
 Mapirajte polja iz vašeg objedinjenog entiteta klijenta da biste definisali demografski segment koji želite da sistem koristi za obogaćivanje podataka o klijentima. Mapirajte zemlju/region i barem atribute „Datum rođenja“ ili „Pol“. Pored toga, morate da mapirate najmanje jedan grad (i državu/pokrajinu) ili poštanski broj. Izaberite **Uredi** da biste definisali mapiranje polja i izaberite **Primeni** kada završite. Izaberite **Sačuvaj** da biste dovršili mapiranje polja.
 
-Sledeći formati i vrednosti su podržani, vrednosti ne razlikuju velika i mala slova:
+Sledeći formati i vrednosti su podržani (vrednosti ne razlikuju velika i mala slova):
 
-- **Datum rođenja**: Preporučujemo da se datum rođenja konvertuje u tip DateTime tokom unosa podataka. Alternativno, to može biti niz u [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formatu „yyyy-MM-dd“ ili „yyyy-MM-ddTHH:mm:ssZ“.
-- **Pol**: Muško, Žensko, Nepoznato
-- **Poštanski broj**: Petocifreni poštanski brojevi za SAD, standardni poštanski broj na svim drugim mestima
-- **Grad**: Naziv grada na engleskom jeziku
+- **Datum rođenja**: Preporučujemo da se datum rođenja konvertuje u tip DateTime tokom unosa podataka. Alternativno, to može biti niska u [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) formatu "yyyy-MM-dd" ili "yyyy-MM-ddTHH:mm:ss".
+- **Pol**: Muški, Ženski, Nepoznat.
+- **Poštanski broj**: Petocifreni poštanski brojevi za Sjedinjene Države, standardni poštanski broj svuda drugde.
+- **Grad**: Naziv grada na engleskom jeziku.
 - **Država/pokrajina**: Skraćenica sa dva slova za SAD i Kanadu. Skraćenica od dva ili tri slova za Australiju. Nije primenjivo za Francusku, Nemačku ili Ujedinjeno Kraljevstvo.
 - **Zemlja/region**:
 
@@ -113,10 +113,11 @@ Na kraju, treba da pregledate informacije i navedete ime za obogaćivanje.
 ## <a name="refresh-enrichment"></a>Osvežite obogaćivanje
 
 Pokrenite obogaćivanje nakon konfigurisanja brendova, interesovanja i mapiranja polja za demografske kategorije. Da biste pokrenuli postupak, izaberite **Pokreni** na stranici za konfigurisanje brendova ili interesovanja. Pored toga, možete pustiti sistem da automatski pokrene obogaćivanje kao deo zakazanog osvežavanja.
+
 U zavisnosti od veličine podataka o klijentima, može proći nekoliko minuta da se oplemenjivanje završi.
 
 > [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora **Vidi detalje** za jedan od zadataka posla, pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
@@ -134,7 +135,7 @@ Afiniteti prema brendu i interesovanju mogu se takođe videti na karticama pojed
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md), [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da biste pružili personalizovana iskustva svojim klijentima.
+Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md) i [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da pružite personalizovana iskustva svojim klijentima.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

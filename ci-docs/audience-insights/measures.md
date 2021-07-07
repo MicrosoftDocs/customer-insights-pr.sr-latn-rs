@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 402e5ef3515bce0e6f56788781b7bd909738aaa6
-ms.sourcegitcommit: b833e333745d321edeaf96d3ed14458cbce02ff1
+ms.openlocfilehash: a83caf2428f3dbd9791b9f746d00d370362a508c
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049267"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304821"
 ---
 # <a name="define-and-manage-measures"></a>Definišite i upravljajte merama
 
-Mere vam pomažu da bolje razumete ponašanje klijenata i poslovne rezultate. Oni gledaju na relevantne vrednosti iz [objedinjenih profila](data-unification.md). Na primer, preduzeće želi da vidi *ukupnu potrošnju po klijentu* da biste razumeli istoriju kupovine pojedinačnog klijenta ili meru *ukupne prodaje preduzeća* da biste razumeli ukupni prihod u celom poslu.  
+Mere vam pomažu da bolje razumete ponašanje klijenata i poslovne rezultate. Oni gledaju na relevantne vrednosti iz [objedinjenih profila](data-unification.md). Na primer, preduzeće želi da vidi *ukupnu potrošnju po klijentu* da biste razumeli istoriju kupovine pojedinačnog klijenta ili meru *ukupne prodaje preduzeća* da biste razumeli ukupni prihod u celom preduzeću.  
 
 Mere se kreiraju pomoću kreatora mera, platforme za upite podataka sa različitim operaterima i jednostavnim opcijama mapiranja. Omogućava vam da filtrirate podatke, grupišete rezultate, otkrivate [putanje relacija između entiteta](relationships.md) i pregledate izlaz.
 
@@ -34,9 +34,9 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
 
 1. Izaberite **Uređivanje naziva** i navedite **Naziv** za meru. 
    > [!NOTE]
-   > Ako vaša nova konfiguracija mere ima samo dva polja, npr. CustomerID i jedan proračun, izlaz će biti dodat kao nova kolona sistemski generisanom entitetu pod nazivom Customer_Measure. I moći ćete da vidite vrednost mere u objedinjenom profilu klijenta. Druge mere će generisati sopstvene entitete.
+   > Ako vaša nova konfiguracija mere ima samo dva polja – npr. CustomerID i jedan proračun – izlaz će biti dodat kao nova kolona sistemski generisanom entitetu pod nazivom Customer_Measure. I moći ćete da vidite vrednost mere u objedinjenom profilu klijenta. Druge mere će generisati sopstvene entitete.
 
-1. U oblasti konfiguracije, odaberite agregatnu funkciju iz padajućeg menija **Izaberite funkciju**. Agregatne funkcije uključuju: 
+1. U oblasti konfiguracije, odaberite funkciju agregacije iz padajućeg menija **Izaberi funkciju**. Agregatne funkcije uključuju: 
    - **Sum**
    - **Prosek**
    - **Brojanje**
@@ -69,12 +69,14 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
    1. Izaberite **Primeni** da biste meri dodali filtere.
 
 1. Da biste dodali dimenzije, izaberite **Dimenzija** u oblasti konfiguracije. Dimenzije će se prikazati kao kolone u izlaznom entitetu mere.
+ 
    1. Izaberite **Uređivanje dimenzija** da biste dodavali atribute podataka po kojima želite da grupišete vrednosti mere. Na primer, grad ili pol. Podrazumevano, dimenzija *CustomerID* se bira za kreiranje *mera na nivou klijenta*. Možete da uklonite podrazumevanu dimenziju ako želite da kreirate *mere na nivou preduzeća*.
    1. Izaberite **Gotovo** da biste meri dodali dimenzije.
 
-1. Ako u vašim podacima postoje vrednosti koje treba da zamenite celim brojem, na primer, zamenite *null* sa *0*, izaberite **Pravila**. Konfigurišite pravilo i obavezno odaberite samo cele brojeve kao zamenu.
+1. Ako u vašim podacima postoje vrednosti koje treba da zamenite celim brojem – na primer, da zamenite *null* sa *0* – izaberite **Pravila**. Konfigurišite pravilo i obavezno odaberite samo cele brojeve kao zamenu.
 
 1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identifikovanih [putanja relacija između entiteta](relationships.md). Rezultati merenja mogu se razlikovati u zavisnosti od izabrane putanje. 
+   
    1. Izaberite **Željene opcije podataka** i odaberite putanju entiteta koju treba koristiti za identifikaciju vaše mere. Ako postoji samo jedan put do entiteta *Klijent*, ova kontrola se neće prikazati.
    1. Izaberite **Gotovo** da primenite svoj izbor. 
 
@@ -123,7 +125,7 @@ Sledeći postupak opisuje korake za izgradnju nove mere pomoću predloška.
 
 1. Izaberite **Gotovo**.
 
-1. U odeljku **Podešavanje vremenskog perioda** definišite vremenski okvir podataka koji će se koristiti. Odaberite da li želite da nova mera pokrije čitav skup podataka izborom **Sve vreme**. Ili ako želite da se mera usredsredi na **Određeni vremenski period**.
+1. U odeljku **Podešavanje vremenskog perioda** definišite vremenski okvir podataka koji će se koristiti. Odaberite da li želite da nova mera pokriva čitav skup podataka izborom **Sve vreme**, ili ako želite da se mera fokusira na **Određeni vremenski period**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Snimak ekrana koji prikazuje odeljak vremenskog perioda prilikom konfigurisanja mere iz predloška.":::
 
@@ -142,12 +144,12 @@ Sledeći postupak opisuje korake za izgradnju nove mere pomoću predloška.
 
 Spisak mera možete pronaći na stranici **Mere**.
 
-Pronaći ćete informacije o tipu mere, autoru, datumu nastanka, statusu i stanju. Kada izaberete meru sa liste, možete da pregledate izlaz i preuzmete .CSV datoteku.
+Pronaći ćete informacije o tipu mere, autoru, datumu nastanka, statusu i stanju. Kada na listi izaberete meru, možete da pregledate izlaz i preuzmete CSV datoteku.
 
 Da biste istovremeno osvežili sve mere, izaberite **Osvežite sve** bez izbora određene mere.
 
 > [!div class="mx-imgBorder"]
-> ![Radnje za upravljanje jedinstvenim merama](media/measure-actions.png "Radnje za upravljanje jedinstvenim merama")
+> ![Radnje za upravljanje jedinstvenim merama.](media/measure-actions.png "Radnje za upravljanje jedinstvenim merama.")
 
 Izaberite meru sa liste za sledeće opcije:
 
@@ -159,11 +161,11 @@ Izaberite meru sa liste za sledeće opcije:
 - **Aktivirajte** ili **Deaktivirajte**. Neaktivne mere se neće osvežavati tokom [zakazanog osvežavanja](system.md#schedule-tab).
 
 > [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora **Vidi detalje** za jedan od zadataka posla, pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
 
 ## <a name="next-step"></a>Sledeći korak
 
-Možete koristiti postojeće mere za kreiranje [segmenta klijenata](segments.md).
+Možete koristiti postojeće mere da biste kreirali [segment klijenata](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

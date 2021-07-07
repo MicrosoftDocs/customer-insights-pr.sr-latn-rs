@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965595"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305449"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje korisničkih profila sa poboljšanim adresama
 
@@ -22,11 +22,11 @@ Adrese u vašim podacima mogu biti nestrukturirane, nepotpune ili netačne. Kori
 
 ## <a name="how-we-enhance-addresses"></a>Kako poboljšavamo adrese
 
-Naš model prolazi kroz postupak u dva koraka za poboljšanje adrese. Prvo raščlanjuje adresu da bi identifikovao njene komponente i stavlja ih u strukturirani format. Zatim koristimo veštačku inteligenciju da bismo ispravili, upotpunili i standardizovali vrednosti u adresi.
+Naš model prolazi kroz postupak u dva koraka za poboljšanje adrese. Prvo raščlanjuje adresu da bi identifikovao njene komponente i stavlja ih u strukturirani format. Zatim koristimo AI za ispravljanje, popunjavanje i standardizaciju vrednosti u adresi.
 
 ### <a name="example"></a>Primer
 
-Informacije o adresi mogu da budu u nestandardnom formatu i da sadrže pravopisne greške. Model može rešiti ove probleme i kreirati dosledne adrese u objedinjenim korisničkim profilima.
+Informacije o adresi mogu biti u nestandardnom formatu i sadržati pravopisne greške. Model može rešiti ove probleme i kreirati dosledne adrese u objedinjenim korisničkim profilima.
 
 ```Input
 4567 w main stret californa missouri 54321 us
@@ -50,7 +50,7 @@ Poboljšane adrese funkcionišu samo sa vrednostima koje već postoje u podacima
 2. Ne proverava da li je neka od vrednosti, poput poštanskih brojeva ili naziva ulica, važeća.
 3. Ne menja vrednosti koje ne prepoznaje.
 
-Model za poboljšanje adresa koristi tehnike zasnovane na mašinskom učenju. Iako primenjujemo visok prag pouzdanosti kada model menja ulaznu vrednost, kao i kod bilo kog modela zasnovanog na mašinskom učenju, 100% tačnost nije garantovana.
+Model za poboljšanje adresa koristi tehnike zasnovane na mašinskom učenju. Iako primenjujemo visok prag pouzdanosti kada model menja ulaznu vrednost, kao i kod bilo kog modela zasnovanog na mašinskom učenju, stopostotna tačnost nije zagarantovana.
 
 ## <a name="supported-countries-or-regions"></a>Podržane zemlje ili regioni
 
@@ -76,7 +76,7 @@ Adrese moraju da sadrže vrednost zemlje/regiona. Ne obrađujemo adrese za zemlj
 1. Izaberite način oblikovanja adresa u skupu podataka. Odaberite **Adresa sa jednim atributom** ako adrese u vašim podacima koriste jedno polje. Odaberite **Adresa sa više atributa** ako adrese u vašim podacima koriste više od jednog polja podataka.
 
    > [!NOTE]
-   > Država/region je obavezna i za adresu sa jednim atributom i za onu sa više atributa. Adrese koje ne sadrže važeće ili podržane vrednosti zemlje/regiona neće biti obogaćene
+   > Zemlja/region je obavezan podatak za adrese i sa jednim i sa više atributa. Adrese koje ne sadrže važeće ili podržane vrednosti zemlje/regiona neće biti obogaćene.
 
 1.  Mapirajte polja adrese iz vašeg objedinjenog entiteta klijenta.
 
@@ -98,6 +98,6 @@ Detaljnom prikazu svakog obogaćenog profila možete pristupiti ako izaberete **
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md), [mere](measures.md), pa čak i [izvezite podatke](export-destinations.md) da biste pružili personalizovana iskustva svojim klijentima.
+Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md) i [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da pružite personalizovana iskustva svojim klijentima.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

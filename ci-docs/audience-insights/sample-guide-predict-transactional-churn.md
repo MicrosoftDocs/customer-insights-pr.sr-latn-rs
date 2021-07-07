@@ -9,20 +9,20 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 251bc26246cee16952e8e4cb08e2ed7aa4d18488
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49dad45c951f3c00d77ddd99faec48bfccada8b0
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595443"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306137"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje gubitka transakcija (verzija za pregled)
 
-Ovaj vodič vam objašnjava vam kompletan primer predviđanja gubitka transakcija u usluzi Customer Insights pomoću podataka navedenih u nastavku. Svi podaci korišćeni u ovom vodiču nisu stvarni podaci o klijentima i deo su skupa podataka Contoso koji se nalazi u *Demo* okruženju u okviru pretplate na Customer Insights.
+Ovaj vodič vam objašnjava vam kompletan primer predviđanja gubitka transakcija u usluzi Customer Insights pomoću podataka navedenih u nastavku. Svi podaci korišćeni u ovom vodiču nisu stvarni podaci o klijentima i deo su Contoso skupa podataka koji se nalazi u *demo* okruženju u okviru pretplate na uslugu Customer Insights.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju putem svog veb-sajta Contoso Coffee. Cilj im je da saznaju koji će klijenti koji obično redovno kupuju njihove proizvode prestati da budu aktivni klijenti u narednih 60 dana. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
+Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju preko veb-lokacije Contoso Coffee. Cilj im je da saznaju koji će klijenti koji obično redovno kupuju njihove proizvode prestati da budu aktivni klijenti u narednih 60 dana. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -109,9 +109,9 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
 
-1. Na padajućoj listi **Primarno**, odaberite **eCommerce kontakti: eCommerce** kao primarni izvor i uključite sve zapise.
+1. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
 
-1. Na padajućoj listi **Entitet 2**, odaberite **Lojalni klijenti: Šema lojalnosti** i uključite sve zapise.
+1. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Objedinite podudaranje platforme eCommerce i lojalnosti.":::
 
@@ -119,16 +119,16 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 1. Dodajte svoj prvi uslov koristeći Ime i prezime.
 
-   * Za eCommerce kontakte odaberite **Ime i prezime** na padajućoj listi.
-   * Za Lojalne klijente odaberite **Ime i prezime** na padajućoj listi.
+   * Za eCommerceContacts izaberite **FullName** u padajućoj listi.
+   * Za loyCustomers izaberite **FullName** u padajućoj listi.
    * Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa...)**.
    * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
 1. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
 
    * Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   * Za entitet eCommerce kontakti odaberite **E-pošta** u padajućem meniju.
-   * Za entitet Lojalni klijenti odaberite **E-pošta** u padajućem meniju. 
+   * Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
+   * Za entitet loyCustomers, odaberite **EMail** u padajućoj listi. 
    * Ostavite Normalizacija prazno. 
    * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 

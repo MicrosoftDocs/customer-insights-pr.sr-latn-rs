@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 87bf8d7b9c23633ebdc929e15ac645c55cc21e4a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 09d449e51a3a47ec916ab3d017419c9d9be1ffcf
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595397"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305727"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
@@ -94,7 +94,7 @@ Izaberite **Sačuvaj** da potvrdite izbore.
 
 ## <a name="api-usage-tab"></a>Kartica za upotrebu API-ja
 
-Pronađite detalje o upotrebi API-ja u realnom vremenu i pogledajte koji su se događaji dogodili u datom vremenskom okviru. Birate vremenski okvir u padajućem meniju **Izbor vremenskog okvira**. 
+Pronađite detalje o upotrebi API-ja u realnom vremenu i pogledajte koji su se događaji dogodili u datom vremenskom okviru. Birate vremenski okvir u padajućem meniju **Izaberite vremenski okvir**. 
 
 **Korišćenje API-ja** sadrži tri odeljka: 
 - **API pozivi** – grafikon koji prikazuje ukupni broj poziva API-ju u izabranom vremenskom okviru.

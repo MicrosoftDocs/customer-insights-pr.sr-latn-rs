@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976335"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305357"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (verzija za pregled)
 
-Izvezite segmente objedinjenih profila klijenata u listu korisnika Google oglasa i koristite ih za oglašavanje u Google pretrazi, na Gmail-u, YouTube-u i Google mreži multimedijalnog oglašavanja. 
+Izvezite segmente objedinjenih profila klijenata na Google Ads listu ciljnih grupa i koristite ih za oglašavanje na Google pretrazi, Gmailu, YouTubeu i Google mreži multimedijalnog oglašavanja. 
 
 ## <a name="prerequisites-for-connection"></a>Preduslovi za vezu
 
 -   Imate [nalog Google oglasa](https://ads.google.com/) i odgovarajuće akreditive administratora.
--   Vi imate [odobreni token za Google Ads programera](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Ispunjavate zahteve [politike podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717)
--   Ispunjavate zahteve [veličine lista za ponovno oglašavanje](https://support.google.com/google-ads/answer/7558048) 
-
+-   Imate [odobreni token za Google Ads programera](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Ispunjavate zahteve [politike podudaranja klijenata](https://support.google.com/adspolicy/answer/6299717).
+-   Ispunjavate zahteve [za veličine lista za ponovno oglašavanje](https://support.google.com/google-ads/answer/7558048).
 -   Postoji postojeća publika u Google oglasima i odgovarajući ID-ovi. Za više informacija pogledajte [Korisnici Google oglasa](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Imate [konfigurisane segmente](segments.md)
--   Objedinjeni profili klijenata u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime
+-   Imate [konfigurisane segmente](segments.md).
+-   Objedinjeni korisnički profili u izvezenim segmentima sadrže polja koja predstavljaju adresu e-pošte, ime i prezime.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
@@ -68,17 +67,19 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Google Ads. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Google Ads. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
 
 1. Unesite **[ID korisnika za Google oglase](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i izaberite **Povežite se** da biste započeli povezivanje sa Google oglasima.
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite iste korake za polja **Ime** i **Prezime**.
+1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite neke korake za polja **Ime** i **Prezime**.
 
 1. Izaberite segmente koje želite da izvezete. U Google oglasima možete ukupno izvesti do 1 milion korisničkih profila.
 
 Čuvanje izvoza ne pokreće izvoz odmah.
 
-Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
+Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). 
+
+Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
 

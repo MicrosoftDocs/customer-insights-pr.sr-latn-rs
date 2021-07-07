@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896344"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304621"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
@@ -57,13 +57,13 @@ Izaberite bilo koju pločicu klijenta da biste otvorili **stranicu sa detaljima 
 
 Detalji o klijentu obuhvataju:
 
--   **Pločica profila klijenta:** Ova pločica prikazuje različite vrednosti iz entiteta objedinjenog profila klijenta. Ovi detalji mogu da uključuju adresu e-pošte, ime, grad itd. 
+-   **Pločica profila klijenta**: Ova pločica prikazuje različite vrednosti iz entiteta objedinjenog profila klijenta. Ovi detalji mogu da uključuju adresu e-pošte, ime, grad itd. 
 
--   **Potencijalna interesovanja, potencijalni brendovi:** Pokazuje da li ste konfigurisali direktno obogaćivanje. Predstavlja potencijalna interesovanja i afinitete za brendove koje ima klijent sa profilom sličnim ovom klijentu. Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
+-   **Potencijalna interesovanja, potencijalni brendovi**: Pokazuje da li ste konfigurisali direktno obogaćivanje. Predstavlja potencijalna interesovanja i afinitete za brendove koje ima klijent sa profilom sličnim ovom klijentu. Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
 
--   **Mere:** Pokazuje da li ste konfigurisali jednu ili više mera određene vrste: mere atributa klijenta. Uključuju izračunate KPI-jeve oko vaših klijenata na nivou pojedinačnog klijenta. Za više informacija pogledajte [Definisanje i upravljanje merama](measures.md).
+-   **Mere**: Pokazuje da li ste konfigurisali jednu ili više mera određene vrste: mere atributa klijenta. Uključuju izračunate KPI-jeve oko vaših klijenata na nivou pojedinačnog klijenta. Za više informacija pogledajte [Definisanje i upravljanje merama](measures.md).
 
--   **Vremenska osa aktivnosti:** Pokazuje da li ste konfigurisali aktivnosti. Prikaz vremenske ose sadrži hronološki sortirane aktivnosti ovog klijenta, počev od najnovije aktivnosti. Za više informacija pogledajte [aktivnosti klijenta](activities.md).
+-   **Vremenska osa aktivnosti**: Pokazuje da li ste konfigurisali aktivnosti. Prikaz vremenske ose sadrži hronološki sortirane aktivnosti ovog klijenta, počev od najnovije aktivnosti. Za više informacija pogledajte [aktivnosti klijenta](activities.md).
 
 Izaberite **Povratak na klijente** da biste se vratili na stranicu za pretragu klijenata.
 

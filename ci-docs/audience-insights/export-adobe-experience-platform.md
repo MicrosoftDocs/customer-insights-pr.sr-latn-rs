@@ -1,6 +1,6 @@
 ---
 title: Izvoz Customer Insights podataka u Adobe platformu iskustva
-description: Saznajte kako se koriste segmenti uvida o korisnicima u Adobe platformi iskustva.
+description: Saznajte kako da koristite segmente uvida u ciljnu grupu u usluzi Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760118"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305541"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Korišćenje Customer Insights segmenata u Adobe platformi iskustva (verzija za pregled)
 
-Kao korisnik uvida o korisnicima za Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim tako što ćete ciljati relevantne ciljne grupe. Da biste koristili segment iz uvida o korisnicima u Adobe platformi iskustva i aplikacijama poput Adobe Campaign Standard, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
+Kao korisnik uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim ciljajući relevantne ciljne grupe. Da biste koristili segment iz uvida o korisnicima u Adobe platformi iskustva i aplikacijama poput Adobe Campaign Standard, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
@@ -55,9 +55,9 @@ Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o 
 
 1. Idite na **Administrator** > **Veze**.
 
-1. Izaberite **Dodaj vezu** i odaberite **Azure skladište blob objekta** ili izaberite **Podesi** na pločici **Azure skladište blob objekta**:
+1. Izaberite **Dodaj vezu** i birajte **Azure skladište blob objekta** ili izaberite **Podesi** na pločici **Azure skladište blob objekta** da biste konfigurisali vezu.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure skladište blob objekta."::: da biste konfigurisali vezu.
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Pločica za konfiguraciju za Azure skladište blob objekta."::: 
 
 1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
 
@@ -80,7 +80,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
 
 1. Odaberite segment koje želite da izvezete. U ovom primeru, to je **ChurnProneCustomers**.
 
@@ -121,9 +121,10 @@ Kada definišete izvornu vezu, [konfigurišite tok podataka](https://experiencel
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Kreiranje korisnika u usluzi Adobe Campaign Standard
 
-Da bismo poslali e-poruku za ovu kampanju, koristićemo Adobe Campaign Standard. Nakon uvoza podataka u Adobe platformu iskustva, treba da [kreiramo ciljnu grupu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u usluzi Adobe Campaign Standard koristeći podatke na Adobe platformi iskustva.
+Da bismo poslali e-poštu za ovu kampanju, koristićemo uslugu Adobe Campaign Standard. Nakon uvoza podataka u Adobe platformu iskustva, treba da [kreiramo ciljnu grupu](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) u usluzi Adobe Campaign Standard koristeći podatke na Adobe platformi iskustva.
 
-Saznajte kako da [koristite alatku za pravljenje segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/working-with-adobe-experience-platform/aep-using-segment-builder.html#building-a-segment) u usluzi Adobe Campaign Standard da biste definisali ciljnu grupu na osnovu podataka u Adobe platformi iskustva.
+
+Saznajte kako da [koristite alatku za pravljenje segmenata](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) u usluzi Adobe Campaign Standard da biste definisali ciljnu grupu na osnovu podataka u Adobe platformi iskustva.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Kreirajte i pošaljite e-poruku koristeći Adobe Campaign Standard
 

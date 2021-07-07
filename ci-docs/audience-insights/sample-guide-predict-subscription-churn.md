@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595535"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306320"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje gubitka pretplata (verzija za pregled)
 
@@ -22,7 +22,7 @@ Objasnićemo vam kompletan primer predviđanja gubitka pretplata pomoću primera
 
 ## <a name="scenario"></a>Scenario
 
-Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju putem svog veb-sajta Contoso Coffee. Nedavno su pokrenuli uslugu pretplate kako bi njihovi klijenti redovno dobijali kafu. Cilj im je da razumeju koji pretplaćeni klijenti bi mogli otkazati pretplatu u narednih nekoliko meseci. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
+Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju preko veb-lokacije Contoso Coffee. Nedavno su pokrenuli uslugu pretplate kako bi njihovi klijenti redovno dobijali kafu. Cilj im je da razumeju koji pretplaćeni klijenti bi mogli otkazati pretplatu u narednih nekoliko meseci. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -128,9 +128,9 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
 
-1. Na padajućoj listi **Primarno**, odaberite **eCommerce kontakti: eCommerce** kao primarni izvor i uključite sve zapise.
+1. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
 
-1. Na padajućoj listi **Entitet 2**, odaberite **Lojalni klijenti: Šema lojalnosti** i uključite sve zapise.
+1. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Objedinite podudaranje platforme eCommerce i lojalnosti.":::
 
@@ -138,16 +138,16 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 1. Dodajte svoj prvi uslov koristeći Ime i prezime.
 
-   * Za eCommerce kontakte odaberite **Ime i prezime** na padajućoj listi.
-   * Za Lojalne klijente odaberite **Ime i prezime** na padajućoj listi.
+   * Za eCommerceContacts izaberite **FullName** u padajućoj listi.
+   * Za loyCustomers izaberite **FullName** u padajućoj listi.
    * Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa...)**.
    * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
 1. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
 
    * Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   * Za entitet eCommerce kontakti odaberite **E-pošta** u padajućem meniju.
-   * Za entitet Lojalni klijenti odaberite **E-pošta** u padajućem meniju. 
+   * Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
+   * Za entitet loyCustomers, odaberite **EMail** u padajućoj listi. 
    * Ostavite Normalizacija prazno. 
    * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 

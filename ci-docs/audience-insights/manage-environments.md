@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259116"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304897"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -54,29 +54,32 @@ Da biste kreirali okruženja:
 1. Izaberite **Novo**.
 
    > [!div class="mx-imgBorder"]
-   > ![Podešavanja okruženja](media/environment-settings-dialog.png)
+   > ![Podešavanja okruženja.](media/environment-settings-dialog.png)
 
-1. U dijalogu **Kreirajte novo okruženje**, izaberite **Novo okruženje**.
+1. U dijalogu **Kreiranje okruženja**, izaberite **Novo okruženje**.
 
    Ako želite da [kopirate podatke iz trenutnog okruženja](#considerations-for-copy-configuration-preview), izaberite **Kopiraj iz postojećeg okruženja**. Videćete listu svih dostupnih okruženja u vašoj organizaciji, odakle možete kopirati podatke.
 
 1. Navedite sledeće detalje:
    - **Naziv**: Unesite naziv ovog okruženja. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti.
-   - **Region**: Region u kojem je usluga primenjena i hostovana.
    - **Tip**: Izaberite da li želite da kreirate proizvodno ili Sandbox okruženje.
-
+   - **Region**: Region u kojem je usluga primenjena i hostovana.
+   
 1. Po želji možete odabrati **Napredna podešavanja**:
 
-   - **Sačuvaj sve podatke u**: Određuje gde želite da sačuvate izlazne podatke generisane u usluzi Customer Insights. Imaćete dve mogućnosti: **Customer Insights skladište** (Azure Data Lake kojim upravlja Customer Insights tim) i **Azure Data Lake Storage Gen2** (vaš sopstveni Azure Data Lake Storage). Podrazumevano je odabrana opcija Customer Insights skladišta.
+   - **Sačuvaj sve podatke u**: Određuje gde želite da sačuvate izlazne podatke generisane u usluzi Customer Insights. Imaćete dve mogućnosti: **Customer Insights skladište** (Azure Data Lake kojim upravlja Customer Insights tim) i **Azure Data Lake Storage** (vaš sopstveni Azure Data Lake Storage). Podrazumevano je odabrana opcija Customer Insights skladišta.
 
-   > [!NOTE]
-   > Čuvanjem podataka u usluzi Azure Data Lake Storage, slažete se da će podaci biti preneti i uskladišteni na odgovarajućoj geografskoj lokaciji za taj Azure nalog za skladištenje, koja može da se razlikuje od mesta skladištenja podataka u usluzi Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost.](https://www.microsoft.com/trust-center)
-   >
-   > Trenutno se uneti entiteti uvek čuvaju u jezeru podataka kojim upravlja Customer Insights.
-   > Podržavamo samo Azure Data Lake Gen2 naloge za skladištenje iz iste Azure regije koju ste izabrali prilikom kreiranja okruženja.
-   > Mi podržavamo samo naloge za skladištenje koje omogućuje Azure Data Lake Gen2 hijerarhijski prostoru imena (HNS).
+     > [!NOTE]
+     > Čuvanjem podataka u usluzi Azure Data Lake Storage, slažete se da će podaci biti preneti i uskladišteni na odgovarajućoj geografskoj lokaciji za taj Azure nalog za skladištenje, koja može da se razlikuje od mesta skladištenja podataka u usluzi Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost.](https://www.microsoft.com/trust-center)
+     >
+     > Trenutno se uneti entiteti uvek čuvaju u Customer Insights upravljanoj usluzi Data Lake. 
+     > 
+     > Podržavamo samo Azure Data Lake Storage naloge iz istog Azure regiona koji ste izabrali prilikom kreiranja okruženja. 
+     > 
+     > Podržavamo samo Azure Data Lake Storage naloge koji imaju omogućen hijerarhijski prostor imena.
 
-   - Za opciju Azure Data Lake Storage Gen2, možete da birate između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Naziv **kontejnera** se ne može promeniti i biće `customerinsights`.
+
+   - Za opciju Azure Data Lake Storage, možete odabrati između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Naziv **kontejnera** se ne može promeniti i biće `customerinsights`.
    
    - Ako želite da koristite [predviđanja](predictions.md), konfigurišite razmenu podataka sa platformom Microsoft Dataverse ili omogućite unošenje podataka iz lokalnih izvora podataka, navedite URL adresu Microsoft Dataverse okruženja u odeljku **Konfigurišite deljenje podataka sa platformom Microsoft Dataverse i omogućite dodatne mogućnosti**. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću usluge Microsoft Dataverse Managed Data Lake.
 
@@ -85,7 +88,7 @@ Da biste kreirali okruženja:
      > - [Predviđanje vrednosti koje nedostaju u entitetu](predictions.md) trenutno nije podržano kada omogućite deljenje podataka sa uslugom Microsoft Dataverse Managed Data Lake.
 
      > [!div class="mx-imgBorder"]
-     > ![Opcije konfiguracije za omogućavanje deljenja podataka sa uslugom Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Kada pokrenete procese, poput unosa podataka ili kreiranja segmenta, na nalogu za skladištenje koji ste gore naveli kreiraće se odgovarajuće mape. Datoteke podataka i datoteka model.json će se kreirati i dodati u fascikle u zavisnosti od naziva procesa.
 
@@ -113,14 +116,14 @@ Sledeća podešavanja se *ne* kopiraju:
 
 - Profili klijenata.
 - Akreditivi izvora podataka. Moraćete da dostavite akreditive za svaki izvor podataka i ručno osvežite izvore podataka.
-- Izvori podataka iz fascikle Common Data Model i Common Data Service upravljanog jezera. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
+- Izvori podataka iz Common Data Model fascikle i Dataverse upravljane usluge Data Lake. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
 
 Kada kopirate okruženje, videćete poruku potvrde da je kreirano novo okruženje. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka.
 
 Svi izvori podataka će pokazati status **Potrebni su akreditivi**. Uredite izvore podataka i unesite akreditive da biste ih osvežili.
 
 > [!div class="mx-imgBorder"]
-> ![Kopirani izvori podataka](media/data-sources-copied.png)
+> ![Izvori podataka su kopirani.](media/data-sources-copied.png)
 
 Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde ćete pronaći podešavanja iz izvornog okruženja. Uredite ih po potrebi ili izaberite **Pokreni** da biste pokrenuli proces objedinjavanja podataka i kreirali objedinjeni entitet klijenta.
 
@@ -136,7 +139,7 @@ Možete da izmenite neke detalje postojećih okruženja.
 
 3. U okviru **Uredi okruženje** možete ažurirati okruženje **Ime za prikaz** okruženja, ali ne možete da promenite **Region** ili **Tip**.
 
-4. Ako je okruženje konfigurisano za čuvanje podataka Azure Data Lake Storage Gen2, možete da ažurirate **Ključ naloga**. Međutim, ne možete promeniti **Ime naloga** ni ime **kontejnera**.
+4. Ako je okruženje konfigurisano za čuvanje podataka u usluzi Azure Data Lake Storage, možete ažurirati **Ključ naloga**. Međutim, ne možete promeniti **Ime naloga** ni ime **kontejnera**.
 
 5. Po želji možete da ažurirate sa veze ključa naloga na vezu zasnovanu na resursima ili pretplati. Kada ih nadogradite, ne možete se vratiti na ključ naloga nakon ažuriranja. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Ne možete promeniti informacije o **kontejneru** prilikom ažuriranja veze.
 
@@ -158,19 +161,19 @@ Kao administrator, možete da vratite okruženje na prazno stanje ako želite da
 
 1.  Izaberite birač **Okruženje** u zaglavlju aplikacije. 
 
-2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke **...**. 
+2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke (**...**). 
 
 3. Izaberite opciju **Resetuj**. 
 
 4.  Da biste potvrdili brisanje, unesite ime okruženja i izaberite **Resetuj**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Izbrišite postojeće okruženje (dostupno samo za administratore)
+## <a name="delete-an-existing-environment"></a>Brisanje postojećeg okruženja
 
 Kao administrator možete da izbrišete okruženje kojim administrirate.
 
 1.  Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
-2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke **...**. 
+2.  Izaberite okruženje koje želite da resetujete i izaberite tri tačke (**...**). 
 
 3. Odaberite opciju **Izbriši**. 
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866424"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304943"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -45,7 +45,7 @@ Vaši izvori podataka mogu da uključe entitete koji imaju podatke o transakcija
 
    - **Prvi**: Strano polje u entitetu aktivnosti koje će se koristiti za uspostavljanje relacije sa drugim entitetom.
    - **Drugi**: Odgovarajući izvorni entitet klijenta sa kojim će vaš entitet aktivnosti biti u relaciji. Možete se povezati samo sa izvornim entitetima klijenata koji se koriste u procesu objedinjavanja podataka.
-   - **Treći**: Ako relacija između ovog entiteta aktivnosti i izabranog izvornog entiteta klijenta već postoji, naziv relacije će biti u režimu samo za čitanje. Ako takva relacija ne postoji, kreiraće se nova relacija pod nazivom koji navedete u ovom polju.
+   - **Treći**: Ako relacija između ovog entiteta aktivnosti i izabranog izvornog entiteta klijenta već postoji, naziv relacije će biti u režimu samo za čitanje. Ako takva relacija ne postoji, stvoriće se nova relacija sa imenom koje navedete u ovom polju.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisanje relacije između entiteta.":::
 
@@ -53,19 +53,19 @@ Vaši izvori podataka mogu da uključe entitete koji imaju podatke o transakcija
 
 1. U koraku **Objedinjavanje aktivnosti**, odaberite događaj aktivnosti i vreme početka aktivnosti. 
    - **Obavezna polja**
-      1. **Aktivnost događaja**: Polje koje je događaj za ovu aktivnost
-      2. **Vremenska oznaka**: Polje koje predstavlja vreme početka vaše aktivnosti.
+      - **Aktivnost događaja**: Polje koje je događaj za ovu aktivnost.
+      - **Vremenska oznaka**: Polje koje predstavlja vreme početka vaše aktivnosti.
 
    - **Opcionalna polja**
-      1. **Dodatni detalj**: Polje sa relevantnim informacijama za ovu aktivnost.
-      2. **Ikona**: Ikona koja najbolje predstavlja ovu vrstu aktivnosti.
-      3. **Veb-adresa**: Polje koje sadrži URL adresu sa informacijama o ovoj aktivnosti. Na primer, transakcioni sistem koji je izvor ove aktivnosti. Ova URL adresa može biti bilo koje polje iz izvora podataka ili se može napraviti kao novo polje pomoću Power Query transformacije. Podaci o URL adresi biće sačuvani u entitetu *Objedinjena aktivnost*, koji se može posledično koristiti pomoću [API-ja](apis.md).
+      - **Dodatni detalj**: Polje sa relevantnim informacijama za ovu aktivnost.
+      - **Ikona**: Ikona koja najbolje predstavlja ovu vrstu aktivnosti.
+      - **Veb-adresa**: Polje koje sadrži URL adresu sa informacijama o ovoj aktivnosti. Na primer, transakcioni sistem koji je izvor ove aktivnosti. Ova URL adresa može biti bilo koje polje iz izvora podataka ili se može napraviti kao novo polje pomoću Power Query transformacije. Podaci o URL adresi biće sačuvani u entitetu *Objedinjena aktivnost*, koji se može posledično koristiti pomoću [API-ja](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Navedite podatke o aktivnostima klijenata u entitetu Ujedinjene aktivnosti.":::
 
 1. Izaberite **Sledeće** da biste prešli na sledeći korak. Možete izabrati **Završite i pregledaj** da biste sada sačuvali aktivnost sa tipom aktivnosti podešenim na **Ostalo**. 
 
-1. U koraku **Tip aktivnosti**, odaberite tip aktivnosti i opcionalno odaberite ako želite da semantički mapirate neke od vrsta aktivnosti za upotrebu u drugim oblastima usluge Customer Insights. Trenutno, tipovi aktivnosti *Pretplata* i *Detalj ulazne porudžbine* mogu se semantički mapirati nakon dogovora o mapiranju polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Kreiraj novu* za prilagođeni tip aktivnosti.
+1. U koraku **Tip aktivnosti**, odaberite tip aktivnosti i opcionalno odaberite ako želite da semantički mapirate neke od vrsta aktivnosti za upotrebu u drugim oblastima usluge Customer Insights. Trenutno, tipovi aktivnosti *Pretplata* i *SalesOrderLine* se mogu semantički mapirati nakon dogovora o mapiranju polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Kreiraj novu* za prilagođeni tip aktivnosti.
 
 1. Izaberite **Sledeće** da biste prešli na sledeći korak. 
 
@@ -89,7 +89,7 @@ Sledeće radnje su dostupne kada izaberete aktivnost.
 
 - **Uredi**: Otvara podešavanje aktivnosti u koraku pregleda. U ovom koraku možete promeniti bilo koju trenutnu konfiguraciju. Kada promenite konfiguraciju, izaberite **Sačuvaj aktivnost**, a zatim izaberite **Pokreni** da biste obradili promene.
 
-- **Preimenuj**: Otvara dijalog u koji ćete uneti drugi naziv za izabranu aktivnost. Izaberite **Sačuvaj** da primenite promene.
+- **Preimenuj**: Otvara dijalog u koji možete uneti drugo ime za izabranu aktivnost. Izaberite **Sačuvaj** da primenite promene.
 
 - **Izbriši**: Otvara dijalog za potvrdu brisanja izabrane aktivnosti. Takođe možete izbrisati više aktivnosti odjednom tako što ćete izabrati aktivnosti, a zatim izabrati ikonu za brisanje. Izaberite **Izbriši** da biste potvrdili brisanje.
 

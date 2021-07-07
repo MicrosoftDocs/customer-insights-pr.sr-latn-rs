@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: a85ee598ec747d0594755314e83a127ce0f2af95
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129916"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306183"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje preporuka proizvoda (pregled)
 
@@ -105,9 +105,9 @@ Nakon unosa podataka, sada započinjemo postupak ujednačavanja podataka kako bi
 
 1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
 
-2. Na padajućoj listi **Primarno**, odaberite **eCommerce kontakti: eCommerce** kao primarni izvor i uključite sve zapise.
+2. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
 
-3. Na padajućoj listi **Entitet 2**, odaberite **Lojalni klijenti: Šema lojalnosti** i uključite sve zapise.
+3. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
 
    ![Objedinite podudaranje platforme eCommerce i lojalnosti.](media/unify-match-order.png)
 
@@ -115,16 +115,16 @@ Nakon unosa podataka, sada započinjemo postupak ujednačavanja podataka kako bi
 
 5. Dodajte svoj prvi uslov koristeći Ime i prezime.
 
-   - Za eCommerce kontakte odaberite **Ime i prezime** na padajućoj listi.
-   - Za Lojalne klijente odaberite **Ime i prezime** na padajućoj listi.
+   - Za eCommerceContacts izaberite **FullName** u padajućoj listi.
+   - Za loyCustomers izaberite **FullName** u padajućoj listi.
    - Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa...)**.
    - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
 6. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
 
    - Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   - Za entitet eCommerce kontakti odaberite **E-pošta** u padajućem meniju.
-   - Za entitet Lojalni klijenti odaberite **E-pošta** u padajućem meniju.
+   - Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
+   - Za entitet loyCustomers, odaberite **EMail** u padajućoj listi.
    - Ostavite Normalizacija prazno.
    - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
