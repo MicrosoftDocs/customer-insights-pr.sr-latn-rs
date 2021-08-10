@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304621"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554635"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
@@ -23,11 +23,11 @@ Stranica **Klijenti** prikazuje kombinovani prikaz vaših klijenata na osnovu po
 Klijenti mogu biti pojedinci ili organizacije (pregled). Svaki profil klijenta ili organizacije predstavljen je pločicom. Izaberite pločicu da biste videli dodatne informacije o tom konkretnom klijentu ili organizaciji. Upotrebite kontrole za straničenje na dnu stranice da biste videli dodatne zapise.
 
 > [!div class="mx-imgBorder"] 
-> ![B2C profili klijenata](media/profiles-customers.png "B2C profili klijenata")
+> ![B2C profili klijenata.](media/profiles-customers.png "B2C profili klijenata")
 
 Organizacije (Pregled)
 > [!div class="mx-imgBorder"] 
-> ![B2B profili klijenata](media/profile-customers-b2b.png "B2B profili klijenata")
+> ![B2B profili klijenata.](media/profile-customers-b2b.png "B2B profili klijenata")
 
 > [!NOTE]
 > Ako ne možete da vidite pločice kada izaberete **Klijenti** u navigaciji, vaš administrator treba da [definiši barem jedan atribut se može da se pretražuje](search-filter-index.md) u odeljku **Indeks pretrage i filtriranja**.
@@ -47,7 +47,7 @@ Možete filtrirati klijente po poljima entiteta Profil klijenta. Slično pretra�
 2. Označite polja pored atributa po kojima želite da filtrirate klijente.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profili klijenata](media/profiles-customers3.png "Profili klijenata")
+   > ![Profili klijenata.](media/profiles-customers3.png "Profili klijenata")
 
 3. Uklonite filtere izborom **Obriši filtere** na stranici **Klijenti**.
 

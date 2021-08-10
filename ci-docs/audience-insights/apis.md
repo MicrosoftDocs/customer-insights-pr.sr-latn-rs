@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304759"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554498"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
@@ -35,7 +35,7 @@ Ovaj članak opisuje kako da pristupite Customer Insights API-jima, kreirate reg
  
    Omogućavanje API-ja kreira primarni i sekundarni ključ pretplate za vašu instancu koji se koristi u API zahtevima. Ključeve možete da ponovo generišete tako što ćete izabrati **Ponovo generiši primarni** ili **Ponovo generiši sekundarni** na **Administrator** > **Dozvole** > **API-ji**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Omogućavanje Customer Insights API-ja":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Omogućavanje Customer Insights API-ja.":::
 
 1. Izaberite **Istražite naše API-je** da [isprobate API-je](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Saznajte kako da započnete korišćenje C# klijentskih biblioteka sa NuGet.org.
  
    Alternativno, pokrenite ovu komandu u **NuGet konzoli menadžera paketa**:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte NuGet paket u Visual Studio projekat":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte NuGet paket u Visual Studio projekat.":::
 
 #### <a name="use-the-c-client-library"></a>Koristite C# klijentsku biblioteku
 
@@ -141,7 +141,7 @@ Saznajte kako da započnete korišćenje C# klijentskih biblioteka sa NuGet.org.
 
 1. Prosledite `HttpClient` u konstrukciju `CustomerInsights` klijenta.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Uzorak httpclient-a":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Uzorak httpclienta.":::
 
 1. Upućujte pozive klijentu za „metode proširenja“, na primer, `GetAllInstancesAsync`. Ako je potreban pristup osnovnom `Microsoft.Rest.HttpOperationResponse`, koristite „metode http poruka“ – na primer, `GetAllInstancesWithHttpMessagesAsync`.
 

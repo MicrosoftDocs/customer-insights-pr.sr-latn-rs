@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259208"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650059"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights pruža mogućnost omogućavanja dostupnosti izlaznih entiteta 
 
 **Organizacije sa postojećim Dataverse okruženjem**
 
-Organizacije koje već koriste Dataverse mogu da [koristi jedno od svojih postojećih Dataverse okruženja](manage-environments.md#create-an-environment-in-an-existing-organization) kada administrator postavi uvide u ciljne grupe. Navođenjem URL adrese za Dataverse okruženje, vezuje se za njihovo novo okruženje za uvide u ciljnu grupu. Da bi se obezbedile najbolje moguće performanse, Customer Insights i Dataverse okruženja moraju biti hostovani u istom regionu.
+Organizacije koje već koriste Dataverse mogu da [koristi jedno od svojih postojećih Dataverse okruženja](get-started-paid.md) kada administrator postavi uvide u ciljne grupe. Navođenjem URL adrese za Dataverse okruženje, vezuje se za njihovo novo okruženje za uvide u ciljnu grupu. Da bi se obezbedile najbolje moguće performanse, Customer Insights i Dataverse okruženja moraju biti hostovani u istom regionu.
 
 Da biste priložili Dataverse okruženje, proširite **Napredna podešavanja** prilikom kreiranja okruženja za uvide u ciljnu grupu. Navedite **URL adresu za Microsoft Dataverse okruženje** i označite polje za potvrdu **Omogući deljenje podataka**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="altnernativno.":::
 
 **Nova organizacija**
 

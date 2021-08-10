@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305173"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555508"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatite profile klijenata afinitetima brenda i interesovanja (pregled)
 
@@ -27,7 +27,7 @@ Da biste konfigurisali obogaćivanje afiniteta za brendove, idite na karticu **O
 Da biste konfigurisali obogaćivanje afiniteta interesovanja, idite na karticu **Otkrijte** i izaberite **Obogati moje podatke** na pločici **Interesovanja**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločice Brendovi i Interesovanja](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i Interesovanja")
+   > ![Pločice Brendovi i Interesovanja.](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i Interesovanja")
 
 ## <a name="how-we-determine-affinities"></a>Kako utvrđujemo afinitete
 
@@ -123,7 +123,7 @@ U zavisnosti od veličine podataka o klijentima, može proći nekoliko minuta da
 
 Nakon pokretanja postupka obogaćivanja, idite na **Moja obogaćivanja** da biste pregledali ukupan broj obogaćenih klijenata i raspodelu brendova ili interesovanja u obogaćenim profilima klijenata.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pregled rezultata nakon pokretanja procesa obogaćivanja":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pregled rezultata nakon pokretanja procesa obogaćivanja.":::
 
 Pregledajte obogaćene podatke izborom opcije **Prikaz obogaćenih podataka** u grafikonu. Obogaćeni podaci o brendovima idu u entitet **BrandAffinityFromMicrosoft**. Podaci za interesovanja su u entitetu **InterestAffinityFromMicrosoft**. Naći ćete i ove entitete navedene u grupi **Obogaćivanje** u odeljku **Podaci** > **Entiteti**.
 
@@ -131,7 +131,7 @@ Pregledajte obogaćene podatke izborom opcije **Prikaz obogaćenih podataka** u 
 
 Afiniteti prema brendu i interesovanju mogu se takođe videti na karticama pojedinačnih klijenata. Idite na **Klijenti** i izaberite profil klijenta. Na kartici klijenta ćete pronaći grafikone za brendove ili interesovanja za koje ljudi u demografskom profilu tog klijenta imaju afinitet.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica klijenta sa obogaćenim podacima":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica klijenta sa obogaćenim podacima.":::
 
 ## <a name="next-steps"></a>Sledeći koraci
 

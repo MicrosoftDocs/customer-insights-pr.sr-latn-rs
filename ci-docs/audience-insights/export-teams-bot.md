@@ -9,19 +9,19 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 03299610fd41a7e142e3c9723fad56ce7f90e083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e563619f40be859f3f02638adbd60b80423182b3
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267969"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554404"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams robot za Dynamics 365 Customer Insights (verzija za pregled)
 
 Povežite se sa uslugom Microsoft Teams da biste dozvolili robotu da traži objedinjene profile klijenata na Teams kanalima.
 
 > [!div class="mx-imgBorder"]
-> ![Teams robot koji prikazuje zapis klijenta](media/teams-bot.png "Teams robot koji prikazuje zapis klijenta")
+> ![Teams robot koji prikazuje zapis klijenta.](media/teams-bot.png "Teams robot koji prikazuje zapis klijenta")
 
 ## <a name="prerequisites"></a>Preduslovi
 

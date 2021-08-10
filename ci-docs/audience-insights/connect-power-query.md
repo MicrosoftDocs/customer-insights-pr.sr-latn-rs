@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305908"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554706"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje sa Power Query izvorom podataka
 
@@ -42,7 +42,7 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
 1. Dijalog **Power Query – Uređivanje profila** vam omogućava da pregledate i precizirate podatke. Entiteti koje su sistemi identifikovali u vašem izabranom izvoru podataka prikazuju se u levom oknu.
 
    > [!div class="mx-imgBorder"]
-   > ![Dijalog za uređivanje upita](media/data-manager-configure-edit-queries.png "Dijalog za uređivanje upita")
+   > ![Dijalog za uređivanje upita.](media/data-manager-configure-edit-queries.png "Dijalog za uređivanje upita")
 
 1. Takođe možete da transformišete svoje podatke. Izaberite entitet za uređivanje ili transformisanje. Koristite opcije u Power Query prozoru kako biste primenili transformacije. Svaka transformacija se navodi u okviru **Primenjenih koraka**. Power Query pruža brojne unapred napravljene mogućnosti transformacije. Za više informacija, pogledajte [Power Query transformacije](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Konektori sa znakom potvrde u koloni **Customer Insights (tokovi podataka)** su 
 2. Izaberite vertikalne tri tačke pored izvora podataka koje želite da promenite i izaberite **Uredi** iz padajućeg menija.
 
    > [!div class="mx-imgBorder"]
-   > ![Uređivanje opcije](media/edit-option-data-sources.png "Uređivanje opcije")
+   > ![Uređivanje opcije.](media/edit-option-data-sources.png "Uređivanje opcije")
 
 3. Primenite promene i transformacije u dijalogu **Power Query – uređivanje upita** kao što je opisano u odeljku [Kreiranje novog izvora podataka](#create-a-new-data-source).
 

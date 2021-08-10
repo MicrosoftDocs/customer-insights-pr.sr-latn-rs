@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305665"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554865"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli mašinskog učenja
 
@@ -42,7 +42,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 1. Dajte prilagođenom modelu prepoznatljivo ime u polju **Ime**.
 
    > [!div class="mx-imgBorder"]
-   > ![Snimak ekrana okna „Novi tok posla“](media/new-workflowv2.png "Snimak ekrana okna „Novi tok posla“")
+   > ![Snimak ekrana okna „Novi tok posla“.](media/new-workflowv2.png "Snimak ekrana okna „Novi tok posla“")
 
 1. Izaberite organizaciju koja sadrži veb-uslugu u **zakupcu koji sadrži vašu veb-uslugu**.
 
@@ -59,7 +59,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
    > Tok posla prilagođenog modela primenjivaće heuristiku za mapiranje polja za unos veb-usluga u atribute entiteta na osnovu imena i tipa podataka polja. Videćete grešku ako polje veb-usluge ne može da se preslika na entitet.
 
    > [!div class="mx-imgBorder"]
-   > ![Konfigurisanje toka posla](media/intelligence-screen2-updated.png "Konfigurisanje toka posla")
+   > ![Konfigurisanje toka posla.](media/intelligence-screen2-updated.png "Konfigurisanje toka posla")
 
 1. U koraku **Izlazni parametri modela** postavite sledeća svojstva:
    - Machine Learning Studio (klasični)
@@ -70,12 +70,12 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
       1. Izaberite **Naziv izlaznog parametra putanje** za grupni kanal iz padajućeg menija.
 
       > [!div class="mx-imgBorder"]
-      > ![Okno izlaznih parametara modela](media/intelligence-screen3-outputparameters.png "Okno izlaznih parametara modela")
+      > ![Okno izlaznih parametara modela.](media/intelligence-screen3-outputparameters.png "Okno izlaznih parametara modela")
 
 1. Izaberite odgovarajući atribut iz padajuće liste **ID klijenta u rezultatima** koja identifikuje klijente i izaberite **Sačuvaj**.
 
    > [!div class="mx-imgBorder"]
-   > ![Povežite rezultate sa oknom podataka klijenata](media/intelligence-screen4-relatetocustomer.png "Povežite rezultate sa oknom podataka klijenata")
+   > ![Povežite rezultate sa oknom podataka klijenata.](media/intelligence-screen4-relatetocustomer.png "Povežite rezultate sa oknom podataka klijenata")
 
 1. Videćete ekran **Tok posla je sačuvan** sa detaljima o toku posla.    
    Ako ste konfigurisali tok posla za kanal Azure mašinskog učenja, uvidi o korisnicima će se priložiti u radni prostor koji sadrži kanal. Uvidi u publiku će dobiti ulogu **Saradnik** u Azure radnom prostoru.

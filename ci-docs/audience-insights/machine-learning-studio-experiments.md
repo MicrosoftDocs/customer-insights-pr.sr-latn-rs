@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598356"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555186"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Koristite modele koji se zasnivaju na usluzi Azure Machine Learning Studio (klasični)
 
@@ -41,7 +41,7 @@ U prvom koraku treba da kreiramo radni prostor i otvorimo Machine Learning Studi
 
 1. Nakon kreiranja resursa, prikazaće se kontrolna tabla radnog prostora studija za mašinsko učenje. Izaberite **Pokrenite studio za mašinsko učenje**.
 
-   ![Korisnički interfejs Azure studija za mašinsko učenje](media/azure-machine-learning-studio.png)
+   ![Korisnički interfejs Azure studija za mašinsko učenje.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Rad sa Azure studiom za mašinsko učenje
 
@@ -55,7 +55,7 @@ Sada možete da kreirate novi eksperiment ili uvezete postojeći predložak eksp
 
 1. Ako kreirate novi eksperiment ili upotrebljavate predložak eksperimenta iz galerije, morate da konfigurišete svojstva za **Uvoz podataka**. Koristite vođeno iskustvo ili direktno navedite detalje za pristup Azure skladištu blob objekata koje sadrži vaše podatke.  
 
-   ![Eksperiment sa Azure studiom za mašinsko učenje](media/azure-machine-learning-studio-experiment.png)
+   ![Eksperiment sa Azure studiom za mašinsko učenje.](media/azure-machine-learning-studio-experiment.png)
 
 1. Sada možete izgraditi prilagođeni kanal za obradu da biste obrisali i prethodno obradili podatke, izdvojili funkcije i obučili odgovarajući model.
 
@@ -63,15 +63,15 @@ Sada možete da kreirate novi eksperiment ili uvezete postojeći predložak eksp
 
 1. Kada budete zadovoljni kvalitetom modela, izaberite **Podesite veb-uslugu** > **Veb-usluga predviđanja**. Ova opcija uvozi obučeni model i karakteristiku kanala od eksperimenta obuke do usluge predviđanja. Usluga predviđanja može uzeti drugi skup ulaznih podataka sa šemom koja se koristi u eksperimentu obuke da bi se napravila predviđanja.
 
-   ![Postavljanje veb-usluge predviđanja](media/predictive-webservice-control.png)
+   ![Postavljanje veb-usluge predviđanja.](media/predictive-webservice-control.png)
 
 1. Kada eksperiment veb-usluge predviđanja bude uspešan, možete ga primeniti za automatsko zakazivanje. Da bi veb-usluga radila sa uslugom Customer Insights, izaberite **Primeni veb-uslugu** > **Pregled primene veb-usluge [Novo]**. [Saznajte više o primeni veb-usluge](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Primena veb-usluge predviđanja](media/predictive-webservice-deploy.png)
+   ![Primena veb-usluge predviđanja.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modeli uzoraka iz galerije
 
-Koristićemo fiktivni scenario hotela Contoso za modele u ovom članku. Hotel Contoso prikuplja sledeće podatke:
+Koristićemo fiktivni scenario Contoso hotela za modele u ovom članku. Contoso hotel prikuplja sledeće podatke:
 
 - CRM podaci koji se sastoje od aktivnosti boravka u hotelu. Skup podataka sadrži informacije o datumima boravka za svakog registrovanog klijenta. Takođe sadrži informacije o rezervaciji, tipovima soba, detaljima potrošnje itd. Podaci se protežu kroz četiri godine, od januara 2014. do januara 2018. godine.
 - Klijentski profili gostiju hotela. Ovi profili sadrže podatke o svakom klijentu, uključujući njihovo ime, datum rođenja, poštansku adresu, pol i broj telefona.
@@ -87,13 +87,13 @@ Definicija odliva može se razlikovati na osnovu scenarija. U ovom primeru, gost
 
 Predložak eksperimenta se može uvesti iz galerije. Prvo obezbedite da uvezete podatke za **Aktivnost boravka u hotelu**, **Podaci o klijentu** i **Podaci o upotrebi usluge** iz skladišta Azure skladišta blob objekta.
 
-   ![Uvoz podataka za model odliva](media/import-data-azure-blob-storage.png)
+   ![Uvoz podataka za model gubitka klijenata.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Karakterizacija
 
 Na osnovu definicije gubitka, prvo identifikujemo neobrađene funkcije koje će uticati na oznaku. Zatim obrađujemo ove sirove funkcije u numeričke funkcije koje se mogu koristiti sa modelima mašinskog učenja. Integracija podataka se dešava u usluzi Customer Insights tako da možemo pridružiti ove tabele pomoću *ID-a klijenta*.
 
-   ![Pridružite se uvezenim podacima](media/join-imported-data.png)
+   ![Pridružite uvezene podatke.](media/join-imported-data.png)
 
 Karakterizacija za izradu modela za analizu odliva može biti pomalo problematična. Podaci su funkcija vremena sa svakodnevnim novim aktivnostima hotela. Tokom karakterizacije želimo da iz dinamičkih podataka stvorimo statičke funkcije. U ovom slučaju generišemo više funkcija iz hotelskih aktivnosti sa kliznim vremenskim okvirom od jedne godine. Takođe proširujemo funkcije kategorizacije poput vrste sobe ili vrste rezervacije u posebne funkcije koristeći kategorizovano kodiranje.  
 
@@ -114,7 +114,7 @@ Sada treba da odaberemo optimalan algoritam koji ćemo koristiti. U ovom slučaj
 
 Sledeća slika prikazuje kanal obuke i ocenjivanja modela iz Azure studija za mašinsko učenje:
 
-![Model odliva u Azure studiju za mašinsko učenje](media/azure-machine-learning-model.png)
+![Model gubitka klijenata u usluzi Azure Machine Learning Studio.](media/azure-machine-learning-model.png)
 
 Takođe primenjujemo i tehniku pod nazivom **Značaj funkcije permutacije**, važan aspekt optimizacije modela. Ugrađeni modeli imaju malo ili nimalo uvida u uticaj bilo koje posebne funkcije na konačno predviđanje. Kalkulator važnosti funkcije koristi prilagođeni algoritam za izračunavanje uticaja pojedinih karakteristika na ishod određenog modela. Značaj funkcije je normalizovan između +1 i -1. Negativan uticaj znači da odgovarajuća karakteristika ima kontraintuitivni uticaj na ishod i da je treba ukloniti iz modela. Pozitivan uticaj ukazuje na to da funkcija značajno doprinosi predviđanju. Ove vrednosti nisu koeficijenti korelacije, jer su to različiti pokazatelji. Za više informacija pogledajte [Značaj funkcije permutacije](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Cilj definišemo kao maksimizovanje novčanog iznosa korišćenja usluga uz ponu
 
 Poput modela odliva, povezujemo ServiceCustomerID za hotel sa parametrom CustomerID kako bismo izgradili preporuke dosledno po parametru CustomerID.
 
-![Karakterizacija modela preporuka](media/azure-machine-learning-model-featurization.png)
+![Karakterizacija modela preporuka.](media/azure-machine-learning-model-featurization.png)
 
 Podaci se dobijaju iz tri različita entiteta i od njih su izvedene funkcije. Karakteristika za problem preporuke različita je u poređenju sa scenarijima odliva ili vrednosti životnog veka klijenta. Modelu preporuka su potrebni ulazni podaci u obliku tri skupa funkcija.
 
@@ -156,13 +156,13 @@ Podaci se dobijaju iz tri različita entiteta i od njih su izvedene funkcije. Ka
 
 Predviđamo proizvode ili usluge koristeći algoritam koji se zove **Train Matchbox Recommender** za obuku modela preporuka.
 
-![Algoritam preporuka za proizvode](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritam preporuka za proizvode.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Tri ulaza za model **Train Matchbox Recommender** sadrži podatke o korišćenju usluge obuke, opis klijenta (opcionalno) i opis usluge. Postoje tri različita načina bodovanja modela. Jedan je za evaluaciju modela gde se za rangiranje ocenjenih predmeta izračunava Normalizovani diskontni kumulativni dobitak (NDCG). U ovom eksperimentu imamo NDCG ocenu 0,97. Druge dve opcije su ocenjivanje modela u celom preporučenom katalogu usluga ili samo ocenjivanje predmeta koje korisnici ranije nisu koristili.
 
 Gledajući dalje na distribuciju preporuka u čitavom katalogu usluga, primećujemo da su telefon, WiFi i kurirska služba najbolje usluge koje se preporučuju. To je u skladu sa onim što smo pronašli iz distribucije podataka o potrošnji usluga:
 
-![Izlaz modela preporuke](media/azure-machine-learning-model-output.png)
+![Izlaz modela preporuke.](media/azure-machine-learning-model-output.png)
 
 Celom [eksperimentu preporuke proizvoda može se pristupiti u Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

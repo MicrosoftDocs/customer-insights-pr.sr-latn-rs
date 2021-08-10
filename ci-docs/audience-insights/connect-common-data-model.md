@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596562"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554911"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 
@@ -45,7 +45,7 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite informacije o **Kontejneru** i izaberite **Sledeće**.
    > [!div class="mx-imgBorder"]
-   > ![Dijalog za unos novih detalja veze za Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Dijalog za unos novih detalja veze za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Potrebna vam je jedna od sledećih uloga u kontejneru ili nalogu za skladištenje pomenutom gore da biste mogli da se povežete i kreirate izvor podataka:
    >  - Čitač podataka skladišta blob objekta
@@ -58,11 +58,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Listu dostupnih entiteta dobićete u izabranoj datoteci model.json ili manifest.json. Možete da pregledate entitete i izaberete ih sa liste dostupnih entiteta, pa izaberite **Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
    > [!div class="mx-imgBorder"]
-   > ![Dijalog koji prikazuje listu entiteta iz datoteke model.json](media/review-entities.png)
+   > ![Dijalog koji prikazuje listu entiteta iz datoteke model.json.](media/review-entities.png)
 
 8. Navedite entitete podataka za koje želite da omogućite profilisanje podataka i izaberite **Sačuvaj**. Profilisanje podataka omogućava analitiku i druge mogućnosti. Možete odabrati čitav entitet koji bira sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Podrazumevano nijedan entitet nije omogućen za profilisanje podataka.
    > [!div class="mx-imgBorder"]
-   > ![Dijalog koji prikazuje profilisanje podataka](media/dataprofiling-entities.png)
+   > ![Dijalog koji prikazuje profilisanje podataka.](media/dataprofiling-entities.png)
 
 9. Kada sačuvate izabrane opcije, otvoriće se stranica **Izvori podataka**. Sada bi trebalo da vidite vezu Common Data Model fascikle kao izvor podataka.
 
@@ -81,12 +81,12 @@ Možete da ažurirate pristupni ključ za nalog za skladištenje koji sadrži Co
 
 4. Opcionalno, ažurirajte **Ključ za pristup** i izaberite **Sledeće**.
 
-   ![Dijalog za uređivanje i ažuriranje ključa za pristup za postojeći izvor podataka](media/edit-access-key.png)
+   ![Dijalog za uređivanje i ažuriranje ključa za pristup za postojeći izvor podataka.](media/edit-access-key.png)
 
 5. Po želji možete da ažurirate sa veze ključa naloga na vezu zasnovanu na resursima ili pretplati. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Ne možete promeniti informacije o **kontejneru** prilikom ažuriranja veze.
    > [!div class="mx-imgBorder"]
 
-   > ![Dijalog za unos detalja veze usluge Azure Data Lake sa postojećim nalogom za skladištenje](media/enter-existing-storage-details.png)
+   > ![Dijalog za unos detalja veze usluge Azure Data Lake sa postojećim nalogom za skladištenje.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Potrebna vam je jedna od sledećih uloga u kontejneru ili nalogu za skladištenje pomenutom gore da biste mogli da se povežete i kreirate izvor podataka:

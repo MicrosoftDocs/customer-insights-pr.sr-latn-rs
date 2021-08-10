@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305671"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650243"
 ---
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
@@ -109,7 +109,7 @@ Neki entiteti sadrže više detalja od drugih. Ako entitet uključuje najnovije 
 Bez obzira da li ručno spajate atribute ili puštate sistem da ih spaja, uvek možete pokrenuti spajanje. Izaberite **Pokreni** na stranici **Spajanje** da započnete proces.
 
 > [!div class="mx-imgBorder"]
-> ![Spajanje podataka Sačuvaj i Pokreni](media/configure-data-merge-save-run.png "Spajanje podataka Sačuvaj i Pokreni")
+> ![Čuvanje i pokretanje spajanja podataka.](media/configure-data-merge-save-run.png "Spajanje podataka Sačuvaj i Pokreni")
 
 Odaberite **Pokreni samo objedinjavanje** ako želite da se izlaz odrazi samo u ujednačenom entitetu klijenta. Posledični procesi će se osvežiti kao [definisani u rasporedu osvežavanja](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Odaberite **Pokreni objedinjavanje i posledične procese** da osvežite sistem s
 Da biste uneli više promena i ponovo pokrenuli korak, možete da otkažete objedinjavanje u toku. Izaberite tekst **Osvežavanje u toku...** i izaberite **Otkaži posao** u bočnom oknu koje se prikazuje.
 
 > [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+> Nakon pokretanja procesa spajanja, izaberite status procesa da biste otvorili okno **Detalji o zadatku**. On daje pregled vremena obrade, poslednjeg datuma obrade i svih grešaka i upozorenja povezanih sa zadatkom. Izaberite **Vidi detalje** da biste videli koji su entiteti učestvovali u procesu podudaranja, da li je rešavanje sukoba uspelo i da li su ažuriranja uspešno objavljena.  
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Detaljno analizirajte putanju kako biste pristupili detaljima o obradi sa veze statusa zadatka.":::
 
 ## <a name="next-step"></a>Sledeći korak
 

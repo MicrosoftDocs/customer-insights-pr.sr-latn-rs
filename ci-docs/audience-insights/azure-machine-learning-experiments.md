@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597436"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554452"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Koristite modele zasnovane na Azure mašinskom učenju
 
@@ -52,7 +52,7 @@ Morate da kreirate skupove podataka da biste koristili podatke entiteta od uslug
      U dizajneru otvorite **Izaberite kolone u skupu podataka** i izaberite **Postavi kao parametar kanala** gde dajete ime za parametar.
 
      > [!div class="mx-imgBorder"]
-     > ![Određivanje parametara skupa podataka u dizajneru](media/intelligence-designer-dataset-parameters.png "Određivanje parametara skupa podataka u dizajneru")
+     > ![Određivanje parametara skupa podataka u dizajneru.](media/intelligence-designer-dataset-parameters.png "Određivanje parametara skupa podataka u dizajneru")
    
 * Parametar skupa podataka u SDK-u (Python)
    
@@ -78,7 +78,7 @@ Morate da kreirate skupove podataka da biste koristili podatke entiteta od uslug
 
 * Dizajner obezbeđuje [modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućava izvoz izlaza kanala u Azure skladište. Trenutno modul mora da koristi tip skladišta podataka **Azure skladište blob objekata** i da odredi parametre ta **skladište podataka** i relativnu **putanju**. Customer Insights zamenjuje oba ova parametra tokom izvršavanja kanala pomoću skladišta podataka i putanje koja je dostupna proizvodu.
    > [!div class="mx-imgBorder"]
-   > ![Izvoz konfiguracije modula podataka](media/intelligence-designer-importdata.png "Izvoz konfiguracije modula podataka")
+   > ![Izvoz konfiguracije modula podataka.](media/intelligence-designer-importdata.png "Izvoz konfiguracije modula podataka")
    
 * Kada zapisujete izlaz zaključka pomoću koda, možete otpremiti izlaz na putanju unutar *registrovanog skladišta podataka* u radnom prostoru. Ako su za putanju i skladište podataka određeni parametri u kanalu, Customer insights moći će da pročita i uveze izlaz zaključka. Trenutno je podržan jedan tabelarni izlaz u csv formatu. Putanja mora da sadrži direktorijum i ime datoteke.
 

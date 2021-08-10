@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597528"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554364"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtevi na osnovu prava subjekta podataka (DSR) u okviru GDPR
 
@@ -40,7 +40,7 @@ Administrator usluge Customer Insights može da prati ove korake za uklanjanje p
    2. Proverite status izvora podataka u odeljku **Status**. Znak potvrde znači da je osvežavanje bilo uspešno. Trokut upozorenja znači da nešto nije u redu. Ako se prikaže trougao upozorenja, kontaktirajte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Rukovanje GDPR zahtevima za brisanje podataka o klijentima](media/gdpr-data-sources.png "Rukovanje GDPR zahtevima za brisanje podataka o klijentima")
+> ![Rukovanje GDPR zahtevima za brisanje podataka o klijentima.](media/gdpr-data-sources.png "Rukovanje GDPR zahtevima za brisanje podataka o klijentima")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Upravljanje zahtevima za brisanje podataka o korisnicima
 
@@ -52,7 +52,7 @@ Administrator usluge Customer Insights može da sledi sledeće korake za brisanj
 4. Izaberite **Ukloni**.
 
 > [!div class="mx-imgBorder"]
-> ![Upravljanje GDPR zahtevima za brisanje podataka o korisnicima](media/gdpr-permissions.png "Upravljanje GDPR zahtevima za brisanje podataka o korisnicima")
+> ![Upravljanje GDPR zahtevima za brisanje podataka o korisnicima.](media/gdpr-permissions.png "Upravljanje GDPR zahtevima za brisanje podataka o korisnicima")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Odgovaranje na GDPR zahteve za izvoz subjekta podataka
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095665"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556324"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitka pretplata (pregled)
 
@@ -63,9 +63,9 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. U uvidima o korisnicima idite na **Obaveštavanje** > **Predviđanja**.
 1. Izaberite pločicu **Model gubitka pretplate (pregled)**, pa **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
-   > ![Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“](media/subscription-churn-usethismodel.PNG "Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“")
+   > ![Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“.](media/subscription-churn-usethismodel.PNG "Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“")
 
-### <a name="name-model"></a>Davanje naziva modelu
+### <a name="name-model"></a>Davanje naziva modela
 
 1. Navedite naziv modela da biste ga razlikovali od ostalih modela.
 1. Navedite ime izlaznog entiteta koje sadrži samo slova i brojeve, bez razmaka. To je naziv koji će entitet modela koristiti. Zatim izaberite **Sledeće**.
@@ -86,11 +86,11 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
     1. Izaberite **Entitet klijenta** koji odgovara primarnom entitetu klijenta.
     1. Unesite ime koje opisuje odnos.
        > [!div class="mx-imgBorder"]
-       > ![Stranica sa istorijom pretplate na kojoj je prikazano kreiranje odnosa sa klijentom](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stranica sa istorijom pretplate na kojoj je prikazano kreiranje odnosa sa klijentom")
+       > ![Stranica sa istorijom pretplate na kojoj je prikazano kreiranje odnosa sa klijentom.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Stranica sa istorijom pretplate na kojoj je prikazano kreiranje odnosa sa klijentom")
 1. Izaberite **Sledeće**.
 1. Mapirajte semantička polja na atribute unutar entiteta istorije pretplate i izaberite **Sačuvaj**. Za opis polja pogledajte [preduslove](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Stranica sa istorijom pretplate na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu istorije pretplate](media/subscription-churn-subscriptionhistorymapping.PNG "Stranica sa istorijom pretplate na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu istorije pretplate")
+   > ![Stranica sa istorijom pretplate na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu istorije pretplate.](media/subscription-churn-subscriptionhistorymapping.PNG "Stranica sa istorijom pretplate na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu istorije pretplate")
 1. Izaberite **Dodaj podatke** za **Aktivnosti klijenta** i odaberite entitet koji pruža informacije o aktivnostima klijenta kao što je definisano u preduslovima.
 1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurišete.  Izaberite **Kreiraj novu** i navedite ime ako ne vidite opciju koja odgovara vrsti aktivnosti koja vam je potrebna.
 1. Treba da konfigurišete odnos između entiteta aktivnosti klijenta i entiteta klijenta.
@@ -101,7 +101,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. Mapirajte semantička polja na atribute unutar entiteta aktivnosti klijenta i izaberite **Sačuvaj**. Za opis polja pogledajte [preduslove](#prerequisites).
 1. (Opcionalno) Ako imate bilo koje druge aktivnosti klijenta koje želite da uključite, ponovite gorenavedene korake.
    > [!div class="mx-imgBorder"]
-   > ![Definisanje relacije entiteta](media/subscription-churn-customeractivitiesmapping.PNG "Stranica sa aktivnostima klijenta na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu aktivnosti klijenta")
+   > ![Definisanje relacije između entiteta.](media/subscription-churn-customeractivitiesmapping.PNG "Stranica sa aktivnostima klijenta na kojoj su prikazani semantički atributi koji su mapirani na polja u izabranom entitetu aktivnosti klijenta")
 1. Izaberite **Sledeće**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Podesite raspored i pregledajte konfiguraciju
@@ -115,7 +115,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 
 1. Idite na karticu **Moja predviđanja** u delu **Obaveštavanje** > **Predviđanja**.
    > [!div class="mx-imgBorder"]
-   > ![Pregled stranice Moja predviđanja](media/subscription-churn-mypredictions.PNG "Pregled stranice Moja predviđanja")
+   > ![Pregled stranice Moja predviđanja.](media/subscription-churn-mypredictions.PNG "Pregled stranice Moja predviđanja")
 1. Izaberite predviđanje koje želite da pregledate.
    - **Naziv predviđanja:** Naziv predviđanja koji ste naveli prilikom njegovog kreiranja.
    - **Vrsta predviđanja:** Tip modela koji se koristi za predviđanje
@@ -131,7 +131,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
    - **Poslednje osvežavanje:** Datum kada je predviđanje osvežilo rezultate u izlaznom entitetu.
 1. Odaberite uspravne tri tačke pored predviđanja za koje želite da pregledate rezultate i izaberite **Pregled**.
    > [!div class="mx-imgBorder"]
-   > ![Prikaz opcija u meniju sa uspravne tri tačke za predviđanje koje obuhvataju uređivanje, osvežavanje, pregled, evidenciju i brisanje](media/subscription-churn-verticalellipses.PNG "Prikaz opcija u meniju sa uspravne tri tačke za predviđanje koje obuhvataju uređivanje, osvežavanje, pregled, evidenciju i brisanje")
+   > ![Prikaz opcija u meniju sa uspravne tri tačke za predviđanje koje obuhvataju uređivanje, osvežavanje, pregled, evidenciju i brisanje.](media/subscription-churn-verticalellipses.PNG "Prikaz opcija u meniju sa uspravne tri tačke za predviđanje koje obuhvataju uređivanje, osvežavanje, pregled, evidenciju i brisanje")
 1. Postoje tri primarna odeljka podataka na stranici sa rezultatima:
     1. **Performanse modela obuke:** A, B ili C su mogući rezultati. Ovaj rezultat pokazuje performanse predviđanja i može vam pomoći da donesete odluku o korišćenju rezultata sačuvanih u izlaznom entitetu.
         - Rezultati se određuju na osnovu sledećih pravila:
@@ -139,13 +139,13 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
             - **B** kada je model tačno predvideo najmanje 50% ukupnih predviđanja, a kada je procenat tačnih predviđanja za klijente koji su otišli na drugo mesto veći do 10% proseka odliva na osnovu istorije od proseka odliva na osnovu istorije.
             - **C** kada je model tačno predvideo manje od 50% ukupnih predviđanja ili kada je procenat tačnih predviđanja za kupce koji su otišli na drugo mesto manji od proseka odliva na osnovu istorije.
                > [!div class="mx-imgBorder"]
-               > ![Pregled rezultata performansi modela](media/subscription-churn-modelperformance.PNG "Pregled rezultata performansi modela")
+               > ![Pregled rezultata performansi modela.](media/subscription-churn-modelperformance.PNG "Pregled rezultata performansi modela")
     1. **Verovatnoća gubitka (broj klijenata):** Grupe klijenata na osnovu predviđenog rizika od gubitka. Ovi podaci mogu vam kasnije pomoći ako želite da kreirate segment klijenata sa visokim rizikom gubitka. Takvi segmenti vam pomažu da razumete gde treba da bude prekid članstva u segmentu.
        > [!div class="mx-imgBorder"]
-       > ![Grafikon koji prikazuje raspodelu rezultata gubitaka, podeljen u opsege od 0-100%](media/subscription-churn-resultdistribution.PNG "Grafikon koji prikazuje raspodelu rezultata gubitaka, podeljen u opsege od 0-100%")
+       > ![Grafikon koji prikazuje raspodelu rezultata gubitaka, podeljen u opsege od 0-100%.](media/subscription-churn-resultdistribution.PNG "Grafikon koji prikazuje raspodelu rezultata gubitaka, podeljen u opsege od 0-100%")
     1. **Najuticajniji faktori:** Mnogo je faktora koji se uzimaju u obzir pri kreiranju predviđanja. Svaki od faktora ima svoju važnost koja se izračunava za objedinjena predviđanja koja model kreira. Možete koristiti ove faktore da biste potvrdili rezultate predviđanja. Ili ove podatke možete kasnije koristiti za [kreiranje segmenata](segments.md), što bi moglo da vam pomogne da utičete na rizik od gubitka klijenata.
        > [!div class="mx-imgBorder"]
-       > ![Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka](media/subscription-churn-influentialfactors.PNG "Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka")
+       > ![Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka.](media/subscription-churn-influentialfactors.PNG "Lista koja pokazuje uticajne faktore i njihovu važnost u predviđanju rezultata gubitaka")
 
 ## <a name="manage-predictions"></a>Upravljanje predviđanjima
 

@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u Azure skladište blob objekta
 description: Saznajte kako da konfigurišete vezu i izvezete sadržaj u skladište blob objekta.
-ms.date: 03/03/2021
+ms.date: 06/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c19dc6d4956a33a5bd3cea706f8a154198d487f
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e38fc06a948178fcbc62c08a4cf4816e1d030e79
+ms.sourcegitcommit: 656b1a6cdff37ba4f808311fd0327ab38e02ed13
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976198"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6318316"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz liste segmenata i drugih podataka u Azure skladište blob objekta (pregled)
 
@@ -40,11 +40,14 @@ Skladištite Customer Insights podatke u skladište blob objekta ili ih koristit
 
 Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
 
+> [!IMPORTANT]
+> Ako ste uključili podešavanje mekog brisanja za nalog Azure skladišta blob objekta, izvoz neće uspeti. Isključite meko brisanje za izvoz podataka u blob objekte. Za više informacija pogledajte [Omogućavanje mekog brisanja blob objekata](/azure/storage/blobs/soft-delete-blob-enable.md)
+
 1. Idite na **Podaci** > **Izvozi**.
 
 1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Azure skladišta blob objekta. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
 
 1. Izaberite polje pored svakog entiteta koji želite da izvezete na ovo odredište.
 
@@ -53,13 +56,16 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 Čuvanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).     
+
 Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand). 
 
 Izvezeni podaci se čuvaju u kontejneru skladišta blob objekta koji ste konfigurisali. Sledeće putanje fasciklu se automatski kreiraju u vašem kontejneru:
 
-- Za izvorne entitete i entitete koje generiše sistem: `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`
+- Za izvorne entitete i entitete koje generiše sistem:   
+  `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
-- Datoteka model.json za izvezene entitete biće na nivou %ExportDestinationName%
+ 
+- Datoteka model.json za izvezene entitete biće na nivou %ExportDestinationName%.  
   - Primer: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

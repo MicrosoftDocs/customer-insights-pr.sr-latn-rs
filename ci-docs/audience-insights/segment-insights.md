@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306091"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555002"
 ---
 # <a name="segment-insights-preview"></a>Uvidi u segmente (verzija za pregled)
 
@@ -44,7 +44,7 @@ Takođe možete da analizirate kako se preklapanje menja za određene atribute.
 Po završetku analize pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (verzija za pregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalji uvida u preklapanje segmenata":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalji uvida u preklapanje segmenata.":::
 
 Izaberite uvid da biste videli rezultate analize:
 
@@ -77,7 +77,7 @@ Razlike između segmenata vam pomažu da otkrijete šta razlikuje segment od ost
 Po završetku analize pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (verzija za pregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalji uvida u razlike između segmenata":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalji uvida u razlike između segmenata.":::
 
 Izaberite uvid da biste videli rezultate analize. Analiza razlika uključuje dve kartice. Kartica **Atributi** navodi atribute profila koji se smatraju razlikama. Kartica **Mere** navodi razlike. Svaka kartica sadrži sledeće detalje:
 
