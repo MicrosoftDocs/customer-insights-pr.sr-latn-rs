@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596516"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692130"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Povežite se sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge za uvide u ciljnu grupu
 
 Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Čitajte dalje da biste saznali kako da povežete uvide u korisnike sa Azure Data Lake Storage Gen2 nalogom koji koristi Azure principal usluge umesto ključeva naloga za skladištenje. 
 
-Principal usluge možete koristiti za sigurno [dodavanje ili uređivanje Common Data Model fascikle kao izvora podataka](connect-common-data-model.md) ili [kreirajte novo ili ažurirajte postojeće okruženje](manage-environments.md#create-an-environment-in-an-existing-organization).
+Principal usluge možete koristiti za sigurno [dodavanje ili uređivanje Common Data Model fascikle kao izvora podataka](connect-common-data-model.md) ili [kreirajte novo ili ažurirajte postojeće okruženje](get-started-paid.md).
 
 > [!IMPORTANT]
 > - Azure Data Lake Gen2 nalog za skladištenje koji namerava da koristi principala usluge mora da ima [omogućenu funkciju hijerarhijskog prostora imena (HNS)](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Prenos promena može trajati do 15 minuta.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Unesite ID Azure resursa ili detalje o Azure pretplati u prilogu naloga za skladištenje u uvidima o korisnicima.
 
-Priložite Azure Data Lake nalog za skladištenje u uvide o korisnicima radi [čuvanja izlaznih podataka](manage-environments.md) ili [ga koristite kao izvor podataka](connect-common-data-service-lake.md). Izbor opcije Azure Data Lake omogućava vam da odaberete između pristupa zasnovanog na resursima ili pretplati.
+Priložite Azure Data Lake nalog za skladištenje u uvide o korisnicima radi [čuvanja izlaznih podataka](manage-environments.md) ili [ga koristite kao izvor podataka](connect-dataverse-managed-lake.md). Izbor opcije Azure Data Lake omogućava vam da odaberete između pristupa zasnovanog na resursima ili pretplati.
 
 Sledite korake u nastavku da biste pružili potrebne informacije o odabranom pristupu.
 

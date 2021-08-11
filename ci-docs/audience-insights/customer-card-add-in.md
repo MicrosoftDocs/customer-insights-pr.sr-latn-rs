@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059605"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692222"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
@@ -25,7 +25,7 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 ## <a name="prerequisites"></a>Preduslovi
 
 - Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
-- Da bi se vaši Dynamics 365 podaci mapirali u korisničke profile uvida u ciljnu grupu, oni treba da budu [uneti iz Dynamics 365 aplikacije pomoću Common Data Service konektora](connect-power-query.md).
+- Da bi se vaši Dynamics 365 podaci mapirali u korisničke profile uvida u ciljnu grupu, oni treba da budu [uneti iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md).
 - Svi Dynamics 365 korisnici programskog dodatka za kartice klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima u ciljnu grupu da biste videli podatke.
 - [Konfigurisane mogućnosti pretrage i filtriranja](search-filter-index.md) u uvidima u ciljnu grupu su potrebne da bi pronalaženje podataka funkcionisalo.
 - Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima u ciljnu grupu:
@@ -50,7 +50,7 @@ Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
 1. Izaberite vezu **Ime za prikaz** za rešenje **Dynamics 365 Customer Insights dodatak klijentske kartice (pregled)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Izaberite ime za prikaz](media/select-display-name.png "Izaberite ime za prikaz")
+   > ![Izaberite ime za prikaz.](media/select-display-name.png "Izaberite ime za prikaz")
 
 1. Izaberite **Prijavljivanje** i unesite akreditive za nalog administratora koji koristite za konfigurisanje usluge Customer Insights.
 
@@ -64,7 +64,7 @@ Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
    - Da biste mapirali poslovni kontakt, odaberite polje u entitetu klijenta koje se podudara sa ID-om vašeg entiteta poslovnog kontakta.
 
    > [!div class="mx-imgBorder"]
-   > ![Polje ID kontakta](media/contact-id-field.png "Polje ID kontakta")
+   > ![Polje ID kontakta.](media/contact-id-field.png "Polje ID kontakta")
 
 1. Izaberite **Sačuvaj konfiguraciju** da biste sačuvali podešavanja.
 
@@ -83,7 +83,7 @@ Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
 1. Izaberite obrazac kontakta na koji želite da dodate kontrole kartice klijenta.
 
     > [!div class="mx-imgBorder"]
-    > ![Izbor obrasca Kontakta](media/contact-active-forms.png "Izbor obrasca Kontakta")
+    > ![Izbor obrasca Kontakta.](media/contact-active-forms.png "Izbor obrasca Kontakta")
 
 1. Da biste dodali kontrolu, u uređivaču obrazaca prevucite bilo koje polje iz **Istraživača polja** tamo gde želite da se kontrola prikazuje.
 
@@ -110,7 +110,7 @@ Programski dodatak za korisničku karticu se ne nadograđuje automatski. Da bist
 
 1. Izaberite **Primeni nadogradnju rešenja** u traci sa radnjama.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadogradite rešenje u oblasti Prilagođavanje Dynamics 365 aplikacija":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Nadogradite rešenje u oblasti Prilagođavanje Dynamics 365 aplikacija.":::
 
 1. Kada započnete proces nadogradnje, videćete indikator učitavanja dok se nadogradnja ne završi. Ako nema novije verzije, nadogradnja će prikazati poruku o grešci.
 

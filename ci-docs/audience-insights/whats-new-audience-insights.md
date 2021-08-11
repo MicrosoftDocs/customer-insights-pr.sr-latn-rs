@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263268"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692406"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Ispravke za jun 2021. godine
+
+Ispravke u junu 2021. uključuju nekoliko funkcija, nadogradnje performansi i ispravke grešaka.
+
+### <a name="data-ingestion"></a>Unos podataka
+
+- **Poboljšana ažuriranja napretka objedinjavanja podataka** Sada možete da vidite detaljnija, poboljšana dinamička ažuriranja statusa u koracima [procesa objedinjavanja podataka](data-unification.md). Ova funkcija vam omogućava da pratite detaljan napredak da biste razumeli tok procesa i preduzeli mere ako je potrebno obratiti pažnju na bilo koji korak.
+
+### <a name="extensibility"></a>Proširivost
+
+- **Izvezite segmente i druge podatke u Salesforce Marketing Cloud** Proširili smo naša odredišta za izvoz tako da obuhvataju [Salesforce Marketing Cloud](export-salesforce.md). Sada možete izvoziti segmente i druge tipove podataka u Salesforce Marketing Cloud putem brendiranog SFTP izvoza. Uvoz podataka može biti potpuno automatizovan u usluzi Salesforce i da se koristi za kreiranje efikasnijih marketinških kampanja.  
+ 
+- **Izvezite segmente u ActiveCampaign** Proširili smo naša odredišta za izvoz da obuhvataju [Aktivnu kampanju](export-active-campaign.md). Sada možete da izvozite segmente da biste generisali kampanje, pokretali marketing e-poštom i radili sa određenim grupama klijenata u usluzi ActiveCampaign.
+ 
+- **Izvezite segmente u Sendinblue** Proširili smo naša odredišta za izvoz da obuhvataju [Sendinblue](export-sendinblue.md). Sada možete da izvozite segmente da biste generisali kampanje, pokretali marketing e-poštom i radili sa određenim grupama klijenata sa uslugom Sendinblue.
+ 
+### <a name="ux-updates"></a>UX ispravke 
+
+- **Nova i poboljšana stranica Klijenti i stranica sa detaljima profila** Redizajnirali smo stranicu Klijenti i stranice sa detaljima profila radi poboljšanja korisničkog iskustva i boljih performansi. Ove promene vam omogućavaju da prikazujete, sortirate, pretražujete i filtrirate klijente. Filteri su sada predstavljeni na URL adresi za neprimetno deljenje rezultata pretrage sa drugim korisnicima. Rezultate pretrage možete sačuvati i kao segment.    
+  Stranica sa detaljima za profile klijenata sada grupiše podatke u različitim pododeljcima kao što su demografski podaci, ID-ovi i drugi atributi profila radi bolje čitljivosti. Ostali odeljci na stranici sa detaljima profila su sada interaktivniji. Na primer, odeljak aktivnosti sada omogućava filtriranje i sortiranje.
+
 
 ## <a name="may-2021-updates"></a>Ispravke za maj 2021.
 
@@ -170,7 +192,7 @@ Ispravke u februaru 2021. uključuju nekoliko funkcija, nadogradnje performansi 
 
 - **Okruženje za kopiranje podržava više vrsta izvora podataka**
 
-  Administratori mogu da kopiraju konfiguracije okruženja u novo okruženje u istoj organizaciji. Ova funkcija proširuje funkcionalnost okruženja za kopiranje za slučajeve u kojima se koriste izvori podataka zasnovani na Common Data Service jezeru podataka ili fascikli Common Data Model.
+  Administratori mogu da kopiraju konfiguracije okruženja u novo okruženje u istoj organizaciji. Ova funkcija proširuje funkcionalnost kopiranja okruženja za slučajeve u kojima se izvori podataka zasnivaju na Microsoft Dataverse upravljanom jezeru podataka ili se koristi Common Data Model fascikla.
 
 ## <a name="january-2021-updates"></a>Ispravke za januar 2021. godine
 

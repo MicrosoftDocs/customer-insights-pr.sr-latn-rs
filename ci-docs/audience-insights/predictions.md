@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595918"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692544"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Popunite svoje delimične podatke predviđanjima
 
@@ -31,11 +31,11 @@ Predviđanja vam omogućavaju da lako kreirate predviđene vrednosti koje mogu p
 
 Pre nego što organizacija bude mogla da koristi funkciju predviđanja, sledeći preduslovi moraju da budu ispunjeni:
 
-1. Vaša organizacija ima instancu [postavljenu u usluzi Common Data Service](/ai-builder/build-model#prerequisites) i u istoj je organizaciji kao i Customer Insights.
+1. Vaša organizacija ima instancu [konfigurisanu u usluzi Microsoft Dataverse](/ai-builder/build-model#prerequisites) i nalazi se u istoj organizaciji kao i Customer Insights.
 
-2. Vaše okruženje je vezano za vašu Common Data Service instancu.
+2. Vaše okruženje uvida u ciljnu grupu je povezano sa vašom Dataverse instancom.
 
-Ako [kreirate prvo okruženje](manage-environments.md), konfigurišite ga u dijalogu **Kreiranje okruženja** i izaberite stavku **Napredno**. Ako ste već kreirali okruženje, idite na njegova podešavanja i izaberite **Napredno**. U svakom slučaju, u odeljku **Koristite predviđanja** unesite URL Common Data Service instance na koji želite da prikačite svoje okruženje.
+Ako [kreirate prvo okruženje](get-started-paid.md), konfigurišite ga u dijalogu **Kreiranje okruženja** i izaberite stavku **Napredno**. Ako ste već kreirali okruženje, idite na njegova podešavanja i izaberite **Napredno**. U svakom slučaju, u odeljku **Koristite predviđanja** unesite URL Dataverse instance na koji želite da prikačite svoje okruženje.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Kreiranje predviđanja u usluzi Customer entity
 
@@ -47,17 +47,17 @@ Ako [kreirate prvo okruženje](manage-environments.md), konfigurišite ga u dija
 
 4. Pronađite ime atributa za koje želite da predvidite vrednosti, a zatim izaberite ikonu **Pregled** u koloni **Rezime**.
    > [!div class="mx-imgBorder"]
-   > ![Ikona „Pregled“](media/intelligence-overviewicon.png "Ikona „Pregled“")
+   > ![Ikona „Pregled“.](media/intelligence-overviewicon.png "Ikona „Pregled“")
 
 5. Ako postoji visoka stopa nedostajućih vrednosti za atribut, izaberite **Predvidi nedostajuće vrednosti** da biste nastavili sa predviđanjem.
    > [!div class="mx-imgBorder"]
-   > ![Prikaz statusa pregleda sa prikazanim dugmetom za vrednosti koje nedostaju](media/intelligence-overviewpredictmissingvalues.png "Prikaz statusa pregleda sa prikazanim dugmetom za vrednosti koje nedostaju")
+   > ![Prikaz statusa pregleda sa prikazanim dugmetom za vrednosti koje nedostaju.](media/intelligence-overviewpredictmissingvalues.png "Prikaz statusa pregleda sa prikazanim dugmetom za vrednosti koje nedostaju")
 
 6. Navedite **Ime za prikaz** i **Naziv izlaznog entiteta** za rezultate predviđanja.
 
 7. Unapred popunjena lista opcija će pokazati gde možete da mapirate vrednosti u predviđenoj kategoriji. U ovom slučaju, samo opcije kategorije će biti 0 ili 1 dok se mapiraju u tačno/netačno ili binarnu prirodu predviđanja. U koloni „Kategorija“, vrednosti polja koje biste želeli da se klasifikuju kao „0“ u konačnom predviđanju mapirajte na „0“, a stavke koje biste želeli da se klasifikuju kao „1“ u konačnom predviđanju mapirajte na vrednost „1“.
    > [!div class="mx-imgBorder"]
-   > ![Primer koji prikazuje mapirane vrednosti polja u kategorije](media/intelligence-categorymapping.png "Primer koji prikazuje mapirane vrednosti polja u kategorije")
+   > ![Primer koji prikazuje mapirane vrednosti polja u kategorije.](media/intelligence-categorymapping.png "Primer koji prikazuje mapirane vrednosti polja u kategorije")
 
 8. Izaberite **Gotovo** i predviđanje će biti obrađeno. Obrada će potrajati izvesno vreme, u zavisnosti od veličine i složenosti podataka. Rezultati će biti dostupni u novom entitetu na osnovu **Naziva izlaznog entiteta** predviđanja koje ste kreirali.
 
@@ -77,7 +77,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 5. Ako segment koji ste upravo kreirali nema potpune podatke u izvornom polju, možete da izaberete da predvidite vrednosti koje nedostaju.
    > [!div class="mx-imgBorder"]
-   > ![Dugme predviđanja](media/segments-predictoption.png "Dugme predviđanja")
+   > ![Dugme „Predviđanje“.](media/segments-predictoption.png "Dugme predviđanja")
 
 6. Navedite **Ime za prikaz** i **Naziv izlaznog entiteta** za rezultate predviđanja.
 
@@ -93,7 +93,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 4. Videćete broj tačaka podataka u prikazu predviđanja.
    > [!div class="mx-imgBorder"]
-   > ![Stranica predviđanja](media/intelligence-predictionsviewpage.png "Stranica predviđanja")
+   > ![Stranica predviđanja.](media/intelligence-predictionsviewpage.png "Stranica predviđanja")
 
    - **Predviđene vrednosti** prikazuju mapiranje koje ste kreirali tokom faze mapiranja vrednosti polja u kategoriju. Ovo su vrednosti u vašem skupu podataka koje su mapirane u određenu kategoriju.
    -**Najuticajniji faktori** su faktori u vašem skupu podataka koji najverovatnije najviše utiču na poverenje predviđanja vaše vrednosti polja koja se mapiraju u određenu kategoriju.
@@ -139,7 +139,7 @@ Sledeće pokretanje predviđanja koristiće ažurirani model koji ste kreirali.
 
 ## <a name="troubleshooting"></a>Rešavanje problema
 
-Ako ne možete da dovršite prilaganje Common Data Service procesa zbog greške, možete pokušati da dovršite postupak ručno. Postoje dva poznata problema koja se mogu pojaviti u procesu prilaganja:
+Ako ne možete da dovršite prilaganje Dataverse procesa zbog greške, možete pokušati da dovršite postupak ručno. Postoje dva poznata problema koja se mogu pojaviti u procesu prilaganja:
 
 - Rešenje Dodatak za karticu klijenta nije instalirano.
     1. Dovršite uputstva za [instaliranje i konfigurisanje rešenja](customer-card-add-in.md).
