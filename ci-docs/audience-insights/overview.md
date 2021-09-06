@@ -1,7 +1,7 @@
 ---
 title: Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 description: Pregled uvida o korisnicima za Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539132"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034377"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Uvidi o korisnicima za Dynamics 365 Customer Insights – pregled
 
-Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite podatke iz raznih transakcionih, posmatračkih i izvora ponašanja da biste kreirali sveobuhvatni prikaz klijenta. Koristite ove uvide da biste podstakli iskustva i procese koji se fokusiraju na klijenta. Objedinite i razumite podatke o klijentima i iskoristite ih za inteligentan uvid i radnje.
+[Uvidi u ciljnu grupu, mogućnost usluge Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/), pomaže vam da izgradite dublje razumevanje svojih klijenata. Povežite podatke iz raznih transakcionih, posmatračkih i izvora ponašanja da biste kreirali sveobuhvatni prikaz klijenta. Koristite ove uvide da biste podstakli iskustva i procese koji se fokusiraju na klijenta. Objedinite i razumite podatke o klijentima i iskoristite ih za inteligentan uvid i radnje.
 
 ## <a name="main-benefits"></a>Glavne prednosti 
 
@@ -34,9 +34,9 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
 
 - **Pojačajte poslovne procese i personalizovana iskustava klijenata**
 
-  - Podstaknite personalizovano angažovanje preko kanala – podrška profesionalcima na polju marketinga, prodaje i usluga pomoću unapred pripremljenih, kontekstualnih uvida o klijentima i prilagođene kartice sa profilima klijenata koje se koriste u poslovnim aplikacijama koje oni već svakodnevno koriste
-  - Automatizovanje iskustava i procese koji se zasnivaju na klijentima na osnovu prilagodljivih profila, poslovnih mera i segmenata.
-  - Omogućite i proširite poslovne doživljaje napravljene na platformi [Microsoft Power Platform](https://powerplatform.microsoft.com/). Brzo gradite aplikacije sa ugrađenim uvidima koristeći moćan pristup bez mnogo programiranja koji nudi PowerApps.  
+  - Povećajte personalizovano angažovanje na više kanala – osnažite stručnjake za marketing, prodaju i usluge. Koristite gotove uvide i prilagođene kartice profila korisnika koje se integrišu sa poslovnim aplikacijama koje oni već koriste.
+  - Automatizujte iskustva i procese na osnovu prilagodljivih profila, poslovnih mera i segmenata.
+  - Omogućite i proširite poslovne doživljaje napravljene na platformi [Microsoft Power Platform](https://powerplatform.microsoft.com/). Brzo gradite aplikacije sa ugrađenim uvidima koristeći moćan pristup bez mnogo programiranja koji nudi Power Apps.  
 
 ## <a name="key-audiences"></a>Ključni korisnici
 
@@ -50,13 +50,18 @@ Uvidi o korisnicima pomažu vam da dublje razumete svoje klijente. Povežite pod
 
 - **Poslovni korisnici:**
 
-  - Uvidi u sveobuhvatne profile klijenata i potpuni prikazi puta koji pređe korisnik.
+  - Uvidi u sveobuhvatne profile klijenata i puteve koje pređe korisnik.
   - Prikaz sveobuhvatnih podataka o klijentima u okviru Dynamics 365 poslovnih procesa sa unapred izgrađenim paketima.
 
 - **Poslovni analitičari:**
 
   - Napravite prilagodljive profile, definišite mere, kreirajte segmente i ostvarite prednost od prediktivne analitike da biste dobili sveobuhvatan prikaz vašeg klijenta, specifičan za vašu organizaciju.  
-  - Koristite gotove konektore za nekoliko Microsoft ili nezavisnih aplikacija ili API-je za dalju obradu uvida.
+  - Za obradu uvida koristite gotove konektore za nekoliko Microsoft aplikacija i API-ja drugih proizvođača.
 
+## <a name="pricing-and-licensing"></a>Vodič o cenama i licencama
+
+Usluga Customer Insights je licencirana po zakupcu i obuhvata više mogućnosti. Kapaciteti na koje imate pravo obuhvataju skup profila, svakodnevno osvežavanje sistema, Power Platform zahteve i dva okruženja. Možete kupiti dodatni kapacitet i licencu za povećanje podrazumevane kvote. 
+- Detaljni kapaciteti i prava: [Vodič za licenciranje sistema Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Pregled cena: [Cenovnik sistema Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

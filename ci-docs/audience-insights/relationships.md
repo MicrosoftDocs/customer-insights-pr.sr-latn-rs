@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171181"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035248"
 ---
 # <a name="relationships-between-entities"></a>Relacije između entiteta
 
@@ -82,7 +82,7 @@ Ova stranica nudi skup opcija za postojeće i nove relacije:
 
 ### <a name="explore-the-relationship-visualizer"></a>Istražite vizuelizator relacija
 
-Vizuelizator relacija prikazuje mrežni dijagram postojećih relacija između povezanih entiteta i njihovu kardinalnost.
+Vizuelizator relacija prikazuje mrežni dijagram postojećih relacija između povezanih entiteta i njihovu kardinalnost. Takođe vizuelizuje putanju relacija.
 
 Da biste prilagodili prikaz, možete da promenite položaj okvira tako što ćete ih prevući na podlogu.
 
@@ -92,6 +92,20 @@ Dostupne opcije:
 - **Izvezi kao sliku**: Snimite trenutni prikaz kao datoteku slike.
 - **Promena na horizontalni/vertikalni raspored**: Promenite poravnanje entiteta i relacija.
 - **Uredi**: Ažurirajte svojstva prilagođenih relacija u oknu za uređivanje i sačuvajte promene.
+
+### <a name="relationship-path"></a>Putanja relacije
+
+Putanja relacija opisuje entitete koji su povezani sa relacijama između izvornog entiteta i ciljnog entiteta. Koristi se pri kreiranju segmenta ili mere koja uključuje druge entitete osim entiteta objedinjenog profila i postoji više opcija za dosezanje entiteta objedinjenog profila.
+
+Putanja relacija obaveštava sistem preko kojih relacija da pristupi entitetu objedinjenog profila. Različite putanje relacija mogu postići različite rezultate.
+
+Na primer, entitet *eCommerce_eCommercePurchases* ima sledeće relacije na objedinjenom profilu entiteta *Klijent*:
+
+- eCommerce_eCommercePurchases > Klijent
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klijent
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klijent 
+
+Putanja relacija određuje koje entitete možete koristiti pri kreiranju pravila za mere ili segmente. Odabir opcije sa najdužom putanjom relacija verovatno će postići manje rezultata, jer zapisi koji se podudaraju moraju da budu deo svih entiteta. U ovom primeru, klijent mora da kupi robu putem e-trgovine (eCommerce_eCommercePurchases), na prodajnom mestu (POS_posPurchases) i da učestvuje u našem programu lojalnosti (loyaltyScheme_loyCustomers). Kada birate prvu opciju, verovatno ćete dobiti više rezultata jer klijenti moraju postojati samo u jednom dodatnom entitetu.
 
 ## <a name="manage-existing-relationships"></a>Upravljanje postojećim relacijama 
 
@@ -105,6 +119,6 @@ Izaberite relaciju i odaberite jednu od sledećih opcija:
 
 ## <a name="next-step"></a>Sledeći korak
 
-Sistemske i prilagođene relacije se koriste za [kreiranje segmenata](segments.md) na osnovu više izvora podataka koji više nisu u silosu.
+Sistemske i prilagođene relacije se koriste za [kreiranje segmenata](segments.md) i [mera](measures.md) na osnovu više izvora podataka koji više nisu izolovani.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

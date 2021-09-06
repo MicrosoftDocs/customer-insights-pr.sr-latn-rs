@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554176"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377851"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementalno osvežavanje za izvore podataka zasnovane na usluzi Power Query
 
@@ -44,8 +44,7 @@ Uvidi o korisnicima omogućavaju inkrementalno osvežavanje za izvore podataka u
 
 1. U **podešavanjima postepenog osvežavanja**, konfigurisaćete postepeno osvežavanje za sve entitete koje ste izabrali prilikom kreiranja izvora podataka.
 
-   > [!div class="mx-imgBorder"]
-   > ![Konfigurisanje entiteta u izvoru podataka za postepeno osvežavanje.](media/incremental-refresh-settings.png "Konfigurisanje entiteta u izvoru podataka za postepeno osvežavanje")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Konfigurisanje entiteta u izvoru podataka za postepeno osvežavanje.":::
 
 1. Izaberite entitet i navedite sledeće detalje:
 

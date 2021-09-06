@@ -1,7 +1,7 @@
 ---
 title: Šeme Customer Insights entiteta u usluzi Common Data Model
 description: Radite sa entitetima u usluzi Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692322"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380760"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Šeme entiteta u platformi Common Data Model
 
@@ -42,7 +42,7 @@ Za više informacija, pogledajte dokumentaciju o [Customer Insights šemama enti
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Prikaz entiteta korišćenjem Common Data Model navigatora entiteta
 
-Možete pregledati entitete u [Navigatoru Common Data Model entiteta](https://microsoft.github.io/CDM/). Izaberite dugme **Učitaj sa GitHuba!** i idite do **foundationCommon** > **crmCommon** > **rešenja** > **customerInsights**, gde ćete naći listu Customer Insights entiteta i njihove definicije.
+Možete pregledati entitete u [Navigatoru Common Data Model entiteta](https://microsoft.github.io/CDM/). Izaberite entitet iz odeljka aplikacije Insights da biste dobili listu Customer Insights entiteta i njihove definicije.
 > [!div class="mx-imgBorder"]
 > ![Navigator CDM entiteta koji prikazuje entitet CustomerActivity.](media/CDM-entity-navigator.png "Navigator CDM entiteta koji prikazuje entitet CustomerActivity")
 
