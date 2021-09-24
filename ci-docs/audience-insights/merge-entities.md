@@ -1,7 +1,7 @@
 ---
 title: Objedinjavanje entiteta kod objedinjavanja podataka
 description: Objedinite entitete da biste kreirali objedinjene profile klijenata.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035019"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494336"
 ---
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
@@ -66,7 +66,7 @@ Promenite ime za prikaz objedinjenih atributa. Ne možete da promenite naziv izl
 
 Izuzmite atribut iz ujednačenog korisničkog profila. Ako se polje koristi u drugim procesima, na primer u segmentu, uklonite ga iz tih procesa pre nego što ga izuzmete iz korisničkog profila. 
 
-1. Izaberite objedinjeno polje.
+1. Izaberite spojeno polje.
   
 1. Izaberite **Prikaži više** i birajte **Izuzmi**.
 
@@ -76,17 +76,40 @@ Izuzmite atribut iz ujednačenog korisničkog profila. Ako se polje koristi u dr
 
 Na stranici **Objedinjavanje**, izaberite **Izuzeta polja** da biste videli listu svih izuzetih polja. Ovo okno vam omogućava da ponovo dodate izuzeta polja.
 
+## <a name="edit-a-merged-field"></a>Uredite spojeno polje
+
+1.  Izaberite spojeno polje.
+
+1.  Izaberite **Prikaži više** i birajte **Uredi**.
+
+1.  Navedite kako da kombinujete ili spojite polja iz jedne od tri opcije:
+    - **Značaj**: identifikuje pobedničku vrednost na osnovu ranga važnosti navedenog za polja koja učestvuju. To je podrazumevana opcija objedinjavanja. Izaberite **Pomeri nagore/nadole** da biste podesili rang važnosti.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opcija važnosti u dijalogu polja za spajanje."::: 
+    - **Najnoviji**: identifikuje dobitnu vrednost na osnovu najnovijeg datuma. Zahteva datum ili numeričko polje za svaki entitet koji učestvuje u opsegu polja za spajanje da bi definisao nedavnu aktivnost.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opcija nedavne aktivnosti u dijalogu polja za spajanje.":::
+    - **Poslednji**: identifikuje dobitnu vrednost na osnovu najdavnije aktivnosti. Zahteva datum ili numeričko polje za svaki entitet koji učestvuje u opsegu polja za spajanje da bi definisao nedavnu aktivnost.
+
+1.  Možete dodati dodatna polja za učešće u procesu spajanja.
+
+1.  Spojeno polje možete preimenovati.
+
+1. Izaberite **Gotovo** da primenite promene.
+
+1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene. 
+
 ## <a name="manually-combine-fields"></a>Ručno kombinovanje polja
 
 Ručno navedite objedinjeni atribut. 
 
 1. Na stranici **Objedinjavanje**, izaberite **Kombinuj polja**.
 
-1. Navedite **Naziv** i jedan **Naziv izlaznog polja**.
+1. Navedite politiku pobednika spajanja u padajućoj listi **Kombinuj polja prema**.
 
 1. Odaberite polje koje želite da dodate. Izaberite **Dodaj polja** da biste kombinovali više polja.
 
-1. Potvrdite izuzimanje.
+1. Navedite **Naziv** i jedan **Naziv izlaznog polja**.
+
+1. Izaberite **Gotovo** da primenite promene.
 
 1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene. 
 
@@ -103,6 +126,27 @@ Neki entiteti sadrže više detalja od drugih. Ako entitet uključuje najnovije 
 1. Potvrdite promenu.
 
 1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene.
+
+## <a name="configure-customer-id-generation"></a>Konfigurisanje generisanja ID-a klijenta 
+
+Nakon konfigurisanja spajanja polja možete definisati kako da generišete CustomerId vrednosti, jedinstvene identifikatore profila klijenta. Korak spajanja u procesu spajanja podataka generiše jedinstveni identifikator profila klijenata. Identifikator je CustomerId u entitetu *Klijent* koji je rezultat procesa objedinjavanja podataka. 
+
+CustomerId u entitetu Klijent zasnovan je na hešu prve vrednosti primarnih ključeva koji nemaju vrednost „null“. Ovi ključevi potiču od entiteta koji se koriste u fazi podudaranja i spajanja i na njih utiče redosled podudaranja. Tako se generisani CustomerID može promeniti kada se promeni vrednost primarnog ključa u primarnom entitetu redosleda podudaranja. Posledično, vrednost primarnog ključa možda ne predstavlja uvek istog klijenta.
+
+Konfigurisanje stabilnog ID-a klijenta vam omogućava da izbegnete takvo ponašanje.
+
+**Konfigurisanje jedinstvenog ID-a klijenta**
+
+1. Idite na **Objedini** > **Spoji**.
+
+1. Na stranici **Spoji**, izaberite karticu **Ključevi**. 
+
+1. Zadržite pokazivač na redu **CustomerId** i izaberite opciju **Konfiguriši**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrola za prilagođavanje generisanja ID-a.":::
+
+1. Izaberite do pet polja koja će sadržati jedinstveni ID klijenta i koja su stabilnija. Zapisi koji ne odgovaraju vašoj konfiguraciji umesto toga koriste sistemski konfigurisan ID.  
+
+1. Izaberite **Gotovo** i pokrenite proces spajanja da biste primenili promene.
 
 ## <a name="run-your-merge"></a>Pokrenite svoje spajanje
 

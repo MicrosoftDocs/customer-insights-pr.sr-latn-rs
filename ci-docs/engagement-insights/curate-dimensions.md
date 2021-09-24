@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 8a3d7f9276330a6daacbe9428d84a371b81bbefe
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461120"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466365"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Koristite demografske aspekte za razdvajanje podataka o ponašanju
 
@@ -29,7 +29,7 @@ Korišćenjem demografskih aspekata objedinjenih profila, uvidima u angažovanje
 - Okruženje uvida u angažovanje u kojem imate podatke o korisničkom profilu povezane sa okruženjem uvida u ciljnu grupu gde se kreiraju profili klijenata. Još informacija: [Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> Kada kreirate vezu između okruženja uvida u ciljnu grupu i uvida u angažovanje, možda će vam trebati samo podaci specifični za svojstva profila korisnika, koji mogu biti korisni kao dimenzije u uvidima u angažovanje. Za više informacija, idite na [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu grupu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> Kada kreirate vezu između okruženja uvida u ciljnu grupu i uvida u angažovanje, možda će vam trebati samo podaci specifični za svojstva profila korisnika, koji mogu biti korisni kao dimenzije u uvidima u angažovanje. Za više informacija, idite na [Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu grupu](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Kreiranje novog prilagođenog izveštaja
 

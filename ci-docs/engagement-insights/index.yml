@@ -1,5 +1,5 @@
 ### YamlMime:Landing
-title: Mogućnost uvida u angažovanje (verzija za pregled) u usluzi Dynamics 365 Customer Insights
+title: Mogućnost uvida u angažovanje u usluzi Dynamics 365 Customer Insights (verzija za pregled)
 summary: Prikupljajte podatke za svoje veb-lokacije. Interaktivno shvatite interakcije i upotrebu klijenata na vašim veb-lokacijama. Iskoristite duboku integraciju između uvida u angažovanje i uvida u ciljnu grupu kako biste obogatili svoju analitiku ponašanja u realnom vremenu izveštajima o profilu klijenata. Obogatite profile klijenata veb-aktivnostima kako biste dobijali podatke o ponašanju u realnom vremenu zajedno sa relevantnim podacima o klijentima. Transformišite svoje poslovanje da biste izvodili trenutnu vrednost iz podataka o klijentima.
 metadata:
   title: Dokumentacija o uvidima u angažovanje (verzija za pregled)
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: sr-Latn-RS
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036255"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494201"
 landingContent:
 - title: Osnovne informacije
   linkLists:
   - linkListType: overview
     links:
-    - text: Pregled mogućnosti
+    - text: Prednosti mogućnosti
       url: overview.md
-    - text: Odredbe i koncepti
+    - text: Rečnik pojmova
       url: glossary.md
-    - text: Otkrijte uvide u angažovanje
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Nove i ažurirane funkcije
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Postavljanje je u toku
   linkLists:
   - linkListType: how-to-guide
@@ -38,33 +38,35 @@ landingContent:
       url: create-workspace.md
     - text: Instrumentalizujte veb-lokaciju
       url: instrument-website.md
-- title: Izveštaji
+- title: Prikaz i filtriranje izveštaja
   linkLists:
   - linkListType: how-to-guide
     links:
     - text: Prikaži izveštaje
       url: view-reports.md
-    - text: Kreiranje prilagođenih izveštaja
-      url: custom-reports.md
     - text: Pogledajte izveštaj o objedinjenim profilima
       url: profile-reports.md
-    - text: Kreiranje izveštaja o toku prodaje
-      url: funnel-reports.md
-- title: Događaji
+    - text: Korišćenje segmenata ciljne grupe za filtriranje izveštaja
+      url: integrate-audience-insights-segments.md
+- title: Analiza
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Kreiranje izveštaja o toku prodaje
+      url: funnel-reports.md
+    - text: Analiza podataka o ponašanju
+      url: curate-dimensions.md
+    - text: Kreiranje prilagođenih izveštaja
+      url: custom-reports.md
     - text: Kreiranje preciziranih događaja
       url: refined-events.md
     - text: Izvoz događaja
       url: export-events.md
-    - text: Izbrišite i izvezite lične podatke
-      url: delete-export-personal-data.md
-- title: Razvojni resursi
+- title: Resursi za programere
   linkLists:
   - linkListType: reference
     links:
-    - text: Razvojni resursi
+    - text: Resursi za programere
       url: developer-resources.md
     - text: Web SDK uzorak
       url: websdk-sample.md
@@ -81,6 +83,10 @@ landingContent:
     - text: Upravljajte okruženjima i radnim prostorima
       url: manage-environments-workspaces.md
     - text: Povezivanje sa uvidima u ciljnu grupu
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Upravljajte kolačićima i pristankom korisnika
       url: user-consent-storage.md
+    - text: Izbrišite i izvezite lične podatke
+      url: delete-export-personal-data.md
+    - text: Ograničenja usluge
+      url: ../service-limits.md

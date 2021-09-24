@@ -4,17 +4,17 @@ description: Saznajte kako da personalizujete i pokrenete iOS SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036890"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494247"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Početni koraci u radu sa iOS SDK
 
@@ -45,11 +45,36 @@ Započnite postupak odabirom radnog prostora u kojem ćete raditi, odabirom iOS 
 
 - Ako nemate postojeći radni prostor, izaberite **Novi radni prostor** i sledite korake da kreirate [novi radni prostor](create-workspace.md).
 
+- Kada kreirate radni prostor, idite na **Administrator** > **Radni prostor** a zatim izaberite **Vodič za instalaciju**.
+
 ## <a name="configure-the-sdk"></a>Konfigurisanje SDK
 
-Kada preuzmete SDK, možete raditi s njim na platformi Xcode da biste omogućili i definisali događaje.
+Kada preuzmete SDK, možete raditi s njim na platformi Xcode da biste omogućili i definisali događaje. Postoje dva načina da to uradite
 
-1. Kada kreirate radni prostor, idite na **Administrator** > **Radni prostor** a zatim izaberite **Vodič za instalaciju**.
+### <a name="option-1-using-cocoapods-recommended"></a>1. opcija: Korišćenje CocoaPods (preporučeno)
+CocoaPods je menadžer zavisnosti za Swift i Objective-C Cocoa projekte. NJegova upotreba olakšava integraciju SDK-a za uvide u angažovanje za iOS. CocoaPods vam takođe omogućava nadogradnju na najnoviju verziju SDK-a za uvide u angažovanje. Evo kako se koristi CocoaPods za integraciju SDK za uvide u angažovanje u vašem Xcode projektu. 
+
+1. Instalirajte CocoaPods. 
+
+1. Kreirajte novu datoteku pod nazivom Podfile unutar osnovnog direktorijuma vašeg projekta i dodajte joj sledeće izjave. Zamenite NAZIV_VAŠEG_CILJNOG_PROJEKTA nazivom vašeg Xcode projekta. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Gorenavedena pod konfiguracija sadrži verzije za otklanjanje grešaka i verziju izdanja SDK-a. Odaberite ono što je najbolje za vaš projekat.
+
+1. Instalirajte pod izvršavanjem sledeće komande: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>2. opcija: Korišćenje veze za preuzimanje
 
 1. Preuzmite [iOS SDK uvide u angažovanje](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) i postavite datoteku `EIObjC.xcframework` u fasciklu `Frameworks`.
 

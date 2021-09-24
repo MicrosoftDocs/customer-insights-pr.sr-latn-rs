@@ -4,17 +4,17 @@ description: Kako da pomoću izveštaja o tokovima prodaje razumete kako ciljna 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032272"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498659"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Kreiranje izveštaja o toku prodaje i upravljanje njima
 
@@ -158,4 +158,21 @@ Možete da promenite naziv izveštaja o toku prodaje, da ga izbrišete ili da iz
 1. Izaberite naziv da biste otvorili izveštaj.
 
 1. Izaberite korak koji želite da uklonite i izaberite **Izbriši**.
+
+## <a name="funnel-insights"></a>Uvidi u tokove prodaje 
+
+Uvidi u angažovanje sada nude uvide u tokove prodaje za klijente. Koristite uvide u tokove prodaje da biste stekli dublji uvid u ponašanje klijenata o koracima u izveštaju o toku prodaje. Kada kreirate i sačuvate novi izveštaj o toku prodaje, uvidi o tokovima prodaje se automatski generišu za vaš izveštaj. 
+
+Uvide u tokove prodaje možete da vidite iz sledećih kategorija, i na glavnom i na nivoima koraka: 
+
+ - Stopa konverzije 
+ - Vreme prelaska 
+ - Vreme završetka 
+
+Pomoću ovih uvida dublje istražite ponašanje klijenata i bolje razumite mesta odustajanja i konverzije za izveštaj o toku prodaje. 
+
+Uvidi u tokove prodaje se ponovo izračunavaju svaka 24 sata ili kada **Sačuvate** vaš izveštaj o toku. 
+
+> [!NOTE]
+> Da biste videli uvide za svoj tok prodaje, morate da sačuvate izveštaj svaki put kada unesete izmene. 
 

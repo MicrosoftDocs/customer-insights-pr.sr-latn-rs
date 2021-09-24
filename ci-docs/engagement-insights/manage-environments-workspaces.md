@@ -4,17 +4,17 @@ description: Kako da kreirate, preimenujete i brišete radne prostore i okružen
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034059"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486052"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljajte okruženjima i radnim prostorima
 
@@ -85,13 +85,11 @@ Brisanje radnog prostora trajno će ukloniti sav njegov sadržaj, podatke, pode�
 
 1. Izaberite **Dodaj članove** da biste dali pristup i [dodelili uloge](user-roles.md). Trenutno, dostupno je samo **Administrator radnog prostora**.
 
-1. Ako konfiguriše [vezu sa uvidima u ciljnu grupu](configure-connections.md),možete da izaberete **Dozvoli pristup podacima o profilu** kako biste dozvolili članu da vidi izveštaje na osnovu [profila korisnika](profile-reports.md).
-
 1. Izaberite **Dodaj članove** da biste ih dodali u svoj radni prostor.
 
 ## <a name="manage-an-environment"></a>Upravljanje okruženjem
 
-Kao administrator okruženja, okruženju možete pristupiti iz levog okna za navigaciju. Možete da konfigurišete podešavanja okruženja, druge administratore okruženja, radne prostore i [veze do uvida u ciljnu grupu](configure-connections.md). Izaberite kartice da biste se kretali između različitih oblasti u centru administracije.
+Kao administrator okruženja, okruženju možete pristupiti iz levog okna za navigaciju. Možete da konfigurišete podešavanja okruženja, druge administratore okruženja i radne prostore. Izaberite kartice da biste se kretali između različitih oblasti u centru administracije.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centar administracije okruženja.":::
 
@@ -123,8 +121,6 @@ Kao administrator okruženja, okruženju možete pristupiti iz levog okna za nav
 
 1. Izaberite **Dodaj članove** da biste ažurirali članove i [dodelili uloge](user-roles.md). Trenutno, dostupno je samo **Administrator okruženja**.
 
-1. Ako konfiguriše [vezu sa uvidima u ciljnu grupu](configure-connections.md),možete da izaberete **Dozvoli pristup podacima o profilu** kako biste dozvolili članu da vidi izveštaje na osnovu [profila korisnika](profile-reports.md).
-
 1. Izaberite **Dodaj članove** da biste ih dodali u svoje okruženje.
 
 ### <a name="delete-an-environment"></a>Brisanje okruženja
@@ -143,7 +139,7 @@ Administratori okruženja mogu brisati okruženja. Pre nego što izbrišete okru
 
 Uspostavljanje veza sa uvidima u ciljnu grupu omogućava vam da vidite izveštaje u uvidima o angažovanju na osnovu objedinjenih profila klijenata. 
 
-Za više informacija pogledajte [konfigurisanje veza](configure-connections.md).
+Za više informacija, pogledajte [Napravite vezu između uvida u ciljnu grupu i uvida u angažovanje](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Upravljanje ličnim podacima
 

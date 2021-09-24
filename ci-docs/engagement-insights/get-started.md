@@ -4,18 +4,18 @@ description: Pregled resursa za pomoć za brzo započinjanje rada.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 12/21/2020
+ms.date: 08/31/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5ee1567cea834670a16aaa3253912b7957ce26b3
-ms.sourcegitcommit: 86739a3f238162fc96837270b5d184e648fab15c
+ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "7405375"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494611"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Započnite rad sa Dynamics 365 Customer Insights mogućnošću uvida u angažovanje (verzija za javni pregled)
 
@@ -25,27 +25,27 @@ Mogućnost uvida u angažovanje omogućava vam prikupljanje i merenje ponašanja
 
 ## <a name="step-1-review-prerequisites"></a>1. korak: Pregledajte preduslove
 
-Prvo, morate imati aktivan Microsoft Azure Active Directory korisnički nalog. Zatim pročitajte sledeće članke pre podešavanja radnog prostora za uvide u angažovanje.
+Prvo, morate imati aktivan Microsoft Azure Active Directory (AAD) korisnički nalog. Zatim pročitajte sledeće članke pre podešavanja radnog prostora za uvide u angažovanje.
 
 - Pregledajte i prihvatite [Uslove korišćenja usluge](terms-of-service.md) korporacije Microsoft.  
-- Pročitajte članak [Upravljanje kolačićima i pristankom korisnika](user-consent-storage.md). Nakon pregleda ovog članka, procenite da li treba da ažurirate obaveštenje o pristanku korisnika. Ako ranije niste imali kolačiće koji „nisu bili ključni“, verovatno ćete morati da ažurirate smernice veb-lokacije.
+- Pročitajte članak [Upravljanje kolačićima i pristankom korisnika](user-consent-storage.md). Zatim procenite da li morate da ažurirate obaveštenje o saglasnosti korisnika. Ako ranije niste imali kolačiće koji „nisu bili ključni“, verovatno ćete morati da ažurirate smernice veb-lokacije.
 - Pregledajte [rečnik](glossary.md) za brzo upoznavanje sa ključnim terminima i konceptima.
 
 ## <a name="step-2-explore-engagement-insights"></a>2. korak: Istražite uvid o angažovanju
 
-Kada prvi put posetite uvide o angažovanju, možete da konfigurišete podešavanja, pregledate smernice i istražite proizvod.
+Kada prvi put posetite uvide u angažovanje, možete da konfigurišete podešavanja, pregledate smernice i istražite mogućnosti.
 
-1. Prijavite se na [portal za mogućnosti uvida u angažovanje](https://pi.dynamics.com) pomoću svog Microsoft Azure Active Directory korisničkog naloga. (To može biti školski ili poslovni nalog.)
+1. Prijavite se na [portal sa mogućnostima uvida u angažovanje](https://home.ci.ai.dynamics.com/app/engagement-insights) koristeći svoj Microsoft AAD korisnički (školski ili poslovni) nalog.
 
-1. Izaberite region i pomoću polja za potvrdu označite da li želite da se uključite da primate ažuriranja i ponude putem e-pošte.
+1. Izaberite svoj region i označite polje ako želite da se prijavite za primanje ažuriranja i ponuda putem e-pošte.
 
-1. Pregledajte **Uslove korišćenja usluge uvida o angažovanju (verzija za pregled)** i **Izjavu o privatnosti**, a zatim izaberite **Istražite demo verziju** da biste ih prihvatili.
+1. Pregledajte **uslove korišćenja uvida u angažovanje (verzija za pregled)** i **Izjavu o privatnosti**, a zatim izaberite **Istražite demo** da biste prihvatili ova podešavanja.
 
 1. Istražite proizvod koristeći skup uzoraka podataka.
 
 ##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>3. korak: Podesite radni prostor i dodajte kôd na svoju veb-lokaciju
 
-Radni prostor je mesto gde možete da prikazujete aktivnosti korisnika u realnom vremenu, kao i da skladištite izveštaje i upravljate njima. Dodajte kôd na svoju veb-stranicu da biste započeli sa prikupljanjem *događaja*, podataka o aktivnostima koji potiču od korisnika.
+Radni prostor je mesto gde možete da prikažete aktivnost korisnika u realnom vremenu, kao i da skladištite izveštaje i upravljate njima. Dodajte kôd na svoju veb-stranicu da biste započeli sa prikupljanjem *događaja*, podataka o aktivnostima koji potiču od korisnika.
 
 1. [Kreirajte radni prostor](create-workspace.md) i dodajte članove.
 
@@ -61,11 +61,13 @@ Možete da kreirate *prečišćene događaje* (virtuelni prikaz) podataka veb-an
 
 1. [Izvezite podatke](export-events.md) u Data Lake Storage.
 
+1. [Kreirajte vezu između uvida u ciljnu grupu i uvida u angažovanje](integrate-audience-insights-engagement-insights.md) za deljenje podataka između dve mogućnosti.
+
 1. Saznajte kako da [brišete i izvozite podatke o događajima koji sadrže lične informacije](delete-export-personal-data.md).
  
 ## <a name="step-5-stay-connected"></a>5. korak: Ostanite povezani
 
-Cenimo vaše aktivno učešće i planiramo da uzmemo u obzir sve relevantne povratne informacije u razvoju budućih izdanja. Podelite povratne informacije i prijavite probleme na jednom od ovih kanala:
+Cenimo vaše aktivno učešće i razmatramo sve relevantne povratne informacije u razvoju budućih izdanja. Podelite povratne informacije i prijavite probleme na jednom od ovih kanala:
 - [Zajednica](https://go.microsoft.com/fwlink/?linkid=2141648)
 - [Navedite povratne informacije](https://go.microsoft.com/fwlink/?linkid=2143222)
 - [Zahtev za podršku](https://go.microsoft.com/fwlink/?linkid=2145734) 

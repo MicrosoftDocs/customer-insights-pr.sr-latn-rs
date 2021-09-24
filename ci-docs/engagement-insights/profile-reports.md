@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033969"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486137"
 ---
 # <a name="out-of-box-profile-reports"></a>Unapred definisani izveštaji o profilima
 
@@ -31,7 +31,7 @@ Ako koristite probnu verziju mogućnosti uvida u ciljnu grupu ili okruženje u j
 
 ## <a name="enable-the-customer-profile-report"></a>Omogućavanje izveštaja o profilu klijenta
 
-Administrator okruženja da [kreira vezu sa uvidima u ciljnu grupu](configure-connections.md).
+Administrator okruženja mora da [poveže uvide u angažovanje i uvide u ciljnu grupu](integrate-audience-insights-engagement-insights.md).
 
 Nakon navođenja detalja o vezi, administrator može odobriti pristup drugim ljudima u organizaciji da vide izveštaj. Administrator okruženja koji podešava vezu automatski ima pristup izveštaju. 
 

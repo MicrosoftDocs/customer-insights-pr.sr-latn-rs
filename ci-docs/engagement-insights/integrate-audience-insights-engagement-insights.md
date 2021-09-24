@@ -1,19 +1,19 @@
 ---
 title: Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje
 description: Kreirajte aktivnu vezu između uvida u ciljnu grupu i uvida u angažovanje da biste omogućili dvosmerno deljenje podataka.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461030"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487124"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje
 
@@ -26,14 +26,14 @@ Koristite objedinjene profile i segmente iz uvida u ciljnu grupu za više opcija
 ## <a name="prerequisites"></a>Preduslovi
 
 - Profili uvida u ciljnu grupu moraju biti uskladišteni u Azure Data Lake Storage nalogu koji posedujete ili u jezeru podataka kojim upravljate iz usluge [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). 
-
+- Vaše okruženje uvida u ciljnu grupu bi trebalo da ima pridruženo Dataverse okruženje. A ako i to okruženje koristi Dataverse za skladištenje podataka, proverite da li je označena opcija **Omogući deljenje podataka** u uvidima u ciljnu grupu. Za više informacija, pogledajte [Kreiranje i konfigurisanje plaćenog okruženja u uvidima u ciljnu grupu](../audience-insights/get-started-paid.md).
 - Potrebne su vam administratorske dozvole za okruženja za uvide u angažovanje i za uvida u ciljnu grupu.
-
 - Povezana okruženja moraju biti u istom geografskom regionu.
 
 > [!NOTE]
 > - Ako je vaša pretplata na uvide u ciljnu grupu u probnoj verziji koja koristi interno upravljano jezero podataka za uvide u ciljnu grupu, kontaktirajte [pirequest@microsoft.com](mailto:pirequest@microsoft.com) za pomoć. 
-> - Ako vaše okruženje za uvid u ciljnu grupu koristi vašu uslugu Azure Data Lake Storage da biste uskladištili podatke, morate da dodate principala usluge Azure uvida u angažovanje na nalog za skladištenje. Za detalje, pogledajte članak [Povežite se sa Azure Data Lake Storage nalogom s principalom usluge Azure za uvide u ciljnu grupu](../audience-insights/connect-service-principal.md). Takođe, vaše okruženje uvida u ciljnu grupu bi trebalo da ima pridruženo [Dataverse okruženje](../audience-insights/get-started-paid.md). 
+> - Ako vaše okruženje za uvid u ciljnu grupu koristi vašu uslugu Azure Data Lake Storage da biste uskladištili podatke, morate da dodate principala usluge Azure uvida u angažovanje na nalog za skladištenje. Za detalje, pogledajte članak [Povežite se sa Azure Data Lake Storage nalogom s principalom usluge Azure za uvide u ciljnu grupu](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Kreiranje veze okruženja
 
@@ -49,7 +49,7 @@ Vezu okruženja možete da kreirate ažuriranjem podešavanja **Administrator** 
 
      :::image type="content" source="media/integrate2.png" alt-text="Izaberite okruženje uvida u ciljnu grupu.":::
 
-1. Izaberite okruženje uvida u ciljnu grupu, a zatim izaberite ***Sledeće** da biste završili. Sada možete da izaberete opcionalne funkcije za povezana okruženja.
+1. Izaberite okruženje uvida u ciljnu grupu, a zatim izaberite **Sledeće** da biste završili. Sada možete da izaberete opcionalne funkcije za povezana okruženja.
  
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu grupu
 
@@ -75,6 +75,7 @@ Kada povežete okruženja, možete da izaberete opcionalne funkcije za povezana 
 
    > [!IMPORTANT]
    > Ako u ovom koraku ne dodate korisnike izričito, podaci će biti sakriveni od korisnika u uvidima u angažovanje.
+   > Da bi se segmenti uvida u ciljnu grupu prikazali u uvidima u angažovanje, morate prvo [pokrenuti objedinjavanja i posledične procese](../audience-insights/merge-entities.md). Posledični procesi su važni jer generišu jedinstvenu tabelu koja priprema segmente uvida u ciljnu grupu za deljenje sa uvidima u angažovanje. (Ako je osvežavanje sistema zakazano, automatski će uključiti posledične procese.)
 
 1. Pregledajte izabrane stavke, pa izaberite **Završi**.
 

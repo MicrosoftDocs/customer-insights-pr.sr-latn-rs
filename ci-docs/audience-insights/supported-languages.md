@@ -1,24 +1,23 @@
 ---
-title: Podržani jezici za uvid o korisnicima
+title: Podržani jezici za Dynamics 365 Customer Insights
 description: Razumevanje i konfigurisanje jezičke podrške.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035156"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483359"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Podržani jezici za mogućnost uvida o korisnicima
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Podržani jezici za Dynamics 365 Customer Insights
 
-Usluga Uvidi o korisnicima za Dynamics 365 Customer Insights je prevedena na mnoge jezike. Sledeća lista sadrži dostupne jezike i informacije o tome šta je prevedeno. Takođe možete saznati više o tome kako da promenite jezička podešavanja. 
+Dynamics 365 Customer Insights je preveden na mnoge jezike. Sledeća lista sadrži dostupne jezike i informacije o tome šta je prevedeno. Takođe možete saznati više o tome kako da promenite jezička podešavanja. 
 
 ## <a name="languages"></a>Jezici
 
@@ -69,7 +68,7 @@ Usluga Uvidi o korisnicima za Dynamics 365 Customer Insights je prevedena na mno
 
 ## <a name="whats-translated"></a>Šta je prevedeno
 
-Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
+Customer Insights koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake i poruka na jeziku kome korisnik daje prednost.
 
 Pošto se većina funkcija zasniva na vašim podacima, neke stavke ostaju na izvornom jeziku. Na primer:
 

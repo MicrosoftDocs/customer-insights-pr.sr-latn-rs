@@ -1,20 +1,20 @@
 ---
 title: Predviđanje preporuke proizvoda
 description: Predvidite proizvode koje će klijent verovatno kupiti ili stupiti u interakciju sa njima.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034973"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494556"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predviđanje preporuke proizvoda (pregled)
 
@@ -89,23 +89,24 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 
 ### <a name="add-required-data"></a>Dodavanje obaveznih podataka
 
-1. Izaberite **Dodaj podatke** za **Istoriju transakcija klijenta** i odaberite entitet koji pruža informacije o istoriji transakcija/kupovina kao što je opisano u [preduslovima](#prerequisites).
+1. Izaberite **Dodaj podatke** i odaberite vrstu aktivnosti u bočnom oknu koja sadrži potrebne podatke o transakcijama ili istoriji kupovine.
 
-1. Mapirajte semantička polja sa atributima u entitetu istorije kupovine i izaberite **Sledeće**. Za opis polja pogledajte [preduslove](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definisanje relacije između entiteta.](media/product-recommendation-purchasehistorymapping.PNG "Stranica istorije kupovine koja prikazuje semantičke atribute koji su mapirani u polja u izabranom entitetu istorije kupovine")
+1. U okviru **Odaberite aktivnosti**, odaberite određene aktivnosti iz izabrane aktivnosti na koju želite da se obračun fokusira.
 
-1. Ako polja u nastavku nisu popunjena, konfigurišite relaciju između entiteta istorije kupovine i entiteta *klijenta*.
-    1. Izaberite **Entitet istorije kupovine**.
-    1. Izaberite **Polje** koje identifikuje klijenta u entitetu istorije kupovine. Mora da se odnosi na primarni ID klijenta entiteta *klijenta*.
-    1. Izaberite **Entitet klijenta** koji odgovara primarnom entitetu klijenta.
-    1. Unesite ime koje opisuje odnos.
-       > [!div class="mx-imgBorder"]
-       > ![Stranica istorije kupovine koja prikazuje kreiranje odnosa sa klijentom.](media/model-purchase-join.png "Stranica istorije kupovine koja prikazuje kreiranje relacije sa klijentom")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Bočno okno prikazuje odabir određenih aktivnosti prema semantičkom tipu.":::
+
+1. Ako još niste mapirali aktivnost u semantički tip, izaberite **Uredi** da biste to uradili. Otvara se vođeno iskustvo za mapiranje semantičkih aktivnosti. Mapirajte podatke u odgovarajuća polja u izabranom tipu aktivnosti.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tip aktivnosti podešavanja stranice.":::
+
+1. Nakon mapiranja aktivnosti na odgovarajući semantički tip, izaberite **Sledeći** za nastavak 
+ 
+1. Mapirajte semantičke atribute u polja koja su potrebna za pokretanje modela.
 
 1. Izaberite stavku **Sačuvaj**.
 
 1. Izaberite **Sledeće**.
+
 
 ### <a name="configure-product-filters"></a>Konfigurisanje filtera za proizvode
 
