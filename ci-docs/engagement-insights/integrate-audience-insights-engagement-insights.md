@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
-ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
+ms.openlocfilehash: 8d93a49a29c29103e189a6d4a42294c18dc28abd
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/10/2021
-ms.locfileid: "7487124"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7559035"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje
 
@@ -54,6 +54,9 @@ Vezu okruženja možete da kreirate ažuriranjem podešavanja **Administrator** 
 ## <a name="enable-audience-insights-unified-profiles-attributes-and-segments"></a>Omogućavanje atributa i segmenata objedinjenih profila uvida u ciljnu grupu
 
 Kada povežete okruženja, možete da izaberete opcionalne funkcije za povezana okruženja. Ove funkcije omogućavaju atribute i segmente objedinjenih profila iz uvida u ciljnu grupu za interaktivnu analizu podataka o klijentima.
+
+> [!IMPORTANT]
+> Da bi se segmenti uvida u ciljnu grupu prikazali u uvidima u angažovanje, morate prvo [pokrenuti objedinjavanja i posledične procese](../audience-insights/merge-entities.md). Posledični procesi su važni jer generišu jedinstvenu tabelu koja priprema segmente uvida u ciljnu grupu za deljenje sa uvidima u angažovanje. (Ako je osvežavanje sistema zakazano, automatski će uključiti posledične procese.)
 
 **Kako se analiziraju veb-podaci u uvidima u angažovanje**
 

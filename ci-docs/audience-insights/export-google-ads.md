@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Google oglasima
 description: Saznajte kako da konfigurišete vezu i izvezete u Google Ads.
-ms.date: 03/03/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,16 +9,19 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5977b3de9fbb0d97c0912e2ada6a313b0ab92498adf9cdbed48191c0e5143567
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031674"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558989"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (verzija za pregled)
 
 Izvezite segmente objedinjenih profila klijenata na Google Ads listu ciljnih grupa i koristite ih za oglašavanje na Google pretrazi, Gmailu, YouTubeu i Google mreži multimedijalnog oglašavanja. 
+
+> [!IMPORTANT]
+> Trenutno možete da kreirate novu vezu i izvozite podatke u Google Ads samo ako već imate odobreni token programera za Google Ads. Zbog promena smernica, uskoro ćemo ažurirati Google Ads izvoz i obezbediti opciju izvoza koja neće zahtevati token programera kako bismo osigurali kontinuitet vašeg iskustva i pojednostavili izvoz u Google Ads. Preporučujemo vam da ne konfigurišete više veza sa Google Ads radi lakšeg prelaska na novu opciju izvoza.
 
 ## <a name="prerequisites-for-connection"></a>Preduslovi za vezu
 

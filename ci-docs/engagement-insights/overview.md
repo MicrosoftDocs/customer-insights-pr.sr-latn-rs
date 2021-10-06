@@ -1,40 +1,49 @@
 ---
-title: Pregled mogućnosti uvida u angažovanje
+title: O Dynamics 365 Customer Insights mogućnosti uvida u angažovanje
 description: Uvod u funkcije i prednosti mogućnosti uvida u angažovanje.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 07/30/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b7bb1e5aa1adc5893dd0118bc7a3653913bfdc874a589f366c8c37152bbfef4d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d6d40d41fc79a34c04f86146fe902a766b71e74d
+ms.sourcegitcommit: cf139b37ea1ab62c48a1713bcf6b3a6e01f578bf
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033373"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "7507735"
 ---
 # <a name="about-dynamics-365-customer-insights-engagement-insights-capability"></a>O Dynamics 365 Customer Insights mogućnosti uvida u angažovanje 
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-[Uvidi u angažovanje, mogućnost usluge Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/) omogućava vam da interaktivno razumete kako vaši klijenti koriste vaše usluge i proizvode – pojedinačno i sveobuhvatno – na veb-lokacijama, mobilnim aplikacijama i povezanim proizvodima.
+[Uvidi u angažovanje, mogućnost usluge Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/) omogućava vam da pomoću interaktivnih pokazatelja razumete kako vaši klijenti koriste vaše usluge i proizvode. To možete učiniti pojedinačno i holistički, na veb-lokacijama, aplikacijama za mobilne uređaje i povezanim proizvodima.
 
-Možete kombinovati analitiku ponašanja sa transakcionim, demografskim, podacima iz ankete i drugim tipovima podataka iz rešenja Microsoft Dynamics 365 Customer Insights. Kombinacija kreira bogate uvide koji pomažu u podsticanju sledećih najboljih radnji i personalizovanih iskustava.
+Uz uvide u angažovanje, možete kombinovati analitiku ponašanja sa transakcionim, demografskim, anketnim i drugim tipovima podataka iz usluge Microsoft Dynamics 365 Customer Insights. Ova mogućnost kreira bogate uvide koji pomažu u pokretanju sledećih najboljih radnji i personalizovanog iskustva.
 
 ## <a name="features-and-benefits"></a>Funkcije i prednosti
 
+Uz mogućnost uvida u angažovanje, možete da radite sledeće:
+
 - Prikupljajte, merite i shvatite ponašanje klijenata na vašoj veb-lokaciji.
 
-- Koristite unapred definisane izveštaje za interaktivno pristupanje pokazateljima veb-lokacija i prikaz veličine vaše ciljne grupe. Saznajte detalje o posetama, prikazima stranica, saobraćaju usled preporuka i identifikujte stranice sa najboljim performansama.
+- Deljenje podataka između uvida u angažovanje i uvida u ciljnu grupu. Možete povezati okruženja iz obe mogućnosti i omogućiti međusobno deljenje podataka u oba smera.
 
-- Koristite prilagođenu alatku za pravljenje izveštaja za pravljenje sopstvenih vizuelizacija na osnovu izabrane [metrike](glossary.md) i [aspekata](glossary.md). Vizualizacije kreiraju prikaze koji su vam potrebni za odgovaranje na poslovna pitanja.
+- Koristite objedinjene profile i segmente iz uvida u ciljnu grupu za više opcija analize u uvidima u angažovanje. Izvezite događaje koji imaju visoku poslovnu vrednost iz uvida u angažovanje. Pomoću ovih događaja dodajte podatke u objedinjene profile u uvidima u ciljnu grupu.
+
+- Kreirajte demografske dimenzije za razdvajanje podataka o ponašanju. Zatim koristite svojstva profila u interaktivnim analizama podataka o ponašanju, uključujući podatke prikupljene uvidom u angažovanje na vašoj veb-lokaciji ili u aplikaciji za mobilne uređaje.
+
+- Kreirajte uvide u tok prodaje, koji pružaju podatke i izveštaje kako biste doneli odluke i identifikovali oblasti za optimizaciju i poboljšanja procesa, kako biste identifikovali putanje kojima vaši klijenti idu pre kupovine. 
+
+-  Koristite gotove izveštaje za interaktivan pristup pokazateljima veb-lokacije i otkrivanje pravog broja posetilaca vaše veb-lokacije. Saznajte detalje o posetama, prikazima stranica, saobraćaju usled preporuka i identifikujte stranice sa najboljim performansama.
+
+- Koristite prilagođenu alatku za pravljenje izveštaja za kreiranje sopstvenih vizualizacija na osnovu izabranih [pokazatelja](glossary.md) i [dimenzije](glossary.md). Ove vizualizacije kreiraju prikaze koji su vam potrebni da biste odgovorili na svoja poslovna pitanja.
 
 - Unesite podatke iz više kanala. Na primer, koristite podatke o ponašanju iz interakcija na veb-lokaciji sa transakcionim i demografskim podacima o svojim klijentima. Koristite podatke za izradu i prikaz interaktivnih izveštaja koji uključuju veb aktivnosti i profile klijenata za bogatu analitiku. Kreirajte i izvozite prečišćene događaje. Pregledajte veb aktivnosti sa profilima klijenata, aktivnostima i segmentima u rešenju Customer Insights za sveobuhvatni prikaz vaših klijenata.
-
 
 ## <a name="next-steps"></a>Sledeći koraci
 

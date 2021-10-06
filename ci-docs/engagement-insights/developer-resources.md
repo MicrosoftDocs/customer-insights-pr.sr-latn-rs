@@ -4,27 +4,27 @@ description: Pronađite informacije o SDK-ovima i kako da ih koristite.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036300"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558763"
 ---
 # <a name="developer-resources-overview"></a>Pregled resursa za programere
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ovaj članak navodi sve dostupne isečke koda i uzorke za brzu referencu. Preuzmite kôd za pošiljaoca događaja za svoju platformu i pratite uputstva. 
+U ovom članku su navedeni svi dostupni isečci kodova kompleta alata za razvoj softvera (SDK) i primeri sa kojima programeri mogu da dele podatke sa uslugom Dynamics 365 Customer Insights. Pratite uputstva za dobijanje koda za događaje specifične za vašu platformu.
 
 ## <a name="capture-events-from-websites"></a>Beleženje događaja sa veb-lokacija
 
-- [Kako dodati isečak koda na veb-lokaciju](instrument-website.md)
+- [Opremanje veb-stranice](instrument-website.md)
 - [Primer Web SDK-a](websdk-sample.md)
 - [Napredno veb SDK opremanje](advanced-SDK-implementation.md)
 
