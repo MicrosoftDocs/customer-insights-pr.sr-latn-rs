@@ -1,7 +1,7 @@
 ---
 title: Objedinjavanje entiteta kod objedinjavanja podataka
 description: Objedinite entitete da biste kreirali objedinjene profile klijenata.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494336"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648271"
 ---
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
@@ -89,7 +91,7 @@ Na stranici **Objedinjavanje**, izaberite **Izuzeta polja** da biste videli list
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opcija nedavne aktivnosti u dijalogu polja za spajanje.":::
     - **Poslednji**: identifikuje dobitnu vrednost na osnovu najdavnije aktivnosti. Zahteva datum ili numeričko polje za svaki entitet koji učestvuje u opsegu polja za spajanje da bi definisao nedavnu aktivnost.
 
-1.  Možete dodati dodatna polja za učešće u procesu spajanja.
+1.  Možete dodati još polja za učešće u procesu spajanja.
 
 1.  Spojeno polje možete preimenovati.
 
@@ -131,7 +133,7 @@ Neki entiteti sadrže više detalja od drugih. Ako entitet uključuje najnovije 
 
 Nakon konfigurisanja spajanja polja možete definisati kako da generišete CustomerId vrednosti, jedinstvene identifikatore profila klijenta. Korak spajanja u procesu spajanja podataka generiše jedinstveni identifikator profila klijenata. Identifikator je CustomerId u entitetu *Klijent* koji je rezultat procesa objedinjavanja podataka. 
 
-CustomerId u entitetu Klijent zasnovan je na hešu prve vrednosti primarnih ključeva koji nemaju vrednost „null“. Ovi ključevi potiču od entiteta koji se koriste u fazi podudaranja i spajanja i na njih utiče redosled podudaranja. Tako se generisani CustomerID može promeniti kada se promeni vrednost primarnog ključa u primarnom entitetu redosleda podudaranja. Posledično, vrednost primarnog ključa možda ne predstavlja uvek istog klijenta.
+CustomerId u entitetu Klijent zasnovan je na hešu prve vrednosti primarnih ključeva koji nemaju vrednost „null“. Ovi ključevi potiču od entiteta koji se koriste u fazi podudaranja i spajanja i na njih utiče redosled podudaranja. Tako se generisani CustomerID može promeniti kada se promeni vrednost primarnog ključa u primarnom entitetu redosleda podudaranja. Dakle, vrednost primarnog ključa možda ne predstavlja uvek istog klijenta.
 
 Konfigurisanje stabilnog ID-a klijenta vam omogućava da izbegnete takvo ponašanje.
 
@@ -139,7 +141,7 @@ Konfigurisanje stabilnog ID-a klijenta vam omogućava da izbegnete takvo ponaša
 
 1. Idite na **Objedini** > **Spoji**.
 
-1. Na stranici **Spoji**, izaberite karticu **Ključevi**. 
+1. Izaberite karticu **Ključevi**. 
 
 1. Zadržite pokazivač na redu **CustomerId** i izaberite opciju **Konfiguriši**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Kontrola za prilagođavanje generisanja ID-a.":::
@@ -147,6 +149,30 @@ Konfigurisanje stabilnog ID-a klijenta vam omogućava da izbegnete takvo ponaša
 1. Izaberite do pet polja koja će sadržati jedinstveni ID klijenta i koja su stabilnija. Zapisi koji ne odgovaraju vašoj konfiguraciji umesto toga koriste sistemski konfigurisan ID.  
 
 1. Izaberite **Gotovo** i pokrenite proces spajanja da biste primenili promene.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Grupišite profile u domaćinstva ili klastere
+
+Kao deo procesa konfiguracije generisanja profila klijenta, možete definisati pravila za grupisanje povezanih profila u klaster. Trenutno postoje dve vrste klastera – domaćinstva i prilagođeni klasteri. Sistem automatski bira domaćinstvo sa unapred definisanim pravilima ako entitet *Klijent* sadrži semantička polja *Person.LastName* i *Location.Address*. Takođe možete kreirati klaster sa sopstvenim pravilima i uslovima, slično [pravilima podudaranja](match-entities.md#define-rules-for-match-pairs).
+
+**Definisanje domaćinstva ili klastera**
+
+1. Idite na **Objedini** > **Spoji**.
+
+1. Na kartici **Objedini**, izaberite **Napredno** > **Kreiraj klaster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Kontrola za kreiranje novog klastera.":::
+
+1. Birajte između klastera **Domaćinstvo** ili **Prilagođeni**. Ako semantička polja *Person.LastName* i *Location.Address* postoje u entitetu *Klijent*, domaćinstvo se automatski bira.
+
+1. Unesite naziv klastera i izaberite **Gotovo**.
+
+1. Izaberite karticu **Klasteri** da biste pronašli klaster koji ste kreirali.
+
+1. Navedite pravila i uslove za definisanje klastera.
+
+1. Izaberite **Pokreni** da biste pokrenuli proces objedinjavanja i kreirali klaster.
+
+Nakon pokretanja procesa objedinjavanja, identifikatori klastera se dodaju kao nova polja u entitetu *Klijent*.
 
 ## <a name="run-your-merge"></a>Pokrenite svoje spajanje
 

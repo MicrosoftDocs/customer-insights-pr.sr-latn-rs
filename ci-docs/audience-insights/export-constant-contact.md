@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u Constant Contact
 description: Saznajte kako da konfigurišete vezu i izvezete sadržaj u Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031858"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619136"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Izvoz segmenata u Constant Contact (verzija za pregled)
 
@@ -28,10 +28,10 @@ Izvezite segmente objedinjenih profila klijenata u Constant Contact i koristite 
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 1 milion profila po izvozu u Constant Contact.
+- Možete izvoziti do milion korisničkih profila po izvozu u Constant Contact.
 - Izvoz u Constant Contact ograničen je na segmente.
-- Izvoz do 1 milion profila u Constant Contact može potrajati do 1 sata. 
-- Broj profila koje možete da izvezete u Constant Contact zavisi i ograničen je vašim ugovorom sa uslugom Constant Contact.
+- Izvoz do 1 miliona profila klijenata u Constant Contact može potrajati do 1 sata. 
+- Broj profila klijenata koje možete izvesti u Constant Contact zavisi i ograničen je na vaš ugovor sa Constant Contact-om.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Podešavanje veze sa uslugom Constant Contact
 
@@ -65,7 +65,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite [**ID Constant Contact liste**](https://app.constantcontact.com/pages/contacts/ui#lists). Otvorite listu u usluzi Constant Contact da biste pronašli ID liste u URL adresi.
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. To je potrebno da izvezete segmente u Constant Contact.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. To je potrebno da izvezete segmente u Constant Contact.
 
 1. Po želji možete da izvezete Ime i Prezime kao dodatna polja za stvaranje personalizovanih e-poruka. Izaberite **Dodaj atribut** za mapiranje ovih polja.
 

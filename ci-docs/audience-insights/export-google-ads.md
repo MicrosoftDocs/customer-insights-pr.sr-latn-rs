@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558989"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617940"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Izvoz segmenata u Google Ads (verzija za pregled)
 
@@ -35,9 +35,9 @@ Izvezite segmente objedinjenih profila klijenata na Google Ads listu ciljnih gru
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milion profila po izvozu u Google oglasima.
+- Do milion profila klijenata po izvozu u Google Ads.
 - Izvoz u Google oglase je ograničen na segmente.
-- Izvoz segmenata sa ukupno 1 milion profila može trajati do 5 minuta zbog ograničenja na strani dobavljača. 
+- Izvoz segmenata sa ukupno milion profila klijenata može potrajati do 5 minuta zbog ograničenja na strani provajdera. 
 - Podudaranje u Google oglasima može da potraje do 48 sati.
 
 ## <a name="set-up-connection-to-google-ads"></a>Podešavanje veze sa uslugom Google Ads
@@ -74,7 +74,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite **[ID korisnika za Google oglase](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** i izaberite **Povežite se** da biste započeli povezivanje sa Google oglasima.
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta.
 
 1. Izaberite segmente koje želite da izvezete. U Google oglasima možete ukupno izvesti do 1 milion korisničkih profila.
 

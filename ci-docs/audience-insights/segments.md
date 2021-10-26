@@ -1,7 +1,7 @@
 ---
 title: Segmenti u uvidima u ciljnu grupu
 description: Pregled segmenata i način kreiranja i upravljanja njima.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036390"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617392"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -26,11 +26,19 @@ Korisnički profili koji se podudaraju sa filterima definicije segmenta nazivaju
 
 Postoji više načina za kreiranje novog segmenta: 
 
-- Složeni segment sa kreatorom segmenata: [Prazan segment](segment-builder.md#create-a-new-segment)
-- Jednostavni segmenti sa jednim operatorom: [Brzi segment](segment-builder.md#quick-segments)
-- Način omogućen veštačkom inteligencijom za pronalaženje sličnih klijenata: [Slični klijenti](find-similar-customer-segments.md)
-- Predlozi omogućeni veštačkom inteligencijom zasnovani na merama ili atributima: [Predloženi segmenti za poboljšanje mera](suggested-segments.md)
-- Predlozi zasnovani na aktivnostima: [Predloženi segmenti na osnovu aktivnosti klijenata](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
+
+- Složeni segment sa graditeljem segmenata: [Napravite svoje](segment-builder.md#create-a-new-segment) 
+- Jednostavni segmenti sa jednim operatorom: [Brzi segment](segment-builder.md#quick-segments) 
+- Način omogućen veštačkom inteligencijom za pronalaženje sličnih klijenata: [Slični klijenti](find-similar-customer-segments.md) 
+- Predlozi omogućeni veštačkom inteligencijom zasnovani na merama ili atributima: [Predloženi segmenti za poboljšanje mera](suggested-segments.md) 
+- Predlozi zasnovani na aktivnostima: [Predloženi segmenti na osnovu aktivnosti klijenata](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Poslovni nalozi (B2B)](#tab/b2b)
+
+- Složeni segment sa graditeljem segmenata: [Napravite svoje](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Upravljanje postojećim segmentima
 
@@ -70,9 +78,9 @@ Segment možete izvesti sa stranice segmenata ili [stranica izvoza](export-desti
 
 1. Izaberite **Upravljanje izvozom** sa padajuće liste radnji.
 
-1. Otvara se stranica **Izvozi (pregled) za segment**. Možete da vidite sve konfigurisane izvoze grupisane prema izvozima koji sadrže trenutni segment ili ga ne sadrže.
+1. Otvara se stranica **Izvozi (pregled) za segment**. Možete videti sve konfigurisane izvoze grupisane prema tome da li sadrže trenutni segment ili ne.
 
-   1. Da biste izabrani segment dodali u izvoz, izaberite izvoz na listi i izaberite **Dodaj segment**.
+   1. Da biste izabrani segment dodali izvozu, **Uredite** odgovarajući izvoz da biste izabrali odgovarajući segment, a zatim sačuvajte. U okruženjima za pojedinačne klijente možete umesto toga izabrati izvoz sa liste i izabrati **Dodaj segment** da biste postigli isti ishod.
 
    1. Da biste kreirali novi izvoz sa izabranim segmentom, izaberite **Dodaj izvoz**. Za više informacija o kreiranju izvoza, pogledajte [Podešavanje novog izvoza](export-destinations.md#set-up-a-new-export).
 

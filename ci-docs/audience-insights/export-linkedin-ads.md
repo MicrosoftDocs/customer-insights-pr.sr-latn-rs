@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u LinkedIn Ads
 description: Saznajte kako da konfigurišete vezu i izvozite u LinkedIn Ads.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2cfaa37fd0ac697f29665792bab27a925d8ea1eede0519d424524a7e5accbfeb
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 948a7e980df5714034009c92282e78cf2bdcb231
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034240"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618308"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Izvoz segmenata u LinkedIn Ads (verzija za pregled)
 
@@ -28,9 +28,9 @@ Izvezite segmente objedinjenih profila klijenata u LinkedIn Ads da biste kreiral
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 100.000 profila po izvozu u LinkedIn Ads.
+- Možete izvoziti do 100.000 profila klijenata po izvozu u LinkedIn Ads.
 - Izvoz u LinkedIn Ads ograničen je na segmente.
-- Izvoz do 100.000 profila u LinkedIn Ads može potrajati do 10 minuta. 
+- Izvoz do 100.000 profila klijenata u LinkedIn Ads može potrajati do 10 minuta. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Podesite vezu sa uslugom LinkedIn Ads
 
@@ -66,7 +66,7 @@ Izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više infor
 
 1. Odaberite da li želite da izvezete podatke da obavite [kontakt ciljanje](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) ili [ciljanje kompanije](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) u usluzi LinkedIn. 
 
-1. U odeljku **Podudaranje podataka** izaberite polje u vašem objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Potrebno je da izvezete segmente u LinkedIn Ads.
+1. U odeljku **Podudaranje podataka**, za ciljanje kontakata izaberite najmanje jedno polje koje predstavlja e-adresu klijenta, Apple Ad ID, ID Google oglasa, Google ID korisnika, ili ime i prezime. Ako odaberete ciljanje preduzeća, izaberite barem jedno polje koje predstavlja naziv preduzeća, domen e-pošte, URL LinkedIn stranice, simbol akcije ili veb-lokaciju. Dodatna polja se mogu izabrati za dodatnu definiciju izvoza. 
 
 1. Izaberite segmente koje želite da izvezete. Publika koja se podudara u usluzi LinkedIn Campaign Manager automatski će se kreirati sa nazivom segmenata koje ste izabrali za izvoz. Svaki segment će rezultirati zasebnom podudarnom ciljnom grupom. 
 

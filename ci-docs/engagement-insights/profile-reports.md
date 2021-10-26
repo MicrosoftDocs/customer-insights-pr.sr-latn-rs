@@ -1,39 +1,34 @@
 ---
-title: Omogućavanje unapred definisanih izveštaja o profilima
-description: Kako da kreirate unapred definisane izveštaje o profilima grupisane prema polu, starosti i okrugu ili regionu porekla.
+title: Omogućavanje unapred definisanih (OOB) izveštaja o profilima
+description: Kako da kreirate unapred definisane (OOB) izveštaje o profilima grupisane prema polu, starosti i okrugu ili regionu porekla.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: cba2c112e9e475ceb047fe627fb41e6c8a27e1e7
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486137"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582803"
 ---
-# <a name="out-of-box-profile-reports"></a>Unapred definisani izveštaji o profilima
+# <a name="out-of-box-oob-unified-profile-reports"></a>Unapred definisani (OOB) izveštaji o objedinjenim profilima
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Izveštaj je zbirka vizuelizacije podataka koja vam pomaže da razumete kako se korisnici ponašaju. Povezivanjem sa Customer Insights uvidima u ciljnu grupu, uvidi u angažovanje mogu da prikažu izveštaj sa informacijama o objedinjenim profilima klijenata. Ovaj izveštaj obuhvata broj profila koje imate, grupisane prema polu, starosti i geografskoj lokaciji.
+Izveštaj o objedinjenim profilima je zbirka vizuelizacije podataka koja će vam pomoći da razumete kako se korisnici ponašaju. Povezivanjem na Customer Insights mogućnost uvida u ciljnu grupu, uvidi u angažovanje mogu prikazati OOB izveštaje sa informacijama o objedinjenim profilima klijenata. Ovaj izveštaj obuhvata broj profila koje imate, grupisane prema polu, starosti i geografskoj lokaciji. Za informacije o profilima klijenata pogledajte [Profili klijenata](../audience-insights/customer-profiles.md).
 
 ## <a name="prerequisites"></a>Preduslovi
 
-Okruženje uvida u ciljnu grupu mora da skladišti podatke u Azure Data Lake Storage nalogu koji je korisnički upravljan.
-
-Ako koristite probnu verziju mogućnosti uvida u ciljnu grupu ili okruženje u jezeru podataka kojem upravlja Customer Insights, [obratite nam se](https://go.microsoft.com/fwlink/?linkid=2145734) za pomoć.  
-
+Administrator okruženja mora da [kreira vezu između uvida u angažovanje i uvida u ciljnu grupu](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Omogućavanje izveštaja o profilu klijenta
 
-Administrator okruženja mora da [poveže uvide u angažovanje i uvide u ciljnu grupu](integrate-audience-insights-engagement-insights.md).
-
-Nakon navođenja detalja o vezi, administrator može odobriti pristup drugim ljudima u organizaciji da vide izveštaj. Administrator okruženja koji podešava vezu automatski ima pristup izveštaju. 
+Nakon što navede vezu između uvida u angažovanje i uvida u ciljnu grupu, administrator zatim može da odobri pristup drugim ljudima u organizaciji da vide izveštaj. Administrator okruženja koji podešava vezu automatski ima pristup izveštaju. 
 
 Po završetku veze, funkcija **Profili** će biti dostupna u levom oknu za navigaciju. 
 

@@ -1,7 +1,7 @@
 ---
 title: Aktivnosti klijenta
 description: Definišite aktivnosti klijenata i prikažite ih u vremenskoj osi na profilima klijenata.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494428"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617986"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -24,8 +24,7 @@ Kombinujte aktivnosti klijenata iz [raznih izvora podataka](data-sources.md) u u
 
 Vaši izvori podataka mogu da uključe entitete koji imaju podatke o transakcijama i aktivnostima iz više izvora podataka. Identifikujte ove entitete i izaberite aktivnosti koje želite da vidite na vremenskoj osi klijenta. Odaberite entitet koji uključuje vaše ciljne aktivnosti ili aktivnosti.
 
-> [!NOTE]
-> Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u vremensku osu klijenta i dodavati entitete koji nemaju polja tipa **Datum**. Kontrola **Dodajte aktivnost** je onemogućena ako nije pronađen takav entitet.
+Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u vremensku osu klijenta i dodavati entitete koji nemaju polja tipa **Datum**. Kontrola **Dodajte aktivnost** je onemogućena ako nije pronađen takav entitet.
 
 1. U uvidima o korisnicima idite na **Podaci** > **Aktivnosti**.
 
@@ -41,13 +40,16 @@ Vaši izvori podataka mogu da uključe entitete koji imaju podatke o transakcija
 
 1. Izaberite **Sledeće** da pređete na sledeći korak.
 
-1. U koraku **Relacija** konfigurišite detalje za povezivanje podataka o aktivnostima sa odgovarajućim klijentom. Ovaj korak vizualizuje vezu između entiteta.  
+1. U koraku **Odnos**, konfigurišite detalje za povezivanje podataka o aktivnostima sa odgovarajućim zapisom klijenta. Ovaj korak vizualizuje vezu između entiteta.  
 
    - **Prvi**: Strano polje u entitetu aktivnosti koje će se koristiti za uspostavljanje relacije sa drugim entitetom.
    - **Drugi**: Odgovarajući izvorni entitet klijenta sa kojim će vaš entitet aktivnosti biti u relaciji. Možete se povezati samo sa izvornim entitetima klijenata koji se koriste u procesu objedinjavanja podataka.
    - **Treći**: Ako relacija između ovog entiteta aktivnosti i izabranog izvornog entiteta klijenta već postoji, naziv relacije će biti u režimu samo za čitanje. Ako takva relacija ne postoji, stvoriće se nova relacija sa imenom koje navedete u ovom polju.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisanje relacije između entiteta.":::
+
+   > [!TIP]
+   > U B2B okruženjima možete izabrati između entiteta poslovnog kontakta i drugih entiteta. Ako izaberete entitet poslovnog kontakta, putanja odnosa se automatski postavlja. Za druge entitete morate definisati putanju odnosa preko jednog ili više posredničkih entiteta dok ne dođete do entiteta poslovnog kontakta.
 
 1. Izaberite **Sledeće** da pređete na sledeći korak. 
 
@@ -95,5 +97,34 @@ Sledeće radnje su dostupne kada izaberete aktivnost.
 - **Preimenuj**: Otvara dijalog u koji možete uneti drugo ime za izabranu aktivnost. Izaberite **Sačuvaj** da primenite promene.
 
 - **Izbriši**: Otvara dijalog za potvrdu brisanja izabrane aktivnosti. Takođe možete izbrisati više aktivnosti odjednom tako što ćete izabrati aktivnosti, a zatim izabrati ikonu za brisanje. Izaberite **Izbriši** da biste potvrdili brisanje.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Prikaz vremenskih osa aktivnosti na profilima klijenata
+
+Nakon što ste konfigurisali aktivnosti klijenta, izaberite **Prikaži na vremenskoj osi aktivnosti** u konfiguraciji aktivnosti da biste pronašli sve aktivnosti klijenta na profilu klijentu.
+
+Da biste otvorili vremensku osu za klijenta, idite na **Klijenti** i izaberite profil klijenta koji želite da prikažete.
+
+Ako je klijent učestvovao u aktivnosti koju ste konfigurisali, naći ćete je u odeljku **Vremenska osa aktivnosti**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Prikažite konfigurisane aktivnosti u profilima klijenata.":::
+
+Postoji nekoliko načina za filtriranje aktivnosti na vremenskoj osi aktivnosti:
+
+- Možete izabrati jednu ili više ikona aktivnosti da biste precizirali rezultate tako da obuhvataju samo izabrane tipove.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrirajte aktivnosti prema tipu koristeći ikone.":::
+
+- Možete izabrati **Filter** da biste otvorili tablu sa filterima kako biste konfigurisali filtere vremenske ose.
+
+   1. Možete filtrirati prema *ActivityType* i *Datum*
+   1. Izaberite **Primeni** da biste koristili filtere na vremenskoj osi aktivnosti.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Koristite tablu filtera za konfigurisanje uslova filtera.":::
+
+Da biste uklonili filtere, izaberite **x** pored svakog filtera primenjenog na vremensku osu ili izaberite **Obriši filtere**.
+
+
+> [!NOTE]
+> Filteri aktivnosti se uklanjaju kada napustite profil klijenta. Morate ih primeniti svaki put kada otvorite profil klijenta.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

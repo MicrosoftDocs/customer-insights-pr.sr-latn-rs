@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u Microsoft Advertising
 description: Saznajte kako da konfigurišete vezu i izvezete sadržaj u Microsoft Advertising.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8f8a4cbb9590f9c5311789154319283530e0a10343cccbe9c7aec99765b4fbf2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 12fd221acb7c0eed443c9b860aca42dcb2b3788c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031489"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618078"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Izvoz segmenata u Microsoft Advertising (verzija za pregled)
 
@@ -29,9 +29,9 @@ Izvezite Customer Insights segmente u Microsoft Advertising da biste kreirali ci
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 500.000 profila po izvozu u Microsoft Advertising.
+- Možete izvoziti do 500.000 profila klijenata po izvozu u Microsoft Advertising.
 - Izvoz u Microsoft Advertising ograničen je na segmente.
-- Izvoz do 500.000 profila u Microsoft Advertising može potrajati do 10 minuta. 
+- Izvoz do 500.000 profila klijenata u Microsoft Advertising može potrajati do 10 minuta. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Podešavanje veze sa uslugom Microsoft Advertising
@@ -68,7 +68,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite svoj **ID Microsoft Advertising klijenta i ID naloga**. Možete pronaći ID klijenta (`cid`) i ID poslovnog kontakta (`aid`) u parametrima URL adrese kada se prijavite u Microsoft Advertising.
 
-1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje u vašem objedinjenom profilu klijenta sa e-adresom klijenta. Potrebno je da izvezete segmente u Microsoft Advertising.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje sa e-adresom klijenta. Potrebno je da izvezete segmente u Microsoft Advertising.
 
 1. Izaberite stavku **Sačuvaj**.
 

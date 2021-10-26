@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Mailchimp
 description: Saznajte kako da konfigurišete vezu i izvezete u Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033556"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618631"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Izvoz segmenata u Mailchimp (verzija za pregled)
 
@@ -29,10 +29,10 @@ Izvezite segmente objedinjenih profila klijenata u Mailchimp da biste kreirali b
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milion profila po izvozu u usluzi Mailchimp.
+- Do milion profila klijenata po izvozu u Mailchimp.
 - Izvoz u Mailchimp je ograničen na segmente.
-- Izvoz segmenata sa 1 milion profila može trajati do tri sata. 
-- Broj profila koje možete da izvezete u Mailchimp zavisi od i ograničen je vašim ugovorom sa kompanijom Mailchimp.
+- Izvoz segmenata sa milion profila klijenata može potrajati do tri sata. 
+- Broj profila klijenata koje možete izvesti u Mailchimp zavisi i ograničen je na vaš ugovor sa Mailchimp-om.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Podešavanje veze sa uslugom Mailchimp
 
@@ -66,7 +66,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite **[ID ciljne grupe za Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. 
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. 
 
 1. Opcionalno, možete da izvezete **Ime** i **Prezime** da biste kreirali personalizovanije e-poruke. Izaberite **Dodaj atribut** za mapiranje ovih polja.
 

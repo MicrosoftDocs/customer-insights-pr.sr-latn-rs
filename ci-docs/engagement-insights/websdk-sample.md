@@ -4,17 +4,17 @@ description: Saznajte kako da personalizujete i pokrenete veb SDK uzorak.
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036620"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606264"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Pokrenite veb SKD uzorak za Dynamics 365 Customer Insights mogućnost uvida u angažovanje
 
@@ -26,7 +26,7 @@ Veb SDK biblioteka mogućnosti uvida u angažovanje je JavaScript biblioteka sa 
 
 - Instalirajte [Visual Studio Code](https://code.visualstudio.com/).
 - [Instalirajte Live Server proširenje](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) u Visual Studio Code uređivaču i upoznajte se kako da pokrećete Live Server.
-- Morate imati [ključ za unos](instrument-website.md).
+- Morate imati [radni prostor uvidi u angažovanje](create-workspace.md).
 
 ## <a name="run-sample"></a>Pokretanje uzorka
 
@@ -36,7 +36,11 @@ Veb SDK biblioteka mogućnosti uvida u angažovanje je JavaScript biblioteka sa 
 
 1. Otvorite raspakovanu fasciklu u Visual Studio Code.
 
-1. U `ei_websdk_sample.html` datoteci, zamenite nisku „KLJUČ ZA UNOS“ ključem za unos sa portala mogućnosti uvida u angažovanje, a nisku „NAZIV“ globalnim nazivom za koji želite da vežete SDK instancu. Obavezno zamenite na svim mestima.
+1. Idite na portal uvida u angažovanje za svoj radni prostor. Izaberite **Administrator** > **Radni prostor** i onda **Uputstvo za instalaciju**. Pratite prvu opciju i izaberite **Kopiraj kod** da biste kopirali JavaScript isečak koda.
+
+1. U datoteci `ei_websdk_sample.html`, ispod ove linije nalepite isečak koda koji ste upravo kopirali:
+
+   - <-- NALEPITE JAVASCRIPT ISEČAK KODA SA PORTALA UVIDA U ANGAŽOVANJE OVDE ISPOD OVE LINIJE -->
 
 1. Otvorite `ei_websdk_sample.html` datoteku koristeći Live Server u rešenju Visual Studio Code tako što ćete izabrati **Izvedi uživo** sa statusne trake.
 

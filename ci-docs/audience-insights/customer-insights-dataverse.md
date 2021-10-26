@@ -1,7 +1,7 @@
 ---
 title: Customer Insights podaci u platformi Microsoft Dataverse
 description: Koristite Customer Insights entitete kao tabele u platformi Microsoft Dataverse.
-ms.date: 06/15/2021
+ms.date: 10/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 45535a7368b89e19a91f08fcd825bda9d57a8709653104bf4043c29ffa14d0b8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032913"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645235"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
@@ -24,11 +24,7 @@ Customer Insights pruža mogućnost omogućavanja dostupnosti izlaznih entiteta 
 
 **Organizacije sa postojećim Dataverse okruženjem**
 
-Organizacije koje već koriste Dataverse mogu da [koristi jedno od svojih postojećih Dataverse okruženja](get-started-paid.md) kada administrator postavi uvide u ciljne grupe. Navođenjem URL adrese za Dataverse okruženje, vezuje se za njihovo novo okruženje za uvide u ciljnu grupu. Da bi se obezbedile najbolje moguće performanse, Customer Insights i Dataverse okruženja moraju biti hostovani u istom regionu.
-
-Da biste priložili Dataverse okruženje, proširite **Napredna podešavanja** prilikom kreiranja okruženja za uvide u ciljnu grupu. Navedite **URL adresu za Microsoft Dataverse okruženje** i označite polje za potvrdu **Omogući deljenje podataka**.
-
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="altnernativno.":::
+Organizacije koje već koriste Dataverse mogu da [koristi jedno od svojih postojećih Dataverse okruženja](create-environment.md) kada administrator postavi uvide u ciljne grupe. Navođenjem URL adrese za Dataverse okruženje, vezuje se za njihovo novo okruženje za uvide u ciljnu grupu. Da bi se obezbedile najbolje moguće performanse, Customer Insights i Dataverse okruženja moraju biti hostovani u istom regionu.
 
 **Nova organizacija**
 

@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
+ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483542"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645189"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 
 Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Čitajte dalje da biste saznali kako da povežete uslugu Dynamics 365 Customer Insights sa Azure Data Lake Storage nalogom koristeći principala usluge Azure umesto ključeva naloga za skladištenje. 
 
-Možete koristiti principala usluge da bezbedno [dodate ili uredite Common Data Service fasciklu kao izvor podataka](connect-common-data-model.md) ili da [kreirate ili ažurirate okruženje](get-started-paid.md).
+Možete koristiti principala usluge da bezbedno [dodate ili uredite Common Data Service fasciklu kao izvor podataka](connect-common-data-model.md) ili da [kreirate ili ažurirate okruženje](create-environment.md).
 
 > [!IMPORTANT]
 > - Data Lake Storage nalog koji će koristiti principala usluge mora imati [omogućen hijerarhijski prostor za ime](/azure/storage/blobs/data-lake-storage-namespace).

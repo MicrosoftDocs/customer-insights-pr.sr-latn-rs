@@ -1,7 +1,7 @@
 ---
 title: Stranica Početak u uvidima o korisnicima
 description: Počnite da istražujete aplikaciju na stranici Početak.
-ms.date: 08/26/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 55c0313d1dbf7fb6774c058a6784cf02821d9133
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 4ab5497024cb15b103e96b0fc9a2e0739fd4691c
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470026"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617711"
 ---
 # <a name="explore-audience-insights"></a>Istražite uvide u ciljnu grupu
 
@@ -23,7 +23,7 @@ Stranica **Početak** prikazuje pregled segmenata, mera i podataka o obogaćivan
 
 :::image type="content" source="media/home-page.png" alt-text="Snimak ekrana početnog ekrana koji prikazuje primere uvida.":::
 
-1 - Prelazite između Customer Insights mogućnosti 2 - Koristite levo okno za kretanje kroz različite oblasti 3 - Saznajte u kom okruženju radite i upravljajte okruženjima kao administrator 4 - Navedite lična podešavanja za Customer Insights
+1 – Prebacivanje između mogućnosti programa Customer Insights 2 – Koristite levo okno za navigaciju između različitih oblasti i izaberite primarnu ciljnu grupu 3 – Saznajte u kom okruženju radite i upravljajte okruženjima kao administrator 4 – Navedite lična podešavanja za Customer Insights
 
 U odeljku **Nedavni segmenti**, vidite grupe klijenata na osnovu atributa demografije, ponašanja ili transakcija koje ste definisali. [Kreiranje segmenata](segments.md) pomaže vam da grupišete bazu klijenata i bolje ciljate svoje poslovne aktivnosti.
 

@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465222"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606125"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Ispravke za septembar 2021.
+
+Ažuriranja u septembru 2021. uključuju nove funkcije, nadogradnje performansi i ispravke grešaka.
+
+### <a name="activities"></a>Aktivnosti
+
+- **Poboljšanja vremenske ose aktivnosti** Produžili smo filtere za vremensku osu aktivnosti na profilima klijenata. Osim toga, možete koristiti novo okno filtera za filtriranje prema tipu aktivnosti i prema datumu. Datumi se mogu filtrirati prema različitim uslovima. Za više informacija pogledajte [Prikaz vremenske ose aktivnosti na profilima klijenata](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relacije
+
+- **Podrška za više skokova** Koristite relacije sa više skokova prilikom konfigurisanja aktivnosti i definisanja odnosa između entiteta. Odnosi sa više skokova koriste posrednički entitet za povezivanje dva entiteta. Kada konfigurišete aktivnost, možete koristiti odnos između više skokova za povezivanje entiteta aktivnosti sa posrednim entitetom, a zatim sa entitetom klijenta. Možete kombinovati odnose sa više skokova sa odnosima sa više putanja. Za više informacija pogledajte [Odnos sa više skokova](relationships.md#multi-hop-relationship).
+
+- **Podrška za više putanja** Koristite relacije sa više putanja prilikom konfigurisanja aktivnosti i definisanja odnosa između entiteta. Odnosi sa više putanja povezuju izvorni entitet sa više od jednog entiteta. Kada konfigurišete aktivnost, možete koristiti odnos između više putanja za povezivanje entiteta aktivnosti sa više entiteta klijenta. Možete kombinovati odnose sa više putanja sa odnosima sa više skokova. Za više informacija pogledajte [Odnos sa više putanja](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Ispravke za avgust 2021.
 

@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Autopilot
 description: Saznajte kako da konfigurišete vezu i izvezete u Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032042"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618446"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Izvoz segmenata u Autopilot (verzija za pregled)
 
@@ -28,10 +28,10 @@ Izvezite segmente objedinjenih profila klijenata u Autopilot i koristite ih za m
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- U uslugu Autopilot možete da izvezete ukupno do 100.000 profila.
+- Možete izvoziti do 100.000 profila klijenata ukupno u Autopilot.
 - Izvoz u Autopilot je ograničen na segmente.
-- Izvoz do 100.000 profila u Autopilot može da potraje do nekoliko sati. 
-- Broj profila koje možete da izvezete u Autopilot zavisi od vašeg ugovora sa kompanijom Autopilot i ograničen je njime.
+- Izvoz do 100.000 profila klijenata u Autopilot može potrajati nekoliko časova. 
+- Broj profila klijenata koje možete izvesti u Autopilot zavisi i ograničen je na vaš ugovor sa Autopilot-om.
 
 ## <a name="set-up-connection-to-autopilot"></a>Podešavanje veze sa uslugom Autopilot
 
@@ -43,7 +43,7 @@ Izvezite segmente objedinjenih profila klijenata u Autopilot i koristite ih za m
 
 1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Unesite svoj [API ključ za Autopilot](https://autopilot.docs.apiary.io/#).
+1. Unesite svoj [API ključ za Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.
 
@@ -63,7 +63,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Autopilot. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
-3. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite iste korake za druga opcionalna polja kao što su **Ime**, **Prezime**.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. Ponovite iste korake za druga opcionalna polja kao što su **Ime**, **Prezime**.
 
 1. Izaberite segmente koje želite da izvezete. Izričito **preporučujemo da ne izvozite ukupno više od 100.000 profila klijenata** u Autopilot. 
 

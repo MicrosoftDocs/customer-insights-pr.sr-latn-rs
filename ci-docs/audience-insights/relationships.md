@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557369"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623186"
 ---
 # <a name="relationships-between-entities"></a>Relacije između entiteta
 
@@ -67,6 +67,20 @@ Relacija se sastoji od *izvornog entiteta* koji sadrži strani ključ i *ciljni 
    - **Polje ciljnog ključa**: Polje ključa ciljnog entiteta. Primer „Klijent“ bi mogao da koristi polje ključa **CustomerID**.
 
 4. Izaberite **Sačuvaj** da biste kreirali prilagođenu relaciju.
+
+## <a name="set-up-account-hierarchies"></a>Podešavanje hijerarhija naloga
+
+Okruženja koja su konfigurisana da koriste poslovne naloge kao primarnu ciljnu grupu mogu da konfigurišu hijerarhije naloga za povezane poslovne naloge. Na primer, preduzeće koje ima zasebne poslovne jedinice. 
+
+Organizacije kreiraju hijerarhije naloga radi boljeg upravljanja nalozima i njihovim međusobnim odnosima. Mogućnost uvida u ciljnu grupu podržava hijerarhije naloga nadređeno-podređeno koje već postoje u unetim podacima o klijentima. Na primer, nalozi iz usluge Dynamics 365 Sales. Ove hijerarhije se mogu konfigurisati na stranici **Odnosi** u uvidima u ciljnu grupu, na kartici hijerarhija naloga.
+
+1. Idite na **Podaci** > **Odnosi**.
+1. Izaberite karticu **Hijerarhija naloga**.
+1. Izaberite **Hijerarhiju novog naloga**. 
+1. U oknu **Hijerarhija naloga**, navedite naziv za hijerarhiju. Sistem kreira naziv za izlazni entitet. Možete promeniti naziv entiteta izlaznog imena.
+1. Izaberite entitet koji sadrži hijerarhiju naloga. Obično se nalazi u istom entitetu koji sadrži naloge.
+1. Izaberite **ID naloga** i **ID nadređenog naloga** iz izabranog entiteta 
+1. Izaberite **Sačuvaj** da biste primenili podešavanja i dovršili hijerarhiju naloga.
 
 ## <a name="view-relationships"></a>Prikaz relacija
 

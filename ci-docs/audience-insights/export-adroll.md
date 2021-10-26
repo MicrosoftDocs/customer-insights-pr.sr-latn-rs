@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u AdRoll
 description: Saznajte kako da konfigurišete vezu i izvezete u AdRoll.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e48f67ec21bb9b883dd30544ccf4dcfbf487acb1abaf0a0557764bc3d955e41a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f9373ea18e77723c988392a5a2959baa66d8eae9
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032088"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617366"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Izvoz segmenata u AdRoll (verzija za pregled)
 
@@ -28,11 +28,11 @@ Izvezite segmente objedinjenih profila klijenata u AdRoll i koristite ih za ogla
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Odjednom možete da izvezete najviše 250.000 profila u AdRoll.
-- U AdRoll ne možete da izvezete segmente sa manje od 100 profila. 
+- U AdRoll možete istovremeno izvoziti do 250.000 profila klijenata.
+- Ne možete izvoziti segmente sa manje od 100 profila klijenata u AdRoll. 
 - Izvoz u AdRoll je ograničen na segmente.
-- Izvoz do 250.000 profila u AdRoll može da potraje do 10 minuta. 
-- Broj profila koje možete da izvezete u AdRoll zavisi od vašeg ugovora sa uslugom AdRoll.
+- Izvoz do 250.000 profila klijenata u AdRoll može potrajati do 10 minuta. 
+- Broj profila klijenata koje možete izvesti u AdRoll zavisi od vašeg ugovora sa AdRoll-om.
 
 ## <a name="set-up-connection-to-adroll"></a>Podešavanje veze u usluzi AdRoll
 
@@ -66,7 +66,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite svoj **ID AdRoll oglašavača**. Za više informacija, pogledajte članak [Profili AdRoll oglašavača](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. To je potrebno za izvoz segmenata u AdRoll.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. To je potrebno za izvoz segmenata u AdRoll.
 
 1. Izaberite segmente koje želite da izvezete. Izaberite segment sa najmanje 100 članova. Ne možete izvoziti manje segmente. Pored toga, maksimalna veličina segmenta za izvoz je 250.000 članova po izvozu. 
 

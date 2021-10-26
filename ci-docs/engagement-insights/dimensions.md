@@ -4,17 +4,17 @@ description: Kako da kreirate, uređujete i brišete aspekte.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034014"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623649"
 ---
 # <a name="view-and-create-dimensions"></a>Prikaz i kreiranje dimenzija
 
@@ -22,7 +22,7 @@ ms.locfileid: "7034014"
 
 Aspekt je atribut događaja koji može da opiše, filtrira ili grupiše podatke. Ako na svojoj veb-lokaciji vodite marketinšku promociju, možete da koristite aspekte za sortiranje posetilaca po novim i ponovnim korisnicima.  
 
-Uvid u angažovanje uključuje gotove aspekte za svojstva događaja. Primeri uključuju sledeće:
+Uvid u angažovanje uključuje gotove (OOB) dimenzije za svojstva događaja. Primeri uključuju sledeće:
 
 - Naziv pregledača
 - Ime stranice
@@ -44,17 +44,21 @@ Aspekti se zasnivaju na postojećim svojstvima događaja. Kada koristite kôd za
 Pored sistemski generisanih aspekata, administratori okruženja i radnih prostora mogu da kreiraju prilagođene aspekte. Prilagođeni aspekti se zasnivaju na podrazumevanim svojstvima osnovnih događaja ili ih mogu koristiti [prilagođena svojstva događaja](advanced-SDK-implementation.md).
 
 1. Idite na **Podaci** > **Aspekti**.
-1. Izaberite **Dodaj aspekt**.
+1. Izaberite **Nova dimenzija**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Dodavanje aspekta događaju.":::
 
 1. U oknu **Kreiranje aspekta** izaberite svojstvo na kojem će se aspekt zasnivati. Lista svojstava prikazaće sva svojstva u radnom prostoru koja nisu dodeljena aspektu.
-1. Unesite naziv u polje **Ime za prikaz**. Opcionalno, možete dodati opis.
-1. Izaberite **Kreiraj** da biste sačuvali aspekt. Može potrajati do jednog minuta da biste počeli da koristite aspekt u [prilagođenom izveštaju](custom-reports.md) ili [segmentu](segments.md). 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Kreirajte novu dimenziju.":::
+      
+3. Unesite naziv u polje **Ime za prikaz**. Opcionalno, možete dodati **Opis**.
+4. Izaberite **Kreiraj** da biste sačuvali aspekt. Može potrajati do jednog minuta da biste počeli da koristite aspekt u [prilagođenom izveštaju](custom-reports.md) ili [segmentu](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Uređivanje aspekta
 
-Možete da promenite naziv i opis aspekta.
+Možete da promenite naziv i opis aspekta. Možete da uređujete samo dimenzije koje su kreirali korisnici, ali ne i sistemske dimenzije.
+
 
 1. Idite na **Podaci** > **Aspekti**.
 1. Izaberite aspekt koji želite da izbrišete.

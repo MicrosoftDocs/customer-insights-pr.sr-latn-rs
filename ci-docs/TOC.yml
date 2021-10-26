@@ -2,8 +2,14 @@
   href: index.yml
 - name: Pregled proizvoda
   href: overview.md
-- name: Kreiranje probne verzije
-  href: audience-insights/get-started-trial.md
+- name: Besplatna probna verzija
+  items:
+    - name: Upisivanje za besplatnu verziju
+      href: trial-signup.md
+    - name: Česta pitanja o probnoj verziji
+      href: trial-FAQ.md
+- name: Započnite sa licencom koja se plaća
+  href: paid-license.md
 - name: Pristup okruženju
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Uvidi u ciljnu grupu
@@ -18,10 +24,12 @@
       items:
         - name: Vodič za brzi početak
           href: audience-insights/get-started.md
-        - name: Kreiranje novog okruženja
-          href: audience-insights/get-started-paid.md
+        - name: Kreirajte novo okruženje
+          href: audience-insights/create-environment.md
         - name: Istražite uvide u ciljnu grupu
           href: audience-insights/home.md
+    - name: Rad sa poslovnim nalozima
+      href: audience-insights/work-with-business-accounts.md
     - name: Upoznavanje modula
       items:
         - name: Unesite podatke
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Listanje aktivnosti za klijenta
           href: audience-insights/activities.md
+        - name: Definisanje semantičkih mapiranja
+          href: audience-insights/semantic-mappings.md
     - name: Obogaćivanje podataka
       items:
         - name: Obogaćivanje profila klijenata
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Predviđanje gubitka pretplata
               href: audience-insights/predict-subscription-churn.md
-            - name: Predvidite gubitak transakcija
+            - name: Predviđanje gubitka transakcija
               href: audience-insights/predict-transactional-churn.md
             - name: Korišćenje prilagođenih modela iz Azure mašinskog učenja
               href: audience-insights/custom-models.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Upravljanje sa više okruženja
           href: audience-insights/manage-environments.md
-        - name: Povežite se sa ADLS nalogom za skladištenje pomoću principala usluge
-          href: audience-insights/connect-service-principal.md
         - name: Podržani jezici
           href: audience-insights/supported-languages.md
+        - name: Bezbednost
+          items:
+            - name: Donesite sopstveni Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Povežite se sa ADLS nalogom za skladištenje pomoću principala usluge
+              href: audience-insights/connect-service-principal.md
     - name: Proširivost
       items:
         - name: Integrišite veb-podatke iz uvida u angažovanje
@@ -248,6 +262,8 @@
       items:
         - name: Vodič za brzi početak
           href: engagement-insights/get-started.md
+        - name: Kreiranje okruženja
+          href: engagement-insights/create-new-environment.md
         - name: Kreiranje radnog prostora
           href: engagement-insights/create-workspace.md
         - name: Beleženje događaja iz veb-lokacija i aplikacija za mobilne uređaje

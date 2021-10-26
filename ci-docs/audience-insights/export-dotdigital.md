@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u DotDigital
 description: Saznajte kako da konfigurišete vezu i izvezete u DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034653"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618400"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Izvoz segmenata u DotDigital (verzija za pregled)
 
@@ -22,17 +22,17 @@ Izvezite segmente objedinjenih profila kupaca u DotDigital adresare i koristite 
 
 ## <a name="prerequisites-for-a-connection"></a>Preduslovi za vezu
 
--   Imate [DotDigital nalog](https://dotdigital.com/) i odgovarajuće akreditive administratora.
+-   Imate [DotDigital nalog](https://dotdigital.com/) i kreirali ste [API korisnika](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Da biste kreirali vezu, morate da koristite akreditive API korisnika
 -   Postoji postojeća publika u adresarima u usluzi DotDigital i odgovarajući ID-ovi. ID se može naći u URL-u kada odaberete i otvorite adresar. Za više informacija pogledajte [adresare za DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   [Konfigurisali ste segmente](segments.md) u uvidima o korisnicima.
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milion profila po izvozu u usluzi DotDigital.
+- Do milion profila klijenata po izvozu u DotDigital.
 - Izvoz u DotDigital je ograničen na segmente.
-- Izvoz segmenata sa ukupno 1 milion profila može trajati do 3 sata zbog ograničenja na strani dobavljača. 
-- Broj profila koje možete da izvezete u DotDigital zavisi od i ograničen je vašim ugovorom sa kompanijom DotDigital.
+- Izvoz segmenata sa ukupno milion profila klijenata može potrajati do 3 sata zbog ograničenja na strani provajdera. 
+- Broj profila klijenata koje možete izvesti u DotDigital zavisi i ograničen je na vaš ugovor sa DotDigital-om.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Podešavanje veze u usluzi DotDigital
 
@@ -44,7 +44,7 @@ Izvezite segmente objedinjenih profila kupaca u DotDigital adresare i koristite 
 
 1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Unesite svoje **korisničko ime i lozinku za DotDigital**.
+1. Unesite svoje **korisničko ime i lozinku za DotDigital API**. 
 
 1. Unesite **[ID DotDigital adresara](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 1. U polju **Veza za izvoz**, odaberite vezu iz odeljka DotDigital. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Ponovite iste korake za druga opcionalna polja kao što su **Ime**, **Prezime**, **Puno ime**, **Pol** i **Poštanski broj**.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. Ponovite iste korake za druga opcionalna polja kao što su **Ime**, **Prezime**, **Puno ime**, **Pol** i **Poštanski broj**.
 
 1. Izaberite segmente koje želite da izvezete. U usluzi DotDigital možete ukupno izvesti do 1 milion korisničkih profila.
 

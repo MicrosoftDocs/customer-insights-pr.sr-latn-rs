@@ -4,17 +4,17 @@ description: Kako da kreirate, preimenujete i brišete radne prostore i okružen
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486052"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645463"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljajte okruženjima i radnim prostorima
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486052"
 
 ## <a name="overview"></a>Pregled
 
-Radni prostor je prostor za skladištenje i upravljanje događajima i izveštajima. Tu možete u realnom vremenu prikazivati aktivnosti korisnika. Kada kreirate radni prostor, izaberite vrstu podataka koju želite da pošaljete u radni prostor. Trenutno su podržani veb-podaci i aplikacije za mobilne uređaje.
+Ova tema govori o tome kako upravljati radnim prostorima i okruženjima nakon što su već kreirani. 
 
-Okruženje je prostor u kojem upravljate svojim radnim prostorima i vezama. Način na koji koristite okruženja zavisi od vaše organizacije i slučaja upotrebe. Na primer, možete da kreirate:
+- *Radni prostor* je prostor za skladištenje i upravljanje događajima i izveštajima. Tu možete u realnom vremenu prikazivati aktivnosti korisnika. Kada kreirate radni prostor, izaberite vrstu podataka koju želite da pošaljete u radni prostor. Trenutno su podržani veb-podaci i aplikacije za mobilne uređaje. Za više informacija pogledajte [Kreiranje radnog prostora i dodavanje članova](create-workspace.md).
 
--   Jedno okruženje.
--   Zasebna okruženja za testiranje i proizvodnju.
--   Zasebna okruženja za određene timove ili odeljenja u vašoj organizaciji koja sadrže relevantne događaje za svaku ciljnu grupu.
--   Zasebna okruženja za različite globalne ogranke vaše kompanije.
--   Veze sa Customer Insights mogućnošću uvida u ciljnu grupu.
+- *Okruženje* je prostor u kojem upravljate svojim radnim prostorima i vezama. Više informacija potražite u članku [Kreiranje novog okruženja](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Odabir okruženja i kreiranje radnog prostora 
-
-Svaki radni prostor mora biti u okruženju. Možete da izaberete prethodno postojeće okruženje ili da napravite novo kada kreirate radni prostor. Tada možete odabrati da dodate članove radnog prostora i započnete sa prikupljanjem podataka.
-
-**Da biste kreirali prvi radni prostor**
-
-1. U uvidima u angažovanje, izaberite **Novo** iz promene radnog prostora. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Birač radnog prostora Customer Insights stranice.":::
-
-1. Odaberite okruženje sa liste ili izaberite **Kreiraj novo okruženje**.
-
-1. Unesite naziv u **Naziv radnog prostora**. 
-
-1. Izaberite tip okruženja koje želite da kreirate, u zavisnosti od toga da li želite da merite šta se dešava na veb-lokaciji ili u aplikaciji za mobilne uređaje. 
-
-1. Možete da dodajete članove i dodeljujete nivo njihovih dozvola sa liste **Uloga**. Zatim izaberite **Završi** da biste kreirali radni prostor ili **Sledeće** da biste instalirali kôd. 
-
-1. Instalirajte isečak koda da biste počeli da primate podatke, a zatim izaberite **Gotovo**. 
-
-## <a name="manage-a-workspace"></a>Upravljanje radnim prostorom
+## <a name="manage-an-existing-workspace"></a>Upravljanje postojećim radnim prostorom
 
 Možete istovremeno održavati više radnih prostora u okruženju. Vaša [uloga](user-roles.md) određuje kako možete raditi u njima. 
 
  - Morate biti administrator okruženja ili administrator radnog prostora da biste upravljali radnim prostorom.
  - Kao administrator radnog prostora, možete preimenovati postojeće radne prostore ili ih izbrisati. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centar administratora radnog prostora.":::
 
 ### <a name="edit-a-workspace-name"></a>Uređivanje naziva radnog prostora
 
@@ -75,7 +53,7 @@ Brisanje radnog prostora trajno će ukloniti sav njegov sadržaj, podatke, pode�
 
 1. Izaberite **Brisanje radnog prostora**. 
 
-1. U dijalogu **Brisanje radnog prostora** unesite **POTVRDI BRISANJE**. 
+1. U dijalogu **Brisanje radnog prostora** unesite **POTVRDI BRISANJE** velikim slovima. 
 
 1. Izaberite **Izbriši** da biste trajno izbrisali radni prostor.
 
@@ -87,27 +65,11 @@ Brisanje radnog prostora trajno će ukloniti sav njegov sadržaj, podatke, pode�
 
 1. Izaberite **Dodaj članove** da biste ih dodali u svoj radni prostor.
 
-## <a name="manage-an-environment"></a>Upravljanje okruženjem
+## <a name="manage-an-existing-environment"></a>Upravljajte postojećim okruženjem
 
 Kao administrator okruženja, okruženju možete pristupiti iz levog okna za navigaciju. Možete da konfigurišete podešavanja okruženja, druge administratore okruženja i radne prostore. Izaberite kartice da biste se kretali između različitih oblasti u centru administracije.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centar administracije okruženja.":::
-
-### <a name="create-an-environment"></a>Kreiranje okruženja
-
-1. U biraču radnog prostora, izaberite **+Novo**.
-
-1. U vođenom iskustvu, otvorite padajući meni **Okruženje** i izaberite **Kreiraj novo okruženje**. 
-
-1. Navedite **Naziv okruženja**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Zakoračite u vođeno iskustvo da biste naveli detalje o okruženju.":::
-
-1. Odaberite **Region** i izaberite **Dalje**. 
-
-1. Navedite naziv radnog prostora i odaberite tip radnog prostora koji želite da kreirate. 
-
-1.  Opciono dodajte članove i kopirajte fragment koda da biste dovršili proces kreiranja.
+:::image type="content" source="media/environment-edit.png" alt-text="Centar administracije okruženja.":::
 
 ### <a name="rename-an-environment"></a>Preimenujte okruženje
 
@@ -131,7 +93,7 @@ Administratori okruženja mogu brisati okruženja. Pre nego što izbrišete okru
 
 1. Izaberite **Brisanje okruženja**. 
 
-1. U dijalogu **Brisanje radnog prostora** unesite **POTVRDI BRISANJE**. 
+1. U dijalogu **Brisanje radnog prostora** unesite **POTVRDI BRISANJE** velikim slovima. 
 
 1. Izaberite **Izbriši** kako biste trajno izbrisali okruženje.
 

@@ -1,7 +1,7 @@
 ---
 title: Kreiranje mera i upravljanje njima
 description: Definišite mere za analizu i odraz učinka vašeg poslovanja.
-ms.date: 04/12/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3593a02ce89233cf1e66c6beee669dd6dd261ba3b0e1d2d0cc966731349d7d0b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7037025"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622987"
 ---
 # <a name="define-and-manage-measures"></a>Definišite i upravljajte merama
 
@@ -26,15 +26,15 @@ Koristite kreator mera za planiranje poslovnih aktivnosti tako što ćete potra�
 
 ## <a name="build-your-own-measure-from-scratch"></a>Napravite sopstvenu meru ispočetka
 
-Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite meru sa atributima podataka od entiteta podataka koji imaju uspostavljenu relaciju za povezivanje sa entitetom Klijent. 
+Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da napravite meru sa atributima podataka iz entiteta podataka koji imaju uspostavljen odnos za povezivanje sa objedinjenim entitetom profila klijenta.
+
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
 
 1. U uvidima o korisnicima idite na **Mere**.
 
 1. Izaberite **Nova** i birajte **Napravite sopstvenu**.
 
 1. Izaberite **Uređivanje naziva** i navedite **Naziv** za meru. 
-   > [!NOTE]
-   > Ako vaša nova konfiguracija mere ima samo dva polja – npr. CustomerID i jedan proračun – izlaz će biti dodat kao nova kolona sistemski generisanom entitetu pod nazivom Customer_Measure. I moći ćete da vidite vrednost mere u objedinjenom profilu klijenta. Druge mere će generisati sopstvene entitete.
 
 1. U oblasti konfiguracije, odaberite funkciju agregacije iz padajućeg menija **Izaberi funkciju**. Agregatne funkcije uključuju: 
    - **Sum**
@@ -53,7 +53,7 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
    1. Izaberite karticu **Atributi**. 
    1. Entitet podataka: Izaberite entitet koji uključuje atribut koji želite da merite. 
    1. Atribut podataka: Izaberite atribut koji želite da koristite u agregatnoj funkciji za izračunavanje mere. Istovremeno možete da izaberete samo jedan atribut.
-   1. Takođe možete izabrati atribut podataka iz postojeće mere izborom kartice **Mere**. Ili možete da pretražite naziv entiteta ili naziv mere. 
+   1. Takođe možete izabrati atribut podataka iz postojeće mere izborom kartice **Mere** ili možete da pretražite naziv entiteta ili naziv mere. 
    1. Izaberite **Dodaj** da biste meri dodali izabrani atribut.
 
    :::image type="content" source="media/measure-attribute-selection.png" alt-text="Izaberite atribut koji ćete koristiti u proračunima.":::
@@ -73,11 +73,11 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
    1. Izaberite **Uređivanje dimenzija** da biste dodavali atribute podataka po kojima želite da grupišete vrednosti mere. Na primer, grad ili pol. Podrazumevano, dimenzija *CustomerID* se bira za kreiranje *mera na nivou klijenta*. Možete da uklonite podrazumevanu dimenziju ako želite da kreirate *mere na nivou preduzeća*.
    1. Izaberite **Gotovo** da biste meri dodali dimenzije.
 
-1. Ako u vašim podacima postoje vrednosti koje treba da zamenite celim brojem – na primer, da zamenite *null* sa *0* – izaberite **Pravila**. Konfigurišite pravilo i obavezno odaberite samo cele brojeve kao zamenu.
+1. Ako u vašim podacima postoje vrednosti koje morate zameniti celim brojem, izaberite **Pravila**. Konfigurišite pravilo i obavezno odaberite samo cele brojeve kao zamenu. Na primer, zamenite *nula* sa *0*.
 
 1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identifikovanih [putanja relacija između entiteta](relationships.md). Rezultati merenja mogu se razlikovati u zavisnosti od izabrane putanje. 
    
-   1. Izaberite **Željene opcije podataka** i odaberite putanju entiteta koju treba koristiti za identifikaciju vaše mere. Ako postoji samo jedan put do entiteta *Klijent*, ova kontrola se neće prikazati.
+   1. Izaberite **Putanja odnosa** i izaberite putanju entiteta koju treba koristiti za identifikaciju mere. Ako postoji samo jedan put do entiteta *Klijent*, ova kontrola se neće prikazati.
    1. Izaberite **Gotovo** da primenite svoj izbor. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Izaberite putanju entiteta za meru.":::
@@ -92,7 +92,79 @@ Ovaj odeljak vas vodi kroz kreiranje nove mere od početka. Možete da izradite 
 
 1. Idite na **Mere** da biste na listi videli novokreiranu meru.
 
+# <a name="business-accounts-b2b"></a>[Poslovni nalozi (B2B)](#tab/b2b)
+
+1. U uvidima o korisnicima idite na **Mere**.
+
+1. Izaberite **Nova** i birajte **Napravite sopstvenu**.
+
+1. Izaberite **Uređivanje naziva** i navedite **Naziv** za meru. 
+
+1. U oblasti konfiguracije, odaberite funkciju agregacije iz padajućeg menija **Izaberi funkciju**. Agregatne funkcije uključuju: 
+   - **Sum**
+   - **Prosek**
+   - **Brojanje**
+   - **Broj jedinstvenih**
+   - **Maksimalna**
+   - **Min**
+   - **Prvi**: uzima prvu vrednost zapisa podataka
+   - **Poslednji**: uzima poslednju vrednost koja je dodata u zapis podataka
+
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatori za proračun mera.":::
+
+1. Izaberite **Dodaj atribut** da biste izabrali podatke koji su vam potrebni za kreiranje ove mere.
+   
+   1. Izaberite karticu **Atributi**. 
+   1. Entitet podataka: Izaberite entitet koji uključuje atribut koji želite da merite. 
+   1. Atribut podataka: Izaberite atribut koji želite da koristite u agregatnoj funkciji za izračunavanje mere. Istovremeno možete da izaberete samo jedan atribut.
+   1. Takođe možete izabrati atribut podataka iz postojeće mere izborom kartice **Mere** ili možete da pretražite naziv entiteta ili naziv mere. 
+   1. Izaberite **Dodaj** da biste meri dodali izabrani atribut.
+
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Izaberite atribut koji ćete koristiti u proračunima.":::
+
+1. Da biste izgradili složenije mere, možete dodati više atributa ili koristiti matematičke operatore na svojoj funkciji mere.
+
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Kreirajte složenu meru pomoću matematičkih operatora.":::
+
+1. Da biste dodali filtere, izaberite **Filter** u oblasti konfiguracije. 
+  
+   1. U odeljku **Dodaj atribut** okna **Filteri**, izaberite atribut koji želite da koristite za kreiranje filtera.
+   1. Postavite operatore filtera da definišu filter za svaki izabrani atribut.
+   1. Izaberite **Primeni** da biste meri dodali filtere.
+
+1. Da biste dodali dimenzije, izaberite **Dimenzija** u oblasti konfiguracije. Dimenzije će se prikazati kao kolone u izlaznom entitetu mere.
+ 
+   1. Izaberite **Uređivanje dimenzija** da biste dodavali atribute podataka po kojima želite da grupišete vrednosti mere. Na primer, grad ili pol. Podrazumevano, dimenzija *CustomerID* se bira za kreiranje *mera na nivou klijenta*. Možete da uklonite podrazumevanu dimenziju ako želite da kreirate *mere na nivou preduzeća*.
+   1. Izaberite **Gotovo** da biste meri dodali dimenzije.
+
+1. Ako u vašim podacima postoje vrednosti koje morate zameniti celim brojem, izaberite **Pravila**. Konfigurišite pravilo i obavezno odaberite samo cele brojeve kao zamenu. Na primer, zamenite *nula* sa *0*.
+
+1. Možete koristiti prekidač **Sabiranje dodatnih poslovnih kontakata** ako [koristite naloge sa hijerarhijom](relationships.md#set-up-account-hierarchies).
+   - Ako je podešeno na **Isključeno**, mera se izračunava za svaki poslovni kontakt. Svaki poslovni kontakt ima svoj rezultat.
+   - Ako je podešeno na **Uključeno**, izaberite **Uredi** da biste odabrali hijerarhiju poslovnih kontakata prema unetim hijerarhijama. Mera će dati samo jedan rezultat jer je objedinjena sa podnalozima.
+
+1. Ako postoji više putanja između entiteta podataka koji ste mapirali i entiteta *Klijent*, morate odabrati jednu od identifikovanih [putanja relacija između entiteta](relationships.md). Rezultati merenja mogu se razlikovati u zavisnosti od izabrane putanje. 
+   
+   1. Izaberite **Putanja odnosa** i izaberite putanju entiteta koju treba koristiti za identifikaciju mere. Ako postoji samo jedan put do entiteta *Klijent*, ova kontrola se neće prikazati.
+   1. Izaberite **Gotovo** da primenite svoj izbor. 
+
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Izaberite putanju entiteta za meru.":::
+
+1. Izaberite **...** na proračunu da biste **napravili duplikat**, **preimenovali** ili **uklonili** proračun iz mere.
+
+1. U oblasti **Pregled** videćete šemu podataka izlaznog entiteta mere, uključujući filtere i dimenzije. Pregled dinamički reaguje na promene u konfiguraciji.
+
+1. Izaberite **Pokreni** da biste izračunali rezultate za konfigurisanu meru. Izaberite **Sačuvaj i zatvori** ako želite da zadržite trenutnu konfiguraciju i pokrenete meru kasnije.
+
+1. Idite na **Mere** da biste na listi videli novokreiranu meru.
+
+---
+
 ## <a name="use-a-template-to-build-a-measure"></a>Korišćenje predloška za izgradnju mere
+
+Da biste ih kreirali, možete koristiti unapred definisane predloške najčešće korišćenih mera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u efikasnom kreiranju mera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Uverite se da ste konfigurisali [aktivnosti klijenata](activities.md) pre nego što kreirate meru iz predloška.
+
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
 
 Da biste ih kreirali, možete koristiti unapred definisane predloške najčešće korišćenih mera. Detaljni opisi predložaka i vođeno iskustvo pomažu vam u efikasnom kreiranju mera. Predlošci se nadovezuju na mapirane podatke iz entiteta *Objedinjena aktivnost*. Uverite se da ste konfigurisali [aktivnosti klijenata](activities.md) pre nego što kreirate meru iz predloška.
 
@@ -140,6 +212,12 @@ Sledeći postupak opisuje korake za izgradnju nove mere pomoću predloška.
 
 1. Sada možete odabrati **Pokreni** da biste izračunali rezultate mere. Da biste je kasnije precizirali, izaberite **Sačuvaj radnu verziju**.
 
+# <a name="business-accounts-b2b"></a>[Poslovni nalozi (B2B)](#tab/b2b)
+
+Ova funkcija je dostupna samo za mere kreirane u okruženjima čiji su pojedinačni klijenti primarna ciljna grupa.
+
+---
+
 ## <a name="manage-your-measures"></a>Upravljanje merama
 
 Spisak mera možete pronaći na stranici **Mere**.
@@ -166,6 +244,5 @@ Izaberite meru sa liste za sledeće opcije:
 ## <a name="next-step"></a>Sledeći korak
 
 Možete koristiti postojeće mere da biste kreirali [segment klijenata](segments.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

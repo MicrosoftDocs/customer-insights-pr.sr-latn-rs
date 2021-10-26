@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Marketo
 description: Saznajte kako da konfigurišete vezu i izvezete u Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033510"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619182"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Izvoz segmenata u Marketo (verzija za pregled)
 
@@ -29,10 +29,10 @@ Izvezite segmente objedinjenih profila klijenata da biste generisali kampanje, o
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Do 1 milion profila po izvozu u usluzi Marketo.
+- Do milion profila klijenata po izvozu u Marketo.
 - Izvoz u Marketo je ograničen na segmente.
-- Izvoz segmenata sa ukupno 1 milion profila može trajati do 3 sata. 
-- Broj profila koje možete da izvezete u Marketo zavisi od i ograničen je vašim ugovorom sa kompanijom Marketo.
+- Izvoz segmenata sa ukupno milion profila klijenata može potrajati do 3 sata. 
+- Broj profila klijenata koje možete izvesti u Marketo zavisi i ograničen je na vaš ugovor sa Marketo-om.
 
 ## <a name="set-up-connection-to-marketo"></a>Podešavanje veze za Marketo
 
@@ -64,7 +64,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite **[ID Marketo liste](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID liste je čisto numerička vrednost. Na primer, ako je vaš ID Marketo liste ST12345A7, uklonite znak pre i posle brojeva i unesite `12345`. 
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. 
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. 
 
 1. Po želji možete da izvezete **Ime**, **Prezime**, **Grad**, **Država** i **Zemlja/region** da biste kreirali personalizovanije e-poruke. Izaberite **Dodaj atribut** za mapiranje ovih polja.
 

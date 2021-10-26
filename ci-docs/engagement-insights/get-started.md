@@ -4,18 +4,18 @@ description: Pregled resursa za pomoć za brzo započinjanje rada.
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: 3505c15c4319c8cc8823bcd89d3b8adc944a87dd
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494611"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623694"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Započnite rad sa Dynamics 365 Customer Insights mogućnošću uvida u angažovanje (verzija za javni pregled)
 
@@ -39,33 +39,47 @@ Kada prvi put posetite uvide u angažovanje, možete da konfigurišete podešava
 
 1. Izaberite svoj region i označite polje ako želite da se prijavite za primanje ažuriranja i ponuda putem e-pošte.
 
-1. Pregledajte **uslove korišćenja uvida u angažovanje (verzija za pregled)** i **Izjavu o privatnosti**, a zatim izaberite **Istražite demo** da biste prihvatili ova podešavanja.
+1. Pregledajte **uslove korišćenja** uvida u angažovanje (verzija za pregled) i **Izjavu o privatnosti**, a zatim izaberite **Istražite demo** da biste prihvatili ova podešavanja.
 
 1. Istražite proizvod koristeći skup uzoraka podataka.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>3. korak: Podesite radni prostor i dodajte kôd na svoju veb-lokaciju
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>3. korak: Podesite radni prostor i kreirajte izveštaje
 
 Radni prostor je mesto gde možete da prikažete aktivnost korisnika u realnom vremenu, kao i da skladištite izveštaje i upravljate njima. Dodajte kôd na svoju veb-stranicu da biste započeli sa prikupljanjem *događaja*, podataka o aktivnostima koji potiču od korisnika.
 
 1. [Kreirajte radni prostor](create-workspace.md) i dodajte članove.
 
-1. [Dodajte kôd u svoju veb-lokaciju](instrument-website.md) ili [aplikaciju za mobilne uređaje](developer-resources.md#capture-events-from-mobile-apps) da biste videli aktivnosti korisnika kako stižu u vaš radni prostor.
+1. Dodajte kôd u svoju [veb-lokaciju](instrument-website.md) ili [aplikaciju za mobilne uređaje](developer-resources.md#capture-events-from-mobile-apps) da biste videli aktivnosti korisnika kako stižu u vaš radni prostor.
 
 1. Prikažite [izveštaj u realnom vremenu](view-reports.md) koji prikazuje aktivne korisnike prema pregledaču, uređaju, operativnom sistemu, lokaciji i jeziku. Takođe možete da kreirate [prilagođene izveštaje](custom-reports.md) da biste kreirali sopstvene vizuelizacije.
+
+1. Kreirajte [dimenzije](dimensions.md) za sortiranje posetilaca prema novim i povratnim korisnicima, [pokazatelje](metrics.md) radi boljeg razumevanja ponašanja korisnika i [segmente](segments.md) da identifikuje podskup posetilaca na osnovu karakteristika ili interakcija sa veb-stranicama.
     
 ## <a name="step-4-export-data-to-other-channels"></a>4. korak: Izvezite podatke na druge kanale
 
-Možete da kreirate *prečišćene događaje* (virtuelni prikaz) podataka veb-analitike. Zatim filtrirajte i izvozite podatke u uslugu Azure Data Lake Storage. Izvezene podatke možete da unesete kao izvor podataka. Za više informacija, pogledajte [Napravite vezu između uvida u ciljnu grupu i uvida u angažovanje](integrate-audience-insights-engagement-insights.md).
+Možete da kreirate *prečišćene događaje* (virtuelni prikaz) podataka veb-analitike. Zatim filtrirajte i izvozite podatke u uslugu Azure Data Lake Storage. Izvezene podatke možete da unesete kao izvor podataka.
 
 1. [Kreirajte prečišćene događaje](refined-events.md) za izvoz.
 
-1. [Izvezite podatke](export-events.md) u Data Lake Storage.
+1. [Izvezite podatke](export-events.md) u Azure Data Lake Storage.
 
 1. [Kreirajte vezu između uvida u ciljnu grupu i uvida u angažovanje](integrate-audience-insights-engagement-insights.md) za deljenje podataka između dve mogućnosti.
 
+1. [Prepoznajte veb-događaje korisnika koji su prethodno potvrdili identitet](unknown-to-known.md) sa funkcijom **nepoznato u poznato**.
+
 1. Saznajte kako da [brišete i izvozite podatke o događajima koji sadrže lične informacije](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>5. korak: Kreirajte izveštaje o toku prodaje i upravljajte njima
+
+Izveštaj o toku prodaje prikuplja informacije o koracima koji se dešavaju tokom puta koji pređe korisnik kroz vašu veb-lokaciju ili aplikaciju za mobilne uređaje. Osim što možete da kreirate gotove izveštaje o profilima i prilagođene izveštaje, možete da kreirate i izveštaj o toku prodaje kako biste identifikovali putanje koje klijenti pređu pre nego što izvrše kupovinu. 
+
+1. [Kreirajte izveštaj o toku](funnel-reports.md) da biste donosili informisane odluke i identifikovali oblasti za optimizaciju i poboljšanja procesa.
+
+1. Kreirajte izveštaje o toku kanala prodaje za više kanala, nakon što ste svoju mobilnu aplikaciju opremili uvidima u angažovanje [Android SDK](get-started-android.md) ili [iOS SDK](get-started-ios.md).
+
+1. Koristite [uvide u tokove prodaje](funnel-reports.md#funnel-insights) da biste stekli dublji uvid u ponašanje klijenata o koracima u izveštaju o toku prodaje.
  
-## <a name="step-5-stay-connected"></a>5. korak: Ostanite povezani
+## <a name="step-6-stay-connected"></a>6. korak: Ostanite povezani
 
 Cenimo vaše aktivno učešće i razmatramo sve relevantne povratne informacije u razvoju budućih izdanja. Podelite povratne informacije i prijavite probleme na jednom od ovih kanala:
 - [Zajednica](https://go.microsoft.com/fwlink/?linkid=2141648)

@@ -1,7 +1,7 @@
 ---
 title: Izvoz podataka iz usluge Customer Insights
 description: Upravljajte izvozima da biste delili podatke.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034699"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623150"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
-Stranica **Izvoz** prikazuje sve konfigurisane izvoze. Izvozi dele određene podatke sa raznim aplikacijama. Mogu da uključuju profile klijenata ili entitete, šeme i detalje o mapiranju. Svaki izvoz zahteva [vezu koju je postavio administrator radi upravljanja potvrdom identiteta i pristupom](connections.md).
+Stranica **Izvoz** prikazuje sve konfigurisane izvoze. Izvozi dele određene podatke sa raznim aplikacijama. Oni mogu uključivati profile klijenata, entitete, šeme i detalje mapiranja. Svaki izvoz zahteva [vezu koju je postavio administrator radi upravljanja potvrdom identiteta i pristupom](connections.md).
 
 Idite na **Podaci** > **Izvozi** da biste videli stranicu izvoza. Sve korisničke uloge mogu pregledati konfigurisane izvoze. Koristite polje za pretragu na komandnoj traci da biste pronašli izvoze prema njihovom nazivu, nazivu veze ili tipu veze.
 
-## <a name="set-up-a-new-export"></a>Podešavanje novog izvoza
+## <a name="export-types"></a>Tipovi izvoza
 
+Postoje dva glavna tipa izvoza:  
+
+- **Izvoz izlaznih podataka** omogućava vam da izvezete bilo koju vrstu entiteta dostupnu u uvidima u ciljnu grupu. Entiteti koje izaberete za izvoz izvoze se sa svim poljima podataka, metapodacima, šemama i detaljima mapiranja. 
+- **Izvoz po segmentima** vam omogućava da izvozite entitete segmenata iz uvida u ciljnu grupu. Segmenti predstavljaju listu profila klijenata. Prilikom konfigurisanja izvoza birate obuhvaćena polja podataka, u zavisnosti od ciljnog sistema u koji izvozite podatke. 
+
+### <a name="export-segments"></a>Izvoz segmenata
+
+**Izvoz segmenata u okruženja za poslovne naloge (B2B) ili pojedinačne klijente (B2C)**  
+Većina opcija izvoza podržava oba tipa okruženja. Izvoz segmenata u različite ciljne sisteme ima posebne zahteve. Uopšteno govoreći, član segmenta, profil klijenta, sadrži kontakt informacije. Iako je to obično slučaj sa segmentima izgrađenim na individualnim klijentima (B2C), to nije nužno slučaj sa segmentima zasnovanim na poslovnim nalozima (B2B). 
+
+**Okruženja izvoza segmenata za poslovne naloge (B2B)**  
+- Segmenti u kontekstu okruženja za poslovne naloge izgrađeni su na entitetu *poslovni kontakt*. Da biste izvezli segmente poslovnih kontakata takvi kakvi jesu, ciljni sistem mora da podržava segmente čistih poslovnih kontakata. Ovo je slučaj za [LinkedIn](export-linkedin-ads.md) kada izaberete opciju **kompanija** prilikom definisanja izvoza.
+- Svi drugi ciljni sistemi zahtevaju polja iz entiteta kontakta. Da biste osigurali da segmenti poslovnog kontakta mogu pribaviti podatke iz povezanih kontakata, definicija segmenta mora projektovati atribute entiteta kontakta. Saznajte više o tome kako da [konfigurišete segmente i atribute projekta](segment-builder.md).
+
+**Segmentirajte izvoze u okruženjima za individualne klijente (B2C)**  
+- Segmenti u kontekstu okruženja za pojedinačne klijente izgrađeni su na entitetu *objedinjenog profila klijenta*. Svaki segment koji ispunjava zahteve ciljnih sistema (na primer, adresa e -pošte) može biti izvezena.
+
+**Ograničenja izvoza segmenata**  
+- Ciljni sistemi nezavisnih proizvođača mogu ograničiti broj profila klijenata koje možete izvesti. 
+- Za pojedinačne klijente, videćete stvarni broj članova segmenta kada izaberete segment za izvoz. Dobićete upozorenje ako je segment prevelik. 
+- Za poslovne kontakte videćete broj poslovnih naloga u segmentu; međutim, broj kontakata koji može biti projektovan se ne prikazuje. U nekim slučajevima to može dovesti do toga da izvezeni segment zapravo sadrži više profila klijenata nego što ciljni sistem prihvata. Prekoračenje ograničenja ciljnih sistema dovodi do preskakanja izvoza. 
+
+## <a name="set-up-a-new-export"></a>Podešavanje novog izvoza  
 Da biste podesili ili uredili izvoz, moraju vam biti dostupne veze. Veze zavise od vaše [korisničke uloge](permissions.md):
-- Administratori imaju pristup svim vezama. Oni takođe mogu da kreiraju nove veze prilikom podešavanja izvoza.
-- Saradnici mogu imati pristup određenim vezama. Oni zavise od administratora da konfigurišu i dele veze. Lista izvoza u koloni **Vaše dozvole** pokazuje saradnicima da li mogu da uređuju ili samo prikazuju izvoz. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Gledaoci mogu samo da vide postojeće izvoze, ali ne i da ih kreiraju.
+- **Administratori** imaju pristup svim vezama. Oni takođe mogu da kreiraju nove veze prilikom podešavanja izvoza.
+- **Saradnici** mogu imati pristup određenim vezama. Oni zavise od administratora da konfigurišu i dele veze. Lista izvoza u koloni **Vaše dozvole** pokazuje saradnicima da li mogu da uređuju ili samo prikazuju izvoz. Za više informacija idite na [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Gledaoci** mogu samo da pregledaju postojeći izvoz, a ne da ga kreiraju.
 
 ### <a name="define-a-new-export"></a>Definisanje novog izvoza
 
