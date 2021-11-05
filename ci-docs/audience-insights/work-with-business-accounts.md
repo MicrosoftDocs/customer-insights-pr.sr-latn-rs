@@ -1,7 +1,7 @@
 ---
 title: Započnite rad sa poslovnim nalozima kao primarnom ciljnom grupom
 description: Saznajte o poslovnim nalozima kao primarnom ciljnom grupom Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645005"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673704"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Rad sa poslovnim nalozima u uvidima u ciljnu grupu
 
-Mogućnost uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights omogućava vam da konfigurišete svoje okruženje za različite primarne ciljne grupe: pojedinačne klijente (B2C) i poslovne naloge (B2B). U B2C scenarijima, podaci su centrirani oko pojedinaca. Za B2B, primarna ciljna grupa su nalozi – organizacije ili kompanije – i kontakti. Ovaj članak vam pomaže da započnete sa okruženjem za poslovne naloge. On navodi razlike za oblasti karakteristika u uvidima u ciljnu grupu u zavisnosti od fokusa okruženja. Za više informacija o razlikama pregledajte dokumente iz oblasti funkcija. 
+Mogućnost uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights omogućava vam da konfigurišete svoje okruženje za različite primarne ciljne grupe: pojedinačne potrošače (B-to-C) i poslovne kontakte (B-to-B). U B-to-C scenarijima, podaci su centrirani oko pojedinaca. Za B-to-B, primarna ciljna grupa su poslovni kontakti – organizacije ili kompanije – i kontakti. Ovaj članak vam pomaže da započnete sa okruženjem za poslovne naloge. On navodi razlike za oblasti karakteristika u uvidima u ciljnu grupu u zavisnosti od fokusa okruženja. Za više informacija o razlikama pregledajte dokumente iz oblasti funkcija. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Kreiranje okruženja za poslovne naloge
 
@@ -32,7 +32,7 @@ Nakon objedinjavanja podataka, [navedite hijerarhije naloga](relationships.md#se
 
 Ako vaša organizacija održava okruženja za pojedinačne klijente i poslovne naloge, pomoću prekidača u levom oknu možete izabrati primarnu ciljnu grupu.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Prebacivanje za promenu primarne ciljne grupe između pojedinačnih klijenata i poslovnih naloga.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Prebacivanje za promenu primarne ciljne grupe između pojedinačnih klijenata i poslovnih naloga.":::
 
 ## <a name="supported-feature-areas"></a>Oblasti podržani funkcija
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617986"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673155"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
@@ -49,7 +49,7 @@ Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definisanje relacije između entiteta.":::
 
    > [!TIP]
-   > U B2B okruženjima možete izabrati između entiteta poslovnog kontakta i drugih entiteta. Ako izaberete entitet poslovnog kontakta, putanja odnosa se automatski postavlja. Za druge entitete morate definisati putanju odnosa preko jednog ili više posredničkih entiteta dok ne dođete do entiteta poslovnog kontakta.
+   > U B-to-B okruženjima možete izabrati između entiteta poslovnog kontakta i drugih entiteta. Ako izaberete entitet poslovnog kontakta, putanja odnosa se automatski postavlja. Za druge entitete morate definisati putanju odnosa preko jednog ili više posredničkih entiteta dok ne dođete do entiteta poslovnog kontakta.
 
 1. Izaberite **Sledeće** da pređete na sledeći korak. 
 

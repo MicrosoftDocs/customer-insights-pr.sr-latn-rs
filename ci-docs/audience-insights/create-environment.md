@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645724"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673408"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kreiranje okruženja u uvidima u ciljnu grupu
 
@@ -46,7 +46,7 @@ U koraku **Osnovne informacije**, odaberite da li želite da kreirate okruženje
 
 Navedite sledeće detalje:
    - **Naziv**: Unesite naziv ovog okruženja. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti.
-   - **Odaberite svoje poslovanje**: Odaberite primarnu ciljnu grupu za novo okruženje. Možete raditi sa individualnim klijentima (B2C) ili [poslovnim nalozima ](work-with-business-accounts.md) (B2B).
+   - **Odaberite svoje poslovanje**: Odaberite primarnu ciljnu grupu za novo okruženje. Možete da radite sa pojedinačnim potrošačima (B-to-C) ili [poslovnim kontaktima](work-with-business-accounts.md) (B-to-B).
    - **Tip**: izaberite da li želite da kreirate proizvodno ili Sandbox okruženje. Sandbox okruženja ne dozvoljavaju zakazano osvežavanje podataka i namenjena su za predimplementaciju i testiranje. Sandbox okruženja koriste istu primarnu ciljnu grupu kao i trenutno izabrano proizvodno okruženje.
    - **Region**: Region u kojem je usluga primenjena i hostovana.
 
@@ -54,7 +54,7 @@ Navedite sledeće detalje:
 
 U koraku **Skladištenje podataka**, izaberite gde ćete skladištiti podatke iz uvida u ciljnu grupu.
 
-Imaćete dve mogućnosti: **Customer Insights skladište** (Azure Data Lake kojim upravlja Customer Insights tim) i **Azure Data Lake Storage** (vaš sopstveni Azure Data Lake Storage). Podrazumevano je odabrana opcija Customer Insights skladišta.
+Imaćete dve mogućnosti: **Customer Insights skladište** (Azure jezero podataka kojim upravlja Customer Insights tim) i **Azure Data Lake Storage** (vaš sopstveni Azure Data Lake Storage). Podrazumevano je odabrana opcija Customer Insights skladišta.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Izaberite Azure Data Lake Storage za skladištenje podataka iz uvida u ciljnu grupu.":::
 
@@ -66,7 +66,7 @@ Imaćete dve mogućnosti: **Customer Insights skladište** (Azure Data Lake koji
 > - Azure Data Lake Storage nalozi iz istog Azure regiona koji ste izabrali prilikom kreiranja okruženja.
 > - Azure Data Lake Storage nalozi koji imaju omogućen *hijerarhijski prostor za ime*.
 
-Za opciju Azure Data Lake Storage, možete odabrati između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Naziv za **Kontejner** će biti `customerinsights` i ne možete ga promeniti.
+Za opciju Azure Data Lake Storage, možete odabrati između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Više informacija potražite u članku [Povezivanje sa Azure Data Lake Storage nalogom koristeći Azure principal usluge](connect-service-principal.md). Naziv za **Kontejner** će biti `customerinsights` i ne možete ga promeniti.
 
 Kada su sistemski procesi poput unosa podataka, završeni, sistem kreira odgovarajuće fascikle na nalogu za skladištenje koji ste naveli. Datoteke sa podacima i *model.json* datoteke se kreiraju i dodaju u fascikle na osnovu naziva procesa.
 
@@ -76,14 +76,14 @@ Ako kreirate više okruženja usluge Customer Insights i odaberete da sačuvate 
    
 Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem.
 
-Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću usluge Dataverse Managed Data Lake.
+Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću Dataverse upravljanog jezera podataka.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights ne podržava sledeće scenarije deljenja podataka:
-> - Ako sve podatke sačuvate u sopstvenoj usluzi Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa Microsoft Dataverse upravljanoj usluzi Data Lake.
-> - Ako omogućite deljenje podataka sa Microsoft Dataverse upravljanoj usluzi Data Lake nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
+> - Ako sve podatke sačuvate u sopstvenoj usluzi Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa Dataverse upravljanim jezerom podataka.
+> - Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: Dovršavanje podešavanja
 
@@ -93,10 +93,10 @@ Većinu podešavanja možete promeniti i kasnije. Više informacija potražite u
 
 ## <a name="work-with-your-new-environment"></a>Rad sa novim okruženjem
 
-Pregledajte sledeće članke koji će vam pomoći da započnete sa konfigurisanjem rešenja Customer Insights. 
+Pregledajte sledeće članke koji će vam pomoći da započnete sa konfigurisanjem usluge Customer Insights: 
 
 - [Dodajte još korisnika i dodelite dozvole](permissions.md).
 - [Unesite svoje izvore podataka](data-sources.md) i provucite ih kroz [proces objedinjavanja podataka](data-unification.md) kako biste dobili [objedinjene profile klijenata](customer-profiles.md).
 - [Obogatite objedinjene profile klijenata](enrichment-hub.md) ili [pokrenite modele predviđanja](predictions-overview.md).
-- [Kreirajte segmente](segments.md) da biste grupisali klijente i [mere](measures.md) pregleda KPI pokazatelja.
+- [Kreirajte segmente](segments.md) da biste grupisali klijente i [mere](measures.md) za pregled KPI pokazatelja.
 - [Podesite veze](connections.md) i [izvoze](export-destinations.md) za obradu podskupova podataka u drugim aplikacijama.

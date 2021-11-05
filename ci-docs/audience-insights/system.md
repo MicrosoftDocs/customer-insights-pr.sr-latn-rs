@@ -1,7 +1,7 @@
 ---
 title: Konfiguracija sistema u uvidima o korisnicima
 description: Saznajte više o sistemskim podešavanjima u Dynamics 365 Customer Insights mogućnosti uvida o korisnicima.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035933"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651857"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
@@ -24,9 +24,9 @@ Stranica **Sistem** sadrži sledeće kartice:
 - [API korišćenje](#api-usage-tab)
 - [Osnovne informacije](#about-tab)
 - [Opšte](#general-tab)
+- [Bezbednost](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Sistemska stranica.](media/system-tabs.png "Sistemska stranica")
+:::image type="content" source="media/system-tabs.png" alt-text="Kartica „Podešavanja“ na sistemskoj stranici.":::
 
 ## <a name="status-tab"></a>Kartica Status
 
@@ -84,9 +84,15 @@ Kartica **Osnovni podaci** sadrži **Ime za prikaz** organizacije, aktivni **ID 
 
 ## <a name="general-tab"></a>Kartica Opšti podaci
 
-Postoje dve opcije na kartici **Opšti podaci**, **Jezik** i **Format zemlje/regiona**.
+Jezik i format zemlje/regiona možete da promenite na kartici **Opšti podaci**.
 
-Aplikacija [podržava brojne jezike](supported-languages.md). Da biste promenili željeni jezik, izaberite **Jezik** iz padajuće liste.
+Customer Insights [podržava brojne jezike](/dynamics365/get-started/availability). Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
+
+Uvezeni podaci i informacije koje ste ručno uneli se ne prevode.
+
+### <a name="update-the-settings"></a>Ažuriranje podešavanja
+
+Da biste promenili željeni jezik, izaberite **Jezik** iz padajuće liste.
 
 Da biste promenili željeno oblikovanje datuma, vremena i brojeva, koristite padajuću listu **Format zemlje/regiona**. Ispod ovog polja prikazuje se pregled oblikovanja. Sistem će automatski predložiti izbor kada odaberete novi jezik.
 
@@ -105,6 +111,13 @@ Pronađite detalje o upotrebi API-ja u realnom vremenu i pogledajte koji su se d
 
    Operacije koje koriste [unošenje podataka u realnom vremenu](real-time-data-ingestion.md) sadrže dugme sa simbolom dvogleda za prikaz korišćenja API-ja u realnom vremenu. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.   
    Koristite okvir **Grupiši po** u oknu **Korišćenje API-ja u realnom vremenu** da biste izabrali kako najbolje da predstavite svoje interakcije u realnom vremenu. Možete grupisati podatke prema API metodi, nazivu kvalifikovanog entiteta (uneti entitet), vremenu kreiranja (izvor događaja), rezultatu (uspelo ili neuspelo) ili kodovima grešaka. Podaci su dostupni kao vremenski grafikon i tabela.
+
+## <a name="security-tab"></a>Kartica „Bezbednost“
+
+Kartica **Bezbednost** vam omogućava da povežete sopstveni [Azure Key Vault](/azure/key-vault/general/basic-concepts) sa okruženjem.
+Namensko bezbednosno skladište može da se koristi za postavljanje i korišćenje tajni u granicama usklađenosti organizacije. Uvidi u ciljnu grupu mogu koristiti tajne u Azure Key Vaultu za [uspostavljanje veza](connections.md) sa sistemima trećih strana.
+
+Za više informacija pogledajte članak [Dovedite sopstveni Azure Key Vault](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

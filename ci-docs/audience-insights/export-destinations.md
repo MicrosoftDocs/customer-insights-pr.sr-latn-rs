@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623150"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673340"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
@@ -32,14 +32,14 @@ Postoje dva glavna tipa izvoza:
 
 ### <a name="export-segments"></a>Izvoz segmenata
 
-**Izvoz segmenata u okruženja za poslovne naloge (B2B) ili pojedinačne klijente (B2C)**  
-Većina opcija izvoza podržava oba tipa okruženja. Izvoz segmenata u različite ciljne sisteme ima posebne zahteve. Uopšteno govoreći, član segmenta, profil klijenta, sadrži kontakt informacije. Iako je to obično slučaj sa segmentima izgrađenim na individualnim klijentima (B2C), to nije nužno slučaj sa segmentima zasnovanim na poslovnim nalozima (B2B). 
+**Izvoz segmenata u okruženja za poslovne naloge (B-to-B) ili pojedinačne potrošače (B-to-C)**  
+Većina opcija izvoza podržava oba tipa okruženja. Izvoz segmenata u različite ciljne sisteme ima posebne zahteve. Uopšteno govoreći, član segmenta, profil klijenta, sadrži kontakt informacije. Iako je to obično slučaj sa segmentima izgrađenim na individualnim potrošačima (B-to-C), to nije nužno slučaj sa segmentima zasnovanim na poslovnim kontaktima (B-to-B). 
 
-**Okruženja izvoza segmenata za poslovne naloge (B2B)**  
+**Okruženja izvoza segmenata za poslovne kontakte (B-to-B)**  
 - Segmenti u kontekstu okruženja za poslovne naloge izgrađeni su na entitetu *poslovni kontakt*. Da biste izvezli segmente poslovnih kontakata takvi kakvi jesu, ciljni sistem mora da podržava segmente čistih poslovnih kontakata. Ovo je slučaj za [LinkedIn](export-linkedin-ads.md) kada izaberete opciju **kompanija** prilikom definisanja izvoza.
 - Svi drugi ciljni sistemi zahtevaju polja iz entiteta kontakta. Da biste osigurali da segmenti poslovnog kontakta mogu pribaviti podatke iz povezanih kontakata, definicija segmenta mora projektovati atribute entiteta kontakta. Saznajte više o tome kako da [konfigurišete segmente i atribute projekta](segment-builder.md).
 
-**Segmentirajte izvoze u okruženjima za individualne klijente (B2C)**  
+**Segmentirajte izvoze u okruženjima za individualne potrošače (B-to-C)**  
 - Segmenti u kontekstu okruženja za pojedinačne klijente izgrađeni su na entitetu *objedinjenog profila klijenta*. Svaki segment koji ispunjava zahteve ciljnih sistema (na primer, adresa e -pošte) može biti izvezena.
 
 **Ograničenja izvoza segmenata**  
