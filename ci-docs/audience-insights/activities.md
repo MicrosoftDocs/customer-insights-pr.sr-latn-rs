@@ -1,7 +1,7 @@
 ---
 title: Aktivnosti klijenta
 description: Definišite aktivnosti klijenata i prikažite ih u vremenskoj osi na profilima klijenata.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673155"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732477"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
-Kombinujte aktivnosti klijenata iz [raznih izvora podataka](data-sources.md) u usluzi Dynamics 365 Customer Insights kako biste kreirali vremensku osu koja hronološki navodi aktivnosti. Uključite hronologiju u Dynamics 365 aplikacije sa rešenjem [Programski dodatak za korisničku karticu](customer-card-add-in.md) ili u Power BI kontrolnoj tabli.
+Kombinujte aktivnosti [klijenata iz različitih izvora](data-sources.md) podataka u Dynamics 365 Customer Insights biste kreirali vremensku osu koja hronološki navodi aktivnosti. Uključite vremensku osu u Dynamics 365 aplikacije [sa rešenjem programskog dodatka "Kartica](customer-card-add-in.md) kupca" ili u Power BI kontrolnoj tabli.
 
 ## <a name="define-an-activity"></a>Definišite aktivnost
 
@@ -82,9 +82,7 @@ Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u 
 
 1. Na stranici **Aktivnosti**, izaberite **Pokreni** da biste obradili aktivnost. 
 
-> [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Upravljanje postojećim aktivnostima
 

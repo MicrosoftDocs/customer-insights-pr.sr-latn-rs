@@ -1,7 +1,7 @@
 ---
 title: Semantička mapiranja (verzija za pregled)
 description: Pregled semantičkih mapiranja i kako ih koristiti.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622952"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731960"
 ---
 # <a name="semantic-mappings"></a>Semantička mapiranja
 
@@ -75,8 +75,7 @@ Semantička mapiranja vam omogućavaju da mapirate podatke o neaktivnosti u unap
 
 1. Da biste kasnije pokrenuli semantičko mapiranje, izaberite semantičko mapiranje i izaberite **Osveži**.
 
-> [!TIP]
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Upravljanje postojećim semantičkim mapiranjima
 
@@ -91,5 +90,6 @@ Na **Podaci** > **Semantička mapiranja (verzija za pregled)**, možete pregleda
 - **Preimenuj**: Otvara dijalog u koji možete uneti drugačije ime za izabrano semantičko mapiranje. Izaberite **Sačuvaj** da primenite promene.
 
 - **Izbriši**: Otvara dijalog za potvrdu brisanja izabranog semantičkog mapiranja. Takođe možete izbrisati više semantičkih mapiranja odjednom odabirom semantičkih mapiranja i ikone za brisanje. Izaberite **Izbriši** da biste potvrdili brisanje.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

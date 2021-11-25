@@ -1,7 +1,7 @@
 ---
 title: Kreiranje okruženja i upravljanje njima
 description: Saznajte kako se registrujete za uslugu i kako da upravljate okruženjima.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673761"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7818792"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -39,6 +39,19 @@ Možete da izmenite neke detalje postojećih okruženja.
 3. U okviru **Uređivanje okruženja**, možete ažurirati podešavanja okruženja.
 
 Više informacija o podešavanjima okruženja potražite u članku [Kreiranje novog okruženja](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Poveži se sa Microsoft Dataverse
+   
+Ovaj **Microsoft Dataverse vam omogućava da** povežete uvide klijenata sa Dataverse okruženju.
+
+Da biste [koristili modele datoteka van okvira predviđanje](predictions-overview.md#out-of-box-models) konfigurišite deljenje podataka pomoću Dataverse. Takođe možete da omogućite unos podataka iz lokalni podataka, obezbeđujući URL adresu Microsoft Dataverse okruženja koju administrirate vaša organizacija. Izaberite **opciju Omogući deljenje** podataka da biste delili izlazne podatke korisničkog uvida sa jezerom podataka kojim upravlja Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka pomoću Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights ne podržava sledeće scenarije deljenja podataka:
+> - Ako sačuvate sve podatke u sopstvenom Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa jezerom podataka kojim upravlja Dataverse.
+> - Ako omogućite deljenje podataka pomoću Dataverse, nećete moći da [kreirate predviđene ili nedostajuće vrednosti u entitetu](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 
@@ -68,7 +81,7 @@ Sledeći podaci se *ne* kopiraju:
 - Profili klijenata.
 - Akreditivi izvora podataka. Moraćete da dostavite akreditive za svaki izvor podataka i ručno osvežite izvore podataka.
 
-- Izvori podataka iz Common Data Model fascikle i Dataverse upravljanog jezera podataka. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
+- Izvori podataka iz fascikle "Zajednički model podataka" i jezera podataka kojima upravlja Dataverse. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
 
 Kada kopirate okruženje, videćete poruku potvrde da je kreirano novo okruženje. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka.
 

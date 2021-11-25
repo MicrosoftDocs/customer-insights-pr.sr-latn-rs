@@ -1,7 +1,7 @@
 ---
 title: Zajednički zadaci za scenarije predviđanja
 description: Naučite kako da upravljate predviđanjima, rešavate ih i precizirate.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036482"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732005"
 ---
 # <a name="manage-predictions"></a>Upravljanje predviđanjima
 
@@ -50,12 +50,12 @@ Sledeće kolone u izveštaju sadrže korisne informacije za poboljšanje podatak
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Primer izveštaja o upotrebljivosti ulaznih podataka koji prikazuje tabelu sa greškama, upozorenjima i preporukama.":::
 
-- Naziv: Opisni naziv greške, upozorenja ili preporuke.
-- Korak: Faza modela, obuke ili rezultata na koju se informacije odnose.
-- Status: Ozbiljnost informacija (greška, upozorenje, preporuka).
-- Naziv kolone: Kolona u entitetu koju treba izmeniti da bi se poboljšale performanse modela.
-- Naziv entiteta: Naziv entiteta koji treba izmeniti da bi se poboljšale performanse modela.
-- Detalji: Detalji o grešci, upozorenju ili preporuci.
+- **Ime:** Opisno ime greške, upozorenja ili preporuke.
+- **Korak:** Model faza, voz ili rezultat, informacije se odnose na njih.
+- **Stanje:** Ozbiljnost informacija (greška, upozorenje, preporuka).
+- **Ime kolone:** Kolona u entitetu koju treba izmeniti da bi se poboljšale performanse modela.
+- **Ime entiteta:** Ime entiteta koje treba izmeniti da bi se poboljšale performanse modela.
+- **Detalji:** Detalji o grešci, upozorenju ili preporuci.
 
 ## <a name="refresh-a-prediction"></a>Osvežavanje predviđanja
 
@@ -66,6 +66,8 @@ Predviđanja se automatski osvežavaju prema istom [rasporedu za osvežavanje po
 1. Odaberite uspravne tri tačke pored predviđanja koje želite da osvežite.
 
 1. Izaberite **Osveži**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Brisanje predviđanja
 

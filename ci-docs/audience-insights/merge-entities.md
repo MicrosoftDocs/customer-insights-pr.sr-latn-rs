@@ -1,7 +1,7 @@
 ---
 title: Objedinjavanje entiteta kod objedinjavanja podataka
 description: Objedinite entitete da biste kreirali objedinjene profile klijenata.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648271"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732789"
 ---
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
@@ -187,10 +187,9 @@ Odaberite **Pokreni objedinjavanje i posledične procese** da osvežite sistem s
 
 Da biste uneli više promena i ponovo pokrenuli korak, možete da otkažete objedinjavanje u toku. Izaberite tekst **Osvežavanje u toku...** i izaberite **Otkaži posao** u bočnom oknu koje se prikazuje.
 
-> [!TIP]
-> Nakon pokretanja procesa spajanja, izaberite status procesa da biste otvorili okno **Detalji o zadatku**. On daje pregled vremena obrade, poslednjeg datuma obrade i svih grešaka i upozorenja povezanih sa zadatkom. Izaberite **Vidi detalje** da biste videli koji su entiteti učestvovali u procesu podudaranja, da li je rešavanje sukoba uspelo i da li su ažuriranja uspešno objavljena.  
-> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Detaljno analizirajte putanju kako biste pristupili detaljima o obradi sa veze statusa zadatka.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Detaljno analizirajte putanju kako biste pristupili detaljima o obradi sa veze statusa zadatka.":::
 
 ## <a name="next-step"></a>Sledeći korak
 

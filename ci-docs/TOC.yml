@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Dodajte Common Data Model fasciklu kao izvor podataka
           href: audience-insights/connect-common-data-model.md
-        - name: Dodavanje Dataverse upravljano jezero podataka
+        - name: Dodaj Dataverse upravljano jezero sa podacima
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Postepeno osvežavanje za izvore podataka
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Poboljšane adrese
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Poboljšanje podataka preduzeća
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obogaćivanje sa rešenjem Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Obogatite uz HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Obogaćivanje uz Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obogaćivanje uz Experian
+        - name: Obogatite pomoću usluge Experian
           href: audience-insights/enrichment-experian.md
         - name: Obogaćivanje uz SFTP prilagođeni uvoz
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -164,11 +166,11 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
+            - name: Azure Synapse Analitika
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
+            - name: Adobe platforma iskustva
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Pregled šema entiteta na platformi Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Customer Insights podaci u platformi Dataverse
+        - name: Podaci o uvidima klijenata u Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Rad sa API-jima
           href: audience-insights/apis.md
         - name: Reference na API-je
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Upravljanje saglasnostima (pregled)
+  items:
+    - name: Čvorište pomoći
+      href: consent-management/index.yml
+    - name: Pregled mogućnosti
+      href: consent-management/overview.md
+    - name: Započnite
+      items:
+        - name: Započnite
+          href: consent-management/get-started.md
+        - name: Pojmovi i terminologija
+          href: consent-management/glossary.md
+    - name: Uvoz podataka o saglasnosti
+      items:
+        - name: Uvoz podataka o saglasnosti
+          href: consent-management/import-consent-data.md
+        - name: Postavljanje podataka o pristanku i primena željenih opcija saglasnosti
+          href: consent-management/set-consent-rules.md
+    - name: Upravljanje podacima o pristanku
+      items:
+        - name: Omogućavanje pravila pristanka u korisnici uvidima
+          href: audience-insights/activate-consent.md
+        - name: Upravljanje podrazumevanim pravilima pristanka u segmentima korisnici uvida
+          href: audience-insights/change-default-consent-rules.md
+    - name: Upravljanje postavkama i korisnicima
+      items:
+        - name: Konfigurisanje postavki sistema
+          href: consent-management/system-settings.md
+        - name: Upravljanje korisnicima i dozvolama
+          href: consent-management/manage-users.md
+    - name: Korišćenje podataka o pristanku
+      items:
+        - name: Kreiranje predviđanja sa podacima o pristanku
+          href: consent-management/predictions-consent-data.md
 - name: Uvidi u angažovanje (verzija za pregled)
   items:
     - name: Čvorište pomoći
@@ -304,7 +340,7 @@
           href: engagement-insights/websdk-sample.md
         - name: Uputstvo za Android SDK
           href: engagement-insights/get-started-android.md
-        - name: Android SDK primer
+        - name: Android SDK-a
           href: engagement-insights/androidsdk-sample.md
         - name: Uputstvo za iOS SDK
           href: engagement-insights/get-started-ios.md

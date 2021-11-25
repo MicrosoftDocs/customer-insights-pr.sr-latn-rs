@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643465"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7818789"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
@@ -27,20 +27,20 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 ## <a name="prerequisites"></a>Preduslovi
 
 - Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
-- Da bi se vaši Dynamics 365 podaci mapirali u korisničke profile uvida u ciljnu grupu, oni treba da budu [uneti iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md).
+- Da bi se Vaši Dynamics 365 podaci mapirali na korisnici uvide profila klijenata, potrebno ih je [uneti iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md).
 - Svi Dynamics 365 korisnici programskog dodatka za kartice klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima u ciljnu grupu da biste videli podatke.
 - [Konfigurisane mogućnosti pretrage i filtriranja](search-filter-index.md) u uvidima u ciljnu grupu su potrebne da bi pronalaženje podataka funkcionisalo.
 - Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima u ciljnu grupu. Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
   - **Kontrola mera**: Zahteva [konfigurisane mere](measures.md) atributa tipa korisnika.
   - **Kontrola obaveštavanja**: Zahteva podatke generisane korišćenjem [predviđanja](predictions.md) ili [prilagođenih modela](custom-models.md).
   - **Kontrola detalja o klijentima**: sva polja iz profila dostupna su u objedinjenom profilu korisnika.
-  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata.
+  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: [brendove](enrichment-microsoft.md) koje obezbeđuje Microsoft, [interesovanja](enrichment-microsoft.md) koja obezbeđuje Microsoft.
   - **Kontrola kontakata**: zahteva definiciju semantičkog entiteta tipa kontakata.
   - **Kontrola vremenske ose**: zahteva [konfigurisane aktivnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalirajte i koristite dodatak za karticu klijenta
 
-Programski dodatak za karticu klijenta je rešenje za Customer Engagement aplikacije u sistemu Dynamics 365. Da biste instalirali rešenje, idite na AppSource i potražite **Dynamics karticu klijenta**. Izaberite [dodatak za karticu klijenta u usluzi AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i izaberite **Preuzmi odmah**.
+Programski dodatak za karticu klijenta je rešenje za Customer Engagement aplikacije u sistemu Dynamics 365. Da biste instalirali rešenje, idite na AppSource i potražite **Dynamics Karticu kupca**. Izaberite [programski dodatak "Kartica kupca" AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) izaberite **stavku Donesi odmah**.
 
 Možda ćete morati da se prijavite pomoću akreditiva administratora za aplikaciju Dynamics 365 da biste instalirali rešenje. Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
 
@@ -48,7 +48,7 @@ Možda ćete morati da se prijavite pomoću akreditiva administratora za aplikac
 
 1. Kao administrator, idite u odeljak **Podešavanja** u sistemu Dynamics 365 i izaberite **Rešenja**.
 
-1. Izaberite vezu **Ime za prikaz** za rešenje **Dynamics 365 Customer Insights dodatak klijentske kartice (pregled)**.
+1. Izaberite **vezu ime za prikaz za rešenje Dynamics 365 Customer Insights** **kartice kupca (Preview).**
 
    > [!div class="mx-imgBorder"]
    > ![Izaberite ime za prikaz.](media/select-display-name.png "Izaberite ime za prikaz.")

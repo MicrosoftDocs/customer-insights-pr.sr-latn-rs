@@ -1,5 +1,5 @@
 ---
-title: Ograničenja usluge u usluzi Dynamics 365 Customer Insights
+title: Ograničenja usluge u Dynamics 365 Customer Insights
 description: Razumevanje ograničenja i restrikcija.
 ms.date: 09/03/2021
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eba7871faf304d5945191b5b9bc215243b4f8a05
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483703"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7818788"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Ograničenja usluga u mogućnostima usluge Customer Insights
 
@@ -22,11 +22,11 @@ Ovaj članak opisuje ugrađena ograničenja za uslugu Customer Insights, koja su
 
 ## <a name="audience-insights"></a>Uvidi u ciljnu grupu
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Ograničenja usluge u Dynamics 365 Customer Insights mogućnosti uvida o korisnicima
+### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Ograničenja usluge u Dynamics 365 Customer Insights korisnici uvida
 
 | Oblasni grafikon  | Ograničenja  | Beleške |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti i mere | 100 segmenata ili mera. | Ukupan broj aktivnih[ segmenata](audience-insights/segments.md) i[ mera](audience-insights/measures.md) kombinovano ne može preći 100.  |
+| Segmenti, mere i predviđanja | 300  | Ukupan broj [segmenata](audience-insights/segments.md), [mera](audience-insights/measures.md) i [predviđanja](audience-insights/predictions.md) zajedno ne može da premaši 300.  |
 | Relacije | 20 nivoa dubine u odnosima u putanjama entiteta. | Prilikom kreiranja [segmenata](audience-insights/segments.md) ili [mera](audience-insights/measures.md) koristeći interfejs za izradu, putanje entiteta mogu imati do 20 koraka odnosa između početnog entiteta i ciljnog entiteta.  |
 
 

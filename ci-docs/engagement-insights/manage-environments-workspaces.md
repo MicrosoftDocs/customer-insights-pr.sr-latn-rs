@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645463"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673814"
 ---
 # <a name="manage-environments-and-workspaces"></a>Upravljajte okruženjima i radnim prostorima
 
@@ -24,7 +24,7 @@ ms.locfileid: "7645463"
 
 Ova tema govori o tome kako upravljati radnim prostorima i okruženjima nakon što su već kreirani. 
 
-- *Radni prostor* je prostor za skladištenje i upravljanje događajima i izveštajima. Tu možete u realnom vremenu prikazivati aktivnosti korisnika. Kada kreirate radni prostor, izaberite vrstu podataka koju želite da pošaljete u radni prostor. Trenutno su podržani veb-podaci i aplikacije za mobilne uređaje. Za više informacija pogledajte [Kreiranje radnog prostora i dodavanje članova](create-workspace.md).
+- *Radni prostor* je prostor za skladištenje i upravljanje događajima i izveštajima. Tu možete u realnom vremenu prikazivati aktivnosti korisnika. Kada kreirate radni prostor, izaberite vrstu podataka koju želite da pošaljete u radni prostor. Trenutno su podržani veb-podaci i aplikacije za mobilne uređaje. Više informacija potražite u [članku Kreiranje novog radnog prostora i dodavanje članova](create-workspace.md).
 
 - *Okruženje* je prostor u kojem upravljate svojim radnim prostorima i vezama. Više informacija potražite u članku [Kreiranje novog okruženja](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Možete istovremeno održavati više radnih prostora u okruženju. Vaša [uloga]
 
 ### <a name="delete-a-workspace"></a>Brisanje radnog prostora
 
-Brisanje radnog prostora trajno će ukloniti sav njegov sadržaj, podatke, podešavanja i dozvole. To nije moguće opozvati.
+Brisanje radnog prostora trajno uklanja sav njegov sadržaj, podatke, postavke i dozvole. To nije moguće opozvati.
 
 1. Idite na **Administrator** > **Radni prostor** i izaberite **Podešavanja**.
 
@@ -71,19 +71,11 @@ Kao administrator okruženja, okruženju možete pristupiti iz levog okna za nav
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centar administracije okruženja.":::
 
-### <a name="rename-an-environment"></a>Preimenujte okruženje
+### <a name="edit-an-environment-name"></a>Uređivanje imena okruženja
 
 1. Idite na **Administrator** > **Okruženje** i izaberite **Podešavanja**.
 
 1. Ažurirajte **Naziv okruženja** i izaberite **Sačuvaj** da biste primenili izmene.
-
-### <a name="manage-environment-members"></a>Upravljanje članovima okruženja
-
-1. Idite na **Administrator** > **Okruženje** i izaberite **Članovi**.
-
-1. Izaberite **Dodaj članove** da biste ažurirali članove i [dodelili uloge](user-roles.md). Trenutno, dostupno je samo **Administrator okruženja**.
-
-1. Izaberite **Dodaj članove** da biste ih dodali u svoje okruženje.
 
 ### <a name="delete-an-environment"></a>Brisanje okruženja
 
@@ -97,6 +89,14 @@ Administratori okruženja mogu brisati okruženja. Pre nego što izbrišete okru
 
 1. Izaberite **Izbriši** kako biste trajno izbrisali okruženje.
 
+### <a name="manage-environment-members"></a>Upravljanje članovima okruženja
+
+1. Idite na **Administrator** > **Okruženje** i izaberite **Članovi**.
+
+1. Izaberite **Dodaj članove** da biste ažurirali članove i [dodelili uloge](user-roles.md). Trenutno, dostupno je samo **Administrator okruženja**.
+
+1. Izaberite **Dodaj članove** da biste ih dodali u svoje okruženje.
+
 ## <a name="manage-connections"></a>Upravljanje vezama
 
 Uspostavljanje veza sa uvidima u ciljnu grupu omogućava vam da vidite izveštaje u uvidima o angažovanju na osnovu objedinjenih profila klijenata. 
@@ -107,7 +107,6 @@ Za više informacija, pogledajte [Napravite vezu između uvida u ciljnu grupu i 
 
 Da biste zaštitili lične podatke klijenta, možete izbrisati ili izvesti podatke koji mogu identifikovati krajnjeg korisnika.
 
-Za više informacija, pogledajte [Brisanje i izvoz podataka o događajima koji sadrže lične informacije](delete-export-personal-data.md).
-
+Za više informacija, pogledajte [Brisanje i izvoz podataka o događajima koji sadrže lične informacije](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

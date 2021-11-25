@@ -1,7 +1,7 @@
 ---
 title: Obogatite objedinjene profile klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 09/30/2021
+ms.date: 11/05/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
+ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673016"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "7770141"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
 
@@ -34,7 +34,7 @@ Na kartici **Otkrivanje**, pronaći ćete sve podržane opcije obogaćivanja.
 - [Brendove](enrichment-microsoft.md) obezbeđuje Microsoft
 - [Interesovanja](enrichment-microsoft.md) obezbeđuje Microsoft
 - [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft 
-- [Demografski podaci](enrichment-experian.md) koje obezbeđuje Experian
+- [Demografski podaci](enrichment-experian.md) koje pruža Experian
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) pomoću protokola Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) obezbeđuje Microsoft
 
@@ -42,6 +42,7 @@ Na kartici **Otkrivanje**, pronaći ćete sve podržane opcije obogaćivanja.
 
 - [Podaci o kompaniji](enrichment-leadspace.md) koje pruža Leadspace
 - [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft 
+- [Poboljšani podaci o](enrichment-enhanced-company-data.md) preduzeću koje obezbeđuje Microsoft
 - [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies 
 - [Prilagođeni podaci](enrichment-SFTP-custom-import.md) pomoću protokola Secure File Transfer Protocol (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) obezbeđuje Microsoft
@@ -76,7 +77,7 @@ Entitet koji treba obogatiti navodi se tokom konfiguracije obogaćivanja, što v
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
 
-Možete pronaći detalje o obradi obogaćivanja, uključujući njegov status i potencijalne probleme dok se osvežava ili nakon završetka osvežavanja. Shvatite koji su procesi uključeni za osvežavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja je podržan za Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
+Možete pronaći detalje o obradi obogaćivanja, uključujući njegov status i potencijalne probleme dok se osvežava ili nakon završetka osvežavanja. Shvatite koji su procesi uključeni za osvežavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja je podržan za Experian, Leadspace, HERE Technologies, SFTP Import i Azure mape.
 
 Da biste videli status obogaćivanja
 

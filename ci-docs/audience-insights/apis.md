@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033602"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732281"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
-Dynamics 365 Customer Insights pruža API-je za izgradnju vlastitih aplikacija na osnovu vaših podataka u usluzi Customer Insights.
+Dynamics 365 Customer Insights obezbeđuje API-je za izradu sopstvenih aplikacija na osnovu vaših podataka u "Uvidima kupaca".
 
 > [!IMPORTANT]
 > Detalji ovih API-ja navedeni su u članku [Referenca za Customer Insights API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Sadrže dodatne informacije o operacijama, parametrima i odgovorima.
@@ -117,25 +117,25 @@ Ovaj odeljak vam pomaže da započnete korišćenje klijentskih biblioteka dostu
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Saznajte kako da započnete korišćenje C# klijentskih biblioteka sa NuGet.org. Za više informacija o NuGet paketu, vidite [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Trenutno ovaj paket cilja okvire netstandard2.0 i netcoreapp2.0.
+Saznajte kako da počnete da koristite biblioteke C# klijenata iz NuGet.org. Više informacija o paketu NuGet potražite u [članku Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). Trenutno ovaj paket cilja okvire netstandard2.0 i netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Dodajte C# klijentsku biblioteku u C# projekat
 
-1. U programu Visual Studio, otvorite **NuGet menadžer paketa** za projekat.
+1. U Visual Studio otvorite **NuGet paketa** za vaš projekat.
 
 1. Potražite **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Izaberite **Instaliraj** za dodavanje paketa u projekat.
  
-   Alternativno, pokrenite ovu komandu u **NuGet konzoli menadžera paketa**:`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Druga mogućnost je da pokrenete ovu komandu **u NuGet za upravljanje paketima:**`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte NuGet paket u Visual Studio projekat.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Dodajte NuGet paket Visual Studio projekat.":::
 
 #### <a name="use-the-c-client-library"></a>Koristite C# klijentsku biblioteku
 
 1. Koristite [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) da biste dobili `AccessToken` koristeći svoje postojeću [registraciju Azure aplikacije](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Nakon uspešne potvrde identiteta i pribavljanja tokena, napravite novi ili koristite postojeći `HttpClient` sa dodatnim **DefaultRequestHeaders "Authorization"** podešenim na **Nosilac<access token>** i **Ocp-Apim-Subscription-Key** podešenim na [**ključ pretplate** iz vašeg Customer Insights okruženja](#get-started-trying-the-customer-insights-apis).   
+1. Nakon uspešnog potvrde identiteta i pribavljanja simbola, napravite novi ili koristite postojeći sa dodatnim `HttpClient`**DefaultRequestHeaders "Autorizacijom" postavljenim na** **Bearer "token za pristup"** i **Ocp-Apim-Subscription-Key postavljen na** pretplatnički ključ iz [**okruženja** "Uvidi](#get-started-trying-the-customer-insights-apis) kupaca".   
  
    Resetujte zaglavlje **Ovlašćenje** po potrebi. Na primer, kada je token istekao.
 

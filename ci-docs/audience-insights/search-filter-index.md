@@ -1,7 +1,7 @@
 ---
 title: Pretraga i filtriranje profila klijenata
 description: Brzo pronađite informacije o objedinjenim profilima klijenata i filtrirajte prema određenim atributima.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470028"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732051"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profili klijenata: Indeks za pretraživanje i filtriranje
 
 Rezultat objedinjavanja podataka o klijentima je entitet profila klijenta koji pruža jedinstven pogled na vašu ukupnu korisničku bazu. Da biste brzo [pronašli informacije o određenom klijentu ili grupi klijenata](customer-profiles.md), možete da konfigurišete mogućnosti **pretrage** i **filtriranja** na stranici **Klijenti**. Čitajte dalje kako biste saznali kako administratori mogu da uređuju atribute na stranici **Indeks pretrage i filtriranja**, koje su na raspolaganju korisnicima za pretraživanje i filtriranje.
 
-> [!div class="mx-imgBorder"]
-> ![Filter pretrage.](media/search-filter.png "Filter pretrage")
+   :::image type="content" source="media/search-filter.png" alt-text="Filter pretrage":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Dodajte polja i odredite atribute
 
