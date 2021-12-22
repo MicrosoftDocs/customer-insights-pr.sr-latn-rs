@@ -1,7 +1,7 @@
 ---
 title: Entiteti i skupovi podataka
 description: Pogledajte podatke na stranici Entiteti.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732098"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900444"
 ---
 # <a name="entities-in-audience-insights"></a>Entiteti u uvidima o korisnicima
 
-Kada [konfigurišete izvore podataka](data-sources.md), idite na stranicu **Entiteti** da procenite kvalitet unetih podataka. Entiteti se smatraju skupovima podataka. Oko ovih entiteta Dynamics 365 Customer Insights se višestruke mogućnosti Dynamics 365 Customer Insights izgrade. Njihov pažljiv pregled može vam pomoći da potvrdite valjanost ishoda tih mogućnosti.
+Kada [konfigurišete izvore podataka](data-sources.md), idite na stranicu **Entiteti** da procenite kvalitet unetih podataka. Entiteti se smatraju skupovima podataka. Više mogućnosti usluge Dynamics 365 Customer Insights napravljeno je na osnovu ovih entiteta. Njihov pažljiv pregled može vam pomoći da potvrdite valjanost ishoda tih mogućnosti.
 
-Stranica **Entiteti** navodi entitete i sadrži nekoliko kolona:
+Stranica **·** "Entiteti" navodi entitete i uključuje sledeće kolone:
 
-- **Naziv**: Naziv vašeg entiteta podataka. Ako vidite simbol upozorenja pored naziva entiteta, to znači da se podaci za taj entitet nisu uspešno učitali.
-- **Izvor**: Vrsta izvora podataka koji su uneti u entitet
-- **Autor**: Ime osobe koja je kreirala entitet
-- **Kreirano**: Datum i vreme stvaranja entiteta
-- **Ažurirano** : ime osobe koja je ažurirala entitet
-- **Status** : Detalji o poslednjem ažuriranju entiteta
+- **Ime** : Ime entiteta podataka. Ako vidite simbol upozorenja pored naziva entiteta, to znači da se podaci za taj entitet nisu uspešno učitali.
+- **Izvor** : Vrsta izvor podataka koja je unela entitet.
+- **Ažurirano** : vreme poslednjeg ažuriranja entiteta.
+- **Status** : Detalji o poslednjem ažuriranju entiteta.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Istražite podatke određenog entiteta
 
-Izaberite entitet da biste istražili različita polja i zapise koji su uključeni u taj entitet.
+1. U uvidima o korisnicima idite na **Podaci** > **Entiteti**.
+1. Sa **stranice** Entiteti izaberite entitet da biste otvorili stranicu sa detaljima.  
+1. Istražite različita polja i zapise koji su uključeni za taj entitet.
 
-> [!div class="mx-imgBorder"]
-> ![Izaberite entitet.](media/data-manager-entities-data.png "Izbor entiteta")
-
-- Kartica **Podaci** prikazuje detalje listinga tabela o pojedinačnim zapisima entiteta.
+- Kartica **Atributi** je podrazumevano izabrana i prikazuje tabelu za pregled detalja za izabrani entitet, kao što su imena polja, tipovi podataka i tipovi. Kolona **Tip** prikazuje tipove povezane sa Common Data Model, koje sistem automatski prepoznaje ili ih korisnici [ručno mapiraju](map-entities.md). Ovi tipovi su semantički tipovi koji se mogu razlikovati od tipova podataka atributa. Na primer, polje *e-pošta* ispod ima tip podataka *Tekst*, ali njegov (semantički) Common Data Model tip može biti *E-pošta* ili *Adresa e-pošte*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabela polja.](media/data-manager-entities-fields.PNG "Tabela polja")
 
-- Kartica **Atributi** je podrazumevano izabrana i prikazuje tabelu za pregled detalja za izabrani entitet, kao što su imena polja, tipovi podataka i tipovi. Kolona **Tip** prikazuje tipove povezane sa Common Data Model, koje sistem automatski prepoznaje ili ih korisnici [ručno mapiraju](map-entities.md). Ovi tipovi su semantički tipovi koji se mogu razlikovati od tipova podataka atributa. Na primer, polje *e-pošta* ispod ima tip podataka *Tekst*, ali njegov (semantički) Common Data Model tip može biti *E-pošta* ili *Adresa e-pošte*.
-
 > [!NOTE]
-> Obe tabele prikazuju samo uzorak podataka vašeg entiteta. Da biste videli ceo skup podataka, idite na stranicu **Izvori podataka**, izaberite entitet, izaberite **Uredi**, a zatim pregledajte podatke ovog entiteta pomoću Power Query uređivača, kao što je objašnjeno u članku [Izvori podataka](data-sources.md).
+> Ova stranica prikazuje samo uzorak podataka vašeg entiteta. Da biste videli ceo skup podataka, idite na stranicu **Izvori podataka**, izaberite entitet, izaberite **Uredi**, a zatim pregledajte podatke ovog entiteta pomoću Power Query uređivača, kao što je objašnjeno u članku [Izvori podataka](data-sources.md).
 
-Da biste saznali više o podacima koji se unose u entitet, kolona **Rezime** vam pruža neke važne karakteristike podataka, kao što su polja bez vrednosti, nedostajuće vrednosti, jedinstvene vrednosti, brojevi i distribucije, kako je već primenjivo na podatke.
-
-Izaberite ikonu grafikona da biste videli rezime podataka.
+Da biste saznali više o podacima koji se unose u entitet, kolona **Rezime** vam pruža neke važne karakteristike podataka, kao što su polja bez vrednosti, nedostajuće vrednosti, jedinstvene vrednosti, brojevi i distribucije, kako je već primenjivo na podatke. Izaberite ikonu grafikona da biste videli rezime podataka.
 
 > [!div class="mx-imgBorder"]
 > ![Simbol rezimea.](media/data-manager-entities-summary.png "Tabela sa rezimeom podataka")
+
+- Kartica **Podaci** prikazuje detalje listinga tabela o pojedinačnim zapisima entiteta. Navedeni detalji zavise od tipa podataka entiteta.
+
+> [!div class="mx-imgBorder"]
+> ![Izaberite entitet.](media/data-manager-entities-data.png "Izbor entiteta")
+
+- Kartica **·** "Izveštaji" (dostupna za neke entitete) omogućava vizuelizaciju podataka kreiranjem izveštaja i uključuje sledeće kolone:
+
+  - **Ime** izveštaja : Ime izveštaja.
+  - **Kreirao**: Ime osobe koja je kreirala entitet.
+  - **Kreirano** : datum i vreme kreiranja entiteta.
+  - **Edited by** : Ime osobe koja je izmenila entitet.
+  - **Uređeno** : Datum i vreme izmene entiteta. 
 
 ## <a name="entity-specific-information"></a>Informacije određene za entitet
 
@@ -73,8 +79,7 @@ Sledeće provere se vrše na unetim podacima kako bi se otkrili oštećeni zapis
 
 - Vrednost polja se ne podudara sa tipom podataka njegove kolone.
 - Polja sadrže znakove zbog kojih se kolone ne podudaraju sa očekivanom šemom. Na primer: nepravilno oblikovani navodnici, neupareni navodnici ili znakovi novog reda.
-- Ako postoje kolone datum i vreme/datum/pomak datuma i vremena, njihov format mora biti naveden u modelu ako ne sledi standardni ISO format.
-
+- Ako postoje kolone datuma/datuma/datuma/datuma, njihov format mora biti naveden u modelu ako ne sledi standardni ISO format.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

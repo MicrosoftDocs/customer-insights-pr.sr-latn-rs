@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753134"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884279"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u korisnici uvida u Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -26,6 +26,18 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Ispravke za novembar 2021
+
+Ispravke u novembru 2021.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Članstvo u segmentima sada dostupno u Dataverse
+
+Informacije o članstvu u segmentu za profile klijenata sada su Dataverse dostupne zajedno sa profilima i uvidima klijenata. Dynamics 365 akcione aplikacije i aplikacije sa modelima mogu da koriste ove podatke potražite detalje o članstvu u segmentima za datog klijenta.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivnosti podržavaju detalje na nivou kontakta za poslovne naloge
+
+Sada možete da konfigurišete, prikažete i filtrirate aktivnosti za kontakte na vremenskim osama aktivnosti poslovnog naloga da biste bolje razumeli koji kontakti naloga su učestvovali u određenim aktivnostima.
 
 ## <a name="october-2021-updates"></a>Ispravke za oktobar 2021
 
@@ -113,7 +125,7 @@ Ispravke u maju 2021. uključuju nekoliko funkcija, nadogradnje performansi i is
 
 ### <a name="data-ingestion"></a>Unos podataka
 
-- **Prikažite ili izmenite metapodatke ili definiciju entiteta prilikom prilaganja podataka iz Azure Data Lake Storage** Sada možete da prikažete i uredite metapodatke ili definiciju entiteta u korisnici uvidima prilikom prilaganja podataka iz fascikle "Uobičajeni model podataka" u Azure Data Lake Storage. Ova mogućnost pruža povratne informacije u realnom vremenu, validaciju modela i proveru grešaka. Omogućava vam da bez problema uređujete i model.json i manifest.json.
+- **Pregledajte ili izmenite metapodatke ili definiciju entiteta kada prilažete podatke iz skladišta Azure Data Lake Storage** Sada možete da pregledate i uredite metapodatke ili definiciju entiteta u uvidima u ciljne grupe kada prilažete podatke iz fascikle Common Data Model u vašem skladištu Azure Data Lake Storage. Ova mogućnost pruža povratne informacije u realnom vremenu, validaciju modela i proveru grešaka. Omogućava vam da bez problema uređujete i model.json i manifest.json.
 
 ### <a name="extensibility"></a>Proširivost
 
@@ -188,7 +200,7 @@ Ispravke u martu 2021. uključuju nekoliko funkcija, nadogradnje performansi i i
 
 ### <a name="data-ingestion"></a>Unos podataka
 
-- **Povežite se sa lokalni izvorima podataka koristeći Power Platform dataflows i gateways Sa zadovoljstvom objavljujemo** pregled Power Platform priliva podataka i lokalni povezivanja pomoću mrežnih prolaza u uvidima klijenata sa povezanim Power Platform ili Dataverse Okruženju. Svi novi izvori podataka kreirani u okruženju "Uvidi klijenata" sa povezanim Dataverse okruženjem podrazumevano će biti podešeni na Power Platform priliva podataka koji donose lokalni povezivanje podataka i bogat skup mogućnosti spajanja i transformacije.
+- **Povežite se na lokalne izvore podataka koristeći Power Platform tokove podataka i mrežne prolaze** Zadovoljstvo nam je da najavimo verziju za pregled Power Platform tokova podataka i lokalnog povezivanja pomoću mrežnih prolaza u usluzi Customer Insights sa pridruženom uslugom Power Platform ili Dataverse okruženjem. Svi novi izvor podataka kreiran u Customer Insights okruženju sa povezanim Dataverse okruženjem će podrazumevano biti Power Platform tokovi podataka koji donose lokalnu povezanost podataka i bogat skup konektora i mogućnosti transformacije.
 
 ### <a name="extensibility"></a>Proširivost
 
@@ -250,7 +262,7 @@ Ispravke u februaru 2021. uključuju nekoliko funkcija, nadogradnje performansi 
 
 - **Okruženje za kopiranje podržava više vrsta izvora podataka**
 
-  Administratori mogu da kopiraju konfiguracije okruženja u novo okruženje u istoj organizaciji. Ova funkcija proširuje funkcionalnost okruženja za kopiranje za slučajeve u kojima se koriste izvori podataka zasnovani na Microsoft Dataverse upravljanom jezeru podataka ili fascikli "Uobičajeni model podataka".
+  Administratori mogu da kopiraju konfiguracije okruženja u novo okruženje u istoj organizaciji. Ova funkcija proširuje funkcionalnost kopiranja okruženja za slučajeve u kojima se izvori podataka zasnivaju na Microsoft Dataverse upravljanom jezeru podataka ili se koristi Common Data Model fascikla.
 
 ## <a name="january-2021-updates"></a>Ispravke za januar 2021. godine
 
@@ -276,7 +288,7 @@ Ispravke u januaru 2021. uključuju nekoliko funkcija, nadogradnje performansi i
 
 #### <a name="system-administration"></a>Administracija sistema
 
-- **Besprekorno delite podatke u Microsoft Dataverse** Sada možete da delite izlaz "Uvidi kupaca Microsoft Dataverse aplikacijama koristeći Microsoft Dataverse upravljano jezero podataka". Kada povežete okruženje Dataverse "Uvidi klijenata", dobijate opciju da omogućite deljenje podataka.
+- **Jednostavno delite podatke sa platformom Microsoft Dataverse** Sada možete da delite izlaz iz usluge Customer Insights sa Microsoft Dataverse aplikacijama koje koriste Microsoft Dataverse Managed Data Lake. Kada povežete Dataverse okruženje sa uslugom Customer Insights, dobijate opciju da omogućite deljenje podataka.
   Više informacija potražite u članku [Upravljanje okruženjem](manage-environments.md).
 
 

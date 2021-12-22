@@ -1,7 +1,7 @@
 ---
-title: Unos podataka putem Power Query konektora
+title: Unesti podaci preko Power Query konektora (Video)
 description: Konektori za izvore podataka zasnovane na rešenju Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732235"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903857"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje sa Power Query izvorom podataka
 
-Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora podržava Dynamics 365 Customer Insights. Dodavanje izvora podataka na osnovu Power Query konektora uglavnom sledi korake navedene u sledećem odeljku. Međutim, u zavisnosti od konektora koji koristite, potrebne su različite informacije. Za više informacija pogledajte dokumentaciju o pojedinačnim konektorima u [referenci Power Query konektora](/power-query/connectors/).
+Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora podržava Dynamics 365 Customer Insights. 
+
+Dodavanje izvora podataka zasnovanih Power Query konektora uglavnom sledi korake navedene u ovom odeljku. Međutim, u zavisnosti od konektora koji koristite, potrebne su različite informacije. Da biste saznali više, pogledajte dokumentaciju o pojedinačnim linijama spajanja [u Power Query konektora](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
 
 1. Izaberite **Dodaj izvor podataka**.
 
-1. Odaberite metod **Uvoza podataka** i izaberite **Sledeće**.
+1. Izaberite **Microsoft Power Query, a** zatim kliknite na **dugme Dalje**.
 
-1. Navedite **Naziv** za izvor podataka, pa izaberite **Sledeće** kako biste kreirali izvor podataka. Smernice za nazive: 
-   - Započnite slovom.
-   - Koristite samo slova i brojeve. Posebni znakovi i razmaci nisu dozvoljeni.
-   - Koristite između 3 i 64 znaka.
+1. Navedite **Naziv** za izvor podataka, pa izaberite **Sledeće** kako biste kreirali izvor podataka.
 
-1. Odaberite jedan od [dostupnih konektora](#available-power-query-data-sources). Za ovaj primer biramo **Tekst/CSV** konektor.
+1. Odaberite jedan od [dostupnih konektora](#available-power-query-data-sources). U ovom primeru biramo **text/CSV** konektor.
 
 1. Unesite potrebne detalje u **Podešavanja veze** za izabrani konektor i izaberite **Sledeće** da biste videli pregled podataka.
 
@@ -50,7 +49,7 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
 
 1. Možete dodati dodatne entitete u izvor podataka ako izaberete **Preuzmi podatke** u dijalogu **Uređivanje upita**.
 
-   Ove transformacije se izričito preporučuju:
+   Preporučujemo da koristite sledeće transformacije:
 
    - Ako unosite podatke iz CSV datoteke, prvi red često sadrži zaglavlja. Idite na **Transformacija tabele** i izaberite **Koristi zaglavlja kao prvi red**.
    - Uverite se da je tip podataka podešen na odgovarajući način.
@@ -61,7 +60,7 @@ Power Query nudi širok skup konektora za unos podataka. Većinu ovih konektora 
 
 ## <a name="available-power-query-data-sources"></a>Dostupni Power Query izvori podataka
 
-Pogledajte [referencu Power Query konektora](/power-query/connectors/) za ažuriranu listu konektora koje možete izabrati za uvoz podataka u Customer Insights. 
+Pogledajte [referencu Power Query konektora](/power-query/connectors/) za listu linija spajanja koju možete da koristite za uvoz podataka u uvid kupca. 
 
 Konektori sa znakom potvrde u koloni **Customer Insights (tokovi podataka)** su dostupni za kreiranje novih izvora podataka zasnovanih na rešenju Power Query. Pregledajte dokumentaciju određenog konektora da biste saznali više o njegovim preduslovima, ograničenjima i ostalim detaljima.
 
@@ -70,7 +69,7 @@ Konektori sa znakom potvrde u koloni **Customer Insights (tokovi podataka)** su 
 > [!NOTE]
 > Možda neće biti moguće izvršiti promene izvora podataka koji se trenutno koriste u jednom od procesa aplikacije (npr. *segmentacija*, *podudaranje* ili *spajanje*). 
 >
-> Pomoću stranice **Podešavanja**, možete pratiti napredak svakog aktivnog procesa. Kada se proces dovrši, možete se vratiti na stranicu **Izvori podataka** i uneti izmene.
+> Na **stranici** "Postavke" možete da pratite tok svakog aktivnog procesa. Kada se proces dovrši, možete se vratiti na stranicu **Izvori podataka** i uneti izmene.
 
 1. U uvidima o korisnicima idite na **Podaci** > **Izvori podataka**.
 

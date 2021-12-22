@@ -1,7 +1,7 @@
 ---
-title: Obogaćivanje poboljšavanja adrese
+title: Obogaćivanje poboljšanja adrese (Video)
 description: Obogatite i normalizujte informacije o adresama korisničkih profila pomoću Microsoft modela.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643413"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927528"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Obogaćivanje korisničkih profila sa poboljšanim adresama
 
@@ -101,6 +101,16 @@ Da biste započeli proces obogaćivanja, izaberite **Pokreni** sa komandne trake
 Nakon završetka procesa obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod opcijom **Moja obogaćivanja**. Osim toga, pronaći ćete vreme poslednjeg ažuriranja i broj obogaćenih profila.
 
 Detaljnom prikazu svakog obogaćenog profila možete pristupiti ako izaberete **Prikaži obogaćene podatke**.
+
+### <a name="overview-card"></a>Kartica za pregled
+
+Kartica pregleda prikazuje detalje o pokrivenosti bogaćenjem. 
+
+* **Kupci su obrađili** i promenili : broj profila kupaca koji su uspešno obogaćeni.
+
+* **Kupci su obrađili i** nisu menjali : broj profila kupaca koji su prepoznati, ali nisu promenjeni. To se obično dešava kada su ulazni podaci važeći i ne mogu se poboljšati bogaćenjem.
+
+* **Kupci koji nisu obrađeni i** nisu promenjeni : broj profila koji nisu prepoznati. Obično za ulazne podatke koji su nevažeći ili ih obogaćuje ne podržava.
 
 ## <a name="next-steps"></a>Sledeći koraci
 

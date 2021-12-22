@@ -1,7 +1,7 @@
 ---
 title: Inkrementalno osvežavanje za izvore podataka zasnovane na usluzi Power Query
 description: Osvežite nove i ažurirane podatke za velike izvore podataka na osnovu usluge Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377851"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900302"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Inkrementalno osvežavanje za izvore podataka zasnovane na usluzi Power Query
+
+Ovaj članak govori o tome kako da konfigurišete postepeno osvežavanje izvora podataka na osnovu Power Query.
 
 Inkrementalno osvežavanje izvora podataka pruža sledeće prednosti:
 
@@ -30,9 +32,9 @@ Uvidi o korisnicima omogućavaju inkrementalno osvežavanje za izvore podataka u
 
 1. [Napravite novi izvor podataka na osnovu usluge Power Query](connect-power-query.md).
 
-1. Navedite naziv za izvor podataka.
+1. Navedite **ime** za izvor podataka.
 
-1. Izaberite izvor podataka koji podržava postepeno osvežavanje, kao što je Azure SQL baza podataka.
+1. Izaberite izvor podataka podržava postepeno osvežavanje, kao što [je Azure SQL baza podataka](/power-query/connectors/azuresqldatabase).
 
 1. Izaberite entitete ili tabele za unos.
 

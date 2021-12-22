@@ -1,7 +1,7 @@
 ---
 title: Kreiranje okruženja u usluzi Customer Insights
 description: Koraci za kreiranje okruženja sa licenciranom pretplatom za Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673408"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892355"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kreiranje okruženja u uvidima u ciljnu grupu
 
@@ -77,6 +77,9 @@ Ako kreirate više okruženja usluge Customer Insights i odaberete da sačuvate 
 Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem.
 
 Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću Dataverse upravljanog jezera podataka.
+
+> [!IMPORTANT]
+> Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
 

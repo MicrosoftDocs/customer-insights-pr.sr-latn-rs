@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Dodajte Common Data Model fasciklu kao izvor podataka
           href: audience-insights/connect-common-data-model.md
-        - name: Dodaj Dataverse upravljano jezero sa podacima
+        - name: Dodavanje Dataverse upravljano jezero podataka
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Postepeno osvežavanje za izvore podataka
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Poboljšane adrese
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Poboljšanje podataka preduzeća
+        - name: Poboljšani podaci o preduzeću
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Obogaćivanje sa rešenjem Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -92,8 +92,10 @@
           href: audience-insights/enrichment-here.md
         - name: Obogaćivanje uz Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Obogatite pomoću usluge Experian
+        - name: Obogaćivanje uz Experian
           href: audience-insights/enrichment-experian.md
+        - name: Obogatite Office 365 podacima
+          href: audience-insights/enrichment-office.md
         - name: Obogaćivanje uz SFTP prilagođeni uvoz
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmenti
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Eksperimenti sa Azure mašinskim učenjem
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Eksperimenti uz Studio za Azure mašinsko učenje
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Upravljanje predviđanjima
           href: audience-insights/manage-predictions.md
         - name: Kreiranje segmenata zasnovanih na predviđanjima
@@ -166,11 +166,11 @@
               href: audience-insights/export-azure-blob-storage.md
             - name: Azure Data Lake Storage Gen2
               href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analitika
+            - name: Azure Synapse Analytics
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe platforma iskustva
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Campaign Monitor
               href: audience-insights/export-campaign-monitor.md
@@ -240,13 +240,15 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Povežite se sa ADLS nalogom za skladištenje pomoću principala usluge
               href: audience-insights/connect-service-principal.md
+            - name: Izvoz dijagnostičkih evidencija
+              href: audience-insights/diagnostics.md
     - name: Proširivost
       items:
         - name: Integrišite veb-podatke iz uvida u angažovanje
           href: audience-insights/integrate-engagement-insights.md
         - name: Pregled šema entiteta na platformi Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Podaci o uvidima klijenata u Dataverse
+        - name: Customer Insights podaci u platformi Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Rad sa API-jima
           href: audience-insights/apis.md
@@ -340,7 +342,7 @@
           href: engagement-insights/websdk-sample.md
         - name: Uputstvo za Android SDK
           href: engagement-insights/get-started-android.md
-        - name: Android SDK-a
+        - name: Android SDK primer
           href: engagement-insights/androidsdk-sample.md
         - name: Uputstvo za iOS SDK
           href: engagement-insights/get-started-ios.md

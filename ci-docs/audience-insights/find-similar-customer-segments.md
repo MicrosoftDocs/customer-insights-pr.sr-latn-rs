@@ -1,5 +1,5 @@
 ---
-title: Pronađite slične klijente pomoću AI
+title: Pronađi slične klijente sa AI (Video)
 description: Pronađite slične segmente klijenta pomoću veštačke inteligencije.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: MT
+ms.openlocfilehash: 7999c4964773c3b5c49537027a2ed67f0ad57ec5
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7818791"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903908"
 ---
 # <a name="similar-customers-preview"></a>Slični kupci (verzija za pregled)
 
@@ -23,7 +23,7 @@ Ova funkcija vam omogućava da pronađete slične klijente u svojoj korisničkoj
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Pronađite slične kupce* koristi automatizovana sredstva za procenu podataka i pravljenje predviđanja na osnovu tih podataka, pa se zato može koristiti kao način profilisanja, termin koji je definisan Opštom uredbom o zaštiti podataka („GDPR“). Klijentovo korišćenje ove funkcije za obradu podataka može da bude podložno GDPR-u ili drugim zakonima ili propisima. Vi ste odgovorni da obezbedite da vaša upotreba Dynamics 365 Customer Insights, uključujući predviđanja, bude u skladu sa svim važećim zakonima i propisima, uključujući zakone vezane za privatnost, lične podatke, biometrijske podatke, zaštitu podataka i poverljivost komunikacija.
+> *Pronađite slične kupce* koristi automatizovana sredstva za procenu podataka i pravljenje predviđanja na osnovu tih podataka, pa se zato može koristiti kao način profilisanja, termin koji je definisan Opštom uredbom o zaštiti podataka („GDPR“). Klijentovo korišćenje ove funkcije za obradu podataka može da bude podložno GDPR-u ili drugim zakonima ili propisima. Odgovorni ste za to da koristite Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim važećim zakonima i propisima, uključujući zakone koji se odnose na privatnost, lične podatke, biometrijske podatke, zaštitu podataka i poverljivost komunikacija.
 
 ## <a name="finding-similar-customers"></a>Pronalaženje sličnih klijenata
 

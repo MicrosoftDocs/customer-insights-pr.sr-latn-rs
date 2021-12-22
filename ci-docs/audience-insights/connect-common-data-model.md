@@ -1,7 +1,7 @@
 ---
 title: Povežite Common Data Model podatke sa Azure Data Lake nalogom
 description: Radite sa Common Data Model podacima koristeći Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033143"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900214"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 
@@ -30,7 +30,7 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 - Azure Data Lake sa kojim želite da se povežete i unesete podatke mora biti u istom Azure regionu kao i Dynamics 365 Customer Insights okruženje. Ne podržavaju se veze sa Common Data Model fasciklom iz jezera podataka u drugom Azure regionu. Da biste saznali Azure region okruženja, posetite **Administrator** > **Sistem** > **Osnovni podaci** u uvidima o korisnicima.
 
-- Podaci koji se čuvaju u uslugama na mreži mogu se čuvati na lokaciji koja se razlikuje od one na kojoj se podaci obrađuju ili čuvaju u usluzi Dynamics 365 Customer Insights. Uvozom ili povezivanjem podataka uskladištenih u mrežnoj usluzi, slažete se da se podaci mogu preneti i skladištiti u usluzi Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost.](https://www.microsoft.com/trust-center)
+- Podaci uskladišteni u uslugama na mreži mogu se uskladištiti na drugoj lokaciji od mesta gde se podaci obrađuju ili skladište u programu Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa Dynamics 365 Customer Insights programom .  [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Povezivanje u fasciklu Common Data Model
 
@@ -38,12 +38,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Izaberite **Dodaj izvor podataka**.
 
-1. Izaberite **Povežite se sa Common Data Model fasciklom**, unesite **Ime** za izvor podataka i izaberite **Sledeće**. Smernice za nazive: 
-   - Započnite slovom.
-   - Koristite samo slova i brojeve. Posebni znakovi i razmaci nisu dozvoljeni.
-   - Koristite između 3 i 64 znaka.
+1. Izaberite **Azure skladište jezera sa** podacima, unesite ime za izvor podataka, a **zatim** kliknite na dugme **Dalje**.
 
-1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite informacije o **Kontejneru** i izaberite **Sledeće**.
+   - Ako budete upitani, izaberite jedan od probnih skupova podataka koji se odnose na vašu industriju, a zatim kliknite na **dugme Dalje**. 
+
+1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite **adresu servera**, izaberite stavku Prijavi se, a **zatim** kliknite na **dugme Dalje**.
    > [!div class="mx-imgBorder"]
    > ![Dijalog za unos novih detalja veze za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
    > [!NOTE]
    > Nijedna datoteka model.json ili manifest.json povezana sa drugim izvorom podataka u okruženju neće se prikazati na listi.
 
-1. Listu dostupnih entiteta dobićete u izabranoj datoteci model.json ili manifest.json. Možete da pregledate entitete i izaberete ih sa liste dostupnih entiteta, pa izaberite **Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
+1. Listu dostupnih entiteta videćete u izabranoj datoteci model.json ili manifest.json. Redigujte i izaberite sa liste dostupnih entiteta, a zatim izaberite **stavku Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijalog koji prikazuje listu entiteta iz datoteke model.json.](media/review-entities.png)
 
-8. Navedite entitete podataka za koje želite da omogućite profilisanje podataka i izaberite **Sačuvaj**. Profilisanje podataka omogućava analitiku i druge mogućnosti. Možete odabrati čitav entitet koji bira sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Podrazumevano nijedan entitet nije omogućen za profilisanje podataka.
+8. Naznačite entitete podataka koje želite da omogućite profilisanje podataka, a zatim izaberite **sačuvaj**. Profilisanje podataka omogućava analitiku i druge mogućnosti. Možete odabrati čitav entitet koji bira sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Podrazumevano nijedan entitet nije omogućen za profilisanje podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijalog koji prikazuje profilisanje podataka.](media/dataprofiling-entities.png)
 

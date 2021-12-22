@@ -1,7 +1,7 @@
 ---
 title: Povezivanje sa Azure Data Lake Storage nalogom korišćenjem principala usluge
 description: Za povezivanje sa sopstvenim jezerom podataka, koristite principala usluge Azure.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645189"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900292"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 
-Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Čitajte dalje da biste saznali kako da povežete uslugu Dynamics 365 Customer Insights sa Azure Data Lake Storage nalogom koristeći principala usluge Azure umesto ključeva naloga za skladištenje. 
+Ovaj članak govori o tome kako da se Dynamics 365 Customer Insights povežete sa Azure Data Lake Storage nalogom pomoću direktora Azure usluge umesto ključeva naloga za skladištenje. 
 
-Možete koristiti principala usluge da bezbedno [dodate ili uredite Common Data Service fasciklu kao izvor podataka](connect-common-data-model.md) ili da [kreirate ili ažurirate okruženje](create-environment.md).
+Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Direktore usluga možete da koristite za bezbedno [dodavanje ili uređivanje fascikle "Uobičajeni model podataka" kao izvor podataka](connect-common-data-model.md) ili kreiranje ili ažuriranje [okruženja](create-environment.md).
 
 > [!IMPORTANT]
 > - Data Lake Storage nalog koji će koristiti principala usluge mora imati [omogućen hijerarhijski prostor za ime](/azure/storage/blobs/data-lake-storage-namespace).
-> - Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali principal usluge.
+> - Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali glavnicu usluge.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Kreiranje principala usluge Azure za Customer Insights
 
-Pre nego što kreirate novog principala usluge za uvide u ciljnu grupu ili uvide u angažovanje, proverite da li već postoji u vašoj organizaciji.
+Pre nego što kreirate novog direktora servisa za uvide klijenata, proverite da li on već postoji u vašoj organizaciji.
 
 ### <a name="look-for-an-existing-service-principal"></a>Potražite postojeći principal usluge
 
