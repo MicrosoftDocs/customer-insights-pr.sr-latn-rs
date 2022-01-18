@@ -1,7 +1,7 @@
 ---
-title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (Video)
+title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (sadrži video)
 description: Prikažite podatke iz uvida u ciljnu grupu u Dynamics 365 aplikacijama sa ovim programskim dodatkom.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921882"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945444"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
@@ -27,14 +27,14 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 ## <a name="prerequisites"></a>Preduslovi
 
 - Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
-- Da bi se vaši Dynamics 365 podaci mapirali u korisničke profile uvida u ciljnu grupu, oni treba da budu [uneti iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md).
+- Da bi se Vaši Dynamics 365 podaci mapirali na korisnici uvida u profile klijenata, preporučujemo da [se oni unose iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), morate se uveriti `contactid` da je polje (ili ) postavljeno kao primarni ključ za taj izvor podataka u `accountid`[koraku mape procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Svi Dynamics 365 korisnici programskog dodatka za kartice klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima u ciljnu grupu da biste videli podatke.
 - [Konfigurisane mogućnosti pretrage i filtriranja](search-filter-index.md) u uvidima u ciljnu grupu su potrebne da bi pronalaženje podataka funkcionisalo.
 - Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima u ciljnu grupu. Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
   - **Kontrola mera**: Zahteva [konfigurisane mere](measures.md) atributa tipa korisnika.
   - **Kontrola inteligencije** : Zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
   - **Kontrola detalja o klijentima**: sva polja iz profila dostupna su u objedinjenom profilu korisnika.
-  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: [brendove](enrichment-microsoft.md) koje obezbeđuje Microsoft, [interesovanja](enrichment-microsoft.md) koja obezbeđuje Microsoft i [podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
+  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: brendove koje [obezbeđuje](enrichment-microsoft.md) Microsoft, interesovanja koja obezbeđuje Microsoft [i](enrichment-microsoft.md)[podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
   - **Kontrola kontakata**: zahteva definiciju semantičkog entiteta tipa kontakata.
   - **Kontrola vremenske ose**: zahteva [konfigurisane aktivnosti](activities.md).
 

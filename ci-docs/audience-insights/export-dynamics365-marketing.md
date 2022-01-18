@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
-ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
-ms.translationtype: HT
+ms.openlocfilehash: 2c673c432f308efa289625a159de608d07f8d2b3
+ms.sourcegitcommit: f988114ac7a288ccadf2db35b02dbef5cacea4d9
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/24/2021
-ms.locfileid: "7417222"
+ms.lasthandoff: 01/14/2022
+ms.locfileid: "7975141"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Korišćenje segmenata u usluzi Dynamics 365 Marketing (verzija za pregled)
 
@@ -45,7 +45,7 @@ Ako koristite nove mogućnosti usluge Dynamics 365 Marketing za orkestraciju put
 
 1. U odeljku **Administratorski nalog na serveru**, izaberite **Prijavite se** i izaberite Dynamics 365 Marketing nalog.
 
-1. Mapirajte polje korisničkog ID-a sa Dynamics 365 ID-om kontakta.
+1. Mapiraj polje ID kontakta u entitetu kupca u Dynamics 365 ID kontakta.
 
 1. Izaberite **Sačuvaj** da biste kreirali vezu. 
 

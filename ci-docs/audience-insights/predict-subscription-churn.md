@@ -1,5 +1,5 @@
 ---
-title: Pretplata churn predviđanje (Video)
+title: Pretplata churn predviđanje (sadrži video)
 description: Predvidite da li je klijent ugrožen zbog toga što više ne koristi proizvode ili usluge vašeg preduzeća sa pretplatom.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 1ef2ff642731ee1ba0a142433745fc5a5b398c88
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904042"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967718"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predviđanje gubitka pretplata (pregled)
 
@@ -77,7 +77,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 1. Unesite broj za **Dani od završetka pretplate** i to je period za koji preduzeće smatra da je status klijenta Izgubljen. Ovaj period je obično povezan sa poslovnim aktivnostima poput ponuda ili drugih marketinških napora kojima pokušavate da sprečite gubitak klijenta.
 1. Unesite broj **Dani za istraživanje budućnosti za predviđanje odliva** da biste podesili prozor za predviđanje odliva. Na primer, da biste predvideli rizik od odliva klijenata tokom narednih 90 dana kako biste se prilagodili vašim naporima da zadržite marketing. Predviđanje rizika odliva na duži ili kraći vremenski period može otežati adresiranje faktora u vašem profilu rizika od gubitka klijenta, u zavisnosti od vaših specifičnih poslovnih zahteva. Izaberite **Dalje** za nastavak
    >[!TIP]
-   > Možete da izaberete **Sačuvaj i zatvori** u bilo kom trenutku da biste sačuvali predviđanje kao radnu verziju. Da biste nastavili, radnu verziju predviđanja možete da pronađete na kartici **Moja predviđanja**.
+   > U svakom trenutku **možete da** izaberete opciju "Sačuvaj radnu verziju" da biste sačuvali predviđanje kao radnu verziju. Da biste nastavili, radnu verziju predviđanja možete da pronađete na kartici **Moja predviđanja**.
 
 ### <a name="add-required-data"></a>Dodavanje obaveznih podataka
 

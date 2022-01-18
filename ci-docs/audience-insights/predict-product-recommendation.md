@@ -1,7 +1,7 @@
 ---
 title: Predviđanje preporuke proizvoda
 description: Predvidite proizvode koje će klijent verovatno kupiti ili stupiti u interakciju sa njima.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494556"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967856"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predviđanje preporuke proizvoda (pregled)
 
@@ -54,7 +54,7 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 
 > [!NOTE]
 > - Model zahteva istoriju transakcija vaših klijenata. Definicija transakcije je prilično fleksibilna. Svi podaci koji opisuju interakciju korisnika i proizvoda mogu da posluže kao ulaz. Na primer, kupovina proizvoda, pohađanje predavanja ili prisustvovanje događaju.
-> - Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta za kupovinu, spojite ih u Power Query pre unosa podataka.
+> - Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta nabavke, sloћite ih Power Query pre unošenja podataka.
 > - Ako su detalji porudžbine i naloga različiti entiteti, pridružite im se pre upotrebe u modelu. Model ne radi samo sa ID-om porudžbine ili ID-om priznanice u entitetu.
 
 
@@ -79,11 +79,11 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 1. Podesite **Broj proizvoda** koji želite da preporučite klijentu. Ova vrednost zavisi od toga kako način isporuke popunjava podatke. Ako možete da preporučite tri proizvoda, podesite ovu vrednost u skladu sa tim.
    
    >[!TIP]
-   > Možete da izaberete **Sačuvaj i zatvori** u bilo kom trenutku da biste sačuvali predviđanje kao radnu verziju. Radnu verziju predviđanja ćete pronaći na kartici **Moja predviđanja**.
+   > U svakom trenutku **možete da** izaberete opciju "Sačuvaj radnu verziju" da biste sačuvali predviđanje kao radnu verziju. Radnu verziju predviđanja ćete pronaći na kartici **Moja predviđanja**.
 
-1. Odaberite da li želite da **predložite proizvode koje su klijenti nedavno kupili**.
+1. Odaberite da li želite da uključite proizvode koje su kupci nedavno kupili u **polje Ponavljanje očekivanih** nabavki.
 
-1. Ako ste izabrali da *ne* preporučite nedavno kupljene proizvode, podesite **Period za reviziju**. Ovo podešavanje određuje vremenski okvir koji model uzima u obzir pre nego što ponovo preporuči proizvod korisniku. Na primer, naznačite da klijent kupuje prenosni računar svake dve godine. Ovaj prozor će pogledati istoriju kupovine za poslednje dve godine i ako pronađu stavku, stavka će biti filtrirana iz preporuka.
+1. Postavite **prozor "Pogledaj unazad"**. Ovo podešavanje određuje vremenski okvir koji model uzima u obzir pre nego što ponovo preporuči proizvod korisniku. Na primer, naznačite da klijent kupuje prenosni računar svake dve godine. Ovaj prozor će pogledati istoriju kupovine za poslednje dve godine i ako pronađu stavku, stavka će biti filtrirana iz preporuka.
 
 1. Izaberite **Sledeće**
 

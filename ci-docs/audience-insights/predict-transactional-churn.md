@@ -1,7 +1,7 @@
 ---
-title: Transaction churn predviđanje (Video)
+title: Transaction churn predviđanje (sadrži video)
 description: Predvidite da li je klijent ugrožen zbog toga što više ne kupuje vaše proizvode ili usluge.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904089"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967764"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predviđanje gubitka transakcija (verzija za pregled)
 
@@ -103,10 +103,10 @@ Za okruženja zasnovana na poslovnim kontaktima, možemo predvideti transakcioni
 
 1. Izaberite pločicu **Model gubitka klijenata (verzija za pregled)** i **Koristi ovaj model**.
 
-1. U oknu **Model gubitka klijenata**, odaberite **Transakcija** i izaberite **Započnite**.
+1. U oknu **Model kupca (preview)** odaberite stavku Transakcija i **izaberite** stavku **Prvi koraci**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Snimak ekrana sa izabranom opcijom transakcije u oknu modela gubitka klijenata.":::
-
+ 
 ### <a name="name-model"></a>Davanje naziva modela
 
 1. Navedite naziv modela da biste ga razlikovali od ostalih modela.
@@ -117,11 +117,11 @@ Za okruženja zasnovana na poslovnim kontaktima, možemo predvideti transakcioni
 
 ### <a name="define-customer-churn"></a>Definisanje gubitka klijenata
 
-1. Postavite vremenski period u danima za predviđanje gubitaka u polju **Utvrdite koje ćete klijente možda izgubiti u sledećem**. Na primer, predvidite rizik od gubitka klijenata tokom sledećih 90 dana kako biste se uskladili sa vašim marketinškim naporima za zadržavanje. Predviđanje rizika od gubitka na duži ili kraći vremenski period može otežati reagovanje na faktore na vašem profilu rizika od gubitka, ali to zavisi od vaših specifičnih poslovnih zahteva.
+1. Podesite **predviđanje prozor**. Na primer, predvidite rizik od gubitka klijenata tokom sledećih 90 dana kako biste se uskladili sa vašim marketinškim naporima za zadržavanje. Predviđanje rizika od gubitka na duži ili kraći vremenski period može otežati reagovanje na faktore na vašem profilu rizika od gubitka, ali to zavisi od vaših specifičnih poslovnih zahteva.
    >[!TIP]
-   > Možete da izaberete **Sačuvaj i zatvori** u bilo kom trenutku da biste sačuvali predviđanje kao radnu verziju. Da biste nastavili, radnu verziju predviđanja možete da pronađete na kartici **Moja predviđanja**.
+   > U svakom trenutku **možete da** izaberete opciju "Sačuvaj radnu verziju" da biste sačuvali predviđanje kao radnu verziju. Da biste nastavili, radnu verziju predviđanja možete da pronađete na kartici **Moja predviđanja**.
 
-1. Unesite broj dana za definisanje gubitka u polje **Klijent je izgubljen ako nije obavio nijednu kupovinu u:**. Na primer, ako klijent nije obavio nijednu kupovinu u poslednjih 30 dana, moglo bi se smatrati da je izgubljen za vaše preduzeće. 
+1. Unesite broj dana da biste definisali churn u polju **Churn** definicija. Na primer, ako klijent nije obavio nijednu kupovinu u poslednjih 30 dana, moglo bi se smatrati da je izgubljen za vaše preduzeće. 
 
 1. Izaberite **Dalje** za nastavak.
 
@@ -129,19 +129,16 @@ Za okruženja zasnovana na poslovnim kontaktima, možemo predvideti transakcioni
 
 1. Izaberite **Dodaj podatke** i odaberite vrstu aktivnosti u bočnom oknu koja sadrži potrebne podatke o transakcijama ili istoriji kupovine.
 
-1. U okviru **Odaberite aktivnosti**, odaberite određene aktivnosti iz izabrane aktivnosti na koju želite da se obračun fokusira.
+1. U **okviru** Izaberite aktivnosti odaberite određene aktivnosti od izabranog tipa aktivnosti na koji želite da se izračunavanje fokusira.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Bočno okno prikazuje odabir određenih aktivnosti prema semantičkom tipu.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Bočno okno prikazuje odabir određenih aktivnosti prema semantičkom tipu.":::
 
-1. Ako još niste mapirali aktivnost u semantički tip, izaberite **Uredi** da biste to uradili. Otvara se vođeno iskustvo za mapiranje semantičkih aktivnosti. Mapirajte podatke u odgovarajuća polja u izabranom tipu aktivnosti.
+   Ako još niste mapirali aktivnost u semantički tip, izaberite **Uredi** da biste to uradili. Otvara se vođeno iskustvo za mapiranje semantičkih aktivnosti. Mapirajte podatke u odgovarajuća polja u izabranom tipu aktivnosti.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tip aktivnosti podešavanja stranice.":::
+1. Mapirajte semantičke atribute u polja koja su potrebna za pokretanje modela. Ako polja u nastavku nisu popunjena, konfigurišite odnos između entiteta istorije kupovine i entiteta *Klijent*. Izaberite **Sačuvaj**.
 
-1. Nakon mapiranja aktivnosti na odgovarajući semantički tip, izaberite **Sledeći** za nastavak
+1. U **koraku "Dodavanje potrebnih** podataka" **kliknite na** dugme "Dalje" da biste nastavili ako ne želite da dodate još aktivnosti.
 
-1. Mapirajte semantičke atribute u polja koja su potrebna za pokretanje modela. Ako polja u nastavku nisu popunjena, konfigurišite odnos između entiteta istorije kupovine i entiteta *Klijent*.
-
-1. Izaberite **Sledeće**.
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
