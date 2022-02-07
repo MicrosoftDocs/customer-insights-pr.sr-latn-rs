@@ -1,7 +1,7 @@
 ---
 title: Podudaranje entiteta za objedinjavanje podataka
 description: Podudarite entitete da biste kreirali objedinjene profile klijenata.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863828"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Podudaranje entiteta
 
 Faza podudaranja navodi kako da kombinujete svoje skupove podataka u objedinjeni skup podataka profila klijenta. Kada dovršite [korak mapiranja](map-entities.md) u procesu objedinjavanja podataka, spremni ste da podudarate entitete. Faza podudaranja zahteva najmanje dva mapirana entiteta.
@@ -35,7 +30,7 @@ Svako podudaranje objedinjava dva ili više entiteta u jedan, objedinjeni entite
 
 :::image type="content" source="media/match-page.png" alt-text="Snimak ekrana stranice Podudaranje u oblasti Objedinjavanje procesa objedinjavanja podataka.":::
   
-Primarni entitet *eCommerce:eCommerceContacts* se podudara sa sledećim entitetom *LoyaltyScheme:loyCustomers*. Skup podataka koji je rezultat prvog koraka podudaranja podudara se sa sledećim entitetom ako imate više od dva entiteta.
+Primarni entitet *eCommerce:eCommerceContacts* se podudara sa sledećim entitetom *LoyaltyScheme:loyCustomers*. Skup podataka koji je rezultat prvog koraka podudaranja podudara se sa sledećim entitetom ako imate više entiteta.
 
 > [!IMPORTANT]
 > Entitet koji ste odabrali kao svoj primarni entitet poslužiće kao osnova za skup podataka objedinjenih profila. Dodatni entiteti koji su izabrani tokom faze podudaranja biće dodati ovom entitetu. To ne znači da će objedinjeni entitet sadržati *sve* podatke obuhvaćene ovim entitetom.
@@ -108,7 +103,7 @@ Pravila za podudaranje predstavljaju skupove uslova. Da biste podudarili entitet
 
 ### <a name="change-the-entity-order-in-match-rules"></a>Promena redosleda entiteta u pravilima podudaranja
 
-Možete promeniti redosled entiteta za pravila podudaranja da biste promenili redosled obrade. Pravila koja su u suprotnosti zbog promenjenog redosleda biće uklonjena. Uklonjena pravila morate ponovo kreirati pomoću ažurirane konfiguracije.
+Možete da promenite redosled entiteta da bi pravila podudaranja promenila redosled njihovog obrade. Pravila koja su u suprotnosti zbog promenjenog redosleda biće uklonjena. Uklonjena pravila morate ponovo kreirati pomoću ažurirane konfiguracije.
 
 1. Idi na **Podaci** > **Ujednačavanje** > **Podudaranje** i izaberite **Uredi**.
 
@@ -130,17 +125,21 @@ Navođenje pravila deduplikacije nije obavezno. Ako takva pravila nisu konfiguri
 
 1. Idite na **Podaci** > **Objedinjavanje** > **Podudaranje**.
 
-1. U odeljku **Objedinjeni duplikati** izaberite **Podesite entitete**. U slučaju da su pravila za deduplikaciju već kreirana, izaberite **Uredi**.
+1. U odeljku **Detalji deduplicated zapisa** izaberite stavku Postavi **entitete**. U slučaju da su pravila za deduplikaciju već kreirana, izaberite **Uredi**.
 
 1. U oknu **Željena podešavanja objedinjavanja** odaberite entitete nad kojima želite da pokrenete deduplikaciju.
 
-1. Navedite kako treba kombinovati duplikate zapisa i odaberite jednu od tri opcije:
-   - **Najpopunjeniji**: Identifikuje zapis sa najviše popunjenih atributa kao dobitni zapis. To je podrazumevana opcija objedinjavanja.
-   - **Najnoviji**: Identifikuje dobitni zapis na osnovu najskorijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
-   - **Najkasniji**: Identifikuje dobitni zapis na osnovu najkasnijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
+   1. Navedite kako treba kombinovati duplikate zapisa i odaberite jednu od tri opcije:
+      - **Najpopunjeniji**: Identifikuje zapis sa najviše popunjenih atributa kao dobitni zapis. To je podrazumevana opcija objedinjavanja.
+      - **Najnoviji**: Identifikuje dobitni zapis na osnovu najskorijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
+      - **Najkasniji**: Identifikuje dobitni zapis na osnovu najkasnijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
+
+   1. Opcionalno, izaberite **opciju** "Više opcija" da biste definisali pravila deduplikacije za pojedinačne atribute entiteta. Na primer, možete odabrati da zadržite najnoviju e-poštu i najspunjenu adresu iz različitih zapisa. Razvijte entitet da biste videli sve njegove atribute i definisali koju opciju da koristite za pojedinačne atribute. Ako odaberete opciju zasnovanu na recenciji, potrebno je da navedete i polje datuma/vremena koje definiše recencij. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Korak 1 za pravila za deduplikaciju.](media/match-selfconflation.png "Korak 1 za pravila za deduplikaciju")
+      > [!div class="mx-imgBorder"]
+      > ![Korak 1 za pravila za deduplikaciju.](media/match-selfconflation.png "Korak 1 za pravila za deduplikaciju")
+
+   1. Izaberite **gotovo** da biste primenili željene postavke objedinjavanja za deduplication.
  
 1. Kada se entiteti izaberu i kada se postave željene opcije za objedinjavanje, izaberite **Dodaj pravilo** da biste definisali pravila deduplikacije na nivou entiteta.
    - **Izaberi polje** navodi sva raspoloživa polja iz tog entiteta. Odaberite polje na kojem želite da proverite da li postoje duplikati. Odaberite polja koja su verovatno jedinstvena za svakog klijenta. Na primer, adresa e-pošte ili kombinacija imena, grada i broja telefona.
@@ -158,7 +157,7 @@ Navođenje pravila deduplikacije nije obavezno. Ako takva pravila nisu konfiguri
 
 1. Svako definisano pravilo za prilagođeno podudaranje zamenjuje pravila za dupliciranje. Ako pravilo deduplikacije identifikuje podudarne zapise, a prilagođeno pravilo podudaranja je podešeno da se nikada ne podudara sa tim zapisima, onda se ova dva zapisa neće podudarati.
 
-1. Nakon [pokretanja procesa podudaranja](#run-the-match-process), videćete statistiku deduplikacije na pločicama ključne metrike.
+1. Nakon [pokretanja procesa](#run-the-match-process) podudaranja, videćete statistike deduplikacije na ključnim metričkim pločicama.
 
 ### <a name="deduplication-output-as-an-entity"></a>Izlaz postupka uklanjanja duplikata kao entitet
 
@@ -222,26 +221,42 @@ Možete da konfigurišete i fino podesite većinu parametara podudaranja.
 
 - **Izbrišite pravilo** izborom simbola **Izbriši**.
 
-## <a name="specify-custom-match-conditions"></a>Navedite uslove za prilagođeno podudaranje
+## <a name="advanced-options"></a>Napredne opcije
+
+### <a name="add-exceptions-to-a-rule"></a>Dodavanje izuzetaka pravilu
+
+U većini slučajeva podudaranje entiteta vodi do jedinstvenih korisničkih profila sa konsolidovanim podacima. Da biste se dinamički pozabavili retkim slučajevima lažnih pozitivnih i lažnih negativnosti, možete definisati izuzetke za pravilo podudaranja. Izuzeci se primenjuju nakon obrade pravila podudaranja i izbegavaju podudaranje svih zapisa koji ispunjavaju kriterijume za izuzetak.
+
+Na primer, ako pravilo podudaranja kombinuje prezime, grad i datum rođenja, sistem će identifikovati blizance sa istim prezime koji žive u istom gradu kao i isti profil. Možete da navedete izuzetak koji se ne podudara sa profilima ako ime u entitetima koje kombinujete nisu isti.
+
+1. Idite na **Podaci** > **Objedinjavanje** > **Podudaranje** i izaberite **Uredi** na pravilu kojem želite da dodate uslove.
+
+1. U oknu **za uređivanje** izaberite dodaj **izuzetak**.
+
+1. Navedite kriterijume izuzetka. 
+
+1. Izaberite **Gotovo** da biste sačuvali pravilo.
+
+### <a name="specify-custom-match-conditions"></a>Navedite uslove za prilagođeno podudaranje
 
 Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dostupne su četiri opcije: 
 
 |Opcija  |Opis |Primer  |
 |---------|---------|---------|
-|Uvek se podudara     | Definiše vrednosti koje se uvek podudaraju.         |  Uvek se *poklapaju* sa Majkom *i MikeR-om*.       |
-|Nikad se ne podudara     | Definiše vrednosti koje se nikada ne podudaraju.        | Nikad se ne *poklapaj sa* Džonom i *Džonatanom*.        |
-|Prilagođeno zaobilaženje     | Definiše vrednosti koje sistem uvek treba da ignoriše u fazi podudaranja. |  Zanemari vrednosti *11111 i* Nepoznato *tokom* podudaranja.        |
-|Mapiranje pseudonima    | Definisanje vrednosti koje sistem treba da uzme u obzir kao istu vrednost.         | Smatraj *da* je Dћo jednak sa *Dћozefom.*        |
+|Uvek se podudara     | Definiše vrednosti koje se uvek podudaraju.         |  Uvek se poklapaju *sa* Majkom *i MikeR-om*.       |
+|Nikad se ne podudara     | Definiše vrednosti koje se nikada ne podudaraju.        | Nikad se ne poklapaj *sa* Džonom i *Džonatanom*.        |
+|Prilagođeno zaobilaženje     | Definiše vrednosti koje sistem uvek treba da ignoriše u fazi podudaranja. |  Zanemari vrednosti *11111 i Nepoznato* *tokom* podudaranja.        |
+|Mapiranje pseudonima    | Definisanje vrednosti koje sistem treba da uzme u obzir kao istu vrednost.         | Smatraj *da je Džo jednak sa Džozefom* *.*        |
 
 1. Idite na **Podaci** > **Objedinjavanje** > **Podudaranje** i izaberite **Prilagođeno podudaranje** u odeljku **Detalji podudarnih zapisa**.
 
    :::image type="content" source="media/custom-match-create.png" alt-text="Snimak ekrana odeljka pravila podudaranja sa istaknutom kontrolom za prilagođeno podudaranje.":::
 
-1. U **oknu** "Prilagođeno" idite na **karticu** "Zapisi".
+1. U oknu **"Prilagođeno** " idite na karticu " **Zapisi** ".
 
-1. Odaberite prilagođenu opciju podudaranja iz **padajuće liste** prilagođenog tipa i izaberite **stavku Preuzmi predložak**. Potreban vam je poseban predložak za svaku opciju podudaranja.
+1. Odaberite opciju prilagođenog podudaranja iz padajuće **liste prilagođenog** tipa i izaberite stavku Preuzmi **predložak**. Potreban vam je poseban predložak za svaku opciju podudaranja.
 
-1. Datoteka predloška se preuzima. Otvorite ga i popunite detalje. Predložak sadrži polja za specifikaciju entiteta i vrednosti primarnog ključa entiteta koje će se koristiti u prilagođenom podudaranju. Na primer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvek podudara sa primarnim ključem *34567* iz entiteta *Kontakt*, popunite predložak:
+1. Otvorite preuzetu datoteku predloška i popunite detalje. Predložak sadrži polja za specifikaciju entiteta i vrednosti primarnog ključa entiteta koje će se koristiti u prilagođenom podudaranju. Na primer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvek podudara sa primarnim ključem *34567* iz entiteta *Kontakt*, popunite predložak:
     - Entity1: Prodaja
     - Entity1Key: 12345
     - Entity2: Kontakt
@@ -255,28 +270,28 @@ Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dost
 
 1. Idite na **Podaci** > **Izvori podataka** i unesite datoteke predložaka kao nove entitete.
 
-1. Kada otpremite datoteke i entitete koji su dostupni, ponovo izaberite opciju **Prilagođeno podudaranje**. Videćete opcije za određivanje entiteta koje želite da uključite. U padajućem meniju izaberite potrebne entitete i izaberite stavku **Gotovo**.
+1. Kada otpremite datoteke i entitete koji su dostupni, ponovo izaberite opciju **Prilagođeno podudaranje**. Videćete opcije za određivanje entiteta koje želite da uključite. Izaberite potrebne entitete iz padajućeg menija i izaberite **gotovo**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Snimak ekrana dijaloga za odabir zamene za scenario prilagođenog podudaranja.":::
 
 1. Primena prilagođenog podudaranja zavisi od opcije podudaranja koju želite da koristite. 
 
-   - Za **"Uvek** **podudaranje" ili "Nikad se ne** podudaraj" pređite na sledeći korak.
-   - Za **prilagođeno** **premošćavanje ili mapiranje** pseudonima izaberite **opciju** Uredi po postojećem pravilu podudaranja ili kreirajte novo pravilo. U padajućem meniju Normalizacije odaberite opciju **Mapiranje** prilagođenog **bajpasa ili pseudonima** i izaberite **gotovo**.
+   - Za " **Uvek podudaranje** " **ili "Nikad se** ne podudaraj", pređite na sledeći korak.
+   - Za **prilagođeno zaobilaženje** **ili mapiranje pseudonima** izaberite **opciju Uredi** po postojećem pravilu podudaranja ili kreirajte novo pravilo. U padajućem meniju Normalizacije odaberite opciju mapiranja **prilagođenog bajpasa** **ili pseudonima i** izaberite **gotovo**.
 
 1. Izaberite **Sačuvaj** na stranici **Podudaranje** da biste primenili konfiguracije za prilagođeno podudaranje.
 
 1. Izaberite **Pokreni** na stranici **Podudaranje** da biste započeli postupak podudaranja. Ostala navedena pravila podudaranja se zamenjuju konfiguracijom za prilagođeno podudaranje.
 
-### <a name="known-issues"></a>Poznati problemi
+#### <a name="known-issues"></a>Poznati problemi
 
 - Samokonflacija ne pokazuje normalizovane podatke u entitetima deduplikacije. Međutim, ona interno primenjuje normalizaciju tokom deduplikacije. To je po dizajnu za sve normalizacije. 
-- Ako je postavka semantičkog tipa uklonjena u fazi mape kada pravilo **podudaranja** koristi mapiranje pseudonima ili prilagođeni bajpas, normalizacija neće biti primenjena. To se dešava samo ako obrišete semantički tip nakon konfigurisanja normalizacije u pravilu utakmice jer će semantički tip biti nepoznat.
+- Ako je postavka semantičkog tipa uklonjena u **fazi mape** kada pravilo podudaranja koristi mapiranje pseudonima ili prilagođeni bajpas, normalizacija neće biti primenjena. To se dešava samo ako obrišete semantički tip nakon konfigurisanja normalizacije u pravilu utakmice jer će semantički tip biti nepoznat.
 
 
 ## <a name="next-step"></a>Sledeći korak
 
-Kada dovršite proces podudaranja za najmanje jedan par podudaranja, pređite na korak [**·**](merge-entities.md) objedinjavanja.
+Kada dovršite proces podudaranja za najmanje jedan par podudaranja, pređite na korak objedinjavanja [**·**](merge-entities.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

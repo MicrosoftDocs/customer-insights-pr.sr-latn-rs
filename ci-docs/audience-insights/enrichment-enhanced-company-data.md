@@ -1,7 +1,7 @@
 ---
 title: Poboljšanje podataka preduzeća
 description: Obogatite i normalizujte podatke kompanije Microsoft modelima.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,15 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927599"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogaćivanje profila preduzeća poboljšanim podacima kompanije
 
-Koristite Microsoftove modele i prevedene podatke kompanije da biste ispravili, dopunili i standardizovali profile preduzeća. Koristićemo format [Common Data Model za bolju](/common-data-model/schema/core/applicationcommon/account) tačnost i uvide.
+Koristite Microsoftove modele i prevedene podatke kompanije da biste ispravili, dopunili i standardizovali profile preduzeća. Koristićemo format Common [Data Model za](/common-data-model/schema/core/applicationcommon/account) bolju tačnost i uvide.
 
 ## <a name="how-we-enhance-company-data"></a>Kako poboljšavamo podatke kompanije
 
-Naš model prolazi kroz proces u dva koraka da bi poboljšao profil kompanije. Prvo, normalizuje ime kompanije. Na primer, *Microsoft Corp će biti* ispravljen i standardizovan u *korporaciji Microsoft*. On pokušava da pronađe podudaranje u prevedenim podacima korporacije Microsoft. Ako se podudaranje nađe, obogaćujemo profil kompanije informacijama iz naših sačinjenih podataka kompanije, uključujući i ime kompanije.
+Naš model prolazi kroz proces u dva koraka da bi poboljšao profil kompanije. Prvo, normalizuje ime kompanije. Na primer, *Microsoft Corp će* biti ispravljen i standardizovan u korporaciji *Microsoft*. On pokušava da pronađe podudaranje u prevedenim podacima korporacije Microsoft. Ako se podudaranje nađe, obogaćujemo profil kompanije informacijama iz naših sačinjenih podataka kompanije, uključujući i ime kompanije.
 
 
 ### <a name="example"></a>Primer
@@ -58,7 +53,7 @@ Postoji nekoliko ograničenja sa poboljšanim podacima. Model ne podržava stavk
 
 1. Idite na **Podaci** > **Obogaćivanje**.
 
-1. Izaberite **stavku Obogati moje** podatke na **pločici sa podacima** poboljšanog preduzeća.
+1. Izaberite **stavku Obogati moje podatke** na pločici sa **podacima poboljšanog** preduzeća.
 
    :::image type="content" source="media/enhanced-company-data-tile.png" alt-text="Pločica za obogaćivanje u čvorištu za obogaćivanje podataka preduzeća.":::
 
@@ -82,17 +77,17 @@ Da biste započeli proces obogaćivanja, izaberite **Pokreni** sa komandne trake
 
 Nakon završetka procesa obogaćivanja, podatke o novoobogaćenim profilima klijenata možete pregledati pod opcijom **Moja obogaćivanja**. Osim toga, pronaći ćete vreme poslednjeg ažuriranja i broj obogaćenih profila.
 
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti ako izaberete **Prikaži obogaćene podatke**.
+Uzorak obogaćenih podataka možete videti u pločici "Pregled **obogaćenih** kupaca". Izaberite **stavku Pogledajte** više i izaberite karticu **Podaci** da biste pristupili detaljnom prikazu svakog obogaćenog profila.
 
 ### <a name="overview-card"></a>Kartica za pregled
 
 Kartica pregleda prikazuje detalje o pokrivenosti bogaćenjem. 
 
-* **Kupci su obrađili** i promenili : broj profila kupaca koji su uspešno obogaćeni.
+* **Preduzeća su obrađivanja** i menjala: broj profila preduzeća kupaca koji su uspešno obogaćeni.
 
-* **Kupci su obrađili i** nisu menjali : broj profila kupaca koji su prepoznati, ali nisu promenjeni. To se obično dešava kada su ulazni podaci važeći i ne mogu se poboljšati bogaćenjem.
+* **Preduzeća su obrađivanja i** nisu promenjena: broj profila preduzeća kupaca koji su prepoznati, ali nisu promenjeni. Ovo se obično dešava kada su ulazni podaci važeći i ne mogu se poboljšati bogaćenjem.
 
-* **Kupci koji nisu obrađeni i** nisu promenjeni : broj profila koji nisu prepoznati. Obično za ulazne podatke koji su nevažeći ili ih obogaćuje ne podržava.
+* **Preduzeća koja nisu obrađena i** nisu promenjena: broj profila preduzeća kupaca koji nisu prepoznati. Ovo se obično dešava za ulazne podatke koji su nevažeći ili ih obogaćivanje ne podržava.
 
 ## <a name="next-steps"></a>Sledeći koraci
 

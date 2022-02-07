@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7380760"
 ---
+
 # <a name="entity-schemas-in-common-data-model"></a>Šeme entiteta u platformi Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) je deklarativna specifikacija i definicija standardnih entiteta koji predstavljaju uobičajene koncepte i aktivnosti u poslovnim i produktivnim aplikacijama. Ovaj model se proširuje i na posmatračke i analitičke podatke. Common Data Model pruža dobro definisane, modularne i proširive poslovne entitete – poput poslovnog kontakta, poslovne jedinice, predmeta, kontakta, potencijalnog klijenta, mogućnosti za poslovanje i proizvoda – kao i interakcije sa dobavljačima, radnicima i klijentima – kao što su aktivnosti i ugovori o nivou usluga. Svako može da izgradi i proširi Common Data Model definicije da bi pronašao dodatne ideje specifične za poslovanje.
 

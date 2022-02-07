@@ -1,7 +1,7 @@
 ---
 title: Povežite Common Data Model podatke sa Azure Data Lake nalogom
 description: Radite sa Common Data Model podacima koristeći Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900214"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 
 Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model fascikle pomoću Azure Data Lake Storage Gen2 naloga.
@@ -26,11 +21,13 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 - Unos podataka podržava samo Azure Data Lake *Gen2* naloge za skladištenje. Ne možete da koristite Azure Data Lake Gen1 naloge za skladištenje za unos podataka.
 
+- Azure Nalog za skladištenje u jezeru podataka mora da [hijerarhijski omogućen prostor za ime](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Da biste potvrdili identitet pomoću principala usluge Azure, uverite se da je konfigurisan u vašem zakupcu. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md).
 
 - Azure Data Lake sa kojim želite da se povežete i unesete podatke mora biti u istom Azure regionu kao i Dynamics 365 Customer Insights okruženje. Ne podržavaju se veze sa Common Data Model fasciklom iz jezera podataka u drugom Azure regionu. Da biste saznali Azure region okruženja, posetite **Administrator** > **Sistem** > **Osnovni podaci** u uvidima o korisnicima.
 
-- Podaci uskladišteni u uslugama na mreži mogu se uskladištiti na drugoj lokaciji od mesta gde se podaci obrađuju ili skladište u programu Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa Dynamics 365 Customer Insights programom .  [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
+- Podaci uskladišteni u uslugama na mreži mogu se uskladištiti na drugoj lokaciji od mesta gde se podaci obrađuju ili skladište u programu Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa programom Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Povezivanje u fasciklu Common Data Model
 
@@ -38,11 +35,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Izaberite **Dodaj izvor podataka**.
 
-1. Izaberite **Azure skladište jezera sa** podacima, unesite ime za izvor podataka, a **zatim** kliknite na dugme **Dalje**.
+1. Izaberite **Azure skladište jezera sa podacima**, unesite ime **za** izvor podataka a zatim kliknite na dugme **Dalje**.
 
-   - Ako budete upitani, izaberite jedan od probnih skupova podataka koji se odnose na vašu industriju, a zatim kliknite na **dugme Dalje**. 
+   - Ako budete upitani, izaberite jedan od probnih skupova podataka koji se odnose na vašu industriju, a zatim kliknite na dugme **Dalje**. 
 
-1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite **adresu servera**, izaberite stavku Prijavi se, a **zatim** kliknite na **dugme Dalje**.
+1. Možete da birate između korišćenja opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Unesite adresu **servera**, izaberite stavku **Prijavi se, a zatim** kliknite na dugme **Dalje**.
    > [!div class="mx-imgBorder"]
    > ![Dijalog za unos novih detalja veze za Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -55,11 +52,11 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
    > [!NOTE]
    > Nijedna datoteka model.json ili manifest.json povezana sa drugim izvorom podataka u okruženju neće se prikazati na listi.
 
-1. Listu dostupnih entiteta videćete u izabranoj datoteci model.json ili manifest.json. Redigujte i izaberite sa liste dostupnih entiteta, a zatim izaberite **stavku Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
+1. Listu dostupnih entiteta videćete u izabranoj datoteci model.json ili manifest.json. Redigujte i izaberite sa liste dostupnih entiteta, a zatim kliknite na dugme **Sačuvaj**. Svi izabrani entiteti biće uneti iz novog izvora podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijalog koji prikazuje listu entiteta iz datoteke model.json.](media/review-entities.png)
 
-8. Naznačite entitete podataka koje želite da omogućite profilisanje podataka, a zatim izaberite **sačuvaj**. Profilisanje podataka omogućava analitiku i druge mogućnosti. Možete odabrati čitav entitet koji bira sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Podrazumevano nijedan entitet nije omogućen za profilisanje podataka.
+8. Naznačite entitete podataka koje želite da omogućite profilisanje podataka, a zatim kliknite na dugme **Sačuvaj**. Profilisanje podataka omogućava analitiku i druge mogućnosti. Možete odabrati čitav entitet koji bira sve atribute iz entiteta ili odabrati određene atribute po svom izboru. Podrazumevano nijedan entitet nije omogućen za profilisanje podataka.
    > [!div class="mx-imgBorder"]
    > ![Dijalog koji prikazuje profilisanje podataka.](media/dataprofiling-entities.png)
 

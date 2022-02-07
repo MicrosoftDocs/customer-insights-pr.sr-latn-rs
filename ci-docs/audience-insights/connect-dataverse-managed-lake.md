@@ -9,16 +9,11 @@ author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: fecf3e33b5bc1eec17006fc196004be902c03b40
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900168"
 ---
+
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povežite se sa podacima u Microsoft Dataverse upravljanom jezeru podataka
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Ovaj članak pruža informacije o tome kako Dataverse korisnici mogu brzo da se povežu sa analitičkim entitetima u upravljanom Microsoft Dataverse jezeru. 
 
@@ -27,7 +22,7 @@ Ovaj članak pruža informacije o tome kako Dataverse korisnici mogu brzo da se 
 
 ## <a name="important-considerations"></a>Važna razmatranja
 
-Podaci uskladišteni u mrežnim uslugama, kao što je Azure Data Lake Storage, mogu se skladištiti na lokaciji različitoj od one na kojoj se podaci obrađuju ili skladište u usluzi Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa Dynamics 365 Customer Insights programom .  [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
+Podaci uskladišteni u mrežnim uslugama, kao što je Azure Data Lake Storage, mogu se skladištiti na lokaciji različitoj od one na kojoj se podaci obrađuju ili skladište u usluzi Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa programom Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povežite se sa Dataverse upravljanim jezerom
 
@@ -35,7 +30,7 @@ Podaci uskladišteni u mrežnim uslugama, kao što je Azure Data Lake Storage, m
 
 2. Izaberite **Dodaj izvor podataka**.
 
-3. Izaberite **Microsoft Dataverse** i kliknite na **dugme Dalje**.
+3. Izaberite i **Microsoft Dataverse** kliknite na dugme **Dalje**.
 
 4. Unesite **Naziv** izvora podataka i izaberite **Sledeće**. 
 

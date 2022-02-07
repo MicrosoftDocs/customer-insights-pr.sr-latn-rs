@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945444"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikacijama. Sa instaliranim programskim dodatkom Kartica klijenta u podržanoj Dynamics 365 aplikaciji, možete odabrati da prikazujete polja profila klijenta, uvide i vremensku osu aktivnosti. Programski dodatak će preuzeti podatke iz usluge Customer Insights bez uticaja na podatke u povezanoj Dynamics 365 aplikaciji.
 
@@ -27,14 +22,14 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 ## <a name="prerequisites"></a>Preduslovi
 
 - Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
-- Da bi se Vaši Dynamics 365 podaci mapirali na korisnici uvida u profile klijenata, preporučujemo da [se oni unose iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), morate se uveriti `contactid` da je polje (ili ) postavljeno kao primarni ključ za taj izvor podataka u `accountid`[koraku mape procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Da bi se Vaši Dynamics 365 podaci mapirali na korisnici uvida u profile klijenata, preporučujemo da se oni unose [iz Dynamics 365 aplikacije pomoću Microsoft Dataverse konektora](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), morate se uveriti `contactid` da je polje (ili `accountid`) postavljeno [kao primarni ključ za taj izvor podataka u koraku mape procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Svi Dynamics 365 korisnici programskog dodatka za kartice klijenta moraju biti [dodati kao korisnici](permissions.md) u uvidima u ciljnu grupu da biste videli podatke.
 - [Konfigurisane mogućnosti pretrage i filtriranja](search-filter-index.md) u uvidima u ciljnu grupu su potrebne da bi pronalaženje podataka funkcionisalo.
 - Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima u ciljnu grupu. Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
   - **Kontrola mera**: Zahteva [konfigurisane mere](measures.md) atributa tipa korisnika.
-  - **Kontrola inteligencije** : Zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
+  - **Kontrola inteligencije**: Zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
   - **Kontrola detalja o klijentima**: sva polja iz profila dostupna su u objedinjenom profilu korisnika.
-  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: brendove koje [obezbeđuje](enrichment-microsoft.md) Microsoft, interesovanja koja obezbeđuje Microsoft [i](enrichment-microsoft.md)[podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
+  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: brendove [koje](enrichment-microsoft.md) obezbeđuje Microsoft, [interesovanja](enrichment-microsoft.md) koja obezbeđuje Microsoft i [podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
   - **Kontrola kontakata**: zahteva definiciju semantičkog entiteta tipa kontakata.
   - **Kontrola vremenske ose**: zahteva [konfigurisane aktivnosti](activities.md).
 

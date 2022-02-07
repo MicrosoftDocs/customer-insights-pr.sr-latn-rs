@@ -1,7 +1,7 @@
 ---
 title: Objedinjavanje entiteta kod objedinjavanja podataka
 description: Objedinite entitete da biste kreirali objedinjene profile klijenata.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732789"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Objedinjavanje entiteta
 
 Faza spajanja je poslednja faza u procesu objedinjavanja podataka. Njegova svrha je usklađivanje neusaglašenih podataka. Primeri neusaglašenih podataka mogu uključivati korisničko ime koje se nalazi u dva skupa podataka, ali to se prikazuje malo drugačije u svakom („Jovan Dučić“ u odnosu na „Jovo Dučić“) ili telefonski broj koji se razlikuje u formatu (npr. 617-803-091 u odnosu na 617803091). Spajanje tih neusaglašenih tačaka podataka obavlja se na osnovu poređenja atributa.
@@ -99,11 +94,13 @@ Na stranici **Objedinjavanje**, izaberite **Izuzeta polja** da biste videli list
 
 1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene. 
 
-## <a name="manually-combine-fields"></a>Ručno kombinovanje polja
+## <a name="combine-fields-manually"></a>Ručno kombinovanje polja
 
-Ručno navedite objedinjeni atribut. 
+Ručno navedite objedinjeni atribut.
 
-1. Na stranici **Objedinjavanje**, izaberite **Kombinuj polja**.
+1. Na stranici Objedinjavanje **izaberite** stavku **Kombinuj**.
+
+1. Odaberite **opciju** "Polja".
 
 1. Navedite politiku pobednika spajanja u padajućoj listi **Kombinuj polja prema**.
 
@@ -114,6 +111,26 @@ Ručno navedite objedinjeni atribut.
 1. Izaberite **Gotovo** da primenite promene.
 
 1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene. 
+
+## <a name="combine-a-group-of-fields"></a>Kombinovanje grupe polja
+
+Tretirajte grupu polja kao jednu jedinicu. Na primer, kada naši zapisi sadrže polja "Adresa1", "Adresa2", "Grad", "Država" i "Zip". Verovatno ne želimo da se objedinimo u adresi drugog zapisa, misleći da će to učiniti naše podatke potpunijim
+
+1. Na stranici Objedinjavanje **izaberite** stavku **Kombinuj**.
+
+1. Odaberite **opciju Grupa** polja.
+
+1. Navedite smernice pobednika objedinjavanja u **grupama redova po padajućem** meniju.
+
+1. Izaberite **opciju** Dodaj i odaberi ako želiš da u polja doda još polja ili dodatnih grupa.
+
+1. Navedite **ime** i ime izlaza **za** svako kombinovano polje.
+
+1. Navedite **ime** za grupu polja. 
+
+1. Izaberite **Gotovo** da primenite promene.
+
+1. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene.
 
 ## <a name="change-the-order-of-fields"></a>Promena redosleda polja
 
