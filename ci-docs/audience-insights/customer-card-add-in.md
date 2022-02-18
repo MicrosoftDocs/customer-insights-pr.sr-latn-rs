@@ -1,7 +1,7 @@
 ---
 title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (sadrži video)
 description: Prikažite podatke iz uvida u ciljnu grupu u Dynamics 365 aplikacijama sa ovim programskim dodatkom.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: sr-Latn-RS
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085265"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 
 
@@ -113,5 +118,26 @@ Programski dodatak za korisničku karticu se ne nadograđuje automatski. Da bist
 
 1. Kada započnete proces nadogradnje, videćete indikator učitavanja dok se nadogradnja ne završi. Ako nema novije verzije, nadogradnja će prikazati poruku o grešci.
 
+## <a name="troubleshooting"></a>Rešavanje problema
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Kontrole iz programskog dodatka "Kartica kupca" ne pronalaze podatke
+
+**Problem:**
+
+Čak i sa ispravno konfigurisanim ID poljima, kontrole ne mogu da pronađu podatke ni za kog klijenta.  
+
+**Rešenje:**
+
+1. Uverite se da ste konfigurisali programski dodatak kartice u skladu sa uputstvima: Konfigurisanje [programskog dodatka kartice kupca](#configure-the-customer-card-add-in) 
+
+1. Redigujte konfiguraciju ingestion podataka. Uredite izvor podataka za Dynamics 365 sistem koji sadrži ID-a kontakta. Ako je ID-a kontakta prikazan velikim sličnim znakovima u uređivaču Power Query, pokušajte sledeće: 
+    1. Uredite izvor podataka biste otvorili prozor izvor podataka u programu Power Query Editor.
+    1. Izaberite kolonu ID kontakta.
+    1. Na traci **zaglavlja** izaberite stavku Transformiši da biste videli dostupne radnje.
+    1. Izaberite **malim s malim sličima**. Proverite valjanost ako su GUID-ove u tabeli sada malim sličima.
+    1. Sačuvajte izvor podataka.
+    1. Pokrenite procese unošenja podataka, ujedinjenja i nizvodno da biste propagirali promene GUID-a. 
+
+Nakon dovršavanja potpunog osvežavanja, kontrole programskog dodatka "Kartica kupca" bi trebalo da prikazuju očekivane podatke. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,6 +2,22 @@
   href: index.yml
 - name: Pregled proizvoda
   href: overview.md
+- name: Katalog za učenje
+  items:
+    - name: Započnite
+      href: /learn/modules/get-started-customer-data-platform/
+    - name: Unesite podatke
+      href: /learn/modules/ingest-data-customer-insights/
+    - name: Kreirajte ujednačeni profil klijenta
+      href: /learn/modules/unified-customer-profile/
+    - name: Rad sa korisnici uvidima
+      href: /learn/modules/working-with-customer-insights/
+    - name: Obogatite podatke i napravite predviđanja
+      href: /learn/modules/enrich-data/
+    - name: Upravljanje spoljnim vezama
+      href: /learn/modules/configure-third-party-connections/
+    - name: Administriranje usluge Customer Insights
+      href: /learn/modules/administer-customer-data-platform/
 - name: Besplatna probna verzija
   items:
     - name: Upisivanje za besplatnu verziju
@@ -30,21 +46,11 @@
           href: audience-insights/home.md
     - name: Rad sa poslovnim nalozima
       href: audience-insights/work-with-business-accounts.md
-    - name: Upoznavanje modula
-      items:
-        - name: Unesite podatke
-          href: /learn/modules/ingest-data-customer-insights/
-        - name: Kreirajte ujednačeni profil klijenta
-          href: /learn/modules/unified-customer-profile/
-        - name: Rad sa aplikacijom
-          href: /learn/modules/working-with-customer-insights/
-        - name: Obogatite podatke i predviđanja
-          href: /learn/modules/enrich-data/
     - name: Izvori podataka
       items:
         - name: Pregled izvora podataka
           href: audience-insights/data-sources.md
-        - name: Dodavanje izvora podataka putem Power Query linija spajanja
+        - name: Dodavanje izvora podataka putem linija Power Query spajanja
           href: audience-insights/connect-power-query.md
         - name: Dodajte Common Data Model fasciklu kao izvor podataka
           href: audience-insights/connect-common-data-model.md
@@ -94,7 +100,7 @@
           href: audience-insights/enrichment-leadspace.md
         - name: Obogaćivanje uz Experian
           href: audience-insights/enrichment-experian.md
-        - name: Obogatite Office 365 podacima
+        - name: Obogatite podacima Office 365
           href: audience-insights/enrichment-office.md
         - name: Obogaćivanje uz SFTP prilagođeni uvoz
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -372,3 +378,5 @@
   href: service-limits.md
 - name: DSR prava i zahtevi
   href: dsr-rights-requests.md
+- name: Dobijte podršku
+  href: /power-platform/admin/get-help-support

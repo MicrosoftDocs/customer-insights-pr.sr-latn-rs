@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900292"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088164"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 
-Ovaj članak govori o tome kako da se Dynamics 365 Customer Insights povežete sa Azure Data Lake Storage nalogom pomoću direktora Azure usluge umesto ključeva naloga za skladištenje. 
+Ovaj članak govori o tome kako da se povežete Dynamics 365 Customer Insights sa nalogom Azure Data Lake Storage pomoću direktora Azure usluge umesto ključeva naloga za skladištenje. 
 
-Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Direktore usluga možete da koristite za bezbedno [dodavanje ili uređivanje fascikle "Uobičajeni model podataka" kao izvor podataka](connect-common-data-model.md) ili kreiranje ili ažuriranje [okruženja](create-environment.md).
+Automatizovani alati koji koriste Azure usluge uvek bi trebalo da imaju ograničene dozvole. Umesto da se aplikacije prijavljuju kao potpuno privilegovani korisnik, Azure nudi principale usluga. Principal usluge možete da koristite za bezbedno dodavanje [ili uređivanje fascikle "Uobičajeni model podataka" kao izvor podataka](connect-common-data-model.md) ili [kreiranje ili ažuriranje okruženja](create-environment.md).
 
 > [!IMPORTANT]
-> - Data Lake Storage nalog koji će koristiti principala usluge mora imati [omogućen hijerarhijski prostor za ime](/azure/storage/blobs/data-lake-storage-namespace).
+> - Data Lake Storage nalog koji će koristiti glavnicu usluge mora biti Gen2 i [imati omogućen hijerarhijski prostor za ime](/azure/storage/blobs/data-lake-storage-namespace). Azure Data Lake Gen1 nalozi za skladištenje nisu podržani.
 > - Potrebne su vam administratorske dozvole za Azure pretplatu da biste kreirali glavnicu usluge.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Kreiranje principala usluge Azure za Customer Insights

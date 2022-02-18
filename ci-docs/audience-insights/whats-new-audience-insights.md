@@ -1,7 +1,7 @@
 ---
 title: Nove i predstojeće funkcije
-description: 'Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.'
-ms.date: 01/27/2022
+description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: sr-Latn-RS
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088302"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Ispravke za januar 2022. godine
+
+Ispravke u januaru 2022.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analiza sentimenta povratnih informacija vašeg kupca
+
+Customer Insights pruža novu funkciju sa AI napajanjem koja sintetiše sentiment klijenata i identifikuje određene poslovne aspekte kao mogućnosti za ciljana poboljšanja. Analizom pisanih povratnih informacija vaših kupaca možete dobiti tačne uvide uz nisku cenu. Analiza sentimenta koju napajaju modeli obrade prirodnog jezika (NLP) koji generišu dva izvedena uvida za ID svakog kupca. Ocena sentimenta (od –5 do 5) i lista primenljivih poslovnih aspekata. 
+
+Više informacija potražite u članku [Analiza sentimenta u povratnim informacijama korisnika (Preview)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Ispravke za decembar 2021.
@@ -37,7 +53,7 @@ Više informacija potražite u članku [Prijavljivanje sa Dynamics 365 Customer 
 
 Koristite podatke Microsoft Office 365 iz da biste obogatili profile korisničkog naloga uvidom o angažovanju putem Office 365 aplikacija. Podaci o angažovanju se sastoje od aktivnosti e-pošte i sastanka, koja se prikuplja na nivou naloga. Na primer, broj e-poruka sa poslovnog naloga ili broj sastanaka sa nalogom. Podaci o pojedinačnim korisnicima se ne dele. Ovo bogaćenje je dostupno u sledećim regionima: Velikoj Britaniji, Evropi, Severnoj Americi.
 
-Više informacija potražite u članku Obogaćivanje [profila klijenata podacima o angažovanju (pregled)](enrichment-office.md)
+Više informacija potražite u članku Obogaćivanje [profila klijenata podacima o angažovanju (Preview)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Napredne funkcije za ujedinjenje podataka
 
