@@ -9,8 +9,13 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
+ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
+ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.translationtype: HT
+ms.contentlocale: sr-Latn-RS
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8010946"
 ---
-
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogaćivanje profila preduzeća poboljšanim podacima kompanije
 
 Koristite Microsoftove modele i prevedene podatke kompanije da biste ispravili, dopunili i standardizovali profile preduzeća. Koristićemo format Common [Data Model za](/common-data-model/schema/core/applicationcommon/account) bolju tačnost i uvide.
