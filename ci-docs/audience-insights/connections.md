@@ -5,16 +5,16 @@ ms.date: 04/09/2021
 ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e78e18b75ee9797b5fc76486615992e301e4c650
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977754"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304989"
 ---
 # <a name="connections-preview-overview"></a>Pregled veza (verzija za pregled)
 
@@ -47,7 +47,6 @@ Da biste dodali veze, morate da imate [administratorske dozvole](permissions.md)
 1. U oknu **Podešavanje veze**, navedite potrebne detalje. 
    1. **Ime za prikaz** i vrsta veze opisuju vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj ove veze.
    1. Tačna polja zavise od usluge na koju se povezujete. Više o detaljima određenog tipa veze možete saznati u članku o ciljnoj usluzi.
-   1. Ako [koristite sopstveni Key Vault](use-azure-key-vault.md) za čuvanje tajni, aktivirajte **Koristi Key Vault** i izaberite tajnu sa liste.
 
 1. Da biste kreirali vezu, izaberite **Sačuvaj**.
 
@@ -94,6 +93,3 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovo ih aktivirate dodavanj
 
 1. Da biste potvrdili brisanje, izaberite **Ukloni**.
 
-## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Uspostavljanje veza sa tajnama kojima upravlja vaš Key Vault
-
-Nekim vezama su potrebne tajne, poput API ključeva ili lozinki. Neke veze podržavaju tajne sačuvane u vašem Key Vaultu. Saznajte više o podržanim vezama i načinu podešavanja [sopstvenog Key Vaulta za uvide u ciljnu grupu](use-azure-key-vault.md).

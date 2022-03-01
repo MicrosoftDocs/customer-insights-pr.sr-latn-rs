@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u ActiveCampaign
 description: Saznajte kako da konfigurišete vezu i izvezete je u uslugu ActiveCampaign.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618170"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314668"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Izvoz segmenata u ActiveCampaign (verzija za pregled)
 
@@ -28,9 +28,9 @@ Izvezite segmente objedinjenih profila kupaca u ActiveCampaign i koristite ih za
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do milion profila klijenata po izvozu u ActiveCampaign, a za to može biti potrebno i do 90 minuta.
+- Možete izvoziti do 1 milion profila po izvozu u ActiveCampaign, a to može potrajati i do 90 minuta.
 - Izvoz u ActiveCampaign je ograničen na segmente.
-- Broj profila klijenata koje možete izvesti u ActiveCampaign zavisi od vašeg ugovora sa ActiveCampaign-om.
+- Broj profila koje možete da izvezete u ActiveCampaign zavisi od vašeg ugovora sa uslugom ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Podesite vezu sa uslugom ActiveCampaign
 
@@ -64,7 +64,7 @@ Izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više infor
 
 1. Unesite [**ID ActiveCampaign liste**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. U ActiveCampaign morate izvoziti segmente. Opcionalno, možete da izvezete polja Ime, Prezime i Telefon da biste kreirali personalizovanije adrese e-pošte. Izaberite Dodaj atribut za mapiranje ovih polja.
+3. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. U ActiveCampaign morate izvoziti segmente. Opcionalno, možete da izvezete polja Ime, Prezime i Telefon da biste kreirali personalizovanije adrese e-pošte. Izaberite Dodaj atribut za mapiranje ovih polja.
 
 1. Izaberite stavku **Sačuvaj**.
 

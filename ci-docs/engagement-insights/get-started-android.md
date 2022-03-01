@@ -1,27 +1,26 @@
 ---
-title: Početni koraci u radu sa Android SDK
+title: Prvi koraci sa Android SDK-om
 description: Saznajte kako da personalizujete i pokrenete Android SDK
 author: britl
 ms.reviewer: mhart
-ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977592"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655359"
 ---
-# <a name="get-started-with-the-android-sdk"></a>Početni koraci u radu sa Android SDK
+# <a name="get-started-with-the-android-sdk"></a>Prvi koraci u Android SDK-u
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Ovo uputstvo vas vodi kroz proces opremanja Android aplikacije sa Dynamics 365 Customer Insights SDK za uvide u angažovanje. Događaje na portalu počećete da vidite za pet minuta ili pre.
+Ovo uputstvo vas vodi kroz proces instrumenata vaše Android aplikacije sa Dynamics 365 Customer Insights uvidom UDK. Događaje na portalu počećete da vidite za pet minuta ili pre.
 
 ## <a name="configuration-options"></a>Opcije konfiguracije
 Sledeće opcije konfiguracije mogu se proslediti SDK-u:
@@ -32,12 +31,12 @@ Sledeće opcije konfiguracije mogu se proslediti SDK-u:
 
 - Android Studio
 
-- Minimalni nivo za Android API: 16 (Jelly Bean)
+- Minimalni Android API nivo: 16 (Jelly Bean)
 
 - Ključ za unos (pogledajte u nastavku uputstvo za dobijanje)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Integrišite SDK u svoju aplikaciju
-Započnite postupak odabirom radnog prostora u, odabirom Android mobilne platforme i preuzimanjem Android SDK.
+Započnite proces izborom radnog prostora, izborom Android mobilne platforme i preuzimanjem Android SDK- a.
 
 - Koristite preklopnik radnog prostora u levom oknu za navigaciju da biste izabrali radni prostor.
 
@@ -47,7 +46,7 @@ Započnite postupak odabirom radnog prostora u, odabirom Android mobilne platfor
 
 ## <a name="configure-the-sdk"></a>Konfigurisanje SDK
 
-Kada preuzmete SDK, možete raditi s njim na platformi Android Studio da biste omogućili i definisali događaje. Postoje dva načina da to uradite:
+Kada preuzmete SDK, možete da radite sa njim u Android Studio biste omogućili i definisali događaje. Postoje dva načina da to uradite:
 ### <a name="option-1-use-jitpack-recommended"></a>Opcija 1: Koristite JitPack (preporučuje se)
 1. Dodajte JitPack spremište svom korenu `build.gradle`:
     ```gradle
@@ -68,7 +67,7 @@ Kada preuzmete SDK, možete raditi s njim na platformi Android Studio da biste o
     ```
 
 ### <a name="option-2-use-download-link"></a>Opcija 2: Korišćenje veze za preuzimanje
-1. Preuzmite [Android SDK za uvide u angažovanje](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) i postavite datoteku `eiandroidsdk-debug.aar` u fasciklu `libs`.
+1. Preuzmite [uvide o Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip) i stavite `eiandroidsdk-debug.aar` datoteku u `libs` fasciklu.
 
 1. Otvorite datoteku `build.gradle` na nivou projekta i dodajte sledeće isečke:
     ```gradle

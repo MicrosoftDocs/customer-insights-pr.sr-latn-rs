@@ -1,7 +1,7 @@
 ---
 title: Obogaćivanje profila klijenata podacima kompanije Microsoft
-description: Koristite vlasničke podatke korporacije Microsoft da biste obogatili podatke o klijentima afinitetima i udeo u izražavanju.
-ms.date: 11/11/2021
+description: Koristite zaštićene podatke kompanije Microsoft da biste obogatili podatke o klijentima afinitetima prema brendu i interesovanjima.
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,29 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 346c79d0a4d5cd5c47e91c195a48d3a153db0dc0
-ms.sourcegitcommit: 9d3c9e4eb2ce20996a4f4fb44c42e3fe020c5b48
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/11/2021
-ms.locfileid: "7818790"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305173"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile klijenata afinitetima i udeo u izražavanju (pregled)
+# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Obogatite profile klijenata afinitetima brenda i interesovanja (pregled)
 
-Koristite Microsoftove vlasničke podatke da biste obogatili podatke o korisnicima afinitetima brenda, afinitetima interesovanja i udeo u izražavanju (SoV). Ovi afiniteti i soV zasnovani su na podacima osoba sa demografijom sličnom vašim kupcima. Ove informacije vam pomažu da bolje razumete i segmentite svoje kupce na osnovu njihovih afiniteta ili soV-a prema određenim brendovima i interesovanjima.
+Koristite zaštićene podatke kompanije Microsoft da biste obogatili podatke o klijentima afinitetima prema brendu i interesovanjima. Ovi afiniteti su zasnovani na podacima od osoba sa sličnim demografskim kategorijama kao vaši klijenti. Ove informacije vam pomažu da bolje razumete i segmentirate svoje klijente na osnovu njihovih afiniteta prema određenim brendovima i interesovanjima.
 
 U uvidima o korisnicima, idite na **Podaci** > **Obogaćivanje** da biste [konfigurisali i pregledali obogaćivanja](enrichment-hub.md).
 
-Da biste konfigurisali afinitete brenda i soV obogaćivanje, idite na **karticu** "Otkrij" i **izaberite stavku Obogati moje** podatke na **pločici** "Brendovi".
+Da biste konfigurisali obogaćivanje afiniteta za brendove, idite na karticu **Otkrijte** i izaberite **Obogati moje podatke** na pločici **Brendovi**.
 
-Da biste konfigurisali afinitete interesovanja i Obogaćivanje funkcije SOV, idite na **karticu "Otkrij"** i **izaberite stavku Obogati moje** podatke na **pločici** "Interesovanja".
+Da biste konfigurisali obogaćivanje afiniteta interesovanja, idite na karticu **Otkrijte** i izaberite **Obogati moje podatke** na pločici **Interesovanja**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pločice Brendovi i Interesovanja.](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i Interesovanja")
+   > ![Pločice Brendovi i Interesovanja](media/BrandsInterest-tile-Hub.png "Pločice Brendovi i Interesovanja")
 
-## <a name="how-we-determine-affinities-and-sov"></a>Kako određujemo afinitete i SOV
+## <a name="how-we-determine-affinities"></a>Kako utvrđujemo afinitete
 
-Koristimo podatke Microsoft pretrage na mreži da bismo pronašli afinitete i SOV za brendove i interesovanja u različitim demografskim segmentima (definisanim po uzrastu, polu ili lokaciji). Volumen pretrage na mreži za brend ili kamatu čini osnovu za utvrđivanje afiniteta ili SOV-a. Međutim, svaki od njih pruža različitu perspektivu razumevanja vaših klijenata.
-
-- Afinitet je uporedni u različitim demografskim segmentima. Ove informacije možete koristiti za identifikaciju demografskih segmenata koji imaju najveće afinitete prema datom brendu ili interesovanju, u poređenju sa drugim segmentima.
-
-- Udeo u izražavanju je uporedivo u odnosu na odabrane brendove ili interesovanja. Ove informacije možete da koristite da biste identifikovali koji brend ili interesovanje ima najveći deljeni glas za dati demografski segment, u poređenju sa drugim brendovima ili interesovanjima koja ste izabrali.
+Koristimo podatke za pretragu na mreži kompanije Microsoft za pronalaženje afiniteta prema brendovima i interesovanjima u različitim demografskim segmentima (definisani uzrastom, polom ili lokacijom). Obim pretraživanja brendova ili interesovanja na mreži određuje koliki afinitet demografski segment ima prema tom brendu ili interesovanju, u poređenju s drugim segmentima.
 
 ## <a name="affinity-level-and-score"></a>Nivo afiniteta i rezultat
 
@@ -52,10 +48,6 @@ Na svakom obogaćenom korisničkom profilu pružamo dve povezane vrednosti: nivo
 |Nizak     | 1-34        |
 
 U zavisnosti od granularnosti kojom želite da merite afinitet, možete da koristite nivo afiniteta ili rezultat. Ocena afiniteta vam daje precizniju kontrolu.
-
-## <a name="share-of-voice-sov"></a>Udeo u izražavanju (SoV)
-
-Izračunavamo SOV na skali od 100 poena. Ukupan SOV u svim brendovima ili interesovanjima za svaki obogaćeni profil kupaca sabira i do 100. Za razliku od afiniteta, SOV je u odnosu na brendove i interesovanja koja izaberete. Na primer, SoV vrednosti za 'Microsoft' mogu da se razlikuju ako su izabrani brendovi ('Microsoft', 'GitHub') naspram ('Microsoft', 'LinkedIn').
 
 ## <a name="supported-countriesregions"></a>Podržane zemlje/regioni
 
@@ -90,7 +82,7 @@ Pregledajte podrazumevane postavke obogaćivanja i ažurirajte ih po potrebi.
 
 ### <a name="select-entity-to-enrich"></a>Izaberite entitet koji želite da obogatite
 
-Izaberite **obogaćeni entitet i** odaberite skup podataka želite da obogatite podacima korporacije Microsoft. Možete izabrati entitet Klijent da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
+Izaberite **Obogaćeni entitet** i odaberite skup podataka koji želite da obogatite podacima preduzeća iz kompanije Microsoft. Možete izabrati entitet Klijent da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
 
 ### <a name="map-your-fields"></a>Mapiranje polja
 
@@ -124,25 +116,26 @@ Pokrenite obogaćivanje nakon konfigurisanja brendova, interesovanja i mapiranja
 
 U zavisnosti od veličine podataka o klijentima, može proći nekoliko minuta da se oplemenjivanje završi.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora **Vidi detalje** za jedan od zadataka posla, pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
 Nakon pokretanja postupka obogaćivanja, idite na **Moja obogaćivanja** da biste pregledali ukupan broj obogaćenih klijenata i raspodelu brendova ili interesovanja u obogaćenim profilima klijenata.
 
-:::image type="content" source="media/my-enrichments.png" alt-text="Pregled rezultata nakon pokretanja procesa obogaćivanja.":::
+:::image type="content" source="media/my-enrichments.png" alt-text="Pregled rezultata nakon pokretanja procesa obogaćivanja":::
 
-Videćete grafikon sa brojem obogaćenih profila klijenata tokom vremena i pregledima obogaćenih entiteta. Pregledajte obogaćene podatke tako što ćete **izabrati stavku** Pogledajte više **na nivou** afiniteta **ili udeo u izražavanju** grafikona. Obogaćeni podaci za brendove idu **na BrandAffinityFromMicrosoft** i **BrandShareOfVoiceFromMicrosoft** entitete. Podaci za interese su **u subjektima InterestAffinityFromMicrosoft** i **InterestShareOfVoiceFromMicrosoft.** Naći ćete i ove entitete navedene u grupi **Obogaćivanje** u odeljku **Podaci** > **Entiteti**.
+Pregledajte obogaćene podatke izborom opcije **Prikaz obogaćenih podataka** u grafikonu. Obogaćeni podaci o brendovima idu u entitet **BrandAffinityFromMicrosoft**. Podaci za interesovanja su u entitetu **InterestAffinityFromMicrosoft**. Naći ćete i ove entitete navedene u grupi **Obogaćivanje** u odeljku **Podaci** > **Entiteti**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Pogledajte podatke o obogaćivanju na kartici klijenta
 
-Brend i interesovanje SoV se takođe mogu videti na pojedinačnim karticama kupaca. Idite na **Klijenti** i izaberite profil klijenta. Na kartici kupca pronaći ćete grafikone za brend ili interes soV na osnovu osoba u demografskom profilu tog kupca.
+Afiniteti prema brendu i interesovanju mogu se takođe videti na karticama pojedinačnih klijenata. Idite na **Klijenti** i izaberite profil klijenta. Na kartici klijenta ćete pronaći grafikone za brendove ili interesovanja za koje ljudi u demografskom profilu tog klijenta imaju afinitet.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica klijenta sa obogaćenim podacima.":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Kartica klijenta sa obogaćenim podacima":::
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
+Nadogradite na obogaćenim podacima o klijentima. Kreirajte [segmente](segments.md) i [mere](measures.md), pa čak i [izvoz podataka](export-destinations.md) da pružite personalizovana iskustva svojim klijentima.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

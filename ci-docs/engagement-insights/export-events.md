@@ -4,23 +4,23 @@ description: Kako da izvezete prečišćene događaje i osnovne događaje.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 10/01/2021
+ms.date: 04/30/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7881f8f63134170a7f76e3c75dcfc5fa8930754b
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606263"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032402"
 ---
 # <a name="export-events"></a>Izvoz događaja
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Događaj predstavlja ponašanje korisnika. On beleži kada korisnik prikaže stranicu (događaj prikaza) ili stupi u interakciju sa sadržajem (događaj radnje). Kada možete da odlučite koja svojstva podataka želite da prikažete u izveštaju, ovaj virtuelni prikaz podataka naziva se *prečišćenim događajem*. Za više informacija pogledajte [Kreiranje i izmena događaja](refined-events.md).
+Događaj predstavlja ponašanje korisnika. On beleži kada korisnik prikaže stranicu (događaj prikaza) ili stupi u interakciju sa sadržajem (događaj radnje). Kada možete da odlučite koja svojstva podataka želite da prikažete u izveštaju, ovaj virtuelni prikaz podataka naziva se *prečišćenim događajem*. 
 
 - Događaje i prečišćene događaje možete da izvezete u spoljnu memoriju. 
 - Izvozi su tok za prosleđivanje podataka. Ne možete da dopunite tok. 
@@ -45,28 +45,26 @@ Pre podešavanja izvoza treba da imate pristup i aktivnu pretplatu na Azure port
 
 ## <a name="export-events"></a>Izvoz događaja
 
-Postoje dva načina za pozivanje dijaloga **Izvoz događaja**: 
+Postoje dva načina izvoza događaja: 
 - Idite na **Podaci** > **Izvozi** i izaberite **Novi izvoz**.
 - Idite na **Podaci** > **Događaji**, izaberite **Još [...]** pored događaja koji želite da izvezete i izaberite **Izvoz** iz padajućeg menija. 
 
-:::image type="content" source="media/new-export.png" alt-text="Kreirajte novi izvoz.":::
-
 Navodiće vas kroz korake za kreiranje izvoza:
 
-1. Unesite **Naziv za izvoz**, a zatim izaberite **Sledeće**.
+1. Navedite **Naziv za izvoz**.
 
 1. U padajućoj listi **Izbor događaja**, odaberite osnovne događaje i precizirane događaje koje ćete uključiti u izvoz. 
 
-1. U odeljku **Struktura datoteke**, izaberite kadencu (po satu ili dnevno) za kreiranje novih datoteka u odredišnom skladištu, a zatim izaberite **Sledeće**. Događaji se izvoze kontinuirano kako dolaze.
+1. U okviru **Strukture datoteke**, izaberite kadencu za kreiranje novih datoteka u odredišnom skladištu. Događaji se izvoze kontinuirano kako dolaze.
 
-1. U dijalogu **Odabir formata**, izaberite format za izvoz. Izaberite **Common Data Model**, **CSV** i **JSON** formate. Da biste koristili izvoz sa drugim Dynamics 365 aplikacijama, preporučujemo format **Common Data Model**.
+1. Izaberite format za izvoz. Možete birati između **Common Data Model**, **CSV** i **JSON** formata. Da biste koristili izvoz sa drugim Dynamics 365 aplikacijama, preporučujemo da korišćenje Common Data Model formata.
 
-1. U dijalogu **Odabir odredišta**, navedite Azure Data Lake Storage Gen 2 lokaciju.
+1. U koraku **Odabir odredišta**, navedite Azure Data Lake Storage Gen 2. lokacije.
     1. **Naziv ADLS Gen 2 naloga** je naziv naloga za skladištenje u kojem želite da sačuvate izvoz. 
     1. **Putanja do direktorijuma** definiše gde izvoz treba biti uskladišten u sistemu datoteka i strukturi direktorijuma naloga za skladištenje.
     1. **Deljeni ključ** je dostupan sa Azure portala za nalog za skladištenje.
 
-1. Pregledajte i potvrdite izbore za završetak.
+1. Pregledajte i potvrdite izabrane opcije.
 
 ## <a name="view-and-manage-exports"></a>Prikaz izvoza i upravljanje njima
 

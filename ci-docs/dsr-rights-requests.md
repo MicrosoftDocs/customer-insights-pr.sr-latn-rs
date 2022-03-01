@@ -1,6 +1,6 @@
 ---
 title: Zahtevi na osnovu prava subjekta podataka (DSR) u okviru GDPR | Microsoft Docs
-description: Odgovorite na zahteve teme podataka za Dynamics 365 Customer Insights korisnici uvida.
+description: Odgovorite na zahteve subjekta podataka za Dynamics 365 Customer Insights mogućnost uvida o korisnicima.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732697"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483702"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtevi na osnovu prava subjekta podataka (DSR) u okviru GDPR
 
@@ -24,7 +24,7 @@ Posvećeni smo pomaganju našim klijentima da ispune zahteve GDPR-a. Obuhvata pr
 
 ## <a name="audience-insights"></a>Uvidi u ciljnu grupu
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Odgovaranje na GDPR podatke subjekat brise zahteve za Dynamics 365 Customer Insights korisnici uvida
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Odgovaranje na zahteve za brisanje GDPR subjekta podataka za Dynamics 365 Customer Insights mogućnost uvida o korisnicima
 
 „Pravo na brisanje“ uklanjanjem ličnih podataka iz podataka o klijentima organizacije predstavlja ključnu zaštitu u Opštoj uredbi o zaštiti podataka (GDPR). Uklanjanje ličnih podataka uključuje uklanjanje svih ličnih podataka i sistemski generisanih evidencija, osim informacija iz evidencije nadgledanja.
 
@@ -39,7 +39,7 @@ Uvidi o korisnicima nude sledeće iskustvo u vezi sa proizvodom za brisanje lič
 
 Administrator usluge Customer Insights može da prati ove korake za uklanjanje podataka o klijentima koji su izbrisani u izvoru podataka:
 
-1. Prijavljivanje u Dynamics 365 Customer Insights.
+1. Prijavite se u Dynamics 365 Customer Insights.
 2. U uvidima o korisnicima idite na **Podaci** > **Izvori podataka**
 3. Za svaki izvor podataka na listi koji sadrži izbrisane podatke o klijentima:
    1. Izaberite (...), pa izaberite **Osveži**.
@@ -52,7 +52,7 @@ Administrator usluge Customer Insights može da prati ove korake za uklanjanje p
 
 Administrator usluge Customer Insights može da sledi sledeće korake za brisanje podataka o Customer Insights korisnicima:
 
-1. Prijavljivanje u Dynamics 365 Customer Insights.
+1. Prijavite se u Dynamics 365 Customer Insights.
 2. U uvidima o korisnicima idite na **Administrator** > **Dozvole**.
 3. Izaberite polje za potvrdu za korisnika kojeg želite da izbrišete.
 4. Izaberite **Ukloni**.
@@ -79,14 +79,7 @@ Administrator zakupca može da prati ove korake za izvoz podataka:
 2. Prihvatite potvrdu za izvoz podataka za traženog korisnika.
 3. Primite izvezene podatke putem e-adrese administratora zakupca.
 
-## <a name="consent-management-preview"></a>Upravljanje saglasnostima (pregled)
-
-Mogućnost upravljanja pristankom ne prikuplja direktno korisničke podatke. On uvozi i obrađuje samo podatke o saglasnosti koje korisnici obezbeđuju u drugim aplikacijama.
-
-Da biste uklonili podatke o pristanku o određenim korisnicima, uklonite ih u izvorima podataka koji su uneti u mogućnost upravljanja pristankom. Nakon osvežavanja izvor podataka, uklonjeni podaci će takođe biti izbrisani u Centru za saglasnost. Aplikacije koje koriste entitet saglasnosti će takođe izbrisati podatke koji su uklonjeni na izvoru nakon [osvežavanja](audience-insights/system.md#refresh-processes). Preporučujemo brzo osvežavanje izvora podataka nakon odgovora na zahtev subjekta podataka za uklanjanje podataka korisnika iz svih drugih procesa i aplikacija.
-
-
-## <a name="engagement-insights-preview"></a>Uvidi u angažovanje (verzija za pregled)
+## <a name="engagement-insights"></a>Uvidi u angažovanje
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Brisanje i izvoz podataka o događajima koji sadrže informacije koje mogu identifikovati krajnjeg korisnika
 

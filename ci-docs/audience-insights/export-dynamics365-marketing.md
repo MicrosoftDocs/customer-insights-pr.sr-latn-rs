@@ -1,7 +1,7 @@
 ---
 title: Izvezite Customer Insights podatke u Dynamics 365 Marketing
 description: Saznajte kako da konfigurišete vezu i izvezete u Dynamics 365 Marketing.
-ms.date: 08/24/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,18 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: e2ec9f1cc11fdab5ff313bb3041d2b158ed6ca67
-ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/28/2022
-ms.locfileid: "8046764"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692498"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Korišćenje segmenata u usluzi Dynamics 365 Marketing (verzija za pregled)
 
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-
-Koristite [segmente](segments.md) da biste generisali kampanje i kontaktirali određene grupe klijenata pomoću usluge Dynamics 365 Marketing. Više informacija potražite u članku [Korišćenje segmenata iz usluge Dynamics 365 Customer Insights u usluzi Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
-
-Ako koristite nove mogućnosti usluge Dynamics 365 Marketing za orkestraciju puta koji pređe korisnik u realnom vremenu u Dataverse organizaciji, ne morate da kreirate standardni izvoz u Dynamics 365 Marketing. Kontakti i segmenti iz uvida u ciljnu grupu dostupni su direktno u usluzi Dynamics 365 Marketing nakon povezivanja usluga Marketing i Customer Insights. Pre nego što izbrišete postojeće izvoze, pregledajte dokumentaciju o tome [kako da povežete uvide u ciljnu grupu i Dynamics 365 Marketing orkestraciju puta koji pređe korisnik](/dynamics365/marketing/real-time-marketing-ci-profile).
+Koristite [segmente](segments.md) da biste generisali kampanje i kontaktirali određene grupe klijenata pomoću usluge Dynamics 365 Marketing. Više informacija potražite u članku [Korišćenje segmenata iz usluga Dynamics 365 Customer Insights uz Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
 
 ## <a name="prerequisite-for-a-connection"></a>Preduslov za vezu
 
@@ -45,7 +43,7 @@ Ako koristite nove mogućnosti usluge Dynamics 365 Marketing za orkestraciju put
 
 1. U odeljku **Administratorski nalog na serveru**, izaberite **Prijavite se** i izaberite Dynamics 365 Marketing nalog.
 
-1. Mapiraj polje ID kontakta u entitetu kupca u Dynamics 365 ID kontakta.
+1. Mapirajte polje korisničkog ID-a sa Dynamics 365 ID-om kontakta.
 
 1. Izaberite **Sačuvaj** da biste kreirali vezu. 
 

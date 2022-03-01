@@ -1,20 +1,21 @@
 ---
 title: Pregled podržanih scenarija predviđanja
 description: Scenariji i opcije predviđanja pokriveni su aplikacijom Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: get-started
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5972d5b191ded7db14e2ebe9a4a26570a8ea60ba
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978030"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036026"
 ---
 # <a name="predictions-overview"></a>Pregled predviđanja
 
@@ -23,21 +24,10 @@ Dynamics 365 Customer Insights dolazi sa raznim opcijama koje koriste veštačka
 ## <a name="out-of-box-models"></a>Gotovi modeli
 
 Najlakši način da započnete sa predviđanjem podataka su unapred definisani modeli, koji se često nazivaju „gotovi modeli“. Oni samo zahtevaju određene podatke i strukturu da bi brzo stekli uvid. Trenutno su dostupni sledeći modeli: 
-
-# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
-
-- [Trajna vrednost klijenta](predict-customer-lifetime-value.md): Predviđa potencijalni prihod klijenta tokom čitave interakcije sa preduzećem.
+- [Trajna vrednost klijenta](predict-customer-lifetime-value.md): Predviđa potencijalni prihod klijenta tokom čitave interakcije sa preduzećem. 
 - [Preporuka proizvoda](predict-product-recommendation.md): Predlaže skupove prediktivnih preporuka za proizvode na osnovu ponašanja u kupovini i klijenata sa sličnim obrascima kupovine.
 - [Gubitak pretplate](predict-subscription-churn.md): Predviđa da li je klijent ugrožen zbog toga što više ne koristi pretplaćene proizvode ili usluge vašeg preduzeća.
 - [Gubitak transakcija](predict-transactional-churn.md): Predvidite da li klijent više neće kupovati vaše proizvode ili usluge u određenom vremenskom okviru.
-- [Analiza](sentiment-analysis.md) sentimenta : Analizirajte sentiment povratnih informacija klijenata i identifikujte poslovne aspekte koji se često pominju.
-
-# <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
-
-- [Gubitak transakcija](predict-transactional-churn.md): Predvidite da li klijent više neće kupovati vaše proizvode ili usluge u određenom vremenskom okviru.
-
----
-
 
 ## <a name="azure-machine-learning-integration"></a>Integracija Azure mašinskog učenja
 

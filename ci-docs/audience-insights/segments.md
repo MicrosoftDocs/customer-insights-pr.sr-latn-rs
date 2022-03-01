@@ -1,20 +1,20 @@
 ---
 title: Segmenti u uvidima u ciljnu grupu
 description: Pregled segmenata i način kreiranja i upravljanja njima.
-ms.date: 11/01/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 740d293b21f43b50201f23fcba109318823ef3af
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7978076"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617392"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -26,7 +26,7 @@ Korisnički profili koji se podudaraju sa filterima definicije segmenta nazivaju
 
 Postoji više načina za kreiranje novog segmenta: 
 
-# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
+# <a name="individual-customers-b2c"></a>[Pojedinačni klijenti (B2C)](#tab/b2c)
 
 - Složeni segment sa graditeljem segmenata: [Napravite svoje](segment-builder.md#create-a-new-segment) 
 - Jednostavni segmenti sa jednim operatorom: [Brzi segment](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Postoji više načina za kreiranje novog segmenta:
 - Predlozi omogućeni veštačkom inteligencijom zasnovani na merama ili atributima: [Predloženi segmenti za poboljšanje mera](suggested-segments.md) 
 - Predlozi zasnovani na aktivnostima: [Predloženi segmenti na osnovu aktivnosti klijenata](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
+# <a name="business-accounts-b2b"></a>[Poslovni nalozi (B2B)](#tab/b2b)
 
 - Složeni segment sa graditeljem segmenata: [Napravite svoje](segment-builder.md#create-a-new-segment)
 
@@ -65,7 +65,8 @@ Sledeća radnja je dostupna kada odaberete segment:
 
 Možete da osvežite sve segmente odjednom ako izaberete **Osvežite sve** na stranici **Segmenti**, a možete i da osvežiti jedan ili više segmenata kada ih izaberete, pa odaberete **Osveži** iz opcija. Alternativno, možete konfigurisati ponavljajuće osvežavanje u odeljku **Administrator** > **Sistem** > **Raspored**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Postoji [šest vrsta statusa](system.md#status-types) za zadatke/procese. Uz to, većina procesa [zavisi od drugih procesa na nižem toku](system.md#refresh-policies). Možete izabrati status procesa da biste videli detalje o toku celog posla. Nakon izbora opcije **Vidi detalje** za jedan od zadataka posla pronaći ćete dodatne informacije: vreme obrade, datum poslednje obrade i sve greške i upozorenja povezana sa zadatkom.
 
 ## <a name="export-segments"></a>Izvoz segmenata
 
@@ -104,6 +105,5 @@ Donji deo sadrži listu članova segmenta.
 > Polja koja se pojavljuju na ovoj listi zasnivaju se na atributima entiteta vašeg segmenta.
 >
 >Lista je pregled odgovarajućih članova segmenta i pokazuje prvih 100 zapisa vašeg segmenta tako da ga možete brzo proceniti i pregledati njegove definicije, ako je potrebno. Da biste videli sve odgovarajuće zapise, morate da [izvezete segment](export-destinations.md).
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)] 

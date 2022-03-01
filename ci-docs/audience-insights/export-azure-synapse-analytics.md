@@ -1,7 +1,7 @@
 ---
 title: Izvoz Customer Insights podataka u uslugu Azure Synapse Analytics
 description: Saznajte kako da konfigurišete vezu sa uslugom Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/12/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6f630b8fb03bf615ada6d40fe27a91975d0c856e
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951059"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327381"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u uslugu Azure Synapse Analytics (pregled)
 
@@ -49,8 +49,6 @@ U usluzi Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurisanje veze
 
-Da biste kreirali vezu, glavnica usluge i korisnički nalog **u "Uvidima klijenata" moraju da čitalac dozvole za grupu resursa u kojoj se nalazi** radni prostor *sinapse* Analitika. Pored toga, direktoru usluge i korisniku na radnom prostoru Sinapse Analytics potrebne **su dozvole administratora sinapse.** 
-
 1. Idite na **Administrator** > **Veze**.
 
 1. Izaberite **Dodaj vezu** i birajte **Azure Synapse Analytics** ili izaberite **Podešavanje** na pločici **Azure Synapse Analytics** da biste konfigurisali vezu.
@@ -65,7 +63,7 @@ Da biste kreirali vezu, glavnica usluge i korisnički nalog **u "Uvidima klijena
 
 ### <a name="configure-an-export"></a>Konfigurisanje izvoza
 
-Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste konfigurisali izvoz sa deljenom vezom, potrebno vam je **najmanje saradnik** u fascikli "Uvidi kupaca". Za više informacija, pogledajte [dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija, pogledajte [dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Idite na **Podaci** > **Izvozi**.
 
@@ -84,8 +82,6 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste 
 Čuvanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).
-
-Da biste ispitali podatke koji su izvezeni u analitiku sinapse, **potrebni su vam podaci o skladištenju čitalac da biste imali pristup odredišnom** skladištu na radnom prostoru izvoza. 
 
 ### <a name="update-an-export"></a>Ažuriranje izvoza
 

@@ -1,5 +1,5 @@
 ---
-title: Pronađi slične klijente sa AI (sadrži video)
+title: Pronađite slične klijente pomoću AI
 description: Pronađite slične segmente klijenta pomoću veštačke inteligencije.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934857"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034560"
 ---
 # <a name="similar-customers-preview"></a>Slični kupci (verzija za pregled)
 
 Ova funkcija vam omogućava da pronađete slične klijente u svojoj korisničkoj bazi koristeći veštačku inteligenciju. Da biste koristili ovu funkciju, morate da imate bar jedan kreiran segment. Proširenje kriterijuma postojećeg segmenta pomaže u pronalaženju klijenata koji su slični tom segmentu.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Pronađite slične kupce* koristi automatizovana sredstva za procenu podataka i pravljenje predviđanja na osnovu tih podataka, pa se zato može koristiti kao način profilisanja, termin koji je definisan Opštom uredbom o zaštiti podataka („GDPR“). Klijentovo korišćenje ove funkcije za obradu podataka može da bude podložno GDPR-u ili drugim zakonima ili propisima. Odgovorni ste za to da koristite Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim važećim zakonima i propisima, uključujući zakone koji se odnose na privatnost, lične podatke, biometrijske podatke, zaštitu podataka i poverljivost komunikacija.

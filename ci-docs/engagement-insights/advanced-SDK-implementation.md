@@ -4,17 +4,17 @@ description: Napredni scenariji koje treba uzeti u obzir prilikom opremanja veb-
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 09/27/2021
+ms.date: 11/12/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 4c6646ecadbb604000d6c95b685cf6e420969a6d
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558719"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036345"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Napredno veb SDK opremanje
 
@@ -33,20 +33,20 @@ Objekat `IUser` sadrži sledeća svojstva niza:
 - **authType**: tip potvrde identiteta koji se koristi za dobijanje ID-a korisnika sa potvrđenim identitetom.
 - **name**: ime korisnika.
 - **email**: adresa e-pošte korisnika.
-
-Sledeći primer prikazuje isečak koda koji šalje informacije o korisniku. Tamo gde vidite funkcije kojima prethodi simbol zvezdice *, zamenite funkciju prilagođenom primenom:
+    
+Sledeći primer prikazuje isečak koda koji šalje informacije o korisniku. Tamo gde vidite Funkcije označene sa *, zamenite ih vašom primenom pozivanja tih vrednosti:  
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     user:{
@@ -58,25 +58,25 @@ window, document
 […]
 ```
 
-Korisničke podatke možete navesti i pozivanjem `setUser(user: IUser)` API-ja. Telemetrija poslata nakon pozivanja `setUser` API-ja sadržaće informacije o korisniku.
+Podatke o korisniku možete odrediti i pozivanjem `setUser(user: IUser)` API-ja u SDK-u. Telemetrija poslata nakon pozivanja `setUser API`-ja sadržaće informacije o korisniku.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Dodavanje prilagođenih svojstava za svaki događaj
 
-SDK vam omogućava da navedete prilagođena svojstva koja možete poslati uz svaki događaj. Možete odrediti prilagođena svojstva kao objekat koji sadrži parove ključ/vrednost (vrednost može biti tipa `string | number | boolean`). Objekat možete dodati u svojstvo koje se zove `props`, slično kao i `src`, `name` i `cfg` u konfiguraciji fragmenta koda.
+SDK vam omogućava da navedete prilagođena svojstva koja možete poslati uz svaki događaj. Možete odrediti prilagođena svojstva kao objekat koji sadrži parove ključ/vrednost (vrednost može biti tipa `string | number | boolean`). Objekat može biti dodat u svojstvo pod nazivom `props`, slično kao `src`, `name` i `cfg` u konfiguraciji isečka koda. 
 
 Sledeći primer prikazuje isečak koda koji šalje prilagođena svojstva:
 
 ```
 […]
-window, document
+window, document 
 {
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"myproject",
-    cfg:{
-      ingestionKey:<paste your ingestion key>",
-      autoCapture:{
-        view:true,
-        click:true
+    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
+    name:"myproject",      
+    cfg:{ 
+      ingestionKey:<paste your ingestion key>", 
+      autoCapture:{ 
+        view:true, 
+        click:true 
       }
     },
     props:{
@@ -87,7 +87,7 @@ window, document
 […]
 ```
 
-Prilagođena svojstva možete navesti pojedinačno i pozivanjem `setProperty(name: string, value: string | number | boolean)` API-ja.
+Takođe možete pojedinačno navesti prilagođena svojstva pozivanjem `setProperty(name: string, value: string | number | boolean)` API-ja u SDK-u.
 
 ## <a name="sending-custom-events"></a>Slanje prilagođenih događaja
 

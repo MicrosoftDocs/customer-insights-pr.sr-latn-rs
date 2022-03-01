@@ -1,71 +1,75 @@
 ---
 title: Prikaz profila klijenata
 description: Steknite kombinovani prikaz objedinjenih podataka o klijentima.
-ms.date: 09/30/2021
+ms.date: 12/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 07d2206372f89cd7dcd9df84c87024a6f87d5eac
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623286"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896344"
 ---
 # <a name="customer-profiles"></a>Profili klijenata
 
-Stranica **Klijenti** prikazuje kombinovani prikaz vaših objedinjenih profila klijenata. Profili klijenata dostupni su nakon što [kreirate objedinjeni entitet klijenta](data-unification.md). Stranica vam omogućava da pretražujete klijente i definišete indeks za tu pretragu.
+Stranica **Klijenti** prikazuje kombinovani prikaz vaših klijenata na osnovu podataka sa profila prikupljenih iz [svih izvora podataka](data-sources.md). Profili klijenata su vam dostupni nakon što ste [kreirali objedinjeni entitet Klijent](data-unification.md). Obavezno dovršite postupak objedinjavanja podataka da biste stekli bogatije poglede svojih klijenata. Ova stranica takođe vam omogućava da pretražujete klijente.
 
-Klijenti mogu biti pojedinci ili organizacije. Svaki profil klijenta predstavljen je pločicom. Koristite kontrole paginacije da biste dobili više zapisa. Kartica prikazuje polja iz entiteta *Klijent* kako je definisano u **Indeks pretrage i filtriranja**. Izaberite pločicu da biste videli podatke o izabranom klijentu na namenskoj stranici pod nazivom [Stranica sa detaljima o korisniku](customer-profiles.md#customer-details-page).
+Klijenti mogu biti pojedinci ili organizacije (pregled). Svaki profil klijenta ili organizacije predstavljen je pločicom. Izaberite pločicu da biste videli dodatne informacije o tom konkretnom klijentu ili organizaciji. Upotrebite kontrole za straničenje na dnu stranice da biste videli dodatne zapise.
 
 > [!div class="mx-imgBorder"] 
-> ![Stranica klijenata prikazuje pločice rezultata](media/customers-page-result-tiles-B2C.png "Stranica klijenata prikazuje pločice rezultata")
+> ![B2C profili klijenata](media/profiles-customers.png "B2C profili klijenata")
+
+Organizacije (Pregled)
+> [!div class="mx-imgBorder"] 
+> ![B2B profili klijenata](media/profile-customers-b2b.png "B2B profili klijenata")
 
 > [!NOTE]
-> Ako ne vidite pločice kada izaberete **Klijenti** u navigaciji, vaš administrator mora da [definiše barem jedan atribut koji može da se pretražuje](search-filter-index.md) u **Indeks pretrage i filtriranja**.
+> Ako ne možete da vidite pločice kada izaberete **Klijenti** u navigaciji, vaš administrator treba da [definiši barem jedan atribut se može da se pretražuje](search-filter-index.md) u odeljku **Indeks pretrage i filtriranja**.
 
 ## <a name="search-for-customers"></a>Pretraga klijenata
 
-Pretražujte klijente unosom imena ili nekog drugog atributa u polje za pretragu. Pretraga funkcioniše samo u okviru entiteta _Klijent_ kreiran tokom procesa objedinjavanja podataka.
+Pretražujte klijente unosom imena ili nekog drugog atributa u polje za pretragu. Pretraživanje funkcioniše samo u entitetu Profil klijenta koji je kreiran tokom procesa objedinjavanja podataka.
 
-Kao administrator, možete konfigurisati atribute pretraživanja koristeći stranicu **Indeks pretrage i filtriranja**. Za više informacija idite na [Upravljanje indeksom pretrage i filtriranja](search-filter-index.md).
+Kao administrator, možete konfigurisati atribute pretraživanja koristeći stranicu **Indeks pretrage i filtriranja**. Za više informacija, pogledajte [Upravljajte indeksom pretrage i filtriranja](search-filter-index.md).
 
 ## <a name="filter-customers"></a>Filtriranje klijenata
 
-Klijente možete filtrirati prema poljima entiteta _Klijent_. Slično pretraživanju, vaš administrator će prvo morati da definiše polja tako da se mogu filtrirati na stranici **Indeks pretrage i filtriranja**.
+Možete filtrirati klijente po poljima entiteta Profil klijenta. Slično pretraživanju, vaš administrator će prvo morati da definiše polja tako da se mogu filtrirati na stranici **Indeks pretrage i filtriranja**.
 
-1. Izaberite **Prikaži filtere** na stranici **Klijenti**.
+1. Izaberite **Filter** na stranici **Klijenti**.
 
-1. Označite polja pored atributa po kojima želite da filtrirate klijente.
+2. Označite polja pored atributa po kojima želite da filtrirate klijente.
 
-1. Uklonite filtere izborom **Obriši filtere** na stranici **Klijenti**.
+   > [!div class="mx-imgBorder"] 
+   > ![Profili klijenata](media/profiles-customers3.png "Profili klijenata")
 
-## <a name="customer-details-page"></a>Stranica sa detaljima o klijentima
+3. Uklonite filtere izborom **Obriši filtere** na stranici **Klijenti**.
 
-Izaberite bilo koju pločicu klijenta da biste otvorili **stranicu sa detaljima o klijentu**. Ovaj prikaz sadrži objedinjene informacije za izabranog klijenta. Podaci o klijentima uključuju sledeći sadržaj:
+##  <a name="customer-details-page"></a>Stranica sa detaljima o klijentima
 
-**Pločica profila klijenta**: Ova pločica prikazuje različite vrednosti objedinjenog entiteta _Klijent_. Ako polje nema vrednost za izabrani profil klijenta, neće se prikazati. Pločica je strukturirana u delove:  
-  - Prvi odeljak prikazuje unapred definisan skup polja, nakon čega slede sva polja koja su deo indeksa pretrage i filtriranja. Sva polja vezana za adresu kombinuju se u jedan red ako profil sadrži takva polja. 
-  - **Kontakti za ovog klijenta**: U okruženjima za poslovne naloge, videćete sve povezane kontakte za ovog klijenta kao drugi odeljak. Svaki kontakt je prikazan sa svojim poljima. Prazna polja su skrivena.
-  - **Dodatna polja**: Prikazuje preostala polja izabranog klijenta, osim ID-ova. 
-  - **ID-ovi**: Navodi sve ID-ove pod odgovarajućim nazivom entiteta. Polja su identifikovana kao ID-ovi svojom semantikom, koja ih kategoriše kao takve.
+Izaberite bilo koju pločicu klijenta da biste otvorili **stranicu sa detaljima o klijentu**. Ovaj prikaz sadrži objedinjene informacije za izabranog klijenta.
 
-**Vremenska osa aktivnosti**: Prikazuje podatke ako ste konfigurisali aktivnosti. Prikaz vremenske ose sadrži hronološki sortirane aktivnosti izabranog klijenta, počevši od najnovije aktivnosti. Više informacija potražite u [aktivnostima klijenta](activities.md).
+Detalji o klijentu obuhvataju:
 
-**Uvidi**:  
-  - **Mere**: Prikazuje da li ste konfigurisali jednu ili više mera atributa klijenta. Uključuju izračunate KPI-jeve oko vaših klijenata na nivou pojedinačnog klijenta. Za više informacija idite na [Definisanje mera i upravljanje njima](measures.md).
+-   **Pločica profila klijenta:** Ova pločica prikazuje različite vrednosti iz entiteta objedinjenog profila klijenta. Ovi detalji mogu da uključuju adresu e-pošte, ime, grad itd. 
 
-  - **Potencijalna interesovanja, potencijalni brendovi**: Prikazuje da li ste konfigurisali obogaćivanje afiniteta prema brendu ili interesovanju. Predstavlja potencijalna interesovanja i afinitete za brendove zasnovane na drugim klijentima čiji je profil sličan profilu izabranog klijenta. Za više informacija idite na [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
+-   **Potencijalna interesovanja, potencijalni brendovi:** Pokazuje da li ste konfigurisali direktno obogaćivanje. Predstavlja potencijalna interesovanja i afinitete za brendove koje ima klijent sa profilom sličnim ovom klijentu. Za više informacija, pogledajte [Obogaćivanje profila klijenata afinitetima prema brendovima i interesovanjima](enrichment-microsoft.md).
 
-Da biste se vratili na stranicu za pretragu klijenata, izaberite **Natrag na klijente**.
+-   **Mere:** Pokazuje da li ste konfigurisali jednu ili više mera određene vrste: mere atributa klijenta. Uključuju izračunate KPI-jeve oko vaših klijenata na nivou pojedinačnog klijenta. Za više informacija pogledajte [Definisanje i upravljanje merama](measures.md).
+
+-   **Vremenska osa aktivnosti:** Pokazuje da li ste konfigurisali aktivnosti. Prikaz vremenske ose sadrži hronološki sortirane aktivnosti ovog klijenta, počev od najnovije aktivnosti. Za više informacija pogledajte [aktivnosti klijenta](activities.md).
+
+Izaberite **Povratak na klijente** da biste se vratili na stranicu za pretragu klijenata.
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-[Dodajte još izvora podataka](data-sources.md), [obogatite objedinjene profile](enrichment-hub.md) ili [kreirajte segmente](segments.md) za rad sa objedinjenim profilima klijenata u drugim aplikacijama.
+[Dodajte još izvora podataka](data-sources.md) ili [kreirajte segmente klijenata](segments.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
