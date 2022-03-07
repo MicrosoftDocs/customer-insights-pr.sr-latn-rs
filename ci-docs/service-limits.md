@@ -1,20 +1,19 @@
 ---
-title: Ograničenja usluge u Dynamics 365 Customer Insights
+title: Ograničenja usluge u usluzi Dynamics 365 Customer Insights
 description: Razumevanje ograničenja i restrikcija.
 ms.date: 09/03/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eb25e050b8aa768e6e1d8d4c5adce6095cccc346
-ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
-ms.translationtype: HT
+ms.openlocfilehash: 9bf8f03b785fb3035e3fc979a3304d4e98fd8d28
+ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/10/2021
-ms.locfileid: "7818788"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8350424"
 ---
 # <a name="service-limits-in-customer-insights-capabilities"></a>Ograničenja usluga u mogućnostima usluge Customer Insights
 
@@ -22,27 +21,25 @@ Ovaj članak opisuje ugrađena ograničenja za uslugu Customer Insights, koja su
 
 ## <a name="audience-insights"></a>Uvidi u ciljnu grupu
 
-### <a name="service-limits-in-dynamics-365-customer-insights-audience-insights-capability"></a>Ograničenja usluge u Dynamics 365 Customer Insights korisnici uvida
-
 | Oblasni grafikon  | Ograničenja  | Beleške |
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
-| Segmenti, mere i predviđanja | 300  | Ukupan broj [segmenata](audience-insights/segments.md), [mera](audience-insights/measures.md) i [predviđanja](audience-insights/predictions.md) zajedno ne može da premaši 300.  |
+| Segmenti, mere i predviđanja | 300  | Ukupan broj [segmenata](audience-insights/segments.md), [mera i](audience-insights/measures.md) predviđanja [zajedno](audience-insights/predictions.md) ne može da premaši 300.  |
 | Relacije | 20 nivoa dubine u odnosima u putanjama entiteta. | Prilikom kreiranja [segmenata](audience-insights/segments.md) ili [mera](audience-insights/measures.md) koristeći interfejs za izradu, putanje entiteta mogu imati do 20 koraka odnosa između početnog entiteta i ciljnog entiteta.  |
 
+<!--
+## Engagement insights
 
-## <a name="engagement-insights"></a>Uvidi u angažovanje
+### Workspace and event quotas
 
-### <a name="workspace-and-event-quotas"></a>Kvote za radni prostor i događaje
+Engagement insights is a highly scalable application that can support millions of events per second. During public preview, events have a volume threshold. There's also a limit to the number of workspaces in an organization.
 
-Uvidi o angažovanje je izuzetno skalabilna aplikacija koja može podržati milione događaja u sekundi. Tokom verzije za javni pregled, događaji imaju ograničenje obima. Takođe postoji ograničenje broja radnih prostora u organizaciji.
+### Engagement insights limits
 
-### <a name="engagement-insights-limits"></a>Ograničenja uvida u angažovanje
+- Maximum event volume per workspace  = 100 events per second
 
-- Maksimalni obim događaja po radnom prostoru = 100 događaja u sekundi
+- Maximum number of workspaces per organization = 100
 
-- Maksimalan broj radnih prostora po organizaciji = 100
-
-Kada događaji pređu ograničenje, to može dovesti do gubitka podataka u izveštajima zasnovanim na tim događajima. Možete da [kontaktirate podršku](https://go.microsoft.com/fwlink/?linkid=2145734) kako biste zatražili povećanje obima pre nego što prekoračite ograničenja. Radićemo sa vama kako bismo utvrdili vašu potrebu za povećanjem obima i podržali vaš zahtev.
-
+When events exceed the threshold, it can lead to loss of data in reports based on those events. You can [contact support](https://go.microsoft.com/fwlink/?linkid=2145734) to request a volume increase before you exceed limits. We'll work with you to determine your need for a volume increase and support your request.
+-->
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

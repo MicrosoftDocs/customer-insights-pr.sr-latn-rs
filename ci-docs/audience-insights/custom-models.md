@@ -3,25 +3,27 @@ title: Prilagođeni modeli mašinskog učenja | Microsoft Docs
 description: Radite sa prilagođenim modelima iz Azure mašinskog učenja u usluzi Dynamics 365 Customer Insights.
 ms.date: 12/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
-ms.translationtype: HT
+searchScope:
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 460b68e1e65b3033af0a03d1bcc27e718c79d7aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881801"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355103"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli mašinskog učenja
 
 > [!NOTE]
-> Podrška za Mašinsko učenje Studio (klasika) završiće se 31. avgusta 2024. godine. Preporučujemo da do tog [datuma pređete Mašinsko učenje](/azure/machine-learning/overview-what-is-azure-machine-learning) Azure.
+> Podrška za Mašinsko učenje Studio (klasika) završiće se 31. avgusta 2024. godine. Preporučujemo da pređete na [Azure Mašinsko učenje do](/azure/machine-learning/overview-what-is-azure-machine-learning) tog datuma.
 >
-> Počevši od 1. decembra 2021. godine, nećete moći da kreirate nove Mašinsko učenje Studio (klasične) resurse. Do 31. avgusta 2024. možete nastaviti da koristite postojeće Mašinsko učenje Studio (klasične) resurse. Više informacija potražite u [članku Migracija u Azure Mašinsko učenje](/azure/machine-learning/migrate-overview).
+> Počevši od 1. decembra 2021. godine, nećete moći da kreirate nove Mašinsko učenje Studio (klasične) resurse. Do 31. avgusta 2024. možete nastaviti da koristite postojeće Mašinsko učenje Studio (klasične) resurse. Više informacija potražite u članku [Migracija u Azure Mašinsko učenje](/azure/machine-learning/migrate-overview).
 
 
 **Obaveštavanje** > **Prilagođeni modeli** vam omogućavaju upravljanje tokovima posla na osnovu Azure modela mašinskog učenja. Tokovi posla pomažu vam da odaberete podatke od kojih želite da generišete uvid i da rezultate mapirate sa objedinjenim podacima o klijentima. Za više informacija o izradi prilagođenih ML modela pogledajte [Koristite modele zasnovane na Azure mašinskom učenju](azure-machine-learning-experiments.md).
@@ -32,7 +34,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Ova funkcija podržava Veb usluge objavljene preko [Azure Mašinsko učenje grupnih cevovoda](/azure/machine-learning/concept-ml-pipelines).
+- Ova funkcija podržava Veb usluge objavljene putem [Azure Mašinsko učenje grupnih cevovoda](/azure/machine-learning/concept-ml-pipelines).
 
 - Da biste koristili ovu funkciju, potreban vam je Azure Data Lake Gen2 nalog za skladištenje povezan sa Azure Studio instancom. Za više informacija, pogledajte članak [Kreiranje Azure Data Lake Storage Gen2 naloga za skladištenje](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -40,6 +42,8 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
    > [!NOTE]
    > Podaci se prenose između Customer Insights instanci i izabranih Azure veb-usluga ili kanala u toku posla. Kada prenosite podatke u Azure uslugu, uverite se da je usluga konfigurisana da obrađuje podatke na način neophodan za poštovanje svih zakonskih ili regulatornih zahteva za te podatke za vašu organizaciju, kao i na lokaciji koja je za to neophodna.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElk]
 
 ## <a name="add-a-new-workflow"></a>Dodavanje novog toka posla
 
@@ -56,7 +60,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
 1. Izaberite **Radne prostore** povezane sa vašom veb-uslugom. 
 
-1. Odaberite Azure Mašinsko učenje u **Web usluzi koja sadrži padajuću** listu modela. Zatim izaberite **Sledeće**.    
+1. Odaberite Azure Mašinsko učenje u Web usluzi **koja sadrži padajuću listu** modela. Zatim izaberite **Sledeće**.    
    Saznajte više o [objavljivanju kanala u Azure mašinskom učenju pomoću dizajnera](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) ili [ SDK-a](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Vaš kanal mora biti objavljen pod [krajnjom tačkom kanala](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Za svaki **Unos veb-usluge**, izaberite odgovarajući **Entitet** iz uvida o korisnicima i izaberite **Dalje**.

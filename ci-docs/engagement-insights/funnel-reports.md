@@ -4,17 +4,16 @@ description: Kako da pomoću izveštaja o tokovima prodaje razumete kako ciljna 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/17/2021
-ms.service: customer-insights
+ms.date: 09/21/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
-ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
-ms.translationtype: HT
+ms.openlocfilehash: 7bb961c5ba8d42f704eefe0dcb22e561367f3efb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "7498659"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226278"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Kreiranje izveštaja o toku prodaje i upravljanje njima
 
@@ -163,13 +162,23 @@ Možete da promenite naziv izveštaja o toku prodaje, da ga izbrišete ili da iz
 
 Uvidi u angažovanje sada nude uvide u tokove prodaje za klijente. Koristite uvide u tokove prodaje da biste stekli dublji uvid u ponašanje klijenata o koracima u izveštaju o toku prodaje. Kada kreirate i sačuvate novi izveštaj o toku prodaje, uvidi o tokovima prodaje se automatski generišu za vaš izveštaj. 
 
+:::image type="content" source="media/funnel-insights.png" alt-text="Uvidi u tokove prodaje.":::
+
+> [!NOTE]
+> Uvide u tokove prodaje možete generisati samo za korake toka prodaje koji **ne** uključuju prilagođene dimenzije. Da biste generisali uvide u tokove prodaje za sve korake u toku prodaje, koristite gotove dimenzije uvida u angažovanje za kreiranje koraka u toku prodaje. 
+
 Uvide u tokove prodaje možete da vidite iz sledećih kategorija, i na glavnom i na nivoima koraka: 
 
- - Stopa konverzije 
+ - Stopa konverzije
+ -    Stopa konverzije između Dovršetka kupovine i Kupovine je 22%.
  - Vreme prelaska 
+ -    Prosečno vreme prelaska između Kolica i Dovršetka kupovine je 23 minuta. 
  - Vreme završetka 
+ -    Prosečno vreme koje je klijentima potrebno da dovrše tok prodaje je 47 minuta. 
 
 Pomoću ovih uvida dublje istražite ponašanje klijenata i bolje razumite mesta odustajanja i konverzije za izveštaj o toku prodaje. 
+
+Da biste uporedili uvide u različitim koracima, izaberite **Pogledajte detaljnu analizu koraka** ili **Uporedite sa drugim koracima** sa kartica uvida. Oni će prikazati trakasti grafikon koji upoređuje pokazatelje za svaki korak toka. 
 
 Uvidi u tokove prodaje se ponovo izračunavaju svaka 24 sata ili kada **Sačuvate** vaš izveštaj o toku. 
 

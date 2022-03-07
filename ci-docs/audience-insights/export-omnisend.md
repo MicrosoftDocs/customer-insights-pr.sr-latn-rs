@@ -1,20 +1,19 @@
 ---
 title: Izvoz Customer Insights podataka u Omnisend
 description: Saznajte kako da konfigurišete vezu i izvozite u Omnisend.
-ms.date: 05/21/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8bd692819fa8451ded5e74191ee717f81f87425d
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: 15fc6fc2426ad3958268e5bcc200b8eb2b0fd13a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124544"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226783"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Izvoz segmenata u Omnisend (verzija za pregled)
 
@@ -28,9 +27,9 @@ Izvezite segmente objedinjenih profila klijenata u Omnisend i koristite ih za ma
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete izvesti do 1 milion profila po izvozu u Omnisend, a to može potrajati do 4 sata.
+- Možete izvesti do milion profila klijenata po izvozu u Omnisend, a za to može biti potrebno i do 4 sata.
 - Izvoz u Omnisend ograničen je na segmente.
-- Broj profila koje možete da izvezete u Omnisend zavisi od vašeg ugovora sa uslugom Omnisend.
+- Broj profila klijenata koje možete izvesti u Omnisend zavisi od vašeg ugovora sa Omnisend-om.
 
 ## <a name="set-up-connection-to-omnisend"></a>Podešavanje veze u usluzi Omnisend
 
@@ -62,7 +61,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Omnisend. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. Potrebno je da izvezete segmente u Omnisend. Po želji možete da izvezete polja Ime, Prezime, Adresa, Zemlja/region, Država, Grad i Poštanski broj da biste kreirali personalizovanije e-poruke. Izaberite **Dodaj atribut** za mapiranje ovih polja.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. Potrebno je da izvezete segmente u Omnisend. Po želji možete da izvezete polja Ime, Prezime, Adresa, Zemlja/region, Država, Grad i Poštanski broj da biste kreirali personalizovanije e-poruke. Izaberite **Dodaj atribut** za mapiranje ovih polja.
 
 1. Izaberite stavku **Sačuvaj**.
 

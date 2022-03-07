@@ -2,19 +2,21 @@
 title: Unošenje podataka u realnom vremenu i ograničenja
 description: Opšte informacije o mogućnostima u realnom vremenu u uvidima o korisnicima.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
-ms.service: customer-insights
+ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
-ms.translationtype: HT
+searchScope:
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2fe5279eee1b3b30f5bc21464c85fe5f86d342a0
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689192"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355492"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u realnom vremenu (pregled)
 
@@ -54,7 +56,7 @@ API u realnom vremenu omogućava vam objavljivanje nove aktivnosti iz vašeg izv
 
 Postoje dva načina za povezivanje sa API-jem u realnom vremenu:
 
-- [indirektno](#connect-via-the-dynamics-365-customer-insights-connector), pomoću [Dynamics 365 Customer Insights konektora](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirektno](#connect-via-the-dynamics-365-customer-insights-connector), pomoću [Dynamics 365 Customer Insights konektora](/connectors/customerinsights/)
 - [direktno](#connect-directly-to-the-real-time-api), sa kodom
 
 Oba načina dele sledeće preduslove:
@@ -66,13 +68,13 @@ Oba načina dele sledeće preduslove:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Povežite se putem Dynamics 365 Customer Insights konektora
 
-API u realnom vremenu može da unosi podatke sa namenskog Power Platform konektora, po imenu [Dynamics 365 Customer Insights konektor](https://docs.microsoft.com/connectors/customerinsights/), bez potrebe za pisanjem i primenom bilo kakvog koda.    
-Konektor može da obavlja iste radnje u realnom vremenu kao i API. Potrebna vam je važeća licenca za premijum konektore. Za više informacija, pogledajte članak [Najčešća pitanja o Power Apps i Power Automate licenciranju](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+API u realnom vremenu može da unosi podatke sa namenskog Power Platform konektora, po imenu [Dynamics 365 Customer Insights konektor](/connectors/customerinsights/), bez potrebe za pisanjem i primenom bilo kakvog koda.    
+Konektor može da obavlja iste radnje u realnom vremenu kao i API. Potrebna vam je važeća licenca za premijum konektore. Za više informacija, pogledajte članak [Najčešća pitanja o Power Apps i Power Automate licenciranju](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps i/ili Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [logičke aplikacije](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps i/ili Power Automate](/connectors/)
+- Azure [logičke aplikacije](/azure/connectors/apis-list)
 
-Za detalje o kreiranju tokova, pogledajte [Power Automate dokumentaciju](https://docs.microsoft.com/power-automate/).
+Za detalje o kreiranju tokova, pogledajte [Power Automate dokumentaciju](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Povežite se direktno sa API-jem u realnom vremenu
 
@@ -83,6 +85,7 @@ Detalji ovog API-ja, uključujući parametre i odgovore, mogu se naći u odeljku
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje upotrebe u realnom vremenu pomoću telemetrije
 
-Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete da [pristupite telemetriji u realnom vremenu](system.md#api-usage-tab) odlaskom na **Administrator** > **Sistem** > **Upotreba API-ja**. U tabeli **Operacije** redovi za API operacije koje koriste metode u realnom vremenu sadrže dugme za prikaz upotrebe API-ja u realnom vremenu. Dugme je vizuelno predstavljeno simbolom dvogleda. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.
+Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete [pristupati telemetriji u realnom vremenu](system.md#api-usage-tab). 
 
-Koristiti birač **Grupiši prema** da biste odabrali kako da najbolje predstavite interakcije u realnom vremenu na vremenskoj osi u rasponu od poslednja 24 sata do poslednjih 30 dana. Možete grupisati podatke prema API metodi, nazivu kvalifikovanog entiteta (uneti entitet), vremenu kreiranja (izvor događaja), rezultatu (uspelo ili neuspelo) ili kodovima grešaka. Podaci su dostupni kao vremenski grafikon i tabela.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,21 +1,23 @@
 ---
 title: Kreiranje okruženja u usluzi Customer Insights
 description: Koraci za kreiranje okruženja sa licenciranom pretplatom za Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088130"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354112"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kreiranje okruženja u uvidima u ciljnu grupu
 
@@ -76,12 +78,14 @@ Ako kreirate više okruženja usluge Customer Insights i odaberete da sačuvate 
    
 Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem.
 
-Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija. Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću Dataverse upravljanog jezera podataka.
+Obezbedite sopstveno Microsoft Dataverse okruženje za deljenje podataka (profila i uvida) sa poslovnim aplikacijama zasnovanim Dataverse na sistemu, kao što je Dynamics 365 Marketing ili aplikacije sa modelima u programu Power Apps. Ostavite ovo polje prazno ako nemate svoje okruženje, a Dataverse mi ćemo vam ga obezbediti.
+
+Povezivanje sa okruženjem Dataverse vam takođe omogućava da unosite [podatke iz lokalni podataka pomoću Power Platform priliva podataka i mrežnih prolaza](data-sources.md#add-data-from-on-premises-data-sources). Takođe možete da [koristite modele za predviđanje tako što ćete](predictions-overview.md?tabs=b2c#out-of-box-models) se povezati sa okruženjem Dataverse.
 
 > [!IMPORTANT]
 > Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka sa Microsoft Dataverse automatski omogućenim za nove neto instance.":::
 
 > [!NOTE]
 > Customer Insights ne podržava sledeće scenarije deljenja podataka:

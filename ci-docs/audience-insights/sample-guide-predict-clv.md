@@ -3,18 +3,17 @@ title: Vodič kroz primere predviđanja trajne vrednosti klijenta
 description: Koristite ovaj vodič kroz primere da isprobate model predviđanja trajne vrednosti klijenta.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306366"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354848"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Vodič kroz primere predviđanja trajne vrednosti klijenta (CLV)
 
@@ -22,7 +21,7 @@ Ovaj vodič će vam objasniti celokupan primer predviđanja trajne vrednosti kli
 
 ## <a name="scenario"></a>Scenario
 
-Contoso je preduzeće koje proizvodi visokokvalitetnu kafu i aparate za kafu. Proizvode prodaju preko svoje veb-lokacije Contoso Coffee. Preduzeće želi da razume vrednost (prihod) koju njihovi klijenti mogu da generišu u sledećih 12 meseci. Poznavanje očekivane vrednosti klijenata u sledećih 12 meseci pomoći će im da svoje marketinške napore usmere na klijente visoke vrednosti.
+Contoso je kompanija koja proizvodi visokokvalitetne aparate za kafu i kafu. Proizvode prodaju preko svog sajta Contoso Coffee. Preduzeće želi da razume vrednost (prihod) koju njihovi klijenti mogu da generišu u sledećih 12 meseci. Poznavanje očekivane vrednosti klijenata u sledećih 12 meseci pomoći će im da svoje marketinške napore usmere na klijente visoke vrednosti.
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -31,7 +30,7 @@ Contoso je preduzeće koje proizvodi visokokvalitetnu kafu i aparate za kafu. Pr
 
 ## <a name="task-1---ingest-data"></a>1. zadatak – Unos podataka
 
-Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md). Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
+Pregledajte članke [o unošenju podataka i](data-sources.md) uvozu [izvora podataka pomoću linija Power Query spajanja](connect-power-query.md). Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima sa platforme eCommerce
 
@@ -164,7 +163,7 @@ Nakon unosa podataka, sada započinjemo postupak ujednačavanja podataka kako bi
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Zadatak 3 – Konfigurisanje predviđanja trajne vrednosti klijenta
 
-Sa uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje trajne vrednosti klijenta. Za detaljne korake, pogledajte [Predviđanje trajne vrednosti klijenta (verzija za pregled)](predict-customer-lifetime-value.md).
+Sa uspostavljenim objedinjenim profilima klijenata, sada možemo pokrenuti predviđanje trajne vrednosti klijenta. Detaljne korake pogledajte u članku [Vrednost doživotnog kupca predviđanje](predict-customer-lifetime-value.md).
 
 1. Idite na **Obaveštavanje**  > **Predviđanja** i izaberite **Model trajne vrednosti klijenta**.
 

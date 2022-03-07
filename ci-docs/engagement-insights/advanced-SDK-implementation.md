@@ -4,17 +4,16 @@ description: Napredni scenariji koje treba uzeti u obzir prilikom opremanja veb-
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 11/12/2020
-ms.service: customer-insights
+ms.date: 09/27/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 7455d276035bfaf1f8a93d0e3b0b0884353a4010715c05d1d696309f7eb4b233
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: a083d8215f295af0884257a016b62b8c7e4ab2c7
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036345"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227215"
 ---
 # <a name="advanced-web-sdk-instrumentation"></a>Napredno veb SDK opremanje
 
@@ -33,20 +32,20 @@ Objekat `IUser` sadrži sledeća svojstva niza:
 - **authType**: tip potvrde identiteta koji se koristi za dobijanje ID-a korisnika sa potvrđenim identitetom.
 - **name**: ime korisnika.
 - **email**: adresa e-pošte korisnika.
-    
-Sledeći primer prikazuje isečak koda koji šalje informacije o korisniku. Tamo gde vidite Funkcije označene sa *, zamenite ih vašom primenom pozivanja tih vrednosti:  
+
+Sledeći primer prikazuje isečak koda koji šalje informacije o korisniku. Tamo gde vidite funkcije kojima prethodi simbol zvezdice *, zamenite funkciju prilagođenom primenom:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     user:{
@@ -58,25 +57,25 @@ window, document
 […]
 ```
 
-Podatke o korisniku možete odrediti i pozivanjem `setUser(user: IUser)` API-ja u SDK-u. Telemetrija poslata nakon pozivanja `setUser API`-ja sadržaće informacije o korisniku.
+Korisničke podatke možete navesti i pozivanjem `setUser(user: IUser)` API-ja. Telemetrija poslata nakon pozivanja `setUser` API-ja sadržaće informacije o korisniku.
 
 ## <a name="adding-custom-properties-for-each-event"></a>Dodavanje prilagođenih svojstava za svaki događaj
 
-SDK vam omogućava da navedete prilagođena svojstva koja možete poslati uz svaki događaj. Možete odrediti prilagođena svojstva kao objekat koji sadrži parove ključ/vrednost (vrednost može biti tipa `string | number | boolean`). Objekat može biti dodat u svojstvo pod nazivom `props`, slično kao `src`, `name` i `cfg` u konfiguraciji isečka koda. 
+SDK vam omogućava da navedete prilagođena svojstva koja možete poslati uz svaki događaj. Možete odrediti prilagođena svojstva kao objekat koji sadrži parove ključ/vrednost (vrednost može biti tipa `string | number | boolean`). Objekat možete dodati u svojstvo koje se zove `props`, slično kao i `src`, `name` i `cfg` u konfiguraciji fragmenta koda.
 
 Sledeći primer prikazuje isečak koda koji šalje prilagođena svojstva:
 
 ```
 […]
-window, document 
+window, document
 {
-    src:"https://download.pi.dynamics.com/sdk/web/mspi-0.min.js", 
-    name:"myproject",      
-    cfg:{ 
-      ingestionKey:<paste your ingestion key>", 
-      autoCapture:{ 
-        view:true, 
-        click:true 
+    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
+    name:"myproject",
+    cfg:{
+      ingestionKey:<paste your ingestion key>",
+      autoCapture:{
+        view:true,
+        click:true
       }
     },
     props:{
@@ -87,7 +86,7 @@ window, document
 […]
 ```
 
-Takođe možete pojedinačno navesti prilagođena svojstva pozivanjem `setProperty(name: string, value: string | number | boolean)` API-ja u SDK-u.
+Prilagođena svojstva možete navesti pojedinačno i pozivanjem `setProperty(name: string, value: string | number | boolean)` API-ja.
 
 ## <a name="sending-custom-events"></a>Slanje prilagođenih događaja
 

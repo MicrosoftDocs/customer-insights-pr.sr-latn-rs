@@ -1,22 +1,21 @@
 ---
 title: Izvoz Customer Insights podataka u Snapchat
 description: Saznajte kako da konfigurišete vezu i izvezete u Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d3dae7f0fef1fc3792c90c8ac0d3b037f5c0923d
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
-ms.translationtype: HT
+ms.openlocfilehash: 7eac3307b3f82b6c5ebc3d66d6563ae50696ed65
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760620"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227265"
 ---
-# <a name="export-segment-lists-to-snapchat-preview"></a>Izvoz listi segmenata u Snapchat (verzija za pregled)
+# <a name="export-segments-to-snapchat-preview"></a>Izvoz segmenata u Snapchat (verzija za pregled)
 
 Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za oglašavanje. 
 
@@ -29,7 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za og
 ## <a name="known-limitations"></a>Poznata ograničenja
 
 - Izvoz u Snapchat ograničen je na segmente.
-- Izvoz do 1 milion profila u Snapchat može potrajati do 15 minuta. 
+- Izvoz do 1 miliona profila klijenata u Snapchat može potrajati do 15 minuta. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Podešavanje veze u usluzi Snapchat
 
@@ -63,7 +62,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Unesite [**ID ciljne grupe za Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. U odeljku **Podudaranje podataka**, u polju **Adresa e-pošte** izaberite polje u objedinjenom profilu klijenta koje predstavlja e-adresu klijenta. To je potrebno da izvezete segmente u Snapchat.
+1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. To je potrebno da izvezete segmente u Snapchat.
 
 1. Izaberite segmente koje želite da izvezete. 
 

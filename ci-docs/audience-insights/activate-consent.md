@@ -1,24 +1,23 @@
 ---
 title: Aktiviranje pravila saglasnosti za segmente
-description: Sledite ove korake da biste povezali podatke o pristanku i aktivirali provere saglasnosti korisnici uvide. Administrator takođe može da onemogući provere pristanka.
+description: Sledite ove korake da biste povezali podatke o pristanku i aktivirali provere saglasnosti korisnici uvidima. Administrator takođe može da onemogući provere pristanka.
 ms.date: 11/12/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: smithy7
 ms.author: smithc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 552cb0739c4d17266dd028638df067f3384b738a
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: HT
+ms.openlocfilehash: 4b55c82229b1a6189c0dd67d145386344286df8a
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884091"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8227510"
 ---
 # <a name="activate-consent-rules"></a>Aktiviranje pravila pristanka
 
-Centar [za saglasnost (pregled) vam](../consent-management/overview.md) pomaže da uskladite podatke o pristanku iz različitih izvora. Koristite *objedinjeni* entitet saglasnosti da biste primenili podrazumevane provere saglasnosti. Nakon uvoza podataka o saglasnosti u Centar za saglasnost i konfigurisanja pravila za podatke, entitet saglasnosti se automatski *sinhronizuje* sa korisnici uvidima.
+Centar [za saglasnost (pregled) vam pomaže](../consent-management/overview.md) da uskladite podatke o pristanku iz različitih izvora. Koristite objedinjeni *entitet* saglasnosti da biste primenili podrazumevane provere saglasnosti. Nakon uvoza podataka o saglasnosti u Centar za saglasnost i konfigurisanja pravila za podatke, *entitet* saglasnosti se automatski sinhronizuje sa korisnici uvidima.
 
 ## <a name="enable-consent-checks"></a>Omogući provere saglasnosti
 
@@ -28,17 +27,17 @@ Sa podacima o pristanku uvezenim u Centar za saglasnost (pregled) i podešenim p
 
 1. U uvidima o korisnicima idite na **Administrator** > **Sistem**.
 
-1. Izaberite **karticu Saglasnost** (pregled).
+1. Izaberite karticu **Saglasnost (pregled**).
 
-1. U **odeljku Omogućavanje provere** saglasnosti postavite preklopnik **na** "Dalje" za sve oblasti koje želite da omogućite.
+1. U odeljku **Omogućavanje provere** saglasnosti postavite preklopnik na **"Dalje** " za sve oblasti koje želite da omogućite.
 
-1. Potvrdite izbor **u polju za potvrdu Dozvoli za zamjenu** podrazumevanih pravila pristanka da biste uklonili podrazumevane provere saglasnosti koje se sprovode u određenom segmentu. 
+1. Potvrdite izbor **u polju za potvrdu Dozvoli za zamjenu podrazumevanih** pravila pristanka da biste uklonili podrazumevane provere saglasnosti koje se sprovode u određenom segmentu. 
 
 1. U padajućem meniju izaberite gde želite da dozvolite zamenu.     
 
-1. U **odeljku Povezivanje saglasnosti sa profilima** klijenata odaberite atribut koji se koristi kao identifikator za povezivanje podataka o pristanku sa podacima o klijentima. To će verovatno biti broj telefona ili e-adresa. 
+1. U odeljku **Povezivanje saglasnosti sa profilima klijenata** odaberite atribut koji se koristi kao identifikator za povezivanje podataka o pristanku sa podacima o klijentima. To će verovatno biti broj telefona ili e-adresa. 
 
-1. Kliknite na **dugme** "Sačuvaj" da biste primenili postavke.
+1. Kliknite na **dugme "** Sačuvaj" da biste primenili postavke.
 
 ## <a name="disable-consent-checks"></a>Onemogući provere pristanka
 
@@ -46,9 +45,9 @@ Da bi prestao da koristi podatke o pristanku korisnici uvidima, administrator mo
 
 1. U uvidima o korisnicima idite na **Administrator** > **Sistem**.
 
-1. Izaberite **karticu Saglasnost** (pregled).
+1. Izaberite karticu **Saglasnost (pregled**).
 
-1. U odeljku **Omogućavanje provere** pristanka postavite preklopnik na **isključeno**.
+1. U odeljku **Omogućavanje provere pristanka** postavite preklopnik na **isključeno**.
 
 > [!TIP]
-> Da biste prestali da koristite mogućnost upravljanja pristankom, [pogledajte postavke sistema u Centru za saglasnost (pregled)](../consent-management/system-settings.md).
+> Da biste prestali da koristite mogućnost upravljanja pristankom, pogledajte [postavke sistema u Centru za saglasnost (pregled)](../consent-management/system-settings.md).

@@ -5,17 +5,19 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645281"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353744"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Započnite rad sa Dynamics 365 Customer Insights mogućnošću uvida u ciljnu grupu
 
@@ -37,7 +39,7 @@ Kada se prvi put prijavite na uvide u ciljnu grupu, možete da konfigurišete po
 
 Objedinjeni profili su osnova za dobijanje uvida i preduzimanje radnji nad podacima. Donesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka da biste kombinovali objedinjene profile. Navedite odnose između unetih entiteta i koristite funkcije obogaćivanja za dodavanje informacija profilima. 
 
-1. Unosite podatke kreiranjem izvora podataka iz više opcija. Izaberite između [Power Query konektora](connect-power-query.md), [Common Data Model fascikle](connect-common-data-model.md) ili [Microsoft Dataverse](connect-common-data-service-lake.md). 
+1. Unosite podatke kreiranjem izvora podataka iz više opcija. Odaberite jednu [Power Query od linija](connect-power-query.md) spajanja, fasciklu ["Uobičajeni model podataka](connect-common-data-model.md)" ili [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
 
 1. Pokrenite [proces objedinjavanja podataka](data-unification.md) prolaskom kroz faze [mapiranje](map-entities.md), [podudaranje](match-entities.md) i [spajanje](merge-entities.md).
 

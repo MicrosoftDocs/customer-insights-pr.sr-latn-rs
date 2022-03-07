@@ -1,24 +1,30 @@
 ---
 title: Konfiguracija sistema u uvidima o korisnicima
-description: Saznajte više o postavkama sistema Dynamics 365 Customer Insights korisnici mogućnostima uvida.
+description: Saznajte više o sistemskim podešavanjima u Dynamics 365 Customer Insights mogućnosti uvida o korisnicima.
 ms.date: 11/01/2021
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 1b790106f8b9617d0c1f244e1d15a74c7ef9a82b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732387"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354250"
 ---
 # <a name="system-configuration"></a>Konfiguracija sistema
 
-Da biste pristupili konfiguracijama sistema u korisnici uvidima, sa leve trake za navigaciju **izaberite stavku Administrator sistem da** > **biste** prikazali listu sistemskih zadataka i procesa.
+Da biste pristupili konfiguracijama sistema u korisnici uvidima, sa leve trake za navigaciju **izaberite AdminSystem** > **da** biste prikazali listu sistemskih zadataka i procesa.
 
 Stranica **Sistem** sadrži sledeće kartice:
 - [Status](#status-tab)
@@ -32,11 +38,11 @@ Stranica **Sistem** sadrži sledeće kartice:
 
 ## <a name="status-tab"></a>Kartica Status
 
-Kartica **·** "Status" vam omogućava da pratite tok zadataka, unošenje podataka, izvoz podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici da biste se uverili u dovršavanje aktivnih zadataka i procesa.
+Kartica **"Status"** vam omogućava da pratite tok zadataka, unošenje podataka, izvoz podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici da biste se uverili u dovršavanje aktivnih zadataka i procesa.
 
 Ova kartica uključuje tabele sa informacijama o statusu i obradi za razne procese. Svaka tabela prati **Ime** zadatka i odgovarajućeg entiteta, **Status** poslednjeg pokretanja i kada je **poslednji put ažuriran**. Detalje poslednjih nekoliko trčanja možete da prikažete tako što ćete izabrati zadatak ili ime procesa. 
 
-Izaberite status pored zadatka ili procesa u koloni Status **da** biste otvorili okno **sa detaljima o** toku.
+Izaberite status pored zadatka ili procesa u koloni Status da **biste** otvorili okno sa **detaljima o toku**.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Okno sa detaljima o toku sistema":::
 
@@ -53,12 +59,12 @@ Sistem koristi sledeće statuse za zadatke i procese:
 |Obrađuje se  |Zadatak ili proces je u toku.  |
 |Osvežavanje    |Unos podataka je u toku. Ovu operaciju možete otkazati ako izaberete **Zaustavi osvežavanje** u koloni **Radnje**. Zaustavljanje osvežavanja izvora podataka vratiće ga u poslednje stanje osvežavanja.       |
 |Preskočena  |Zadatak ili proces su preskočeni. Jedan ili više procesa na nižem toku od kojih ovaj zadatak zavisi nisu uspeli ili su preskočeni.|
-|Uspešno  |Zadatak ili proces su uspešno dovršeni. Za izvore podataka ukazuje na to da su podaci uspešno uneti ako je vreme pomenuto u **koloni** "Osveženje".|
-|Na čekanju | Obrada je stavljena u red i počeće kada se dovrše svi uzvodni zadaci i procesi. Više informacija potražite u članku [Osvežavanje procesa](#refresh-processes).|
+|Uspešno  |Zadatak ili proces su uspešno dovršeni. Za izvore podataka ukazuje na to da su podaci uspešno uneti ako je vreme pomenuto u koloni "Osveženje **·**".|
+|Na čekanju | Obrada je stavljena u red i počeće kada se dovrše svi uzvodni zadaci i procesi. Više informacija potražite u članku Osvežavanje [procesa](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Osvežavanje procesa
 
-Osvežavanje zadataka i procesa se izvršava u skladu [sa konfigurisanim rasporedom](#schedule-tab). 
+Osvežavanje zadataka i procesa se izvršava u skladu sa [konfigurisanim rasporedom](#schedule-tab). 
 
 |Proces  |Opis  |
 |---------|---------|
@@ -80,11 +86,15 @@ Osvežavanje zadataka i procesa se izvršava u skladu [sa konfigurisanim raspore
 |Sistemsko   |Zavisi od uspešnog završetka procesa podudaranja. Segmenti, mere, obogaćivanje, pretraga, aktivnosti, predviđanja i priprema podataka zavise od uspešnog završetka ovog procesa.   |
 |User  |Pokreće ručno (jednostruko osvežavanje). Zavisi od entiteta.  |
 
-Izaberite status procesa da biste videli detalje o toku celog posla u kojem se zatekao. Gorenavedeni procesi osvežavanja mogu pomoći da razumete šta možete da uradite da biste rešili **preskočeni** **ili** poređani zadatak ili proces.
+Izaberite status procesa da biste videli detalje o toku celog posla u kojem se zatekao. Gorenavedeni procesi osvežavanja mogu pomoći da razumete šta možete da uradite da biste rešili preskočeni **ili** **poređani** zadatak ili proces.
 
 ## <a name="schedule-tab"></a>Kartica Raspored
 
 Koristite karticu **Raspored** za zakazivanje automatskog osvežavanja svih [unetih izvora podataka](data-sources.md). Automatsko osvežavanje osigurava da se ispravke iz izvora podataka prikazuju na objedinjenim profilima korisnika.
+
+> [!NOTE]
+> Izvore podataka kojima upravljate osvežavate po sopstvenim rasporedima. Da biste isplanirali osvežavanje izvora podataka kojima upravljate, konfigurišite postavke osvežavanja na izvor podataka stranici **izvora podataka**.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Postavke osvežavanja dataflow-a.":::
 
 1. U uvidima o klijentima idite na **Administrator** >  **Sistem** i izaberite karticu **Raspored**.
 
@@ -104,7 +114,7 @@ Kartica **Osnovni podaci** sadrži **Ime za prikaz** organizacije, aktivni **ID 
 
 Jezik i format zemlje/regiona možete da promenite na kartici **Opšti podaci**.
 
-Uvidi klijenata [podržavaju mnoge jezike.](/dynamics365/get-started/availability) Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
+Uvidi klijenata [podržavaju mnoge jezike](/dynamics365/get-started/availability). Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
 
 Uvezeni podaci i informacije koje ste ručno uneli se ne prevode.
 
@@ -127,7 +137,7 @@ Pronađite detalje o upotrebi API-ja u realnom vremenu i pogledajte koji su se d
 
 -  **Operacije** – tabela sa redovima za svaku dostupnu API operaciju i detalje o upotrebi operacija. Možete izabrati naziv operacije na koju želite da idete u [referenci za API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operacije koje koriste [unošenje podataka u realnom](real-time-data-ingestion.md) vremenu sadrže dugme sa dvoglednim simbolom za prikaz upotrebe API-ja u realnom vremenu. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.   
+   Operacije koje koriste [unošenje podataka u realnom vremenu](real-time-data-ingestion.md) sadrže dugme sa dvoglednim simbolom za prikaz upotrebe API-ja u realnom vremenu. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.   
    Koristite okvir **Grupiši po** u oknu **Korišćenje API-ja u realnom vremenu** da biste izabrali kako najbolje da predstavite svoje interakcije u realnom vremenu. Možete grupisati podatke prema API metodi, nazivu kvalifikovanog entiteta (uneti entitet), vremenu kreiranja (izvor događaja), rezultatu (uspelo ili neuspelo) ili kodovima grešaka. Podaci su dostupni kao vremenski grafikon i tabela.
 
 ## <a name="security-tab"></a>Kartica „Bezbednost“

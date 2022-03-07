@@ -3,18 +3,20 @@ title: Veze sa ostalim uslugama iz usluge Customer Insights.
 description: Podelite podatke sa drugim uslugama.
 ms.date: 04/09/2021
 ms.reviewer: nikeller
-ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-connections
+- customerInsights
+ms.openlocfilehash: ccad090d3bf6eab96eff37f7a96289ca2882d369
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304989"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354401"
 ---
 # <a name="connections-preview-overview"></a>Pregled veza (verzija za pregled)
 
@@ -47,6 +49,7 @@ Da biste dodali veze, morate da imate [administratorske dozvole](permissions.md)
 1. U oknu **Podešavanje veze**, navedite potrebne detalje. 
    1. **Ime za prikaz** i vrsta veze opisuju vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj ove veze.
    1. Tačna polja zavise od usluge na koju se povezujete. Više o detaljima određenog tipa veze možete saznati u članku o ciljnoj usluzi.
+   1. Ako [koristite sopstveni Key Vault](use-azure-key-vault.md) za čuvanje tajni, aktivirajte **Koristi Key Vault** i izaberite tajnu sa liste.
 
 1. Da biste kreirali vezu, izaberite **Sačuvaj**.
 
@@ -93,3 +96,6 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovo ih aktivirate dodavanj
 
 1. Da biste potvrdili brisanje, izaberite **Ukloni**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Uspostavljanje veza sa tajnama kojima upravlja vaš Key Vault
+
+Nekim vezama su potrebne tajne, poput API ključeva ili lozinki. Neke veze podržavaju tajne sačuvane u vašem Key Vaultu. Saznajte više o podržanim vezama i načinu podešavanja [sopstvenog Key Vaulta za uvide u ciljnu grupu](use-azure-key-vault.md).

@@ -2,18 +2,17 @@
 title: Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje
 description: Kreirajte aktivnu vezu između uvida u ciljnu grupu i uvida u angažovanje da biste omogućili dvosmerno deljenje podataka.
 ms.date: 09/08/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
-ms.translationtype: HT
+ms.openlocfilehash: 56adc206d83bc6e34a55f11383393b5ac66da531
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8116031"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229889"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Kreiranje veze između uvida u ciljne grupe i uvida u angažovanje
 
@@ -25,7 +24,7 @@ Koristite objedinjene profile i segmente iz uvida u ciljnu grupu za više opcija
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Korisnici profila moraju biti uskladišteni u nalogu koji Azure Data Lake Storage posedujete ili u upravljano jezero sa [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; podacima. 
+- Korisnici profili moraju biti uskladišteni u nalogu Azure Data Lake Storage koji posedujete ili u upravljano jezero sa [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash; podacima. 
 - Vaše okruženje uvida u ciljnu grupu bi trebalo da ima pridruženo Dataverse okruženje. A ako i to okruženje koristi Dataverse za skladištenje podataka, proverite da li je označena opcija **Omogući deljenje podataka** u uvidima u ciljnu grupu. Za još informacija pogledajte [Kreiranje i konfigurisanje okruženja u uvidima u ciljnu grupu](../audience-insights/create-environment.md).
 - Potrebne su vam administratorske dozvole za okruženja za uvide u angažovanje i za uvida u ciljnu grupu.
 - Povezana okruženja moraju biti u istom geografskom regionu.

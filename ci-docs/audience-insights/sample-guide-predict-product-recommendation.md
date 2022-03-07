@@ -3,26 +3,29 @@ title: Primer vodiča za predviđanje preporuka proizvoda
 description: Koristite ovaj primer vodiča da biste isprobali ovaj gotovi model predviđanja preporuka proizvoda.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b219935dfbd9f7acc1104d83e2ca281801a1a4251ae4c19fc03d4b1ce46f4613
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035202"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354664"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje preporuka proizvoda (pregled)
+# <a name="product-recommendation-prediction-sample-guide"></a>Primer vodiča za predviđanje preporuka proizvoda
 
 Objasnićemo vam kompletan primer predviđanja preporuke proizvoda pomoću primera podataka navedenih u nastavku.
 
 ## <a name="scenario"></a>Scenario
 
-Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju preko veb-lokacije Contoso Coffee. Cilj im je da razumeju koje proizvode bi trebalo da preporuče svojim redovnim klijentima. Saznanje šta će klijenti **verovatnije kupiti** može im pomoći da uštede marketinške napore fokusiranjem na određene stavke.
+Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju putem svog veb-sajta Contoso Coffee. Cilj im je da razumeju koje proizvode bi trebalo da preporuče svojim redovnim klijentima. Saznanje šta će klijenti **verovatnije kupiti** može im pomoći da uštede marketinške napore fokusiranjem na određene stavke.
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -31,7 +34,7 @@ Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koj
 
 ## <a name="task-1---ingest-data"></a>1. zadatak – Unos podataka
 
-Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) konkretno. Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
+Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvora podataka pomoću Power Query linija spajanja](connect-power-query.md). Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima sa platforme eCommerce
 

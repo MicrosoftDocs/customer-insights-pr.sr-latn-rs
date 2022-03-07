@@ -3,20 +3,24 @@ title: Predviđanje trajne vrednosti klijenta (CLV)
 description: Predvidite potencijalni prihod za aktivne klijente u budućnosti.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035386"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355806"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Predviđanje trajne vrednosti klijenta (CLV) (pregled)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predviđanje trajne vrednosti klijenta (CLV)
 
 Predvidite potencijalnu vrednost (prihod) koju će pojedinačni aktivni klijenti doneti vašem preduzeću kroz definisan budući vremenski period. Ova funkcija vam može pomoći u postizanju različitih ciljeva: 
 - Identifikujte klijente velike vrednosti i obradite ovaj uvid
@@ -65,7 +69,7 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
     - Kompletnost podataka: Manje od 20% nedostajućih vrednosti u obaveznim poljima u ulaznim podacima   
 
 > [!NOTE]
-> - Model zahteva istoriju transakcija vaših klijenata. Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta za kupovinu/transakcije, spojite ih u Power Query pre unosa podataka.
+> - Model zahteva istoriju transakcija vaših klijenata. Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta nabavke/transakcije, možete ih uvesti pre Power Query brisanja podataka.
 > - Međutim, za dodatne podatke o aktivnostima klijenata (opcionalno) možete dodati onoliko entiteta aktivnosti klijenata koliko želite da ih model uzme u obzir.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kreiranje predviđanja trajne vrednosti klijenta
@@ -74,7 +78,7 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
 
 1. Izaberite pločicu **Trajna vrednost klijenta** i izaberite **Koristi model**. 
 
-1. U oknu **Trajna vrednost klijente (pregled)** izaberite **Započnite**.
+1. U oknu sa **doživotnom vrednošću kupca** izaberite stavku **Prvi koraci**.
 
 1. **Dajte ime ovom modelu** i **Izlazni naziv entiteta** da ih razlikujete od ostalih modela ili entiteta.
 

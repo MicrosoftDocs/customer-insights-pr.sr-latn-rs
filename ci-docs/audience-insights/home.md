@@ -1,36 +1,46 @@
 ---
 title: Stranica Početak u uvidima o korisnicima
 description: Počnite da istražujete aplikaciju na stranici Početak.
-ms.date: 07/22/2021
+ms.date: 10/19/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 4072c724213486751ae96d38549fbcb6397b32c4
-ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: 7915a9c447b6c957ef4078380f578c1fb0a2ecb8
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "6650381"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354756"
 ---
-# <a name="explore-the-home-page"></a>Istražite matičnu stranicu
+# <a name="explore-audience-insights"></a>Istražite uvide u ciljnu grupu
 
 Možete da [pristupite uvidima o korisnicima iz usluge Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) na sledećoj URL adresi: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
+
 Stranica **Početak** prikazuje pregled segmenata, mera i podataka o obogaćivanju (ako su konfigurisani) nakon dovršavanja faza [mapiranja](map-entities.md), [podudaranja](match-entities.md) i [objedinjavanja](merge-entities.md).
 
-:::image type="content" source="media/home-page-insights.png" alt-text="Snimak ekrana početnog ekrana koji prikazuje primere uvida.":::
+:::image type="content" source="media/home-page.png" alt-text="Snimak ekrana početnog ekrana koji prikazuje primere uvida.":::
 
-U odeljku **Nedavni segmenti**, vidite grupe klijenata na osnovu atributa demografije, ponašanja ili transakcija koje ste definisali. [Kreiranje segmenata](segments.md) pomaže vam da grupišete bazu klijenata i bolje ciljate svoje poslovne aktivnosti.
+1 - Prelazite između mogućnosti usluge Customer Insights 
 
-**Najnovije mere** pokazuju pločice sa [indikatorima ključnih performansi (KPI-ovi)](measures.md) koje ste definisali. Na primer, prosečna verovatnoća da se klijent odbaci ili prosečna potrošnja na mreži po klijentu.
+2 - Koristite levo okno da biste se kretali između različitih oblasti i odabrali primarnu ciljnu grupu
 
-Odeljak **Nedavna obogaćivanja** navodi rezultate pokretanja obogaćivanja koja su nedavno završena. [Obogaćivanja](enrichment-hub.md) dodaju informacije o vašoj bazi klijenata. Na primer, razumevanjem interesa i brendova za koje imaju sklonost.
+3 - Saznajte u kom okruženju radite i upravljajte okruženjima kao administrator
 
-## <a name="next-step"></a>Sledeći korak
+4 - Navedite lična podešavanja za uslugu Customer Insights
 
-Da biste videli sopstvene uvide na početnoj stranici, prvo morate da [dodate izvore podataka](data-sources.md) i [objedinite](data-unification.md) podatke kako biste napravili korisničke profile.
+Sada možete da prikažete sledeće odeljke na početnoj stranici:
+
+- **Nedavni segmenti** prikazuju grupe klijenata na osnovu atributa demografskih kategorija, ponašanja ili transakcija koje ste definisali. [Kreiranje segmenata](segments.md) pomaže vam da grupišete bazu klijenata i bolje ciljate svoje poslovne aktivnosti.
+
+- **Nedavne mere** prikazuju pločice sa [indikatorima ključnih performansi (KPI)](measures.md) koje ste definisali. Na primer, prosečna verovatnoća da se klijent odbaci ili prosečna potrošnja na mreži po klijentu.
+
+- **Nedavna obogaćivanja** navode rezultate izvršavanja obogaćivanja koja su nedavno završena. [Obogaćivanja](enrichment-hub.md) dodaju informacije o vašoj bazi klijenata. Na primer, razumevanjem interesa i brendova za koje imaju sklonost.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

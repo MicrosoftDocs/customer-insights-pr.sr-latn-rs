@@ -1,24 +1,28 @@
 ---
 title: Dopunite delimične podatke koristeći predviđanja
 description: Koristite predviđanja za popunjavanje nepotpunih podataka o klijentima.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645051"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354020"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Popunite svoje delimične podatke predviđanjima
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dovršavanje delimičnih podataka predviđanjima (neodobreno)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Ova funkcija će biti zastarela **od** **5. novembra 2021. godine**. Trenutne implementacije će nastaviti da funkcionišu dok se funkcija ne ukloni, ali nećete moći da kreirate nove integracije koristeći dolenavedena uputstva.
 
 Predviđanja vam omogućavaju da lako kreirate predviđene vrednosti koje mogu poboljšati razumevanje vašeg klijenta. Na stranici **Obaveštavanje** > **Predviđanja** možete odabrati **Moja predviđanja** da biste videli predviđanja koja ste konfigurisali u drugim delovima uvida o korisnicima i dodatno ih prilagodili.
 
@@ -60,6 +64,8 @@ Više informacija potražite u članku [Kreiranje novog okruženja](create-envir
    > ![Primer koji prikazuje mapirane vrednosti polja u kategorije.](media/intelligence-categorymapping.png "Primer koji prikazuje mapirane vrednosti polja u kategorije")
 
 8. Izaberite **Gotovo** i predviđanje će biti obrađeno. Obrada će potrajati izvesno vreme, u zavisnosti od veličine i složenosti podataka. Rezultati će biti dostupni u novom entitetu na osnovu **Naziva izlaznog entiteta** predviđanja koje ste kreirali.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Kreiranje predviđanja tokom kreiranja segmenta
 
@@ -110,7 +116,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 ## <a name="edit-a-prediction"></a>Uređivanje predviđanja
 
-Kada kreirate predviđanje, možete da prilagodite model u programu AI Builder da biste povećali efikasnost vašeg modela.  
+Nakon što kreirate predviđanje, možete da prilagodite model tako da AI Builder poveća efektivnost vašeg modela.  
 
 1. U uvidima o korisnicima idite na **Obaveštavanje** > **Predviđanja** > **Moja predviđanja**.
 
@@ -118,14 +124,14 @@ Kada kreirate predviđanje, možete da prilagodite model u programu AI Builder d
 
 3. Izaberite tri tačke u koloni **Radnje** i izaberite stavku **Prikaz**.
 
-4. Izaberite **Prilagodite u usluzi AI Builder**.
+4. Izaberite **prilagodi u programu AI Builder**.
 
-5. Ažurirajte model u programu AI Builder. [Saznajte više o upravljanju modelima u programu AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Ažurirajte svoj model u programu AI Builder. [Saznajte više o upravljanju modelima u programu AI Builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Sledeće pokretanje predviđanja koristiće ažurirani model koji ste kreirali.
 
 > [!NOTE]
-> Novi modeli napravljeni u AI Builder-u neće se prikazivati u uvidima o korisnicima, osim ako model nije napravljen na osnovu gorenavedenih iskustava.
+> Novi modeli kreirani AI Builder u programu neće biti prikazani korisnici uvidima ukoliko model nije nastao iz gore navedenih iskustava.
 
 ## <a name="remove-a-prediction"></a>Uklanjanje predviđanja
 

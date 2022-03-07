@@ -1,20 +1,22 @@
 ---
 title: Customer Insights podaci u platformi Microsoft Dataverse
 description: Koristite Customer Insights entitete kao tabele u platformi Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645235"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355446"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Neki izlazni entiteti iz uvida u ciljne grupe dostupni su kao tabele u usluzi Da
 - [CustomerMeasure](#customermeasure)
 - [Obogaćivanje](#enrichment)
 - [Predviđanje](#prediction)
+- [Članstvo u segmentima](#segment-membership)
 
 
 ### <a name="customerprofile"></a>CustomerProfile
@@ -121,3 +124,16 @@ Ova tabela sadrži izlaz predviđanja modela.
 | Vrednosti               | JSON niska | Lista atributa koje je napravio model |
 | msdynci_predictionid | GUID        | Deterministički GUID generisan iz parametra msdynci_identifier | 
 | msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Članstvo u segmentima
+
+Ova tabela sadrži informacije o članstvu u segmentu profila kupaca.
+
+| Column        | Tip | Opis                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | String       | ID profila klijenta        |
+| SegmentProvider      | String       | Aplikacija koja objavljuje segmente. Podrazumevano: korisnici uvidi         |
+| SegmentMembershipType | String       | Tip kupca ovaj zapis članstva u segmentima. Podržava više tipova kao što su "Kupac", "Kontakt" ili "Nalog". Podrazumevano: kupac  |
+| Segmenti       | JSON niska  | Lista jedinstvenih segmenata u kojima je profil kupca član      |
+| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | Deterministički GUID generisan iz`msdynci_identifier`          |

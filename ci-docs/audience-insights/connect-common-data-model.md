@@ -2,19 +2,23 @@
 title: Povežite Common Data Model podatke sa Azure Data Lake nalogom
 description: Radite sa Common Data Model podacima koristeći Azure Data Lake Storage.
 ms.date: 01/25/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a871d65bd79d3246984e23fb52210c8dc7259b8
-ms.sourcegitcommit: 7a99f3490e6582c2bc2b38019ed1898348b0eaba
-ms.translationtype: HT
+searchScope:
+- ci-data-sources
+- ci-create-data-source
+- ci-attach-cdm
+- customerInsights
+ms.openlocfilehash: 1e3b28316c06d6a15dd5690837c365b0677a882e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 01/25/2022
-ms.locfileid: "8027069"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354944"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 
@@ -26,7 +30,7 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 - Unos podataka podržava samo Azure Data Lake *Gen2* naloge za skladištenje. Ne možete da koristite Azure Data Lake Gen1 naloge za skladištenje za unos podataka.
 
-- Azure Nalog za skladištenje u jezeru podataka mora da [hijerarhijski omogućen prostor za ime](/azure/storage/blobs/data-lake-storage-namespace).
+- Azure Data Lake nalog za skladištenje mora da [ima hijerarhijski za ime omogućen](/azure/storage/blobs/data-lake-storage-namespace).
 
 - Da biste potvrdili identitet pomoću principala usluge Azure, uverite se da je konfigurisan u vašem zakupcu. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md).
 
@@ -40,7 +44,7 @@ Ovaj članak pruža informacije o tome kako unositi podatke iz Common Data Model
 
 1. Izaberite **Dodaj izvor podataka**.
 
-1. Izaberite **Azure skladište jezera sa podacima**, unesite ime **za** izvor podataka a zatim kliknite na dugme **Dalje**.
+1. Izaberite **Azure skladište jezera sa podacima**, unesite ime za **izvor podataka, a** zatim kliknite na dugme **Dalje**.
 
    - Ako budete upitani, izaberite jedan od probnih skupova podataka koji se odnose na vašu industriju, a zatim kliknite na dugme **Dalje**. 
 

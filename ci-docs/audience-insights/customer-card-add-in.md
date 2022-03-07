@@ -3,18 +3,22 @@ title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (sadrži v
 description: Prikažite podatke iz uvida u ciljnu grupu u Dynamics 365 aplikacijama sa ovim programskim dodatkom.
 ms.date: 02/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
-ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
-ms.translationtype: HT
+searchScope:
+- ci-customers-page
+- ci-search-filter
+- ci-customer-card
+- customerInsights
+ms.openlocfilehash: d67d8e2cb30cf20de204bfb293bb8ce81c7bb2f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/02/2022
-ms.locfileid: "8085265"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353882"
 ---
 # <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
 

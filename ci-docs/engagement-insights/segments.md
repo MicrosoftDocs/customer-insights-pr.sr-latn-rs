@@ -4,17 +4,16 @@ description: Kako da kreirate uređujete i izbrišete segmente i gde da ih koris
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: e99c04e6c92d8ca16c2d69957e0f5b7dba0ac757
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036165"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225393"
 ---
 # <a name="view-and-create-segments"></a>Prikaz i kreiranje segmenata
 
@@ -44,22 +43,27 @@ Ovaj odeljak opisuje kako se kreira *prazan segment* ispočetka.
 
 1. Izaberite **Novi segment**.
 
-1. U odeljku **Biblioteka resursa** odaberite atribut po kojem želite da filtrirate. Segmente trenutno možete da kreirate samo na osnovu aspekata.
+1. U **Biblioteci resursa**, izaberite (+) pored atributa po kome želite da filtrirate. Segmente trenutno možete da kreirate samo na osnovu aspekata.
 
-1. Odaberite operator i vrednost za izabrani atribut. Podržani su sledeći operatori.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Kreirajte novi segment.":::
+
+1. U odeljku **Pravilo**, izaberite operatora i vrednost za izabrani atribut. Podržani su sledeći operatori.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Odaberite operatora za svoj novi segment.":::
+
    - **je**: zahteva tačno podudaranje za uključivanje vrednosti. Koristi **jednako** za jednu vrednost ili **bilo koji od** da uključi više vrednosti.
    - **nije**: zahteva tačno podudaranje za izuzimanje vrednosti. Koristi **jednako** za jednu vrednost ili **bilo koji od** da uključi više vrednosti.
    - **počinje sa**: niz sa kojim započinju odgovarajuće vrednosti.
    - **završava se sa**: niz kojim se završavaju odgovarajuće vrednosti.
    - **sadrži**: niz sadržan u podudarnim vrednostima.
 
-1. Da biste grupi dodali više uslova, možete da koristite dva logička operatora. Projektovani atributi uzimaju se u obzir kada se koriste operatori skupova.
+1. Da biste grupi dodali još uslova, možete koristiti logičke operatore. Projektovani atributi uzimaju se u obzir kada se koriste operatori skupova.
    - Operator **I**: Oba uslova moraju da budu ispunjena kao deo procesa segmentacije. Ova opcija je najkorisnija kada definišete uslove u različitim entitetima.
    - Operator **ILI**: Bilo koji od uslova mora biti ispunjen kao deo procesa segmentacije. Ova opcija je najkorisnija kada definišete više uslova u istom entitetu.
 
 1. Izaberite **Sačuvaj** i dajte naziv segmentu. 
 
-Segment će biti naveden na stranici Segmenti i možete ga primeniti na sve izveštaje i tokove prodaje u radnom prostoru.
+Segment će biti naveden na stranici **Segmenti** i možete ga primeniti na sve izveštaje i tokove prodaje u radnom prostoru.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Koristite segment u izveštaju ili toku prodaje
 
@@ -67,7 +71,7 @@ Možete da primenite segmente na izveštaj ili tok prodaje da biste ih filtriral
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Izveštaj o prikazima stranice sa proširenom padajućom listom za odabir segmenata koji će se primeniti.":::
 
-Da biste primenili segment, otvorite izveštaj ili tok prodaje. Izaberite **Dodajte uslov** i birajte **Filtriraj prema segmentu**. Odaberite segment iz liste koju želite da primenite. Segment se primenjuje na izveštaj. Ako grafikon ne podržava segment, prikazuje se greška.
+Da biste primenili segment, otvorite izveštaj ili tok prodaje. Izaberite **+Dodajte uslov** i birajte **Filtriraj prema segmentu**. Odaberite segment iz liste koju želite da primenite. Segment se primenjuje na izveštaj. Ako grafikon ne podržava segment, prikazuje se greška. Za više informacija pogledajte [Kreiranje izveštaje o toku prodaje i upravljanje njima](funnel-reports.md).
  
 Možete prijaviti *do tri segmenta* u izveštaj ili tok prodaje.
 
@@ -91,5 +95,7 @@ Možete prijaviti *do tri segmenta* u izveštaj ili tok prodaje.
 1. Na listi segmenata, izaberite **Još [...]**. 
 1. Sa padajuće liste odaberite **Izbriši**.
 1. Izaberite **Izbriši** da biste potvrdili.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

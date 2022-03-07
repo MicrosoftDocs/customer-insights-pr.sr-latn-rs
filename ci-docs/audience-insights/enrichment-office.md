@@ -3,22 +3,21 @@ title: Obogatite profile klijenata podacima iz Microsoft Office 365
 description: Koristite vlasničke podatke da biste Microsoft Office obogatili profile klijenata podacima o angažovanju.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889783"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228491"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obogatite profile klijenata podacima o angažovanju (pregled)
 
-Koristite podatke Microsoft Office 365 iz da biste obogatili profile korisničkog naloga uvidom o angažovanju Office 365 putem aplikacija. Podaci o angažovanju se sastoje od aktivnosti e-pošte i sastanka, koja se prikuplja na nivou naloga. Na primer, broj e-poruka sa poslovnog naloga ili broj sastanaka sa nalogom. Podaci o pojedinačnim korisnicima nisu dostupni. 
+Koristite podatke Microsoft Office 365 iz da biste obogatili profile korisničkog naloga uvidom o angažovanju putem Office 365 aplikacija. Podaci o angažovanju se sastoje od aktivnosti e-pošte i sastanka, koja se prikuplja na nivou naloga. Na primer, broj e-poruka sa poslovnog naloga ili broj sastanaka sa nalogom. Podaci o pojedinačnim korisnicima nisu dostupni. 
 
 Ovo bogaćenje je dostupno u sledećim regionima: Velikoj Britaniji, Evropi, Severnoj Americi.
 
@@ -27,50 +26,50 @@ Ovo bogaćenje je dostupno u sledećim regionima: Velikoj Britaniji, Evropi, Sev
 Da biste konfigurisali bogaćenje, moraju biti ispunjeni sledeći preduslovi:
 
 - Imate aktivnu licencu Office 365 u oblaku.
-- Imate [objedinjene profile klijenata](customer-profiles.md) na osnovu [poslovnih naloga](work-with-business-accounts.md).
-- Vaše okruženje "Uvid u kupce" mora imati [Microsoft Dataverse priloženu organizaciju](create-environment.md#step-3-connect-to-microsoft-dataverse).
+- Imate objedinjene [profile klijenata](customer-profiles.md) na osnovu poslovnih [naloga](work-with-business-accounts.md).
+- Vaše okruženje "Uvidi kupaca" mora imati priloženu [Microsoft Dataverse organizaciju](create-environment.md#step-3-connect-to-microsoft-dataverse).
 - Imate [administratorske](permissions.md#administrator) dozvole.
-- Imate ili možete da dobijete saglasnost Office 365 administratora stanara da koristite podatke da biste Office 365 obezbedili uvide za **organizaciju** u okviru Dynamics 365 aplikacija.
+- Imate ili možete da dobijete saglasnost administratora Office 365 stanara da koristite podatke Office 365 da biste obezbedili **uvide za organizaciju** u okviru Dynamics 365 aplikacija.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 
 1. U uvidima o korisnicima idite na **Podaci** > **Obogaćivanje**.
 
-1. Idite na **karticu** "Otkrij" i izaberite **stavku Obogati moje** podatke na **pločici "Angažovanje** naloga".
+1. Idite na karticu " **Otkrij** " i izaberite stavku Obogati **moje podatke** na pločici **"Angažovanje** naloga".
 
    :::image type="content" source="media/enrichment-office-tile.png" alt-text="Pločica za angažovanje naloga.":::
    
-1. U **koraku** pregleda **kliknite na** dugme "Dalje" i unesite e-adrese iz organizacije za koje će podaci sistema Office biti zbirni. Samo podaci sa navedenih e-adresa se obrađuju za relevantnu komunikaciju. Najbolja praksa je da koristite grupe e-pošte, na primer, *tim američke* prodaje, kojima se lako upravlja u Office 365. Broj e-adresa u grupama je rešen i prikazan. Ukupan broj e-adresa mora biti najmanje 2 i ne može da premaši 2.500.
+1. U **koraku** pregleda kliknite **na dugme** "Dalje" i unesite e-adrese iz organizacije za koje će podaci sistema Office biti zbirni. Samo podaci sa navedenih e-adresa se obrađuju za relevantnu komunikaciju. Najbolja praksa je da koristite grupe e-pošte, na primer, *tim američke prodaje*, kojima se lako upravlja u Office 365. Broj e-adresa u grupama je rešen i prikazan. Ukupan broj e-adresa mora biti najmanje 2 i ne može da premaši 2.500.
 
    :::image type="content" source="media/enrichment-office-email-addresses.png" alt-text="E-adrese za angažovanje naloga.":::
 
-1. Pregledajte izjavu o saglasnosti, potvrdite izbor **u polju za** potvrdu "Slažem se" i kliknite na dugme **Dalje**.
+1. Pregledajte izjavu o saglasnosti, potvrdite izbor u polju **za potvrdu** "Slažem se" i kliknite na dugme " **Dalje"**.
 
-1. Izaberite karticu kupca skup podataka kliknite na **dugme Dalje**.
+1. Izaberite grupu kupaca skup podataka kliknite na dugme **Dalje**.
 
-1. Mapiraj polje e-adrese kontakta i kliknite **na dugme Dalje**.
+1. Mapiraj polje e-adrese kontakta i kliknite na dugme **Dalje**.
 
-1. Pregledajte konfiguraciju obogaćivanja, dajte ime bogaćenju i izaberite Sačuvaj **bogaćenje da** biste sačuvali bogaćenje.
+1. Pregledajte konfiguraciju obogaćivanja, dajte ime bogaćenju i izaberite Sačuvaj bogaćenje **da biste** sačuvali bogaćenje.
 
 ## <a name="office-365-tenant-administrator-consent"></a>Office 365 saglasnost administratora stanara
 
-Za aktiviranje Office 365 bogaćenja potrebna je saglasnost administratora stanara. E-poruka se šalje administratorima zakupaca kada se obogaćenje sačuva, što od njih traži da pregledaju i pristanu da Office 365 dozvole Dynamics 365 aplikacijama da koriste podatke vaših Office 365 preduzeća kako bi **obezbedili uvide u organizaciju**. Administrator Office 365 zakupca takođe može da pristane direktno u svojoj Office 365 administrativnoj konzoli, **izborom opcije Uvidi za organizaciju**.
+Za aktiviranje bogaćenja Office 365 potrebna je saglasnost administratora stanara. E-poruka se šalje Office 365 administratorima zakupaca kada se obogaćenje sačuva, što od njih traži da pregledaju i pristanu da dozvole Dynamics 365 aplikacijama da Office 365 koriste podatke vaših preduzeća kako bi obezbedili **uvide u organizaciju**. Administrator Office 365 stanara takođe može da pristane direktno u svojoj Office 365 administrativnoj konzoli, tako što će izabrati **opciju "Uvidi za organizaciju"**.
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Pokretanje bogaćenja po prvi put
 
-Kada se obogaćivanje započne po prvi put, nakon što Office 365 administrator stanara da saglasnost, preuzimanje podataka počinje sa Office 365 početka. Za ovaj proces je potrebno neko vreme. Planirano je da se prva ogoljenje održi sa zakašnjenjem od šest sati. Po završetku obogaćivanja možete da vidite broj dana koje podaci pokrivaju na stranici za pregled angažovanja naloga. Sa velikim volumenom podataka, ponovo pokrenite obogaćivanje nakon nekoliko dana. Obezbeđuje da podaci budu dovršeni za ceo vremenski prozor, što je godinu dana.
+Kada se obogaćivanje započne po prvi put, nakon što Office 365 administrator stanara da saglasnost, preuzimanje podataka počinje sa početka Office 365. Za ovaj proces je potrebno neko vreme. Planirano je da se prva ogoljenje održi sa zakašnjenjem od šest sati. Po završetku obogaćivanja možete da vidite broj dana koje podaci pokrivaju na stranici za pregled angažovanja naloga. Sa velikim volumenom podataka, ponovo pokrenite obogaćivanje nakon nekoliko dana. Obezbeđuje da podaci budu dovršeni za ceo vremenski prozor, što je godinu dana.
 
-Da biste započeli proces, kliknite na **dugme** "Pokreni" na stranici za konfiguraciju angažovanja naloga. Pored toga, možete da dozvolite sistemu da automatski pokrene obogaćivanje kao deo planiranog [osvežavanja](system.md#schedule-tab). Po podrazumevanoj vrednosti, obogaćivanje se pokreće jednom nedeljno.
+Da biste započeli proces, kliknite na dugme **"Pokreni"** na stranici za konfiguraciju angažovanja naloga. Pored toga, možete dozvoliti sistemu da automatski pokrene obogaćivanje kao deo planiranog [osvežavanja](system.md#schedule-tab). Po podrazumevanoj vrednosti, obogaćivanje se pokreće jednom nedeljno.
 
 U zavisnosti od veličine Office podataka, pokretanje obogaćivanja može potrajati nekoliko sati.
 
-Kada pokrenete bogaćenje, Microsoft će podatke obraditi unutar Office 365 granice usaglašenosti da bi kreirao zbirne uvide koji se zatim dodaju u okruženje "Uvidi kupaca". Nikakvi podaci na pojedinačnom nivou (na primer, telo bilo koje e-pošte ili poziva kalendara) ne postaju dostupni korisnicima korisničkih uvida. 
+Kada pokrenete bogaćenje, Microsoft će podatke obraditi Office 365 unutar granice usaglašenosti da bi kreirao zbirne uvide koji se zatim dodaju u okruženje "Uvidi kupaca". Nikakvi podaci na pojedinačnom nivou (na primer, telo bilo koje e-pošte ili poziva kalendara) ne postaju dostupni korisnicima korisničkih uvida. 
 
 [!INCLUDE [progress-details-pane](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Nakon pokretanja procesa obogaćivanja, idite **na Moja bogaćenja** da pregledate rezultate obogaćivanja. Videćete ukupan broj obogaćenih kupaca i pregled rezultata obogaćivanja. On uključuje broj obrađenih e-poruka i sastanaka, broj dana za koje su podaci prikupljeni i još mnogo toga.
+Nakon pokretanja procesa obogaćivanja, idite na **Moja bogaćenja da** pregledate rezultate obogaćivanja. Videćete ukupan broj obogaćenih kupaca i pregled rezultata obogaćivanja. On uključuje broj obrađenih e-poruka i sastanaka, broj dana za koje su podaci prikupljeni i još mnogo toga.
 
 Takođe ćete vremenom pronaći grafikon sa brojem obogaćenih klijenata i pregledom podataka o obogaćivanju.  
 
@@ -100,7 +99,7 @@ Svi podaci se prikupljaju do nivoa naloga. Sistem izračunava rezultat angažova
 | Nivo agregacije (godina, mesec ili sedmica)                                          |  AgregationLevel                        | 
 
 
-Pregledajte obogaćene podatke tako što ćete u odeljku za **pregled** izabrati stavku "Pogledajte više". Otvara *Office* entitet. Entitet naveden u grupi "Obogaćenje" možete pronaći i **u** entitetima **·** > **podataka**. Takođe ćete pronaći Office_UserEntity *ID*-ove aktivnog direktorijuma za e-adrese koje su odabrane tokom konfiguracije obogaćivanja 
+Pregledajte obogaćene podatke tako što ćete u odeljku **za pregled izabrati** stavku "Pogledajte više". *Otvara Office* entitet. Entitet naveden u grupi "Obogaćenje" možete pronaći i **u entitetima** **podataka** > **·**. Takođe ćete pronaći Office_UserEntity *ID*-ove aktivnog direktorijuma za e-adrese koje su odabrane tokom konfiguracije obogaćivanja 
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Pogledajte podatke o obogaćivanju na kartici klijenta
 
@@ -110,7 +109,7 @@ Angažovanje naloga se takođe može videti na pojedinačnim karticama kupaca. I
 
 ## <a name="create-segments-and-measures-based-on-the-enriched-data"></a>Kreiranje segmenata i mera na osnovu obogaćenih podataka
 
-Obogaćeni podaci se mogu koristiti za kreiranje segmenata i mera kao što je detaljno opisano u nastavku. Na primer, segment koji sadrži sve kupce koji imaju vrednost preko 60 dana od poslednje e-pošte *i dana od* *poslednjeg sastanka*. Taj segment sadrži ustaljene naloge koje možete pokušati ponovo da aktivirate. 
+Obogaćeni podaci se mogu koristiti za kreiranje segmenata i mera kao što je detaljno opisano u nastavku. Na primer, segment koji sadrži sve kupce koji imaju vrednost preko 60 dana od poslednje *e-pošte i* dana *od poslednjeg sastanka*. Taj segment sadrži ustaljene naloge koje možete pokušati ponovo da aktivirate. 
 
 ## <a name="next-steps"></a>Sledeći koraci
 

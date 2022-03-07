@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648134"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225464"
 ---
 # <a name="create-a-new-environment"></a>Kreirajte novo okruženje 
 
@@ -40,13 +39,13 @@ Okruženje je prostor u kojem upravljate svojim radnim prostorima i vezama. Nač
 
 1. Odaberite **Region** i izaberite **Dalje**. 
 
-1. Unesite **Naziv radnog prostora**, koji vam omogućava prikupljanje podataka za određene veb-lokacije ili aplikacije. Više informacija potražite u članku [Kreiranje radnog prostora](create-workspace.md).
+1. Otkucajte ime **radnog prostora** koje vam omogućava da prikupljate podatke za određene Veb lokacije ili aplikacije. Više informacija potražite u članku [Kreiranje radnog prostora](create-workspace.md).
 
-1. Odaberite **Tip radnog prostora** (veb ili mobilni) koji želite da kreirate. 
+1. Odaberite tip **radnog prostora** (Web ili mobilni) koji želite da kreirate. 
 
 1. Izaberite **Prikaži napredna podešavanja** da biste omogućili ili onemogućili ova opciona podešavanja:
 
-   - Prebacite **Nepoznato u poznato** na „omogućeno“ za povezivanje veb-događaja sa korisnicima koji su prethodno izvršili potvrdu identiteta. Za više informacija pogledajte [Prepoznavanje veb-događaja posetilaca koji su prethodno izvršili potvrdu identiteta](unknown-to-known.md)
+   - Prebacite **Nepoznato u poznato** na „omogućeno“ za povezivanje veb-događaja sa korisnicima koji su prethodno izvršili potvrdu identiteta. Više informacija potražite u članku Prepoznaj [Web događaje od prethodno potvrđenih posetilaca](unknown-to-known.md).
    - Prebacite **Filtriraj saobraćaj robota** na „omogućeno“ za uklanjanje veb-saobraćaja robota za ovaj radni prostor. 
 
 1. Izaberite **Dovrši** kada završite. 
