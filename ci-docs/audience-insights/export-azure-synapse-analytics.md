@@ -1,21 +1,22 @@
 ---
-title: Izvoz Customer Insights podataka u Azure Synapse Analytics
-description: Saznajte kako da konfigurišete vezu sa programom Azure Synapse Analytics.
-ms.date: 01/05/2022
+title: Izvoz Customer Insights podataka u uslugu Azure Synapse Analytics
+description: Saznajte kako da konfigurišete vezu sa uslugom Azure Synapse Analytics.
+ms.date: 04/12/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231329"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327381"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Azure Synapse Analytics (pregled)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u uslugu Azure Synapse Analytics (pregled)
 
 Azure Synapse je analitička usluga koja ubrzava vreme za uvid u skladišta podataka i sisteme velikih podataka. Možete da unesete i koristite Customer Insights podatke u usluzi [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -48,11 +49,9 @@ U usluzi Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurisanje veze
 
-Da biste kreirali vezu, glavnica usluge i korisnički nalog u okviru "Uvidi **klijenata" moraju čitalac dozvole** *za* grupu resursa u kojoj se nalazi radni prostor sinapse Analitika. Pored toga, direktoru usluge i korisniku na radnom prostoru Sinapse Analytics potrebne **su dozvole administratora sinapse**. 
-
 1. Idite na **Administrator** > **Veze**.
 
-1. Kliknite **na dugme Dodaj** vezu i **Azure Synapse Analytics** odaberite ili izaberite **stavku Podešavanje** na pločici **Azure Synapse Analytics** da biste konfigurisali vezu.
+1. Izaberite **Dodaj vezu** i birajte **Azure Synapse Analytics** ili izaberite **Podešavanje** na pločici **Azure Synapse Analytics** da biste konfigurisali vezu.
 
 1. Dajte vezi prepoznatljivo ime u polju Ime za prikaz. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
 
@@ -64,7 +63,7 @@ Da biste kreirali vezu, glavnica usluge i korisnički nalog u okviru "Uvidi **kl
 
 ### <a name="configure-an-export"></a>Konfigurisanje izvoza
 
-Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste konfigurisali izvoz sa deljenom vezom, potrebno vam je najmanje **saradnik** u fascikli "Uvidi kupaca". Za više informacija, pogledajte [dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija, pogledajte [dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
 
 1. Idite na **Podaci** > **Izvozi**.
 
@@ -74,7 +73,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste 
 
 1. Obezbedite prepoznatljivo **Ime za prikaz** za vaš izvoz i **Naziv baze podataka**.
 
-1. Izaberite entitete u koje želite da izvezete Azure Synapse Analytics.
+1. Izaberite koje entitete želite da izvezete u uslugu Azure Synapse Analytics.
    > [!NOTE]
    > Izvori podataka na osnovu [Common Data Model fascikle](connect-common-data-model.md) nisu podržani.
 
@@ -83,8 +82,6 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste 
 Čuvanje izvoza ne pokreće izvoz odmah.
 
 Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).
-
-Da biste ispitali podatke koji su izvezeni u analitiku sinapse, **potrebni su vam podaci o skladištenju čitalac da biste** imali pristup odredišnom skladištu na radnom prostoru izvoza. 
 
 ### <a name="update-an-export"></a>Ažuriranje izvoza
 

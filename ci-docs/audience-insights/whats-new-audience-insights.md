@@ -1,23 +1,24 @@
 ---
 title: Nove i predstojeće funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 03/02/2022
+ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232721"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606125"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
@@ -25,108 +26,6 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
-
-
-## <a name="january-2022-updates"></a>Ispravke za januar 2022. godine
-
-Ispravke u januaru 2022.
-
-### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analiza sentimenta povratnih informacija vašeg kupca
-
-Customer Insights pruža novu funkciju sa AI napajanjem koja sintetiše sentiment klijenata i identifikuje određene poslovne aspekte kao mogućnosti za ciljana poboljšanja. Analizom pisanih povratnih informacija vaših kupaca možete dobiti tačne uvide uz nisku cenu. Analiza sentimenta koju napajaju modeli obrade prirodnog jezika (NLP) koji generišu dva izvedena uvida za ID svakog kupca. Ocena sentimenta (od –5 do 5) i lista primenljivih poslovnih aspekata. 
-
-Više informacija potražite u članku [Analiza sentimenta u povratnim informacijama korisnika (Preview)](sentiment-analysis.md).
-
-
-## <a name="december-2021-updates"></a>Ispravke za decembar 2021.
-
-Ispravke u decembru 2021.
-
-### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Prosleđivanje evidencija uvida klijenata na Azure monitor
-
-Uvid korisnika obezbeđuje direktnu integraciju sa Azure monitorom. Ova funkcija uključuje događaje nadgledanja i operativne događaje. Evidencije resursa Azure monitora vam omogućava da nadgledate i šaljete evidencije u Azure skladište, analitiku Azure evidencije ili da ih strimujete u Azure čvorišta događaja.
-
-Više informacija potražite u članku [Prijavljivanje sa Dynamics 365 Customer Insights Azure monitorom (Preview)](diagnostics.md).
-
-### <a name="enrich-customer-profiles-with-engagement-data"></a>Obogatite profile klijenata podacima o angažovanju
-
-Koristite podatke Microsoft Office 365 iz da biste obogatili profile korisničkog naloga uvidom o angažovanju putem Office 365 aplikacija. Podaci o angažovanju se sastoje od aktivnosti e-pošte i sastanka, koja se prikuplja na nivou naloga. Na primer, broj e-poruka sa poslovnog naloga ili broj sastanaka sa nalogom. Podaci o pojedinačnim korisnicima se ne dele. Ovo bogaćenje je dostupno u sledećim regionima: Velikoj Britaniji, Evropi, Severnoj Americi.
-
-Više informacija potražite u članku Obogaćivanje [profila klijenata podacima o angažovanju (Preview)](enrichment-office.md).
-
-### <a name="advanced-data-unification-features"></a>Napredne funkcije za ujedinjenje podataka
-
-#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Omogućavanje smernica za rešavanje neusaglašenosti na pojedinačnom nivou atributa
-
-Prilikom dedupliciranja zapisa klijenata unutar entiteta, možda nećete želeti da odaberete ceo zapis kao pobednika. Sada vam omogućavamo da objedinite najbolja polja iz različitih zapisa na osnovu pravila za svaki atribut. Na primer, možete odabrati da zadržite najnoviju e-poštu i najspunjenu adresu iz različitih zapisa. 
-
-Sada možete da definišete odvojena pravila objedinjavanja za pojedinačne atribute prilikom deduplikiranja i objedinjavanja zapisa unutar jednog entiteta. Prethodno smo vam dozvolili da izaberete samo jedno pravilo za objedinjavanje (vođenje evidencije na osnovu kompletnosti podataka o ponavljanju) i to pravilo je primenjeno na nivou zapisa na sve atribute. To nije idealno kada se neki podaci koje želite da čuvate nalaze u zapisu A, kao i drugi dobri podaci pronađeni u zapisu B.
-
-Za više informacija pogledajte [Definišite deduplikaciju na entitetu podudaranja](match-entities.md#define-deduplication-on-a-match-entity).
-
-#### <a name="custom-rules-for-matching"></a>Prilagođena pravila za podudaranje
-
-Postoje trenuci kada je potrebno da navedete izuzetak od opštih pravila da bi se zapisi ne podudarali. Do ovoga može doći kada više pojedinaca deli dovoljno informacija kako bi se sistem podudarao sa njima kao sa jednim pojedincem. Na primer, blizanci sa istim prezime, žive u istom gradu i dele datum rođenja.
-
-Izuzeci obezbeđuju da se netačno ujedinjenje podataka može rešavati u pravilima ujedinjenja. Pravilu možete da dodate više izuzetaka.
-
-Više informacija potražite u članku [Dodavanje izuzetaka pravilu](match-entities.md#add-exceptions-to-a-rule).
-
-#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Obezbeđivanje dodatnih smernica za rešavanje neusaglašenosti i omogućavanje grupisanja atributa
-
-Ova funkcija vam omogućava da grupu polja tretirate kao jednu jedinicu. Na primer, kada naši zapisi sadrže polja "Adresa1", "Adresa2", "Grad", "Država" i "Zip". Verovatno ne želimo da se objedinite u adresu drugog zapisa 2, misleći da će to učiniti naše podatke potpunijim.
-
-Sada možete da kombinujete grupu povezanih polja i da primenite jednu smernicu za objedinjavanje na grupu. 
-
-Više informacija potražite u članku [Kombinovanje grupe polja](merge-entities.md#combine-a-group-of-fields).
-
-
-## <a name="november-2021-updates"></a>Ispravke za novembar 2021
-
-Ispravke u novembru 2021.
-
-### <a name="segment-membership-now-available-in-dataverse"></a>Članstvo u segmentima sada dostupno u Dataverse
-
-Informacije o članstvu u segmentu za profile klijenata sada su dostupne Dataverse zajedno sa profilima i uvidima klijenata. Dynamics 365 akcione aplikacije i aplikacije sa modelima mogu da koriste ove podatke potražite detalje o članstvu u segmentima za datog klijenta.
-
-### <a name="activities-support-contact-level-details-for-business-accounts"></a>Aktivnosti podržavaju detalje na nivou kontakta za poslovne naloge
-
-Sada možete da konfigurišete, prikažete i filtrirate aktivnosti za kontakte na vremenskim osama aktivnosti poslovnog naloga da biste bolje razumeli koji kontakti naloga su učestvovali u određenim aktivnostima.
-
-## <a name="october-2021-updates"></a>Ispravke za oktobar 2021
-
-Ispravke u oktobru 2021.
-
-### <a name="b-to-b"></a>B-na-B
-
-Počevši od oktobra 2021. godine, možete raditi sa poslovnim nalozima i njihovim srodnim kontaktima u uvidima kupaca. Ranije je aplikacija uglavnom bila prilagođena pojedinačnim potrošačima. Nekoliko oblasti funkcija je ažurirano da bi se podržali scenariji B-na-B povrh novog tipa okruženja. Pregled podržanih funkcija od B do B pogledajte članak [Rad sa poslovnim nalozima u korisnici uvidima](work-with-business-accounts.md).
-
-Sledeći odeljci naglašavaju neke od ključnih oblasti koje su prilagođene za podršku poslovnim nalozima i pojedinačnim potrošačima.
-
-#### <a name="export-segments-based-on-business-accounts"></a>Izvoz segmenata na osnovu poslovnih naloga
-
-Sav izvoz segmenta u korisnici uvidi dostupni su u kontekstu poslovnih naloga. Većina izvoza segmenta zahteva dodatnu konfiguraciju i [kontakt informacije projektovane](segment-builder.md#create-a-new-segment) u osnovnim segmentima da bi važile za poslovne naloge. Više informacija potražite u članku [Izvoz segmenata](export-destinations.md#export-segments).
-
-#### <a name="use-the-linkedin-ads-export-with-business-accounts"></a>Korišćenje LinkedIn Oglasa za izvoz sa poslovnim nalozima
-
-Izvoz LinkedIn Oglasa je sada dostupan za ciljanje kontakata i preduzeća u kontekstu poslovnih naloga. Kada izaberete ciljanje preduzeća kao primarni fokus LinkedIn izvoza, možete da izvozite segmente izgrađene na poslovnim nalozima bez potrebe da projektujete kontakt informacije. Za više informacija posetite dokumente o izvozu [LinkedIn Oglasa i](export-linkedin-ads.md) razlici između ciljanja [kontakata](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) i [ciljanja preduzeća](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting). 
-
-#### <a name="create-measures-based-on-business-accounts-and-their-hierarchy"></a>Kreiranje mera zasnovanih na poslovnim nalozima i njihovoj hijerarhiji
-
-Izrada mera vam omogućava da kreirate mere oko poslovnih naloga i opcionalno koristite informacije o hijerarhiji. Informacije o hijerarhiji se koriste za sa sabravanje izračunavanja mere preko konta i svih povezanih potkožnih konta. Na primer, možete da kreirate mere kao što je ukupan prihod za svaku grupu poslovnih naloga identifikovanih po njihovoj hijerarhiji. Za više informacija pogledajte [Definisanje i upravljanje merama](measures.md).
-
-#### <a name="create-segments-based-on-business-accounts-and-their-hierarchy"></a>Kreiranje segmenata na osnovu poslovnih naloga i njihove hijerarhije
-
-Izrada segmenta vam omogućava da kreirate segmente poslovnih konta koji opcionalno uključuju kontakt informacije za svaki konto u segmentu. Ako je hijerarhija konta podešena, informacije o hijerarhiji konta možete koristiti u kreiranju segmenta. Više informacija potražite u članku [Kreiranje novog segmenta](segment-builder.md#create-a-new-segment).
-
-#### <a name="retain-your-business-accounts-with-deep-insights-to-their-churn-tendency"></a>Zadržite svoje poslovne račune sa dubokim uvidom u njihovu sklonost ka
-
-Model "Churn predviđanje" sada podržava i poslovne naloge. Rizik churn-a možete proceniti ne samo za nalog već i za kombinaciju naloga i kategorije proizvoda ili usluge koju kupuju od vas. Ovaj dodatak vam pomaže da shvatite da li je veća verovatno da će nalog prestati da kupuje od vas uopšteno ili samo za određenu kategoriju robe ili usluga. Da bi vam dodatno pomogao da koristite ovaj AI model, on navodi i razloge zbog kojih će nalog verovatno churn. Više informacija potražite u članku [Transaction churn predviđanje (preview)](predict-transactional-churn.md).
-
-#### <a name="see-contacts-of-a-business-account-in-customer-view"></a>Pogledajte kontakte poslovnog naloga u prikazu kupca
-
-Ako su poslovni nalozi mapirani na povezane naloge, aplikacija "Uvidi kupaca" prikazuje ove povezane kontakte kao deo prikaza detalja o kupcu. Više informacija potražite u članku [Profili kupaca](customer-profiles.md).
-
 
 ## <a name="september-2021-updates"></a>Ispravke za septembar 2021.
 
@@ -267,7 +166,7 @@ Ispravke u martu 2021. uključuju nekoliko funkcija, nadogradnje performansi i i
 - **Izvoz segmenata u Constant Contact** Proširili smo svoja odredišta za izvoz tako da uključuju i Constant Contact. Sada možete izvesti segmente iz usluge Customer Insights u Constant Contact liste i koristiti ih kao osnovu za vaše marketinške kampanje.   
    Za više informacija, pogledajte [Izvoz u Constant Contact](export-constant-contact.md).
 
-- **Izvoz segmenata u RollWorks** Proširili smo svoja odredišta za izvoz tako da uključuju i RollWorks. Sada možete da izvozite segmente iz usluge Customer Insights u RollWorks ciljnu grupu i da ih koristite kao osnovu za B-to-B oglašavanje.    
+- **Izvoz segmenata u RollWorks** Proširili smo svoja odredišta za izvoz tako da uključuju i RollWorks. Sada možete izvesti segmente iz usluge Customer Insights u RollWorks ciljne grupe i koristiti ih kao osnovu za vaše B2B oglašavanje.    
    Za više informacija, pogledajte [Izvoz podataka u RollWorks ](export-rollworks.md).
 
 - **Izvoz segmenata u Snapchat** Proširili smo svoja odredišta za izvoz tako da uključuju i Snapchat. Sada možete izvesti segmente iz usluge Customer Insights u Snapchat ciljne grupe i koristiti ih kao osnovu za vaše marketinške kampanje.     

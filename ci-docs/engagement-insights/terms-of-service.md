@@ -5,25 +5,26 @@ author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
 ms.date: 06/09/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 101888ecc3a741a1ab6eb87c20055644eb8022b2
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228082"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7819017"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS – uvidi u angažovanje (verzija za pregled) 
 
-Uvidi u angažovanje (verzija za pregled) je mogućnost preliminarne verzije za pregled, što znači da ima manje ili drugačije mere bezbednosti, privatnosti i lokacije podataka od funkcija i mogućnosti koje su opšte dostupne u usluzi Dynamics 365 Customer Insights. Pregledajte dolenavedene odredbe i dokumentaciju o proizvodu da biste utvrdili da li su uvidi u angažovanje (verzija za pregled) prikladni za vaše podatke.
+Uvidi u angažovanje (pregled) su mogućnost pregleda pre objavljivanja, što znači da ima manje ili drugačije mere bezbednosti, privatnosti i lokacije podataka od funkcija i mogućnosti koje su obično dostupne u Dynamics 365 Customer Insights. Pregledajte dolenavedene odredbe i dokumentaciju o proizvodu da biste utvrdili da li su uvidi u angažovanje (verzija za pregled) prikladni za vaše podatke.
 
 ## <a name="preview-terms-of-service"></a>USLOVI KORIŠĆENJA VERZIJE ZA PREGLED
 
 POSLEDNJI PUT AŽURIRANO U OKTOBRU 2020. 
 
-Prihvatanjem ili korišćenjem verzije za pregled usluge Dynamics 365 Customer Insights – uvidi o angažovanju (zajedno sa izvorima podataka koje obezbeđuje Microsoft, „Usluge“) prihvatate uslove i odredbe ovog ugovora. Ako ih ne prihvatite, nemojte pristupati Uslugama niti ih koristiti.
+Pristupom ili korišćenjem pregleda usluga Dynamics 365 Customer Insights – Uvidi o angažovanju (zajedno sa svim Microsoft obezbeđenim izvorima podataka, "Uslugama"), prihvatate odredbe i uslove ovog Ugovora. Ako ih ne prihvatite, nemojte pristupati Uslugama niti ih koristiti.
 
 ## <a name="1-what-this-agreement-covers"></a>1. ŠTA OVAJ UGOVOR POKRIVA
 
@@ -153,7 +154,7 @@ U MAKSIMALNOM OBIMU DOZVOLJENOM ZAKONOM, NI U KOM SLUČAJU KORPORACIJA MICROSOFT
 
 ### <a name="111-term"></a>11.1. Termin
 
-Ovaj Ugovor stupa na snagu na dan kada prvi put pristanete na njega. Ovaj Ugovor zamenjuje bilo koji prethodni ugovor na osnovu kog ste koristili Dynamics 365 Product Insights ili bilo koje prethodne usluge. Ovaj Ugovor će biti raskinut kada nastupi neki od sledećih slučajeva (i) datum prve dostupnosti komercijalnog izdanja Usluga (ako do njega dođe) ili (ii) datum kada vas korporacija Microsoft obavesti o raskidu ugovora. Microsoft može suspendovati ili otkazati vaše korišćenje i pristup svim ili nekom delu Usluga ili u bilo kom trenutku raskinuti ovaj Ugovor iz bilo kog razloga i po sopstvenom nahođenju.
+Ovaj Ugovor stupa na snagu na dan kada prvi put pristanete na njega. Ovaj Ugovor zamenjuje sve prethodne ugovore na osnovu kojih ste koristili Dynamics 365 Product Insights ili bilo koje prethodne usluge. Ovaj Ugovor će biti raskinut kada nastupi neki od sledećih slučajeva (i) datum prve dostupnosti komercijalnog izdanja Usluga (ako do njega dođe) ili (ii) datum kada vas korporacija Microsoft obavesti o raskidu ugovora. Microsoft može suspendovati ili otkazati vaše korišćenje i pristup svim ili nekom delu Usluga ili u bilo kom trenutku raskinuti ovaj Ugovor iz bilo kog razloga i po sopstvenom nahođenju.
 
 ### <a name="112-effect-of-termination"></a>11.2. Efekat raskida
 

@@ -1,23 +1,24 @@
 ---
-title: Izvoz Customer Insights podataka u uslugu Adobe Campaign Standard
-description: Saznajte kako da koristite segmente uvida u ciljnu grupu u usluzi Adobe Campaign Standard.
-ms.date: 03/29/2021
+title: Izvezite Customer Insights podatke u Adobe Campaign Standard
+description: Saznajte kako se koriste segmenti uvida u korisnike u usluzi Adobe Campaign Standard.
+ms.date: 02/26/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 6b90ee53236fdd601ecdfd8e6117a15269a08084
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8227775"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596332"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Koristite Customer Insights segmente u usluzi Adobe Campaign Standard (verzija za pregled)
+# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Korišćenje Customer Insights segmenata u usluzi Adobe Campaign Standard (verzija za pregled)
 
-Kao korisnik uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim ciljajući relevantne ciljne grupe. Da biste koristili segment iz uvida u ciljnu grupu u usluzi Adobe Experience Platform i aplikacijama poput Adobe Campaign Standard, morate da sledite nekoliko koraka opisanih u ovom članku.
+Kao korisnik uvida o korisnicima za Dynamics 365 Customer Insights, možda ste kreirali segmente da biste marketinške kampanje učinili efikasnijim tako što ćete ciljati relevantne ciljne grupe. Da biste koristili segment iz uvida o korisnicima u Adobe platformi iskustva i aplikacijama poput Adobe Campaign Standard, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Dijagram procesa koraka opisanih u ovom članku.":::
 
@@ -29,11 +30,11 @@ Kao korisnik uvida u ciljnu grupu u usluzi Dynamics 365 Customer Insights, možd
 
 ## <a name="campaign-overview"></a>Pregled kampanje
 
-Da biste bolje razumeli kako možete da koristite segmente iz uvida u ciljnu grupu u usluzi Adobe Experience Platform, pogledajmo izmišljeni primer kampanje.
+Da biste bolje razumeli kako možete da koristite segmente iz uvida o korisnicima u Adobe platformi iskustva, pogledajmo fiktivni primer kampanje.
 
-Pretpostavimo da vaše preduzeće nudi mesečnu uslugu zasnovanu na pretplati za klijente u Sjedinjenim Državama. Želite da identifikujete klijente koji treba da obnove pretplate u narednih osam dana, ali još uvek nisu obnovili pretplatu. Da biste zadržali ove klijente, treba da im pošaljete promotivnu ponudu putem e-pošte koristeći Adobe Campaign Standard.
+Pretpostavimo da vaše preduzeće nudi mesečnu uslugu zasnovanu na pretplati za klijente u Sjedinjenim Državama. Želite da identifikujete klijente koji treba da obnove pretplate u narednih osam dana, ali još uvek nisu obnovili pretplatu. Da biste zadržali ove klijente, treba da im pošaljete promotivnu ponudu putem e-pošte, koristeći Adobe Campaign Standard.
 
-U ovom primeru želimo da jednom pokrenemo promotivnu kampanju e-pošte. Ovaj članak ne pokriva slučaj korišćenja sa više pokretanja kampanje. Međutim, uvidi u ciljnu grupu i Adobe Campaign Standard mogu da se konfigurišu i tako da funkcionišu i za scenario ponavljajuće kampanje.
+U ovom primeru želimo da jednom pokrenemo promotivnu kampanju e-pošte. Ovaj članak ne pokriva slučaj korišćenja sa više pokretanja kampanje. Međutim, uvidi u korisnike i Adobe Campaign Standard mogu se konfigurisati da rade i za ponavljajući scenario kampanje.
 
 ## <a name="identify-your-target-audience"></a>Identifikujte svoju ciljnu grupu
 
@@ -47,39 +48,23 @@ E-poruka sa ponudom koju želite da pošaljete sadrži ime, prezime i datum zavr
 
 ## <a name="export-your-target-audience"></a>Izvezite svoju ciljnu grupu
 
-### <a name="configure-a-connection"></a>Konfigurisanje veze
-
 Kada je identifikovana ciljna grupa, možemo da konfigurišemo izvoz iz uvida o korisnicima na nalog Azure skladišta blob objekta.
 
-1. U uvidima u ciljne grupe, idite na **Administrator** > **Veze**.
+1. U uvidima o korisnicima idite na **Administrator** > **Odredišta za izvoz**.
 
-1. Izaberite **Dodaj vezu** i birajte **Adobe kampanja** da biste konfigurisali vezu ili izaberite **Podešavanje** na pločici **Adobe Campaign**.
+1. Na pločici **Adobe Campaign** izaberite **Podesi**.
 
-   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Pločica konfiguracije za Adobe Campaign Standard.":::
+   :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Pločica za konfiguraciju za Adobe Campaign Standard.":::
 
-1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
-
-1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
-
-1. Unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** za vaš nalog za Azure skladište blob objekta u koji želite da izvezete segment.  
+1. Navedite **ime za prikaz** za ovo novo odredište za izvoz, a zatim unesite **Naziv naloga**, **Ključ naloga** i **Kontejner** naloga Azure skladišta blob objekta u koji želite da izvezete segment.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Snimak ekrana konfiguracije naloga skladišta. "::: 
 
-   - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte članak [Upravljanje podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
+   - Da biste saznali više o pronalaženju imena i ključa naloga za Azure skladište blob objekta, pogledajte [Upravljajte podešavanjima naloga za skladištenje na Azure portalu](/azure/storage/common/storage-account-manage).
 
    - Da biste saznali kako da kreirate kontejner, pogledajte članak [Kreiranje kontejnera](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Izaberite **Sačuvaj** da biste kreirali vezu.
-
-### <a name="configure-an-export"></a>Konfigurisanje izvoza
-
-Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
-
-1. Idite na **Podaci** > **Izvozi**.
-
-1. Da biste kreirali novi izvoz, izaberite **Dodaj izvoz**.
-
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Adobe Campaign. Ako ne vidite naziv ovog odeljka, tada vam nisu dostupne veze ovog tipa.
+1. Izaberite **Sledeće**.
 
 1. Odaberite segment koje želite da izvezete. U ovom primeru, to je **ChurnProneCustomers**.
 
@@ -87,23 +72,25 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. Izaberite **Sledeće**.
 
-1. Sada mapiramo **izvorna** polja iz segmenta uvida u ciljnu grupu u nazive **ciljnih** polja u Adobe Campaign Standard šemi profila.
+1. Sada mapiramo polja **Izvor** od segmenta uvida u korisnike do imena polja **Cilj** u šemi Adobe Campaign Standard profila.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Mapiranje polja za Adobe Campaign Standard konektor.":::
 
-   Ako želite da dodate još atributa, izaberite **Dodaj atribut**. Naziv cilja se može razlikovati od naziva izvornog polja, tako da i dalje možete mapirati izlaz segmenta iz uvida u ciljnu grupu u Adobe Campaign Standard ako polja nemaju isti naziv u dva sistema.
+   Ako želite da dodate još atributa, izaberite **Dodaj atribut**. Naziv cilja može se razlikovati od imena izvornog polja, tako da i dalje možete mapirati izlaz segmenta iz uvida u korisnike u uslugu Adobe Campaign Standard ako polja nemaju isti naziv u dva sistema.
 
    > [!NOTE]
-   > Adresa e-pošte se koristi kao polje identiteta, ali možete koristiti bilo koji drugi identifikator iz profila klijenta uvida u ciljnu grupu da biste mapirali podatke na Adobe Campaign Standard.
+   > Adresa e-pošte se koristi kao polje identiteta, ali možete koristiti bilo koji drugi identifikator iz vašeg korisničkog profila za uvide u korisnike da biste mapirali podatke u Adobe Campaign Standard.
 
 1. Izaberite stavku **Sačuvaj**.
 
-Kada sačuvate odredište za izvoz, pronaći ćete ga u dijalogu **Podaci** > **Izvozi**.
+Kada sačuvate odredište za izvoz, pronaći ćete ga na listi **Administrator** > **Izvozi** > **Moja odredišta za izvoz**.
 
-Sada možete da [izvozite segment na zahtev](export-destinations.md#run-exports-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
+:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Snimak ekrana sa istaknutom listom izvoza i uzorkom segmenta.":::
+
+Sada možete da [izvozite segment na zahtev](export-destinations.md#export-data-on-demand). Izvoz će se takođe pokrenuti sa svakim [planiranim osvežavanjem](system.md).
 
 > [!NOTE]
-> Uverite se da je broj zapisa u izvezenom segmentu unutar dozvoljenog ograničenja vaše licence za uslugu Adobe Campaign Standard.
+> Uverite se da je broj zapisa u izvezenom segmentu unutar dozvoljenog ograničenja vaše Adobe Campaign Standard licence.
 
 Izvezeni podaci se čuvaju u kontejneru Azure skladišta blob objekta koji ste ranije konfigurisali. Sledeća putanja do fascikle se automatski kreira u vašem kontejneru:
 
@@ -115,28 +102,28 @@ Primer: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f
 
 Kada se izveze segment iz uvida u korisnike, on sadrži kolone koje ste izabrali prilikom definisanja odredišta izvoza u prethodnom koraku. Ovi podaci se mogu koristiti za [kreiranje profila u usluzi Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/about-profiles.html#managing-profiles).
 
-Da bismo koristili segment u usluzi Adobe Campaign Standard, moramo proširiti šemu profila u usluzi Adobe Campaign Standard tak oda uključuje dva dodatna polja. Saznajte kako da [proširite resurs profila](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) sa novim poljima u usluzi Adobe Campaign Standard.
+Da bismo koristili segment u usluzi Adobe Campaign Standard, treba da proširimo šemu profila u usluzi Adobe Campaign Standard tako da uključuje dva dodatna polja. Saznajte kako da [produžite resurs profila](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) sa novim poljima u usluzi Adobe Campaign Standard.
 
-U našem primeru, ova polja su *Naziv segmenta i Datum segmenta (opcionalno)*.
+U našem primeru, ova polja su *Naziv segmenta i Datum segmenta (opcionalno).*
 
-Ova polja ćemo koristiti za identifikaciju profila u usluzi Adobe Campaign Standard koji želimo da ciljamo za ovu kampanju.
+Ova polja ćemo koristiti za identifikaciju profila u programu Adobe Campaign Standard koje želimo da ciljamo za ovu kampanju.
 
-Ako nema drugih zapisa u usluzi Adobe Campaign Standard osim onog koji ćete uvesti, možete preskočiti ovaj korak.
+Ako u programu Adobe Campaign Standard ne postoje drugi zapisi osim onih koje ćete uvoziti, možete preskočiti ovaj korak.
 
 ## <a name="import-data-into-adobe-campaign-standard"></a>Uvoz podataka u Adobe Campaign Standard
 
-Sada kada je sve na svom mestu, treba da uvezemo pripremljene podatke o ciljnoj grupi iz uvida o ciljnoj grupi u uslugu Adobe Campaign Standard da bismo kreirali profile. Saznajte [kako da uvezete profile u Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) koristeći tok posla.
+Sada kada je sve na svom mestu, moramo pripremiti podatke o korisnicima iz uvida u korisnike u usluzi Adobe Campaign Standard da bismo kreirali profile. Saznajte [kako da uvezete profile u Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) koristeći tok posla.
 
-Tok posla uvoza na donjoj slici konfigurisan je da se pokreće svakih osam sati i traži izvezene segmente uvida u ciljnu grupu (.csv datoteka u Azure skladištu blob objekta). Tok posla izdvaja sadržaj .csv datoteke u navedenom redosledu kolona. Ovaj tok posla je napravljen da izvrši osnovno rukovanje greškama i da obezbedi da svaki zapis ima adresu e-pošte pre nego što unese podatke u Adobe Campaign Standard. Tok posla takođe izdvaja naziv segmenta iz naziva datoteke pre dodavanja u podatke o Adobe Campaign Standard profilu.
+Tok posla uvoza na donjoj slici konfigurisan je za pokretanje svakih 8 sati i traži izvezene segmente uvida u korisnike (.csv datoteka u Azure skladištu blob objekta). Tok posla izdvaja sadržaj .csv datoteke u navedenom redosledu kolona. Ovaj tok posla napravljen je da obavi osnovno rukovanje greškama i osigura da svaki zapis ima adresu e-pošte pre popune podacima u usluzi Adobe Campaign Standard. Tok posla takođe izdvaja ime segmenta iz imena datoteke pre dodavanja u podatke ACS profila.
 
-:::image type="content" source="media/ACS-import-workflow.png" alt-text="Snimak ekrana toka posla uvoza u korisnički interfejs usluge Adobe Campaign Standard.":::
+:::image type="content" source="media/ACS-import-workflow.png" alt-text="Snimak ekrana toka posla uvoza u korisničkom interfejsu usluge Adobe Campaign Standard.":::
 
-## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Preuzimanje ciljne grupe u usluzi Adobe Campaign Standard
+## <a name="retrieve-the-audience-in-adobe-campaign-standard"></a>Preuzimanje korisnika u usluzi Adobe Campaign Standard
 
-Kada se podaci uvezu u Adobe Campaign Standard, [možete kreirati tok posla](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) i [postaviti upit](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) klijentima na osnovu *naziva segmenta* i *datuma segmenta* da biste izabrali profile koji su identifikovani za naš primer kampanje.
+Kada se podaci uvezu u Adobe Campaign Standard, vi [možete da kreirate tok posla](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/workflow-general-operation/building-a-workflow.html#managing-processes-and-data) i [upit](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/targeting-activities/query.html#managing-processes-and-data) da bi klijenti zasnovani na *Nazivu segmenta* i *Datumu segmenta* izabrali profile koji su identifikovani za naš primer kampanje.
 
-## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Kreiranje i slanje e-pošte u usluzi Adobe Campaign Standard
+## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Kreirajte i pošaljite e-poruku koristeći Adobe Campaign Standard
 
 Kreirajte sadržaj e-poruke, a zatim [testirajte i pošaljite](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) e-poruku.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Primer e-poruke sa ponudom za obnovu iz usluge Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Primer e-poruke sa ponudom obnove pretplate iz usluge Adobe Campaign Standard.":::
