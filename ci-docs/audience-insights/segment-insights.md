@@ -2,19 +2,21 @@
 title: Uvid u segmente za postojeće segmente
 description: Steknite uvid u postojeće segmente da biste videli razlike i zajedničke karakteristike.
 ms.date: 06/10/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 90ebcaab896c628b04e751ad9857e924749895e7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595351"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355584"
 ---
 # <a name="segment-insights-preview"></a>Uvidi u segmente (verzija za pregled)
 
@@ -44,7 +46,7 @@ Takođe možete da analizirate kako se preklapanje menja za određene atribute.
 Po završetku analize pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (verzija za pregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalji uvida u preklapanje segmenata":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalji uvida u preklapanje segmenata.":::
 
 Izaberite uvid da biste videli rezultate analize:
 
@@ -77,7 +79,7 @@ Razlike između segmenata vam pomažu da otkrijete šta razlikuje segment od ost
 Po završetku analize pronađite detalje o ovom uvidu u **Segmenti** > **Uvidi (verzija za pregled)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalji uvida u razlike između segmenata":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalji uvida u razlike između segmenata.":::
 
 Izaberite uvid da biste videli rezultate analize. Analiza razlika uključuje dve kartice. Kartica **Atributi** navodi atribute profila koji se smatraju razlikama. Kartica **Mere** navodi razlike. Svaka kartica sadrži sledeće detalje:
 

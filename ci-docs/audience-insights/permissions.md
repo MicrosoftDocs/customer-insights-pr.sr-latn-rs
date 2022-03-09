@@ -1,20 +1,23 @@
 ---
 title: Upravljanje dozvolama korisnika
 description: Saznajte više o dozvolama i ulogama korisnika.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+searchScope:
+- ci-permissions
+- ci-system-security
+- customerInsights
+ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595719"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355954"
 ---
 # <a name="user-permissions"></a>Korisničke dozvole
 
@@ -31,7 +34,7 @@ Postoje tri vrste uloga:
 - Prikaz i istraživanje stranice **Obogaćivanje**.
 - Istražite i izvozite entitete pomoću stranice **Entiteti**.
 - Pregledajte status sistemskih procesa koristeći stranicu **Sistem**.
-- Izvezite segmente sa stranice **Segmenti**.
+- Pogledajte izvoz na stranici **Izvozi**.
 - Instalirajte i koristite **Power BI Customer Insights** kontrolnu tablu.
 
 ## <a name="contributor"></a>Saradnik
@@ -43,6 +46,7 @@ Postoje tri vrste uloga:
 - Pomoću stranice **Segmenti** kreirajte segmente.
 - Kreirajte mere koristeći stranicu **Mere**.
 - Upravljajte konfiguracijom i obogatite korisničke profile na stranici **Obogaćivanje** (samo za obogaćivanje prve strane).
+- Upravljajte i kreirajte izvoze na osnovu veza koje se dele sa saradnicima. [Saznajte više o tome kako administratori dozvoljavaju saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrator
 
@@ -50,8 +54,9 @@ Postoje tri vrste uloga:
 - Promenite podešavanja na stranici **Sistem**, uključujući radni jezik i raspored osvežavanja za vaše sistemske procese.
 - Pregledajte i dodajte dozvole koristeći stranicu **Dozvole**.
 - Podesite definicije pretraživanja i filtriranja za stranicu Klijenti pomoću stranice **Indeks pretrage i filtriranja** (dostupno preko stranice **Klijenti**).
-- Definišite odredišta Dynamics 365 Sales segmenta pomoću stranice **Izvoz odredišta**.
+- Upravljajte vezama i dozvolite im druge korisničke uloge na stranici **Veze**.
 - Upravljajte konfiguracijom i obogatite korisničke profile na stranici **Obogaćivanje** (za sva obogaćivanja).
+- Upravljajte i kreirajte izvoz na stranici **Izvozi**.
 - Instalirajte i koristite **Dodatak kartice Klijent**.
 - Dodajte i koristite **Power Apps konektor**.
 - Omogućavanje upotrebe [Customer Insights API-ja](apis.md).

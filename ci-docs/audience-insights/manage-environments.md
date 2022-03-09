@@ -1,24 +1,26 @@
 ---
 title: Kreiranje okruženja i upravljanje njima
 description: Saznajte kako se registrujete za uslugu i kako da upravljate okruženjima.
-ms.date: 07/22/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2f115269b9d07dd118ec18cc48b55de8aea9b5bb
-ms.sourcegitcommit: 98267da3f3eddbdfbc89600a7f54e5e664a8f069
+searchScope:
+- ci-system-about
+- customerInsights
+ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2021
-ms.locfileid: "6683490"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354296"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 ## <a name="switch-environments"></a>Zamena okruženja
 
@@ -26,7 +28,7 @@ Izaberite kontrolu **Okruženje** u gornjem desnom uglu stranice da biste promen
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Snimak ekrana kontrole za promenu okruženja.":::
 
-Administratori mogu da [kreiraju](get-started-paid.md) okruženja i upravljaju njima.
+Administratori mogu da [kreiraju](create-environment.md) okruženja i upravljaju njima.
 
 ## <a name="edit-an-existing-environment"></a>Uređivanje postojećeg okruženja
 
@@ -36,23 +38,25 @@ Možete da izmenite neke detalje postojećih okruženja.
 
 2.  Izaberite ikonu **Uređivanje**.
 
-3. U okviru **Uredi okruženje** možete ažurirati okruženje **Ime za prikaz** okruženja, ali ne možete da promenite **Region** ili **Tip**.
+3. U okviru **Uređivanje okruženja**, možete ažurirati podešavanja okruženja.
 
-4. Ako je okruženje konfigurisano za čuvanje podataka u usluzi Azure Data Lake Storage, možete ažurirati **Ključ naloga**. Međutim, ne možete promeniti **Ime naloga** ni ime **kontejnera**.
+Više informacija o podešavanjima okruženja potražite u članku [Kreiranje novog okruženja](create-environment.md).
 
-5. Po želji možete da ažurirate sa veze ključa naloga na vezu zasnovanu na resursima ili pretplati. Kada ih nadogradite, ne možete se vratiti na ključ naloga nakon ažuriranja. Za više informacija pogledajte [Povezivanje uvida o korisnicima sa Azure Data Lake Storage Gen2 nalogom pomoću principala Azure usluge](connect-service-principal.md). Ne možete promeniti informacije o **kontejneru** prilikom ažuriranja veze.
-
-6. Opcionalno, možete da navedete URL adresu Microsoft Dataverse okruženja u odeljku **Konfigurišite deljenje podataka sa platformom Microsoft Dataverse i omogućite dodatne mogućnosti**. Ove mogućnosti uključuju deljenje podataka sa aplikacijama i rešenjima zasnovanim na platformi Microsoft Dataverse, unošenje podataka iz lokalnih izvora podataka ili upotrebu [predviđanja](predictions.md). Izaberite **Omogući deljenje podataka** da biste delili Customer Insights izlazne podatke pomoću usluge Microsoft Dataverse Managed Data Lake.
-
-   > [!NOTE]
-   > - Deljenje podataka pomoću usluge Microsoft Dataverse Managed Data Lake trenutno nije podržano kada sve podatke čuvate u sopstvenom Azure Data Lake Storage.
-   > - [Predviđanje vrednosti koje nedostaju u entitetu](predictions.md) i PowerBI ugrađene izveštaje u uvidima u ciljnu grupu (ako je omogućeno u vašem okruženju) trenutno nisu podržani kada omogućite deljenje podataka sa Microsoft Dataverse upravljanim jezerom podataka.
-
-   Kada omogućite deljenje podataka sa platformom Microsoft Dataverse, pokrenuće se potpuno osvežavanje izvora podataka i drugih procesa. Ako se procesi trenutno izvode, nećete videti opciju za omogućavanje deljenja podataka sa platformom Microsoft Dataverse. Sačekajte da se ti procesi dovrše ili ih otkažite da biste omogućili deljenje podataka. 
+## <a name="connect-to-microsoft-dataverse"></a>Povezivanje sa sistemom Microsoft Dataverse
    
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
-   
-   Kada pokrenete procese, poput unosa podataka ili kreiranja segmenta, na nalogu za skladištenje koji ste gore naveli kreiraće se odgovarajuće mape. Datoteke podataka i datoteke model.json će se kreirati i dodati u odgovarajuće potfascikle, u zavisnosti od procesa koji pokrećete.
+Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem.
+
+Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija.
+
+> [!IMPORTANT]
+> Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
+
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights ne podržava sledeće scenarije deljenja podataka:
+> - Ako sve podatke sačuvate u sopstvenoj usluzi Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa Dataverse upravljanim jezerom podataka.
+> - Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 
@@ -81,7 +85,8 @@ Sledeći podaci se *ne* kopiraju:
 
 - Profili klijenata.
 - Akreditivi izvora podataka. Moraćete da dostavite akreditive za svaki izvor podataka i ručno osvežite izvore podataka.
-- Izvori podataka iz Common Data Model fascikle i Dataverse upravljane usluge Data Lake. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
+
+- Izvori podataka iz Common Data Model fascikle i Dataverse upravljanog jezera podataka. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
 
 Kada kopirate okruženje, videćete poruku potvrde da je kreirano novo okruženje. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka.
 

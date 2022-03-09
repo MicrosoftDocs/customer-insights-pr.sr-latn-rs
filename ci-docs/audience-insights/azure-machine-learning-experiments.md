@@ -1,24 +1,23 @@
 ---
 title: Eksperimenti Azure mašinskog učenja
 description: Koristite modele zasnovane na Azure mašinskom učenju u usluzi Dynamics 365 Customer Insights.
-ms.date: 11/30/2020
-ms.service: customer-insights
+ms.date: 12/02/2021
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597436"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228905"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Koristite modele zasnovane na Azure mašinskom učenju
 
-Objedinjeni podaci u usluzi Dynamics 365 Customer Insights jesu izvor za izgradnju modela mašinskog učenja koji mogu stvoriti dodatne poslovne uvide. Customer Insights se integriše sa Machine Learning Studio (klasični) i Azure mašinskim učenjem da bi koristio vaše prilagođene modele. Pogledajte [Machine Learning Studio (klasični) eksperimente](machine-learning-studio-experiments.md) za primere eksperimenata izgrađenih na osnovu usluge Machine Learning Studio (klasičan). 
+Objedinjeni podaci u usluzi Dynamics 365 Customer Insights jesu izvor za izgradnju modela mašinskog učenja koji mogu stvoriti dodatne poslovne uvide. Customer Insights se integriše sa Azure mašinskim učenjem kako bi koristio vaše sopstvene prilagođene modele.
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -35,7 +34,7 @@ Objedinjeni podaci u usluzi Dynamics 365 Customer Insights jesu izvor za izgradn
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Radite sa dizajnerom za Azure mašinsko učenje
 
-Dizajner za Azure mašinsko učenje pruža vizuelnu podlogu po kojoj možete prevlačiti i otpuštati skupove podataka i module, slično kao Machine Learning Studio (klasični). Grupni kanal kreiran iz dizajnera može se integrisati u Customer Insights ako su konfigurisani u skladu s tim. 
+Azure Mašinsko učenje obezbeđuje vizuelnu podlogu na kojoj možete da prevlačite i otpustite grupe podataka i module. Grupni kanal kreiran iz dizajnera može se integrisati u Customer Insights ako su konfigurisani u skladu s tim. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Rad sa SDK-om za Azure mašinsko učenje
 
@@ -52,7 +51,7 @@ Morate da kreirate skupove podataka da biste koristili podatke entiteta od uslug
      U dizajneru otvorite **Izaberite kolone u skupu podataka** i izaberite **Postavi kao parametar kanala** gde dajete ime za parametar.
 
      > [!div class="mx-imgBorder"]
-     > ![Određivanje parametara skupa podataka u dizajneru](media/intelligence-designer-dataset-parameters.png "Određivanje parametara skupa podataka u dizajneru")
+     > ![Određivanje parametara skupa podataka u dizajneru.](media/intelligence-designer-dataset-parameters.png "Određivanje parametara skupa podataka u dizajneru")
    
 * Parametar skupa podataka u SDK-u (Python)
    
@@ -78,7 +77,7 @@ Morate da kreirate skupove podataka da biste koristili podatke entiteta od uslug
 
 * Dizajner obezbeđuje [modul za izvoz podataka](/azure/machine-learning/algorithm-module-reference/export-data) koji omogućava izvoz izlaza kanala u Azure skladište. Trenutno modul mora da koristi tip skladišta podataka **Azure skladište blob objekata** i da odredi parametre ta **skladište podataka** i relativnu **putanju**. Customer Insights zamenjuje oba ova parametra tokom izvršavanja kanala pomoću skladišta podataka i putanje koja je dostupna proizvodu.
    > [!div class="mx-imgBorder"]
-   > ![Izvoz konfiguracije modula podataka](media/intelligence-designer-importdata.png "Izvoz konfiguracije modula podataka")
+   > ![Izvoz konfiguracije modula podataka.](media/intelligence-designer-importdata.png "Izvoz konfiguracije modula podataka")
    
 * Kada zapisujete izlaz zaključka pomoću koda, možete otpremiti izlaz na putanju unutar *registrovanog skladišta podataka* u radnom prostoru. Ako su za putanju i skladište podataka određeni parametri u kanalu, Customer insights moći će da pročita i uveze izlaz zaključka. Trenutno je podržan jedan tabelarni izlaz u csv formatu. Putanja mora da sadrži direktorijum i ime datoteke.
 

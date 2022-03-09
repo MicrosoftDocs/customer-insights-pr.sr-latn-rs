@@ -2,7 +2,6 @@
 title: Podudaranje entiteta za objedinjavanje podataka
 description: Podudarite entitete da biste kreirali objedinjene profile klijenata.
 ms.date: 02/07/2022
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: adkuppa
@@ -11,12 +10,15 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 20f21a6601a1a6f13d076878b10c15be947dac9f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+- ci-merge
+- ci-map
+- customerInsights
+ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098852"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372644"
 ---
 # <a name="match-entities"></a>Podudaranje entiteta
 
@@ -178,7 +180,17 @@ Izlazni entitet uklanjanja duplikata sadrži sledeće informacije:
   - Deduplication_WinnerId: Ovo polje sadrži ID pobednika iz identifikovanih grupa ili klastera. Ako je Deduplication_WinnerId ista kao vrednost primarnog ključa za zapis, to znači da je taj zapis dobitni.
 - Polja koja se koriste za definisanje pravila za uklanjanje duplikata.
 - Odredite pravila i ocenite polja da označite koja su od pravila za uklanjanje duplikata primenjena i koji rezultat vraća algoritam za podudaranje.
-   
+ 
+## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pregled)
+
+Ako ste obogatili entitete na izvor podataka, izaberite ih pre pokretanja procesa podudaranja. Obogaćeni entiteti mogu da poboljšaju rezultate ujedinjenja. Više informacija potražite u članku [Obogaćivanje izvora podataka](data-sources-enrichment.md). 
+
+1. Idite **na DataUnifyMatch** > **·** > **i** izaberite **Koristi obogaćene** entitete na vrhu stranice.
+
+1. Iz okna **"Korišćenje obogaćenih entiteta** " odaberite jedan ili više obogaćenih entiteta.
+
+1. Izaberite **Gotovo**. Gde god se koristi izvorni entitet (kao što su redosled podudaranja ili pravila), on se automatski menja u obogaćeni entitet.
+  
 ## <a name="run-the-match-process"></a>Pokretanje postupka podudaranja
 
 Sa konfigurisanim pravilima podudaranja, uključujući pravila za podudaranje i deduplikaciju među entitetima, možete pokrenuti postupak podudaranja. 

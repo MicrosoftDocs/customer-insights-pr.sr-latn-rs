@@ -1,20 +1,23 @@
 ---
-title: Mapiranje entiteta za objedinjavanje podataka
-description: Mapirajte podatke da biste kreirali objedinjene profile klijenata.
-ms.date: 09/25/2020
-ms.service: customer-insights
+title: Mapiranje entiteta i atributa za objedinjavanje podataka
+description: Izaberite entitete, atribute, primarne ključeve i semantičke tipove za mapiranje podataka u objedinjeni profil klijenta.
+ms.date: 10/18/2020
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 0088daae0be0cb3e71f87387648430d2353081c9
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
-ms.translationtype: HT
+searchScope:
+- ci-map
+- ci-match
+- customerInsights
+ms.openlocfilehash: 81f1e97dfbecd9292c50529ca21da8dab9295b5d
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267052"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354975"
 ---
 # <a name="map-entities-and-attributes"></a>Entiteti i atributi mape
 
@@ -35,14 +38,14 @@ Za više informacija o opštem toku objedinjavanja podataka, pogledajte [Ujedna�
 3. Izaberite entitete i atribute koje želite da koristite u fazama *podudaranje* i *spajanje*. Možete da izaberete tražene atribute pojedinačno iz entiteta ili da uključite sve atribute iz entiteta izborom polja za potvrdu **Uključi sva polja** na nivou entiteta. Preporučujemo da izaberete najmanje dva entiteta koji će imati koristi od procesa objedinjavanja podataka.
 
    > [!div class="mx-imgBorder"]
-   > ![Primer dodavanja entiteta](media/data-manager-configure-map-add-entities-example.png "Primer dodavanja entiteta")
+   > ![Primer dodavanja entiteta.](media/data-manager-configure-map-add-entities-example.png "Primer dodavanja entiteta")
 
    U ovom primeru dodajemo entitete **eCommerceContacts** i **loyCustomers**. Odabirom ovih entiteta možete steći uvid u to koji od poslovnih korisnika na mreži su članovi programa lojalnosti.
    
    Možete pretraživati ključne reči po svim atributima i entitetima da biste izabrali potrebne atribute koje želite da mapirate.
    
      > [!div class="mx-imgBorder"]
-   > ![Primer polja za pretragu](media/data-manager-configure-map-search-fields-example.png "Primer polja za pretragu")
+   > ![Primer polja za pretragu.](media/data-manager-configure-map-search-fields-example.png "Primer polja za pretragu")
 
 4. Izaberite **Primeni** da biste potvrdili svoje izbore.
 
@@ -55,7 +58,7 @@ Nakon izbora entiteta, na stranici **Mapa** se navode izabrani entiteti za pregl
 - **Semantički tip atributa**: Kategorije vaših atributa, kao što su adresa e-pošte ili ime. Da biste koristili modele veštačke inteligencije za pametno predviđanje semantike, uštedite vreme i poboljšajte tačnost, podesite **Inteligentno mapiranje** na **Da**. Inteligentno mapiranje ističe preporuke o semantici zasnovane na veštačkoj inteligenciji u polju **Tip**. Ako ga podesite na **ISKLJUČENO**, videćete naše redovne preporuke za mapiranje. Možete odabrati bilo koji semantički tip sa dostupne liste opcija i zameniti predloženi izbor.
 
 > [!div class="mx-imgBorder"]
-> ![Tip atributa i semantičko predviđanje](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tip atributa i semantičko predviđanje")
+> ![Tip atributa i semantičko predviđanje.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tip atributa i semantičko predviđanje")
 
 Takođe je moguće dodati prilagođeni semantički tip. Izaberite polje tipa za taj atribut i unesite svoje prilagođeno semantičko ime tipa. Tako takođe možete da promenite vrste atributa koje je sistem identifikovao.
 
@@ -64,7 +67,7 @@ Svi atributi za koje je semantički tip automatski identifikovan grupisani su u 
 Atributi koji nisu automatski mapirani u semantički tip grupisani su u odeljku **Definisanje podataka u nemapiranim poljima**. Izaberite polje semantičkog tipa za nemapirane atribute ili unesite naziv prilagođenog tipa atributa.
 
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ i vrsta atributa](media/data-manager-configure-map-add-attributes.png "Primarni ključ i vrsta atributa")
+> ![Primarni ključ i vrsta atributa.](media/data-manager-configure-map-add-attributes.png "Primarni ključ i vrsta atributa")
 
 > [!NOTE]
 > Jedno polje bi trebalo da se mapira u semantički tip Person.FullName da bi se ime klijenta popunilo u korisničkoj kartici. U suprotnom, kartice klijenata će se prikazivati bez imena. 
@@ -76,7 +79,7 @@ Atributi koji nisu automatski mapirani u semantički tip grupisani su u odeljku 
 2. U oknu **Uredi polja**, dodajte ili uklonite atribute i entitete. Koristite pretragu ili listajte da biste pronašli i izabrali svoje atribute i entitete od interesa. Ne možete ukloniti atribut ili entitet ako se već podudaraju.
 
    > [!div class="mx-imgBorder"]
-   > ![Dodajte ili uklonite atribute](media/configure-data-map-edit.png "Dodajte ili uklonite atribute")
+   > ![Dodajte ili uklonite atribute.](media/configure-data-map-edit.png "Dodajte ili uklonite atribute")
 
 3. Izaberite **Primeni**.
 
@@ -94,7 +97,7 @@ Nastavite sa koracima objedinjavanja i uverite se da je atribut koji sadrži URL
 
 Za organizacije (pregled), tip atributa treba da bude mapiran na „Organization.Name“
 > [!div class="mx-imgBorder"]
-> ![Primarni ključ i vrsta atributa B2B](media/configure-data-map-edit-b2b.png "Primarni ključ i vrsta atributa B2B")
+> ![Primarni ključ i atribut tipa B-to-B.](media/configure-data-map-edit-b2b.png "Primarni ključ i atribut tipa B-to-B")
 
 ## <a name="next-step"></a>Sledeći korak
 

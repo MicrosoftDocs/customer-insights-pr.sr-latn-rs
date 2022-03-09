@@ -3,20 +3,23 @@ title: Primer vodiča za predviđanje preporuka proizvoda
 description: Koristite ovaj primer vodiča da biste isprobali ovaj gotovi model predviđanja preporuka proizvoda.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595290"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354664"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Primer vodiča za predviđanje preporuka proizvoda (pregled)
+# <a name="product-recommendation-prediction-sample-guide"></a>Primer vodiča za predviđanje preporuka proizvoda
 
 Objasnićemo vam kompletan primer predviđanja preporuke proizvoda pomoću primera podataka navedenih u nastavku.
 
@@ -31,7 +34,7 @@ Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koj
 
 ## <a name="task-1---ingest-data"></a>1. zadatak – Unos podataka
 
-Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka pomoću Power Query konektora](connect-power-query.md) konkretno. Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
+Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvora podataka pomoću Power Query linija spajanja](connect-power-query.md). Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima sa platforme eCommerce
 
@@ -65,7 +68,7 @@ Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka
 
 1. U polju **Naziv** u bočnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kupovine**.
 
-1. Sačuvajte izvor podataka.
+1. **Sačuvajte** izvor podataka.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Unesite podatke o klijentima iz šeme lojalnosti
@@ -83,11 +86,11 @@ Pregledajte članke [o unosu podataka](data-sources.md) i [uvozu izvora podataka
 
 1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **Lojalni klijenti**.
 
-1. Sačuvajte izvor podataka.
+1. **Sačuvajte** izvor podataka.
 
 ## <a name="task-2---data-unification"></a>2. zadatak 2 – Objedinjavanje podataka
 
-Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedinjavanja** da bismo kreirali objedinjeni profil klijenta. Za više informacija pogledajte [Objedinjavanje podataka](data-unification.md).
+Nakon unosa podataka, sada započinjemo postupak ujednačavanja podataka kako bismo kreirali jedinstveni profil klijenta. Za više informacija pogledajte [Objedinjavanje podataka](data-unification.md).
 
 ### <a name="map"></a>Mapiraj
 
@@ -105,9 +108,9 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
 
-2. Na padajućoj listi **Primarno**, odaberite **eCommerce kontakti: eCommerce** kao primarni izvor i uključite sve zapise.
+2. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
 
-3. Na padajućoj listi **Entitet 2**, odaberite **Lojalni klijenti: Šema lojalnosti** i uključite sve zapise.
+3. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
 
    ![Objedinite podudaranje platforme eCommerce i lojalnosti.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedin
 
 5. Dodajte svoj prvi uslov koristeći Ime i prezime.
 
-   - Za eCommerce kontakte odaberite **Ime i prezime** na padajućoj listi.
-   - Za Lojalne klijente odaberite **Ime i prezime** na padajućoj listi.
+   - Za eCommerceContacts izaberite **FullName** u padajućoj listi.
+   - Za loyCustomers izaberite **FullName** u padajućoj listi.
    - Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa...)**.
    - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
 6. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
 
    - Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   - Za entitet eCommerce kontakti odaberite **E-pošta** u padajućem meniju.
-   - Za entitet Lojalni klijenti odaberite **E-pošta** u padajućem meniju.
+   - Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
+   - Za entitet loyCustomers, odaberite **EMail** u padajućoj listi.
    - Ostavite Normalizacija prazno.
    - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
 
@@ -156,7 +159,7 @@ Kada su objedinjeni profilima klijenata spremni, sada možemo pokrenuti predviđ
 
    - **Broj proizvoda**: Podesite ovu vrednost na **5**. Ovo podešavanje definiše koliko proizvoda želite da preporučite svojim klijentima.
 
-   - **Predlažete proizvode koje su klijenti nedavno kupili?**: Izaberite **Da** kako biste naznačili da želite da dodate proizvode u preporuku koju su vaši klijenti ranije kupili.
+   - **Očekuje se ponovljena kupovina**: Izaberite **Da** kako biste naznačili da želite da dodate proizvode u preporuku koju su vaši klijenti ranije kupovali.
 
    - **Period za reviziju** Izaberite najmanje **365 dana**. Ovo podešavanje definiše koliko daleko unazad će model pratiti aktivnost klijenta da bi ga koristio kao ulaz za preporuke.
    

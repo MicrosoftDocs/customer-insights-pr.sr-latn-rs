@@ -1,22 +1,21 @@
 ---
-title: Kreiranje radnog prostora
-description: Svrha radnog prostora i kako ga kreirati.
+title: Kreirajte novi radni prostor
+description: Svrha radnog prostora i kako da kreirate novi.
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 06/18/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 38c817c169ce7986c73fb46fa14a9a8352a218d359cdcb2fa822a34303ff5ecc
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 76b3466afd84aa439ea55afe90ae037825884f2d
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034149"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229094"
 ---
-# <a name="create-the-first-workspaces-and-add-members"></a>Kreiranje prvih radnih prostora i dodavanje članova
+# <a name="create-a-new-workspace-and-add-members"></a>Kreiranje novog radnog prostora i dodavanje članova
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
@@ -24,21 +23,33 @@ Radni prostor je način na koji možete prikazati aktivnost korisnika u realnom 
 
 Kada kreirate radni prostor, izaberite vrstu podataka na koju želite da se fokusirate. U bilo kom trenutku u postojeći radni prostor možete dodati druge korisnike ili članove. 
 
-## <a name="create-a-workspace"></a>Kreiranje radnog prostora
+## <a name="create-a-new-workspace"></a>Kreirajte novi radni prostor
 
-Proces kreiranja radnog prostora uključuje konfigurisanje *okruženja* da biste organizovali svoj radni prostor. Okruženje je prostor koji može da sadrži jedan radni prostor ili više njih. Možete da koristite okruženje za upravljanje radnim prostorima i vezama sa Customer Insights mogućnošću uvida u ciljnu grupu.
+Proces kreiranja radnog prostora uključuje konfigurisanje *okruženja* da biste organizovali svoj radni prostor. Okruženje je prostor koji može da sadrži jedan radni prostor ili više njih. Okruženje možete da koristite za upravljanje radnim prostorom i vezama sa korisnici uvida.
 
-1. Izaberite **Novo** iz opcije za prebacivanje radnog prostora.
+1. Izaberite **+Novo** iz prekidača radnog prostora.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Stranica Customer Insights sa oblačićem u oknu za navigaciju i opisom.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Stranica &quot;Uvidi kupaca&quot; sa pozivom u oknu za navigaciju i opisom.":::
 
-1. Odaberite okruženje sa liste ili izaberite **Kreiraj novo okruženje**.
-1. Unesite **Naziv radnog prostora**.
-1. Odaberite platformu koju želite da se merite.
-1. Ako završite, izaberite **Završi**. 
-1. Možete da dodajete članove i dodeljujete nivo njihovih dozvola sa liste **Uloga**. Za više informacija pogledajte [Uloge i dozvole](user-roles.md). Zatim izaberite **Završi** da biste kreirali radni prostor ili **Sledeće** da biste instalirali kôd.
-1. Instalirajte isečak koda da biste počeli da primate podatke, a zatim izaberite **Gotovo**.
+1. U oknu **Radni prostor**, unesite **Naziv radnog prostora**.
+
+   :::image type="content" source="media/workspace-name.png" alt-text="Unesite naziv radnog prostora.":::
+
+1. Odaberite tip platforme (veb ili mobilni) koji želite da izmerite.
+
+1. Izaberite **Prikaži napredna podešavanja** da biste omogućili ili onemogućili ova opciona podešavanja:
+
+   - Prebacite **Nepoznato u poznato** na „omogućeno“ za povezivanje veb-događaja sa korisnicima koji su prethodno izvršili potvrdu identiteta. Za više informacija pogledajte [Prepoznavanje veb-događaja posetilaca koji su prethodno izvršili potvrdu identiteta](unknown-to-known.md)
+   - Prebacite **Filtriraj saobraćaj robota** na „omogućeno“ za uklanjanje veb-saobraćaja robota za ovaj radni prostor. 
+
+1. Izaberite **Dovrši** kada završite. 
+
+1. Instalirajte isečak koda da biste počeli da primate podatke, a zatim izaberite **Završi** za kreiranje radnog prostora. Za više informacija, pogledajte [Pregled resursa za programere](developer-resources.md).
+
+> [!NOTE]
+> Sada možete dodati članove i dodeliti im nivo dozvola sa liste **Uloga**. Za više informacija pogledajte [Uloge i dozvole](user-roles.md). 
 
 Za više informacija pogledajte [Upravljanje okruženjima i radnim prostorima](manage-environments-workspaces.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

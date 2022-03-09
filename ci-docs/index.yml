@@ -5,14 +5,13 @@ metadata:
   description: Pronađite relevantne članke da biste započeli sa sadržajem pomoći.
   ms.author: mhart
   ms.date: 03/02/2022
-  ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: e154b37f57bb2765f48a9f6b38f86dffcb05f403
-  ms.sourcegitcommit: a371fc1e75b2321e45d3f972a3ac84c725f8cc38
-  ms.translationtype: HT
+  ms.openlocfilehash: 5efa266dfe8d70812f4c668b04cee2f93f206f7b
+  ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
+  ms.translationtype: MT
   ms.contentlocale: sr-Latn-RS
-  ms.lasthandoff: 02/10/2022
-  ms.locfileid: "8107216"
+  ms.lasthandoff: 02/25/2022
+  ms.locfileid: "8350486"
 title: Dokumentacija za Dynamics 365 Customer Insights
 summary: Pronađite korisne resurse za početak i saznajte o funkcijama i mogućnostima usluge Customer Insights.
 landingContent:
@@ -44,7 +43,7 @@ landingContent:
     links:
     - text: Započnite
       url: /learn/modules/get-started-customer-data-platform/
-- title: Administriranje uvida o korisnicima
+- title: Administriranje usluge Customer Insights
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -68,53 +67,3 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Prijavite problem
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Deljenje podataka između mogućnosti
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Kreiranje veze između mogućnosti
-      url: engagement-insights/integrate-audience-insights-engagement-insights.md
-    - text: Kreiranje segmenata za upotrebu u izveštajima
-      url: engagement-insights/integrate-audience-insights-segments.md
-    - text: Korišćenje svojstava profila za interaktivnu analizu
-      url: engagement-insights/curate-dimensions.md
-- title: Izvoz podataka uvida o korisnicima
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Podešavanje odredišta izvoza
-      url: audience-insights/export-destinations.md
-    - text: Kartice klijenata u Dynamics 365 aplikacijama
-      url: audience-insights/customer-card-add-in.md
-    - text: Power BI konektor
-      url: audience-insights/export-power-bi.md
-- title: Osnovni podaci o angažovanjima (verzija za pregled)
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Pregled mogućnosti
-      url: engagement-insights/overview.md
-    - text: Odredbe i koncepti
-      url: engagement-insights/glossary.md
-    - text: Započnite
-      url: engagement-insights/get-started.md
-- title: Izveštaji za uvidi u angažovanje (verzija za pregled)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Prikaži izveštaje
-      url: engagement-insights/view-reports.md
-    - text: Kreiranje prilagođenih izveštaja
-      url: engagement-insights/custom-reports.md
-    - text: Pogledajte izveštaj o objedinjenim profilima
-      url: engagement-insights/profile-reports.md
-- title: Događaji za uvide u angažovanje (verzija za pregled)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Napravite istančane događaje
-      url: engagement-insights/refined-events.md
-    - text: Izvoz događaja
-      url: engagement-insights/export-events.md
-    - text: Izbrišite i izvezite lične podatke
-      url: engagement-insights/delete-export-personal-data.md

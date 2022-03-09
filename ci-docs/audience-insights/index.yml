@@ -4,18 +4,17 @@ summary: Uzmite, objedinite i organizujte podatke o klijentima iz više izvora. 
 metadata:
   title: Dokumentacija o uvidima o korisnicima
   description: Čvorište pomoći sa ključnim vezama za uvide o korisnicima.
-  ms.service: customer-insights
   ms.subservice: audience-insights
-  ms.topic: landing-page
+  ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/16/2020
-  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
-  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
-  ms.translationtype: HT
+  ms.date: 03/02/2022
+  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
+  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+  ms.translationtype: MT
   ms.contentlocale: sr-Latn-RS
-  ms.lasthandoff: 11/03/2020
-  ms.locfileid: "4406812"
+  ms.lasthandoff: 02/16/2022
+  ms.locfileid: "8231854"
 landingContent:
 - title: O uvidima o korisnicima
   linkLists:
@@ -25,38 +24,54 @@ landingContent:
       url: overview.md
     - text: Nove i ažurirane funkcije
       url: whats-new-audience-insights.md
-    - text: Lokacija zajednice
-      url: https://go.microsoft.com/fwlink/?linkid=2073991
-- title: Unos iz izvora podataka
-  linkLists:
-  - linkListType: how-to-guide
+    - text: Otkrijte uvide u ciljnu grupu
+      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
+  - linkListType: learn
     links:
-    - text: Dodavanje izvora podataka
-      url: data-sources.md
-    - text: Postepeno osvežavanje
-      url: incremental-refresh-data-sources.md
-    - text: Objašnjenje entiteta
-      url: entities.md
+    - text: Putanja učenja uvida klijenata
+      url: /learn/paths/build-customer-insights/
 - title: Ujednačavanje podataka
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Mapiraj
-      url: map-entities.md
-    - text: Podudaranje
-      url: match-entities.md
-    - text: Objedini
-      url: merge-entities.md
-- title: Preciziranje profila klijenata
+    - text: Pregled izvora podataka
+      url: data-sources.md
+    - text: Pregled ujednačavanja
+      url: data-unification.md
+    - text: Objašnjenje entiteta
+      url: entities.md
+  - linkListType: learn
+    links:
+    - text: Kreiranje objedinjenog profila
+      url: /learn/modules/unified-customer-profile/
+- title: Ostvarite uvide
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Obogaćivanje profila klijenata
+      url: enrichment-hub.md
     - text: Konfigurisanje odnosa
       url: relationships.md
+    - text: Kompletiranje podataka predviđanjima
+      url: predictions.md
+  - linkListType: learn
+    links:
+    - text: Obogaćivanje i predviđanje podataka
+      url: /learn/modules/enrich-data/
+- title: Nadograрi svoje podatke
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kreiranje segmenata
+      url: segments.md
+    - text: Kreiranje mera
+      url: measures.md
     - text: Listanje aktivnosti za klijenta
       url: activities.md
-    - text: Modeli učenja „Donesite svoju mašinu“
-      url: custom-models.md
+  - linkListType: learn
+    links:
+    - text: Rad sa aplikacijom
+      url: /learn/modules/working-with-customer-insights/
 - title: Izvoz podataka klijenta
   linkLists:
   - linkListType: how-to-guide
@@ -67,6 +82,10 @@ landingContent:
       url: customer-card-add-in.md
     - text: Power BI konektor
       url: export-power-bi.md
+  - linkListType: learn
+    links:
+    - text: Upravljanje spoljnim vezama
+      url: /learn/modules/configure-third-party-connections/
 - title: Administracija aplikacije
   linkLists:
   - linkListType: how-to-guide
@@ -77,3 +96,7 @@ landingContent:
       url: permissions.md
     - text: Upravljanje sa više okruženja
       url: manage-environments.md
+  - linkListType: learn
+    links:
+    - text: Administriranje usluge Customer Insights
+      url: /learn/modules/administer-customer-data-platform/

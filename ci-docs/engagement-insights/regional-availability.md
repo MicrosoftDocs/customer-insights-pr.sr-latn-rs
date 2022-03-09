@@ -1,31 +1,33 @@
 ---
-title: Regioni dostupnosti uvida u angažovanje
+title: Regioni dostupnosti usluge Dynamics 365 Customer Insights
 description: Saznajte više o regionima i geografskim lokacijama u kojima se primenjuje usluga.
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 07/15/2021
-ms.service: customer-insights
-ms.subservice: engagement-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: ca7a921e1ea2f612949c1243a3dc5ee0f4f3c3974305af344c77b870db3e00a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036210"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228123"
 ---
-# <a name="regional-availability-for-engagement-insights"></a>Regionalna dostupnost za uvide u angažovanje
+# <a name="regional-availability-for-dynamics-365-customer-insights"></a>Regionalna dostupnost za Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Uvidi u angažovanje, mogućnost rešenja Dynamics 365 Customer Insights postepeno uvodi sve više regiona u kojima klijenti mogu izabrati da skladište svoje podatke. Administratori mogu izabrati region kada [kreiraju novo okruženje](manage-environments-workspaces.md#create-an-environment). Ako organizacija prvi put konfiguriše uvide u angažovanje, ona bira region dok prolazi kroz [vođeno iskustvo prvog pokretanja](quickstart.md). Kasnije, svako novo okruženje omogućava izbor regiona u koji će se podaci skladištiti.
+Uvidi u angažovanje, mogućnost rešenja Dynamics 365 Customer Insights, postepeno uvode sve više regiona u kojima klijenti mogu izabrati da skladište svoje podatke. Administratori mogu izabrati region kada [kreiraju novo okruženje](create-new-environment.md). 
 
-Tokom verzije za javni pregled, postoje dva geografska područja: SAD i Evropa. Korisnici mogu da biraju između regiona Zapadnog SAD i Evrope – sever.
+Kada prvi put konfiguriše uvide u angažovanje, možete da birate region dok prolazite kroz [vođeno iskustvo prvog pokretanja](quickstart.md). Kasnije, svako novo okruženje vam omogućava da izaberete region u kojem će se podaci skladištiti.
+
+Trenutno podržavamo geografije SAD i Evrope. Korisnici mogu da biraju između ovih regiona: SAD – zapad, SAD – istok, Evropa – sever i Evropa – zapad.
 
 Organizacija može da održava okruženja u različitim regionima. Na primer, okruženje A skladišti podatke u Zapadnoj SAD, a okruženje B u Evropi – sever.
 
-> [!TIP]
+> [!NOTE]
 > Nakon što izaberete region tokom kreiranja okruženja, nećete moći da promenite to podešavanje. Da biste promenili region, administrator okruženja mora da [izbriše okruženje](manage-environments-workspaces.md#delete-an-environment) i kreira novo sa ažuriranim podešavanjem regiona.
 
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
