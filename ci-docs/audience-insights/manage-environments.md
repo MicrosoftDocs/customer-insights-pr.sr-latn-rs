@@ -1,7 +1,7 @@
 ---
 title: Kreiranje okruženja i upravljanje njima
 description: Saznajte kako se registrujete za uslugu i kako da upravljate okruženjima.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354296"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376893"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
-
-
 
 ## <a name="switch-environments"></a>Zamena okruženja
 
@@ -98,9 +96,29 @@ Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde će
 
 Kada objedinjavanje podataka bude dovršeno, idite na **Mere** i **Segmenti** da osvežite i njih.
 
+## <a name="change-the-owner-of-an-environment"></a>Promena vlasnika okruženja
+
+Dok nekoliko korisnika može da ima administratorske dozvole u programu Customer Insights, samo jedan korisnik je vlasnik okruženja. Po podrazumevanoj vrednosti, administrator je taj koji u početku kreira okruženje. Kao administrator okruženja, možete da dodelite vlasništvo drugom korisniku sa administratorske dozvole.
+
+1. Izaberite birač **Okruženje** u zaglavlju aplikacije.
+
+1. Izaberite ikonu **Uređivanje**.
+
+1. U okviru **Uredi okruženje** pređite na osnovni **informacioni** korak.
+
+1. U polju **Promeni vlasnika okruženja** odaberite novog vlasnika okruženja.  
+
+1. Izaberite rediguj **i završi**, a zatim **ažuriraj** da biste primenili promene. 
+
+## <a name="claim-ownership-of-an-environment"></a>Tražite vlasništvo nad okruženjem
+
+Ako vlasnik okruženja napusti organizaciju ili je njihov korisnički nalog izbrisan, okruženje neće imati vlasnika. Korisnik sa administratorske dozvole može da preuzme vlasništvo i postane novi vlasnik. Oni mogu da nastave da poseduju životnu sredinu [ili da promene vlasništvo u drugog administratora](#change-the-owner-of-an-environment). 
+
+Da biste preuzeli vlasništvo, izaberite dugme **"Preuzmi vlasništvo** " koje se prikazuje na vrhu svake stranice u "Uvidima kupaca" kada je originalni vlasnik napustio organizaciju.
+
 ## <a name="reset-an-existing-environment"></a>Uspostavljanje početnih vrednosti postojećeg okruženja
 
-Kao administrator, možete da vratite okruženje na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
+Kao vlasnik okruženja, možete da uspostavite početne vrednosti okruženja na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
 
 1.  Izaberite birač **Okruženje** u zaglavlju aplikacije. 
 
@@ -112,7 +130,7 @@ Kao administrator, možete da vratite okruženje na prazno stanje ako želite da
 
 ## <a name="delete-an-existing-environment"></a>Brisanje postojećeg okruženja
 
-Kao administrator možete da izbrišete okruženje kojim administrirate.
+Kao vlasnik okruženja, možete da izbrišete okruženje kojim upravljate.
 
 1.  Izaberite birač **Okruženje** u zaglavlju aplikacije.
 

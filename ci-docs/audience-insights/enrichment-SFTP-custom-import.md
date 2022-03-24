@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229655"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376617"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Obogatite profile klijenata uz prilagođene podatke (verzija za pregled)
 
@@ -25,7 +25,7 @@ Da biste konfigurisali SFTP prilagođeni uvoz, moraju biti ispunjeni sledeći pr
 
 - Imate naziv datoteke i lokaciju (putanju) datoteke koju treba uvesti na SFTP host.
 - Postoji datoteka *model.json* koja navodi [šemu zajedničkog modela podataka](/common-data-model/) za uvoz podataka. Ova datoteka mora biti u istom direktorijumu kao i datoteka koju treba uvesti.
-- Administrator je već konfigurisao SFTP vezu *ili* imate dozvole [administratora](permissions.md#administrator). Trebaće vam korisnički akreditivi, URL adresa i broj porta za SFTP lokaciju odakle želite da uvezete podatke.
+- Administrator je već konfigurisao SFTP vezu *ili* imate dozvole [administratora](permissions.md#admin). Trebaće vam korisnički akreditivi, URL adresa i broj porta za SFTP lokaciju odakle želite da uvezete podatke.
 
 
 ## <a name="configure-the-import"></a>Konfigurisanje uvoza

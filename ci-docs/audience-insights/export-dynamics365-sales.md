@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355034"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455879"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Korišćenje segmenata u usluzi Dynamics 365 Sales (verzija za pregled)
 
@@ -31,7 +31,7 @@ Koristite podatke o klijentima da biste kreirali marketinške spiskove, pratili 
 
 ## <a name="prerequisite-for-connection"></a>Preduslov za vezu
 
-1. Zapisi kontakata moraju biti prisutni u usluzi Dynamics 365 Sales da biste mogli da izvezete segment iz usluge Customer Insights u Sales. Pročitajte više o tome kako se unose kontakti u [Dynamics 365 Sales pomoću usluge Microsoft Dataverse](connect-power-query.md).
+1. Zapisi kontakata moraju biti prisutni u usluzi Dynamics 365 Sales da biste mogli da izvezete segment iz usluge Customer Insights u Sales. Pročitajte više o tome kako da ugestite kontakte iz [sistema Dynamics 365 Prodaja koristeći Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Izvoz segmenata iz uvida o korisnicima u Sales neće kreirati nove zapise kontakata u instancama usluge Sales. Evidencija kontakata iz usluge Sales mora se uneti u uvid o korisnicima i koristiti kao izvor podataka. Takođe ih treba uključiti u jedinstveni entitet klijenta da bi se ID-ovi klijenata mapirali u ID-ove kontakata da bi segmenti mogli da se izvezu.

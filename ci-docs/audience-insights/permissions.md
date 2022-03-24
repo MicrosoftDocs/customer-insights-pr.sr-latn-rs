@@ -1,7 +1,7 @@
 ---
 title: Upravljanje dozvolama korisnika
 description: Saznajte više o dozvolama i ulogama korisnika.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355954"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376755"
 ---
 # <a name="user-permissions"></a>Korisničke dozvole
 
@@ -48,7 +48,7 @@ Postoje tri vrste uloga:
 - Upravljajte konfiguracijom i obogatite korisničke profile na stranici **Obogaćivanje** (samo za obogaćivanje prve strane).
 - Upravljajte i kreirajte izvoze na osnovu veza koje se dele sa saradnicima. [Saznajte više o tome kako administratori dozvoljavaju saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrator
+## <a name="admin"></a>Admin
 
 - Sve dozvole su dostupne saradniku.
 - Promenite podešavanja na stranici **Sistem**, uključujući radni jezik i raspored osvežavanja za vaše sistemske procese.
@@ -60,6 +60,12 @@ Postoje tri vrste uloga:
 - Instalirajte i koristite **Dodatak kartice Klijent**.
 - Dodajte i koristite **Power Apps konektor**.
 - Omogućavanje upotrebe [Customer Insights API-ja](apis.md).
+- [Dodelite vlasništvo nad okruženjem](manage-environments.md#change-the-owner-of-an-environment) drugom administratoru.
+
+## <a name="admin-owner"></a>Administrator (vlasnik)
+
+- Sve dozvole dostupne administratoru.
+- [Uspostavite početne vrednosti i](manage-environments.md#reset-an-existing-environment) izbrišite okruženje.
 
 ## <a name="assign-roles-and-permissions"></a>Dodeljivanje uloga i dozvola
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 2cc44f7b453d2aca328c397b14787c8a02c5e490
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226466"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376663"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Obogaćivanje profila klijenata uz Azure Maps (verzija za pregled)
 
@@ -25,7 +25,7 @@ Da biste konfigurisali Azure Maps obogaćivanje podataka, moraju biti ispunjeni 
 
 - Imate aktivnu pretplatu na Azure Maps. Da biste dobili pretplatu, možete da se [registrujete ili dobijete besplatnu probnu verziju](https://azure.microsoft.com/services/azure-maps/).
 
-- Azure Maps [veza](connections.md) je dostupna *ili* imate dozvolu [Administratora](permissions.md#administrator) i aktivni Azure Maps API ključ.
+- Azure Maps [veza](connections.md) je dostupna *ili* imate dozvolu [Administratora](permissions.md#admin) i aktivni Azure Maps API ključ.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 

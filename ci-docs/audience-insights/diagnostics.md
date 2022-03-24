@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354425"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376433"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijavljivanje pomoću Dynamics 365 Customer Insights Azure monitora (pregled)
 
@@ -37,7 +37,7 @@ Uvidi kupaca šalju sledeće evidencije događaja:
 Da biste konfigurisali dijagnostiku u uvidima klijenata, moraju biti ispunjeni sledeći preduslovi:
 
 - Imate aktivnu [Azurnu pretplatu](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Imate administratorske [dozvole](permissions.md#administrator) u fascikli "Uvidi klijenata".
+- Imate administratorske [dozvole](permissions.md#admin) u fascikli "Uvidi klijenata".
 - Imate ulogu **administratora saradnik** korisničkog **pristupa na** odredišnom resursu na Azure. Resurs može biti Azure nalog skladišta, Azure čvorište događaja ili radni prostor Azure analitike evidencije. Više informacija potražite u članku [Dodavanje ili uklanjanje dodela Azure uloga pomoću portala Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Ispunjeni su](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) odredišni zahtevi za Azure skladište, Azure čvorište događaja ili Azure analitiku evidencije.
 - Imate bar ulogu čitalac **resursa** kojoj resurs pripada.
@@ -132,7 +132,7 @@ API događaji i događaji toka posla imaju zajedničku strukturu i detalje u koj
 | `resultSignature` | String    | Opcionalno          | Status rezultata događaja. Ako operacija odgovara pozivu REST API, to je HTTP statusni kôd.        | `200`             |
 | `durationMs`      | Dugačak      | Opcionalno          | Trajanje operacije u milisekundama.     | `133`     |
 | `callerIpAddress` | String    | Opcionalno          | IP adresa pozivaoca, ako operacija odgovara API pozivu koji dolazi sa javno dostupne IP adrese.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcionalno          | JSON objekat koji opisuje identitet korisnika ili aplikacije koja je uradila operaciju.       | Pogledajte [odeljak](#identity-schema) Identitet.     |  |
+| `identity`        | String    | Opcionalno          | JSON objekat koji opisuje identitet korisnika ili aplikacije koja je uradila operaciju.       | Pogledajte [odeljak](#identity-schema) Identitet.     |  
 | `properties`      | String    | Opcionalno          | JSON objekat sa više svojstava prema određenoj kategoriji događaja.      | Pogledajte [odeljak Svojstva](#api-properties-schema).    |
 | `level`           | String    | Zahtevano          | Nivo ozbiljnosti događaja.    | `Informational`, `Warning`,, `Error` ili `Critical`.           |
 | `uri`             | String    | Opcionalno          | Apsolutni zahtev URI.    |               |
@@ -230,7 +230,7 @@ Događaji toka posla imaju sledeća svojstva.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Uvek `WorkflowEvent`, označavanje događaja kao događaja toka posla.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Da      | Da  | Identifikator toka posla. Svi događaji toka posla i zadataka u okviru izvršavanja toka posla imaju isti `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identifikator operacije pogledajte [Tipovi operacija]. (#operation tipovi)                                                                                                                                                                                       |
+| `properties.operationType`                   | Da      | Da  | Identifikator operacije, pogledajte tipove [operacija].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Da      | No   | Samo tok posla. Broj zadataka koje tok posla pokreće.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Opcionalno. Samo događaji toka posla. ID Azure Active Directory [objekta korisnika koji je aktivirao](/azure/marketplace/find-tenant-object-id#find-user-object-id) tok posla, pogledajte takođe `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` ili osvežiti `incremental`.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Događaji toka posla imaju sledeća svojstva.
 | `properties.startTimestamp`                  | Da      | Da  | UTC Timestamp`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Da      | Da  | UTC Timestamp`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Da      | Da  | UTC Timestamp`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Da      | Da  | Uvidi kupaca`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Da      | Da  | Uvidi kupaca`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Da  | - Za OperationType = `Export`, identifikator je guid konfiguracije izvoza. <br> - Za OperationType = `Enrichment`, to je guid bogaćenja <br> - Za OperationType `Measures``Segmentation` i, identifikator je ime entiteta. |
 | `properties.friendlyName`                    | No       | Da  | Korisnički prilagođeno ime izvoza ili entiteta koji se obrađuje.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Da  | Opcionalno. Poruka o grešci sa više detalja.                                                                                                                                                                                                                  |

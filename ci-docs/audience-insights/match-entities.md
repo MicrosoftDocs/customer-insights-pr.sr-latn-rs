@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372644"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376939"
 ---
 # <a name="match-entities"></a>Podudaranje entiteta
 
@@ -184,6 +184,8 @@ Izlazni entitet uklanjanja duplikata sadrži sledeće informacije:
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pregled)
 
 Ako ste obogatili entitete na izvor podataka, izaberite ih pre pokretanja procesa podudaranja. Obogaćeni entiteti mogu da poboljšaju rezultate ujedinjenja. Više informacija potražite u članku [Obogaćivanje izvora podataka](data-sources-enrichment.md). 
+
+Obogaćeni entitet sadrži originalne izvor podataka polja i obogaćena polja. Dakle, ako odaberete da radite sa obogaćenim entitetom, na postojeću konfiguraciju neće uticati. Međutim, možda ćete morati da ažurirate pravila podudaranja da biste umesto toga koristili obogaćena polja.
 
 1. Idite **na DataUnifyMatch** > **·** > **i** izaberite **Koristi obogaćene** entitete na vrhu stranice.
 

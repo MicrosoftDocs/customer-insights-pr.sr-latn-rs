@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229420"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376371"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Obogaćivanje profila preduzeća poboljšanim podacima kompanije
 
 Koristite Microsoftove modele i prevedene podatke kompanije da biste ispravili, dopunili i standardizovali profile preduzeća. Koristićemo format Common [Data Model za](/common-data-model/schema/core/applicationcommon/account) bolju tačnost i uvide.
+
+Takođe možete da [poboljšate podatke kompanije na izvorima podataka](data-sources-enrichment.md) da biste poboljšali tačnost podudaranja u procesu ujedinjenja podataka. 
 
 ## <a name="how-we-enhance-company-data"></a>Kako poboljšavamo podatke kompanije
 

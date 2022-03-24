@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228491"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376847"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Obogatite profile klijenata podacima o angažovanju (pregled)
 
@@ -28,7 +28,7 @@ Da biste konfigurisali bogaćenje, moraju biti ispunjeni sledeći preduslovi:
 - Imate aktivnu licencu Office 365 u oblaku.
 - Imate objedinjene [profile klijenata](customer-profiles.md) na osnovu poslovnih [naloga](work-with-business-accounts.md).
 - Vaše okruženje "Uvidi kupaca" mora imati priloženu [Microsoft Dataverse organizaciju](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Imate [administratorske](permissions.md#administrator) dozvole.
+- Imate [administratorske](permissions.md#admin) dozvole.
 - Imate ili možete da dobijete saglasnost administratora Office 365 stanara da koristite podatke Office 365 da biste obezbedili **uvide za organizaciju** u okviru Dynamics 365 aplikacija.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja

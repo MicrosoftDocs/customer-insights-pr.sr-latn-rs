@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373080"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376596"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje izvora podataka (pregled)
 
@@ -40,7 +40,7 @@ Morate imati dozvole saradnik administratora za kreiranje ili uređivanje oboga�
 Sledeća obogaćivanja su trenutno dostupna za izvore podataka. Pregledajte detaljne korake za bogaćenje da biste saznali kako da ga konfigurišete.
 
 - [Poboljšane adrese](enrichment-enhanced-addresses.md)
-- [Podaci o identitetu iz liveRamp-a](enrichment-liveramp.md)
+- [Poboljšani podaci o preduzeću](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Upravljanje postojećim izvor podataka obogaćivanjem
 

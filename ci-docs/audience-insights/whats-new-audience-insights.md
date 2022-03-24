@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232721"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376479"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Šta je novo u mogućnosti uvida u ciljnu grupu usluge Dynamics 365 Customer Insights
-
-
 
 Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Ispravke za februar 2022.
+
+Ispravke u februaru 2022.
+
+### <a name="general-availability-for-prediction-models"></a>Opšta dostupnost predviđanje modela
+
+Modeli za predviđanje, **uključujući pretplatnički churn**, **transactional churn** i **vrednost doživotnog klijenta (CLV)** postaju opšte dostupni kao deo uvida klijenata. 
+
+Više informacija potražite u članku [Pregled predviđanja](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Novi izvor podataka: integracija sa Azure Synapse Analytics (pregled)
+
+Azure Synapse Analytics je usluga analitike preduzeća koja ubrzava vreme na uvide u skladištima podataka i velikim sistemima podataka.
+
+Ako vaša organizacija već koristi napredne analitičke mogućnosti Azure Synapse Analytics i skladišti izlaz u bazama podataka Data Lake, te podatke možete lako da unete u uvid kupca. Više informacija potražite u članku [Povezivanje Azure Synapse izvor podataka (pregled)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>LiveRamp obogaćivanje (pregled)
+
+LiveRamp obezbeđuje determinističko rešavanje identiteta van mreže i konsolidaciju podataka korisnika. Lične identifikatore u podacima korisnika možete da mapirate u AbiliTec grafikon identiteta i primite AbiliTec ID-ove. Zatim možete da koristite ove lične datoteke za bolje ujedinjenje podataka klijenata.
+
+Više informacija potražite u članku [Obogaćivanje profila klijenata podacima o identitetu iz programa LiveRamp (Preview)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje izvora podataka (pregled)
+
+Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili podatke o klijentima pre ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u proizvodnji veće potpunosti podataka i kvaliteta koji mogu da pomognu u postizanju boljih rezultata kada ujedinite svoje podatke.
+
+Više informacija potražite u članku [Obogaćivanje izvora podataka (Preview)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Promena vlasnika okruženja
+
+Dok nekoliko korisnika može da ima administratorske dozvole u programu Customer Insights, samo jedan korisnik je vlasnik okruženja. Poboljšano iskustvo vam omogućava da promenite vlasnika okruženja i preuzmete vlasništvo ako je bivši vlasnik napustio organizaciju. 
+
+Više informacija potražite u članku [Promena vlasnika okruženja](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Proces pripreme podataka navodi razlog oštećenja oštećenih zapisa
+
+Proces pripreme podataka sada pokazuje razlog za oštećenje svih polja sa oštećenim podacima na pojedinačnom nivou zapisa radi lake identifikacije. 
+
+Više informacija potražite u članku [Oštećeni izvori podataka](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Kraj pregleda za funkcije izveštavanja u mogućnosti uvida u angažovanje
+
+Pregled Dynamics 365 Customer Insights mogućnosti uvida u angažovanje završen je 15. februara 2022. godine.  
+Ova promena znači da probno iskustvo "Uvidi klijenata" više ne uključuje mogućnost kreiranja levaka niti druge funkcionalnosti izveštavanja.
+
+Pozivamo vas da istražite i procenite mnoge druge funkcije korisničkog [uvida](https://dynamics.microsoft.com/ai/customer-insights/), Microsoft platforme za podatke o korisnicima (CDP).    
+ 
+Za prelazni period, postojeći učesnici pregleda i dalje imaju pristup nekim mogućnostima i funkcionalnosti pregleda:
+
+- Preuzimanje koda za upravljanje veb lokacijom ili aplikacijom za mobilne uređaje 
+- Pogledajte događaje i svojstva događaja 
+- Poboljšajte objedinjene profile sa prenaglašenom i prefinjenom manifestacijom kako biste imali koristi od pune vrednosti podataka korisnika
+  
+Tokom prelaznog perioda, uhvaćeni događaji se i dalje strimuju do povezanog Data Jezera. Kada se ova funkcionalnost isključi, deljenje podataka između uvida u angažovanje i korisnici uvidi će prestati i neće se novi događaji slati u povezano skladište.
+Obratite se direktno timu Microsoft naloga ako imate pitanja o kraju pregleda mogućnosti. Tim naloga će vas obaveštavati o narednim lansiranjima. 
 
 ## <a name="january-2022-updates"></a>Ispravke za januar 2022. godine
 
@@ -46,7 +100,7 @@ Ispravke u decembru 2021.
 
 Uvid korisnika obezbeđuje direktnu integraciju sa Azure monitorom. Ova funkcija uključuje događaje nadgledanja i operativne događaje. Evidencije resursa Azure monitora vam omogućava da nadgledate i šaljete evidencije u Azure skladište, analitiku Azure evidencije ili da ih strimujete u Azure čvorišta događaja.
 
-Više informacija potražite u članku [Prijavljivanje sa Dynamics 365 Customer Insights Azure monitorom (Preview)](diagnostics.md).
+Više informacija potražite u članku [Prijavljivanje sa Dynamics 365 Customer Insights Azure monitorom (pregled)](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Obogatite profile klijenata podacima o angažovanju
 
@@ -99,7 +153,7 @@ Ispravke u oktobru 2021.
 
 ### <a name="b-to-b"></a>B-na-B
 
-Počevši od oktobra 2021. godine, možete raditi sa poslovnim nalozima i njihovim srodnim kontaktima u uvidima kupaca. Ranije je aplikacija uglavnom bila prilagođena pojedinačnim potrošačima. Nekoliko oblasti funkcija je ažurirano da bi se podržali scenariji B-na-B povrh novog tipa okruženja. Pregled podržanih funkcija od B do B pogledajte članak [Rad sa poslovnim nalozima u korisnici uvidima](work-with-business-accounts.md).
+Počevši od oktobra 2021. godine, možete raditi sa poslovnim nalozima i njihovim srodnim kontaktima u uvidima kupaca. Ranije je aplikacija uglavnom bila prilagođena pojedinačnim potrošačima. Nekoliko oblasti funkcija je ažurirano da bi se podržali scenariji B-na-B povrh novog tipa okruženja. Pregled podržanih funkcija od B do B pogledajte članak Rad sa [poslovnim nalozima u korisnici uvidima](work-with-business-accounts.md).
 
 Sledeći odeljci naglašavaju neke od ključnih oblasti koje su prilagođene za podršku poslovnim nalozima i pojedinačnim potrošačima.
 
