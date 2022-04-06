@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376433"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523686"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijavljivanje pomoću Dynamics 365 Customer Insights Azure monitora (pregled)
 
@@ -230,7 +230,7 @@ Događaji toka posla imaju sledeća svojstva.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Uvek `WorkflowEvent`, označavanje događaja kao događaja toka posla.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Da      | Da  | Identifikator toka posla. Svi događaji toka posla i zadataka u okviru izvršavanja toka posla imaju isti `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identifikator operacije, pogledajte tipove [operacija].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Da      | Da  | Identifikator operacije, pogledajte tipove [operacija](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Da      | No   | Samo tok posla. Broj zadataka koje tok posla pokreće.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Opcionalno. Samo događaji toka posla. ID Azure Active Directory [objekta korisnika koji je aktivirao](/azure/marketplace/find-tenant-object-id#find-user-object-id) tok posla, pogledajte takođe `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` ili osvežiti `incremental`.                                                                                                                                                                                                                            |

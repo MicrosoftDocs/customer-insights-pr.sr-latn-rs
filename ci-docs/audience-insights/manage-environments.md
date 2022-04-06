@@ -1,22 +1,22 @@
 ---
 title: Kreiranje okruženja i upravljanje njima
 description: Saznajte kako se registrujete za uslugu i kako da upravljate okruženjima.
-ms.date: 02/09/2022
+ms.date: 03/28/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
-author: NimrodMagen
-ms.author: nimagen
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
-ms.translationtype: HT
+ms.openlocfilehash: ba29bcd173e615e544bd10e69043f310c009eb47
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376893"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8492021"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -42,23 +42,83 @@ Više informacija o podešavanjima okruženja potražite u članku [Kreiranje no
 
 ## <a name="connect-to-microsoft-dataverse"></a>Povezivanje sa sistemom Microsoft Dataverse
    
-Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem.
+Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem. 
+
+Obezbedite sopstveno Microsoft Dataverse okruženje za deljenje podataka (profila i uvida) sa poslovnim aplikacijama zasnovanim Dataverse na sistemu, kao što je Dynamics 365 Marketing ili aplikacije sa modelima u programu Power Apps.
 
 Da biste koristili [gotove modele predviđanja](predictions-overview.md#out-of-box-models), konfigurišite deljenje podataka sa uslugom Dataverse. Ili možete omogućiti unos podataka iz lokalnih izvora podataka,obezbeđujući URL adresu Microsoft Dataverse okruženja kojim upravlja vaša organizacija.
 
+Omogućavanje deljenja podataka potvrđujući Microsoft Dataverse izbor u polju za potvrdu za deljenje podataka pokrenuće jednom potpuno osvežavanje izvora podataka i svih drugih procesa.
+
 > [!IMPORTANT]
-> Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
+> 1. Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
+> 1. Morate imati ulogu globalnog administratora u okruženju Dataverse. Proverite da [Dataverse li je ovo okruženje](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) povezano sa određenim bezbednosnim grupama i uverite se da ste dodati tim bezbednosnim grupama.
+> 1. Postojeće okruženje "Uvidi kupaca" već nije povezano sa tim okruženjem Dataverse. Saznajte kako [da uklonite postojeću vezu sa okruženjem Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-enable-datasharing.png" alt-text="Opcije konfiguracije za omogućavanje deljenja podataka sa platformom Microsoft Dataverse.":::
 
-> [!NOTE]
-> Customer Insights ne podržava sledeće scenarije deljenja podataka:
-> - Ako sve podatke sačuvate u sopstvenoj usluzi Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa Dataverse upravljanim jezerom podataka.
-> - Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
+### <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogući deljenje podataka Dataverse sa sopstvenim Azure Data Lake Storage (Pregled)
+
+Ako je vaše okruženje konfigurisano da koristi sopstveno za skladištenje podataka Azure Data Lake Storage "Uvid u korisnike", omogućavanje deljenja podataka sa potrebno je Microsoft Dataverse dodatnom konfiguracijom.
+
+1. Kreirajte dve bezbednosne grupe na Azure pretplati - **jednu čitalac bezbednosnu** **grupu i saradnik bezbednosnu** grupu i podesite Microsoft Dataverse uslugu kao vlasnika za obe bezbednosne grupe.
+2. Upravljajte listom kontrole pristupa (ACL) na kontejneru CustomerInsights u nalogu za skladištenje putem ovih bezbednosnih grupa. Dodajte uslugu Microsoft Dataverse i sve Dataverse poslovne aplikacije zasnovane na sistemu Dynamics 365 Marketing **u čitalac** grupu sa **dozvolama samo** za čitanje. Dodajte *samo* aplikaciju "Uvidi klijenata **" u saradnik grupu** da biste dodelili dozvole **za** čitanje i pisanje profila i uvida.
+   
+#### <a name="prerequisites"></a>Preduslovi
+
+Da biste izvršili PowerShell skripte, potrebno je da uvezete sledeća tri modula. 
+
+1. Instalirajte najnoviju verziju [Azure Active Directory programa PowerShell za Graph](/powershell/azure/active-directory/install-adv2).
+   1. Na računaru izaberite taster Windows na tastaturi i potražite **Windows PowerShell** i izaberite **Pokreni kao administrator**.
+   1. U PowerShell prozoru koji se otvori unesite `Install-Module AzureAD`.
+2. Uvezi tri modula.
+    1. U prozoru PowerShell unesite `Install-Module -Name Az.Accounts` i sledite korake. 
+    1. Ponovite za `Install-Module -Name Az.Resources` i `Install-Module -Name Az.Storage`.
+
+#### <a name="configuration-steps"></a>Koraci konfiguracije
+
+1. Preuzmite dve PowerShell skripte koje treba da pokrenete sa [GitHub repoa našeg inženjera](https://github.com/trin-msft/byol).
+    1. `CreateSecurityGroups.ps1`
+       - Potrebne su vam *administratorske dozvole* zakupca da biste pokrenuli ovu PowerShell skriptu. 
+       - Ova PowerShell skripta kreira dve bezbednosne grupe na Azure pretplati. Jedan za čitalac grupu i drugi za saradnik grupu i učiniće Microsoft Dataverse uslugu kao vlasnik obe ove bezbednosne grupe.
+       - Izvršite ovu PowerShell skriptu u programu Windows PowerShell tako što ćete obezbediti ID Azure pretplate koji sadrži vaš Azure Data Lake Storage. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
+       - Sačuvajte vrednosti ID-a obe bezbednosne grupe koje generiše ova skripta jer ćemo ih koristiti u skripti `ByolSetup.ps1`.
+       
+        > [!NOTE]
+        > Kreiranje bezbednosne grupe može biti onemogućeno vašem stanaru. U tom slučaju, biće potrebno ručno podešavanje i administrator će Azure AD morati da omogući kreiranje [bezbednosnih grupa](/azure/active-directory/enterprise-users/groups-self-service-management).
+
+    2. `ByolSetup.ps1`
+        - Potrebne su vam *dozvole vlasnika podataka za skladištenje* na nalogu/kontejneru za skladištenje da biste pokrenuli ovu skriptu ili će ova skripta kreirati jednu za vas. Dodeljivanje uloge može biti uklonjeno ručno nakon uspešnog pokretanja skripte.
+        - Ova PowerShell skripta dodaje potrebnu kontrolu pristupa zasnovanu na tolima (RBAC) za Microsoft Dataverse uslugu i sve poslovne Dataverse aplikacije zasnovane na tome. Takođe ažurira Listu kontrole pristupa (ACL) na kontejneru CustomerInsights za bezbednosne grupe kreirane pomoću skripte `CreateSecurityGroups.ps1`. Grupa saradnik će imati rwx *dozvolu* i grupa čitalaca će imati samo *r-x* dozvolu.
+        - Izvršite ovu PowerShell skriptu u programu Windows PowerShell tako što ćete obezbediti ID Azure Data Lake Storage Azure pretplate koji sadrži vaše ime naloga za skladištenje, ime grupe resursa i ID čitalac i saradnik bezbednosne grupe. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
+        - Kopirajte izlaznu nisku nakon uspešnog pokretanja skripte. Izlazna niska izgleda ovako: `https: //DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+        
+2. Unesite izlaznu nisku kopiranu odozgo u **polje identifikatora** dozvola koraka konfiguracije okruženja za Microsoft Dataverse.
+
+:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opcije konfiguracije da biste omogućili deljenje podataka iz sopstvenih sa Azure Data Lake Storage programom Microsoft Dataverse.":::
+
+Customer Insights ne podržava sledeće scenarije deljenja podataka:
+- Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
+- Ako omogućite deljenje podataka pomoću Dataverse, nećete moći da prikažete opcionalne PowerBI ugrađene izveštaje u okruženju "Uvidi kupaca".
+
+### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Uklanjanje postojeće veze sa okruženjem Dataverse
+
+Kada se povezujete sa okruženjem Dataverse, poruka o grešci **Ova CDS organizacija je već priložena drugoj instanci uvida klijenata** znači Dataverse da se okruženje već koristi u okruženju "Uvidi kupaca". Postojeću vezu možete da uklonite kao globalni administrator u okruženju Dataverse. Može da potraje nekoliko sati da se promene nasele.
+
+1. Idite na [Power Apps](https://make.powerapps.com).
+1. Izaberite okruženje od birača okruženja.
+1. Idi na **rešenja**
+1. Deinstalirajte ili izbrišite rešenje pod imenom **Dynamics 365 Customer Insights "Programski dodatak kartice kupca " (pregled)**.
+
+ILI 
+
+1. Otvorite svoju Dataverse okolinu.
+1. Idite na **opciju "Napredne** > **postavkesolutions"**.
+1. Deinstalirajte **CustomerInsightsCustomerCard** rešenje.
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 
-Kada kreirate novo okruženje, možete izabrati da kopirate konfiguraciju iz postojećeg okruženja. 
+Kao administrator, možete odabrati da kopirate konfiguraciju iz postojećeg okruženja kada kreirate novu. 
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Snimak ekrana opcija podešavanja u podešavanjima okruženja.":::
 
@@ -79,12 +139,14 @@ Kopiraju se sledeća podešavanja konfiguracije:
 - Upravljanje modelima
 - Dodela uloga
 
-Sledeći podaci se *ne* kopiraju:
+## <a name="set-up-a-copied-environment"></a>Podešavanje kopirane sredine
+
+Kada kopirate konfiguraciju okruženja, sledeći podaci se *ne* kopiraju:
 
 - Profili klijenata.
 - Akreditivi izvora podataka. Moraćete da dostavite akreditive za svaki izvor podataka i ručno osvežite izvore podataka.
-
 - Izvori podataka iz Common Data Model fascikle i Dataverse upravljanog jezera podataka. Te izvore podataka ćete morati da kreirate ručno, s istim nazivom kao u izvornom okruženju.
+- Tajne veze koje se koriste za izvoz i obogaćivanje. Morate ponovo da uspostavite vezu i da ponovo aktivirate obogaćivanje i izvoz. 
 
 Kada kopirate okruženje, videćete poruku potvrde da je kreirano novo okruženje. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka.
 
@@ -95,6 +157,8 @@ Svi izvori podataka će pokazati status **Potrebni su akreditivi**. Uredite izvo
 Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde ćete pronaći podešavanja iz izvornog okruženja. Uredite ih po potrebi ili izaberite **Pokreni** da biste pokrenuli proces objedinjavanja podataka i kreirali objedinjeni entitet klijenta.
 
 Kada objedinjavanje podataka bude dovršeno, idite na **Mere** i **Segmenti** da osvežite i njih.
+
+Pre nego što ponovo aktivirate izvoz i obogaćivanje, **idite na lokaciju AdminConnections** > **da** biste ponovo povezali veze u novom okruženju.
 
 ## <a name="change-the-owner-of-an-environment"></a>Promena vlasnika okruženja
 
@@ -139,6 +203,9 @@ Kao vlasnik okruženja, možete da izbrišete okruženje kojim upravljate.
 3. Odaberite opciju **Izbriši**. 
 
 4.  Da biste potvrdili brisanje, unesite naziv okruženja i izaberite **Izbriši**.
+
+> [!NOTE]
+> Brisanje okruženja ne uklanja povezivanje sa okruženjem Dataverse. Saznajte kako [da uklonite postojeću vezu sa okruženjem Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

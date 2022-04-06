@@ -1,7 +1,7 @@
 ---
 title: Segmenti u uvidima u ciljnu grupu
 description: Pregled segmenata i način kreiranja i upravljanja njima.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8356000"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508583"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -68,7 +68,9 @@ Sledeća radnja je dostupna kada odaberete segment:
 
 ## <a name="refresh-segments"></a>Osvežavanje segmenata
 
-Možete da osvežite sve segmente odjednom ako izaberete **Osvežite sve** na stranici **Segmenti**, a možete i da osvežiti jedan ili više segmenata kada ih izaberete, pa odaberete **Osveži** iz opcija. Alternativno, možete konfigurisati ponavljajuće osvežavanje u odeljku **Administrator** > **Sistem** > **Raspored**.
+Možete da osvežite sve segmente odjednom ako izaberete **Osvežite sve** na stranici **Segmenti**, a možete i da osvežiti jedan ili više segmenata kada ih izaberete, pa odaberete **Osveži** iz opcija. Alternativno, možete konfigurisati ponavljajuće osvežavanje u odeljku **Administrator** > **Sistem** > **Raspored**. Kada je periodično osvežavanje konfigurisano, primenjuju se sledeća pravila:
+- Svi segmenti sa tipom "Dinamika **·**" ili **"Ekspanzija**" biće automatski osveženi na postavljenom kadentu. Kada se osvežavanje **dovrši, Status** označava da li je bilo problema u osvežavanju segmenta. Poslednje **osveženje prikazuje vreme** poslednjeg uspešnog osvežavanja. Ako dođe do greške, izaberite grešku da biste videli detalje o tome šta se dogodilo.
+- Segmenti sa tipom **"Static** *" neće* biti automatski osveženi. Poslednje **osvežavanje** prikazuje vremensku osu poslednjeg ručnog pokretanje ili osvežavanje statičkih segmenata.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

@@ -1,23 +1,23 @@
 ---
 title: Kreiranje okruženja u usluzi Customer Insights
 description: Koraci za kreiranje okruženja sa licenciranom pretplatom za Dynamics 365 Customer Insights.
-ms.date: 02/24/2022
+ms.date: 03/28/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: MichelleDevaney
-ms.author: midevane
+author: adkuppa
+ms.author: adkuppa
 manager: shellyha
 ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: a538237322615f69f0a5cb43d394275bf79af00b
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354112"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491930"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Kreiranje okruženja u uvidima u ciljnu grupu
 
@@ -83,14 +83,16 @@ Obezbedite sopstveno Microsoft Dataverse okruženje za deljenje podataka (profil
 Povezivanje sa okruženjem Dataverse vam takođe omogućava da unosite [podatke iz lokalni podataka pomoću Power Platform priliva podataka i mrežnih prolaza](data-sources.md#add-data-from-on-premises-data-sources). Takođe možete da [koristite modele za predviđanje tako što ćete](predictions-overview.md?tabs=b2c#out-of-box-models) se povezati sa okruženjem Dataverse.
 
 > [!IMPORTANT]
-> Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
+> 1. Uvidi klijenata i Dataverse moraju da budu u istom regionu da bi omogućili deljenje podataka.
+> 1. Morate imati ulogu globalnog administratora u okruženju Dataverse. Proverite da [Dataverse li je ovo okruženje](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) povezano sa određenim bezbednosnim grupama i uverite se da ste dodati tim bezbednosnim grupama.
+> 1. Postojeće okruženje "Uvidi kupaca" već nije povezano sa tim okruženjem Dataverse. Saznajte kako [da uklonite postojeću vezu sa okruženjem Dataverse](manage-environments.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka sa Microsoft Dataverse automatski omogućenim za nove neto instance.":::
 
-> [!NOTE]
-> Customer Insights ne podržava sledeće scenarije deljenja podataka:
-> - Ako sve podatke sačuvate u sopstvenoj usluzi Azure Data Lake Storage, nećete moći da omogućite deljenje podataka sa Dataverse upravljanim jezerom podataka.
-> - Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
+Više informacija o omogućavanju deljenja podataka sa sopstvenim Microsoft Dataverse potražite u članku Azure Data Lake Storage Povezivanje [sa Microsoft Dataverse](manage-environments.md#connect-to-microsoft-dataverse).
+
+Customer Insights ne podržava sledeće scenarije deljenja podataka:
+- Ako omogućite deljenje podataka sa uslugom Dataverse, nećete moći da [kreirate predviđene ili vrednosti koje nedostaju u entitetu](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>4. korak: Dovršavanje podešavanja
 

@@ -1,7 +1,7 @@
 ---
 title: Obogatite objedinjene profile klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372736"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491976"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
 
@@ -97,5 +97,19 @@ Da biste videli status obogaćivanja
 1. U oknu **Detalji o napretku**, proširite odeljak **Obogaćivanja**. 
 1. Ispod obogaćivanja za koje želite da vidite napredak, izaberite **Vidi detalje**. 
 1. U oknu **Detalji o zadatku**, izaberite **Prikaži detalje** da biste videli procese koji su uključeni u ažuriranje obogaćivanja i njihov status. 
+
+## <a name="enrichment-results"></a>Rezultati obogaćivanja
+
+Nakon završenog trčanja za obogaćivanje, možete pregledati rezultate obogaćivanja.
+
+1. Idite na **Podaci** > **Obogaćivanje**. 
+1. Izaberite bogaćenje o kojem želite informacije.
+
+Sva bogaćenja prikazuju osnovne informacije kao što su broj obogaćenih profila, pregled generisanog entiteta za obogaćivanje i broj obogaćenih profila tokom vremena. Ako je dostupan **, broj kupaca obogaćenih poljem** obezbeđuje dubinsku analizu pokrivenosti svakog obogaćenog polja.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Stranica sa rezultatima obogaćivanja.":::
+
+Neka obogaćivanja takođe pokazuju informacije specifične za vrstu bogaćenja. Više informacija potražite u dokumentaciji za odgovarajuće bogaćenje.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
