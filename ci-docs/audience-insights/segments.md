@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508583"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529556"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
@@ -47,24 +47,30 @@ Postoji više načina za kreiranje novog segmenta:
 
 ## <a name="manage-existing-segments"></a>Upravljanje postojećim segmentima
 
-Idite na stranicu **Segmenti** da biste prikazali sve sačuvane segmente i upravljali njima.
+Idite na stranicu **"Segmenti** " da biste prikazali sve sačuvane segmente i upravljali njima.
 
 Svaki segment predstavljen je redom koji sadrži dodatne informacije o segmentu.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Izabrani segment sa padajućom listom opcija i dostupnim opcijama.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Izabrani segment sa padajućom listom opcija i dostupnim opcijama." lightbox="media/segments-selected-segment.png":::
 
-Sledeća radnja je dostupna kada odaberete segment:
+Prilikom izbora segmenta dostupne su sledeće radnje:
 
 - **Prikaz** detalja segmenta, uključujući trend broja članova, pregled članova segmenta.
+- **Preuzmite** listu članova kao .CSV datoteku.
 - **Uredite** segment da biste promenili njegova svojstva.
 - **Napravite duplikat** segmenta. Možete odabrati da uredite njegova svojstva ili jednostavno sačuvate duplikat.
 - **Osvežite** segment tako da uključuje najnovije podatke.
-- **Aktivirajte** ili **Deaktivirajte** segment. Segmenti imaju dva moguća stanja - aktivno ili neaktivno. Ova stanja dobro dođu prilikom uređivanja segmenta. Za neaktivne segmente definicija segmenta postoji, ali još uvek ne sadrži klijente. Kada aktivirate segment, njegovo stanje se menja iz „neaktivan“ u „aktivan“ i on počinje da traži klijente koji odgovaraju definiciji segmenta. Ako je [zakazano osvežavanje](system.md#schedule-tab) konfigurisano, neaktivni segmenti imaju **Status** naveden kao **Preskočeno**, što ukazuje da osvežavanje nije ni pokušano. Kada se aktivira neaktivni segment, osvežiće se i biće uključen u zakazana osvežavanja.
+- **Aktivirajte** ili **Deaktivirajte** segment. Za neaktivne segmente definicija segmenta postoji, ali još uvek ne sadrži klijente. Aktivni segment traži kupce koji se podudaraju sa definicijom segmenta. Ako je [zakazano osvežavanje](system.md#schedule-tab) konfigurisano, neaktivni segmenti imaju **Status** naveden kao **Preskočeno**, što ukazuje da osvežavanje nije ni pokušano. Kada se aktivira neaktivni segment, osvežiće se i biće uključen u zakazana osvežavanja.
   Alternativno, možete da koristite funkcionalnost **Isplaniraj za kasnije** u padajućoj listi **Aktiviraj/Deaktiviraj** da navedete budući datum i vreme za aktivaciju i deaktivaciju određenog segmenta.
+- **[Pronađite slične](find-similar-customer-segments.md)** kupce iz segmenta.
 - **Preimenujte** segment.
+- **Oznaka**[za upravljanje oznakama](work-with-tags-columns.md#manage-tags) za segment.
 - **Preuzmite** listu članova kao .CSV datoteku.
 - **Upravljanje izvozima** da biste videli segment povezan sa izvozom i upravljali njime. [Saznajte više o izvozima.](export-destinations.md)
 - **Izbrišite** segment.
+- **Kolone** za [prilagođavanje kolona](work-with-tags-columns.md#customize-columns) koje se prikazuju.
+- **Filtriranje** po [oznakama](work-with-tags-columns.md#filter-on-tags).
+- **Pretražite ime** za pretraživanje po imenu segmenta.
 
 ## <a name="refresh-segments"></a>Osvežavanje segmenata
 

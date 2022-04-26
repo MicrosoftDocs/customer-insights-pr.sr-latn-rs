@@ -1,37 +1,36 @@
 ---
 title: Kreiranje segmenata pomoću alatke za pravljenje segmenata
 description: Napravite segmente klijenata da biste ih grupisali na osnovu različitih atributa.
-ms.date: 10/18/2021
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segments
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 6fa6f0738bf7fba94b2fb84a70ea17483aae8dac
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 1a28289ecb740ab6cdfa603b2cd66376e7e8b576
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354572"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529602"
 ---
 # <a name="create-segments"></a>Kreiranje segmenata
 
-Definišite složene filtere oko jedinstvenog entiteta klijenta i sa njim povezanih entiteta. Svaki segment nakon obrade kreira skup korisničkih zapisa koje možete da izvoziti i za koje možete da preduzimate neke korake. Segmentima se upravlja na stranici **Segmenti**. Možete da [kreirate nove segmente](#create-a-new-segment) pomoću alatke za pravljenje segmenata ili da [kreirate brze segmente](#quick-segments) iz drugih oblasti aplikacije. 
+Definišite složene filtere oko jedinstvenog entiteta klijenta i sa njim povezanih entiteta. Svaki segment nakon obrade kreira skup korisničkih zapisa koje možete da izvoziti i za koje možete da preduzimate neke korake. Segmentima se upravlja na stranici **Segmenti**. Možete da [kreirate nove segmente](#create-a-new-segment) pomoću alatke za pravljenje segmenata ili da [kreirate brze segmente](#quick-segments) iz drugih oblasti aplikacije.
 
 > [!TIP]
-> - Brzi segmenti su podržani samo u okruženjima za **individualne klijente**.    
-> - Segmenti zasnovani na **individualnim klijentima** automatski uključuju dostupne kontakt informacije za članove segmenta. U okruženjima za **poslovne naloge**, segmenti se zasnivaju na nalozima (preduzeća ili podružnice). Da biste uključili kontakt informacije u segment, koristite funkcionalnost **Atributi projekta** u alatki za pravljenje segmenata.
->    - Uverite se da su izvori podataka kontakta [semantički mapirani u entitet ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+> - Brzi segmenti su podržani samo u okruženjima za **individualne klijente**.
+> - Segmenti zasnovani na **individualnim klijentima** automatski uključuju dostupne kontakt informacije za članove segmenta. U okruženjima za **poslovne naloge**, segmenti se zasnivaju na nalozima (preduzeća ili podružnice). Da biste uključili kontakt informacije u segment, koristite funkcionalnost **Atributi projekta** u alatki za pravljenje segmenata. Uverite se da su izvori podataka kontakta [semantički mapirani u entitet ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
 
 ## <a name="segment-builder"></a>Alatka za pravljenje segmenata
 
-Sledeća slika ilustruje različite aspekte alatke za pravljenje segmenata. Prikazuje segment koji rezultira grupom klijenata. Klijenti su naručivali robu u određenom vremenskom okviru i prikupljali nagradne bodove ili trošili određenu sumu novca. 
+Sledeća slika ilustruje različite aspekte alatke za pravljenje segmenata. Prikazuje segment koji rezultira grupom klijenata. Klijenti su naručivali robu u određenom vremenskom okviru i prikupljali nagradne bodove ili trošili određenu sumu novca.
 
 :::image type="content" source="media/segment-builder-overview.png" alt-text="Elementi alatke za kreiranje segmenata." lightbox="media/segment-builder-overview.png":::
 
@@ -65,11 +64,11 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
 
 1. Na stranici za pravljenje segmenata definišete ili sastavljate pravila. Pravilo se sastoji od jednog ili više uslova koji definišu skup klijenata.
 
-1. U odeljku **Rule1**, odaberite atribut entiteta prema kome želite da filtrirate klijente. Postoje dva načina izbora atributa: 
+1. U odeljku **Pravilo1** odaberite atribut entiteta po kojem želite da filtrirate kupce. Postoje dva načina izbora atributa:
    - Pregledajte listu dostupnih entiteta i atributa u oknu **Dodaj u pravilo** i izaberite ikonu **+** pored atributa za dodavanje. Odaberite da li želite da dodate atribut postojećem pravilu ili da ga koristite za kreiranje novog pravila.
    - Unesite naziv atributa u odeljak pravila da biste videli odgovarajuće predloge.
 
-1. Odaberite operatore kako biste naveli podudarne vrednosti uslova. Atribut može imati jedan od četiri tipa podataka kao vrednost: numerički, niz, datum ili Bulov. U zavisnosti od tipa podataka atributa, različiti operatori su dostupni za određivanje uslova. Za segmente sa poslovnim nalozima, na raspolaganju su dva posebna operatera za uključivanje potencijalnih hijerarhija između unetih naloga. Koristite operatore *podređeno za* i *nadređeno za* da biste uključili povezane naloge. 
+1. Odaberite operatore kako biste naveli podudarne vrednosti uslova. Atribut može imati jedan od četiri tipa podataka kao vrednost: numerički, niz, datum ili Bulov. U zavisnosti od tipa podataka atributa, različiti operatori su dostupni za određivanje uslova. Za segmente sa poslovnim nalozima, na raspolaganju su dva posebna operatera za uključivanje potencijalnih hijerarhija između unetih naloga. Koristite operatore *podređeno za* i *nadređeno za* da biste uključili povezane naloge.
 
 1. Izaberite **Dodaj uslov** za dodavanje više uslova u pravilo. Da biste kreirali pravilo u okviru trenutnog pravila, izaberite **Dodaj potpravilo**.
 
@@ -77,7 +76,7 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
 
    :::image type="content" source="media/relationship-path.png" alt-text="Potencijalna putanja relacija pri kreiranju pravila zasnovanog na entitetu mapiranom u jedinstveni entitet klijenta.":::
 
-   Na primer, entitet *eCommerce_eCommercePurchases* na snimku ekrana ima četiri opcije za mapiranje na entitet *Klijent*: 
+   Na primer, entitet *eCommerce_eCommercePurchases* na snimku ekrana ima četiri opcije za mapiranje na entitet *Klijent*:
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > Klijent
    - eCommerce_eCommercePurchases > Klijent
    - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klijent
@@ -101,11 +100,11 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
       - **Presek** preklapa dve grupe. Samo podaci koji *jesu zajednički* obema grupama ostaju u objedinjenoj grupi.
       - **Osim** kombinuje dve grupe. Čuvaju se samo podaci u grupi A koji *nisu zajednički* sa podacima u grupi B.
 
-1. Podrazumevano, segmenti generišu izlazni entitet koji sadrži sve atribute profila klijenata koji odgovaraju definisanim filterima. Ako se segment zasniva na drugim entitetima osim na entitetu *Klijent*, izlaznom entitetu možete dodati više atributa iz tih entiteta. Izaberite **Atributi projekta** da biste odabrali atribute koji će biti dodati izlaznom entitetu. 
+1. Podrazumevano, segmenti generišu izlazni entitet koji sadrži sve atribute profila klijenata koji odgovaraju definisanim filterima. Ako se segment zasniva na drugim entitetima osim na entitetu *Klijent*, izlaznom entitetu možete dodati više atributa iz tih entiteta. Izaberite **Atributi projekta** da biste odabrali atribute koji će biti dodati izlaznom entitetu.
 
    > [!IMPORTANT]
    > Za segmente zasnovane na poslovnim nalozima, detalji o jednom ili više kontakata svakog naloga iz entiteta *ContactProfile* moraju biti uključeni u segment da bi se omogućili aktiviranje tog segmenta ili izvoz na odredišta za koja su potrebne kontakt informacije. Više informacija o entitetu *ContactProfile* potražite u članku [Semantička mapiranja](semantic-mappings.md).
-   > Uzorak izlaza za segment zasnovan na poslovnim kontaktima sa projektovanim atributima kontakata može da izgleda ovako: 
+   > Uzorak izlaza za segment zasnovan na poslovnim kontaktima sa projektovanim atributima kontakata može da izgleda ovako:
    >
    > |ID  |Naziv naloga  |Prihod  |Ime kontakta  | Uloga kontakta|
    > |---------|---------|---------|---------|---|
@@ -117,14 +116,16 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
 
    > [!NOTE]
    > - **Atributi projekta** funkcioniše samo za entitete koji imaju odnos jedan prema više sa entitetom klijenta. Na primer, jedan klijent može imati više pretplata.
-   > - Ako je atribut koji želite da projektujete udaljen više od jednog koraka od entiteta *Klijent*, kako je definisano relacijom, taj atribut treba koristiti u svakom pravilu upita segmenta koji pravite. 
-   > - Ako je atribut koji želite da projektujete udaljen samo jedan korak od entiteta *Klijent*, taj atribut ne treba biti prisutan u svakom pravilu upita segmenta koji pravite. 
+   > - Ako je atribut koji želite da projektujete udaljen više od jednog koraka od entiteta *Klijent*, kako je definisano relacijom, taj atribut treba koristiti u svakom pravilu upita segmenta koji pravite.
+   > - Ako je atribut koji želite da projektujete udaljen samo jedan korak od entiteta *Klijent*, taj atribut ne treba biti prisutan u svakom pravilu upita segmenta koji pravite.
    > - **Projektovani atributi** uzimaju se u obzir kada se koriste operatori skupova.
 
-1. Pre nego što sačuvate i pokrenete segment, izaberite **Izmeni detalje** pored naziva segmenta. Navedite naziv svog segmenta i ažurirajte predloženi **Naziv izlaznog entiteta** za segment. U segment možete dodati i opis.
+1. Izaberite **uredi detalje** pored segmenta bez naslova. Navedite naziv svog segmenta i ažurirajte predloženi **Naziv izlaznog entiteta** za segment. Opcionalno, dodajte opis [i](work-with-tags-columns.md#manage-tags) oznake segmentu.
+
+   :::image type="content" source="media/segments_edit_details.png" alt-text="Dijalog &quot;Uređivanje detalja&quot;.":::
 
 1. Izaberite **Pokreni** da biste sačuvali segment, aktivirajte ga i počnite sa obradom segmenta na osnovu svih pravila i uslova. U suprotnom, biće sačuvan kao neaktivan segment.
-   
+
 1. Izaberite **Nazad na segmente** da biste se vratili na stranicu **Segmenti**.
 
 1. Segment se podrazumevano kreira kao dinamički segment. To znači da se segment osvežava tokom osvežavanja sistema. Da biste [zaustavili automatsko osvežavanje](segments.md#manage-existing-segments), izaberite segment, pa odaberite opciju **Neka bude statički**. Statički segmenti se mogu [osvežiti ručno](segments.md#refresh-segments) u bilo kom trenutku.
@@ -132,7 +133,7 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
 > [!TIP]
 > - Alatka za pravljenje segmenata neće predlagati važeće vrednosti entiteta prilikom postavljanja operatora za uslove. Možete da odete na **Podaci** > **Entiteti** i da preuzmite podatke entiteta da biste videli koje su vrednosti dostupne.
 > - Uslovi zasnovani na datumima vam omogućavaju prebacivanje između fiksnih datuma i promenljivog vremenskog perioda.
-> - Ako imate više pravila za segment, pravilo koje uređujete ima vertikalnu plavu liniju pored sebe. 
+> - Ako imate više pravila za segment, pravilo koje uređujete ima vertikalnu plavu liniju pored sebe.
 > - Pravila i uslove možete premestiti na druga mesta u definiciji segmenta. Izaberite [...] pored pravila ili uslova i odaberite kako i gde da ga premestite.
 > - Kontrole **Opozovi** i **Ponovi** na komandnoj traci vam omogućavaju da vratite promene.
 
@@ -153,10 +154,9 @@ Brzi segmenti vam omogućavaju brzu izgradnju jednostavnih segmenata pomoću jed
 
 4. Sistem će vam pružiti **Procenjenu veličinu segmenta**. Možete odabrati da li da generišete segment koji ste definisali ili da ga prvo pregledate kako biste dobili drugu veličinu segmenta.
 
-    > [!div class="mx-imgBorder"]
-    > ![Naziv i procena za brzi segment.](media/quick-segment-name.png "Naziv i procena za brzi segment")
+   :::image type="content" source="media/quick-segment-name.png" alt-text="Naziv i procena za brzi segment.":::
 
-5. Navedite **Naziv** za segment. Opcionalno, navedite **Ime za prikaz**.
+5. Navedite **ime** i **ime izlaznog entiteta** za segment. Opcionalno, dodajte [oznake](work-with-tags-columns.md#manage-tags).
 
 6. Izaberite **Sačuvaj** da biste kreirali segment.
 

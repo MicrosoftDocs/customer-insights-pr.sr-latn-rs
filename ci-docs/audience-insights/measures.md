@@ -1,12 +1,12 @@
 ---
 title: Razumevanje i upravljanje merama
 description: Saznajte kako mere pomažu u analizi i odražavanju performansi vašeg poslovanja.
-ms.date: 02/28/2022
+ms.date: 03/24/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measures
@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: c46fcc3baba1d6c92c2c0fe459a62277343cc0e4
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: ef10f480086ccac4fa5c6c58818e35ecae67532c
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359804"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529694"
 ---
 # <a name="measures-overview"></a>Pregled mera
 
@@ -27,7 +27,7 @@ Mere vam pomažu da bolje razumete ponašanje klijenata i poslovne rezultate. On
 
 Mere se kreiraju pomoću [izrade mera](measure-builder.md), platforme za upite podataka sa različitim operatorima i jednostavnim opcijama mapiranja. Omogućava vam da filtrirate podatke, grupišete rezultate, otkrivate [putanje relacija između entiteta](relationships.md) i pregledate izlaz. Unapred definisane [predloške možete koristiti](measure-templates.md) za efikasno konfigurisanje najčešće korišćenih mera.
 
-Koristite kreator mera za planiranje poslovnih aktivnosti tako što ćete potražiti podatke o klijentima i izvući uvide. Na primer, kreiranje mere *ukupna potrošnja po klijentu* i *ukupan povraćaj po klijentu* pomaže u identifikovanju grupe klijenata sa visokom potrošnjom, ali i visokim povraćajem. Segment možete [kreirati na osnovu](segments.md) ovih mera da biste disk jedinicu sledeće najbolje radnje. 
+Koristite kreator mera za planiranje poslovnih aktivnosti tako što ćete potražiti podatke o klijentima i izvući uvide. Na primer, kreiranje mere *ukupna potrošnja po klijentu* i *ukupan povraćaj po klijentu* pomaže u identifikovanju grupe klijenata sa visokom potrošnjom, ali i visokim povraćajem. Segment možete [kreirati na osnovu](segments.md) ovih mera da biste disk jedinicu sledeće najbolje radnje.
 
 ## <a name="manage-your-measures"></a>Upravljanje merama
 
@@ -35,18 +35,17 @@ Spisak mera možete pronaći na stranici **Mere**.
 
 Pronaći ćete informacije o tipu mere, autoru, datumu nastanka, statusu i stanju. Kada na listi izaberete meru, možete da pregledate izlaz i preuzmete CSV datoteku.
 
-Da biste istovremeno osvežili sve mere, izaberite **Osvežite sve** bez izbora određene mere.
+:::image type="content" source="media/measures-actions.png" alt-text="Radnje za upravljanje jedinstvenim merama."lightbox="media/measures-actions.png":::
 
-:::image type="content" source="media/measure-actions.png" alt-text="Radnje za upravljanje jedinstvenim merama.":::
+Prilikom izbora mere dostupne su sledeće radnje:
 
-Izaberite meru sa liste za sledeće opcije:
-
-- Izaberite naziv mere da biste videli njene detalje.
 - **Uredite** konfiguraciju mere.
-- **Osvežite** meru na osnovu najnovijih podataka.
+- **Dupliraj** meru. Možete odabrati da uredite njegova svojstva ili jednostavno sačuvate duplikat.
+- **Osvežite** meru na osnovu najnovijih podataka. Da biste istovremeno osvežili sve mere, izaberite sve mere, a zatim **osvežite**.
 - **Preimenujte** meru.
-- **Izbrišite** meru.
 - **Aktivirajte** ili **Deaktivirajte**. Neaktivne mere se neće osvežavati tokom [zakazanog osvežavanja](system.md#schedule-tab).
+- **Oznaka**[za upravljanje oznakama](work-with-tags-columns.md#manage-tags) za segment.
+- **Izbrišite** meru.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

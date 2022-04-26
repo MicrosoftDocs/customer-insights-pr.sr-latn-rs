@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Istražite uvide u ciljnu grupu
           href: audience-insights/home.md
+        - name: Rad sa oznakama i kolonama
+          href: audience-insights/work-with-tags-columns.md
         - name: Rad sa poslovnim nalozima
           href: audience-insights/work-with-business-accounts.md
     - name: Izvori podataka
