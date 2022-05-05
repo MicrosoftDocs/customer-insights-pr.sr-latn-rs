@@ -1,39 +1,41 @@
 ---
-title: Pregled proizvoda
+title: Dynamics 365 Customer Insights pregled proizvoda
 author: m-hartmann
-description: Dobijte pregled za Dynamics 365 Customer Insights i njegove mogućnosti.
+description: Nabavite pregled za i njegove Dynamics 365 Customer Insights glavne funkcije.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560450"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641917"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled proizvoda za Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je deo Microsoft platforme za podatke o klijentima (CDP) koja pomaže u pružanju personalizovanih korisničkih iskustava. Mogućnosti platforme pružaju uvid u to ko su vaši klijenti i kako stupaju u interakciju s vašom platformom. Objedinite podatke o klijentima iz više izvora da biste dobili jedinstveni prikaz klijenata.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je Microsoftova platforma za podatke o korisnicima (CDP) koja pomaže u isporuci personalizovanih korisničkih iskustava. Aplikacija pruža holistički pogled na kupce sa nenadmašnim vremenom na uvid. Steknite najsveobuhvatniji prikaz svojih klijenata ujedinjavajući podatke klijenata sa operativnim i IoT podacima u realnom vremenu. Obogatite profile klijenata izvorima podataka prvog i nezavisnog proizvođača. 
 
-[Uvidi o korisnicima](audience-insights/overview.md) vam pomažu da transformišete svoje poslovanje u organizaciju usmerenu na klijenta. Stručnjaci za marketing, prodaju i usluge imaju uvid potreban za personalizaciju iskustava. Povežite podatke iz transakcionih, bihejvioralnih i opservacionih izvora kako biste kreirali sveobuhvatan prikaz klijenta. Pogledajte rezultate brže pomoću CDP-a dizajniranog da pruži uvide na koje se može reagovati. 
-
-[Uvid u angažovanje bio](engagement-insights/overview.md) je mogućnost pregleda u "Uvidima klijenata" koja se fokusira na prikupljanje web i mobilnih događaja radi dodatnih uvida. Pregled je završen 15. februara 2022. godine.
+Uvidi klijenata vam pomažu da pretvorite svoje poslovanje u organizaciju centričnog kupca tako što osnažuje marketinške, prodajne i uslužne profesionalce da prilagode interakcije 1:1 na skali. Integracije ključa sa korporacijom Microsoft i aplikacijama nezavisnih proizvođača mogu se koristiti za aktiviranje uvida u realnom vremenu da bi se pokretale smislene radnje.
  
-## <a name="choose-a-capability"></a>Odaberite mogućnost
+Povežite podatke iz transakcionih, ponašanja i demografskih izvora podataka da biste kreirali prikaze klijenata od 360 stepeni. Izvedeni uvidi van okvira sa unapred izgrađenim AI modelima ili brzo grade, testiraju i primenjuju prilagođene AI/ML modele koristeći napredna analitička rešenja u neograničenom obimu.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Customer Insights stranica koja vam omogućava da pređete na uvide o korisnicima ili uvide o angažmanu.":::
-
-Kako da odaberete mogućnost
-
-1. U oknu za navigaciju izaberite **Sve aplikacije** da biste otvorili prozor **Odabir fokusa**.
-1. Izaberite **Idi sada** za navigaciju do mogućnosti po vašem izboru.
+Održavajte potpunu kontrolu nad podacima klijenata da biste obezbedili najviši nivo upravljanja podacima i usaglašenosti sa samouslugom, enterprise ocenom CDP ugrađenom na Microsoft Azure. Podržite Opštu uredbu o zaštiti podataka (GDPR) i druge zakonodavne zahteve i industrijske standarde kroz ugrađene alatke za privatnost, bezbednost i upravljanje i upravljanje.
 
 ## <a name="pricing-and-licensing"></a>Vodič o cenama i licencama
+Customer Insights je licenciran po zakupcu i uključuje mogućnosti poslovanja i potrošača (B2C) i poslovnih (B2B). Možete kupiti dodatni kapacitet pomoću licenci dodataka da biste povećali broj profila i naloga.
 
-Usluga Customer Insights je licencirana po zakupcu i obuhvata više mogućnosti. Možete kupiti dodatni kapacitet i licencu za povećanje podrazumevane kvote. 
 - [Pregled određivanja cena](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Kapacitet i prava: [Vodič za licenciranje sistema Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Microsoft Web lokacija za količinsko licenciranje](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Isprobajte "Uvide kupaca" i prvi koraci
+
+Započnite danas [besplatnu probnu vožnju korisničkog](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) uvida da biste testirali aplikaciju sopstvenim podacima o klijentima. [Saznajte kako možete brzo da pristupite i istražite mnoge ključne funkcije aplikacije](trial-signup.md). 
+
+Pregledajte istaknute [resurse za učenje](https://dynamics.microsoft.com/ai/customer-insights/resources/), uključujući analitičarske izveštaje, vebinare na zahtev i priče o klijentima.
+
+Saznajte kako možete da izgradite dublje razumevanje svojih klijenata pomoću našeg vodiča [za početak](get-started.md).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -7,12 +7,12 @@ ms.date: 10/05/2021
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: fa6ea6e96de3d382c1426b383a057c8ce4f67ccf
-ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.openlocfilehash: 8fcc1c97be87afe942aa3b5e23d1eb68008aa873
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 03/17/2022
-ms.locfileid: "8456015"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641871"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Započnite nakon kupovine usluge Customer Insights
 
@@ -34,9 +34,8 @@ Iskustvo pri prvom pokretanju pomaže vam da odaberete početni fokus sa uslugom
 
 1. Idite na [URL adresu Customer Insights aplikacije](https://home.ci.ai.dynamics.com).
 1. Prijavite se pomoću poslovnog ili školskog naloga. 
-1. Prihvatite uslove usluge i podesite preference sadržaja za vašu instancu usluge Customer Insights.
-1. Odaberite mogućnost na koju ćete se fokusirati dok ne dođete do početne stranice za izabranu mogućnost.
+1. Složite se sa uslovima korišćenja usluge i postavite željene postavke sadržaja za okruženje "Uvidi kupaca".
 
 ## <a name="create-your-own-environment"></a>Kreirajte sopstveno okruženje
 
-Nakon prvog prijavljivanja videćete okruženje sa primerima podataka. Možete koristiti te podatke za istraživanje funkcija i upoznavanje sa aplikacijom. Da biste koristili sopstvene podatke, morate da [kreirate okruženje](/dynamics365/customer-insights/audience-insights/create-environment).
+Nakon prvog prijavljivanja videćete okruženje sa primerima podataka. Možete koristiti te podatke za istraživanje funkcija i upoznavanje sa aplikacijom. Da biste koristili sopstvene podatke, morate da [kreirate okruženje](create-environment.md).
