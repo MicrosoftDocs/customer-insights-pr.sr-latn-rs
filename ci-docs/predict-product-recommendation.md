@@ -1,25 +1,25 @@
 ---
 title: Predviđanje preporuke proizvoda
 description: Predvidite proizvode koje će klijent verovatno kupiti ili stupiti u interakciju sa njima.
-ms.date: 01/13/2022
+ms.date: 05/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: fe6c0e8ba8236243682a4105535a0026c4343c3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9b3e60c49d294d031f43ef0594cb69707bb64019
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643836"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762749"
 ---
 # <a name="product-recommendation-prediction"></a>Predviđanje preporuke proizvoda
 
 Model preporuke proizvoda kreira skupove prediktivnih preporuka proizvoda. Preporuke se zasnivaju na prethodnom ponašanju kupovine i klijentima sa sličnim obrascima kupovine. Nova predviđanja za preporuke proizvoda možete da kreirate na stranici **Obaveštavanje** > **Predviđanja**. Izaberite **Moja predviđanja** da vidite druga predviđanja koja ste kreirali.
 
-Preporuke za proizvode mogu da podležu lokalnim zakonima i propisima i očekivanjima klijenata, pri čemu model nije napravljen da bi ih posebno uzeo u obzir.  Kao korisnik ove mogućnosti predviđanja, **morate pregledati preporuke pre nego što ih dostavite svojim klijentima** kako biste bili sigurni da se pridržavate svih važećih zakona i propisa i očekivanja klijenata u vezi sa onim što možete preporučiti. 
+Preporuke za proizvode mogu da podležu lokalnim zakonima i propisima i očekivanjima klijenata, pri čemu model nije napravljen da bi ih posebno uzeo u obzir.  Kao korisnik ove mogućnosti predviđanja, **morate pregledati preporuke pre nego što ih dostavite svojim klijentima** kako biste bili sigurni da se pridržavate svih važećih zakona i propisa i očekivanja klijenata u vezi sa onim što možete preporučiti.
 
 Pored toga, izlaz ovog modela će vam dati preporuke na osnovu ID-a proizvoda. Vaš mehanizam isporuke moraće da mapira predviđene ID-ove proizvoda u odgovarajući sadržaj za vaše klijente kako bi uzeo u obzir lokalizaciju, slikovni sadržaj i drugi sadržaj ili ponašanje specifično za preduzeće.
 
@@ -33,29 +33,31 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 
 - Poslovno znanje za razumevanje različitih vrsta proizvoda za vaše poslovanje i kako klijenti komuniciraju s njima. Podržavamo preporučivanje proizvoda koje su prethodno kupili vaši klijenti ili preporuke za nove proizvode.
 
+- Okruženje mora biti konfigurisano za pojedinačne potrošače **primarne** ciljne korisnici.
+
 - Podaci o transakcijama, kupovinama i njihova istorija:
-    - Identifikatori transakcija za razlikovanje kupovina ili transakcija.
-    - Identifikatori klijenata za mapiranje transakcija na klijente.
-    - Datumi događaja transakcija koji navode datume kada se transakcija dogodila.
-    - Informacije o ID-u proizvoda za transakciju.
-    - (Opcionalno) Entitet podataka kataloga proizvoda koji koristi filter proizvoda.
-    - (Opcionalno) Da li je transakcija povraćaj ili ne.
-    - Šema semantičkih podataka zahteva sledeće informacije:
-        - **ID transakcije:** Jedinstveni identifikator kupovine ili transakcije.
-        - **Datum transakcije:** Datum kupovine ili transakcije.
-        - **Vrednost transakcije:** Numerička vrednost kupovine ili transakcije.
-        - **Jedinstveni ID proizvoda:** ID proizvoda ili usluge kupljene ako su vaši podaci na nivou stavke porudžbine.
-        - (Opcionalno) **Kupovina ili povraćaj:** Logičko polje gde je vrednost *tačno* identifikuje da je transakcija bila povraćaj. Ako podaci o kupovini ili povraćaju ne navode model, a **Vrednost transakcije** je negativna, koristićemo i ove podatke za zaključivanje povraćaja.
+  - Identifikatori transakcija za razlikovanje kupovina ili transakcija.
+  - Identifikatori klijenata za mapiranje transakcija na klijente.
+  - Datumi događaja transakcija koji navode datume kada se transakcija dogodila.
+  - Informacije o ID-u proizvoda za transakciju.
+  - (Opcionalno) Entitet podataka kataloga proizvoda koji koristi filter proizvoda.
+  - (Opcionalno) Da li je transakcija povraćaj ili ne.
+  - Šema semantičkih podataka zahteva sledeće informacije:
+    - **ID transakcije:** Jedinstveni identifikator kupovine ili transakcije.
+    - **Datum transakcije:** Datum kupovine ili transakcije.
+    - **Vrednost transakcije:** Numerička vrednost kupovine ili transakcije.
+    - **Jedinstveni ID proizvoda:** ID proizvoda ili usluge kupljene ako su vaši podaci na nivou stavke porudžbine.
+    - (Opcionalno) **Kupovina ili povraćaj:** Logičko polje gde je vrednost *tačno* identifikuje da je transakcija bila povraćaj. Ako podaci o kupovini ili povraćaju ne navode model, a **Vrednost transakcije** je negativna, koristićemo i ove podatke za zaključivanje povraćaja.
 - Predložene karakteristike podataka:
-    - Dovoljno istorijskih podataka: Najmanje jedna godina podataka o transakcijama, po mogućnosti dve do tri godine da bi se uključila određena periodičnost.
-    - Više kupovina po klijentu: tri ili više transakcija po ID-u klijenta
-    - Broj klijenata: Najmanje 100 klijenata, po mogućnosti više od 10.000 klijenata. Model neće uspeti sa manje od 100 klijenata.
+  - Dovoljno istorijskih podataka: Najmanje jedna godina podataka o transakcijama, po mogućnosti dve do tri godine da bi se uključila određena periodičnost.
+  - Više kupovina po klijentu: tri ili više transakcija po ID-u klijenta
+  - Broj klijenata: Najmanje 100 klijenata, po mogućnosti više od 10.000 klijenata. Model neće uspeti sa manje od 100 klijenata.
 
 > [!NOTE]
+>
 > - Model zahteva istoriju transakcija vaših klijenata. Definicija transakcije je prilično fleksibilna. Svi podaci koji opisuju interakciju korisnika i proizvoda mogu da posluže kao ulaz. Na primer, kupovina proizvoda, pohađanje predavanja ili prisustvovanje događaju.
 > - Trenutno se može konfigurisati samo jedan entitet istorije transakcija. Ako postoji više entiteta nabavke, sloћite ih Power Query pre unošenja podataka.
 > - Ako su detalji porudžbine i naloga različiti entiteti, pridružite im se pre upotrebe u modelu. Model ne radi samo sa ID-om porudžbine ili ID-om priznanice u entitetu.
-
 
 ## <a name="create-a-product-recommendation-prediction"></a>Kreiranje predviđanja preporuke proizvoda
 
@@ -76,7 +78,7 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 ### <a name="define-product-recommendation-configuration"></a>Definišite konfiguraciju preporuka proizvoda
 
 1. Podesite **Broj proizvoda** koji želite da preporučite klijentu. Ova vrednost zavisi od toga kako način isporuke popunjava podatke. Ako možete da preporučite tri proizvoda, podesite ovu vrednost u skladu sa tim.
-   
+
    >[!TIP]
    > U svakom trenutku možete **da izaberete** opciju "Sačuvaj radnu verziju" da biste sačuvali predviđanje kao radnu verziju. Radnu verziju predviđanja ćete pronaći na kartici **Moja predviđanja**.
 
@@ -98,14 +100,13 @@ Ako ste zainteresovani za isprobavanje ove funkcije, ali nemate podatke kako bis
 
    :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tip aktivnosti podešavanja stranice.":::
 
-1. Nakon mapiranja aktivnosti na odgovarajući semantički tip, izaberite **Sledeći** za nastavak 
- 
+1. Nakon mapiranja aktivnosti na odgovarajući semantički tip, kliknite na dugme "Dalje" **da biste** nastavili.
+
 1. Mapirajte semantičke atribute u polja koja su potrebna za pokretanje modela.
 
 1. Izaberite stavku **Sačuvaj**.
 
 1. Izaberite **Sledeće**.
-
 
 ### <a name="configure-product-filters"></a>Konfigurisanje filtera za proizvode
 
@@ -113,11 +114,11 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za tip predviđanja ko
 
 1. U koraku **Dodavanje informacija o proizvodu**, dodajte katalog proizvoda sa informacijama za svaki proizvod. Mapirajte potrebne informacije i izaberite **Sledeće**.
 
-3. U koraku **Filteri za proizvode**, odaberite između sledećih opcija.
+1. U koraku **Filteri za proizvode**, odaberite između sledećih opcija.
 
-   * **Bez filtera**: Koristite sve proizvode u predviđanju preporuke za proizvod.
+   - **Bez filtera**: Koristite sve proizvode u predviđanju preporuke za proizvod.
 
-   * **Definišite određene filtere proizvoda**: Koristite određene proizvode u preporuci predviđanja za proizvod.
+   - **Definišite određene filtere proizvoda**: Koristite određene proizvode u preporuci predviđanja za proizvod.
 
 1. Izaberite **Sledeće**.
 
@@ -126,7 +127,7 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za tip predviđanja ko
    :::image type="content" source="media/product-filters-sidepane.png" alt-text="Bočno okno prikazuje atribute u entitetu kataloga proizvoda da biste ih izabrali za filtere proizvoda.":::
 
 1. Odaberite da li želite da filter proizvoda koristi konektore **i** ili **ili** za logičko kombinovanje izbora atributa iz kataloga proizvoda.
-   
+
    :::image type="content" source="media/product-filters-sample.png" alt-text="Primer konfiguracije filtera proizvoda u kombinaciji sa logičkim I konektorima.":::
 
 1. Izaberite **Sledeće**.
@@ -150,7 +151,7 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za tip predviđanja ko
 1. Izaberite predviđanje koje želite da pregledate.
    - **Naziv predviđanja:** Naziv predviđanja koji ste naveli prilikom njegovog kreiranja.
    - **Vrsta predviđanja:** Tip modela koji se koristi za predviđanje
-   - **Izlazni entitet:** Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.    
+   - **Izlazni entitet:** Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
       *Ocena* u izlaznom entitetu je kvantitativna mera preporuke. Model preporučuje proizvode sa višom ocenom u odnosu na proizvode sa nižom ocenom.
    - **Predviđeno polje:** Ovo polje se popunjava samo za neke vrste predviđanja i ne koristi se u predviđanju preporuke za proizvod.
    - **Status:** Trenutni status pokretanja predviđanja.
@@ -171,28 +172,27 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za tip predviđanja ko
             - **A** Model će se smatrati **A** kvalitetom ako je metrika „Uspeh @ K“ bar 10% veća od osnovne vrednosti. 
             - **B** Model će se smatrati **B** kvalitetom ako je metrika „Uspeh @ K“ od 0% do 10% veća od osnovne vrednosti.
             - **C** Model će se smatrati **C** kvalitetom ako je metrika „Uspeh @ K“ manja od osnovne vrednosti.
-               
+
                > [!div class="mx-imgBorder"]
                > ![Pregled rezultata performansi modela.](media/product-recommendation-modelperformance.PNG "Pregled rezultata performansi modela")
             - **Osnovna vrednost**: Model uzima najbolje preporučene proizvode prema broju kupovina kod svih klijenata i koristi naučena pravila identifikovana modelom za kreiranje niza preporuka za klijente. Zatim se predviđanja upoređuju sa najboljim proizvodima, što se izračunava kao broj klijenata koji su kupili proizvod. Ako klijent ima barem jedan proizvod u preporučenim proizvodima koji se takođe nalazi među najpopularnijim kupljenim proizvodima, smatra se delom osnovne vrednosti. Da je 10 od ovih klijenata od ukupno 100 klijenata kupilo preporučeni proizvod, osnovna vrednost bi bila 10%.
             - **Uspeh @ K**: Korišćenjem skupa za validaciju vremenskog perioda transakcija, preporuke se kreiraju za sve klijente i upoređuju se sa skupom za validaciju transakcija. Na primer, u periodu od 12 meseci, 12. mesec može se izdvojiti kao skup podataka za validaciju. Ako model predvidi bar jednu stvar koju biste kupili u 12. mesecu na osnovu onoga što je naučio iz prethodnih 11 meseci, klijent bi povećao metriku „Uspeh @ K“.
-    
+
     1. **Najviše predlagani proizvodi (sa rezultatom):** Pet najboljih proizvoda koji su predviđeni za vaše klijente.
        > [!div class="mx-imgBorder"]
        > ![Grafikon koji prikazuje najboljih 5 preporučenih proizvoda.](media/product-recommendation-topproducts.PNG "Grafikon koji prikazuje najboljih 5 preporučenih proizvoda")
-    
+
     1. **Ključni faktori preporuke:** Model koristi istoriju transakcija klijenata za davanje preporuka za proizvode. Model uči obrasce zasnovane na prošlim kupovinama i pronalazi sličnosti između klijenata i proizvoda. Te sličnosti se zatim koriste za generisanje preporuka za proizvode.
-    Slede faktori koji mogu uticati na preporuke proizvoda koje generiše model. 
-        - **Prošle transakcije**: Model je u prošlosti koristio obrasce kupovine za generisanje preporuka za proizvode. Na primer, model može da preporuči _Surface Arc miša_ ako je neko nedavno kupio _Surface Book 3_ i _Surface olovku_. Model je saznao da su u prošlosti mnogi klijenti kupili _Surface Arc miša_ kada su kupili _Surface Book 3_ i _Surface olovku_.
-        - **Sličnost klijenata**: Preporučeni proizvod u prošlosti su kupovali drugi klijenti koji pokazuju slične obrasce kupovine. Na primer, Jovanu su preporučene _slušalice Surface Headphones 2_ jer su Snežana i Branko nedavno kupili _slušalice Surface Headphones 2_. Model veruje da je Jovan sličan sa Snežanom i Brankom, jer su u oni prošlosti imali slične obrasce kupovine.
-        - **Sličnost proizvoda**: Preporučeni proizvod je sličan ostalim proizvodima koje je klijent prethodno kupio. Model smatra da su dva proizvoda slična ako su kupljeni zajedno ili su ih kupili slični klijenti. Na primer, neko dobije preporuku za _USB memorijski uređaj_ jer je prethodno kupio _adapter USB-C na USB_, a model veruje da je _USB memorijski uređaj_ sličan _adapteru USB-C na USB_ na osnovu istorijskih obrazaca kupovine.
+    Slede faktori koji mogu uticati na preporuke proizvoda koje generiše model.
+        - **Prošle transakcije**: Model je u prošlosti koristio obrasce kupovine za generisanje preporuka za proizvode. Na primer, model može da preporuči *Surface Arc miša* ako je neko nedavno kupio *Surface Book 3* i *Surface olovku*. Model je saznao da su u prošlosti mnogi klijenti kupili *Surface Arc miša* kada su kupili *Surface Book 3* i *Surface olovku*.
+        - **Sličnost klijenata**: Preporučeni proizvod u prošlosti su kupovali drugi klijenti koji pokazuju slične obrasce kupovine. Na primer, Jovanu su preporučene *slušalice Surface Headphones 2* jer su Snežana i Branko nedavno kupili *slušalice Surface Headphones 2*. Model veruje da je Jovan sličan sa Snežanom i Brankom, jer su u oni prošlosti imali slične obrasce kupovine.
+        - **Sličnost proizvoda**: Preporučeni proizvod je sličan ostalim proizvodima koje je klijent prethodno kupio. Model smatra da su dva proizvoda slična ako su kupljeni zajedno ili su ih kupili slični klijenti. Na primer, neko dobije preporuku za *USB memorijski uređaj* jer je prethodno kupio *adapter USB-C na USB*, a model veruje da je *USB memorijski uređaj* sličan *adapteru USB-C na USB* na osnovu istorijskih obrazaca kupovine.
 
         Na svaku preporuku proizvoda utiče jedan ili više ovih faktora. Procenat preporuka u kojima je svaki uticajni faktor igrao ulogu prikazan je na grafikonu. U sledećem primeru, na 100% preporuka su uticale prošle transakcije, 60% sličnost klijenata i 22% sličnost proizvoda. Pređite kursorom preko traka na grafikonu da biste videli tačan procenat doprinosa faktora uticaja.
 
         > [!div class="mx-imgBorder"]
         > ![Ključni faktori za preporuke.](media/product-recommendation-keyrecommendationfactors.png "Ključni faktori za preporuke koje je model naučio za generisanje preporuka za proizvode")
-       
-     
+
    1. **Statistika podataka**: Daje pregled broja transakcija, klijenata i proizvoda koje je model razmatrao. Zasniva se na ulaznim podacima koji su korišćeni za učenje obrazaca i generisanje preporuka za proizvode.
 
       > [!div class="mx-imgBorder"]
@@ -208,6 +208,5 @@ Ponekad su samo određeni proizvodi korisni ili prikladni za tip predviđanja ko
 ## <a name="manage-predictions"></a>Upravljanje predviđanjima
 
 Predviđanja je moguće optimizovati, rešavati, osvežiti ili izbrisati. Pregledajte izveštaj o upotrebljivosti ulaznih podataka da biste saznali kako da predviđanje učinite bržim i pouzdanijim. Još informacija potražite u članku [Upravljanje predviđanjima](manage-predictions.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

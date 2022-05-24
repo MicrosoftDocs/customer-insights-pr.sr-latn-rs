@@ -12,18 +12,18 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b80f07dfa734f4dd762bd711151a7045f24bed7d
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 74c7ff7cda8431c04dd34713becefa7e346331b4
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653585"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740920"
 ---
 # <a name="user-permissions"></a>Korisničke dozvole
 
 Stranica **"Dozvole** " je mesto gde ćete podesiti uloge i dozvole za korišćenje uvida klijenata.
 
-Morate imati administratorske dozvole da biste videli stranicu. Da biste pristupili stranici sa dozvolama, idite na **lokaciju AdminSecurityUsers** > **·** > **·**.
+Morate imati administratorske dozvole da biste videli stranicu. Da biste pristupili stranici sa dozvolama, posetite stranicu "**Administrator bezbednosti** > **·** > **"**.
 
 Postoje tri vrste uloga:
 
@@ -41,7 +41,7 @@ Postoje tri vrste uloga:
 
 - Sve dozvole su dostupne gledaocu.
 - Učitajte i transformišite podatke koristeći stranicu **Izvori podataka**.
-- Popunite odeljke *Objedinjavanje podataka* (**Mapiranje**, **Podudaranje** i **Objedinjavanje**) koji rezultiraju jedinstvenim entitetom profila klijenta.
+- Dovršavanje ***Ujedinjenje** podataka koje rezultira objedinjenim entitetom profila korisnika.
 - Definišite **Relacije** i **Aktivnosti**.
 - Pomoću stranice **Segmenti** kreirajte segmente.
 - Kreirajte mere koristeći stranicu **Mere**.
@@ -69,7 +69,7 @@ Postoje tri vrste uloga:
 
 ## <a name="assign-roles-and-permissions"></a>Dodeljivanje uloga i dozvola
 
-1. Idite na **AdminSecurity** > **·** > **Users***.
+1. Idite na **administratorski** > **bezbednosni** > **Korisnici***.
 
 1. Izaberite **Dodajte korisnike** da biste otvorili okno **Dodavanje/uređivanje dozvola**.
 
@@ -79,7 +79,7 @@ Postoje tri vrste uloga:
 
 ## <a name="view-current-permissions"></a>Prikaz trenutnih dozvola
 
-Posetite lokaciju **AdminSecurityUsers** > **·** > **da** biste videli koji su zadaci uloge trenutno aktivni.
+Posetite lokaciju **"Korisnici** > **administratora** > **bezbednosti** " da biste videli koje dodele uloga su trenutno aktivne.
 
 - Kolona **Tip** određuje jednog korisnika, grupu ili aplikaciju. Sistem podržava pojedinačne korisnike i grupe.
 - Uloge su navedene u koloni **Uloga**.

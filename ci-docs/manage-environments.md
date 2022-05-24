@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643616"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741058"
 ---
 # <a name="manage-environments"></a>Upravljanje okruženjima
 
@@ -113,7 +113,7 @@ Kada se povezujete sa okruženjem Dataverse, poruka o grešci **Ova CDS organiza
 ILI 
 
 1. Otvorite svoju Dataverse okolinu.
-1. Idite na **opciju "Napredne** > **postavkesolutions"**.
+1. Idite na rešenja **za više opcija** > **za postavke**.
 1. Deinstalirajte **CustomerInsightsCustomerCard** rešenje.
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
@@ -127,10 +127,10 @@ Videćete listu svih dostupnih okruženja u vašoj organizaciji, odakle možete 
 Kopiraju se sledeća podešavanja konfiguracije:
 
 - Uneseni/uvezeni izvori podataka
-- Konfiguracija objedinjavanja podataka (mapa, podudaranje, spajanje)
+- Konfiguracija ujedinjenja podataka
 - Segmenti
 - Mere
-- Odnosi
+- Relacije
 - Aktivnosti
 - Indeks pretrage i filtriranja
 - Odredišta za izvoz
@@ -158,7 +158,7 @@ Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde će
 
 Kada objedinjavanje podataka bude dovršeno, idite na **Mere** i **Segmenti** da osvežite i njih.
 
-Pre nego što ponovo aktivirate izvoz i obogaćivanje, **idite na lokaciju AdminConnections** > **da** biste ponovo povezali veze u novom okruženju.
+Pre nego što ponovo aktivirate izvoz i obogaćivanje, **idite na lokaciju "Administrativne** > **veze**" da biste ponovo uvideli veze u novom okruženju.
 
 ## <a name="change-the-owner-of-an-environment"></a>Promena vlasnika okruženja
 

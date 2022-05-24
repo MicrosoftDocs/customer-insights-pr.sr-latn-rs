@@ -1,19 +1,19 @@
 ---
 title: Primer vodiča za predviđanje gubitka transakcija
 description: Koristite ovaj primer vodiča da biste isprobali spreman model predviđanja gubitka transakcija.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643745"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741336"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Primer vodiča za predviđanje gubitka transakcija
 
@@ -86,69 +86,13 @@ Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvo
 
 1. Sačuvajte izvor podataka.
 
-
 ## <a name="task-2---data-unification"></a>2. zadatak 2 – Objedinjavanje podataka
 
-Nakon unosa podataka, sada započinjemo proces **Mapiranja, podudaranja, objedinjavanja** da bismo kreirali objedinjeni profil klijenta. Za više informacija pogledajte [Objedinjavanje podataka](data-unification.md).
-
-### <a name="map"></a>Mapiraj
-
-1. Nakon unosa podataka, mapirajte kontakte sa platforme eCommerce i iz podataka o lojalnosti u uobičajene tipove podataka. Idite na **Podaci** > **Objedini** > **Mapiraj**.
-
-1. Izaberite entitete koji predstavljaju profil klijenta – **eCommerce kontakti** i **Lojalni klijenti**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="objedinite izvore podataka o platform ecommerce i lojalnosti.":::
-
-1. Izaberite **ID klijenta** kao primarni ključ za **eCommerce kontakte** i **ID lojalnosti** kao primarni ključ za **Lojalne klijente**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Objedinite ID lojalnosti kao primarni ključ.":::
-
-### <a name="match"></a>Podudaranje
-
-1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
-
-1. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
-
-1. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Objedinite podudaranje platforme eCommerce i lojalnosti.":::
-
-1. Izaberite **Kreiraj novo pravilo**
-
-1. Dodajte svoj prvi uslov koristeći Ime i prezime.
-
-   * Za eCommerceContacts izaberite **FullName** u padajućoj listi.
-   * Za loyCustomers izaberite **FullName** u padajućoj listi.
-   * Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa...)**.
-   * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
-
-1. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
-
-   * Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   * Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
-   * Za entitet loyCustomers, odaberite **EMail** u padajućoj listi. 
-   * Ostavite Normalizacija prazno. 
-   * Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Objedinite pravilo podudaranja za ime i e-poštu.":::
-
-7. Izaberite **Sačuvaj** i **Zatvori**.
-
-### <a name="merge"></a>Objedini
-
-1. Idite na karticu **Objedinjavanje**.
-
-1. Na **ID kontakta** za entitet **Lojalni klijenti** promenite ime za prikaz u **ID kontakta LOJALNOST** da bi se razlikovalo od ostalih unetih ID-ova.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="Preimenujte ID kontakta iz ID-a lojalnosti.":::
-
-1. Izaberite **Sačuvaj** i **Pokreni** da biste započeli postupak objedinjavanja.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>3. zadatak – Konfigurišite predviđanje gubitka transakcija
 
-Kada su objedinjeni profilima klijenata spremni, sada možemo pokrenuti predviđanje gubitka pretplata. Detaljne korake pogledajte u članku [Predviđanje](predict-subscription-churn.md) churn. 
+Sa objedinjenim profilima klijenata, sada možemo da pokrenemo transakciju churn predviđanje. Detaljne korake pogledajte članak [Transaction churn predviđanje](predict-transactional-churn.md). 
 
 1. Idite na **Obaveštavanje** > **Otkrijte** i izaberite da koristite **Model gubitka klijenata**.
 
@@ -180,7 +124,7 @@ Kada su objedinjeni profilima klijenata spremni, sada možemo pokrenuti predviđ
 
 ## <a name="task-4---review-model-results-and-explanations"></a>4. zadatak – Pregled rezultata modela i objašnjenja
 
-Neka model završi obuku i ocenjivanje podataka. Sada možete pregledati objašnjenja modela gubitka pretplata. Za više informacija pogledajte [Pregledajte status i rezultate predviđanja](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Neka model završi obuku i ocenjivanje podataka. Sada možete da pregledate objašnjenja modela Churn. Za više informacija pogledajte [Pregledajte status i rezultate predviđanja](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>5. zadatak – Kreirajte segment klijenata sa visokim rizikom od gubitka
 
@@ -192,14 +136,12 @@ Možete da kreirate novi segment na osnovu entiteta koji je kreirao model.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Kreirajte segment sa izlazom modela.":::
 
-1. Izaberite krajnju tačku **OOB predviđanje gubitka klijenata** i definišite segment: 
+1. Izaberite **OOBeCommerceChurnPrediction** krajnja tačka i definišite segment: 
    - Polje: Ocena gubitka
    - Operator: veće je od
    - Vrednost: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Podesite segment gubitka pretplate.":::
 
-Sada imate segment koji se dinamički ažurira i koji identifikuje klijente sa visokim rizikom od gubitka za ovu uslugu pretplate.
+Sada imate segment koji se dinamički ažurira i koji identifikuje kupce sa visokim rizikom.
 
 Više informacija potražite u odeljku [Kreiranje i upravljanje segmentima](segments.md).
 

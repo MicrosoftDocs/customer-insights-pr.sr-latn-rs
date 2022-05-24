@@ -1,19 +1,19 @@
 ---
 title: Vodič kroz primere predviđanja trajne vrednosti klijenta
 description: Koristite ovaj vodič kroz primere da isprobate model predviđanja trajne vrednosti klijenta.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643596"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740828"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Vodič kroz primere predviđanja trajne vrednosti klijenta (CLV)
 
@@ -102,64 +102,7 @@ Pregledajte članke [o unošenju podataka i](data-sources.md) uvozu [izvora poda
 
 ## <a name="task-2---data-unification"></a>2. zadatak 2 – Objedinjavanje podataka
 
-Nakon unosa podataka, sada započinjemo postupak ujednačavanja podataka kako bismo kreirali jedinstveni profil klijenta. Za više informacija pogledajte [Objedinjavanje podataka](data-unification.md).
-
-### <a name="map"></a>Mapiraj
-
-1. Nakon unosa podataka, mapirajte kontakte sa platforme eCommerce i iz podataka o lojalnosti u uobičajene tipove podataka. Idite na **Podaci** > **Objedini** > **Mapiraj**.
-
-1. Izaberite entitete koji predstavljaju profil klijenta – **eCommerce kontakti** i **Lojalni klijenti**. Zatim izaberite **Primeni**.
-
-   ![objedinite izvore podataka o platform ecommerce i lojalnosti.](media/unify-ecommerce-loyalty.png)
-
-1. Izaberite **ID klijenta** kao primarni ključ za **eCommerce kontakte** i **ID lojalnosti** kao primarni ključ za **Lojalne klijente**.
-
-   ![Objedinite ID lojalnosti kao primarni ključ.](media/unify-loyaltyid.png)
-
-1. Izaberite stavku **Sačuvaj**.
-
-### <a name="match"></a>Podudaranje
-
-1. Idite u na karticu **Podudaranje** i izaberite **Podesi redosled**.
-
-1. U padajućoj listi **Primarno** odaberite **eCommerceContacts : eCommerce** kao primarni izvor i uključite sve zapise.
-
-1. U padajućoj listi **Entitet 2** odaberite **loyCustomers : LoyaltyScheme** i uključite sve zapise.
-
-   ![Objedinite podudaranje platforme eCommerce i lojalnosti.](media/unify-match-order.png)
-
-1. Izaberite **Dodaj pravilo**
-
-1. Dodajte svoj prvi uslov koristeći Ime i prezime.
-
-   - Za eCommerceContacts izaberite **FullName** u padajućoj listi.
-   - Za loyCustomers izaberite **FullName** u padajućoj listi.
-   - Izaberite padajuću listu **Normalizacija** i odaberite **Tip (telefon, ime, adresa, ...)**.
-   - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
-
-1. Unesite naziv **Ime i prezime, e-pošta** za novo pravilo.
-
-   - Dodajte drugi uslov za adresu e-pošte izborom stavke **Dodajte uslov**
-   - Za entitet eCommerceContacts, odaberite **EMail** u padajućoj listi.
-   - Za entitet loyCustomers, odaberite **EMail** u padajućoj listi.
-   - Ostavite Normalizacija prazno.
-   - Podesite **Nivo preciznosti**: **Osnovni** i **Vrednost**: **Visoka**.
-
-   ![Objedinite pravilo podudaranja za ime i e-poštu.](media/unify-match-rule.png)
-
-1. Izaberite **Gotovo**.
-
-1. Izaberite **Sačuvaj** i **Zatvori**.
-
-### <a name="merge"></a>Objedini
-
-1. Idite na karticu **Objedinjavanje**.
-
-1. Na **ID kontakta** za entitet **Lojalni klijenti** promenite ime za prikaz u **ID kontakta LOJALNOST** da bi se razlikovalo od ostalih unetih ID-ova.
-
-   ![Preimenujte ID kontakta iz ID-a lojalnosti.](media/unify-merge-contactid.png)
-
-1. Izaberite **Sačuvaj** i **Pokreni procese objedinjavanja i posledičnog premeštanja**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Zadatak 3 – Konfigurisanje predviđanja trajne vrednosti klijenta
 

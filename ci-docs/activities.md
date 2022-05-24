@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643281"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755515"
 ---
 # <a name="customer-activities"></a>Aktivnosti klijenta
 
-Kombinujte aktivnosti klijenata iz [raznih izvora podataka](data-sources.md) u usluzi Dynamics 365 Customer Insights kako biste kreirali vremensku osu koja hronološki navodi aktivnosti. Uključite hronologiju u Dynamics 365 aplikacije sa rešenjem [Programski dodatak za korisničku karticu](customer-card-add-in.md) ili u Power BI kontrolnoj tabli.
+Kombinujte aktivnosti klijenta iz [raznih izvora podataka](data-sources.md) u usluzi Dynamics 365 Customer Insights. Kreirajte vremensku osu koja hronološki navodi aktivnosti. Uključite vremensku osu u Dynamics 365 aplikacije sa rešenjem [programskog dodatka "Kartica kupca](customer-card-add-in.md) ".
 
 ## <a name="define-an-activity"></a>Definišite aktivnost
 
@@ -34,7 +34,7 @@ Vaši izvori podataka mogu da uključe entitete koji imaju podatke o transakcija
 
 Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u vremensku osu klijenta i dodavati entitete koji nemaju polja tipa **Datum**. Kontrola **Dodajte aktivnost** je onemogućena ako nije pronađen takav entitet.
 
-1. Idite na **DataActivities** > **·**.
+1. Idite na aktivnosti **sa** > **podacima**.
 
 1. Izaberite **Dodaj aktivnost** da biste započeli vođeno iskustvo za postupak podešavanja aktivnosti.
 
@@ -78,7 +78,7 @@ Entitet mora imati najmanje jedan atribut tipa **Datum** da bi bio uključeni u 
 
 1. Izaberite **Sledeće** da biste prešli na sledeći korak. Možete izabrati **Završite i pregledaj** da biste sada sačuvali aktivnost sa tipom aktivnosti podešenim na **Ostalo**. 
 
-1. U koraku **Tip aktivnosti**, odaberite tip aktivnosti i opcionalno odaberite ako želite da semantički mapirate neke od vrsta aktivnosti za upotrebu u drugim oblastima usluge Customer Insights. Trenutno, tipovi aktivnosti *Povratne informacije*, *Lojalnost*, *SalesOrder*, *SalesOrderLine* i *Pretplata* se mogu semantički mapirati nakon dogovora o mapiranju polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Kreiraj novu* za prilagođeni tip aktivnosti.
+1. U koraku **Tip aktivnosti**, odaberite tip aktivnosti i opcionalno odaberite ako želite da semantički mapirate neke od vrsta aktivnosti za upotrebu u drugim oblastima usluge Customer Insights. Trenutno, tipovi aktivnosti *povratnih* informacija *·*, lojalnosti *·*, prodavca, *linije prodavca* i *aktivnosti* pretplate podržavaju semantiku nakon što ste pristali da mapirate polja. Ako vrsta aktivnosti nije relevantna za novu aktivnost, možete odabrati *Ostalo* ili *Kreiraj novu* za prilagođeni tip aktivnosti.
 
 1. Izaberite **Sledeće** da biste prešli na sledeći korak. 
 
@@ -110,7 +110,7 @@ Nakon što ste konfigurisali aktivnosti klijenta, izaberite **Prikaži na vremen
 
 Da biste otvorili vremensku osu za klijenta, idite na **Klijenti** i izaberite profil klijenta koji želite da prikažete.
 
-Ako je klijent učestvovao u aktivnosti koju ste konfigurisali, naći ćete je u odeljku **Vremenska osa aktivnosti**.
+Ako je klijent učestvovao u konfigurisanoj aktivnosti, pronaći ćete je u odeljku Vremenska osa **aktivnosti**.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Prikažite konfigurisane aktivnosti u profilima klijenata.":::
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643605"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740736"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dovršavanje delimičnih podataka predviđanjima (neodobreno)
 
@@ -37,13 +37,13 @@ Pre nego što organizacija bude mogla da koristi funkciju predviđanja, sledeći
 
 1. Vaša organizacija ima instancu [konfigurisanu u usluzi Microsoft Dataverse](/ai-builder/build-model#prerequisites) i nalazi se u istoj organizaciji kao i Customer Insights.
 
-2. Vaše okruženje uvida u ciljnu grupu je povezano sa vašom Dataverse instancom.
+2. Vaše Customer Insights okruženje je priloženo uz vašu Dataverse instancu.
 
 Više informacija potražite u članku [Kreiranje novog okruženja](create-environment.md).
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Kreiranje predviđanja u usluzi Customer entity
 
-1. Idite na entitete **podataka** > **·**.
+1. Idite na **entitete** > **podataka**.
 
 2. Izaberite entitet **Klijent**.
 
@@ -91,7 +91,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 ## <a name="view-a-prediction"></a>Prikaz predviđanja
 
-1. Idite **na obaveštajne** > **prognozePredictionsMy** > **predviđanja**.
+1. Idite na **obaveštajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Izaberite predviđanje koje želite da pregledate.
 
@@ -108,7 +108,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 ## <a name="update-a-prediction"></a>Ažuriranje predviđanja
 
-1. Idite **na obaveštajne** > **prognozePredictionsMy** > **predviđanja**.
+1. Idite na **obaveštajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Izaberite predviđanje koje želite da ažurirate i izaberite ikonu **Ažuriraj**.
 
@@ -118,7 +118,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 Nakon što kreirate predviđanje, možete da prilagodite model tako da AI Builder poveća efektivnost vašeg modela.  
 
-1. Idite **na obaveštajne** > **prognozePredictionsMy** > **predviđanja**.
+1. Idite na **obaveštajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Izaberite predviđanje koje želite da uredite.
 
@@ -135,7 +135,7 @@ Sledeće pokretanje predviđanja koristiće ažurirani model koji ste kreirali.
 
 ## <a name="remove-a-prediction"></a>Uklanjanje predviđanja
 
-1. Idite **na obaveštajne** > **prognozePredictionsMy** > **predviđanja**.
+1. Idite na **obaveštajna** > **predviđanja** > **Moja predviđanja**.
 
 2. Izaberite predviđanje koje želite da izbrišete.
 

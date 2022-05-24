@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643051"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755703"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje izvora podataka (pregled)
 
@@ -23,10 +23,10 @@ Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obog
 
 Morate imati dozvole saradnik administratora za kreiranje ili uređivanje obogaćivanja. Više informacija potražite u [dozvolama](permissions.md).  
 
-1. Idite na **dataUnify** > **·**. Izaberite entitet koji želite da obogatite i izaberite jedan atribut kao primarni ključ za entitet. Više informacija potražite u članku [Izbor primarnog ključa](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Idite na " **Ujedinjenje** > **podataka"**. Izaberite entitet koji želite da obogatite i izaberite jedan atribut kao primarni ključ za entitet. Više informacija potražite u članku [Izbor primarnog ključa](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
 1. Idite na **Podaci** > **Izvori podataka**.
- 
+
 1. Izaberite vertikalnu elipsu pored prozora izvor podataka želite da obogatite i izaberite Stavku **Obogati**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Stranica za obogaćivanje izvora podataka.":::

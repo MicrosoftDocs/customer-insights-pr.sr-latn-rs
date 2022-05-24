@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643270"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755467"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights pruža API-je za izgradnju vlastitih aplikacija n
 > [!IMPORTANT]
 > Detalji ovih API-ja navedeni su u članku [Referenca za Customer Insights API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Sadrže dodatne informacije o operacijama, parametrima i odgovorima.
 
-Ovaj članak opisuje kako da pristupite Customer Insights API-jima, kreirate registraciju Azure aplikacije i započnete sa dostupnim bibliotekama klijenata.
+Ovaj članak opisuje kako da pristupite API-jevima korisničkih uvida, kreirate registraciju Azure aplikacija i počnete sa bibliotekama klijenata.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Započnite uz isprobavanje Customer Insights API-ja
 
@@ -83,13 +83,13 @@ Možete da koristite ID aplikacije/klijenta za registraciju ove aplikacije u Mic
 
 Za više informacija o MSAL-u, pogledajte [Pregled Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Za više informacija o registraciji aplikacija u usluzi Azure, pogledajte [Registrovanje aplikacije](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Za više informacija o registraciji aplikacija u usluzi Azure, pogledajte [Registrovanje aplikacije](/graph/auth-register-app-v2).
 
 Za informacije o korišćenju API-ja u našim klijentskim bibliotekama, pogledajte [Customer Insights klijentske biblioteke](#customer-insights-client-libraries).
 
 ### <a name="server-to-server-application-permissions"></a>Dozvole za aplikacije sa servera na server
 
-[Odeljak za registraciju aplikacija](#create-a-new-app-registration-in-the-azure-portal) opisuje kako se registruje aplikacija koja zahteva da se korisnik prijavi radi potvrde identiteta. Saznajte kako da kreirate registraciju aplikacije koja ne zahteva interakciju korisnika i koja se može pokrenuti na serveru.
+[Odeljak za registraciju aplikacija](#create-a-new-app-registration-in-the-azure-portal) opisuje kako se registruje aplikacija koja zahteva da se korisnik prijavi radi potvrde identiteta. Saznajte kako da kreirate registraciju aplikacije za koju nije potrebna interakcija korisnika i koja se može pokrenuti na serveru.
 
 1. Pri registraciji aplikacije na Azure portalu idite na **Dozvole za API-je**.
 
@@ -112,6 +112,10 @@ Za informacije o korišćenju API-ja u našim klijentskim bibliotekama, pogledaj
    Otvorite Customer Insights, idite na **Administrator** > **Dozvole** i izaberite **Dodaj korisnika**.
 
 1. Potražite ime registracije aplikacije, izaberite je iz rezultata pretrage i izaberite **Sačuvaj**.
+
+## <a name="sample-queries"></a>Probni upiti
+
+Sastavili smo kratku listu probnih upita OData za rad sa API-jem: [primeri upita OData](odata-examples.md).
 
 ## <a name="customer-insights-client-libraries"></a>Customer Insights klijentske biblioteke
 
@@ -137,7 +141,7 @@ Saznajte kako da započnete korišćenje C# klijentskih biblioteka sa NuGet.org.
 
 1. Koristite [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview) da biste dobili `AccessToken` koristeći svoje postojeću [registraciju Azure aplikacije](#create-a-new-app-registration-in-the-azure-portal).
 
-1. Nakon uspešnog potvrde identiteta i pribavljanja simbola, napravite novi ili koristite postojeći sa dodatnim DefaultRequestHeaders "Autorization" postavljenim `HttpClient` na Bearer "token za pristup" **i** Ocp-Apim-Subscription-Key **postavljen** na pretplatnički ključ iz **okruženja "Uvidi kupaca"**[**.**](#get-started-trying-the-customer-insights-apis)   
+1. Nakon uspešne potvrde identiteta i pribavljanja simbola, `HttpClient` napravite novi ili koristite postojeći sa "Ovlašćenjima" podrazumevanih nosilaca postavljenim na "Token za pristup"**i** Ocp-Apim-Subscription-Key **postavljenim na** ključ pretplate iz **okruženja "Uvidi kupaca"**[**·**.](#get-started-trying-the-customer-insights-apis)   
  
    Resetujte zaglavlje **Ovlašćenje** po potrebi. Na primer, kada je token istekao.
 
@@ -147,7 +151,7 @@ Saznajte kako da započnete korišćenje C# klijentskih biblioteka sa NuGet.org.
 
 1. Upućujte pozive klijentu za „metode proširenja“, na primer, `GetAllInstancesAsync`. Ako je potreban pristup osnovnom `Microsoft.Rest.HttpOperationResponse`, koristite „metode http poruka“ – na primer, `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Odgovor će verovatno biti tipa `object` jer metod može da vrati više tipova (na primer, `IList<InstanceInfo>` i `ApiErrorResult`). Da biste proverili tip povratka, možete eksplicitno konvertovati objekte u tipove odgovora navedene na [stranici sa detaljima API-ja](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) za tu operaciju.    
+1. Odgovor će verovatno biti tipa `object` jer metod može da vrati više tipova (na primer, `IList<InstanceInfo>` i `ApiErrorResult`). Da biste proverili tip povraćaja, koristite objekte u tipovima odgovora navedenim na stranici [API detalja za](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) tu operaciju.    
    
    Ako su potrebne dodatne informacije o zahtevu, koristite **http metode poruka** za pristup neobrađenom objektu odgovora.
 
