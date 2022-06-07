@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643765"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800343"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Korišćenje izrade mera za kreiranje mera od početka
 
@@ -88,7 +88,7 @@ Mere možete kreirati na nivou pojedinačnih kupaca (atribut kupca, mera kupca) 
 
 1. Da biste dodali još proračuna za meru, izaberite **Novi proračun**. Entitete na istoj putanji entiteta možete koristiti samo za nove proračune. Više proračuna će se prikazati kao nove kolone u izlaznom entitetu mere.
 
-1. Izaberite **...** na proračunu da biste **napravili duplikat**, **preimenovali** ili **uklonili** proračun iz mere.
+1. Izaberite vertikalnu elipsu (&vellip;) u izračunavanju u "Dupliranje **", "** Preimenuj **·**" **ili "Ukloni** izračunavanje" iz mere.
 
 1. U oblasti **Pregled** videćete šemu podataka izlaznog entiteta mere, uključujući filtere i dimenzije. Pregled dinamički reaguje na promene u konfiguraciji.
 
@@ -158,7 +158,7 @@ Mere možete kreirati na nivou pojedinačnih konta (mera kupca) ili na nivou svi
    1. Izaberite **Putanja odnosa** i izaberite putanju entiteta koju treba koristiti za identifikaciju mere. Ako postoji samo jedan put do entiteta *Klijent*, ova kontrola se neće prikazati.
    1. Izaberite **Gotovo** da primenite svoj izbor.
 
-1. Izaberite **...** na proračunu da biste **napravili duplikat**, **preimenovali** ili **uklonili** proračun iz mere.
+1. Izaberite vertikalnu elipsu (&vellip;) u izračunavanju u "Dupliranje **", "** Preimenuj **·**" **ili "Ukloni** izračunavanje" iz mere.
 
 1. U oblasti **Pregled** videćete šemu podataka izlaznog entiteta mere, uključujući filtere i dimenzije. Pregled dinamički reaguje na promene u konfiguraciji.
 

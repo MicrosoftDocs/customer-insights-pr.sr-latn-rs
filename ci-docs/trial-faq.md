@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641825"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833785"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Najčešća pitanja o probnoj verziji usluge Dynamics 365 Customer Insights
 
@@ -62,9 +62,9 @@ Probni period u aplikaciji možete produžiti direktno. Probni period možete pr
 
 Uopšteno, preporučujemo da počnete iznova sa sopstvenim podacima prilikom nadogradnje na plaćenu verziju rešenja Customer Insights. 
 
-Opcionalno, ako koristite samo uvid kupca, možete kopirati podatke iz probnog okruženja ako kupite uvid kupca. Morate biti administrator probne datoteke "Uvidi klijenata" i globalni administrator vašeg zakupca Microsoft 365 ili Dynamics 365 administrator u vašoj organizaciji da biste migrirali postavke iz probnog okruženja u plaćeno okruženje. 
+Opcionalno, ako koristite samo uvid kupca, možete kopirati podatke iz probnog okruženja ako kupite uvid kupca. Morate biti administrator probne datoteke "Uvidi klijenata" i globalni administrator vašeg zakupca Microsoft 365 ili Dynamics 365 administrator u vašoj organizaciji da biste migrirali postavke iz probnog okruženja u plaćeno okruženje.
 
-Nakon što se prvi put prijavite na svoju plaćenu instancu rešenja Customer Insights od vas će biti zatraženo da kreirate novo okruženje. U ovom procesu možete izabrati da kopirate konfiguraciju iz postojećeg okruženja i da migrirate većinu podešavanja. Ako imate gorenavedene dozvole, probno okruženje će se prikazati na ovoj listi. Još informacija potražite u članku [Kopiranje konfiguracije okruženja](manage-environments.md#copy-the-environment-configuration).
+Nakon što se prvi put prijavite na svoju plaćenu instancu rešenja Customer Insights od vas će biti zatraženo da kreirate novo okruženje. U ovom procesu možete izabrati da kopirate konfiguraciju iz postojećeg okruženja i da migrirate većinu podešavanja. Ako imate gorenavedene dozvole, probno okruženje će se prikazati na ovoj listi. Još informacija potražite u članku [Kopiranje konfiguracije okruženja](create-environment.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Koja su ograničenja i kvote probne verzije?
 
@@ -81,9 +81,10 @@ Kada se registrujete za probnu verziju, stići ćete na glavni ekran aplikacije.
 
 Većina funkcija Customer Insights mogućnosti dostupna je u probnoj verziji.
 
-Sledeće funkcije nisu **dostupne**: 
+Sledeće funkcije nisu **dostupne**:
+
 - Ne možete da kreirate nova okruženja koja koriste sopstveni Azure Data Lake Storage nalog.
-- Probno okruženje ne možete izbrisati. 
+- Probno okruženje ne možete izbrisati.
 
 ### <a name="how-long-does-the-trial-last"></a>Koliko traje probna verzija?
 

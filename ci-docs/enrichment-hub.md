@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c14e6c96d2f907ba161331b6f92277191cbdbef
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653540"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800622"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
 
@@ -27,7 +27,7 @@ Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obog
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stranica čvorišta za obogaćivanje.":::
 
-Idite na **DataEnrichment** > **da** biste radili sa opcijama obogaćivanja.  
+Idite na **obogaćenje** > **podataka** da biste radili sa opcijama obogaćivanja.  
 
 Da biste kreirali ili menjali obogaćivanja, morate da imate dozvole saradnika ili administratora. Više informacija potražite u [dozvolama](permissions.md).
 
@@ -63,7 +63,7 @@ Na kartici **Moja obogaćivanja** možete da vidite obogaćivanja koja ste konfi
 
 Idite na karticu **Moja obogaćivanja** da biste videli sva konfigurisana obogaćivanja. Svako obogaćivanje predstavljeno je kao red koji uključuje dodatne informacije o obogaćivanju.
 
-Izaberite obogaćivanje da biste videli dostupne opcije. Takođe možete odabrati tri tačke (...) na stavci liste da biste videli opcije. Ako ste konfigurisali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretragu.
+Izaberite obogaćivanje da biste videli dostupne opcije. Takođe možete da izaberete vertikalnu elipsu (&vellip;) na stavci liste da biste videli opcije. Ako ste konfigurisali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretragu.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcije za upravljanje obogaćivanjima na listi obogaćivanja.":::
 

@@ -11,12 +11,12 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: e8a294a4bad1581539b5905160cddcd625699d90
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643108"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800191"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povežite se sa podacima u Microsoft Dataverse upravljanom jezeru podataka
 
@@ -28,7 +28,7 @@ Ovaj članak pruža informacije o tome kako Dataverse korisnici mogu brzo da se 
 ## <a name="important-considerations"></a>Važna razmatranja
 
 1. Podaci uskladišteni u mrežnim uslugama, kao što je Azure Data Lake Storage, mogu se skladištiti na lokaciji različitoj od one na kojoj se podaci obrađuju ili skladište u usluzi Dynamics 365 Customer Insights.Uvozom ili povezivanjem sa podacima uskladištenim u uslugama na mreži slažete se da se podaci mogu prenositi i skladištiti sa programom Dynamics 365 Customer Insights. [Saznajte više u Microsoft centru za pouzdanost](https://www.microsoft.com/trust-center).
-2. Vidljivi Dataverse su samo entiteti [sa omogućenim](/power-platform/admin/enable-change-tracking-control-data-synchronization) praćenjem promena. Ovi entiteti se mogu izvesti u jezero sa podacima Dataverse kojim se upravlja i koristiti u uvidima kupaca. Tabele bez okvira Dataverse podrazumevano imaju omogućeno praćenje promena. Potrebno je da uključite praćenje promena za prilagođene tabele. Da biste proverili da Dataverse li je tabela omogućena za praćenje promena, idite na DataTables [Power Apps](https://make.powerapps.com) > **·** > **·**. Pronađite tabelu koja vas interesuje i izaberite je. Idite na **opcije** > **"PostavkeAdvanced" i pregledajte** postavku **Praćenja** promena.
+2. Vidljivi Dataverse su samo entiteti [sa omogućenim](/power-platform/admin/enable-change-tracking-control-data-synchronization) praćenjem promena. Ovi entiteti se mogu izvesti u jezero sa podacima Dataverse kojim se upravlja i koristiti u uvidima kupaca. Tabele bez okvira Dataverse podrazumevano imaju omogućeno praćenje promena. Potrebno je da uključite praćenje promena za prilagođene tabele. Da biste proverili da Dataverse li je tabela omogućena za praćenje promena, idite na tabele [Power Apps](https://make.powerapps.com) > **podataka** > **·**. Pronađite tabelu koja vas interesuje i izaberite je. Idite na **opcije** > **"Više opcija postavki"** i pregledajte postavku **praćenja** promena.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povežite se sa Dataverse upravljanim jezerom
 
@@ -62,7 +62,7 @@ Da biste se povezali sa drugim Dataverse jezerom podataka, [kreirajte novi izvor
 
 1. Idite na **Podaci** > **Izvori podataka**.
 
-2. Pored izvora podataka koji želite da ažurirate, izaberite tri tačke.
+2. Pored izvor podataka želite da ažurirate izaberite vertikalnu elipsu (&vellip;).
 
 3. Izaberite opciju **Uredi** sa liste.
 

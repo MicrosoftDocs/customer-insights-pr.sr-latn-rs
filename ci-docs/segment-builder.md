@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643556"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800113"
 ---
 # <a name="create-segments"></a>Kreiranje segmenata
 
@@ -134,8 +134,9 @@ Dok pravite segment, možete da sačuvate radnu verziju. U fazi radne verzije, s
 > - Alatka za pravljenje segmenata neće predlagati važeće vrednosti entiteta prilikom postavljanja operatora za uslove. Možete da odete na **Podaci** > **Entiteti** i da preuzmite podatke entiteta da biste videli koje su vrednosti dostupne.
 > - Uslovi zasnovani na datumima vam omogućavaju prebacivanje između fiksnih datuma i promenljivog vremenskog perioda.
 > - Ako imate više pravila za segment, pravilo koje uređujete ima vertikalnu plavu liniju pored sebe.
-> - Pravila i uslove možete premestiti na druga mesta u definiciji segmenta. Izaberite [...] pored pravila ili uslova i odaberite kako i gde da ga premestite.
+> - Pravila i uslove možete premestiti na druga mesta u definiciji segmenta. Izaberite vertikalnu elipsu (&vellip;) pored pravila ili uslova i odaberite kako i gde ćete je premestiti.
 > - Kontrole **Opozovi** i **Ponovi** na komandnoj traci vam omogućavaju da vratite promene.
+> - Nakon kreiranja segmenta, neki segmenti vam omogućavaju [da pratite korišćenje segmenta](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Brzi segmenti
 

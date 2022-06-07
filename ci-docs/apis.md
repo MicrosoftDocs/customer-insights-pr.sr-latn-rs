@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755467"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808523"
 ---
 # <a name="work-with-customer-insights-apis"></a>Radite sa Customer Insights API-jem
 
@@ -31,11 +31,11 @@ Ovaj članak opisuje kako da pristupite API-jevima korisničkih uvida, kreirate 
 
 1. [Prijavite se](https://home.ci.ai.dynamics.com) u Customer Insights. Ako još uvek nemate pretplatu, [prijavite se za probnu verziju usluge Customer Insights](https://aka.ms/tryci).
 
-1. Da biste omogućili API-je u vašem Customer Insights okruženju, idite na **Administrator** > **Dozvole**. Za to će vam trebati dozvole administratora.
+1. Da biste omogućili API-je u okruženju "Uvid korisnika", posetite lokaciju **"Administrator bezbednost** > **"**. Za to će vam trebati dozvole administratora.
 
 1. Idi na karticu **API-ji** i izaberite dugme **Omogući**.    
  
-   Omogućavanje API-ja kreira primarni i sekundarni ključ pretplate za vašu instancu koji se koristi u API zahtevima. Ključeve možete da ponovo generišete tako što ćete izabrati **Ponovo generiši primarni** ili **Ponovo generiši sekundarni** na **Administrator** > **Dozvole** > **API-ji**.
+   Omogućavanje API-ja kreira primarni i sekundarni ključ pretplate za vašu instancu koji se koristi u API zahtevima. Ključeve možete ponovo dagenerišete **tako što ćete izabrati stavku Regeneriši primarnu** **ili regenerisanu sekundarnu opciju na API-jema** **·** > **·** > **za bezbednost administratora.**
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Ovi koraci vam pomažu da započnete sa korišćenjem Customer Insights API-ja u
 1. S leve strane izaberite **Registracije aplikacija**.
 
 1. Izaberite **Nova registracija**, navedite naziv aplikacije i odaberite tip naloga.
- 
+
    Opcionalno dodajte URL preusmeravanja. http://localhost je dovoljan za razvoj aplikacije na vašem lokalnom računaru.
 
 1. Na novoj registraciji aplikacije idite na **Dozvole za API-je**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Izaberite **Dodajte dozvolu** i izaberite **Customer Insights** u bočnom oknu.
+1. U **bočnom oknu izaberite** stavku **Dodaj dozvolu i izaberite Dynamics 365 AI za uvide** klijenata.
 
 1. Za **Tip dozvole**, izaberite **Delegirane dozvole**, a zatim izaberite dozvolu **user_impersonation**.
 
@@ -109,7 +107,7 @@ Za informacije o korišćenju API-ja u našim klijentskim bibliotekama, pogledaj
 
 1. Da zaključimo, moramo da dodamo ime registracije aplikacije kao korisnika u Customer Insights.  
    
-   Otvorite Customer Insights, idite na **Administrator** > **Dozvole** i izaberite **Dodaj korisnika**.
+   Otvorite opciju "Uvidi klijenata", idite u **administrator bezbednost** > **i** izaberite **stavku Dodaj korisnika**.
 
 1. Potražite ime registracije aplikacije, izaberite je iz rezultata pretrage i izaberite **Sačuvaj**.
 

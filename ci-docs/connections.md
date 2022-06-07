@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 2a3175737ac95e10d75fad4a69db303b0564c6cc
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755326"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800389"
 ---
 # <a name="connections-preview-overview"></a>Pregled veza (verzija za pregled)
 
@@ -69,7 +69,7 @@ Kada podešavate ili uređujete vezu za izvoz, vi birate koji korisnici smeju da
 
 1. Idite na karticu **Veze**.
 
-1. Izaberite vertikalne tri tačke za vezu koju želite da uredite.
+1. Izaberite vertikalnu elipsu () za&vellip; vezu koju želite da uredite.
 
 1. Izaberite **Uredi**.
 
@@ -85,7 +85,7 @@ Odvojena obogaćivanja i izvozi postaju neaktivni. Ponovo ih aktivirate dodavanj
 
 1. Idite na karticu **Veze**.
 
-1. Izaberite vertikalne tri tačke za vezu koju želite da uklonite.
+1. Izaberite vertikalnu elipsu (&vellip;) za vezu koju želite da uklonite.
 
 1. Izaberite **Ukloni** iz padajućeg menija. Prikazuje se dijalog za potvrdu.
 

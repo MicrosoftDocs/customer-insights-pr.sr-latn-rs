@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641533"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808578"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtevi na osnovu prava subjekta podataka (DSR) u okviru GDPR
 
@@ -39,9 +39,9 @@ Customer Insights nudi sledeća iskustva u radu sa proizvodima za brisanje ličn
 Administrator usluge Customer Insights može da prati ove korake za uklanjanje podataka o klijentima koji su izbrisani u izvoru podataka:
 
 1. Prijavite se u Dynamics 365 Customer Insights.
-2. Idite **na izvore DataData** > **·**
+2. Idi na **izvore** > **podataka**
 3. Za svaki izvor podataka na listi koji sadrži izbrisane podatke o klijentima:
-   1. Izaberite (...), pa izaberite **Osveži**.
+   1. Izaberite vertikalnu elipsu () i izaberite stavku&vellip; Osveži **·**.
    2. Proverite status izvora podataka u odeljku **Status**. Znak potvrde znači da je osvežavanje bilo uspešno. Trokut upozorenja znači da nešto nije u redu. Ako se prikaže trougao upozorenja, kontaktirajte D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Administrator usluge Customer Insights može da prati ove korake za uklanjanje p
 Administrator usluge Customer Insights može da sledi sledeće korake za brisanje podataka o Customer Insights korisnicima:
 
 1. Prijavite se u Dynamics 365 Customer Insights.
-2. Idite na **adminPermissions** > **·**.
+2. Idite na **bezbednosne** > **dozvole** > **administratora**.
 3. Izaberite polje za potvrdu za korisnika kojeg želite da izbrišete.
 4. Izaberite **Ukloni**.
 

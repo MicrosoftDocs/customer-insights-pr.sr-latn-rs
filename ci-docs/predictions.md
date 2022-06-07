@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740736"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800667"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Dovršavanje delimičnih podataka predviđanjima (neodobreno)
 
@@ -95,7 +95,7 @@ U okviru ovog toka biraćete određeni atribut na kojem će zasnovati segment, k
 
 2. Izaberite predviđanje koje želite da pregledate.
 
-3. Izaberite tri tačke u koloni **Radnje** i izaberite stavku **Prikaz**.
+3. Izaberite vertikalnu elipsu () u koloni Radnje&vellip;**i izaberite** stavku **Prikaz**.
 
 4. Videćete broj tačaka podataka u prikazu predviđanja.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ Nakon što kreirate predviđanje, možete da prilagodite model tako da AI Builde
 
 2. Izaberite predviđanje koje želite da uredite.
 
-3. Izaberite tri tačke u koloni **Radnje** i izaberite stavku **Prikaz**.
+3. Izaberite vertikalnu elipsu () u koloni Radnje&vellip;**i izaberite** stavku **Prikaz**.
 
 4. Izaberite **prilagodi u programu AI Builder**.
 
@@ -139,7 +139,7 @@ Sledeće pokretanje predviđanja koristiće ažurirani model koji ste kreirali.
 
 2. Izaberite predviđanje koje želite da izbrišete.
 
-3. Izaberite tri tačke u koloni **Radnje** i izaberite stavku **Izbriši**.
+3. Izaberite vertikalnu elipsu () u koloni Radnje i izaberite&vellip; stavku **Izbriši**.**·**
 
 4. Potvrdite brisanje.
 
@@ -153,7 +153,7 @@ Ako ne možete da dovršite prilaganje Dataverse procesa zbog greške, možete p
 - Dozvole za aplikacije nisu dodeljene.
     1. Idite na [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Izaberite **Okruženja**.
-    1. Izaberite tri tačke pored okruženja kojem želite da dodate dozvolu i izaberite **Podešavanja**.
+    1. Izaberite vertikalnu elipsu () pored okruženja&vellip; kojem želite da dodate dozvolu i izaberite **postavke**.
     1. Proširite odeljak **Korisnici + dozvole** i izaberite **Korisnici**.
     1. Izaberite **+ Novo** i izaberite **Korisnik**.
     1. Izaberite opciju **Korisnik aplikacije** ako nije već izabrana i unesite sledeće informacije:

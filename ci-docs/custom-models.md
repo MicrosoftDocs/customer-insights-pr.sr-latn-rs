@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643198"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800437"
 ---
 # <a name="custom-machine-learning-models"></a>Prilagođeni modeli mašinskog učenja
 
@@ -92,7 +92,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
 ## <a name="edit-a-workflow"></a>Izmena toka posla
 
-1. Na stranici **Prilagođeni modeli** izaberite uspravne tri tačke u koloni **Radnje** pored toka posla koji ste prethodno kreirali i izaberite **Uredi**.
+1. Na stranici "Prilagođeni **modeli" izaberite vertikalnu elipsu (**) u koloni "Radnje&vellip;" **pored toka posla koji ste prethodno kreirali i izaberite stavku Uredi** **.**
 
 1. Prepoznatljivo ime toka posla možete ažurirati u polju **Ime za prikaz**, ali ne možete da promenite konfigurisanu veb-uslugu ili kanal. Izaberite **Sledeće**.
 
@@ -108,7 +108,7 @@ Predviđanja nude mogućnosti za stvaranje boljeg korisničkog iskustva, pobolj�
 
 ## <a name="run-a-workflow"></a>Pokretanje toka posla
 
-1. Na stranici **Prilagođeni modeli** izaberite uspravne tri tačke u koloni **Radnje** pored toka posla koji ste prethodno kreirali.
+1. Na stranici **"Prilagođeni** modeli" izaberite vertikalnu elipsu (&vellip;) u **koloni "** Radnje" pored toka posla koji ste prethodno kreirali.
 
 1. Izaberite **Pokreni**.
 
@@ -116,7 +116,7 @@ Tok posla se takođe pokreće automatski sa svakim zakazanim osvežavanjem. Sazn
 
 ## <a name="delete-a-workflow"></a>Brisanje toka posla
 
-1. Na stranici **Prilagođeni modeli** izaberite uspravne tri tačke u koloni **Radnje** pored toka posla koji ste prethodno kreirali.
+1. Na stranici **"Prilagođeni** modeli" izaberite vertikalnu elipsu (&vellip;) u **koloni "** Radnje" pored toka posla koji ste prethodno kreirali.
 
 1. Izaberite **Izbriši** i potvrdite brisanje.
 

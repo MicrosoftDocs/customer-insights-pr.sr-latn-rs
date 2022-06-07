@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 1a19d83930d667bdca5301dcc5a3ffa5db6a7bdc
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: HT
+ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741150"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833592"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Prvi koraci uz Dynamics 365 Customer Insights
 
@@ -25,21 +25,21 @@ Uvidi klijenata vam mogu pomoći da izgradite dublje razumevanje svojih klijenat
 
 ## <a name="step-1-create-an-environment"></a>1. korak: Kreiranje okruženja
 
-Za početak morate prvo da kreirate okruženje za rad. Ako je vaša organizacija već kupila licencu, pogledajte [Kreiranje okruženja](create-environment.md). Da biste započeli probnu pomoć za uvid u kupce, pogledajte [podešavanje probnog okruženja](trial-signup.md).
+Prvo, kreirajte okruženje u kome ćete raditi. Ako je vaša organizacija već kupila licencu, pogledajte [Kreiranje okruženja](create-environment.md). Da biste započeli probnu pomoć za uvid u kupce, pogledajte [podešavanje probnog okruženja](trial-signup.md).
 
 ## <a name="step-2-explore-customer-insights"></a>2. korak: Istraživanje uvida klijenata
 
-Kada se prvi put prijavite u "Uvid kupca", možete da konfigurišete postavke i istražite proizvod.
+Kada se prvi put prijavite u "Uvid kupca", konfigurišite postavke i istražite proizvod.
 
 1. [prijavite se na korisničke uvide](https://home.ci.ai.dynamics.com) koristeći Microsoft Azure Active Directory (AAD) korisnički nalog.
 
-1. [Promenite okruženje da biste](manage-environments.md#switch-environments) videli demo podatke i istražili [uvide klijenata](home.md).
+1. Promenite okruženje da biste videli demo podatke i istražili [uvide klijenata](home.md).
 
 ## <a name="step-3-ingest-unify-and-set-up-relationships-for-your-data"></a>3. korak: Unesite, objedinite i podesite odnose za svoje podatke
 
-Objedinjeni profili su osnova za dobijanje uvida i preduzimanje radnji nad podacima. Donesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka da biste kombinovali objedinjene profile. Navedite odnose između unetih entiteta i koristite funkcije obogaćivanja za dodavanje informacija profilima.
+Objedinjeni profili su osnova za dobijanje uvida i preduzimanje radnji nad podacima. Donesite podatke iz različitih izvora i pokrenite proces objedinjavanja podataka da biste kombinovali objedinjene profile. Navedite odnosi između unetih entiteta i koristite funkcije obogaćivanja da biste dodali informacije profilima.
 
-1. Unosite podatke kreiranjem izvora podataka iz više opcija. Odaberite jednu od linija [Power Query spajanja, fasciklu](connect-power-query.md)"Uobičajeni model podataka [" ili](connect-common-data-model.md).[Microsoft Dataverse](connect-dataverse-managed-lake.md) 
+1. Unosite podatke kreiranjem izvora podataka iz više opcija. Odaberite jednu od linija [Power Query spajanja, fasciklu](connect-power-query.md)"Uobičajeni model podataka [" ili](connect-common-data-model.md).[Microsoft Dataverse](connect-dataverse-managed-lake.md)
 
 1. Pokrenite [proces ujedinjenja podataka](data-unification.md) tako što ćete identifikovati izvorna [polja](map-entities.md), ukloniti [duplikate](remove-duplicates.md), uslove [podudaranja](match-entities.md) i [ujedinjati polja](merge-entities.md).
 
@@ -47,7 +47,7 @@ Objedinjeni profili su osnova za dobijanje uvida i preduzimanje radnji nad podac
 
 ## <a name="step-4-enhance-unified-profiles-with-predictions-activities-and-measures"></a>4. korak: Poboljšajte objedinjene profile predviđanjima, aktivnostima i merama
 
-Sa konfigurisanim objedinjenim profilima možete poboljšati svoje podatke i dodatno povećati informacije koje oni pružaju.
+Sa podešenim objedinjenim profilima poboljšajte podatke i dodatno povećajte informacije koje oni pružaju.
 
 1. Birajte iz proširene biblioteke dobavljača obogaćivanja da biste [obogatili podatke o klijentima](enrichment-hub.md).
 
@@ -59,7 +59,7 @@ Sa konfigurisanim objedinjenim profilima možete poboljšati svoje podatke i dod
 
 ## <a name="step-5-create-segments-and-activate-data-through-various-export-options"></a>5. korak: Kreiranje segmenata i aktiviranje podataka kroz različite opcije izvoza
 
-Sada kada su vaši podaci potpuni i sadrže širok spektar informacija o vašim klijentima, vreme je da potražite načine za preduzimanje radnji na tim podacima.
+Sada kada su vaši podaci dovršeni i sadrže širok spektar informacija o klijentima, potražite načine da preduzmete radnje u vezi sa tim podacima.
 
 1. [Kreirajte segmente](segments.md), podskupove vaše baze klijenata, kako biste bili sigurni da su vaše radnje relevantne za ciljane klijente.
 

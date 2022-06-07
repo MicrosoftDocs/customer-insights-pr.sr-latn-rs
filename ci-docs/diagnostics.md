@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755279"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807598"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijavljivanje pomoću Dynamics 365 Customer Insights Azure monitora (pregled)
 
@@ -38,7 +38,7 @@ Da biste konfigurisali dijagnostiku u uvidima klijenata, moraju biti ispunjeni s
 
 - Imate aktivnu [Azurnu pretplatu](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Imate administratorske [dozvole](permissions.md#admin) u fascikli "Uvidi klijenata".
-- Imate ulogu **administratora saradnik** korisničkog **pristupa na** odredišnom resursu na Azure. Resurs može biti Azure nalog skladišta, Azure čvorište događaja ili radni prostor Azure analitike evidencije. Više informacija potražite u članku [Dodavanje ili uklanjanje dodela Azure uloga pomoću portala Azure](/azure/role-based-access-control/role-assignments-portal).
+- Imate ulogu **administratora saradnik** korisničkog **pristupa na** odredišnom resursu na Azure. Resurs može biti nalog Azure Data Lake Storage, čvorište Azure događaja ili radni prostor Azure analitike evidencije. Više informacija potražite u članku [Dodavanje ili uklanjanje dodela Azure uloga pomoću portala Azure](/azure/role-based-access-control/role-assignments-portal). Ova dozvola je neophodna tokom konfigurisanja dijagnostičkih postavki u programu Customer Insights, može se promeniti nakon uspešnog podešavanja.
 - [Ispunjeni su](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) odredišni zahtevi za Azure skladište, Azure čvorište događaja ili Azure analitiku evidencije.
 - Imate bar ulogu čitalac **resursa** kojoj resurs pripada.
 
