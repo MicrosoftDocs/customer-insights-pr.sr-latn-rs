@@ -1,7 +1,7 @@
 ---
 title: Obogatite objedinjene profile klijenata
 description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
-ms.date: 03/29/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: abc1b6af80e8854ee3bc930453634ef67376c4af
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800622"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954058"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
 
@@ -35,29 +35,29 @@ Na kartici **Otkrivanje**, pronaći ćete sve podržane opcije obogaćivanja.
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
+- [AbiliTec identitet](enrichment-liveramp.md) obezbedio LiveRamp AbiliTec
 - [Brendove](enrichment-microsoft.md) obezbeđuje Microsoft
-- [Interesovanja](enrichment-microsoft.md) obezbeđuje Microsoft
-- [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft 
 - [Demografski podaci](enrichment-experian.md) koje obezbeđuje Experian
-- [Prilagođeni podaci](enrichment-SFTP-custom-import.md) pomoću protokola Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) obezbeđuje Microsoft
-- [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies 
-- [Identitet](enrichment-liveramp.md) obezbedio LiveRamp AbiliTec
+- [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft
+- [Interesovanja](enrichment-microsoft.md) obezbeđuje Microsoft
+- [podaci](enrichment-azure-maps.md) o lokaciji obezbeđuju mape Microsoft Azure
+- [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies
+- [SFTP prilagođeni podaci](enrichment-SFTP-custom-import.md) kroz Secure File Transfer Protocol (SFTP)
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
 
-- [Podaci o kompaniji](enrichment-leadspace.md) koje pruža Leadspace
-- [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft 
-- [Poboljšani podaci o](enrichment-enhanced-company-data.md) preduzeću koje obezbeđuje Microsoft
-- [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies 
-- [Prilagođeni podaci](enrichment-SFTP-custom-import.md) pomoću protokola Secure File Transfer Protocol (SFTP) 
-- [Azure Maps](enrichment-azure-maps.md) obezbeđuje Microsoft
-- [Podatke](enrichment-dnb.md) kompanije dostavio Dun & Bradstreet
 - [Podaci o angažovanju](enrichment-office.md) naloga koje je obezbedio Microsoft
+- [Podatke](enrichment-dnb.md) kompanije dostavio Dun & Bradstreet
+- [Podaci o kompaniji](enrichment-leadspace.md) koje pruža Leadspace
+- [Poboljšane adrese](enrichment-enhanced-addresses.md) obezbeđuje Microsoft
+- [Poboljšani podaci o](enrichment-enhanced-company-data.md) preduzeću koje obezbeđuje Microsoft
+- [podaci](enrichment-azure-maps.md) o lokaciji obezbeđuju mape Microsoft Azure
+- [Podatke o lokaciji](enrichment-here.md) pruža HERE Technologies
+- [SFTP prilagođeni podaci](enrichment-SFTP-custom-import.md) kroz Secure File Transfer Protocol (SFTP)
 
 ---
 
-Na kartici **Moja obogaćivanja** možete da vidite obogaćivanja koja ste konfigurisali i da menjate njihova svojstva.
+Na kartici **Moja obogaćivanja** možete da vidite obogaćivanja koja ste konfigurisali i da menjate njihova svojstva. Segmente ili mere možete [kreirati](segments.md) i [od obogaćivanja](measures.md).
 
 ## <a name="manage-existing-enrichments"></a>Upravljanje postojećim obogaćivanjima
 
@@ -81,36 +81,45 @@ Obogaćenja trećih lica se konfigurišu pomoću [veza](connections.md) koje adm
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja istog tipa
 
-Entitet koji treba obogatiti navodi se tokom konfiguracije obogaćivanja, što vam omogućava da obogatite samo podskup svojih profila. Na primer, obogatite podatke samo za određeni segment. Možete da konfigurišete nekoliko obogaćivanja istog tipa i da ponovo koristite istu vezu. Neka obogaćivanja će imati ograničenja u broju obogaćivanja istog tipa koja se mogu kreirati. Ograničenja i trenutna upotreba mogu se videti na stranici **Obogaćivanje**.
+Entitet koji treba obogatiti navodi se tokom konfiguracije obogaćivanja, što vam omogućava da obogatite samo podskup svojih profila. Na primer, obogatite podatke samo za određeni segment. Možete da konfigurišete nekoliko obogaćivanja istog tipa i da ponovo koristite istu vezu. Neka obogaćivanja će imati ograničenja u broju obogaćivanja istog tipa koja se mogu kreirati. Ograničenja i trenutna upotreba mogu se videti na svakoj pločici na kartici "Otkrivanje **"** na stranici "Obogaćivanje **·**".
 
 ## <a name="enrich-data-sources-before-unification"></a>Obogati izvore podataka pre ujedinjenja
 
 Podatke o korisnicima možete obogatiti pre ujedinjenja podataka da biste povećali kvalitet podudaranja podataka. Više informacija potražite u članku [izvor podataka obogaćivanju](data-sources-enrichment.md).
 
-## <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
+## <a name="run-or-refresh-enrichments"></a>Pokretanje ili osvežavanje obogaćivanja
+
+1. Da biste započeli proces obogaćivanja, izaberite **Pokreni**. Ili, neka sistem automatski pokrene obogaćivanje kao deo planiranog [osvežavanja](system.md#schedule-tab). Vreme obrade zavisi od veličine podataka vaših klijenata.
+
+1. Opcionalno, [pogledajte napredak procesa obogaćivanja](#see-the-progress-of-the-enrichment-process).
+
+1. Kada se proces obogaćivanja završi, idite na **Moja bogaćenja** da pregledate novoobogaćene podatke profila klijenata, vreme poslednjeg ažuriranja i broj obogaćenih profila.
+
+1. Izaberite bogaćenje da biste videli rezultate [obogaćivanja](#enrichment-results).
+
+### <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
 
 Možete pronaći detalje o obradi obogaćivanja, uključujući njegov status i potencijalne probleme dok se osvežava ili nakon završetka osvežavanja. Shvatite koji su procesi uključeni za osvežavanje obogaćivanja i koliko je vremena potrebno za pokretanje procesa. Status obogaćivanja je podržan za Experian, Leadspace, HERE Technologies, SFTP Import i Azure Maps.
 
-Da biste videli status obogaćivanja
-
-1. Idite na **Podaci** > **Obogaćivanje**. 
-1. Na kartici **Moja obogaćivanja**, izaberite status obogaćivanja da biste otvorili bočno okno. 
-1. U oknu **Detalji o napretku**, proširite odeljak **Obogaćivanja**. 
-1. Ispod obogaćivanja za koje želite da vidite napredak, izaberite **Vidi detalje**. 
-1. U oknu **Detalji o zadatku**, izaberite **Prikaži detalje** da biste videli procese koji su uključeni u ažuriranje obogaćivanja i njihov status. 
+1. Idite na **Podaci** > **Obogaćivanje**.
+1. Na kartici **Moja obogaćivanja** izaberite status bogaćenja da biste otvorili bočno okno.
+1. U oknu **Detalji o napretku**, proširite odeljak **Obogaćivanja**.
+1. Ispod obogaćivanja za koje želite da vidite napredak, izaberite **Vidi detalje**.
+1. U oknu **Detalji o zadatku**, izaberite **Prikaži detalje** da biste videli procese koji su uključeni u ažuriranje obogaćivanja i njihov status.
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Nakon završenog trčanja za obogaćivanje, možete pregledati rezultate obogaćivanja.
+Nakon završenog trčanja za bogaćenje, pregledajte rezultate obogaćivanja.
 
-1. Idite na **Podaci** > **Obogaćivanje**. 
-1. Izaberite bogaćenje o kojem želite informacije.
+1. Idite na **Podaci** > **Obogaćivanje**.
+1. Na kartici **Moja bogaćenja** izaberite bogaćenje o kojem želite informacije.
 
-Sva bogaćenja prikazuju osnovne informacije kao što su broj obogaćenih profila, pregled generisanog entiteta za obogaćivanje i broj obogaćenih profila tokom vremena. Ako je dostupan **, broj kupaca obogaćenih poljem** obezbeđuje dubinsku analizu pokrivenosti svakog obogaćenog polja.
+Sva bogaćenja prikazuju osnovne informacije kao što su broj obogaćenih profila i broj obogaćenih profila tokom vremena. Pločica **za pregled obogaćenih** klijenata prikazuje uzorak generisanog entiteta obogaćivanja. Da biste videli detaljan prikaz, izaberite stavku Pogledajte **više i** izaberite karticu **Podaci**.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Stranica sa rezultatima obogaćivanja.":::
 
-Neka obogaćivanja takođe pokazuju informacije specifične za vrstu bogaćenja. Više informacija potražite u dokumentaciji za odgovarajuće bogaćenje.
+Ako je dostupan **, broj kupaca obogaćenih poljem** obezbeđuje dubinsku analizu pokrivenosti svakog obogaćenog polja.
 
+Neka obogaćivanja takođe pokazuju informacije specifične za vrstu bogaćenja. Više informacija potražite u srodnoj dokumentaciji.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

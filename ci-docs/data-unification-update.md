@@ -1,7 +1,7 @@
 ---
 title: Ažuriranje postavki ujedinjenja
 description: Ažurirajte duplirana pravila, podudaranje pravila ili objedinjena polja u postavkama ujedinjenja.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755607"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844057"
 ---
 # <a name="update-the-unification-settings"></a>Ažuriranje postavki ujedinjenja
 
@@ -43,8 +43,9 @@ Izvršite sledeće korake da biste pregledali ili promenili postavke ujedinjenja
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snimak ekrana stranice &quot;Ujedinjavanje podataka&quot; sa istaknutim opcijama &quot;Ujedini&quot;.":::
 
-   - Da biste ažurirali objedinjeni korisnički profil (sa ili bez zavisnosti), pogledajte [članak Pokretanje ispravki profila klijenta](#run-updates-to-the-unified-customer-profile).
-   - Da biste procenili kvalitet podudarnih uslova bez ažuriranja objedinjenog profila, pogledajte članak Pokreni [uslove podudaranja](#run-matching-conditions). Opcija **"Pokreni uslove podudaranja** " nije prikazana samo za jedan entitet.
+   - [Pokrenite uslove](#run-matching-conditions) podudaranja da biste brzo procenili kvalitet uslova podudaranja (pravila deduplikacije i podudaranja) bez ažuriranja objedinjenog profila. Opcija **"Pokreni uslove podudaranja** " nije prikazana samo za jedan entitet.
+   - [Ujedinite profile klijenata da](#run-updates-to-the-unified-customer-profile) biste pokrenuli uslove podudaranja i ažurirali objedinjeni entitet profila kupca bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](system.md#schedule-tab).
+   - [Ujedinite profile i zavisnosti klijenata da biste pokrenuli](#run-updates-to-the-unified-customer-profile) uslove podudaranja i ažurirali objedinjeni entitet profila kupca i sve zavisnosti (kao što su obogaćivanje, segmenti ili mere). Svi procesi se automatski ponovo ponište.
 
 ## <a name="edit-source-fields"></a>Uređivanje izvornih polja
 
@@ -135,11 +136,13 @@ Možete da konfigurišete i fino podesite većinu parametara podudaranja. Entite
 
 ## <a name="run-matching-conditions"></a>Pokretanje uslova podudaranja
 
+Uslovi podudaranja pokreću deduplication i podudaraju se samo sa pravilima i *ažuriraju Deduplication_** *i ConflationMatchPair* entitete.
+
 1. Sa stranice "Ujedinjenje **podataka** > **" izaberite opciju Pokreni** samo uslove podudaranja **.**
 
-   Duplikati zapisa i pločica **uslova podudaranja** prikazuju red **ili osvežavanje** **·**.**·**
+   Duplikati **zapisa i** pločice **uslova podudaranja** prikazuju status " **Red čekanja"** ili " **Osvežavanje** ".
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Kada se proces podudaranja dovrši, na pločici " **Podudarni** uslovi" izaberite **stavku "** Uredi".
 
@@ -153,10 +156,12 @@ Možete da konfigurišete i fino podesite većinu parametara podudaranja. Entite
 
 1. Sa stranice **"** > **Ujedinjenje podataka** " izaberite:
 
-   - **Ujedinite profile klijenata**: Ažurira objedinjeni entitet profila klijenata bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](system.md#schedule-tab).
+   - **Ujedinite profile klijenata**: Pokreće uslove podudaranja i ažurira objedinjeni entitet profila korisnika bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](system.md#schedule-tab).
 
-   - **Ujedinite profile i zavisnosti klijenata**: Ažurira objedinjeni profil i sve zavisnosti. Svi procesi se automatski ponovo ponište. Kada se svi nizvodni procesi završe, profil kupca odražava ažurirane podatke.
+   - **Ujedinite profile i zavisnosti klijenata: pokreće** uslove podudaranja i ažurira objedinjeni profil i sve zavisnosti. Svi procesi se automatski ponovo ponište. Kada se svi nizvodni procesi završe, profil kupca odražava ažurirane podatke.
 
-   Duplikati **zapisa, podudarnih** uslova **i objedinjene** pločice polja kupaca **prikazuju redosled** ili **osvežavanje** **.**
+   Duplikati **zapisa**, podudarnih **uslova** i objedinjene **pločice polja** kupaca prikazuju **status "Red čekanja** " ili " **Osvežavanje** ".
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Rezultati uspešnog prikazivanja na stranici "Ujedini **"** prikazuju broj objedinjenih profila klijenata.

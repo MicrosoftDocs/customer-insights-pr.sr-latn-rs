@@ -1,19 +1,19 @@
 ---
 title: Obogaćivanje profila preduzeća nezavisnim Leadspace-om za obogaćivanje
 description: Opšte informacije o Leadspace obogaćivanju treće strane.
-ms.date: 09/30/2021
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 08a4c56eb1c387015fd9e985a0c9484a13236fcf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643468"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8954196"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Obogaćivanje profila preduzeća uz Leadspace (pregled)
 
@@ -21,29 +21,50 @@ Leadspace je kompanija koja se bavi naukom o podacima koja pruža B-to-B platfor
 
 ## <a name="prerequisites"></a>Preduslovi
 
-Da biste konfigurisali Leadspace, morate da ispunite sledeće preduslove:
+- Aktivna licenca potencijalnog klijenta.
+- [Objedinjeni profili klijenata](customer-profiles.md) zasnovani na nalozima.
+- Administrator konfiguriše [vezu](connections.md) [potencijalnog](#configure-the-connection-for-leadspace) klijenta. Kontaktirajte [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direktno da biste saznali detalje o njihovom proizvodu.
 
-- Imate aktivnu Leadspace licencu.
-- Imate [objedinjene profile klijenata](customer-profiles.md) zasnovane na poslovnim kontaktima.
-- Administrator je već konfigurisao Leadspace vezu ili imate dozvole [administratora](permissions.md#admin) i „večiti ključ“ (koji se zove **Leadspace token**). Kontaktirajte [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) direktno da biste saznali detalje o njihovom proizvodu.
+## <a name="configure-the-connection-for-leadspace"></a>Konfigurišite vezu za Leadspace
+
+Morate biti administrator u [uvidima](permissions.md#admin) klijenata i imati "večiti ključ" (naziva se oznaka potencijalnog **prostora**).
+
+1. Izaberite **opciju Dodaj** vezu prilikom konfigurisanja obogaćenja ili idite na **administratorske** > **veze i** izaberite stavku **Podešavanje na** pločici "Glavni prostor".
+
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Stranica za konfiguraciju veze za Leadspace.":::
+
+1. Unesite ime za vezu i važeći oznaku potencijalnog prostora.
+
+1. Pregledajte i dajte saglasnost za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) izborom opcije **Slažem se**.
+
+1. Izaberite **opciju** Proveri da biste proverili valjanost konfiguracije, a zatim kliknite na dugme **Sačuvaj**.
+
+### <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
+
+Kada omogućite da Dynamics 365 Customer Insights prenosi podatke u Leadspace, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci. Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da Leadspace ispunjava sve obaveze privatnosti ili bezbednosti koje imate. Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Vaš Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 
-1. Idite na **Podaci** > **Obogaćivanje**.
+1. Idite do kartice **Podaci** > **Obogaćivanje** i izaberite karticu **Otkrij**.
 
-1. Izaberite **Obogati moje podatke** na pločici Leadspace i izaberite **Započni**.
+1. Izaberite **obogati moje podatke** na podacima **kompanije sa** pločice "Glavni prostor".
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Snimak ekrana Leadspace pločice.":::
 
-1. Izaberite [vezu](connections.md) sa padajuće liste. Ako veza nije dostupna, obratite se administratoru. Ako ste administrator, vezu možete kreirati izborom **Dodaj vezu** i biranjem opcije **Leadspace**. 
+1. Pregledajte pregled, a zatim kliknite na dugme **Dalje**.
 
-1. Izaberite **Povežite se sa uslugom Leadspace** da biste potvrdili izbor veze.
+1. Izaberite vezu. Obratite se administratoru ako nije dostupan.
 
-1. Izaberite **Sledeće** i birajte **Skup podataka klijenta** koji želite da obogatite podacima preduzeća iz usluge Leadspace. Možete izabrati entitet **Klijent** da biste obogatili sve vaše profile klijenata ili izaberite entitet segmenta da biste obogatili samo profile klijenata sadržane u tom segmentu.
+1. Izaberite **Sledeće**.
+
+1. Izaberite opciju **Skup podataka i odaberite** profil ili segment koji želite da obogatite podacima preduzeća iz programa Leadspace. Entitet *kupca* obogaćuje sve profile kupaca, dok segment obogaćuje samo profile kupaca sadržane u tom segmentu.
 
     :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Snimak ekrana prilikom odabira skupa podataka o klijentima.":::
 
-1. Izaberite **Sledeće** i definišite koja polja iz vaših objedinjenih profila se koriste za podudaranje podataka o preduzeću iz usluge Leadspace. Polje **Ime kompanije** je obavezno. Za veću preciznost podudaranja, do dva druga polja, **Veb-lokacija kompanije** i **Lokacija kompanije**, mogu se dodati.
+1. Definišite tip polja iz objedinjenih profila koja ćete koristiti za podudaranje: primarnu i/ili sekundarnu adresu. Možete odrediti mapiranje polja za obe adrese i obogatiti profile za obe adrese zasebno. Na primer, za kućnu adresu i poslovnu adresu. Izaberite **Sledeće**.
+
+1. Mapirajte polja na podatke preduzeća iz prostora potencijalnog klijenta. Polje **Ime kompanije** je obavezno. Za veću preciznost podudaranja, do dva druga polja, **Veb-lokacija kompanije** i **Lokacija kompanije**, mogu se dodati.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Okno za mapiranje polja Leadspace.":::
 
@@ -52,45 +73,23 @@ Da biste konfigurisali Leadspace, morate da ispunite sledeće preduslove:
 1. Izaberite polje za potvrdu ako imate *Profili kontakata* koje biste želeli da obogatite. Uvidi kupaca će automatski mapirati potrebna polja.
 
    :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Obogaćivanje zapisa o kontaktima u usluzi Leadspace.":::
- 
-1. Navedite ime za obogaćivanje i izaberite **Sačuvaj obogaćivanje** nakon pregleda vašeg izbora.
 
+1. Izaberite **Sledeće**.
 
-## <a name="configure-the-connection-for-leadspace"></a>Konfigurišite vezu za Leadspace 
+1. Navedite **ime** za bogaćenje i ime **entiteta izlaza**.
 
-Morate biti administrator da biste konfigurisali veze. Izaberite **Dodaj vezu** prilikom konfigurisanja obogaćivanja *ili* idite na **Administrator** > **Veze** i izaberite **Podešavanje** na pločici Leadspace.
+1. Izaberite **Sačuvaj obogaćivanje** nakon pregleda vaših izbora.
 
-1. Izaberite **Prvi koraci**. 
-
-1. Unesite naziv veze u polje **Ime za prikaz**.
-
-1. Navedite važeći token za Leadspace.
-
-1. Pregledajte i dajte saglasnost za **Privatnost podataka i usklađenost** izborom opcije **Slažem se**.
-
-1. Izaberite **Verifikuj** da biste proverili valjanost konfiguracije.
-
-1. Po završetku verifikacije, izaberite **Sačuvaj**.
-   
-   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Stranica za konfiguraciju veze za Leadspace.":::
+1. Kliknite **na dugme** "Pokreni" da biste započeli proces obogaćivanja ili blizu da biste se vratili na stranicu **"Obogaćivanje** ".
 
 ## <a name="enrichment-results"></a>Rezultati obogaćivanja
 
-Nakon osvežavanja obogaćivanja, možete pregledati novo obogaćene podatke kompanije u delu [Moja obogaćenja](enrichment-hub.md). Možete pronaći vreme poslednjeg ažuriranja i broj obogaćenih profila.
-
-Detaljnom prikazu svakog obogaćenog profila možete pristupiti ako izaberete **Prikaži obogaćene podatke**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 Više informacija potražite u članku [Leadspace API-ji](https://support.leadspace.com/hc/en-us/sections/201997649-API).
 
 ## <a name="next-steps"></a>Sledeći koraci
 
-
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
-
-Kada omogućite da Dynamics 365 Customer Insights prenosi podatke u Leadspace, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci. Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da Leadspace ispunjava sve obaveze privatnosti ili bezbednosti koje imate. Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Vaš Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

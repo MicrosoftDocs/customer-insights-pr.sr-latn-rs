@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833414"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011858"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 
@@ -51,7 +51,13 @@ Pre nego što kreirate novog direktora servisa za uvide klijenata, proverite da 
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Dodelite dozvole principalu usluge za pristup nalogu za skladištenje
 
-Idite na portal Azure da biste dodelili dozvole direktoru usluge za nalog za skladištenje koji želite da koristite u uvidima klijenata.
+Idite na portal Azure da biste dodelili dozvole direktoru usluge za nalog za skladištenje koji želite da koristite u uvidima klijenata. Jedna od sledećih uloga mora biti dodeljena nalogu za skladištenje ili kontejneru:
+
+|Akreditiv|Zahtevi|
+|----------|------------|
+|Trenutno prijavljeni korisnik|**Uloga**: Skladištenje Blob podataka čitalac, Storage Blob saradnik ili Storage Blob Owner.<br>**Nivo**: Dozvole se mogu dodeliti na nalogu za skladištenje ili kontejneru.</br>|
+|Glavnica usluge uvida kupaca -<br>Korišćenje Azure Data Lake Storage kao izvor podataka</br>|Opcija 1<ul><li>**Uloga**: Storage Blob Data čitalac, Storage Blob Data saradnik ili Storage Blob Data Owner.</li><li>**Nivo**: Dozvole treba da budu dodeljene na nalogu za skladištenje.</li></ul>Opcija 2 *(bez deljenja usluge Principalni pristup nalogu za skladištenje)*<ul><li>**Uloga 1**: Skladištenje Blob podataka čitalac, Storage Blob Data saradnik ili Storage Blob Vlasnik podataka.</li><li>**Nivo**: Dozvole treba da budu dodeljene u kontejneru.</li><li>**Uloga 2**: Delegator podataka blob skladišta.</li><li>**Nivo**: Dozvole treba da budu dodeljene na nalogu za skladištenje.</li></ul>|
+|Glavnica usluge uvida kupaca - <br>Korišćenje Azure Data Lake Storage kao izlaz ili odredište</br>|Opcija 1<ul><li>**Uloga**: Skladištenje Blob podataka saradnik vlasnik skladišta bloba.</li><li>**Nivo**: Dozvole treba da budu dodeljene na nalogu za skladištenje.</li></ul>Opcija 2 *(bez deljenja usluge Principalni pristup nalogu za skladištenje)*<ul><li>**Uloga**: Skladištenje Blob podataka saradnik vlasnik skladišta bloba.</li><li>**Nivo**: Dozvole treba da budu dodeljene u kontejneru.</li><li>**Uloga 2**: Delegator skladišta Blob.</li><li>**Nivo**: Dozvole treba da budu dodeljene na nalogu za skladištenje.</li></ul>|
 
 1. Idite na [Azure portal za administraciju](https://portal.azure.com) i prijavite se u svoju organizaciju.
 
@@ -62,7 +68,7 @@ Idite na portal Azure da biste dodelili dozvole direktoru usluge za nalog za skl
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Snimak ekrana koji prikazuje Azure portal dok dodajete dodelu uloge.":::
 
 1. U oknu **Dodaj dodelu uloge** podesite sledeća svojstva:
-   - Uloga: **Saradnik za podatke skladišta blob objekta**
+   - Uloga: Skladištenje Blob podataka čitalac, Storage Blob saradnik ili Storage Blob Owner na osnovu gorenavedenih akreditiva.
    - Dodelite pristup: **Korisnik, grupa ili principal usluge**
    - Izaberite članove: **Dynamics 365 AI za uvide klijenata** ([glavnica usluge](#create-a-new-service-principal) koju ste tražili ranije u ovoj proceduri)
 

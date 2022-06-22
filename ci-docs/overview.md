@@ -6,22 +6,22 @@ ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641917"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947109"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Pregled proizvoda za Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) je Microsoftova platforma za podatke o korisnicima (CDP) koja pomaže u isporuci personalizovanih korisničkih iskustava. Aplikacija pruža holistički pogled na kupce sa nenadmašnim vremenom na uvid. Steknite najsveobuhvatniji prikaz svojih klijenata ujedinjavajući podatke klijenata sa operativnim i IoT podacima u realnom vremenu. Obogatite profile klijenata izvorima podataka prvog i nezavisnog proizvođača. 
 
 Uvidi klijenata vam pomažu da pretvorite svoje poslovanje u organizaciju centričnog kupca tako što osnažuje marketinške, prodajne i uslužne profesionalce da prilagode interakcije 1:1 na skali. Integracije ključa sa korporacijom Microsoft i aplikacijama nezavisnih proizvođača mogu se koristiti za aktiviranje uvida u realnom vremenu da bi se pokretale smislene radnje.
- 
+
 Povežite podatke iz transakcionih, ponašanja i demografskih izvora podataka da biste kreirali prikaze klijenata od 360 stepeni. Izvedeni uvidi van okvira sa unapred izgrađenim AI modelima ili brzo grade, testiraju i primenjuju prilagođene AI/ML modele koristeći napredna analitička rešenja u neograničenom obimu.
 
-Održavajte potpunu kontrolu nad podacima klijenata da biste obezbedili najviši nivo upravljanja podacima i usaglašenosti sa samouslugom, enterprise ocenom CDP ugrađenom na Microsoft Azure. Podržite Opštu uredbu o zaštiti podataka (GDPR) i druge zakonodavne zahteve i industrijske standarde kroz ugrađene alatke za privatnost, bezbednost i upravljanje i upravljanje.
+Održavajte potpunu kontrolu nad podacima klijenata da biste obezbedili najviši nivo upravljanja podacima i usaglašenosti sa samouslugom, enterprise ocenom CDP ugrađenom na Microsoft Azure. Podržite Opštu uredbu o zaštiti podataka (GDPR) i druge zakonodavne zahteve i industrijske standarde kroz ugrađene alatke za privatnost, bezbednost i upravljanje.
 
 ## <a name="pricing-and-licensing"></a>Vodič o cenama i licencama
 Customer Insights je licenciran po zakupcu i uključuje mogućnosti poslovanja i potrošača (B2C) i poslovnih (B2B). Možete kupiti dodatni kapacitet pomoću licenci dodataka da biste povećali broj profila i naloga.

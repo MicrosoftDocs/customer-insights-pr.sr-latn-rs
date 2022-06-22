@@ -1,19 +1,19 @@
 ---
-title: Nove i predstojeće funkcije
+title: Nove i ažurirane funkcije
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833647"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843364"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Šta je novo u sistemu Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Ispravke za maj 2022.
+
+Ispravke u maju 2022.
+
+### <a name="updated-data-unification-experience"></a>Ažurirano iskustvo ujedinjenja podataka
+
+ Ujedinjenje podataka vam omogućava da jednom omalovažite izvore podataka u jedan glavni skup podataka koji obezbeđuje objedinjeni prikaz tih podataka. Podaci se mogu objediniti u jednom entitetu ili više entiteta. Prvo izaberite entitete [i izvorna polja, uklonite](map-entities.md)[duplirane zapise](remove-duplicates.md), navedite pravila za [uslove podudaranja](match-entities.md) i definišite [koja polja treba uključiti u objedinjene profile kupaca](merge-entities.md).
+
+Više informacija potražite u članku [Pregled ujedinjenja podataka](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Osvežena matična stranica u uvidima kupaca
+
+**Kućni** vodiči kroz proces konfiguracije za ključne funkcije i pružaju pregled segmenata, mera i podataka obogaćivanju. Osvežili smo iskustvo da bismo na prvi pogled pružili relevantnije informacije.
+
+Više informacija potražite u članku Istraživanje [uvida klijenata](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Praćenje korišćenja segmenta
+
+Sada možete da [pratite korišćenje segmenta u aplikacijama](segments.md#track-usage-of-a-segment) koje se zasnivaju na organizaciji koja Dataverse je povezana sa uvidom klijenata. Za [segmente uvida kupaca koji se koriste u putovanjima kupaca u Dynamics 365 Marketingu](/dynamics365/marketing/real-time-marketing-ci-profile), sistem vas obaveštava o korišćenju tog segmenta.
+
+### <a name="export-to-criteo"></a>Izvezi u Criteo
+
+Criteo je onlajn platforma koja pomaže korisnicima da upravljaju digitalnim oglašavanjem. Sada možete da izvozite segmente objedinjenih profila klijenata da biste generisali kampanje, obezbedili marketing e-pošte i koristili određene grupe kupaca sa programom Criteo.
+
+Više informacija potražite u članku [Izvoz segmenata u Criteo (pregled)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Prerađena struktura dokumentacije za izradu životne sredine
+
+Ponovo smo razmotrili dokumente za pomoć u vezi sa kreiranjem i upravljanjem okruženjima u uvidima klijenata. Članci su sada grupisani pod klima-okruženjem u sadržaju. Restrukturirani članci pružaju više smernica za različite načine za podešavanje okruženja i jasniju strukturu. Ako imate povratne informacije za deljenje, obavestite nas putem kontrola pred kraj članaka pomoći.
+
+Više informacija potražite u članku [Kako da: kreiranje novog okruženja](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Ispravke za april 2022. godine
 

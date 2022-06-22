@@ -3,17 +3,17 @@ title: Korišćenje sopstvenog Azure Data Lake Storage Gen2 naloga
 author: mukeshpo
 description: Saznajte više o zahtevima za korišćenje sopstvenog naloga Azure Data Lake Storage za skladištenje podataka "Uvidi kupaca".
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833953"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011950"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Korišćenje sopstvenog Azure Data Lake Storage Gen2 naloga
 
@@ -37,6 +37,7 @@ Kada kreirate novo okruženje, uverite se da nalog skladišta u jezeru podataka 
 1. Odaberite način povezivanja **skladišta**. Možete da birate između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Više informacija potražite u članku [Povezivanje sa Azure Data Lake Storage nalogom pomoću direktora Azure usluge](connect-service-principal.md).
    - Za **Azure pretplatu** odaberite nalog **pretplate**, **grupe** resursa i **skladišta** koji sadrži `customerinsights` kontejner.
    - Za **ključ naloga** navedite ime **naloga** i ključ **naloga za** nalog skladišta u jezeru podataka. Korišćenje ovog metoda potvrde identiteta podrazumeva da budete informisani ako vaša organizacija rotira ključeve. Morate ažurirati [konfiguraciju okruženja](manage-environments.md#edit-an-existing-environment) novim ključem kada se rotira.
+1. Odaberite da li želite da koristite Azure privatnu vezu da biste se povezali sa nalogom za skladištenje [i kreirali vezu sa privatnom](security-overview.md#private-links-tab) vezom sa procesom u dva koraka.
 
 Kada se sistemski procesi kao što je unos podataka dovrše, sistem kreira odgovarajuće fascikle u nalogu za skladištenje. Datoteke sa podacima i *model.json* datoteke se kreiraju i dodaju u fascikle na osnovu naziva procesa.
 

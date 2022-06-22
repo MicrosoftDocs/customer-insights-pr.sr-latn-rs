@@ -7,20 +7,20 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 7140e9254108bc6f0d518b3ccf4b10fc33cde115
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: c470956b0453ac2558ed85acdeebba120a0ca55d
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800191"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011720"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povežite se sa podacima u Microsoft Dataverse upravljanom jezeru podataka
 
-Ovaj članak pruža informacije o tome kako Dataverse korisnici mogu brzo da se povežu sa analitičkim entitetima u upravljanom Microsoft Dataverse jezeru. 
+Microsoft Dataverse korisnici mogu brzo da se povežu sa analitičkim entitetima u upravljanom Microsoft Dataverse jezeru.
 
 > [!NOTE]
 > Morate biti administrator organizacije da biste Dataverse nastavili i pregledali listu entiteta dostupnih u kontrolisanom jezeru.
@@ -32,40 +32,34 @@ Ovaj članak pruža informacije o tome kako Dataverse korisnici mogu brzo da se 
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Povežite se sa Dataverse upravljanim jezerom
 
-1. U usluzi Customer Insights, idite na **Podaci** > **Izvori podataka**.
+1. Idite na **Podaci** > **Izvori podataka**.
 
-2. Izaberite **Dodaj izvor podataka**.
+1. Izaberite **Dodaj izvor podataka**.
 
-3. Izaberite i **Microsoft Dataverse** kliknite na dugme **Dalje**.
+1. Izaberite stavku **Microsoft Dataverse**.
 
-4. Unesite **Naziv** izvora podataka i izaberite **Sledeće**. 
+1. Unesite **ime** za izvor podataka i opcionalni **opis**.
 
-5. Navedite **Adresu servera** za Dataverse organizaciju i izaberite **Prijavite se**.
+1. Navedite **Adresu servera** za Dataverse organizaciju i izaberite **Prijavite se**.
 
-   :::image type="content" source="media/ingest-dataverse-server-address.png" alt-text="Ekran u koraku unosa podataka gde korisnik može da unese URL Dataverse okruženja.":::
-
-6. Sa dostupne liste izaberite tabele koje želite da unesete kao entitete u uvide kupaca.    
+1. Izaberite tabele koje želite da unestite kao entitete u uvid kupca sa dostupne liste.
 
    > [!NOTE]
    > Ako su neke tabele već izabrane, mogu ih koristiti druge Dynamics 365 aplikacije (poput Dynamics 365 Sales Insights ili Customer Service Insights). Ne možete promeniti izbor. Ove tabele će biti dostupne kao entiteti kada se kreira izvor podataka.
 
-   :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dijalog koji prikazuje listu entiteta u Dataverse okruženju.":::
+    :::image type="content" source="media/select-dataverse-entities.png" alt-text="Dijalog koji prikazuje listu entiteta u Dataverse okruženju.":::
 
-7. Sačuvajte svoj izbor da biste započeli sinhronizaciju izabranih tabela iz usluge Dataverse. Novododatu vezu ćete pronaći na stranici **Izvori podataka**. Biće stavljeno u red za osvežavanje i prikazaće broj entiteta kao 0 dok se sve izabrane tabele ne sinhronizuju.
+1. Sačuvajte svoj izbor da biste započeli sinhronizaciju izabranih tabela iz usluge Dataverse. Novododatu vezu ćete pronaći na stranici **Izvori podataka**. Biće stavljeno u red za osvežavanje i prikazaće broj entiteta kao 0 dok se sve izabrane tabele ne sinhronizuju.
 
 Samo jedan izvor podataka okruženja može istovremeno da koristi isto Dataverse nadgledano jezero.
 
 ## <a name="edit-a-dataverse-managed-lake-data-source"></a>Uredite izvor podataka za Dataverse upravljano jezero
 
-Izbor entiteta uređujete tek nakon što kreirate izvor podataka. Na primer, ako su dodati dodatni entiteti u uslugu Dataverse, a želite i da ih uvozite.    
+Izbor entiteta uređujete tek nakon što kreirate izvor podataka. Na primer, ako su dodati dodatni entiteti u uslugu Dataverse, a želite i da ih uvozite.
 Da biste se povezali sa drugim Dataverse jezerom podataka, [kreirajte novi izvor podataka](#connect-to-a-dataverse-managed-lake).
 
 1. Idite na **Podaci** > **Izvori podataka**.
 
-2. Pored izvor podataka želite da ažurirate izaberite vertikalnu elipsu (&vellip;).
+1. Pored izvor podataka želite da ažurirate, izaberite stavku **Uredi**.
 
-3. Izaberite opciju **Uredi** sa liste.
-
-4. Izaberite dodatne entitete s dostupne liste entiteta i izaberite **Sačuvaj**.
-
-[!INCLUDE [footer-include](includes/footer-banner.md)]
+1. Izaberite dodatne entitete s dostupne liste entiteta i izaberite **Sačuvaj**.

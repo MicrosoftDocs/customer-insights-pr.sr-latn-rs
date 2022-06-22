@@ -1,19 +1,19 @@
 ---
 title: Izvoz Customer Insights podataka u Snapchat
 description: Saznajte kako da konfigurišete vezu i izvezete u Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643625"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947293"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Izvoz segmenata u Snapchat (verzija za pregled)
 
@@ -21,7 +21,8 @@ Izvezite segmente objedinjenih profila klijenata u Snapchat i koristite ih za og
 
 ## <a name="prerequisites-for-a-connection"></a>Preduslovi za vezu
 
--   Imate [Snapchat Business nalog](https://business.snapchat.com/), [Snapchat Ads nalog](https://ads.snapchat.com/) i odgovarajuće akreditive administratora.
+-   Imate [Snapchat Business nalog](https://business.snapchat.com/), [Snapchat Ads nalog](https://ads.snapchat.com/) i odgovarajuće akreditive administratora. YOu mora biti bar član naloga organizacije i menadžer podataka određenog naloga oglasa. 
+-   Imate najmanje jedan korisnici Snapchat korisnici tipa SAM (Snap korisnici Match). 
 -   Konfigurisali [ste segmente u programu](segments.md) "Uvidi kupaca".
 -   Objedinjeni profili klijenata u izvezenim segmentima sadrže polje koje predstavlja adresu e-pošte.
 
@@ -60,7 +61,7 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više 
 
 1. U polju **Veza za izvoz**, odaberite vezu iz odeljka Snapchat. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
 
-1. Unesite [**ID ciljne grupe za Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Unesite [**Snapchat segment/korisnici ID**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID datoteke se korisnici u URL adresi nakon što izaberete korisnici u programu Snapchat korisnici Manager. 
 
 1. U odeljku **Podudaranje podataka**, u polju **E-pošta**, izaberite polje koje predstavlja e-adresu klijenta. To je potrebno da izvezete segmente u Snapchat.
 

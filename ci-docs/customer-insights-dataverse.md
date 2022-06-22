@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833693"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011566"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
 Uvidi klijenata pružaju opciju da izlazni entiteti budu dostupni kao [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ova integracija omogućava lako deljenje podataka i prilagođeni razvoj putem niskog koda/bez kodnog pristupa. Izlazni [entiteti su](#output-entities) dostupni kao tabele u okruženju Dataverse. Podatke možete da koristite za bilo koju drugu aplikaciju zasnovanu na Dataverse tabelama. Ove tabele omogućavaju scenarije kao što su automatizovani tokovi posla kroz Power Automate ili izradu aplikacija pomoću programa Power Apps.
 
-Povezivanje sa okruženjem Dataverse vam takođe omogućava da unosite [podatke iz lokalni podataka pomoću Power Platform priliva podataka i mrežnih prolaza](data-sources.md#add-data-from-on-premises-data-sources).
+Povezivanje sa okruženjem Dataverse vam takođe omogućava da unosite [podatke iz lokalni podataka pomoću Power Platform priliva podataka i mrežnih prolaza](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Preduslovi
 
@@ -57,7 +57,7 @@ Za omogućavanje deljenja podataka Microsoft Dataverse kada okruženje koristi [
 Postoje dva ograničenja prilikom korišćenja Dataverse sa sopstvenim nalogom Azure Data Lake Storage:
 
 - Postoji mapiranje jedan na jedan između organizacije Dataverse i naloga Azure Data Lake Storage. Kada je Dataverse organizacija povezana sa nalogom za skladištenje, ne može da se poveže sa drugim nalogom za skladištenje. Ovo ograničenje sprečava popunjavanje Dataverse više naloga za skladištenje.
-- Deljenje podataka neće funkcionisati ako je potrebno podešavanje Azure privatne veze za pristup Azure Data Lake nalogu za skladištenje jer se nalazi iza zaštitnog zida. Dataverse trenutno ne podržava vezu sa privatnim krajnjim tačkama putem privatne veze.
+- Deljenje podataka neće funkcionisati ako je za pristup nalogu potrebno Azure Data Lake Storage podešavanje Azure privatne veze jer se nalazi iza zaštitnog zida. Dataverse trenutno ne podržava vezu sa privatnim krajnjim tačkama putem privatne veze.
 
 ### <a name="set-up-powershell"></a>Podešavanje PowerShell-a
 
