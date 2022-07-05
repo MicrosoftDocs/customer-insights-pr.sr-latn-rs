@@ -1,5 +1,5 @@
 ---
-title: Izvoz podataka o uvidu kupaca u SFTP domaćine (sadrži video)
+title: Izvoz podataka u SFTP domaćine (pregled) (sadrži video)
 description: Saznajte kako da konfigurišete vezu i izvezete na SFTP lokaciju.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947201"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082771"
 ---
-# <a name="export-segments-and-other-data-to-sftp-preview"></a>Izvoz segmenata i ostalih podataka u SFTP (verzija za pregled)
+# <a name="export-data-to-sftp-preview"></a>Izvoz podataka u SFTP (pregled)
 
 Koristite podatke o klijentima u nezavisnim aplikacijama tako što ćete ih izvesti na lokaciju protokola za bezbedni prenos datoteka (SFTP).
 

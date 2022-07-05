@@ -1,5 +1,5 @@
 ---
-title: Robot za Microsoft Teams
+title: Teams robot za Dynamics 365 Customer Insights (verzija za pregled)
 description: Potražite objedinjene profile klijenata u usluzi Microsoft Teams uz pomoć robota.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 89a293d5b6f9f5452b2ccba495d2475002806019
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 62a0216de848b5a3a81fdd6ac078feb551fcfec6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643905"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082603"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Teams robot za Dynamics 365 Customer Insights (verzija za pregled)
 
@@ -37,7 +37,7 @@ Da biste postavili i konfigurisali robota, moraju se ispuniti sledeći preduslov
 
 ## <a name="configure-the-bot"></a>Konfigurisanje robota
 
-1. Idite na **odredišta za AdminExport** > **·**.
+1. Idite na **odredišta** > **za izvoz administratora**.
 1. Na pločici Microsoft Teams izaberite **Postaviti**.
 1. Preusmereni ste na oblast **Aplikacije** u usluzi Teams. Takođe možete otvoriti Teams i izabrati **Aplikacije** u donjem levom uglu ili ga direktno [preuzeti sa lokacije AppSource](https://go.microsoft.com/fwlink/?linkid=2124104).
 1. Potražite **Customer Insights** i izaberite aplikaciju.

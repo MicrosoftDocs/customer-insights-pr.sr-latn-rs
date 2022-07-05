@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643536"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083149"
 ---
 # <a name="semantic-mappings-preview"></a>Semantička mapiranja (verzija za pregled)
 
@@ -26,7 +26,7 @@ Semantička mapiranja vam omogućavaju da mapirate podatke o neaktivnosti u unap
 
 ## <a name="define-a-contactprofile-semantic-entity-mapping"></a>Definišite mapiranje semantičkog entiteta ContactProfile
 
-1. Idite **na DataSemantic** > **mapiranja (pregled)**.
+1. Idite **na Data** > **Semantic mapiranja (pregled)**.
 
 1. Izaberite **Dodaj semantičko mapiranje** da biste započeli navođeno iskustvo.
 
@@ -102,7 +102,7 @@ Nakon kreiranja mapiranja *semantičkog entiteta ContactProfile*, možete da uhv
 
 1. [Definišite *mapiranje semantičkog entiteta KontaktProfile* .](#define-a-contactprofile-semantic-entity-mapping) I pokreni semantičko mapiranje.
 
-1. Idite na **DataActivities** > **·**.
+1. Idite na aktivnosti **sa** > **podacima**.
 
 1. Kliknite **na dugme "Dodaj** aktivnost" da biste kreirali novu aktivnost.
 
@@ -110,8 +110,8 @@ Nakon kreiranja mapiranja *semantičkog entiteta ContactProfile*, možete da uhv
 
 1. U odnosi **koraku** kreirajte indirektnu relaciju između izvornih podataka aktivnosti sa nalozima, koristeći podatke o kontaktu kao posrednički entitet. Više informacija potražite u direktnim [i indirektnim putanjama odnosa](relationships.md#relationship-paths).
    - Primer relacije za aktivnost koja se zove "Nabavke *"*:
-      - **Podaci o izvornoj aktivnosti nabavke** > **na** atributu **ID kontakta**
-      - **Podaci o kontaktuAccount** > **na** ID-u **naloga atributa**
+      - **Podaci o kontaktu izvorne aktivnosti** > **nabavke** na atributu ID **kontakta**
+      - **Podaci o nalogu** > **podataka** kontakta na ID-u **naloga atributa**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Primer podešavanja relacija.":::
 

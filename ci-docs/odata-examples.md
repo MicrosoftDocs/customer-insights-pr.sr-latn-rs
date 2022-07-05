@@ -1,5 +1,5 @@
 ---
-title: Primeri OData za Dynamics 365 Customer Insights API-je
+title: Primeri upita OData za API-je korisničkih uvida
 description: Često korišćeni primeri otvorenog protokola podataka (OData) za upit API-ja korisničkih uvida za redigovanje podataka.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808478"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083170"
 ---
-# <a name="odata-query-examples"></a>Primeri upita OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Primeri upita OData za API-je korisničkih uvida
 
 Open Data Protocol (OData) je protokol za pristup podacima izgrađen na osnovnim protokolima kao što je HTTP. On koristi uobičajeno prihvaćene metodologije kao što je REST za Veb. Postoje razne vrste biblioteka i alatki koje se mogu koristiti za konzumiranje OData usluga.
 

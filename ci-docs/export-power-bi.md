@@ -1,5 +1,5 @@
 ---
-title: Power BI konektor
+title: Power BI konektor (pregled)
 description: Saznajte kako da koristite Dynamics 365 Customer Insights konektor u usluzi Power BI.
 ms.date: 07/23/2021
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e901114703a43b4b4e751e0a93eb4876d7636c00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72daf6d4ef3b6afb8049c622b57e7ec44762fb21
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643636"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051286"
 ---
-# <a name="connector-for-power-bi-preview"></a>Konektor za Power BI (pregled)
+# <a name="power-bi-connector-preview"></a>Power BI konektor (pregled)
 
-Napravite vizuelizacije za svoje podatke pomoću usluge Power BI Desktop. Generišite dodatne uvide i pravite izveštaje pomoću objedinjenih podataka o klijentima.
+Kreirajte vizuelizacije za podatke pomoću radne površine Microsoft Power BI. Generišite dodatne uvide i pravite izveštaje pomoću objedinjenih podataka o klijentima.
 
 ## <a name="prerequisites"></a>Preduslovi
 

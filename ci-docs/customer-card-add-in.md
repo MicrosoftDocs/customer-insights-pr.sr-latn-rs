@@ -1,5 +1,5 @@
 ---
-title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (sadrži video)
+title: Programski dodatak za karticu kupca za Dynamics 365 aplikacije (pregled) (sadrži video)
 description: Prikaži podatke profila klijenata iz aplikacija "Uvidi kupaca" u Dynamics 365 pomoću ovog programskog dodatka.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755653"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082141"
 ---
-# <a name="customer-card-add-in-preview"></a>Dodatak za karticu klijenta (pregled)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Programski dodatak za karticu kupca za Dynamics 365 aplikacije (pregled)
 
 Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikacijama. Sa instaliranim programskim dodatkom Kartica klijenta u podržanoj Dynamics 365 aplikaciji, možete odabrati da prikazujete polja profila klijenta, uvide i vremensku osu aktivnosti. Programski dodatak će preuzeti podatke iz usluge Customer Insights bez uticaja na podatke u povezanoj Dynamics 365 aplikaciji.
 

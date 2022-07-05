@@ -1,19 +1,19 @@
 ---
-title: Izvoz Customer Insights podataka u Azure Synapse Analytics
+title: Izvoz podataka u Azure Synapse Analytics (pregled)
 description: Saznajte kako da konfigurišete vezu sa programom Azure Synapse Analytics.
-ms.date: 04/11/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 60bacb313e0426564310f3c1339bf3b732e17489
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741520"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082876"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Izvoz podataka u Azure Synapse Analytics (pregled)
 
@@ -48,7 +48,7 @@ U usluzi Azure:
 
 ### <a name="configure-a-connection"></a>Konfigurisanje veze
 
-Da biste kreirali vezu, glavnica usluge i korisnički nalog u okviru "Uvidi **klijenata" moraju čitalac dozvole** *za* grupu resursa u kojoj se nalazi radni prostor sinapse Analitika. Pored toga, direktoru usluge i korisniku na radnom prostoru Sinapse Analytics potrebne **su dozvole administratora sinapse**. 
+Da biste kreirali vezu, glavnica usluge i korisnički nalog u okviru "Uvidi **klijenata" moraju čitalac dozvole** *za* grupu resursa u kojoj se nalazi radni prostor sinapse Analitika. Pored toga, direktoru usluge i korisniku na radnom prostoru synapse Analytics potrebne **su dozvole administratora sinapse**. 
 
 1. Idite na **Administrator** > **Veze**.
 
@@ -72,13 +72,13 @@ Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Da biste 
 
 1. U polju **Veza za izvoz** odaberite vezu iz odeljka **Azure Synapse Analytics**. Ako ne vidite naziv ovog odeljka, ne postoje [veze](connections.md) ovog tipa koje su vam dostupne.
 
-1. Obezbedite prepoznatljivo **Ime za prikaz** za vaš izvoz i **Naziv baze podataka**.
+1. Obezbedite prepoznatljivo **Ime za prikaz** za vaš izvoz i **Naziv baze podataka**. Izvoz će stvoriti novu bazu podataka [Azure Synapse jezera](/azure/synapse-analytics/database-designer/concepts-lake-database) u radnom prostoru definisanom u vezi.
 
 1. Izaberite entitete u koje želite da izvezete Azure Synapse Analytics.
    > [!NOTE]
    > Izvori podataka na osnovu [Common Data Model fascikle](connect-common-data-model.md) nisu podržani.
 
-2. Izaberite stavku **Sačuvaj**.
+1. Izaberite stavku **Sačuvaj**.
 
 Čuvanje izvoza ne pokreće izvoz odmah.
 

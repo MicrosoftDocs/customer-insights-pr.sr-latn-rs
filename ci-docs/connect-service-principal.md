@@ -1,5 +1,5 @@
 ---
-title: Povezivanje sa Azure Data Lake Storage nalogom korišćenjem principala usluge
+title: Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 description: Za povezivanje sa sopstvenim jezerom podataka, koristite principala usluge Azure.
 ms.date: 05/31/2022
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 949caa73578dbe0a511726ec045c0fd5f4621de4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011858"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082246"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Povezivanje sa Azure Data Lake Storage nalogom korišćenjem Azure principala usluge
 

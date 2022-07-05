@@ -1,6 +1,6 @@
 ---
-title: Kreiranje segmenata pomoću alatke za pravljenje segmenata
-description: Napravite segmente klijenata da biste ih grupisali na osnovu različitih atributa.
+title: Kreiranje segmenata
+description: Kreirajte segmente kupaca da biste ih grupišu na osnovu različitih atributa pomoću izrade segmenata ili brzih segmenata.
 ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: b99d9575d3b6af91758d80eb04170773b08cc9ab
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800113"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053989"
 ---
 # <a name="create-segments"></a>Kreiranje segmenata
 

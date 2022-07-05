@@ -1,5 +1,5 @@
 ---
-title: Entiteti i skupovi podataka
+title: Entiteti u usluzi Customer Insights
 description: Pogledajte podatke na stranici Entiteti.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643425"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082729"
 ---
 # <a name="entities-in-customer-insights"></a>Entiteti u usluzi Customer Insights
 
@@ -33,7 +33,7 @@ Stranica **"Entiteti** " navodi entitete i uključuje sledeće kolone:
 
 ## <a name="explore-a-specific-entitys-data"></a>Istražite podatke određenog entiteta
 
-1. Idite na entitete **podataka** > **·**.
+1. Idite na **entitete** > **podataka**.
 1. Sa stranice **Entiteti** izaberite entitet da biste otvorili stranicu sa detaljima.  
 1. Istražite različita polja i zapise koji su uključeni za taj entitet.
 

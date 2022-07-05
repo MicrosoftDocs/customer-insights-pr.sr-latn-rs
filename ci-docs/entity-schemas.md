@@ -1,5 +1,5 @@
 ---
-title: Šeme Customer Insights entiteta u usluzi Common Data Model
+title: Šeme entiteta u platformi Common Data Model
 description: Radite sa entitetima u usluzi Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757449"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054771"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Šeme entiteta u platformi Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) je deklarativna specifikacija i definicija standardnih entiteta koji predstavljaju uobičajene koncepte i aktivnosti u poslovnim i produktivnim aplikacijama. Ovaj model se proširuje i na posmatračke i analitičke podatke. Common Data Model pruža dobro definisane, modularne i proširive poslovne entitete – poput poslovnog kontakta, poslovne jedinice, predmeta, kontakta, potencijalnog klijenta, mogućnosti za poslovanje i proizvoda – kao i interakcije sa dobavljačima, radnicima i klijentima – kao što su aktivnosti i ugovori o nivou usluga. Svako može da izgradi i proširi Common Data Model definicije da bi pronašao dodatne ideje specifične za poslovanje.
 

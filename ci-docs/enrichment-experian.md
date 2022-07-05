@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje putem nezavisnog obogaćivanja Experian
+title: Obogatite profile klijenata demografskim podacima iz usluge Experian (verzija za pregled)
 description: Opšte informacije o Experian nezavisnom obogaćivanju.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 735da18e584b0d9db76b557f4d16dbdf1757f33c
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954104"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053038"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Obogatite profile klijenata demografskim podacima iz usluge Experian (verzija za pregled)
 
@@ -79,7 +79,7 @@ Kada omogućite Dynamics 365 Customer Insights za prenos podataka u Experian, do
 
 1. Kliknite **na dugme** "Pokreni" da biste započeli proces obogaćivanja ili blizu da biste se vratili na stranicu **"Obogaćivanje** ".
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaži rezultate obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

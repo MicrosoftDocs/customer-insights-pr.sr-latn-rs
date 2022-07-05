@@ -1,5 +1,5 @@
 ---
-title: Izvoz Customer Insights podataka u uslugu Adobe Campaign Standard
+title: Izvoz segmenata uvida kupaca u Adobe standard kampanje (pregled)
 description: Saznajte kako da koristite segmente "Uvidi kupaca" u standardnoj Adobe kampanji.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643450"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082351"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Koristite Customer Insights segmente u usluzi Adobe Campaign Standard (verzija za pregled)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Izvoz segmenata uvida kupaca u Adobe standard kampanje (pregled)
 
 Kao korisnik, možda Dynamics 365 Customer Insights ste kreirali segmente da biste marketinške kampanje bili efikasniji ciljanjem relevantnih korisnika lokacije. Da biste koristili segment iz uvida klijenata u i Adobe Experience Platform aplikacije kao što je Adobe Standard kampanje, potrebno je da sledite nekoliko koraka navedenih u ovom članku.
 
@@ -23,9 +23,9 @@ Kao korisnik, možda Dynamics 365 Customer Insights ste kreirali segmente da bis
 
 ## <a name="prerequisites"></a>Preduslovi
 
--   Dynamics 365 Customer Insights licenca
--   Licenca za Adobe Campaign Standard
--   Nalog Azure skladišta blob objekta
+- Dynamics 365 Customer Insights licenca
+- Licenca za Adobe Campaign Standard
+- Nalog Azure skladišta blob objekta
 
 ## <a name="campaign-overview"></a>Pregled kampanje
 
@@ -51,7 +51,7 @@ E-poruka sa ponudom koju želite da pošaljete sadrži ime, prezime i datum zavr
 
 Sa identifikovanim korisnici ciljnim datotekama, možemo da konfigurišemo izvoz na Azure Blob Storage nalog.
 
-1. U uvidima klijenata idite na **AdminConnections** > **·**.
+1. U uvidima klijenata idite na **administratorski** > **konekciju**.
 
 1. Izaberite **Dodaj vezu** i birajte **Adobe kampanja** da biste konfigurisali vezu ili izaberite **Podešavanje** na pločici **Adobe Campaign**.
 

@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: f3ec86806074a12c1107648303ed2d65e97ebc69
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800343"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083023"
 ---
-# <a name="use-measure-builder-to-create-measures-from-scratch"></a>Korišćenje izrade mera za kreiranje mera od početka
+# <a name="create-new-measures-with-the-measure-builder"></a>Kreiranje novih mera pomoću izrade mera
 
 Ovaj članak sadrži objašnjenja o tome kako da kreirate novu [meru od](measures.md) početka. Izrada mera vam omogućava da definišete izračunavanja pomoću matematičkih operatora, funkcija agregacije i filtera. Meru možete da napravite sa atributima iz entiteta koji su povezani sa objedinjeni entitet *kupca*.
 

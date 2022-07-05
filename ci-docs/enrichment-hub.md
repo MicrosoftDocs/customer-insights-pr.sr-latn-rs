@@ -1,6 +1,6 @@
 ---
-title: Obogatite objedinjene profile klijenata
-description: Koristite mogućnosti za obogaćivanje podataka o klijentima.
+title: Pregled obogaćivanja podataka (pregled)
+description: Koristite mogućnosti korporacije Microsoft i drugih usluga nezavisnih proizvođača da biste obogatili podatke o klijentima.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954058"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053897"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Obogaćivanje za profile korisnika (pregled)
+# <a name="data-enrichment-preview-overview"></a>Pregled obogaćivanja podataka (pregled)
 
-Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili podatke o klijentima.
+Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili podatke o klijentima. Obogaćenja trećih lica se konfigurišu pomoću [veza](connections.md) koje administrator postavlja sa akreditivima i daje saglasnost za prenos podataka. Veze mogu da koriste administratori i saradnici kako bi konfigurisali obogaćivanja.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja istog tipa
+
+Entitet koji treba obogatiti navodi se tokom konfiguracije obogaćivanja, što vam omogućava da obogatite samo podskup svojih profila. Na primer, obogatite podatke samo za određeni segment. Možete da konfigurišete nekoliko obogaćivanja istog tipa i da ponovo koristite istu vezu. Neka obogaćivanja će imati ograničenja u broju obogaćivanja istog tipa koja se mogu kreirati. Ograničenja i trenutna upotreba mogu se videti na svakoj pločici na kartici "Otkrivanje **"** na stranici "Obogaćivanje **·**".
+
+## <a name="enrich-data-sources-before-unification"></a>Obogati izvore podataka pre ujedinjenja
+
+Podatke o korisnicima možete obogatiti pre ujedinjenja podataka da biste povećali kvalitet podudaranja podataka. Više informacija potražite u članku [izvor podataka bogaćenje](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Kreiraj obogaćivanje
+
+Potrebno je da imate dozvole saradnik administratora [za kreiranje](permissions.md) ili uređivanje obogaćivanja.
+
+Idite na **Podaci** > **Obogaćivanje**. Kartica " **Otkrij** " prikazuje sve podržane opcije obogaćivanja.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Stranica čvorišta za obogaćivanje.":::
-
-Idite na **obogaćenje** > **podataka** da biste radili sa opcijama obogaćivanja.  
-
-Da biste kreirali ili menjali obogaćivanja, morate da imate dozvole saradnika ili administratora. Više informacija potražite u [dozvolama](permissions.md).
-
-Na kartici **Otkrivanje**, pronaći ćete sve podržane opcije obogaćivanja.
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Na kartici **Otkrivanje**, pronaći ćete sve podržane opcije obogaćivanja.
 
 ---
 
-Na kartici **Moja obogaćivanja** možete da vidite obogaćivanja koja ste konfigurisali i da menjate njihova svojstva. Segmente ili mere možete [kreirati](segments.md) i [od obogaćivanja](measures.md).
-
 ## <a name="manage-existing-enrichments"></a>Upravljanje postojećim obogaćivanjima
 
-Idite na karticu **Moja obogaćivanja** da biste videli sva konfigurisana obogaćivanja. Svako obogaćivanje predstavljeno je kao red koji uključuje dodatne informacije o obogaćivanju.
+Idite na **Podaci** > **Obogaćivanje**. Na kartici **Moja bogaćenja** pogledajte konfigurisana bogaćenja, njihov status, broj obogaćenih klijenata i poslednji put kada su podaci osveženi. Listu obogaćivanja možete da sortirate po bilo kojoj koloni ili da koristite polje za pretragu da biste pronašli bogaćenje kojim želite da upravljate.
 
-Izaberite obogaćivanje da biste videli dostupne opcije. Takođe možete da izaberete vertikalnu elipsu (&vellip;) na stavci liste da biste videli opcije. Ako ste konfigurisali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretragu.
+Izaberite bogaćenje da biste prikazali dostupne radnje.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opcije za upravljanje obogaćivanjima na listi obogaćivanja.":::
 
 - **Prikažite** detalje obogaćivanja sa brojem obogaćenih profila klijenata.
 - **Uređujte** konfiguraciju obogaćivanja.
-- **Pokrenite** obogaćivanje radi ažuriranja profila klijenata najnovijim podacima.
-- **Deaktivirajte** postojeće obogaćivanje kako bi se zaustavili automatsko osvežavanje sa svakim zakazanim osvežavanjem. Podaci iz poslednjeg uspešnog osvežavanja i dalje će biti dostupni. **Aktivirajte** neaktivno obogaćivanje da biste ponovo pokrenuli automatsko osvežavanje sa svakim zakazanim osvežavanjem.
+- [**Pokrenite**](#run-or-refresh-enrichments) bogaćenje da biste ažurirali profile klijenata najnovijim podacima. Pokrenite više obogaćivanja odjednom tako što ćete ih izabrati na listi.
+- **Aktivirajte** **ili deaktivirajte** bogaćenje. Neaktivna obogaćivanja se neće osvežiti tokom planiranog [osvežavanja](system.md#schedule-tab).
 - **Izbrišite** obogaćivanje.
 
-Pokrenite ili deaktivirajte više obogaćivanja odjednom tako što ćete ih izabrati na listi. Opcije prikaza i uređivanja nisu dostupne kao grupne radnje. Rade samo za jedno obogaćivanje istovremeno.
-
-## <a name="enrichments-and-connections"></a>Obogaćivanja i veze
-
-Obogaćenja trećih lica se konfigurišu pomoću [veza](connections.md) koje administrator postavlja sa akreditivima i daje saglasnost za prenos podataka. Veze mogu da koriste administratori i saradnici kako bi konfigurisali obogaćivanja.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Višestruka obogaćivanja istog tipa
-
-Entitet koji treba obogatiti navodi se tokom konfiguracije obogaćivanja, što vam omogućava da obogatite samo podskup svojih profila. Na primer, obogatite podatke samo za određeni segment. Možete da konfigurišete nekoliko obogaćivanja istog tipa i da ponovo koristite istu vezu. Neka obogaćivanja će imati ograničenja u broju obogaćivanja istog tipa koja se mogu kreirati. Ograničenja i trenutna upotreba mogu se videti na svakoj pločici na kartici "Otkrivanje **"** na stranici "Obogaćivanje **·**".
-
-## <a name="enrich-data-sources-before-unification"></a>Obogati izvore podataka pre ujedinjenja
-
-Podatke o korisnicima možete obogatiti pre ujedinjenja podataka da biste povećali kvalitet podudaranja podataka. Više informacija potražite u članku [izvor podataka obogaćivanju](data-sources-enrichment.md).
+Segmente ili mere možete [kreirati](segments.md) i [od obogaćivanja](measures.md).
 
 ## <a name="run-or-refresh-enrichments"></a>Pokretanje ili osvežavanje obogaćivanja
 
-1. Da biste započeli proces obogaćivanja, izaberite **Pokreni**. Ili, neka sistem automatski pokrene obogaćivanje kao deo planiranog [osvežavanja](system.md#schedule-tab). Vreme obrade zavisi od veličine podataka vaših klijenata.
+Kada se pokrenete, obogaćivanje se može osvežiti automatskim rasporedom ili osvežiti ručno na zahtev.
+
+1. Da biste ručno osvežili jedno ili više obogaćivanja, izaberite ih i odaberite stavku **Pokreni**. Da biste [zakazali automatsko osvežavanje](system.md#schedule-tab), idite **na administrativni** > **plan** > **sistema**. Vreme obrade zavisi od veličine podataka vaših klijenata.
 
 1. Opcionalno, [pogledajte napredak procesa obogaćivanja](#see-the-progress-of-the-enrichment-process).
 
 1. Kada se proces obogaćivanja završi, idite na **Moja bogaćenja** da pregledate novoobogaćene podatke profila klijenata, vreme poslednjeg ažuriranja i broj obogaćenih profila.
 
-1. Izaberite bogaćenje da biste videli rezultate [obogaćivanja](#enrichment-results).
+1. Izaberite bogaćenje da biste videli rezultate [obogaćivanja](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Pogledajte napredak procesa obogaćivanja
 
@@ -107,12 +103,12 @@ Možete pronaći detalje o obradi obogaćivanja, uključujući njegov status i p
 1. Ispod obogaćivanja za koje želite da vidite napredak, izaberite **Vidi detalje**.
 1. U oknu **Detalji o zadatku**, izaberite **Prikaži detalje** da biste videli procese koji su uključeni u ažuriranje obogaćivanja i njihov status.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaži rezultate obogaćivanja
 
 Nakon završenog trčanja za bogaćenje, pregledajte rezultate obogaćivanja.
 
 1. Idite na **Podaci** > **Obogaćivanje**.
-1. Na kartici **Moja bogaćenja** izaberite bogaćenje o kojem želite informacije.
+1. Na kartici **Moja obogaćivanja** izaberite bogaćenje koje želite da prikažete.
 
 Sva bogaćenja prikazuju osnovne informacije kao što su broj obogaćenih profila i broj obogaćenih profila tokom vremena. Pločica **za pregled obogaćenih** klijenata prikazuje uzorak generisanog entiteta obogaćivanja. Da biste videli detaljan prikaz, izaberite stavku Pogledajte **više i** izaberite karticu **Podaci**.
 

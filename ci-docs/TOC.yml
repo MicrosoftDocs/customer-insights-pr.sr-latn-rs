@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Obogaćivanje podataka
   items:
-    - name: Obogaćivanje profila klijenata
+    - name: Pregled obogaćivanja podataka
       href: enrichment-hub.md
     - name: Nalozi iz podataka Office 365
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Definisanje aktivnosti kupaca
       href: activities.md
-    - name: Upravljanje saglasnosti za uvide klijenata
+    - name: Korišćenje upravljanja pristankom
       href: consent-management.md
 - name: Segmenti
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google oglasi
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Podnošljivo
           href: export-iterable.md
         - name: Klaviyo

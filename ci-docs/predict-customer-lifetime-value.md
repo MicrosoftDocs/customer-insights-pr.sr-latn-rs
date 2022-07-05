@@ -13,16 +13,16 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: 3e1b1ce00eeda1cead9ba05beae65b6903d0b9cf
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643825"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055231"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predviđanje trajne vrednosti klijenta (CLV)
 
-Predvidite potencijalnu vrednost (prihod) koju će pojedinačni aktivni klijenti doneti vašem preduzeću kroz definisan budući vremenski period. Ova funkcija vam može pomoći u postizanju različitih ciljeva: 
+Predvidite potencijalnu vrednost (prihod) koju će pojedinačni aktivni klijenti doneti vašem preduzeću kroz definisan budući vremenski period. Ova funkcija vam može pomoći u postizanju različitih ciljeva:
 - Identifikujte klijente velike vrednosti i obradite ovaj uvid
 - Kreirajte strateške segmente klijenata na osnovu njihove potencijalne vrednosti za vođenje personalizovanih kampanja uz ciljanu prodaju, marketing i napore za podršku
 - Usmerite razvoj proizvoda fokusirajući se na funkcije koje povećavaju vrednost klijenta
@@ -74,7 +74,7 @@ Sledeći podaci su obavezni, a tamo gde su označeni kao opcionalni, preporučuj
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Kreiranje predviđanja trajne vrednosti klijenta
 
-1. Idite na **obaveštajne** > **podatke**.
+1. Idite na **obaveštajna** > **predviđanja**.
 
 1. Izaberite pločicu **Trajna vrednost klijenta** i izaberite **Koristi model**. 
 

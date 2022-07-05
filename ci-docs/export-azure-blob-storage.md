@@ -1,5 +1,5 @@
 ---
-title: Izvoz Customer Insights podataka u Azure skladište blob objekta
+title: Izvoz podataka u Azure skladište bloba (pregled)
 description: Saznajte kako da konfigurišete vezu i izvezete sadržaj u skladište blob objekta.
 ms.date: 06/09/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 059c8364ca0f3740bc0e4ffeeeba94246c9e5696
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947155"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055507"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Izvoz liste segmenata i drugih podataka u Azure skladište blob objekta (pregled)
+# <a name="export-data-to-an-azure-blob-storage-preview"></a>Izvoz podataka u Azure skladište bloba (pregled)
 
 Skladištite Customer Insights podatke u skladište blob objekta ili ih koristite za prenos podataka u druge aplikacije.
 

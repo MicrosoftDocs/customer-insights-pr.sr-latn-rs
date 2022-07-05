@@ -1,5 +1,5 @@
 ---
-title: Obogaćivanje profila klijenata brendovima i podacima o interesovanjima korporacije Microsoft
+title: Obogatite profile klijenata brendovima i podacima o interesovanjima korporacije Microsoft (pregled)
 description: Koristite vlasničke podatke korporacije Microsoft da biste obogatili podatke o korisnicima afinitetima udeo u izražavanju.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953782"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082708"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Obogatite profile klijenata afinitetima i udeo u izražavanju (pregled)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Obogatite profile klijenata brendovima i podacima o interesovanjima korporacije Microsoft (pregled)
 
 Koristite Microsoftove vlasničke podatke da biste obogatili podatke o korisnicima afinitetima brenda, afinitetima interesovanja i udeo u izražavanju (SoV). Ovi afiniteti i soV zasnovani su na podacima osoba sa demografijom sličnom vašim kupcima. Ove informacije vam pomažu da bolje razumete i segmentite svoje kupce na osnovu njihovih afiniteta ili soV-a prema određenim brendovima i interesovanjima.
 
@@ -104,7 +104,7 @@ Trenutno podržavamo sledeće opcije zemlje/regiona: Australija, Kanada (englesk
 
    Kada obogaćujete profile, obogatićemo sve profile klijenata za koje dobijamo podatke za izabrane brendove i interesovanja, uključujući profile koji nisu u izabranoj zemlji ili regionu. Na primer, ako ste izabrali Nemačku, obogatićemo profile koji se nalaze u Sjedinjenim Državama ako imamo podatke o izabranim brendovima i interesovanjima u SAD.
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaži rezultate obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: Enrichment of company profile with Dun & Bradstreet
+title: Obogatite profile kompanije sa Dun & Bradstreet (pregled)
 description: Opšte informacije o obogaćivanju treće strane Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953908"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082561"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Enrichment of company profile with Dun & Bradstreet (Preview)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Obogatite profile kompanije sa Dun & Bradstreet (pregled)
 
 Dun & Bradstreet pruža komercijalne podatke, analitiku i uvide za preduzeća. Omogućuje klijentima sa objedinjenim profilima klijenata za kompanije da obogaćuju svoje podatke. Obogaćivanje uključuje atribute kao što su DUNS broj, veličina kompanije, lokacija, industrija i još mnogo toga.
 
@@ -102,7 +102,7 @@ Trenutno podržavamo sledeće opcije zemlje/regiona: Kanada (engleski) ili Sjedi
 
 1. Kliknite **na dugme** "Pokreni" da biste započeli proces obogaćivanja ili blizu da biste se vratili na stranicu **"Obogaćivanje** ".
 
-## <a name="enrichment-results"></a>Rezultati obogaćivanja
+## <a name="view-enrichment-results"></a>Prikaži rezultate obogaćivanja
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
