@@ -8,26 +8,26 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082120"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207200"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Obogaćivanje izvora podataka (pregled)
 
-Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili podatke o klijentima pre ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u proizvodnji veće potpunosti podataka i kvaliteta koji mogu da pomognu u postizanju boljih rezultata kada ujedinite svoje podatke. Na primer, korišćenje normalizovanog i standardizovanog formata za adrese povećava kvalitet rezultata utakmice. Listu podržanih obogaćivanja pogledajte podržane [opcije izvor podataka za obogaćivanje](#supported-data-source-enrichments).
+Koristite podatke iz izvora kao što su Microsoft i drugi partneri da biste obogatili podatke o klijentima pre ujedinjenja podataka. Izvor podataka obogaćivanja pomažu u proizvodnji veće potpunosti podataka i kvaliteta koji mogu da pomognu u postizanju boljih rezultata kada ujedinite svoje podatke. Na primer, korišćenje normalizovanog i standardizovanog formata za adrese povećava kvalitet rezultata utakmice. Listu podržanih obogaćivanja pogledajte podržane [izvor podataka za obogaćivanje](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Obogatite izvor podataka
 
-Morate imati dozvole saradnik administratora za kreiranje ili uređivanje obogaćivanja. Više informacija potražite u [dozvolama](permissions.md).  
+Morate imati dozvole saradnik administratora za [kreiranje ili](permissions.md) uređivanje obogaćivanja.  
 
-1. Idite na " **Ujedinjenje** > **podataka"**. Izaberite entitet koji želite da obogatite i izaberite jedan atribut kao primarni ključ za entitet. Više informacija potražite u članku [Izbor primarnog ključa](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Idite na " **Ujedinjenje** > **podataka"**. Izaberite entitet koji želite da obogatite i izaberite jedan atribut [kao primarni](map-entities.md#select-primary-key-and-semantic-type-for-attributes) ključ za entitet.
 
 1. Idite na **Podaci** > **Izvori podataka**.
 
-1. Izaberite vertikalnu elipsu () pored prozora izvor podataka&vellip; želite da obogatite i izaberite Opciju **Obogati**.
+1. Izaberite vertikalnu elipsu () pored prozora izvor podataka&vellip; da obogatite i izaberete opciju "Obogati **"**.
 
    :::image type="content" source="media/data_sources_enrich.png" alt-text="Stranica izvora podataka sa istaknutim obogaćenim":::
 
@@ -47,8 +47,8 @@ Sledeća obogaćivanja su trenutno dostupna za izvore podataka. Pregledajte deta
 
 ## <a name="manage-existing-data-source-enrichments"></a>Upravljanje postojećim izvor podataka obogaćivanjem
 
-Idite na karticu **Moja obogaćivanja** da biste videli sva konfigurisana obogaćivanja.
+Idite na **Podaci** > **Obogaćivanje**. Na kartici **Moja bogaćenja** pogledajte konfigurisana bogaćenja, njihov status, broj obogaćenih klijenata i poslednji put kada su podaci osveženi. Listu obogaćivanja možete da sortirate po bilo kojoj koloni ili da koristite polje za pretragu da biste pronašli bogaćenje kojim želite da upravljate.
 
-Izaberite obogaćivanje da biste videli dostupne opcije. Takođe možete da izaberete vertikalnu elipsu (&vellip;) na stavci liste da biste videli opcije. Ako ste konfigurisali nekoliko obogaćivanja, možete ih brzo pronaći pomoću okvira za pretragu.
+Izaberite obogaćivanje da biste videli dostupne opcije. Takođe možete da izaberete vertikalnu elipsu (&vellip;) na stavci liste da biste videli opcije.
 
-Možete da prikažete, uredite, pokrenete ili izbrišete izvor podataka bogaćenje. Više informacija potražite u članku Upravljanje [postojećim obogaćivanjem](enrichment-hub.md).
+Možete da prikažete, uredite, pokrenete ili izbrišete izvor podataka obogaćivanje. Više informacija potražite u članku Upravljanje [postojećim obogaćivanjem](enrichment-hub.md#manage-existing-enrichments).

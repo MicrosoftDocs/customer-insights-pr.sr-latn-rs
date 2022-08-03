@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643976"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171112"
 ---
 # <a name="transaction-churn-prediction"></a>Predviđanje gubitka transakcija
 
@@ -240,7 +240,7 @@ Dodajte listu svojih poslovnih klijenata i poslovnih kontakata koje želite da k
    - **Naziv predviđanja**: Naziv predviđanja naveden pri njegovom kreiranju.
    - **Tip predviđanja**: Tip modela koji se koristi za predviđanje
    - **Izlazni entitet**: Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
-     U izlaznom entitetu, *ChurnScore* je predviđena verovatnoća gubitka klijenta a *IsChurn* je binarna oznaka zasnovana na graničnoj vrednosti parametra *ChurnScore* od 0,5. Podrazumevana granična vrednost možda neće raditi za vaš scenario. [Napravite novi segment](segments.md#create-a-new-segment) sa željenom graničnom vrednošću.
+     U izlaznom entitetu, *ChurnScore* je predviđena verovatnoća gubitka klijenta a *IsChurn* je binarna oznaka zasnovana na graničnoj vrednosti parametra *ChurnScore* od 0,5. Podrazumevana granična vrednost možda neće raditi za vaš scenario. [Napravite novi segment](segments.md#create-a-segment) sa željenom graničnom vrednošću.
      Nisu svi klijenti nužno aktivni klijenti. Neki od njih možda već duže vreme nisu imali nikakve aktivnosti i smatraju se već izgubljenim, na osnovu vaše definicije gubitka klijenta. Predviđanje rizika od gubitka za klijente koji su već otišli nije korisno jer nisu interesna ciljna grupa.
    - **Predviđeno polje**: Ovo polje je popunjeno samo za neke tipove predviđanja i ne koristi se za predviđanje gubitka.
    - **Status**: Status pokretanja predviđanja.

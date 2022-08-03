@@ -1,28 +1,56 @@
 ---
 title: Šta je novo u sistemu Dynamics 365 Customer Insights
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 06/02/2022
+ms.date: 06/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
+ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054035"
+ms.lasthandoff: 07/05/2022
+ms.locfileid: "9114263"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Šta je novo u sistemu Dynamics 365 Customer Insights
 
 Drago nam je što možemo da najavimo naše najnovije ispravke. Ovaj članak rezimira funkcije verzija za javni pregled, poboljšanja opšte dostupnosti i ispravke za funkcije. Da biste videli dugoročne planove funkcija, pogledajte [planove izdanja Dynamics 365 i Power Platform](/dynamics365/release-plans/).
 
-Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu da vide funkcije pre drugih. Ako nije drugačije navedeno, ne trebate ništa da preduzimate a mi ćemo automatski ažurirati aplikaciju bez prekida rada.
+Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu da vide funkcije pre drugih. Ukoliko nije drugačije navedeno, nije potrebno da preduzmete nikakve radnje, automatski ćemo ažurirati aplikaciju bez daunlouda.
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2022-updates"></a>Ispravke za jun 2022. godine
+
+Ispravke u junu 2022.
+
+### <a name="updated-user-experience-for-data-sources-and-data-ingestion"></a>Ažurirano korisničko iskustvo za izvore podataka i unošenje podataka
+
+Uvoz podataka iz širokog spektra izvora podataka je osnova za konsolidovanje podataka korisnika u programu Dynamics 365 Customer Insights. Ponovo smo razmotrili korisničko iskustvo za uvoz i povezivanje izvora podataka. Ova ispravka ima za cilj da vam olakša unos podataka u korisničke uvide.
+
+Više informacija potražite u članku [Pregled izvora podataka](data-sources.md).
+
+### <a name="export-to-inmobi"></a>Izvezi u InMobi
+
+InMobi pomaže brendovima da razumeju, identifikuju, angažuju i steknu potrošače. Segmente i druge podatke možete da izvezete u InMobi servis preko Azure Blob Storage naloga.
+
+Više informacija potražite u članku [Izvoz u InMobi (pregled)](export-inmobi.md)
+
+### <a name="lockbox-support-in-customer-insights"></a>Podrška za zaključavanje u okviru stavke "Uvidi korisnika"
+
+Customer Lockbox obezbeđuje interfejs za redigovanje i odobravanje (ili odbacivanje) zahteva za pristup podacima. Do ovih zahteva dolazi kada je potreban pristup podacima o podacima korisnika da bi se rešio predmet podrške.
+
+Više informacija potražite u članku [Bezbedan pristup podacima klijenata pomoću okvira za zaključavanje klijenta (Preview)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+
+### <a name="connect-to-your-data-using-azure-private-link"></a>Povezivanje sa podacima pomoću Azure privatne veze
+
+Azure Privatna veza omogućava korisničkim uvidima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
+
+Više informacija potražite u članku Korišćenje [privatne veze u uvidima klijenata](security-overview.md#private-links-tab).
 
 ## <a name="may-2022-updates"></a>Ispravke za maj 2022.
 

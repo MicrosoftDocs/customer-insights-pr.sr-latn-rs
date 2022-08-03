@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083191"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195675"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u realnom vremenu (pregled)
 
@@ -28,7 +28,7 @@ Funkcionalnost u realnom vremenu pruža podatke koji se odmah mogu koristiti, sv
 
 Ažuriranja u realnom vremenu imaju vreme isteka nakon čega više ne menjaju vrednost iz izvora podataka:
 
-- Ažuriranja profila čuvaće se 4 sata
+- Ažuriranja profila će se čuvati četiri sata
 - Aktivnosti će se čuvati 30 dana
 
 Te vrednosti su parametri API poziva koje možete promeniti. Oni imaju za cilj da osiguraju da vaši izvorni podaci ostanu vaš izvor istine. Ako želite da ažuriranja u realnom vremenu budu duže uključena, morate ih dodati u izvor podataka kako bi se povukla tokom sledećeg zakazanog osvežavanja.

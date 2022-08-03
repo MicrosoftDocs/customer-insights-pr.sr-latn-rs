@@ -1,84 +1,89 @@
 ---
 title: Izvoz podataka u SFTP domaćine (pregled) (sadrži video)
 description: Saznajte kako da konfigurišete vezu i izvezete na SFTP lokaciju.
-ms.date: 06/09/2022
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 67789a87cf0ff1b0d9933f2c0adde37762c83476
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: b12d25ecbd2e5fb31d7d5a6bb775dc3e7c1bf007
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082771"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207246"
 ---
-# <a name="export-data-to-sftp-preview"></a>Izvoz podataka u SFTP (pregled)
+# <a name="export-data-to-sftp-hosts-preview"></a>Izvoz podataka u SFTP domaćine (pregled)
 
 Koristite podatke o klijentima u nezavisnim aplikacijama tako što ćete ih izvesti na lokaciju protokola za bezbedni prenos datoteka (SFTP).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
-## <a name="prerequisites-for-connection"></a>Preduslovi za vezu
+## <a name="prerequisites"></a>Preduslovi
 
 - Dostupnost SFTP hosta i odgovarajućih akreditiva.
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- SFTP odredišta iza zaštitnih zidova trenutno nisu podržana. 
+- SFTP odredišta iza zaštitnih zidova trenutno nisu podržana.
 - Vreme izvoženja zavisi od performansi vašeg sistema. Preporučujemo dva jezgra procesora i 1 GB memorije kao minimalnu konfiguraciju vašeg servera.
-- Izvoz entiteta sa do 100 miliona korisničkih profila može potrajati 90 minuta kada se koristi preporučena minimalna konfiguracija sa dva jezgra procesora i 1 GB memorije.
+- Do 100 miliona profila klijenata, što može da potraje 90 minuta kada se koristi preporučena minimalna konfiguracija dva CPU jezgra i 1 Gb memorije.
+- Ako koristite SSH ključ za potvrdu identiteta, uverite se da ste [kreirali privatni](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) ključ kao PEM ili SSH.COM format. Ako koristite Putty, konvertujte privatni ključ izvozom kao Open SSH. Podržani su sledeći formati privatnih ključeva:
+  - RSA u OpenSSL PEM i ssh.com formatu
+  - DSA u OpenSSL PEM i ssh.com formatu
+  - ECDSA 256/384/521 u OpenSSL PEM formatu
+  - ED25519 i RSA u OpenSSH formatu ključa
 
 ## <a name="set-up-connection-to-sftp"></a>Podešavanje veze sa SFTP
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Idite na **Administrator** > **Veze**.
 
-1. Izaberite **Dodaj vezu** i birajte **SFTP** da biste konfigurisali vezu.
+1. Izaberite **Dodaj vezu i** odaberite **SFTP**.
 
 1. Dajte vezi prepoznatljivo ime u polju **Ime za prikaz**. Ime za prikaz i vrsta veze opisuju ovu vezu. Preporučujemo da odaberete naziv koji objašnjava svrhu i cilj veze.
 
-1. Odaberite ko može da koristi ovu vezu. Ako ništa ne preduzmete, podrazumevani će biti Administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Odaberite ko može da koristi ovu vezu. Podrazumevano su to samo administratori. Za više informacija, pogledajte [Dozvolite saradnicima da koriste vezu za izvoz](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Navedite **korisničko ime**, **lozinku**, **ime hosta** i **fasciklu za izvoz** za SFTP nalog.
+1. Odaberite da li želite da potvrdite identitet putem SSH ili korisničkog imena/lozinke za vezu i navedite neophodne detalje. Ako koristite SSH ključ za potvrdu identiteta, uverite se da ste [kreirali privatni](/azure/virtual-machines/linux/create-ssh-keys-detailed#basic-example) ključ kao PEM ili SSH.COM format. Ako koristite Putty, konvertujte privatni ključ izvozom kao Open SSH. Podržani su sledeći formati privatnih ključeva:
+   - RSA u OpenSSL PEM i ssh.com formatu
+   - DSA u OpenSSL PEM i ssh.com formatu
+   - ECDSA 256/384/521 u OpenSSL PEM formatu
+   - ED25519 i RSA u OpenSSH formatu ključa
 
 1. Izaberite **Verifikuj** da testirate vezu.
 
-1. Odaberite da li želite da izvezete podatke **spakovano** ili **raspakovano** i **separator polja** za izvezene datoteke.
-
-1. Izaberite **Prihvatam** da biste potvrdili **Privatnost podataka i usaglašenost**.
+1. Pregledajte privatnost [i usaglašenost podataka i](connections.md#data-privacy-and-compliance) izaberite I **slažem se**.
 
 1. Izaberite **Sačuvaj** da biste kreirali vezu.
 
 ## <a name="configure-an-export"></a>Konfigurisanje izvoza
 
-Ovaj izvoz možete da konfigurišete ako imate pristup vezi ove vrste. Za više informacija pogledajte [Dozvole potrebne za konfigurisanje izvoza](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Idite na **Podaci** > **Izvozi**.
 
-1. Da biste kreirali novi izvoz, izaberite **Dodaj odredište**.
+1. Izaberite **Dodaj izvoz**.
 
-1. U polju **Veza za izvoz**, odaberite vezu iz odeljka SFTP. Ako ne vidite naziv ovog odeljka, ne postoje veze ovog tipa koje su vam dostupne.
+1. U polju **Veza za izvoz**, odaberite vezu iz odeljka SFTP. Ako veza nije dostupna, obratite se administratoru.
 
-1. Izaberite entitete, na primer segmente koje želite da izvezete.
+1. Unesite ime za izvoz.
+
+1. Odaberite da li želite da izvezete podatke **spakovano** ili **raspakovano** i **separator polja** za izvezene datoteke.
+
+1. Izaberite entitete, npr.
 
    > [!NOTE]
-   > Svaki izabrani entitet biće podeljen na do pet izlaznih datoteka prilikom izvoza.
+   > Svaki izabrani entitet će biti podeljen na najviše pet izlaznih datoteka kada se izveze.
 
-1. Izaberite stavku **Sačuvaj**.
+1. Izaberite **Sačuvaj**.
 
-Čuvanje izvoza ne pokreće izvoz odmah.
-
-Izvoz se pokreće sa svakim [zakazanim osvežavanjem](system.md#schedule-tab).
-Takođe možete da [izvezete podatke na zahtev](export-destinations.md#run-exports-on-demand).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!TIP]
 > Izvoz entiteta koji sadrže veliku količinu podataka može dovesti do više CSV datoteka u istoj fascikli za svaki izvoz. Deljenje izvoza se dešava iz razloga performansi da bi se umanjilo vreme potrebno za dovršavanje izvoza.
-
-## <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
-
-Kada omogućite da Dynamics 365 Customer Insights prenosi podatke putem SFTP-a, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci. Microsoft će prenositi takve podatke po vašem uputstvu, ali vi ste odgovorni za to da odredište za izvoz ispunjava sve obaveze privatnosti ili bezbednosti koje imate. Za više informacija pogledajte [Izjavu o privatnosti kompanije Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni odredište za izvoz kako biste prestali sa korišćenjem ove funkcionalnosti.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

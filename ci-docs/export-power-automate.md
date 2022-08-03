@@ -1,19 +1,19 @@
 ---
 title: Power Automate linija spajanja (pregled) | Microsoft dokumenti
 description: Kreirajte tokove u usluzi Microsoft Power Automate iz usluge Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082456"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196135"
 ---
 # <a name="power-automate-connector-preview"></a>Power Automate konektor (pregled)
 
@@ -21,18 +21,18 @@ Pokrenite određene događaje koji se pojavljuju automatski kada se promene poda
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
-- Možete da uradite najviše 100 poziva na 60 sekundi. API možete da pozovete krajnja tačka više puta pomoću parametra $skip uređaja. [Saznajte više o $skip parametru](/connectors/customerinsights/#get-items-from-an-entity).
+- Najviše 100 poziva na 60 sekundi. Koristite [parametar $skip za](/connectors/customerinsights/#get-items-from-an-entity) pozivanje API krajnja tačka više puta.
 
 ## <a name="power-automate-triggers"></a>Power Automate okidači
 
-Koristite okidače da kreirate tokove u oblaku i automatizujete ponavljajuće zadatke, kao što su obaveštenja ili naprednije radnje.
+Koristite okidače da kreirate tokove u oblaku i automatizujete ponavljajuće zadatke, kao što su obaveštenja ili naprednije radnje. Koristi okidače kada:
 
-- Pokrenite kada ne uspe osvežavanje izvora podataka.
-- Pokrenite kada uspe osvežavanje izvora podataka.
-- Pokrenite kada se pređe granična vrednost za segment. Okidač je ograničen na prekoračenje granične vrednosti.
-- Pokrenite kada se pređe granična vrednost za poslovnu meru. Podržane su samo poslovne mere bez dimenzije. Okidač je ograničen na prekoračenje granične vrednosti.
-- Aktivira se kada se završi potpuno osvežavanje (izvora podataka, segmenata, mera, ...).
-- Aktiviraj kada se dovrši osvežavanje procesa ujedinjenja.
+- Osvežavanje izvor podataka ne uspe.
+- Osvežavanje izvor podataka uspe.
+- Prag se prelazi na segmentu. Okidač je ograničen na prekoračenje granične vrednosti.
+- Prag se prelazi na poslovnoj meri. Podržane su samo poslovne mere bez dimenzije. Okidač je ograničen na prekoračenje granične vrednosti.
+- Kompletno planirano osvežavanje je dovršeno. Ovaj okidač ne radi za ručno započeto osvežavanje.
+- Osvežavanje procesa ujedinjenja je dovršeno.
 
 [Konfigurišite okidače u usluzi Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više in
 
 ## <a name="create-a-power-automate-flow"></a>Kreiranje Power Automate toka
 
-1. Idite na **Administrator** > **Odredišta za izvoz**.
+1. Idite na **Administrator** > **Veze**.
 
 1. Na pločici **Power Automate** izaberite **Podesi**.
 
@@ -53,7 +53,5 @@ Power Automate konektor pruža druge radnje osim dostupnih okidača. Za više in
 Primeri kako se koriste tokovi: 
 - Pošaljite poruku na Microsoft Teams kanal ako osvežavanje izvora podataka ne uspe. 
 - Pošaljite e-poruku vlasnicima podataka kada se pređe prag na segmentu.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

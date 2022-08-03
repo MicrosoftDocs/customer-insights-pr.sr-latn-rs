@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947529"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188065"
 ---
 # <a name="use-customer-consent"></a>Koristi saglasnost kupca
 
@@ -50,13 +50,13 @@ Primer tabele jednostavne baze podataka saglasnosti sa više opcija pristanka:
 
 ## <a name="import-and-unify-consent-data"></a>Uvoz i ujedinjenje podataka o pristanku
 
-Podatke o pristanku možete da uvezete na isti način na koji unosite druge izvore podataka u uvide klijenata. Više informacija o podržanim izvorima podataka i načinu njihovog uvoza potražite u [pregledu izvora podataka](data-sources.md).
+Uvezite podatke o saglasnosti na isti način na koji unosite druge izvore podataka u korisničke uvide. Više informacija o podržanim izvorima podataka i načinu njihovog uvoza potražite u [pregledu izvora podataka](data-sources.md).
 
 Više informacija o ujedinjenju izvora podataka potražite u pregledu [pregleda ujedinjenja podataka](data-unification.md).
 
 ## <a name="use-consent-data"></a>Korišćenje podataka o pristanku
 
-Kada podaci o saglasnosti budu deo objedinjenih profila klijenata, možete ih koristiti u okviru stavke "Uvidi kupaca". Na primer, kreirajte segment sa pravilom da biste se uverili da poštujete željene postavke privatnosti i zaštite podataka klijenata. Pravila koja podržavaju željene opcije pristanka koriste se za isključivanje korisnika iz segmenta zasnovanog na atributima profila. Dodavanje pravila segmentu koji isključuje profile klijenata koji nisu dali saglasnost za kontakt.
+Kada podaci o saglasnosti budu deo objedinjenih profila klijenata, možete ih koristiti u okviru stavke "Uvidi kupaca". Na primer, kreirajte segment sa pravilom da biste se uverili da poštujete željene postavke privatnosti i zaštite podataka klijenata. Pravila koja podržavaju željene opcije pristanka koriste se za isključivanje korisnika iz segmenta zasnovanog na atributima profila. Dodajte pravilo segmentu koji isključuje profile klijenata koji nisu dali saglasnost za kontakt.
 
 Govoreći o gorenavedenom uzorku tabele, segment može da sadrži ovo pravilo:`Consent option=Newsletter & Consent value=True`. Ova konfiguracija rezultira segmentom koji poštuje željene opcije kontakta za slanje biltena.
 
@@ -71,3 +71,5 @@ Važno je da status pristanka za kupce bude ažuriran. Planirano osvežavanje u 
 Drugim rečima, uverite se da izvorni podaci koji se uvoze u uvid kupca uvek imaju najnovije informacije.
 
 Više informacija potražite u članku Ručno [osvežavanje segmenata ili](segments.md#refresh-segments) konfigurisanje [planiranog osvežavanja](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

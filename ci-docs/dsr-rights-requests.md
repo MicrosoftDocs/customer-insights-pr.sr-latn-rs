@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947385"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146712"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Zahtevi na osnovu prava subjekta podataka (DSR) u okviru GDPR
 
@@ -31,18 +31,22 @@ Posvećeni smo pomaganju našim klijentima da ispune zahteve GDPR-a. Obuhvata pr
 
 Customer Insights nudi sledeća iskustva u radu sa proizvodima za brisanje ličnih podataka za određenog klijenta ili korisnika:
 
-- **Upravljajte zahtevima brisanje podataka o klijentu**: Podaci o klijentu u usluzi Customer Insights uneti su iz originalnih izvora podataka koji su spoljašnji za Customer Insights. Svi GDPR zahtevi za brisanje moraju se obaviti u originalnom izvoru podataka.
+- **Upravljajte zahtevima brisanje podataka o klijentu**: Podaci o klijentu u usluzi Customer Insights uneti su iz originalnih izvora podataka koji su spoljašnji za Customer Insights. Prvo izvršite GDPR brisanje zahteva u originalnom izvor podataka nalogu.
 - **Upravljajte zahtevima za brisanje korisničkih podataka korisnika usluge Customer Insights**: Podatke za korisnike kreira Customer Insights. Svi GDPR zahtevi za brisanje moraju se obaviti u usluzi Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Upravljanje zahtevima za brisanje podataka o klijentima
 
-Administrator usluge Customer Insights može da prati ove korake za uklanjanje podataka o klijentima koji su izbrisani u izvoru podataka:
+Administrator "Uvida kupaca" može da sledi ove korake da bi uklonio podatke o klijentima koji su izbrisani u izvor podataka. Uverite se da je zahtev za brisanje izvršen u izvor podataka nego što nastavite sa koracima navedenim ispod. 
 
 1. Prijavite se u Dynamics 365 Customer Insights.
-2. Idi na **izvore** > **podataka**
-3. Za svaki izvor podataka na listi koji sadrži izbrisane podatke o klijentima:
+1. Idi na **izvore** > **podataka**
+1. Za svaki izvor podataka na listi koji sadrži izbrisane podatke o klijentima:
    1. Izaberite vertikalnu elipsu () i izaberite stavku&vellip; Osveži **·**.
-   2. Proverite status izvora podataka u odeljku **Status**. Znak potvrde znači da je osvežavanje bilo uspešno. Trokut upozorenja znači da nešto nije u redu. Ako se prikaže trougao upozorenja, kontaktirajte D365CI@microsoft.com.
+   1. Proverite status izvora podataka u odeljku **Status**. Znak potvrde znači da je osvežavanje bilo uspešno. Trokut upozorenja znači da nešto nije u redu. Ako se prikaže trougao upozorenja, kontaktirajte D365CI@microsoft.com.
+1. Nakon uspešnog osvežavanja izvora podataka, pokrenite i nizvodno osvežavanje. Naročito ako nemate planirano potpuno osvežavanje uvida kupaca u ponavljanje. 
+
+> [!IMPORTANT]
+> Statički segmenti nisu uključeni u potpuno osvežavanje ili pokretanje nizvodno osvežavanje nakon zahteva za brisanje. Da biste se uverili da su i podaci klijenata uklonjeni iz statičnih segmenata, ponovo kreirajte statične segmente sa osveženim izvornim podacima.
 
 > [!div class="mx-imgBorder"]
 > ![Rukovanje GDPR zahtevima za brisanje podataka o klijentima.](media/gdpr-data-sources.png "Rukovanje GDPR zahtevima za brisanje podataka o klijentima")
@@ -77,5 +81,10 @@ Administrator zakupca može da prati ove korake za izvoz podataka:
 1. Pošaljite e-poruku na D365CI@microsoft.com navodeći adresu e-pošte korisnika u zahtevu. Customer Insights tim će poslati e-poruku na registrovanu adresu e-pošte administratora registrovanog zakupca, tražeći potvrdu za izvoz podataka.
 2. Prihvatite potvrdu za izvoz podataka za traženog korisnika.
 3. Primite izvezene podatke putem e-adrese administratora zakupca.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Rukovanje brisanjem podataka u Dynamics 365 Customer Insights
+
+1. Podaci će biti izbrisani (particije sa podacima i snimci podataka) ako su particije sa podacima i snimci podataka neaktivni duže od 30 dana, što znači da su zamenjeni novom particijom sa podacima i snimkom kroz osvežavanje izvora podataka.
+2. Ne brišu se svi podaci i snimci. Najnovija particija sa podacima i snimak podataka su po definiciji aktivni jer se koriste u programu "Uvidi klijenata". Za najnovije podatke nije važno da li izvori podataka nisu osveženi u poslednjih 30 dana.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

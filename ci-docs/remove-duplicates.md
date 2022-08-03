@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742978"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139446"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Uklanjanje duplikata pre ujedinjenja podataka
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Ovaj korak u ujedinjenju opcionalno vam omogućava da podesite pravila za rukovanje dupliranim zapisima unutar entiteta. *Deduplication* identifikuje duplirane zapise i objedinjuje ih u jedan zapis. Izvorni zapisi se povezuju sa objedinjenim zapisom sa alternativnim ID-ovima. Ako pravila nisu konfigurisana, primenjuju se pravila definisana sistemom.
 

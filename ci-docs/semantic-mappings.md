@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 7c9588ac7a132ca6f43cf26ea3a744109a0dd2b8
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083149"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183648"
 ---
 # <a name="semantic-mappings-preview"></a>Semantička mapiranja (verzija za pregled)
 
@@ -32,21 +32,21 @@ Semantička mapiranja vam omogućavaju da mapirate podatke o neaktivnosti u unap
 
 1. U koraku **Podaci o entitetu**, podesite vrednosti za sledeća polja:
 
-   - **Naziv mapiranja semantičkog entiteta**: navedite naziv za mapiranje semantičkog entiteta.
-   - **Izvorni entitet**: izaberite entitet koji sadrži podatke o kontaktu.
-   - **Primarni ključ**: Izaberite polje koje jedinstveno identifikuje zapis kontakta. Ono ne bi smelo da sadrži duplikate, prazne vrednosti ili vrednosti koje nedostaju.
+   - **Ime mapiranja semantičkog entiteta**: Ime za mapiranje semantičkog entiteta.
+   - **Izvorni entitet**: Entitet koji uključuje podatke o kontaktima.
+   - **Primarni ključ**: Polje koje jedinstveno identifikuje zapis kontakta. Ono ne bi smelo da sadrži duplikate, prazne vrednosti ili vrednosti koje nedostaju.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard1.png" alt-text="Podesite mapiranje semantičkog entiteta sa imenom, izvornim entitetom i primarnim ključem.":::
 
-1. Izaberite **Dalje** za nastavak.
+1. Izaberite **Sledeće**.
 
 1. U koraku **Odnosi**, konfigurišite detalje za povezivanje podataka o kontaktu sa odgovarajućim podacima o poslovnom kontaktu. Ovaj korak vizualizuje vezu između entiteta.  
 
    Postoje dve vrste putanja odnosa koji se mogu primeniti: **Direktni odnosi** i **Indirektni odnosi**. Za više informacija idite na [direktne i indirektne putanje odnosa](relationships.md#relationship-paths).
 
-   1. Izaberite **Dodaj odnos** da biste konfigurisali odnos.
+   1. Kliknite na **dugme "Dodaj relaciju** " da biste konfigurisali relaciju.
    1. Odaberite atribut iz izvornog entiteta koji povezuje vaš entitet kontakta sa drugim entitetom.
-   1. Odaberite entitet sa kojim ćete povezati svoj entitet kontakta. Možete izabrati entitet iz odeljka **Entiteti naloga** ili **Posrednički entitet**. Ako izaberete posrednički entitet, morate definisati drugi odnos da biste se povezali sa entitetom ciljnog naloga.
+   1. Odaberite entitet sa kojim ćete povezati svoj entitet kontakta. Odaberite entitet iz entiteta naloga **ili iz** odeljka Entitet **posrednika**. Ako izaberete posrednički entitet, definišite drugu relaciju za povezivanje sa entitetom ciljnog naloga.
 
       :::image type="content" source="media/Semantic_Mapping_Wizard2.png" alt-text="Izaberite entitet Nalog ili posrednički entitet.":::
 
@@ -55,43 +55,38 @@ Semantička mapiranja vam omogućavaju da mapirate podatke o neaktivnosti u unap
 
    > [!NOTE]
    > Možete da konfigurišete više odnosa između entiteta kontakta i drugih entiteta naloga sa posredničkim entitetima.
-   >  :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Vizuelizacija različitih odnosa povezuje entitete kontakta sa entitetima naloga.":::
+   
+     :::image type="content" source="media/Semantic_Mapping_Wizard4.png" alt-text="Vizuelizacija različitih odnosa povezuje entitete kontakta sa entitetima naloga.":::
 
-1. Izaberite **Sledeće** kada završite sa konfiguracijom odnosa.
+1. Izaberite **Sledeće**.
 
 1. U koraku **Podesite semantički tip**, izaberite **Semantički tip**. Trenutno postoji jedan **Semantički tip** pod nazivom *ContactProfile*.
 
-1. Mapirajte podatke u *ContactProfile* **Semantički tip** za prikazana polja.
-   - Obavezno polje: ID kontakta
-   - Opciona polja: ime, prezime, datum rođenja, pol, primarna e-pošta i primarni telefon
+1. Mapirajte ID kontakta na *semantički* tip **KontaktProfile**. Opcionalno, mapiraj druga polja kao što su ime, prezime, pol ili e-pošta.
 
    :::image type="content" source="media/Semantic_Mapping_Wizard5.png" alt-text="Mapirajte atribute svojih podataka o kontaktu sa navedenim obaveznim i opcionim poljima.":::
 
-1. Izaberite **Dalje** za nastavak.
+1. Izaberite **Sledeće**.
 
-1. U koraku **Pregled**, pogledajte konfiguraciju semantičkog mapiranja. Izaberite **Uredi** da biste uneli izmene u odgovarajući odeljak.
+1. U **koraku** "Pregled" pregledajte konfiguraciju semantičkog mapiranja. Da biste napravili promene, izaberite **uredi** za odgovarajući odeljak.
 
-1. Izaberite **Sačuvaj** da biste sačuvali svoje novo **Semantičko mapiranje**.
+1. Izaberite **Sačuvaj**.
 
-1. Nakon čuvanja, možete izabrati **Pokreni** da biste obradili semantičko mapiranje ili možete izabrati **Zatvori** da biste sačuvali svoje semantičko mapiranje bez njegove obrade.
-
-1. Da biste kasnije pokrenuli semantičko mapiranje, izaberite semantičko mapiranje i izaberite **Osveži**.
+1. Da biste obradili semantičko mapiranje, izaberite **pokreni**. Ili kliknite **na dugme** "Zatvori" da biste sačuvali semantičko mapiranje bez njegove obrade. Da biste ga pokrenuli kasnije, izaberite semantičko mapiranje i izaberite stavku **Osveži**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Upravljanje postojećim semantičkim mapiranjima
 
-Na **Podaci** > **Semantička mapiranja (verzija za pregled)**, možete pregledati sva sačuvana semantička mapiranja i upravljati njima. Svako semantičko mapiranje predstavljeno je posebnim redom. Naći ćete detalje o izvornom entitetu, semantičkom tipu, tipu mapiranja i njegovom statusu.
+Idite **na Data** > **Semantic mapiranja (preview)** da biste prikazali sačuvana semantička mapiranja, njihov izvorni entitet, semantički tip, tip mapiranja i status.
 
 :::image type="content" source="media/semantic-mapping-options.png" alt-text="Opcije za upravljanje semantičkim mapiranjima.":::
 
-- **Uredi**: otvara konfiguraciju podešavanja semantičkog mapiranja u koraku provere. Možete promeniti trenutnu konfiguraciju. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene.
-
-- **Osveži**: Osvežava izabrano semantičko mapiranje najnovijim podacima iz entiteta koji su deo njegove konfiguracije. Osvežavanje bilo kog datog semantičkog mapiranja osvežiće sva semantička mapiranja istog tipa.
-
-- **Preimenuj**: Otvara dijalog u koji možete uneti drugačije ime za izabrano semantičko mapiranje. Izaberite **Sačuvaj** da primenite promene.
-
-- **Izbriši**: Otvara dijalog za potvrdu brisanja izabranog semantičkog mapiranja. Takođe možete izbrisati više semantičkih mapiranja odjednom odabirom semantičkih mapiranja i ikone za brisanje. Izaberite **Izbriši** da biste potvrdili brisanje.
+Izaberite semantičko mapiranje da biste videli dostupne radnje.
+- **Uredite** trenutnu konfiguraciju. Izaberite **Sačuvaj** i **Pokreni** da biste obradili promene.
+- **Osvežite** semantičko mapiranje da biste uključili najnovije podatke. Osvežavanje bilo kog datog semantičkog mapiranja osvežiće sva semantička mapiranja istog tipa.
+- **Preimenujte** semantičko mapiranje. Izaberite **Sačuvaj**.
+- **Izbrišite** semantičko mapiranje. Da biste istovremeno izbrisali više semantičkih mapiranja, izaberite semantička mapiranja i ikonu za brisanje. Izaberite **Izbriši** da biste potvrdili brisanje.
 
 ## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Korišćenje mapiranja semantičkog entiteta KontaktProfile za kreiranje aktivnosti na nivou kontakta
 
@@ -100,7 +95,7 @@ Nakon kreiranja mapiranja *semantičkog entiteta ContactProfile*, možete da uhv
    > [!NOTE]
    > Da bi aktivnosti na nivou kontakta uspele, morate imati **ID** **naloga i atribute "ID** kontaktA" za svaki zapis u okviru podataka o aktivnostima.
 
-1. [Definišite *mapiranje semantičkog entiteta KontaktProfile* .](#define-a-contactprofile-semantic-entity-mapping) I pokreni semantičko mapiranje.
+1. [Definišite *mapiranje semantičkog entiteta* KontaktProfile](#define-a-contactprofile-semantic-entity-mapping) i pokrenite semantičko mapiranje.
 
 1. Idite na aktivnosti **sa** > **podacima**.
 
@@ -119,14 +114,14 @@ Nakon kreiranja mapiranja *semantičkog entiteta ContactProfile*, možete da uhv
 
 1. Pokrenite mapiranja aktivnosti.
 
-1. Aktivnosti na nivou kontakta će sada biti vidljive na vremenskoj osi kupca.
+1. Kada se pokreće mapiranje aktivnosti na nivou kontakta, izaberite stavku **Kupci**. Aktivnosti na nivou kontakta prikazuju se na vremenskoj osi kupca.
 
    :::image type="content" source="media/Contact_Activities2.png" alt-text="Konačni rezultat nakon konfigurisanja aktivnosti kontakta":::
 
 ### <a name="contact-level-activity-timeline-filtering"></a>Filtriranje vremenske ose na nivou aktivnosti na nivou kontakta
 
-Nakon konfigurisanja mapiranja aktivnosti na nivou kontakta i njegovog pokretanja, vremenska osa aktivnosti za kupce će biti ažurirana. On uključuje njihove ID-ove ili imena, u zavisnosti od konfiguracije *ContactProfile datoteke*, za aktivnosti na kojima su delovali. Aktivnosti možete filtrirati po kontaktima na vremenskoj osi da biste videli određene kontakte koji vas interesuju. Pored toga, možete videti sve aktivnosti koje nisu dodeljene određenom kontaktu tako što ćete **izabrati stavku Aktivnosti koje nisu mapirane kontaktu**.
+Vremenska osa aktivnosti za vaše klijente uključuje njihove ID-ove ili imena, u zavisnosti od *konfiguracije ContactProfile datoteke*, za aktivnosti na kojima su postupili. Filtrirajte aktivnosti po kontaktima na vremenskoj osi da biste videli određene kontakte za koje ste zainteresovani. Da biste prikazali sve aktivnosti koje nisu dodeljene određenom kontaktu, izaberite **aktivnosti koje nisu mapirane kontaktu**.
 
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opcije filtriranja dostupne za aktivnosti na nivou kontakta.":::
+:::image type="content" source="media/Contact_Activities3.png" alt-text="Opcije filtriranja dostupne za aktivnosti na nivou kontakta.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

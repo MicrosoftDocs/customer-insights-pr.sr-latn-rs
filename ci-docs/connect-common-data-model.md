@@ -1,7 +1,7 @@
 ---
 title: Povežite se sa Common Data Model fasciklom koja koristi Azure Data Lake nalog
 description: Radite sa Common Data Model podacima koristeći Azure Data Lake Storage.
-ms.date: 05/30/2022
+ms.date: 07/27/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082267"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207016"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povežite se sa podacima u usluzi Azure Data Lake Storage
 
@@ -82,7 +82,7 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
    :::image type="content" source="media/ADLS_required.png" alt-text="Dijalog koji prikazuje potreban za primarni ključ":::
 
    > [!TIP]
-   > Da biste uredili entitete u interfejsu za uređivanje JSON-a, izaberite prikaži **više Edit** > **datoteke šeme**. Izvršite promene i izaberite **Sačuvaj**.
+   > Da biste uredili entitet u JSON interfejsu za uređivanje, izaberite entitet, a zatim uredite **datoteku šeme**. Izvršite promene i izaberite **Sačuvaj**.
 
 1. Za izabrane entitete koji zahtevaju postepeno unošenje, potrebni ekrani **u okviru** postepenog **osvežavanja**. Za svaki od ovih entiteta pogledajte članak [Konfigurisanje postepenog osvežavanja za Azure Data Lake izvore podataka](incremental-refresh-data-sources.md).
 
@@ -101,6 +101,10 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
    1. Izaberite **Gotovo**.
 
 1. Izaberite **Sačuvaj**. Otvoriće **se stranica "Izvori podataka" koja prikazuje novu izvor podataka statusu "Osvežavanje** **·**".
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Učitavanje podataka može potrajati. Nakon uspešnog osvežavanja, uneti podaci se mogu redigovanje sa stranice [**"Entiteti**](entities.md) ".
 
 ### <a name="create-a-new-schema-file"></a>Kreiranje nove datoteke šeme
 
@@ -148,6 +152,9 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
 
 1. Izaberite **Sačuvaj**. Otvoriće **se stranica "Izvori podataka" koja prikazuje novu izvor podataka statusu "Osvežavanje** **·**".
 
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+Učitavanje podataka može potrajati. Nakon uspešnog osvežavanja, uneti podaci se mogu redigovanje sa stranice [**"Entiteti**](entities.md) ".
 
 ## <a name="edit-an-azure-data-lake-storage-data-source"></a>Uređivanje Azure Data Lake Storage izvor podataka
 
@@ -179,8 +186,16 @@ Pomoću opcije možete da *ažurirate nalog za povezivanje sa* skladištem. Viš
       > [!IMPORTANT]
       > Ako postoje zavisnosti od postojeće datoteke model.json ili manifest.json i skupa entiteta, videćete poruku o grešci i ne možete da izaberete drugu datoteku model.json ili manifest.json. Uklonite te zavisnosti pre promene datoteke model.json ili manifest.json ili kreirajte novi izvor podataka sa datotekom model.json ili manifest.json koju želite da koristite da biste izbegli uklanjanje zavisnosti.
    - Da biste promenili lokaciju datoteke sa podacima ili primarni ključ, kliknite na dugme " **Uredi"**.
-   - Da biste promenili postepene podatke o brisanju, pogledajte [konfigurisanje postepenog osvežavanja za Azure Data Lake izvore podataka](incremental-refresh-data-sources.md)
+   - Da biste promenili postepene podatke o ingesciji, pogledajte [članak Konfigurisanje postepenog osvežavanja za Azure Data Lake izvore podataka](incremental-refresh-data-sources.md).
+   - Promenite samo ime entiteta tako da se podudara sa imenom entiteta u .json datoteci.
+
+     > [!NOTE]
+     > Ime entiteta uvek držite u uvidima klijenata isto kao ime entiteta unutar datoteke model.json ili manifest.json nakon unošenja. Customer Insights proverava valjanost svih imena entiteta pomoću modela.json ili manifest.json tokom svakog osvežavanja sistema. Ako je ime entiteta promenjeno unutar uvida kupca ili spolja, dolazi do greške zato što uvidi klijenata ne mogu da pronađu novo ime entiteta u .json datoteci. Ako je ime entiteta slučajno promenjeno, uredite ime entiteta u fascikli "Uvidi kupaca" da bi se podudaralo sa imenom u .json datoteci.
 
 1. Izaberite **atribute da** biste dodali ili promenili atribute ili da biste omogućili profilisanje podataka. Zatim izaberite **Gotovo**.
 
 1. Kliknite **na dugme** "Sačuvaj" da biste primenili promene i vratili se na **stranicu "Izvori podataka** ".
+
+   [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

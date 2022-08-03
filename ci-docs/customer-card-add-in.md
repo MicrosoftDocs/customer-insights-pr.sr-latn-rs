@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082141"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194940"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Programski dodatak za karticu kupca za Dynamics 365 aplikacije (pregled)
 
@@ -28,21 +28,25 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Programski dodatak radi samo sa Dynamics 365 aplikacijama zasnovanim na modelu, kao što su Sales ili Customer Service, verzije 9.0 i novije.
-- Da bi se Vaši Dynamics 365 podaci mapirali u profile klijenata "Uvidi kupaca", preporučujemo da se oni unose [iz Dynamics 365 aplikacije pomoću Microsoft Dataverse linije spajanja](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), morate se uveriti `contactid` da je polje (ili `accountid`) postavljeno [kao primarni ključ za taj izvor podataka u koraku mape procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Dynamics 365 aplikacije sa modelima, kao što su "Prodaja" ili "korisnička služba", verzija 9.0 i novija.
+- Da bi se Vaši Dynamics 365 podaci mapirali u profile klijenata "Uvidi kupaca", preporučujemo da se oni unose [iz Dynamics 365 aplikacije pomoću Microsoft Dataverse linije spajanja](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), uverite se da `contactid` je polje (ili `accountid`) postavljeno [kao primarni ključ za taj izvor podataka tokom procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Svi Dynamics 365 korisnici programskog dodatka "Kartica kupca" moraju biti [dodati kao korisnici u programu](permissions.md) Customer Insights da bi videli podatke.
-- [Konfigurisane mogućnosti pretraživanja i filtriranja u](search-filter-index.md) uvidima klijenata su potrebne za pronalaženje podataka za rad.
+- [Konfigurisane mogućnosti pretraživanja i filtriranja](search-filter-index.md) u usluzi Customer Insights.
 - Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima klijenata. Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
-  - **Kontrola mera**: Zahteva [konfigurisane mere](measures.md) atributa tipa korisnika.
-  - **Kontrola inteligencije**: Zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
-  - **Kontrola detalja o klijentima**: sva polja iz profila dostupna su u objedinjenom profilu korisnika.
-  - **Kontrola obogaćivanja**: Zahteva da se aktivna [obogaćivanja](enrichment-hub.md) primene se na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: brendove [koje](enrichment-microsoft.md) obezbeđuje Microsoft, [interesovanja](enrichment-microsoft.md) koja obezbeđuje Microsoft i [podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
-  - **Kontrola kontakata**: zahteva definiciju semantičkog entiteta tipa kontakata.
-  - **Kontrola vremenske ose**: zahteva [konfigurisane aktivnosti](activities.md).
+  - **Kontrola mere** zahteva [konfigurisane mere atributa klijenta](measures.md).
+  - **Kontrola obaveštajne** službe zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
+  - **Kontrola detalja kupca** prikazuje sva polja iz profila dostupna u objedinjenom profilu kupca.
+  - **Kontrola obogaćivanja** zahteva aktivno [bogaćenje](enrichment-hub.md) primenjeno na profile klijenata. Programski dodatak za kartice podržava ova obogaćivanja: brendove [koje](enrichment-microsoft.md) obezbeđuje Microsoft, [interesovanja](enrichment-microsoft.md) koja obezbeđuje Microsoft i [podatke o angažovanju sistema Office](enrichment-office.md) koje obezbeđuje Microsoft.
+  - **Kontrola kontakata** zahteva tip semantičkog entiteta kontakta.
+  - **Kontrola vremenske ose** zahteva [konfigurisane aktivnosti](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalirajte i koristite dodatak za karticu klijenta
 
-Programski dodatak za karticu klijenta je rešenje za Customer Engagement aplikacije u sistemu Dynamics 365. Da biste instalirali rešenje, idite na AppSource i potražite **Dynamics karticu klijenta**. Izaberite [dodatak za karticu klijenta u usluzi AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i izaberite **Preuzmi odmah**.
+Programski dodatak za karticu klijenta je rešenje za Customer Engagement aplikacije u sistemu Dynamics 365. Da biste instalirali rešenje:
+
+1. Idite i AppSource potražite Dynamics **karticu kupca**.
+
+1. Izaberite [dodatak za karticu klijenta u usluzi AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) i izaberite **Preuzmi odmah**.
 
 Možda ćete morati da se prijavite pomoću akreditiva administratora za aplikaciju Dynamics 365 da biste instalirali rešenje. Možda će biti potrebno neko vreme da se rešenje instalira u vaše okruženje.
 

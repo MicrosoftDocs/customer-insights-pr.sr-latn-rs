@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082582"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183589"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Odnosi između entiteta i putanja entiteta
 
 Relacije povezuju entitete i definišu grafikon vaših podataka kada entiteti dele zajednički identifikator, strani ključ. Ovaj strani ključ može se referencirati iz jednog entiteta na drugi. Povezani entiteti omogućavaju definiciju segmenata i mere na osnovu više izvora podataka.
 
 Postoje tri vrste relacija: 
-- Sistemske relacije koje ne mogu da se uređuju, kreira ih sistem kao deo procesa ujednačavanja podataka
-- Nasleđene relacije bez mogućnosti uređivanja, koje se automatski kreiraju iz unosa izvora podataka 
-- Prilagođene relacije sa mogućnošću uređivanja, koje kreiraju i konfigurišu korisnici
+- Sistem kreira sistem koji odnosi ne može da se uređuje kao deo procesa ujedinjenja podataka
+- Nasleđene poruke koje se ne odnosi automatski se kreiraju iz izvora podataka koji se ne mogu uređivati
+- Korisnici kreiraju i odnosi mogu da uređuju prilagođene informacije
 
 ## <a name="non-editable-system-relationships"></a>Sistemske relacije koje ne mogu da se uređuju
 
@@ -67,69 +67,66 @@ Relacija se sastoji od *izvornog entiteta* koji sadrži strani ključ i *ciljni 
    - **Opis**: Opis relacije.
    - **Izvorni entitet**: Entitet koji se koristi kao izvor u relaciji. Primer: SupportCase.
    - **Ciljni entitet**: Entitet koji se koristi kao cilj u relaciji. Primer: Klijent.
-   - **Izvorna kardinalnost**: Navedite kardinalnost izvornog entiteta. Kardinalnost opisuje broj mogućih elemenata u skupu. Uvek se odnosi na ciljnu kardinalnost. Možete birati između **Jedan** i **Više**. Podržani su samo relacije više-prema-jedan i jedan-prema-jedan.  
+   - **Izvorna kardinalnost**: Kardinalnost izvornog entiteta. Kardinalnost opisuje broj mogućih elemenata u skupu. Uvek se odnosi na ciljnu kardinalnost. Možete birati između **Jedan** i **Više**. Podržani su samo relacije više-prema-jedan i jedan-prema-jedan.  
      - Više prema jedan: Više izvornih zapisa može se odnositi na jedan ciljni zapis. Primer: Više slučajeva podrške od jednog klijenta.
      - Jedan prema jedan: Jedan izvorni zapis odnosi se na jedan ciljni zapis. Primer: Jedan ID lojalnosti za jednog klijenta.
 
      > [!NOTE]
      > Relacije „Više prema više“ mogu se kreirati pomoću dve relacije „više prema jedan“ i povezujućeg entiteta, koji povezuje izvorni entitet i ciljni entitet.
 
-   - **Ciljna kardinalnost**: Izaberite kardinalnost ciljnih zapisa entiteta. 
-   - **Polje izvornog ključa**: Polje stranog ključa u izvornom entitetu. Primer: SupportCase može koristiti CaseID kao polje stranog ključa.
-   - **Polje ciljnog ključa**: Polje ključa ciljnog entiteta. Primer „Klijent“ bi mogao da koristi polje ključa **CustomerID**.
+   - **Ciljna kardinalnost**: Kardinalnost zapisa ciljnog entiteta.
+   - **Polje izvornog ključa**: Polje stranog ključa u izvornom entitetu. Primer: SupportCase koristi **CaseID** kao polje sporednog ključa.
+   - **Polje ciljnog** ključa: Ključno polje ciljnog entiteta. Primer: Kupac koristi ID **kupca** kao polje ključa.
 
 4. Izaberite **Sačuvaj** da biste kreirali prilagođenu relaciju.
 
 ## <a name="set-up-account-hierarchies"></a>Podešavanje hijerarhija naloga
 
-Okruženja koja su konfigurisana da koriste poslovne naloge kao primarnu ciljnu grupu mogu da konfigurišu hijerarhije naloga za povezane poslovne naloge. Na primer, preduzeće koje ima zasebne poslovne jedinice. 
+Okruženja koja su konfigurisana da koriste poslovne naloge kao primarni ciljni korisnici da konfigurišu hijerarhije naloga za srodne poslovne naloge. Na primer, preduzeće koje ima zasebne poslovne jedinice.
 
-Organizacije kreiraju hijerarhije naloga radi boljeg upravljanja nalozima i njihovim međusobnim odnosima. Uvidi klijenata podržavaju hijerarhije naloga nadređenog deteta koje već postoje u unetim podacima klijenata. Na primer, nalozi iz usluge Dynamics 365 Sales. Ove hijerarhije mogu da se konfigurišu na **odnosi stranici**.
+Organizacije kreiraju hijerarhije naloga radi boljeg upravljanja nalozima i njihovim međusobnim odnosima. Uvidi klijenata podržavaju hijerarhije naloga nadređenog deteta koje već postoje u unetim podacima klijenata. Na primer, nalozi iz usluge Dynamics 365 Sales. Ove hijerarhije se mogu konfigurisati na **odnosi stranici**.
 
 1. Idite na **Podaci** > **Odnosi**.
 1. Izaberite karticu **Hijerarhija naloga**.
-1. Izaberite **Hijerarhiju novog naloga**. 
-1. U oknu **Hijerarhija naloga**, navedite naziv za hijerarhiju. Sistem kreira naziv za izlazni entitet. Možete promeniti naziv entiteta izlaznog imena.
+1. Izaberite **Hijerarhiju novog naloga**.
+1. U oknu **Hijerarhija naloga**, navedite naziv za hijerarhiju. Sistem kreira ime izlaznog entiteta, ali ga možete promeniti.
 1. Izaberite entitet koji sadrži hijerarhiju naloga. Obično se nalazi u istom entitetu koji sadrži naloge.
-1. Izaberite **ID naloga** i **ID nadređenog naloga** iz izabranog entiteta 
-1. Izaberite **Sačuvaj** da biste primenili podešavanja i dovršili hijerarhiju naloga.
+1. Izaberite **UID naloga** i **nadređeni UID** iz izabranog entiteta.
+1. Kliknite **na dugme** Sačuvaj da biste dovršali hijerarhiju naloga.
 
-## <a name="view-relationships"></a>Prikaz relacija
+## <a name="manage-existing-relationships"></a>Upravljanje postojećim relacijama
 
-Na stranici Relacije navedene su sve relacije koje su kreirane. Svaki red predstavlja relaciju, što takođe uključuje detalje o izvornom entitetu, ciljnom entitetu i kardinalnosti. 
+Idite na **odnosi stranicu** da biste prikazali sve odnosi koje su kreirane, njihov izvorni entitet, ciljni entitet i kardinalnost.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Lista relacija i opcija na traci sa radnjama na stranici Relacije.":::
 
-Ova stranica nudi skup opcija za postojeće i nove relacije: 
-- **Nova relacija**: [Kreiranje nove relacije](#create-a-custom-relationship).
-- **Vizuelizator**: [Istražite vizuelizator odnosa](#explore-the-relationship-visualizer) da biste videli mrežni dijagram postojećih relacija i njihovu kardinalnost.
-- **Filtriraj prema**: Izaberite tip relacija koji će se prikazivati na listi.
-- **Pretraga relacija**: Koristite tekstualnu pretragu svojstava relacija.
+Koristite opcije **"Filtriranje** **po" ili "Pretraži odnosi**" da biste pronašli određenu relaciju. Izaberite Visualizer da biste videli mrežni dijagram postojećih odnosi njihove [**kardinalnosti**](#explore-the-relationship-visualizer).
+
+Izaberite relaciju da biste prikazali dostupne radnje:
+- **Uredi**: Ažurirajte svojstva prilagođenih relacija u oknu za uređivanje i sačuvajte promene.
+- **Izbriši**: Izbrišite prilagođene relacije.
+- **Prikaz**: Prikažite sistemski kreirane i nasleđene relacije.
 
 ### <a name="explore-the-relationship-visualizer"></a>Istražite vizuelizator relacija
 
 Vizuelizator relacija prikazuje mrežni dijagram postojećih relacija između povezanih entiteta i njihovu kardinalnost. Takođe vizuelizuje putanju relacija.
 
-Da biste prilagodili prikaz, možete da promenite položaj okvira tako što ćete ih prevući na podlogu.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Snimak ekrana mrežnog dijagrama vizuelizatora relacija sa vezama između povezanih entiteta.":::
 
-Dostupne opcije: 
+Da biste prilagodili prikaz, možete da promenite položaj okvira tako što ćete ih prevući na podlogu. Ostale opcije uključuju: 
 - **Izvezi kao sliku**: Snimite trenutni prikaz kao datoteku slike.
 - **Promena na horizontalni/vertikalni raspored**: Promenite poravnanje entiteta i relacija.
 - **Uredi**: Ažurirajte svojstva prilagođenih relacija u oknu za uređivanje i sačuvajte promene.
 
 ## <a name="relationship-paths"></a>Putanje relacija
 
-Putanja relacija opisuje entitete koji su povezani sa relacijama između izvornog entiteta i ciljnog entiteta. Koristi se pri kreiranju segmenta ili mere koja uključuje druge entitete osim entiteta objedinjenog profila i postoji više opcija za dosezanje entiteta objedinjenog profila. 
-
-Putanja relacija obaveštava sistem preko koje relacije da pristupi objedinjenom entitetu profila. Različite putanje relacija mogu postići različite rezultate.
+Putanja relacija opisuje entitete koji su povezani sa relacijama između izvornog entiteta i ciljnog entiteta. Koristi se prilikom kreiranja segmenta ili mere koja uključuje entitete koji nisu objedinjeni entitet profila i postoji više opcija za dostiženje objedinjenog entiteta profila. Različite putanje relacija mogu postići različite rezultate.
 
 Na primer, entitet *eCommerce_eCommercePurchases* ima sledeće relacije na objedinjenom profilu entiteta *Klijent*:
 
 - eCommerce_eCommercePurchases > Klijent
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Klijent
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klijent 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Klijent
 
 Putanja relacija određuje koje entitete možete koristiti pri kreiranju pravila za mere ili segmente. Odabir opcije sa najdužom putanjom relacija verovatno će postići manje rezultata, jer zapisi koji se podudaraju moraju da budu deo svih entiteta. U ovom primeru, klijent mora da kupi robu putem e-trgovine (eCommerce_eCommercePurchases), na prodajnom mestu (POS_posPurchases) i da učestvuje u našem programu lojalnosti (loyaltyScheme_loyCustomers). Kada birate prvu opciju, verovatno ćete dobiti više rezultata jer klijenti moraju postojati samo u jednom dodatnom entitetu.
 
@@ -155,7 +152,7 @@ Relacija je klasifikovana kao **indirektna relacija** kada se izvorni entitet od
 
 #### <a name="multi-hop-relationship"></a>Relacija kroz više skokova
 
-*Relacija kroz više skokova* je *indirektna relacija* koja vam omogućava da povežete izvorni entitet sa ciljnim entitetom preko jednog ili više drugih posredničkih entiteta.
+**Relacija kroz više skokova** je *indirektna relacija* koja vam omogućava da povežete izvorni entitet sa ciljnim entitetom preko jednog ili više drugih posredničkih entiteta.
 
 Na primer, ako se entitet aktivnosti pod nazivom *eCommerce_eCommercePurchasesWest* povezuje sa posredničkim entitetom pod nazivom *eCommerce_eCommercePurchasesEast*, a zatim se povezuje sa ciljnim entitetom pod nazivom *eCommerce_eCommerceContacts*, to je relacija sa više skokova.
 
@@ -168,16 +165,6 @@ Relacije sa više skokova i više putanja se mogu koristiti zajedno za kreiranje
 Na primer, ako se entitet aktivnosti pod nazivom *eCommerce_eCommercePurchasesWest* povezuje sa posredničkim entitetom pod nazivom *eCommerce_eCommercePurchasesEast*, a zatim se povezuje sa dva ciljna entiteta, oba pod nazivom *eCommerce_eCommerceContacts* i *loyaltyScheme_loyCustomers*, to je relacija sa više skokova, više putanja.
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Izvorni entitet se povezuje direktno sa jednim ciljnim entitetom i povezuje se sa drugim ciljnim entitetom preko posrednog entiteta.":::
-
-## <a name="manage-existing-relationships"></a>Upravljanje postojećim relacijama 
-
-Na stranici Relacije, svaka relacija je predstavljena jednim redom. 
-
-Izaberite relaciju i odaberite jednu od sledećih opcija: 
- 
-- **Uredi**: Ažurirajte svojstva prilagođenih relacija u oknu za uređivanje i sačuvajte promene.
-- **Izbriši**: Izbrišite prilagođene relacije.
-- **Prikaz**: Prikažite sistemski kreirane i nasleđene relacije. 
 
 ## <a name="next-step"></a>Sledeći korak
 

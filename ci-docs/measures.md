@@ -14,43 +14,56 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: 880c06bffcfa269151d96cb4c597eed4832fc61b
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083128"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170865"
 ---
 # <a name="measures-overview"></a>Pregled mera
 
-Mere vam pomažu da bolje razumete ponašanje klijenata i poslovne rezultate. Oni gledaju na relevantne vrednosti iz [objedinjenih profila](data-unification.md). Na primer, preduzeće želi da vidi *ukupnu potrošnju po klijentu* da biste razumeli istoriju kupovine pojedinačnog klijenta ili meru *ukupne prodaje preduzeća* da biste razumeli ukupni prihod u celom preduzeću.  
+Mere vam pomažu da bolje razumete ponašanje klijenata i poslovne rezultate. Oni gledaju na relevantne vrednosti iz [objedinjenih profila](data-unification.md). Na primer, preduzeće želi da vidi *ukupnu potrošnju po klijentu* da biste razumeli istoriju kupovine pojedinačnog klijenta ili meru *ukupne prodaje preduzeća* da biste razumeli ukupni prihod u celom preduzeću.
 
-Mere se kreiraju pomoću [izrade mera](measure-builder.md), platforme za upite podataka sa različitim operatorima i jednostavnim opcijama mapiranja. Omogućava vam da filtrirate podatke, grupišete rezultate, otkrivate [putanje relacija između entiteta](relationships.md) i pregledate izlaz. Unapred definisane [predloške možete koristiti](measure-templates.md) za efikasno konfigurisanje najčešće korišćenih mera.
+Kreirajte mere za planiranje poslovnih aktivnosti tako što ćete ispitati podatke o kupcima i izdvojiti uvide. Na primer, kreirajte meru ukupne ukupne potrošne *vrednosti po kupcu* *i ukupan povraćaj po kupcu* da biste identifikovali grupu kupaca sa velikom potnošuom, a ipak visokim povraćajem. Zatim kreirajte [segment zasnovan](segments.md) na ovim merama da biste vozili sledeće najbolje radnje.
 
-Koristite kreator mera za planiranje poslovnih aktivnosti tako što ćete potražiti podatke o klijentima i izvući uvide. Na primer, kreiranje mere *ukupna potrošnja po klijentu* i *ukupan povraćaj po klijentu* pomaže u identifikovanju grupe klijenata sa visokom potrošnjom, ali i visokim povraćajem. Segment možete [kreirati na osnovu](segments.md) ovih mera da biste disk jedinicu sledeće najbolje radnje.
+## <a name="create-a-measure"></a>Kreiranje mere
 
-## <a name="manage-your-measures"></a>Upravljanje merama
+Odaberite način kreiranja mere na osnovu ciljne korisnici.
 
-Spisak mera možete pronaći na stranici **Mere**.
+# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
-Pronaći ćete informacije o tipu mere, autoru, datumu nastanka, statusu i stanju. Kada na listi izaberete meru, možete da pregledate izlaz i preuzmete CSV datoteku.
+- Od nule sa graditeljem mera: [Izgradite sopstveni](measure-builder.md).
+- Iz najčešće korišćenih mera: koristite [unapred definisane predloške](measure-templates.md).
+
+# <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
+
+Od nule sa graditeljem mera: [Izgradite sopstveni](measure-builder.md).
+
+---
+
+## <a name="manage-existing-measures"></a>Upravljanje postojećim merama
+
+Idite na **stranicu "** Mere" da biste prikazali mere koje ste kreirali, njihov status, tip mere i poslednji put kada su podaci osveženi. Listu mera možete da sortirate po bilo kojoj koloni ili da koristite polje za pretragu da biste pronašli meru kojom želite da upravljate.
+
+Izaberite pored mere da biste prikazali dostupne radnje. Izaberite ime mere da biste pregledali izlaz i preuzeli CSV datoteku.
 
 :::image type="content" source="media/measures-actions.png" alt-text="Radnje za upravljanje jedinstvenim merama."lightbox="media/measures-actions.png":::
 
-Prilikom izbora mere dostupne su sledeće radnje:
-
-- **Uredite** konfiguraciju mere.
-- **Dupliraj** meru. Možete odabrati da uredite njegova svojstva ili jednostavno sačuvate duplikat.
-- **Osvežite** meru na osnovu najnovijih podataka. Da biste istovremeno osvežili sve mere, izaberite sve mere, a zatim **osvežite**.
+- **Uredite** meru da biste promenili njena svojstva.
+- **Osvežite** meru da biste uključili najnovije podatke.
 - **Preimenujte** meru.
-- **Aktivirajte** ili **Deaktivirajte**. Neaktivne mere se neće osvežavati tokom [zakazanog osvežavanja](system.md#schedule-tab).
-- **Oznaka**[za upravljanje oznakama](work-with-tags-columns.md#manage-tags) za segment.
+- **Aktivirajte** **ili deaktivirajte** meru. Neaktivne mere se neće osvežiti tokom planiranog [osvežavanja i](system.md#schedule-tab)**status će** **biti naveden kao "Preskočen**", što ukazuje na to da osveženje nije ni pokušano.
+- **Oznaka** za [upravljanje oznakama](work-with-tags-columns.md#manage-tags) za ovu meru.
 - **Izbrišite** meru.
+- **Kolone** za [prilagođavanje kolona](work-with-tags-columns.md#customize-columns) koje se prikazuju.
+- **Filtriranje** po [oznakama](work-with-tags-columns.md#filter-on-tags).
+- **Pretražite ime** za pretraživanje po imenu mere.
+
+## <a name="refresh-measures"></a>Mere osvežavanja
+
+Mere se mogu osvežiti automatskim rasporedom ili osvežiti ručno na zahtev. Da biste ručno osvežili jednu ili više mera, izaberite ih i odaberite stavku **Osveži**. Da biste [zakazali automatsko osvežavanje](system.md#schedule-tab), idite **na administrativni** > **plan** > **sistema**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-## <a name="next-step"></a>Sledeći korak
-
-Možete koristiti postojeće mere da biste kreirali [segment klijenata](segments.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

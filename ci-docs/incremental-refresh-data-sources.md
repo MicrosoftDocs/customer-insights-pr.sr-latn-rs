@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012042"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207154"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Postepeno osvežavanje za Power Query i Azure Data Lake izvore podataka
 
-Ovaj članak govori o tome kako da konfigurišete postepeno osvežavanje za izvore podataka zasnovane na Power Query Azure Data Lake ili Azure Data Lake.
-
-Inkrementalno osvežavanje izvora podataka pruža sledeće prednosti:
+Postepeno osvežavanje izvora podataka na osnovu Power Query ili Azure Data Lake pruža sledeće prednosti:
 
 - **Brža osvežavanja** – Osvežavaju se samo podaci koji su promenjeni. Na primer, možete da osvežite samo proteklih pet dana skupa podataka iz prethodnog perioda.
 - **Povećana pouzdanost** – Uz manje osvežavanja, ne morate dugo da održavate veze sa sistemima sa promenljivim izvorima, smanjujući rizik od problema sa povezivanjem.
@@ -73,6 +71,7 @@ Uvidi klijenata omogućavaju postepeno osvežavanje izvora podataka povezanih sa
 
    1. Potražite osnovnu fasciklu koja sadrži datoteke .csv ili .parketa za potpune podatke, postepene uvećavanje podataka i brisanje postepenih podataka.
    1. Unesite oznaku tipa datoteke za sve podatke i postepene datoteke (\. csv ili \. parket).
+   1. Za .csv datoteke izaberite znak razgraničavanja kolone i ako želite prvi red datoteke kao zaglavlje kolone.
    1. Izaberite **Sačuvaj**.
 
 1. Za **poslednji put ažurirano** izaberite atribut date timestamp.

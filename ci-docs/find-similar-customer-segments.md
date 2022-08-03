@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054822"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170744"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Pronađi slične klijente sa AI (pregled)
 
-Ova funkcija vam omogućava da pronađete slične klijente u svojoj korisničkoj bazi koristeći veštačku inteligenciju. Da biste koristili ovu funkciju, morate da imate bar jedan kreiran segment. Proširenje kriterijuma postojećeg segmenta pomaže u pronalaženju klijenata koji su slični tom segmentu.
+Pronađite slične klijente u svojoj korisničkoj bazi koristeći veštačku inteligenciju. Potreban vam je najmanje jedan segment kreiran da biste koristili ovu funkciju. Razvijanje kriterijuma postojećeg segmenta pomaže u pronalaženju kupaca koji su slični tom segmentu.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Pronađite slične kupce* koristi automatizovana sredstva za procenu podataka i pravljenje predviđanja na osnovu tih podataka, pa se zato može koristiti kao način profilisanja, termin koji je definisan Opštom uredbom o zaštiti podataka („GDPR“). Klijentovo korišćenje ove funkcije za obradu podataka može da bude podložno GDPR-u ili drugim zakonima ili propisima. Odgovorni ste za to da koristite Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim važećim zakonima i propisima, uključujući zakone koji se odnose na privatnost, lične podatke, biometrijske podatke, zaštitu podataka i poverljivost komunikacija.
+> *Pronalaženje sličnih klijenata* koristi automatizovana sredstva za procenu podataka i predviđanja na osnovu podataka. Stoga ima mogućnost da se koristi kao metod profilisanja, jer je taj termin definisan Opštom uredbom o zaštiti podataka ("GDPR"). Klijentovo korišćenje ove funkcije za obradu podataka može da bude podložno GDPR-u ili drugim zakonima ili propisima. Odgovorni ste za to da koristite Dynamics 365 Customer Insights, uključujući predviđanja, u skladu sa svim važećim zakonima i propisima, uključujući zakone koji se odnose na privatnost, lične podatke, biometrijske podatke, zaštitu podataka i poverljivost komunikacija.
 
-## <a name="finding-similar-customers"></a>Pronalaženje sličnih klijenata
+## <a name="find-similar-customers"></a>Pronađi slične klijente
 
 1. Idite na **segmente** i izaberite segment na kojem želite da zasnujete novi segment. To je vaš *izvorni segment*.
 
-1. Na traci radnji izaberite **Pronađi slične kupce**.
+1. Izaberite **stavku Pronađi slične kupce**.
 
 1. Pregledajte predloženi naziv za svoj novi segment i promenite ga ako je potrebno.
 
 1. Opcionalno, [dodajte](work-with-tags-columns.md#manage-tags) oznake novom segmentu.
 
-1. Pregledajte polja koja definišu vaš novi segment. Ova polja definišu osnovu na kojoj će sistem pokušati da nađe kupce slične vašem izvornom segmentu. Sistem će podrazumevano izabrati preporučena polja.
+1. Pregledajte polja koja definišu vaš novi segment. Ova polja definišu osnovu na kojoj će sistem pokušati da nađe kupce slične vašem izvornom segmentu. Sistem podrazumevano bira preporučena polja. Ako je potrebno, dodajte još polja.
   Polja koja mogu značajno smanjiti performanse modela automatski se isključuju:
   
    - Polja sa sledećim tipovima podataka: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Polja sa kardinalnošću (broj elemenata u polju) manjom od 2 ili više od 30
 
-1. Izaberite da li želite da uključite **Sve kupce** ili samo neke kupce u **Specifični postojeći segment** u vašem novom segmentu.
+1. Odaberite da li želite da uključite **sve** kupce osim izvornog segmenta ili samo kupce u **drugi segment** u novom segmentu.
 
 1. Sistem podrazumevano predlaže da u izlaznu vrednost uključite samo 20% ciljne grupe. Uredite ovu graničnu vrednost po potrebi. Povećanje granične vrednosti će smanjiti preciznost.
 
 1. Uključite kupce u izvorni segment tako što ćete izabrati polje **za potvrdu Uključi članove iz izvornog segmenta pored kupaca sa sličnim** atributima.
 
-1. Izaberite **Pokreni** u dnu stranice da biste započeli zadatak binarne klasifikacije (vid mašinskog učenja) koji analizira skup podataka.
+1. Kliknite **na** dugme "Pokreni" na dnu stranice da biste [započeli zadatak binarne](#about-similarity-scores) klasifikacije (metod Mašinsko učenje) koji analizira skup podataka.
 
 ## <a name="view-the-similar-segment"></a>Prižažite sličan segment
 
-Nakon obrade sličnog segmenta, novi segment ćete naći navedenog stranici **Segmenti**.
+Nakon obrade sličnog segmenta, novi segment ćete pronaći naveden na stranici " **Segmenti** " sa vrstom "Proširenje **"**.
 
-> [!div class="mx-imgBorder"]
-> ![Segment sličnih klijenata.](media/expanded-segment.png "Segment sličnih klijenata")
+U pregledu članova **segmenta izaberite stavku Prikaz da biste** videli raspodelu rezultata [preko rezultata sličnosti i](#about-similarity-scores) vrednosti rezultata sličnosti **.**
 
-Izaberite **Prikaži** na traci sa radnjama da biste otvorili detalje segmenta. Ovaj prikaz sadrži informacije o raspodeli rezultata kroz [ocene sličnosti](#about-similarity-scores). Takođe ćete naći sličnosti u vrednostima rezultata u **Pregled članova segmenta**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segment sličnih klijenata.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Koristite izlaz sličnog segmenta
+## <a name="manage-a-similar-segment"></a>Upravljanje sličnim segmentom
 
-Možete da [radite sa izlaznom vrednošću sličnog segmenta](segments.md) kao i kod drugih segmenata. Na primer, izveite segment ili izgradite meru.
+[Radite sa sličnim segmentom i upravljajte njima](segments.md#manage-existing-segments) kao i sa drugim segmentima. Na primer, izveite segment ili izgradite meru.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Osvežite i uredite sličan segment
-
-Da biste osvežili sličan segment, izaberite ga na stranici **Segmenti**, a zatim izaberite **Osveži** sa trake radnji.
-
-Uređivanjem sličnog segmenta ponovo ćete obraditi vaše podatke. Prethodno kreiran segment se ažurira uz osvežene podatke.
-Da biste uredili sličan segment, izaberite ga na stranici **Segmenti**, a zatim izaberite **Uredi** sa trake radnji. Primenite promene i izaberite **Pokreni** da biste započeli obradu.
-
-## <a name="delete-a-similar-segment"></a>Izbrišite sličan segment
-
-Izaberite segment na stranici **Segmenti**, a zatim izaberite **Izbriši** sa trake radnji. Zatim potvrdite brisanje.
+Uredite, osvežite, preimenujte, preuzmite i izbrišite sličan segment. Uređivanje sličnog segmenta ponovoprocesira vaše podatke. Prethodno kreiran segment se ažurira uz osvežene podatke.
 
 ## <a name="about-similarity-scores"></a>O ocenama sličnosti
 

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643816"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171066"
 ---
 # <a name="subscription-churn-prediction"></a>Predviđanje odliva pretplate
 
@@ -61,7 +61,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
 
 ## <a name="create-a-subscription-churn-prediction"></a>Kreiranje predviđanja gubitka pretplata
 
-1. Idite na **obaveštajne** > **podatke**.
+1. Idite na **obaveštajna** > **predviđanja**.
 1. Izaberite pločicu **modela "Pretplata"** i izaberite stavku **Koristi ovaj model**.
    > [!div class="mx-imgBorder"]
    > ![Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“.](media/subscription-churn-usethismodel.PNG "Pločica „Model gubitka pretplate“ sa dugmetom „Koristi ovaj model“")
@@ -121,7 +121,7 @@ Predviđanje gubitka pretplata vam pomaže da predvidite da li je klijent ugrož
    - **Naziv predviđanja:** Naziv predviđanja koji ste naveli prilikom njegovog kreiranja.
    - **Vrsta predviđanja:** Tip modela koji se koristi za predviđanje
    - **Izlazni entitet:** Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.    
-     U izlaznom entitetu, *ChurnScore* je predviđena verovatnoća gubitka klijenta a *IsChurn* je binarna oznaka zasnovana na graničnoj vrednosti parametra *ChurnScore* od 0,5. Podrazumevana granična vrednost možda neće raditi za vaš scenario. [Napravite novi segment](segments.md#create-a-new-segment) sa željenom graničnom vrednošću.
+     U izlaznom entitetu, *ChurnScore* je predviđena verovatnoća gubitka klijenta a *IsChurn* je binarna oznaka zasnovana na graničnoj vrednosti parametra *ChurnScore* od 0,5. Podrazumevana granična vrednost možda neće raditi za vaš scenario. [Napravite novi segment](segments.md#create-a-segment) sa željenom graničnom vrednošću.
    - **Predviđeno polje:** Ovo polje se popunjava samo za neke vrste predviđanja i ne koristi se u predviđanju gubitka pretplata.
    - **Status:** Trenutni status pokretanja predviđanja.
         - **U redu:** Predviđanje trenutno čeka da se pokrenu i drugi procesi.
