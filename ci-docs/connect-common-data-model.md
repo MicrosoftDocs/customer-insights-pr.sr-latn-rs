@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: e071bf9364b44a92d81c9ff2269ff4e8654010aa
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207016"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245850"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povežite se sa podacima u usluzi Azure Data Lake Storage
 
@@ -56,8 +56,8 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
 
 1. Odaberite jednu od sledećih opcija za povezivanje **skladišta pomoću**. Više informacija potražite u članku [Povezivanje uvida klijenata sa Azure Data Lake Storage Gen2 nalogom pomoću Azure servisnog direktora](connect-service-principal.md).
 
-   - **Azure resurs:** Unesite **ID resursa**. Opcionalno, ako želite da unosite podatke iz naloga za skladištenje putem Azure privatne veze, izaberite opciju Omogući **privatnu vezu**. Više informacija potražite u članku [Privatne veze](security-overview.md#private-links-tab).
-   - **Azure pretplate**: Izaberite pretplatu **, a** zatim nalog **grupe resursa** **i skladišta**. Opcionalno, ako želite da unosite podatke iz naloga za skladištenje putem Azure privatne veze, izaberite opciju Omogući **privatnu vezu**. Više informacija potražite u članku [Privatne veze](security-overview.md#private-links-tab).
+   - **Azure resurs:** Unesite **ID resursa**. Opcionalno, ako želite da unosite podatke iz naloga za skladištenje putem Azure privatne veze, izaberite opciju Omogući **privatnu vezu**. Više informacija potražite u članku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
+   - **Azure pretplate**: Izaberite pretplatu **, a** zatim nalog **grupe resursa** **i skladišta**. Opcionalno, ako želite da unosite podatke iz naloga za skladištenje putem Azure privatne veze, izaberite opciju Omogući **privatnu vezu**. Više informacija potražite u članku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
   
    > [!NOTE]
    > Potrebna vam je jedna od sledećih uloga kontejnera ili naloga za skladištenje da biste kreirali izvor podataka:
@@ -176,7 +176,7 @@ Pomoću opcije možete da *ažurirate nalog za povezivanje sa* skladištem. Viš
         > - Vlasnik podataka skladišta blob objekta
         > - Saradnik za podatke skladišta blob objekta
 
-   - **Omogućite privatnu** vezu ako želite da unosite podatke sa naloga za skladištenje putem Azure privatne veze. Više informacija potražite u članku [Privatne veze](security-overview.md#private-links-tab).
+   - **Omogućite privatnu** vezu ako želite da unosite podatke sa naloga za skladištenje putem Azure privatne veze. Više informacija potražite u članku [Privatne veze](security-overview.md#set-up-an-azure-private-link).
 
 1. Izaberite **Sledeće**.
 1. Promenite nešto od sledećeg:

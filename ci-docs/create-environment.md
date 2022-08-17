@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
-ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
-ms.translationtype: MT
+ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/13/2022
-ms.locfileid: "9142836"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245574"
 ---
 # <a name="how-to-create-a-new-environment"></a>Kako da: Kreiranje nove sredine
 
@@ -48,7 +48,7 @@ U koraku **Osnovne informacije**, odaberite da li želite da kreirate okruženje
 
 Navedite sledeće detalje:
 
-- **Naziv**: Unesite naziv ovog okruženja. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti.
+- **Naziv**: Unesite naziv ovog okruženja. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti. Ako imate više radnih okruženja, dajte svakome ime koje se lako može identifikovati.
 - **Odaberite svoje poslovanje**: Odaberite primarnu ciljnu grupu za novo okruženje. Možete da radite sa pojedinačnim potrošačima (B-to-C) ili [poslovnim kontaktima](work-with-business-accounts.md) (B-to-B). Ako vaša organizacija uglavnom posluje sa pojedincima, kao što su prodavac ili kafić, odaberite pojedinačne potrošače. U slučaju da su korisnici kompanije, kao što su proizvođač automobila ili preduzeće za papir, odaberite poslovne naloge.
 - **Tip**: izaberite da li želite da kreirate proizvodno ili Sandbox okruženje. Sandbox okruženja ne dozvoljavaju zakazano osvežavanje podataka i namenjena su za predimplementaciju i testiranje. Sandbox okruženja koriste istu primarnu ciljnu grupu kao i trenutno izabrano proizvodno okruženje.
 - **Region**: Region u kojem je usluga primenjena i hostovana. Da [biste koristili sopstveni Azure Data Lake Storage nalog](own-data-lake-storage.md) ili se [povezali sa postojećom Microsoft Dataverse organizacijom](customer-insights-dataverse.md), okruženje "Uvidi kupaca" mora biti u istom regionu.

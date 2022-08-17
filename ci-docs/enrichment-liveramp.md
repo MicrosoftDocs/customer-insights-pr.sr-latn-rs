@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile klijenata podacima o identitetu iz programa LiveRamp (pregled)
 description: Obogatite profile klijenata LiveRamp podacima.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196365"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237830"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Obogatite profile klijenata podacima o identitetu iz programa LiveRamp (pregled)
 
@@ -41,13 +41,9 @@ Morate biti administrator u programu [Customer](permissions.md#admin) Insights i
 
 1. Unesite ime za vezu i važeći ID LiveRamp klijenta i tajnu.
 
-1. Pregledajte i dajte saglasnost za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) izborom opcije **Slažem se**.
+1. Pregledajte privatnost [i usaglašenost podataka i](connections.md#data-privacy-and-compliance) izaberite I **slažem se**.
 
 1. Izaberite **opciju** Proveri da biste proverili valjanost konfiguracije, a zatim kliknite na dugme **Sačuvaj**.
-
-### <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
-
-Kada omogućite prenos Dynamics 365 Customer Insights podataka u LiveRamp, dozvoljavate prenos podataka izvan granice usaglašenosti za, uključujući Dynamics 365 Customer Insights potencijalno osetljive podatke kao što su lični podaci. Microsoft će preneti takve podatke na vaše uputstvo, ali vi ste odgovorni za to da obezbedite da LiveRamp ispunjava sve obaveze privatnosti ili bezbednosti koje možda imate. Za više informacija pregledajte Microsoft izjavu [o privatnosti](https://go.microsoft.com/fwlink/?linkid=396732). Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 

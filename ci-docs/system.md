@@ -1,7 +1,7 @@
 ---
-title: Konfiguracija sistema
+title: Prikaži konfiguraciju sistema
 description: Saznajte o sistemskim podešavanjima u usluzi Dynamics 365 Customer Insights.
-ms.date: 04/21/2022
+ms.date: 08/09/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
@@ -10,40 +10,78 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-system-status
-- ci-system-schedule
 - ci-system-about
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050688"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246264"
 ---
-# <a name="system-configuration"></a>Konfiguracija sistema
+# <a name="view-system-configuration"></a>Prikaži konfiguraciju sistema
 
-Da biste pristupili konfiguracijama sistema, idite na **administratorski** > **sistem** da biste prikazali listu sistemskih zadataka i procesa.
+Prikažite informacije o sistemu, status sistema i upotrebu API-ja.
 
-Stranica **Sistem** sadrži sledeće kartice:
-- [Status](#status-tab)
-- [Raspored](#schedule-tab)
-- [API korišćenje](#api-usage-tab)
-- [Osnovne informacije](#about-tab)
-- [Opšte](#general-tab)
+## <a name="view-api-usage"></a>Prikaži upotrebu API-ja
 
-:::image type="content" source="media/system-tabs.png" alt-text="Kartica „Podešavanja“ na sistemskoj stranici.":::
+Prikažite detalje o korišćenju API-ja u realnom vremenu i pogledajte koji su se događaji dogodili u datoj vremenski okvir.
 
-## <a name="status-tab"></a>Kartica Status
+1. Idite na administratorski **sistem** > **i izaberite karticu** za upotrebu API-ja **·**.
 
-Kartica **"Status"** vam omogućava da pratite tok zadataka, unošenje podataka, izvoz podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije na ovoj kartici da biste se uverili u dovršavanje aktivnih zadataka i procesa.
+1. **Izaberite vremenski okvir** da biste prikazali.
 
-Ova kartica uključuje tabele sa informacijama o statusu i obradi za razne procese. Svaka tabela prati **Ime** zadatka i odgovarajućeg entiteta, **Status** poslednjeg pokretanja i kada je **poslednji put ažuriran**. Detalje poslednjih nekoliko trčanja možete da prikažete tako što ćete izabrati zadatak ili ime procesa. 
+   Stranica **za upotrebu** API-ja sadrži tri odeljka:
 
-Izaberite status pored zadatka ili procesa u koloni Status da **biste** otvorili okno sa **detaljima o toku**.
+   - **API pozivi** – grafikon koji prikazuje ukupni broj poziva API-ju u izabranom vremenskom okviru.
+   - **Prenos podataka** – grafikon koji prikazuje količinu podataka koja je preneta preko API-ja u izabranom vremenskom okviru.
+   - **Operacije** – tabela sa redovima za svaku dostupnu API operaciju i detalje o upotrebi operacija. Izaberite ime operacije da biste išli [na API referencu](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operacije koje koriste [unošenje podataka u realnom vremenu](real-time-data-ingestion.md) sadrže dvogledni simbol za prikaz upotrebe API-ja u realnom vremenu.
+
+   1. Izaberite dvogled da biste otvorili okno **za korišćenje API-ja u realnom** vremenu koje sadrži detalje o korišćenju operacije.
+   1. **Izaberite vremenski okvir** da biste prikazali.
+   1. Koristite polje **"Grupiši** po" da biste odabrali kako da na najbolji način predstavite interakcije u realnom vremenu. Podatke grupisanje po API metodu, kvalifikovanom imenu entiteta **(uneti entitet),** kreiranom **po (izvoru događaja),** rezultatu (uspehu **ili neuspehu) ili kodovima** grešaka **.** **·** Podaci su dostupni kao vremenski grafikon i tabela.
+
+## <a name="view-system-information"></a>Prikaz informacija o sistemu
+
+Prikažite ID ime za prikaz okruženja, ID, region, tip i ID sesije.
+
+1. Idite na administratorski **sistem** > **i** izaberite karticu Osnovni **podaci**.
+
+1. Izaberite karticu "Opšte postavke" da biste prikazali jezik i državu **/** region.
+
+### <a name="update-preferred-language-or-countryregion"></a>Ažuriranje željenog jezika ili države/regiona
+
+Uvidi klijenata [podržavaju mnoge jezike](/dynamics365/get-started/availability). Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
+
+Uvezeni podaci i informacije koje ste ručno uneli se ne prevode.
+
+1. Idite na **administratorski** > **sistem i** izaberite karticu **Opšte** postavke.
+
+1. Da biste promenili željeni jezik, izaberite **Jezik** iz padajuće liste.
+
+1. Da biste promenili željeno oblikovanje datuma, vremena i brojeva, koristite padajuću listu **Format zemlje/regiona**. Prikazaće se pregled oblikovanja. Sistem automatski predlaže selekciju kada odaberete novi jezik.
+
+1. Izaberite **Sačuvaj**.
+
+## <a name="view-system-status"></a>Prikaz statusa sistema
+
+Praćenje napretka zadataka, unošenja podataka, izvoza podataka i nekoliko drugih važnih procesa proizvoda. Pregledajte informacije da biste se uverili u dovršavanje aktivnih zadataka i procesa.
+
+1. Idite na **administratorski** > **sistem i** izaberite karticu **Status**.
+
+   Prikazane su informacije o statusu i obradi različitih procesa. Prikažite **ime** zadatka, **status njegovog** poslednjeg vođenja i kada je poslednji put **ažuriran**.
+
+1. Izaberite zadatak ili ime procesa da biste prikazali detalje poslednjih nekoliko runs.
+
+1. Izaberite status da biste videli detalje toka zadatka. Prikazaće **se okno** sa detaljima o toku.
 
    :::image type="content" source="media/system-progress-details.png" alt-text="Okno sa detaljima o toku sistema":::
+
+1. Izaberite ceo tok posla da biste prikazali detalje toka posla za **sve zadatke**.
 
 ### <a name="status-definitions"></a>Definicije statusa
 
@@ -51,19 +89,19 @@ Sistem koristi sledeće statuse za zadatke i procese:
 
 |Status  |Definicija  |
 |---------|---------|
-|Otkazana |Obradu je korisnik otkazao pre nego što je završena.   |
-|Neuspeh   |Unos podataka je naišao na greške.         |
-|Neuspešno  |Obrada nije uspela.  |
-|Nije započeto   |Izvor podataka još nema unetih podataka ili je još uvek u režimu radne verzije.         |
+|Otkazana |Korisnik je otkazao zadatak ili proces pre nego što je završen.   |
+|Neuspeh   |Zadatak ili proces naišli su na greške.         |
+|Neuspešno  |Zadatak ili proces nisu uspeli.  |
+|Nije započeto   |Izvor podataka nema unete podatke ili je zadatak još uvek u režimu radne verzije.         |
 |Obrađuje se  |Zadatak ili proces je u toku.  |
-|Osvežavanje    |Unos podataka je u toku. Ovu operaciju možete otkazati ako izaberete **Zaustavi osvežavanje** u koloni **Radnje**. Zaustavljanje osvežavanja izvora podataka vratiće ga u poslednje stanje osvežavanja.       |
+|Osvežavanje    |Zadatak ili proces je u toku. Da biste otkazali ovu operaciju, izaberite opciju **"Osvežavanje** " i **"Otkaži posao"**. Zaustavljanje osvežavanja zadatka ili procesa će ga vratiti u stanje poslednjeg osvežavanja.       |
 |Preskočena  |Zadatak ili proces su preskočeni. Jedan ili više procesa na nižem toku od kojih ovaj zadatak zavisi nisu uspeli ili su preskočeni.|
 |Uspešno  |Zadatak ili proces su uspešno dovršeni. Za izvore podataka ukazuje na to da su podaci uspešno uneti ako je vreme pomenuto u koloni "Osveženje **·**".|
 |Na čekanju | Obrada je stavljena u red i počeće kada se dovrše svi uzvodni zadaci i procesi. Više informacija potražite u članku Osvežavanje [procesa](#refresh-processes).|
 
 ### <a name="refresh-processes"></a>Osvežavanje procesa
 
-Osvežavanje zadataka i procesa se izvršava u skladu sa [konfigurisanim rasporedom](#schedule-tab). 
+Osvežavanje zadataka i procesa se izvršava u skladu sa [konfigurisanim rasporedom](schedule-refresh.md).
 
 |Proces  |Opis  |
 |---------|---------|
@@ -86,58 +124,6 @@ Osvežavanje zadataka i procesa se izvršava u skladu sa [konfigurisanim raspore
 |User  |Pokreće ručno (jednostruko osvežavanje). Zavisi od entiteta.  |
 
 Izaberite status procesa da biste videli detalje o toku celog posla u kojem se zatekao. Gorenavedeni procesi osvežavanja mogu pomoći da razumete šta možete da uradite da biste rešili preskočeni **ili** **poređani** zadatak ili proces.
-
-## <a name="schedule-tab"></a>Kartica Raspored
-
-Koristite karticu **Raspored** za zakazivanje automatskog osvežavanja svih [unetih izvora podataka](data-sources.md). Automatsko osvežavanje osigurava da se ispravke iz izvora podataka prikazuju na objedinjenim profilima korisnika.
-
-> [!NOTE]
-> Izvore podataka kojima upravljate osvežavate po sopstvenim rasporedima. Da biste isplanirali osvežavanje izvora podataka kojima upravljate, konfigurišite postavke osvežavanja na izvor podataka stranici **izvora podataka**.
-> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Postavke osvežavanja dataflow-a.":::
-
-1. Idite na **administratorski** > **sistem i** izaberite karticu **"Raspored** ".
-
-2. Podrazumevano stanje za planirano osvežavanje je **Isključeno**. Da biste omogućili planirana osvežavanja, promenite preklopnik na vrhu ekrana na **Uključeno**.
-
-3. Izaberite između **Nedeljnog** (podrazumevano) i **Svakodnevnog** osvežavanja. Ako nameravate da zakažete nedeljno osvežavanje, izaberite jedan ili više dana u kojima želite da pokrenete osvežavanje.
-
-4. Podesite **vremensku zonu**, a zatim pomoću padajućeg menija **Vreme** podesite vreme osvežavanja. Kada završite, izaberite **Podesi**. Ako želite da zakažete više osvežavanja u jednom danu, izaberite **Dodaj drugo vreme**.
-
-5. Izaberite **Sačuvaj** da primenite promene.
-
-## <a name="about-tab"></a>Kartica Osnovne informacije
-
-Kartica **Osnovni podaci** sadrži **Ime za prikaz** organizacije, aktivni **ID okruženja**, **Region** i **ID sesije**. Ako imate više od jednog radnog okruženja, treba svakom da date lako prepoznatljivo ime za prikaz.
-
-## <a name="general-tab"></a>Kartica Opšti podaci
-
-Jezik i format zemlje/regiona možete da promenite na kartici **Opšti podaci**.
-
-Uvidi klijenata [podržavaju mnoge jezike](/dynamics365/get-started/availability). Aplikacija koristi vaše jezičke preference za prikazivanje elemenata poput menija, teksta oznake na kontrolnoj tabli i sistemskih poruka na jeziku kome korisnik daje prednost.
-
-Uvezeni podaci i informacije koje ste ručno uneli se ne prevode.
-
-### <a name="update-the-settings"></a>Ažuriranje podešavanja
-
-Da biste promenili željeni jezik, izaberite **Jezik** iz padajuće liste.
-
-Da biste promenili željeno oblikovanje datuma, vremena i brojeva, koristite padajuću listu **Format zemlje/regiona**. Ispod ovog polja prikazuje se pregled oblikovanja. Sistem će automatski predložiti izbor kada odaberete novi jezik.
-
-Izaberite **Sačuvaj** da potvrdite izbore.
-
-## <a name="api-usage-tab"></a>Kartica za upotrebu API-ja
-
-Pronađite detalje o upotrebi API-ja u realnom vremenu i pogledajte koji su se događaji dogodili u datom vremenskom okviru. Birate vremenski okvir u padajućem meniju **Izaberite vremenski okvir**. 
-
-**Korišćenje API-ja** sadrži tri odeljka: 
-- **API pozivi** – grafikon koji prikazuje ukupni broj poziva API-ju u izabranom vremenskom okviru.
-
-- **Prenos podataka** – grafikon koji prikazuje količinu podataka koja je preneta preko API-ja u izabranom vremenskom okviru.
-
--  **Operacije** – tabela sa redovima za svaku dostupnu API operaciju i detalje o upotrebi operacija. Možete izabrati naziv operacije na koju želite da idete u [referenci za API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacije koje koriste [unošenje podataka u realnom vremenu](real-time-data-ingestion.md) sadrže dugme sa dvoglednim simbolom za prikaz upotrebe API-ja u realnom vremenu. Izaberite dugme da biste otvorili bočno okno koje sadrži detalje o upotrebi API-ja u trenutnom okruženju.   
-   Koristite okvir **Grupiši po** u oknu **Korišćenje API-ja u realnom vremenu** da biste izabrali kako najbolje da predstavite svoje interakcije u realnom vremenu. Možete grupisati podatke prema API metodi, nazivu kvalifikovanog entiteta (uneti entitet), vremenu kreiranja (izvor događaja), rezultatu (uspelo ili neuspelo) ili kodovima grešaka. Podaci su dostupni kao vremenski grafikon i tabela.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

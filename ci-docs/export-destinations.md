@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a70aadda4fc0eff3ddb4c89665506762613c291a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
-ms.translationtype: MT
+ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194985"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245344"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
@@ -79,7 +79,7 @@ Izaberite izvoz da biste prikazali dostupne radnje.
 
 ## <a name="schedule-and-run-exports"></a>Planiranje i pokretanje izvoza
 
-Svaki izvoz koji konfigurišete ima raspored osvežavanja. Tokom osvežavanja, sistem traži nove ili ažurirane podatke koje će uključiti u izvoz. Podrazumevano se izvozi kao deo svakog [zakazanog osvežavanja sistema](system.md#schedule-tab). Možete prilagoditi raspored osvežavanja ili ga isključiti za ručno pokretanje izvoza.
+Svaki izvoz koji konfigurišete ima raspored osvežavanja. Tokom osvežavanja, sistem traži nove ili ažurirane podatke koje će uključiti u izvoz. Podrazumevano se izvozi kao deo svakog [zakazanog osvežavanja sistema](schedule-refresh.md). Možete prilagoditi raspored osvežavanja ili ga isključiti za ručno pokretanje izvoza.
 
 Rasporedi izvoza zavise od statusa vašeg okruženja. Ako su u toku ažuriranja [zavisnih elemenata](system.md#refresh-processes) kada treba da započne planirani izvoz, sistem će prvo dovršiti ažuriranja, a zatim pokrenuti izvoz. Kolona **"Osveženje** " prikazuje kada je izvoz poslednji put osvežen.
 

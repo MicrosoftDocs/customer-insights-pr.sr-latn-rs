@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 81a1c1118736dbd73890e1773aee1f0020c036c3
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 717a0ed5bcc55a17aca81c1bd2a0a6f34bf75c55
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9199197"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245252"
 ---
-Čuvanje izvoza ne pokreće izvoz odmah. Izvoz se pokreće sa svakim [zakazanim osvežavanjem](../system.md#schedule-tab). Takođe možete da [izvezete podatke na zahtev](../export-destinations.md#run-exports-on-demand).
+Čuvanje izvoza ne pokreće izvoz odmah. Izvoz se pokreće sa svakim [zakazanim osvežavanjem](../schedule-refresh.md). Takođe možete da [izvezete podatke na zahtev](../export-destinations.md#run-exports-on-demand).

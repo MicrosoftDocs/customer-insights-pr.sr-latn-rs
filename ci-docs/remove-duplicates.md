@@ -2,7 +2,7 @@
 title: Uklanjanje duplikata pre ujedinjenja podataka
 description: Drugi korak u procesu ujedinjenja je izbor zapisa koji će se voditi prilikom traženja duplikata.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139446"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213644"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Uklanjanje duplikata pre ujedinjenja podataka
 
-Ovaj korak u ujedinjenju opcionalno vam omogućava da podesite pravila za rukovanje dupliranim zapisima unutar entiteta. *Deduplication* identifikuje duplirane zapise i objedinjuje ih u jedan zapis. Izvorni zapisi se povezuju sa objedinjenim zapisom sa alternativnim ID-ovima. Ako pravila nisu konfigurisana, primenjuju se pravila definisana sistemom.
+Ovaj opcionalni korak u ujedinjenju vam omogućava da podesite pravila za eliminisanje dupliranih zapisa **unutar** entiteta. Deduplication identifikuje više zapisa za kupca i bira najbolji zapis koji treba da vodi (na osnovu osnovnih željenih opcija objedinjavanja) ili objedinjuje zapise u jedan (na osnovu naprednih željenih opcija objedinjavanja). Izvorni zapisi se povezuju sa objedinjenim zapisom sa alternativnim ID-ovima. Ako pravila nisu konfigurisana, primenjuju se pravila definisana sistemom.
+
+## <a name="default-deduplication"></a>Podrazumevana deduplikacija
+
+Pravila definisana sistemom primenjuju se ako se ne dodaju pravila deduplikacije.
+
+- Primarni ključ je deduplicated.
+  Za sve zapise sa istim primarnim ključem **, najpuniji** zapis (onaj sa najmanjim vrednostima bez vrednosti) je pobednik.
+- Sva pravila podudaranja među entiteta primenjuju se na entitet.
+  Na primer: U koraku podudaranja, ako se entitet A podudara sa entitetom B *na FullName* i *DateofBirth*, entitet A je takođe deduplicated by *FullName* and *DateofBirth*. Pošto *su FullName* i *DateofBirth* važeći ključevi za identifikaciju klijenta u entitetu A, ovi ključevi su važeći i za identifikaciju dupliranih klijenata u entitetu A.
 
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pregled)
 

@@ -1,19 +1,19 @@
 ---
 title: Šta je novo u sistemu Dynamics 365 Customer Insights
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 06/30/2022
+ms.date: 08/03/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: f3ae0fe6631ee7c8d79664528be383ec53e93fe8
-ms.sourcegitcommit: 92e5a798ca75c7f10aa5025a9bbd2ffb4d4ae7d2
+ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/05/2022
-ms.locfileid: "9114263"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246028"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Šta je novo u sistemu Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="july-2022-updates"></a>Ispravke za jul 2022.
+
+Ispravke u julu 2022.
+
+### <a name="export-to-moengage"></a>Izvoz u MoEngage
+
+Izvezite segmente objedinjenih profila klijenata u MoEngage i koristite ih za marketing e-pošte u MoEngageu.
+
+Više informacija potražite u članku [Izvoz segmenata u MoEngage](export-moengage.md).
+
+### <a name="ssh-support-for-sftp-based-exports"></a>Podrška SSH izvozu sa sedištem u SFTP
+
+Odaberite da li želite da potvrdite verodostojnost putem SSH ili korisničkog imena/lozinke za veze sa SFTP izvoznim odredištima.
+
+Više informacija potražite u članku [Izvoz podataka u SFTP domaćine](export-sftp.md).
+
+### <a name="personalize-experiences-with-data-about-known-and-unknown-users"></a>Personalizovanje iskustava sa podacima o poznatim i nepoznatim korisnicima
+
+Upravljanje podacima o korisnicima nije novi izazov, ali postaje sve teži kako se korisnici kreću kroz različite digitalne kanale koje brendovi nude. Korisnik koji je poznat (potvrđena verodostojnost) u jednom kanalu postaje nepoznat (neautorizovan) u drugom ako nije prijavljen. Problem je često u tome što neautorizovani (nepoznati) korisnici nemaju uobičajeni ID. Može se koristiti za povezivanje smislenih atributa profila i generisanje objedinjenih profila klijenata. Uvidi klijenata pomažu u rešavanju ovog problema tako što unose podatke iz metoda praćenja na izvornim sistemima.
+
+Više informacija potražite u članku [Personalizovanje iskustava sa podacima o poznatim i nepoznatim korisnicima](unknown-to-known.md).
 
 ## <a name="june-2022-updates"></a>Ispravke za jun 2022. godine
 
@@ -44,13 +66,13 @@ Više informacija potražite u članku [Izvoz u InMobi (pregled)](export-inmobi.
 
 Customer Lockbox obezbeđuje interfejs za redigovanje i odobravanje (ili odbacivanje) zahteva za pristup podacima. Do ovih zahteva dolazi kada je potreban pristup podacima o podacima korisnika da bi se rešio predmet podrške.
 
-Više informacija potražite u članku [Bezbedan pristup podacima klijenata pomoću okvira za zaključavanje klijenta (Preview)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
+Više informacija potražite u članku [Bezbedan pristup podacima klijenata pomoću okvira za zaključavanje kupca (Pregled)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Povezivanje sa podacima pomoću Azure privatne veze
 
 Azure Privatna veza omogućava korisničkim uvidima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
 
-Više informacija potražite u članku Korišćenje [privatne veze u uvidima klijenata](security-overview.md#private-links-tab).
+Više informacija potražite u članku Korišćenje [privatne veze u uvidima klijenata](security-overview.md#set-up-an-azure-private-link).
 
 ## <a name="may-2022-updates"></a>Ispravke za maj 2022.
 

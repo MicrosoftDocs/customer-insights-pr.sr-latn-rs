@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139628"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245611"
 ---
 # <a name="update-the-unification-settings"></a>Ažuriranje postavki ujedinjenja
 
@@ -42,7 +42,7 @@ Izvršite sledeće korake da biste pregledali ili promenili postavke ujedinjenja
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Snimak ekrana stranice &quot;Ujedinjavanje podataka&quot; sa istaknutim opcijama &quot;Ujedini&quot;.":::
 
    - [Pokrenite uslove](#run-matching-conditions) podudaranja da biste brzo procenili kvalitet uslova podudaranja (pravila deduplikacije i podudaranja) bez ažuriranja objedinjenog profila. Opcija **"Pokreni uslove podudaranja** " nije prikazana samo za jedan entitet.
-   - [Ujedinite profile klijenata da](#run-updates-to-the-unified-customer-profile) biste pokrenuli uslove podudaranja i ažurirali objedinjeni entitet profila kupca bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](system.md#schedule-tab).
+   - [Ujedinite profile klijenata da](#run-updates-to-the-unified-customer-profile) biste pokrenuli uslove podudaranja i ažurirali objedinjeni entitet profila kupca bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](schedule-refresh.md).
    - [Ujedinite profile i zavisnosti klijenata da biste pokrenuli](#run-updates-to-the-unified-customer-profile) uslove podudaranja i ažurirali objedinjeni entitet profila kupca i sve zavisnosti (kao što su obogaćivanje, segmenti ili mere). Svi procesi se automatski ponovo ponište.
 
 ## <a name="edit-source-fields"></a>Uređivanje izvornih polja
@@ -154,7 +154,7 @@ Uslovi podudaranja pokreću deduplication i podudaraju se samo sa pravilima i *a
 
 1. Sa stranice **"** > **Ujedinjenje podataka** " izaberite:
 
-   - **Ujedinite profile klijenata**: Pokreće uslove podudaranja i ažurira objedinjeni entitet profila korisnika bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](system.md#schedule-tab).
+   - **Ujedinite profile klijenata**: Pokreće uslove podudaranja i ažurira objedinjeni entitet profila korisnika bez uticaja na zavisnosti (kao što su obogaćivanja, segmenti ili mere). Zavisni procesi se ne pokreću, ali će biti osveženi kao što je definisano [u rasporedu osvežavanja](schedule-refresh.md).
 
    - **Ujedinite profile i zavisnosti klijenata: pokreće** uslove podudaranja i ažurira objedinjeni profil i sve zavisnosti. Svi procesi se automatski ponovo ponište. Kada se svi nizvodni procesi završe, profil kupca odražava ažurirane podatke.
 

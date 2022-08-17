@@ -1,7 +1,7 @@
 ---
-title: Prijavljivanje pomoću Dynamics 365 Customer Insights Azure monitora (pregled)
+title: Izvoz dijagnostičkih evidencija (pregled)
 description: Saznajte kako da pošaljete evidencije na monitor Microsoft Azure.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052670"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245942"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Prijavljivanje pomoću Dynamics 365 Customer Insights Azure monitora (pregled)
+# <a name="export-diagnostic-logs-preview"></a>Izvoz dijagnostičkih evidencija (pregled)
 
-Dynamics 365 Customer Insights obezbeđuje direktnu integraciju sa Azure monitorom. Evidencije resursa Azure monitora vam omogućava da nadgledate i šaljete evidencije [u Azure skladište](https://azure.microsoft.com/services/storage/), [Azure analitiku evidencije](/azure/azure-monitor/logs/log-analytics-overview) ili da ih strimujete [u Azure čvorišta događaja](https://azure.microsoft.com/services/event-hubs/).
+Prosledite evidencije iz uvida klijenata pomoću Azure monitora. Evidencije resursa Azure monitora vam omogućava da nadgledate i šaljete evidencije [u Azure skladište](https://azure.microsoft.com/services/storage/), [Azure analitiku evidencije](/azure/azure-monitor/logs/log-analytics-overview) ili da ih strimujete [u Azure čvorišta događaja](https://azure.microsoft.com/services/event-hubs/).
 
 Uvidi kupaca šalju sledeće evidencije događaja:
 
 - **Događaji nadgledanja**
-  - **APIEvent** - omogućava praćenje promena urađeno putem UI Dynamics 365 Customer Insights.
+  - **APIEvent** - omogućava praćenje promena putem UI Dynamics 365 Customer Insights.
 - **Operativni događaji**
-  - **WorkflowEvent** - Tok posla vam omogućava da podesite izvore [podataka](data-sources.md), ujedinite, [obogatite](data-unification.md) i [konačno](enrichment-hub.md) izvezete [podatke](export-destinations.md) u druge sisteme. Svi ti koraci mogu da se urade pojedinačno (na primer, da se pokrene jedan izvoz). Takođe može da pokrene orkestrirano (na primer, osvežavanje podataka iz izvora podataka koji pokreće proces ujedinjenja, koji će povući obogaćenja i jednom uraditi izvoz podataka u drugi sistem). Više informacija potražite u šemi [WorkflowEvent](#workflow-event-schema).
-  - **APIEvent** - svi API pozivi klijentima instance da Dynamics 365 Customer Insights. Više informacija potražite u apievent [šemi](#api-event-schema).
+  - **WorkflowEvent** - omogućava vam da podesite izvore podataka [, ujedinite](data-sources.md), [obogatite](data-unification.md) i [izvezete](enrichment-hub.md)[podatke](export-destinations.md) u druge sisteme. Ovi koraci mogu da se urade pojedinačno (na primer, da se pokrene jedan izvoz). Oni takođe mogu da pokrenu orkestrirano (na primer, osvežavanje podataka iz izvora podataka koji pokreću proces ujedinjenja, koji će povući bogaćenja i izvesti podatke u drugi sistem). Više informacija potražite u šemi [WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** - šalje sve API pozive instance klijenata na Dynamics 365 Customer Insights. Više informacija potražite u apievent [šemi](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Podešavanje dijagnostičkih postavki
 
 ### <a name="prerequisites"></a>Preduslovi
 
-Da biste konfigurisali dijagnostiku u uvidima klijenata, moraju biti ispunjeni sledeći preduslovi:
-
-- Imate aktivnu [Azurnu pretplatu](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Imate administratorske [dozvole](permissions.md#admin) u fascikli "Uvidi klijenata".
-- Imate ulogu **administratora saradnik** korisničkog **pristupa na** odredišnom resursu na Azure. Resurs može biti nalog Azure Data Lake Storage, čvorište Azure događaja ili radni prostor Azure analitike evidencije. Više informacija potražite u članku [Dodavanje ili uklanjanje dodela Azure uloga pomoću portala Azure](/azure/role-based-access-control/role-assignments-portal). Ova dozvola je neophodna tokom konfigurisanja dijagnostičkih postavki u programu Customer Insights, može se promeniti nakon uspešnog podešavanja.
-- [Ispunjeni su](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) odredišni zahtevi za Azure skladište, Azure čvorište događaja ili Azure analitiku evidencije.
-- Imate bar ulogu čitalac **resursa** kojoj resurs pripada.
+- Aktivna [Azure pretplata](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [Administratorske](permissions.md#admin) dozvole u uvidima klijenata.
+- [saradnik administratora i administratora korisničkog pristupa](/azure/role-based-access-control/role-assignments-portal) na odredišnom resursu na Azure. Resurs može biti nalog Azure Data Lake Storage, čvorište Azure događaja ili radni prostor Azure analitike evidencije. Ova dozvola je neophodna tokom konfigurisanja dijagnostičkih postavki u programu Customer Insights, ali se može promeniti nakon uspešnog podešavanja.
+- [Ispunjeni su](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) odredišni zahtevi za Azure skladište, Azure čvorište događaja ili analitiku evidencije Azure.
+- Barem uloga **čitalac** resursa kojoj resurs pripada.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Podešavanje dijagnostike pomoću Azure monitora
 
-1. U članku Uvidi klijenata izaberite **sistemsku** > **dijagnostiku** da biste videli odredišta dijagnostike konfigurisana za ovu instancu.
+1. U fascikli "Uvidi kupaca" idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika**.
 
 1. Izaberite **stavku Dodaj odredište**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dijagnostička veza](media/diagnostics-pane.png "Dijagnostička veza")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Dijagnostička veza.":::
 
 1. Navedite ime u odredišnom **polju Ime za dijagnostiku**.
 
-1. Odaberite zakupca **Azure** pretplate sa odredišnim resursom i izaberite **prijavljivanje**.
+1. Izaberite tip **resursa** (Nalog skladišta, Čvorište događaja ili Analitika evidencije).
 
-1. Izaberite tip **resursa** (nalog skladišta, čvorište događaja ili analitika evidencije).
+1. Izaberite **pretplatu**, **grupu resursa** i resurs **za** odredišni resurs. Više informacija [o dozvoli i evidenciji potražite u članku](#configuration-on-the-destination-resource) Konfiguracija odredišnog resursa.
 
-1. Izaberite pretplatu **za** odredišni resurs.
-
-1. Izaberite grupu **Resurs** za odredišni resurs.
-
-1. Izaberite **resurs**.
-
-1. Potvrdite izjavu **o privatnosti i usaglašenosti sa podacima**.
+1. Pregledajte privatnost [i usaglašenost podataka i](connections.md#data-privacy-and-compliance) izaberite I **slažem se**.
 
 1. Izaberite opciju **Poveži se sa sistemom** da biste se povezali sa odredišnim resursom. Evidencije počinju da se pojavljuju na odredištu posle 15 minuta, ako je API u upotrebi i generiše događaje.
 
-### <a name="remove-a-destination"></a>Uklanjanje odredišta
+## <a name="configuration-on-the-destination-resource"></a>Konfiguracija odredišnog resursa
 
-1. Idite na **dijagnostiku** > **sistema**.
+Na osnovu vašeg izbora tipa resursa, automatski dolazi do sledećih promena:
+
+### <a name="storage-account"></a>Nalog skladišta
+
+Direktor usluge "Uvidi kupaca" dobija **dozvolu saradnik za** skladištenje na izabranom resursu i kreira dva kontejnera pod izabranim prostorom za ime:
+
+- `insight-logs-audit` koji sadrže događaje **nadgledanja**
+- `insight-logs-operational` koji sadrže operativne **događaje**
+
+### <a name="event-hub"></a>Čvorište događaja
+
+Direktor usluge "Uvid u korisnike **" dobija dozvolu čvorišta događaja Azure vlasnika** podataka za resurs i kreira dva čvorišta događaja pod izabranim prostorom za ime:
+
+- `insight-logs-audit` koji sadrže događaje **nadgledanja**
+- `insight-logs-operational` koji sadrže operativne **događaje**
+
+### <a name="log-analytics"></a>Evidentiraj analitiku
+
+Direktor usluge "Uvidi korisnika" dobija dozvolu **za saradnik evidencije** o resursu. Evidencije su dostupne u okviru evidencije **Tabela** > **za evidenciju** > **na** izabranom radnom prostoru analitike evidencije. Razvijte rešenje **za upravljanje evidencijom** i pronađite tabele `CIEventsAudit``CIEventsOperational` i tabele.
+
+- `CIEventsAudit` koji sadrže događaje **nadgledanja**
+- `CIEventsOperational` koji sadrže operativne **događaje**
+
+U prozoru **Upiti** proširite rešenje **nadzora** i pronađite primer upita navedenih pretraživanjem `CIEvents`.
+
+## <a name="remove-a-diagnostics-destination"></a>Uklanjanje odredišta dijagnostike
+
+1. Idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika**.
 
 1. Izaberite odredište dijagnostike sa liste.
 
+   > [!TIP]
+   > Uklanjanje odredišta zaustavlja prosleđivanje evidencije, ali ne briše resurs na Azure pretplati. Da biste izbrisali resurs u Azure, izaberite vezu u koloni **Radnje** da biste otvorili portal Azure za izabrani resurs i tamo ga izbrisali. Zatim izbrišite odredište dijagnostike.
+
 1. U koloni **Radnje** izaberite ikonu **"Izbriši** ".
 
-1. Potvrdite brisanje da biste zaustavili prosleđivanje evidencije. Resurs na Azure pretplati neće biti izbrisan. Možete izabrati vezu u koloni **"Radnje** " da biste otvorili portal Azure za izabrani resurs i tamo ga izbrisali.
+1. Potvrdite brisanje da biste uklonili odredište i zaustavili prosleđivanje evidencije.
 
 ## <a name="log-categories-and-event-schemas"></a>Evidentiraj kategorije i šeme događaja
 
@@ -89,36 +110,9 @@ Uvidi kupaca obezbeđuju dve kategorije:
 - **Događaji nadgledanja**: [API događaji](#api-event-schema) za praćenje promena konfiguracije na usluzi. `POST|PUT|DELETE|PATCH` operacije idu u ovu kategoriju.
 - **Operativni događaji**: [API događaji ili događaji](#api-event-schema) toka [posla](#workflow-event-schema) generisani tokom korišćenja usluge.  Na primer, zahtevi `GET` ili događaji izvršavanja toka posla.
 
-## <a name="configuration-on-the-destination-resource"></a>Konfiguracija odredišnog resursa
-
-Na osnovu vašeg izbora na tipu resursa automatski će se primeniti sledeći koraci:
-
-### <a name="storage-account"></a>Nalog skladišta
-
-Direktor usluge "Uvidi kupaca" dobija **dozvolu saradnik za** skladištenje na izabranom resursu i kreira dva kontejnera pod izabranim prostorom za ime:
-
-- `insight-logs-audit` koji sadrže događaje **nadgledanja**
-- `insight-logs-operational` koji sadrže operativne **događaje**
-
-### <a name="event-hub"></a>Čvorište događaja
-
-Direktor usluge "Customer Insights" **dobija dozvolu čvorišta događaja Azure vlasnika** podataka za resurs i kreiraće dva čvorišta događaja pod izabranim prostorom za ime:
-
-- `insight-logs-audit` koji sadrže događaje **nadgledanja**
-- `insight-logs-operational` koji sadrže operativne **događaje**
-
-### <a name="log-analytics"></a>Evidentiraj analitiku
-
-Direktor usluge "Uvidi korisnika" dobija dozvolu **za saradnik evidencije** o resursu. Evidencije će biti dostupne u okviru stavke **Upravljanje evidencijama** > **·** > **tabela na** izabranom radnom prostoru analitike evidencije. Razvijte rešenje **za upravljanje evidencijom** i pronađite tabele `CIEventsAudit``CIEventsOperational` i tabele.
-
-- `CIEventsAudit` koji sadrže događaje **nadgledanja**
-- `CIEventsOperational` koji sadrže operativne **događaje**
-
-U prozoru **Upiti** proširite rešenje **nadzora** i pronađite primer upita navedenih pretraživanjem `CIEvents`.
-
 ## <a name="event-schemas"></a>Šeme događaja
 
-API događaji i događaji toka posla imaju zajedničku strukturu i detalje u kojima se razlikuju, [pogledajte API šemu događaja ili](#api-event-schema) šemu [događaja toka posla](#workflow-event-schema).
+API događaji i događaji toka posla imaju zajedničku strukturu, ali uz nekoliko razlika. Više informacija potražite u apI [šemi događaja ili šemi](#api-event-schema) događaja [toka posla](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Šema API događaja
 
@@ -220,7 +214,6 @@ Tok posla sadrži više koraka. [Unesti izvori podataka, ujedinite](data-sources
 | `durationMs`    | Dugačak      | Opcionalno          | Trajanje operacije u milisekundama.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | String    | Opcionalno          | JSON objekat sa više svojstava prema određenoj kategoriji događaja.                                                                                        | Pogledajte podse odsek " [Svojstva toka posla"](#workflow-properties-schema)                                                                                                       |
 | `level`         | String    | Zahtevano          | Nivo ozbiljnosti događaja.                                                                                                                                  | `Informational`, `Warning` ili `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Šema svojstava toka posla
 
@@ -247,3 +240,5 @@ Događaji toka posla imaju sledeća svojstva.
 | `properties.additionalInfo.AffectedEntities` | No       | Da  | Opcionalno. Samo za OperationType `Export`. Sadrži listu konfigurisanih entiteta u izvozu.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Da  | Opcionalno. Samo za OperationType `Export`. Detaljna poruka za izvoz.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Da  | Opcionalno. Samo za OperationType `Segmentation`. Označava ukupan broj članova koje segment ima.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195675"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246125"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Unos podataka u realnom vremenu (pregled)
 
 Funkcionalnost koja je skoro sasvim u stvarnom vremenu omogućava vam da u roku od nekoliko sekundi vidite najnovije interakcije koje su izvršili vaši klijenti sa vašim proizvodima ili uslugama.
 
-[Zakazana osvežavanja](system.md#schedule-tab) uključuju veliki broj zapisa i nekoliko složenih operacija. Prvo se podaci uzimaju iz izvora podataka. Zatim se podaci objedinjuju, a zatim obogaćuju dodatnim informacijama. Svako pokretanje ovog postupka može trajati od nekoliko minuta do nekoliko sati.
+[Zakazana osvežavanja](schedule-refresh.md) uključuju veliki broj zapisa i nekoliko složenih operacija. Prvo se podaci uzimaju iz izvora podataka. Zatim se podaci objedinjuju, a zatim obogaćuju dodatnim informacijama. Svako pokretanje ovog postupka može trajati od nekoliko minuta do nekoliko sati.
 
 Funkcionalnost u realnom vremenu pruža podatke koji se odmah mogu koristiti, sve dok naknadno planirano osvežavanje ne povuče ove podatke iz izvora podataka.
 
@@ -85,7 +85,7 @@ Detalji ovog API-ja, uključujući parametre i odgovore, mogu se naći u odeljku
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Objašnjenje upotrebe u realnom vremenu pomoću telemetrije
 
-Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete [pristupati telemetriji u realnom vremenu](system.md#api-usage-tab). 
+Dobijte pregled obima zahteva za API u realnom vremenu i informacije o problemima sa kojima se sistem može susresti. Možete [pristupati telemetriji u realnom vremenu](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 54247fbcdc27f6ed8314e0755164083eb461aa64
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206924"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259815"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Povezivanje izvor podataka Azure Synapse Analytics (pregled)
 
@@ -24,26 +24,30 @@ Više informacija potražite u članku [Azure Synapse Pregled](/azure/synapse-an
 
 ## <a name="prerequisites"></a>Preduslovi
 
+> [!NOTE]
+> Sinapsa radnih prostora kojima [je omogućen zaštitni](/azure/synapse-analytics/security/synapse-workspace-ip-firewall) zid trenutno nije podržana.
 > [!IMPORTANT]
 > Obavezno podesite sve **dodele uloga** kao što je opisano.  
 
 **U uvidima kupaca**:
 
-* Imate ulogu administratora **u** "Uvidima klijenata". Saznajte više o korisničkim [dozvolama u fascikli "Uvidi klijenata"](permissions.md#assign-roles-and-permissions).
+* Imate ulogu administratora **u** "Uvidima klijenata". Saznajte više o korisničkim [dozvolama u fascikli "Uvidi klijenata"](permissions.md#add-users).
 
 **U Azure:**
 
 - Aktivna pretplata na uslugu Azure.
 
-- Ako koristite novi Azure Data Lake Storage Gen2 nalog, glavnoj usluzi *za uvide klijenata* potrebni **su podaci o skladištenju saradnik** dozvole. Saznajte više o [povezivanju sa glavnim Azure Data Lake Storage servisom za uvide klijenata](connect-service-principal.md). Data Lake Storage Gen2 **mora da ima** omogućen [hijerarhijski prostor imena](/azure/storage/blobs/data-lake-storage-namespace).
+- Ako koristite novi Azure Data Lake Storage Gen2 nalog, *glavnicu usluge za uvide klijenata* koja je "Dynamics 365 AI za uvide klijenata" **potrebne su dozvole za skladištenje blob saradnik** podataka. Saznajte više o [povezivanju sa glavnim Azure Data Lake Storage servisom za uvide klijenata](connect-service-principal.md). Data Lake Storage Gen2 **mora da ima** omogućen [hijerarhijski prostor imena](/azure/storage/blobs/data-lake-storage-namespace).
 
-- U grupi resursa radni Azure Synapse prostor se nalazi, *direktoru usluge* *i korisniku za uvide klijenata* potrebno je dodeliti **najmanje čitalac** dozvole. Za više informacija, pogledajte [Dodeljivanje Azure uloga pomoću Azure portala](/azure/role-based-access-control/role-assignments-portal).
+- U grupi resursa radni Azure Synapse prostor se nalazi, *glavnicu usluge* koja je "Dynamics 365 AI za uvide klijenata" *i korisniku za uvide klijenata* potrebno je dodeliti **najmanje čitalac** dozvole. Za više informacija, pogledajte [Dodeljivanje Azure uloga pomoću Azure portala](/azure/role-based-access-control/role-assignments-portal).
 
 - *Korisniku* su potrebne dozvole **saradnika za podatke skladišta blob objekta** na Azure Data Lake Storage Gen2 nalogu na kojem se podaci nalaze i povezani su sa Azure Synapse radnim prostorom. Saznajte više o [korišćenju Azure portala za dodeljivanje Azure uloge za pristup blob objektu i podacima u redu](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama saradnika za podatke skladišta blob objekta](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - *[Upravljanom identitetu Azure Synapse radnog prostora](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* su potrebne dozvole **saradnika za podatke skladišta blob objekta** na Azure Data Lake Storage Gen2 nalogu na kojem se podaci nalaze i povezani su sa Azure Synapse radnim prostorom. Saznajte više o [korišćenju Azure portala za dodeljivanje Azure uloge za pristup blob objektu i podacima u redu](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama saradnika za podatke skladišta blob objekta](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Na radnom Azure Synapse prostoru, direktoru *usluge za uvide klijenata* potrebna **je dodeljena uloga administratora** sinapse. Za više informacija, pogledajte [Kako se postavlja kontrola pristupa za vaš Synapse radni prostor](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Na radnom Azure Synapse prostoru, direktoru *usluge za uvide klijenata* koji je "Dynamics 365 AI za uvide klijenata" **potrebna je uloga administratora** sinapse. Za više informacija, pogledajte [Kako se postavlja kontrola pristupa za vaš Synapse radni prostor](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Ako vaše okruženje "Uvid u kupce" skladišti [podatke u sopstvenom Azure Data Lake Storage](own-data-lake-storage.md), korisniku koji podešavanje Azure Synapse Analytics veze treba barem ugrađenu **čitalac ulogu** na Data Lake Storage nalogu. Za više informacija, pogledajte [Dodeljivanje Azure uloga pomoću Azure portala](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="connect-to-the-data-lake-database-in-azure-synapse-analytics"></a>Poveži se sa bazom podataka jezera u Azure Synapse Analytics
 
@@ -57,7 +61,7 @@ Više informacija potražite u članku [Azure Synapse Pregled](/azure/synapse-an
   
 1. Unesite **ime** za izvor podataka i opcionalni **opis**.
 
-1. Odaberite [dostupnu vezu](connections.md) sa Azure Synapse Analytics ili kreirajte novu.
+1. Odaberite [dostupnu vezu](connections.md) sa Azure Synapse Analytics ili [kreirajte novu](export-azure-synapse-analytics.md#set-up-connection-to-azure-synapse).
 
 1. Odaberite bazu **podataka** sa radnog prostora povezanog u izabranoj vezi i Azure Synapse Analytics kliknite na dugme " **Dalje"**. Trenutno podržavamo samo bazu podataka tipa Lake *baza podataka*.
 

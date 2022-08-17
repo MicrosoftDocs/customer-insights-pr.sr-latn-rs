@@ -1,19 +1,19 @@
 ---
 title: Obogatite profile klijenata podaci o lokaciji Azure mape (pregled)
 description: Opšte informacije o Azure Maps direktnom obogaćivanju.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052624"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238059"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Obogatite profile klijenata podaci o lokaciji Azure mape (pregled)
 
@@ -35,14 +35,9 @@ Morate biti administrator u " [Uvidima](permissions.md#admin) klijenata" i imati
 
 1. Unesite ime za vezu i važeći API ključ Azure mape.
 
-1. Pregledajte i dajte saglasnost za [Privatnost podataka i usklađenost](#data-privacy-and-compliance) izborom opcije **Slažem se**.
+1. Pregledajte privatnost [i usaglašenost podataka i](connections.md#data-privacy-and-compliance) izaberite I **slažem se**.
 
 1. Izaberite **opciju** Proveri da biste proverili valjanost konfiguracije, a zatim kliknite na dugme **Sačuvaj**.
-
-### <a name="data-privacy-and-compliance"></a>Privatnost podataka i usaglašenost
-
-Kada omogućite Dynamics 365 Customer Insights za prenos podataka u Azure Maps, dozvoljavate prenos podataka izvan granice usklađenosti za Dynamics 365 Customer Insights, uključujući potencijalno osetljive podatke kao što su lični podaci. Microsoft će preneti takve podatke na vaše uputstvo, ali vi ste odgovorni za to da obezbedite da Azure mape ispunjavaju sve obaveze privatnosti ili bezbednosti koje možda imate. Za još informacija posetite članak [Microsoft izjava o privatnosti](https://go.microsoft.com/fwlink/?linkid=396732).
-Dynamics 365 Customer Insights administrator može u svakom trenutku da ukloni ovo obogaćivanje kako biste prestali sa korišćenjem ove funkcionalnosti.
 
 ## <a name="configure-the-enrichment"></a>Konfigurisanje obogaćivanja
 

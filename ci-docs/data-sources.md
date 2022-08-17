@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207108"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245666"
 ---
 # <a name="data-sources-overview"></a>Pregled izvora podataka
 
@@ -67,7 +67,7 @@ Izaberite datoteku izvor podataka biste prikazali dostupne radnje.
 
 Izvori podataka mogu se osvežavati po automatskom rasporedu ili ručno na zahtev. [Sopstveni izvori podataka osvežavaju](connect-power-query.md#add-data-from-on-premises-data-sources) po sopstvenim rasporedima koji su podešeni tokom unošenja podataka. Za priložene izvore podataka, unos podataka troši najnovije dostupne podatke iz tog izvor podataka.
 
-Idite na **administrativni** > **·** > [**plan sistema**](system.md#schedule-tab) da biste konfigurisali sistemski planirano osvežavanje nanetih izvora podataka.
+Idite na **administrativni** > **·** > [**plan sistema**](schedule-refresh.md) da biste konfigurisali sistemski planirano osvežavanje nanetih izvora podataka.
 
 Da biste osvežili izvor podataka na zahtev:
 

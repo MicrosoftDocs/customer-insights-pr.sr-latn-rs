@@ -1,68 +1,39 @@
 ---
-title: Bezbednosne postavke u uvidima klijenata
+title: Konfigurisanje bezbednosnih postavki
 description: Saznajte više o bezbednosnim postavkama u Dynamics 365 Customer Insights.
-ms.date: 06/08/2022
+ms.date: 08/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 163deb9bed4f82d742c46cace27dd128f0aca18b
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: ea21163d7dd05370de28ca8340ae9583846adb26
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947432"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246079"
 ---
-# <a name="security-settings-in-customer-insights"></a>Bezbednosne postavke u uvidima klijenata
+# <a name="configure-security-settings"></a>Konfigurisanje bezbednosnih postavki
 
-Bezbednosna **stranica** navodi opcije za konfigurisanje korisničkih dozvola i funkcija koje pomažu da se učini Dynamics 365 Customer Insights bezbednijim. Samo administratori mogu da pristupe ovoj stranici.
+Upravljajte API ključevima, pristupite podacima klijenata i podesite Azure privatnu vezu.
 
-Idite na administrator **bezbednost** > **da biste** konfigurisali postavke.
+## <a name="manage-api-keys"></a>Upravljanje API ključevima
 
-Stranica **"** Bezbednost" sadrži sledeće kartice:
+Prikažite ključeve i upravljajte njima da biste koristili [API-je korisničkih uvida](apis.md) sa podacima u vašem okruženju.
 
-- [Korisnici](#users-tab)
-- [API-ji](#apis-tab)
-- [Privatne veze](#private-links-tab)
-- [Key Vault](#key-vault-tab)
-- [Bezbedan pristup podacima klijenata pomoću okvira za zaključavanje klijenta (pregled)](#securely-access-customer-data-with-customer-lockbox-preview)
+1. Idite na **opciju** > **"Bezbednost** sistema" i izaberite **karticu "API-je**".
 
-## <a name="users-tab"></a>Kartica "Korisnici"
+1. Ako API pristup okruženju nije podešen, izaberite opciju **Omogući**. Ili, da biste blokirali API pristup okruženju, izaberite Onemogući **i** potvrdi.
 
-Pristup uvidima klijenata ograničen je na korisnike u vašoj organizaciji koje je administrator dodao aplikaciji. Kartica **"Korisnici** " vam omogućava da upravljate korisničkim pristupom i njihovim dozvolama. Više informacija potražite u članku [Korisničke dozvole](permissions.md).
+1. Upravljajte primarnim i sekundarnim API ključevima:
 
-## <a name="apis-tab"></a>Kartica "APIS"
+   1. Izaberite simbol "Prikaži" da biste prikaželi primarni ili sekundarni **API** ključ.
 
-Prikažite ključeve i upravljajte njima da biste koristili [API-je korisničkih uvida](apis.md) sa podacima vašeg okruženja.
+   1. Izaberite simbol Kopiraj da biste kopirali primarni ili sekundarni **API** ključ.
 
-Nove primarne i sekundarne ključeve možete kreirati tako što ćete izabrati **stavku Regeneriši primarnu** ili **regeneriši sekundarnu**. 
-
-Da biste blokirali API pristup okruženju, izaberite **Onemogući**. Ako su API-je onemogućeni, možete izabrati opciju Omogući **da** ponovo odobri pristup.
-
-## <a name="private-links-tab"></a>Kartica "Privatne veze"
-
-[Azure privatna veza omogućava](/azure/private-link/private-link-overview) korisnicima da se povežu sa vašim nalogom Azure Data Lake Storage preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
-
-> [!IMPORTANT]
-> Minimalni zahtev za uloga za podešavanje veze privatne veze:
->
-> - Uvidi klijenata: administrator
-> - Ugrađena uloga Azure: Nalog [za skladištenje saradnik](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
-> - Dozvole za prilagođenu Azure ulogu: [Microsoft.Storage/storageAccounts/read and Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
->
-
-Podešavanje privatne veze u uvidima klijenata je proces u dva koraka. Prvo započinjete kreiranje privatne veze iz administratorskog obezbeđenja **Privatne** > **veze** > **u uvidima** klijenata. Okno **"Dodavanje privatne** veze" navodi naloge za skladištenje od stanara koje imate dozvole da vidite. Izaberite nalog za skladištenje i obezbedite saglasnost za kreiranje privatne veze.
-
-Zatim je potrebno da odobrite privatnu vezu na strani naloga za skladištenje podataka Lejk. Otvorite vezu predstavljenu na ekranu da biste odobrili novu privatnu vezu.
-
-## <a name="key-vault-tab"></a>Kartica "Trezor ključa"
-
-Kartica **"Ključni trezor** " vam omogućava da povežete sopstveni [Azure ključni trezor sa](/azure/key-vault/general/basic-concepts) okolinom i upravljate njima.
-Namensko bezbednosno skladište može da se koristi za postavljanje i korišćenje tajni u granicama usklađenosti organizacije. Uvidi klijenata mogu da koriste tajne u Azure ključ trezoru za [podešavanje veza sa sistemima](connections.md) nezavisnih proizvođača.
-
-Za više informacija pogledajte članak [Dovedite sopstveni Azure Key Vault](use-azure-key-vault.md).
+   1. Da biste kreirali nove primarne ili sekundarne API ključeve, izaberite **opciju Ponovo generiši** primarni **ili ponovo generiši sekundarne**.
 
 ## <a name="securely-access-customer-data-with-customer-lockbox-preview"></a>Bezbedan pristup podacima klijenata pomoću okvira za zaključavanje klijenta (pregled)
 
@@ -72,5 +43,33 @@ Više informacija o okviru za zaključavanje kupca potražite u rezimeu [okvira]
 
 > [!IMPORTANT]
 > Globalni administratori za ili Power Platform administratori Power Platform mogu da odobre zahteve za zaključavanje klijenta izdate za uvid u kupce.
+
+## <a name="set-up-an-azure-private-link"></a>Podešavanje Azure privatne veze
+
+[Azure privatna veza omogućava](/azure/private-link/private-link-overview) korisnicima da se povežu sa vašim nalogom Azure Data Lake Storage preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
+
+> [!IMPORTANT]
+> Minimalni zahtev za uloga za podešavanje veze privatne veze:
+>
+> - Uvidi klijenata: administrator
+> - Ugrađena uloga Azure: Nalog [za skladištenje saradnik](/azure/role-based-access-control/built-in-roles#storage-account-contributor)
+> - Dozvole za prilagođenu Azure ulogu: [Microsoft.Storage/storageAccounts/read and Microsoft.Storage/storageAccounts/PrivateEndpointConnectionsApproval/action](/azure/role-based-access-control/resource-provider-operations#microsoftstorage)
+
+1. U fascikli "Uvidi klijenata" idite na opciju **"Administrator bezbednosti** > **·**" i izaberite karticu **"Privatne veze**".
+
+1. Izaberite **dodaj privatnu vezu**.
+
+   Okno **"Dodavanje privatne** veze" navodi naloge za skladištenje od stanara koje imate dozvole da vidite.
+
+1. Izaberite nalog pretplate, grupe resursa i skladišta.
+
+1. Pregledajte privatnost [i usaglašenost podataka i](connections.md#data-privacy-and-compliance) izaberite I **slažem se**.
+
+1. Izaberite **Sačuvaj**.
+
+1. Idite na svoj Data Lake Storage nalog i otvorite vezu predstavljenu na ekranu.
+
+1. Odobrite privatnu vezu.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

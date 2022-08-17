@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173824"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224312"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalizovanje iskustava sa podacima o poznatim i nepoznatim korisnicima
 
-Upravljanje podacima o korisnicima nije novi izazov, ali postaje sve teži kako se korisnici kreću kroz različite digitalne kanale koje brendovi nude. Korisnik koji je poznat (potvrđena verodostojnost) u jednom kanalu postaje nepoznat (neautorizovan) u drugom ako nije prijavljen. Problem je često u tome što neautorizovani (nepoznati) korisnici nemaju uobičajeni ID. Može se koristiti za povezivanje smislenih atributa profila i generisanje objedinjenih profila klijenata. Uvidi klijenata pomažu u rešavanju ovog problema tako što unose podatke iz metoda praćenja na izvornim sistemima. Konsolidovani nepoznati i poznati profili obezbeđuju organizacijama kompletan prikaz akušerskih profila i njihovih istorijskih transakcija, ponašanja i demografije. Ona čak ide i korak dalje obezbeđivanjem rešenja identiteta koje vam omogućava da ujedinite aktivnost klijenata preko više kanala, uključujući Veb lokaciju, kupovinu u prodavnici, programe lojalnosti itd.
+Upravljanje podacima o korisnicima nije novi izazov, ali postaje sve teži kako se korisnici kreću kroz različite digitalne kanale koje brendovi nude. Korisnik koji je poznat (potvrđena verodostojnost) u jednom kanalu postaje nepoznat (neautorizovan) u drugom ako nije prijavljen. Problem je često u tome što neautorizovani (nepoznati) korisnici nemaju uobičajeni ID. Može se koristiti za povezivanje smislenih atributa profila i generisanje objedinjenih profila klijenata. Uvidi klijenata pomažu u rešavanju ovog problema tako što unose podatke iz metoda praćenja na izvornim sistemima. Konsolidovanje nepoznatih i poznatih profila obezbeđuje organizacijama kompletan prikaz akušerskih profila i njihovih istorijskih transakcija, ponašanja i demografije. Ona čak ide i korak dalje obezbeđivanjem rešenja identiteta koje vam omogućava da ujedinite aktivnost klijenata preko više kanala, uključujući Veb lokaciju, kupovinu u prodavnici, programe lojalnosti itd.
 
 ## <a name="sample-scenario"></a>Primer scenarija
 

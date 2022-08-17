@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
-ms.translationtype: MT
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011950"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246218"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Korišćenje sopstvenog Azure Data Lake Storage Gen2 naloga
 
@@ -37,7 +37,7 @@ Kada kreirate novo okruženje, uverite se da nalog skladišta u jezeru podataka 
 1. Odaberite način povezivanja **skladišta**. Možete da birate između opcije zasnovane na resursima i opcije zasnovane na pretplati za potvrdu identiteta. Više informacija potražite u članku [Povezivanje sa Azure Data Lake Storage nalogom pomoću direktora Azure usluge](connect-service-principal.md).
    - Za **Azure pretplatu** odaberite nalog **pretplate**, **grupe** resursa i **skladišta** koji sadrži `customerinsights` kontejner.
    - Za **ključ naloga** navedite ime **naloga** i ključ **naloga za** nalog skladišta u jezeru podataka. Korišćenje ovog metoda potvrde identiteta podrazumeva da budete informisani ako vaša organizacija rotira ključeve. Morate ažurirati [konfiguraciju okruženja](manage-environments.md#edit-an-existing-environment) novim ključem kada se rotira.
-1. Odaberite da li želite da koristite Azure privatnu vezu da biste se povezali sa nalogom za skladištenje [i kreirali vezu sa privatnom](security-overview.md#private-links-tab) vezom sa procesom u dva koraka.
+1. Odaberite da li želite da koristite Azure privatnu vezu da biste se povezali sa nalogom za skladištenje [i kreirali vezu sa privatnom](security-overview.md#set-up-an-azure-private-link) vezom sa procesom u dva koraka.
 
 Kada se sistemski procesi kao što je unos podataka dovrše, sistem kreira odgovarajuće fascikle u nalogu za skladištenje. Datoteke sa podacima i *model.json* datoteke se kreiraju i dodaju u fascikle na osnovu naziva procesa.
 

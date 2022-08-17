@@ -14,12 +14,12 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170865"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245390"
 ---
 # <a name="measures-overview"></a>Pregled mera
 
@@ -53,7 +53,7 @@ Izaberite pored mere da biste prikazali dostupne radnje. Izaberite ime mere da b
 - **Uredite** meru da biste promenili njena svojstva.
 - **Osvežite** meru da biste uključili najnovije podatke.
 - **Preimenujte** meru.
-- **Aktivirajte** **ili deaktivirajte** meru. Neaktivne mere se neće osvežiti tokom planiranog [osvežavanja i](system.md#schedule-tab)**status će** **biti naveden kao "Preskočen**", što ukazuje na to da osveženje nije ni pokušano.
+- **Aktivirajte** **ili deaktivirajte** meru. Neaktivne mere se neće osvežiti tokom planiranog [osvežavanja i](schedule-refresh.md)**status će** **biti naveden kao "Preskočen**", što ukazuje na to da osveženje nije ni pokušano.
 - **Oznaka** za [upravljanje oznakama](work-with-tags-columns.md#manage-tags) za ovu meru.
 - **Izbrišite** meru.
 - **Kolone** za [prilagođavanje kolona](work-with-tags-columns.md#customize-columns) koje se prikazuju.
@@ -62,7 +62,7 @@ Izaberite pored mere da biste prikazali dostupne radnje. Izaberite ime mere da b
 
 ## <a name="refresh-measures"></a>Mere osvežavanja
 
-Mere se mogu osvežiti automatskim rasporedom ili osvežiti ručno na zahtev. Da biste ručno osvežili jednu ili više mera, izaberite ih i odaberite stavku **Osveži**. Da biste [zakazali automatsko osvežavanje](system.md#schedule-tab), idite **na administrativni** > **plan** > **sistema**.
+Mere se mogu osvežiti automatskim rasporedom ili osvežiti ručno na zahtev. Da biste ručno osvežili jednu ili više mera, izaberite ih i odaberite stavku **Osveži**. Da biste [zakazali automatsko osvežavanje](schedule-refresh.md), idite **na administrativni** > **plan** > **sistema**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
