@@ -1,7 +1,7 @@
 ---
-title: 'Kako da: Kreiranje nove sredine'
+title: Kreirajte novo okruženje
 description: Koraci za kreiranje okruženja u Dynamics 365 Customer Insights.
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,25 +12,25 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 875cbbd095dfd239ab83c1c80db28ea7c0a04ed0
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: 0a45e2fd2bdb7b85883a536f8b42ee650e54db7e
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245574"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304261"
 ---
-# <a name="how-to-create-a-new-environment"></a>Kako da: Kreiranje nove sredine
+# <a name="create-a-new-environment"></a>Kreirajte novo okruženje
 
-Nakon [kupovine licence za pretplatu Dynamics 365 Customer Insights](paid-license.md), globalni administrator zakupca Microsoft 365 dobija e-poruku koja ih poziva da kreiraju okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) da biste započeli. U ovom scenariju, možete da idete direktno na [Korak 1: Obezbedite osnovne informacije](#step-1-provide-basic-information).
+Nakon [kupovine licence za pretplatu Dynamics 365 Customer Insights](paid-license.md), globalni administrator zakupca Microsoft 365 dobija e-poruku koja ih poziva da kreiraju okruženje. Idite na [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) da biste započeli. U ovom scenariju, počnite sa [Korakom 1: Obezbedite osnovne informacije](#step-1-provide-basic-information).
 
-Nakon kreiranja prvog okruženja, globalni administrator zakupca može da doda Microsoft 365 korisnicima [da formiraju svoju organizaciju kao administratori](permissions.md). Ako se krećete napred, ovi administratori mogu da upravljaju korisnicima i okruženjima. Ukoliko vaša organizacija kupi više licenci za korisničke uvide, obratite [se našem timu za](https://go.microsoft.com/fwlink/?linkid=2079641) podršku da biste povećali broj raspoloživih okruženja. Za više informacija o kapacitetu i kapacitetu dodatka pregledajte Dynamics [365 vodič za licenciranje](https://go.microsoft.com/fwlink/?LinkId=866544).
+Nakon kreiranja prvog okruženja, globalni administrator zakupca može Microsoft 365 da doda [korisnike iz svoje organizacije kao administratore](permissions.md). Ovi administratori zatim mogu da upravljaju korisnicima i okruženjima. Ukoliko vaša organizacija kupi više licenci za korisničke uvide, obratite [se našem timu za](https://go.microsoft.com/fwlink/?linkid=2079641) podršku da biste povećali broj raspoloživih okruženja. Za više informacija o kapacitetu i kapacitetu dodatka pregledajte Dynamics [365 vodič za licenciranje](https://go.microsoft.com/fwlink/?LinkId=866544). Kada budete imali mogućnost da kreirate dodatna okruženja, idite na početni [proces kreiranja okruženja](#start-the-environment-creation-process).
 
 > [!TIP]
 > Ako želite da isprobate uslugu, pogledajte [Konfigurisanje probnog okruženja](trial-signup.md).
 
 ## <a name="prerequisites"></a>Preduslovi
 
-Potrebne su vam [administratorske dozvole u](permissions.md) fascikli "Uvidi klijenata" da biste kreirali ili upravljali okruženjima.
+[Administratorske dozvole u](permissions.md) uvidima klijenata
 
 ## <a name="start-the-environment-creation-process"></a>Započnite proces kreiranja okruženja
 
@@ -38,47 +38,49 @@ Potrebne su vam [administratorske dozvole u](permissions.md) fascikli "Uvidi kli
   
    :::image type="content" source="media/environment-picker.png" alt-text="Izaberite birač okruženja.":::
 
-1. Pratite vođeno iskustvo navedeno u sledećim odeljcima da biste obezbedili sve potrebne informacije za novo okruženje. Ako ste ranije konfigurisali okruženje, možete i da kopirate [konfiguraciju](#copy-the-environment-configuration).
+1. Pratite vođeno iskustvo navedeno u sledećim odeljcima da biste obezbedili sve potrebne informacije za novo okruženje.
 
 ## <a name="step-1-provide-basic-information"></a>1. korak: Pružanje osnovnih informacija
 
-U koraku **Osnovne informacije**, odaberite da li želite da kreirate okruženje od nule ili da [kopirate podatke iz drugog okruženja](#copy-the-environment-configuration).
+1. Odaberite da li želite da kreirate okruženje od početka ili da kopirate podatke iz drugog okruženja. [Kopiranje podataka iz drugog okruženja zahteva](#copy-the-environment-configuration) dodatne korake.
 
    :::image type="content" source="media/environment-settings-dialog.png" alt-text="Dijalog za kreiranje novog Customer Insights okruženja.":::
 
-Navedite sledeće detalje:
+1. Navedite sledeće detalje:
 
-- **Naziv**: Unesite naziv ovog okruženja. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti. Ako imate više radnih okruženja, dajte svakome ime koje se lako može identifikovati.
-- **Odaberite svoje poslovanje**: Odaberite primarnu ciljnu grupu za novo okruženje. Možete da radite sa pojedinačnim potrošačima (B-to-C) ili [poslovnim kontaktima](work-with-business-accounts.md) (B-to-B). Ako vaša organizacija uglavnom posluje sa pojedincima, kao što su prodavac ili kafić, odaberite pojedinačne potrošače. U slučaju da su korisnici kompanije, kao što su proizvođač automobila ili preduzeće za papir, odaberite poslovne naloge.
-- **Tip**: izaberite da li želite da kreirate proizvodno ili Sandbox okruženje. Sandbox okruženja ne dozvoljavaju zakazano osvežavanje podataka i namenjena su za predimplementaciju i testiranje. Sandbox okruženja koriste istu primarnu ciljnu grupu kao i trenutno izabrano proizvodno okruženje.
-- **Region**: Region u kojem je usluga primenjena i hostovana. Da [biste koristili sopstveni Azure Data Lake Storage nalog](own-data-lake-storage.md) ili se [povezali sa postojećom Microsoft Dataverse organizacijom](customer-insights-dataverse.md), okruženje "Uvidi kupaca" mora biti u istom regionu.
+   - **Naziv**: Ime za ovo okruženje. Ovo polje je već popunjeno ako ste kopirali postojeće okruženje, ali možete ga promeniti.
+   - **Odaberite svoje poslovanje**: primarni korisnici za novu sredinu: pojedinačni potrošači (B-na-C) ili poslovni [nalozi](work-with-business-accounts.md) (od B do B). Ako vaša organizacija uglavnom posluje sa pojedincima, kao što su prodavac ili kafić, odaberite pojedinačne potrošače. Ako su korisnici preduzeća, kao što su proizvođač automobila ili preduzeće za papir, odaberite poslovne naloge.
+   - **Tip**: Vrsta okruženja: proizvodnja ili peščana kutija. Sandbox okruženja ne dozvoljavaju zakazano osvežavanje podataka i namenjena su za predimplementaciju i testiranje. Sandbox okruženja koriste istu primarnu ciljnu grupu kao i trenutno izabrano proizvodno okruženje.
+   - **Region**: Region u koji je usluga raspoređena i hostovana. Da [biste koristili sopstveni Azure Data Lake Storage nalog](own-data-lake-storage.md) ili se [povezali sa postojećom Microsoft Dataverse organizacijom](customer-insights-dataverse.md), okruženje "Uvidi kupaca" mora biti u istom regionu.
+
+1. Izaberite **Sledeće**.
 
 ## <a name="step-2-configure-data-storage"></a>2. korak: Konfigurišite skladište podataka
 
-U koraku **skladištenja podataka** odaberite gde želite da uskladištite podatke "Uvidi kupaca".
+1. Odaberite gde želite da uskladištite podatke o uvidima kupaca:
 
-Postoje dve opcije koje možete odabrati:
+   - **Skladište uvida klijenata**: automatski se upravlja skladištem podataka. To je podrazumevana opcija i ukoliko ne postoje određeni zahtevi za skladištenje podataka u sopstvenom nalogu za skladištenje, preporučujemo da koristite ovu opciju.
+   - **Azure Data Lake Storage**: Sopstveni nalog za Azure Data Lake Storage skladištenje podataka tako da imate potpunu kontrolu gde su podaci uskladišteni. Sledite korake u korišćenju [sopstvenog Azure Data Lake Storage naloga](own-data-lake-storage.md).
 
-- **Skladište uvida kupaca**: Skladištem podataka upravlja tim uvida kupaca. To je podrazumevana opcija i ukoliko ne postoje određeni zahtevi za skladištenje podataka u sopstvenom nalogu za skladištenje, preporučujemo da koristite ovu opciju.
-- **Azure Data Lake Storage**: Navedite sopstveni nalog Azure Data Lake Storage za skladištenje podataka tako da imate potpunu kontrolu gde su podaci uskladišteni. Više informacija potražite u članku [Korišćenje sopstvenog naloga Azure Data Lake Storage](own-data-lake-storage.md).
+   :::image type="content" source="media/data-storage-environment.png" alt-text="Odaberite željenu opciju za skladištenje podataka.":::
 
-:::image type="content" source="media/data-storage-environment.png" alt-text="Odaberite željenu opciju za skladištenje podataka.":::
+1. Izaberite **Sledeće**.
 
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>3. korak: Povezivanje sa sistemom Microsoft Dataverse
 
-Korak **Microsoft Dataverse** vam omogućava da povežete Customer Insights sa vašim Dataverse okruženjem. Delite podatke sa Dataverse njima da biste ih koristili sa poslovnim aplikacijama Dataverse zasnovanim na sistemu, kao što je Dynamics 365 Marketing ili aplikacije sa modelima u programu Power Apps.
+Ako imate okruženje Dataverse, povežite korisničke uvide. Delite podatke sa Dataverse njima da biste ih koristili sa poslovnim aplikacijama Dataverse zasnovanim na sistemu, kao što je Dynamics 365 Marketing ili aplikacije sa modelima u programu Power Apps.
 
-Ostavite ovo polje prazno ako nemate svoje okruženje i Dataverse mi ćemo vam ga kreirati.
+1. Sledite korake u radu [sa podacima "Uvid klijenta" u programu Microsoft Dataverse](customer-insights-dataverse.md).
 
-Više informacija potražite u članku Rad [sa podacima o uvidima klijenata u .Microsoft Dataverse](customer-insights-dataverse.md)
+   :::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka Microsoft Dataverse sa automatski omogućenim za neto nova okruženja.":::
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka Microsoft Dataverse sa automatski omogućenim za neto nova okruženja.":::
+1. Izaberite **Sledeće**.
 
-### <a name="step-4-finalize-the-settings"></a>4. korak: Dovršavanje podešavanja
+## <a name="step-4-finalize-the-settings"></a>4. korak: Dovršavanje podešavanja
 
-U **koraku** "Redigovanje" pregledajte sve navedene postavke. Kada sve izgleda završeno, izaberite **Kreiraj** da biste konfigurisali okruženje.
+Pregledajte navedene postavke. Kada sve izgleda završeno, izaberite **Kreiraj** da biste konfigurisali okruženje.
 
-Neke od postavki možete promeniti kasnije. Više informacija potražite u članku [Upravljanje okruženjem](manage-environments.md).
+Da biste kasnije promenili neke od postavki, pogledajte članak [Upravljanje okruženjima](manage-environments.md).
 
 ## <a name="work-with-your-new-environment"></a>Rad sa novim okruženjem
 
@@ -92,11 +94,9 @@ Pregledajte sledeće članke koji će vam pomoći da započnete sa konfigurisanj
 
 ## <a name="copy-the-environment-configuration"></a>Kopiranje konfiguracije okruženja
 
-Kao administrator, možete odabrati da kopirate konfiguraciju iz postojećeg okruženja kada kreirate novu.
+Ako ste kao administrator odabrali da kopirate konfiguraciju iz postojećeg okruženja, izaberite sa liste svih dostupnih okruženja u vašoj organizaciji.
 
 :::image type="content" source="media/environment-settings-dialog.png" alt-text="Snimak ekrana opcija podešavanja u podešavanjima okruženja.":::
-
-Videćete listu svih dostupnih okruženja u vašoj organizaciji, odakle možete kopirati podatke.
 
 Kopiraju se sledeća podešavanja konfiguracije:
 
@@ -113,25 +113,25 @@ Kopiraju se sledeća podešavanja konfiguracije:
 - Predviđanje modeli
 - Dodela uloga
 
-## <a name="set-up-a-copied-environment"></a>Podešavanje kopirane sredine
+### <a name="set-up-a-copied-environment"></a>Podešavanje kopirane sredine
 
-Kada kopirate konfiguraciju okruženja, morate da prođete kroz neke dodatne korake da biste potvrdili akreditive:
+Kada kopirate konfiguraciju okruženja, poruka potvrde se prikazuje kada se kreira kopirano okruženje. Izvršite sledeće korake da biste potvrdili akreditive.
 
-- Profili klijenata. Prvo potvrdite verodostojnost i unesite izvore podataka i pokrenite ujedinjenje podataka da biste ponovo napravili identitete klijenata.
-- Akreditivi izvora podataka. Morate da obezbedite akreditive za svaku izvor podataka biste ručno potvrdili verodostojnost i osvežili izvore podataka.
-- Izvori podataka iz fascikle "Uobičajeni model podataka" i Dataverse. Te izvore podataka morate da kreirate ručno sa istim imenom kao u izvornom okruženju.
-- Tajne veze koje se koriste za izvoz i obogaćivanje. Morate ponovo da uspostavite vezu i da ponovo aktivirate obogaćivanje i izvoz.
+1. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka. Svi izvori podataka prikazuju status **"Potrebni akreditivi** ".
 
-Videćete poruku potvrde kada se kreira kopirano okruženje. Izaberite **Idite na izvore podataka** da biste videli listu izvora podataka.
+   :::image type="content" source="media/data-sources-copied.png" alt-text="Lista izvora podataka koji su kopirani i kojima je potrebna potvrda identiteta.":::
 
-Svi izvori podataka će pokazati status **Potrebni su akreditivi**. Uredite izvore podataka i unesite akreditive da biste ih osvežili.
+1. Uredite izvore podataka i unesite akreditive da biste ih osvežili. Izvori podataka iz fascikle "Uobičajeni model podataka" Dataverse i moraju biti kreirani ručno sa istim imenom kao u izvornom okruženju.
 
-:::image type="content" source="media/data-sources-copied.png" alt-text="Lista izvora podataka koji su kopirani i kojima je potrebna potvrda identiteta.":::
+1. Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde ćete pronaći podešavanja iz izvornog okruženja. Uredite ih po potrebi ili izaberite **Ujedinite** > **objedinite profile i zavisnosti klijenata** da biste započeli proces ujedinjenja podataka i kreirali objedinjeni entitet klijenta.
 
-Nakon osvežavanja izvora podataka, idite na **Podaci** > **Objedini**. Ovde ćete pronaći podešavanja iz izvornog okruženja. Uredite ih po potrebi ili izaberite **Pokreni** da biste pokrenuli proces objedinjavanja podataka i kreirali objedinjeni entitet klijenta.
+   > [!TIP]
+   > Za naloge i kontakte izaberite **opciju Ujedini naloge** > **Ujedini profile i zavisnosti**.
 
-Kada objedinjavanje podataka bude dovršeno, idite na **Mere** i **Segmenti** da osvežite i njih.
+1. Kada se ujedinjenje podataka dovrši, idite na mere i **segmente** da **biste** ih osvežili.
 
-Pre nego što ponovo aktivirate izvoz i obogaćivanje, **idite na lokaciju "Administrativne** > **veze**" da biste ponovo uvideli veze u novom okruženju.
+1. Idite **na administrativne** > **veze** da biste ponovo ukažuli na veze u novom okruženju.
+
+1. Idite na **obogaćenje** > **podataka** i **izvoz** > **podataka da** biste ih ponovo aktivirali.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

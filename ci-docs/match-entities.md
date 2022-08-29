@@ -2,7 +2,7 @@
 title: Podudaranje uslova za ujedinjenje podataka
 description: Podudarite entitete da biste kreirali objedinjene profile klijenata.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139720"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304674"
 ---
 # <a name="match-conditions-for-data-unification"></a>Podudaranje uslova za ujedinjenje podataka
 
@@ -27,6 +27,8 @@ Ovaj korak u ujedinjenju definiše redosled podudaranja i pravila za podudaranje
 
 > [!NOTE]
 > Kada kreirate uslove podudaranja i izaberete **opciju** "Dalje", ne možete ukloniti izabrani entitet ili atribut. Ako je potrebno, kliknite **na dugme** "Nazad" da biste pregledali izabrane entitete i atribute pre nego što nastavite.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Uključi obogaćene entitete (pregled)
 
@@ -43,14 +45,14 @@ Ako ste obogatili entitete na nivou izvor podataka biste poboljšali rezultate u
 Svako podudaranje objedinjava dva ili više entiteta u jedan, objedinjeni entitet. Istovremeno, objedinjavanje čuva jedinstvene zapise o klijentima. Redosled podudaranja označava redosled kojim sistem pokušava da se podudara sa zapisima.
 
 > [!IMPORTANT]
-> Prvi entitet na listi naziva se primarni entitet. Primarni entitet služi kao osnova za skup podataka objedinjenih profila. Dodatni izabrani entiteti biće dodati ovom entitetu.
+> Prvi entitet se naziva primarni entitet, koji služi kao osnova za vaše objedinjene profile. Dodatni izabrani entiteti biće dodati ovom entitetu.
 >
 > Važna razmatranja:
 >
 > - Odaberite entitet sa najposebnijim i najpouzdanijim podacima profila o klijentima kao primarnom entitetu.
 > - Odaberite entitet koji ima nekoliko zajedničkih atributa sa drugim entitetima (na primer, ime, broj telefona ili e-adresu) kao primarni entitet.
 
-1. Na stranici **Podudarni** uslovi koristite strelice za premeštanje nagore i nadole da biste premestili entitete redosledom kojim želite ili ih prevucite i otpustite. Na primer, izaberite **Contacts:eCommerce** kao primarni entitet **i CustomerLoyalty:Loyalty** kao drugi entitet.
+1. Na stranici **Podudarni** uslovi koristite strelice za premeštanje nagore i nadole da biste premestili entitete redosledom kojim želite ili ih prevucite i otpustite. Na primer, izaberite **eCommerceCustomers** kao primarni **entitet i loyCustomers** kao drugi entitet.
 
 1. Da biste imali svaki zapis u entitetu kao jedinstvenog kupca, bez obzira na to da li je pronađeno podudaranje, izaberite uključi **sve zapise**. Svi zapisi u ovom entitetu koji se ne podudaraju sa zapisima u bilo kom drugom entitetu biće uključeni u objedinjeni profil. Zapisi koji nemaju podudaranje nazivaju se singltoni.
   
@@ -70,7 +72,7 @@ Upozorenje pored imena entiteta znači da nije definisano pravilo podudaranja za
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Snimak ekrana okna za dodavanje pravila.":::
 
-   - **Izaberite entitet/polje (prvi red)**: Odaberite povezani entitet i atribut da biste naveli svojstvo zapisa koje je verovatno jedinstveno za kupca. Na primer, broj telefona ili adresa e-pošte. Izbegavajte podudaranje po atributima tipa aktivnosti. Na primer, ID kupovine verovatno neće naći podudaranje u drugim vrstama zapisa.
+   - **Izaberite entitet/polje (prvi red)**: Odaberite entitet i atribut koji je verovatno jedinstven za kupca. Na primer, broj telefona ili adresa e-pošte. Izbegavajte podudaranje po atributima tipa aktivnosti. Na primer, ID kupovine verovatno neće naći podudaranje u drugim vrstama zapisa.
 
    - **Izaberite entitet/polje (drugi red)**: Odaberite atribut koji se odnosi na atribut entiteta navedenog u prvom redu.
 
@@ -116,7 +118,7 @@ Pravila za podudaranje predstavljaju skupove uslova. Dodajte još pravila da bis
 
 ### <a name="add-exceptions-to-a-rule"></a>Dodavanje izuzetaka pravilu
 
-U većini slučajeva podudaranje entiteta vodi do jedinstvenih profila klijenata sa konsolidovanim podacima. Da biste se dinamički pozabavili retkim slučajevima lažnih pozitivnih i lažnih negativnosti, možete definisati izuzetke za pravilo podudaranja. Izuzeci se primenjuju nakon obrade pravila podudaranja i izbegavaju podudaranje svih zapisa koji ispunjavaju kriterijume za izuzetak.
+U većini slučajeva podudaranje entiteta vodi do jedinstvenih profila klijenata sa konsolidovanim podacima. Da biste rešili retke slučajeve lažnih pozitivnih i lažnih negativnosti, definišite izuzetke za pravilo podudaranja. Izuzeci se primenjuju nakon obrade pravila podudaranja i izbegavaju podudaranje svih zapisa koji ispunjavaju kriterijume za izuzetak.
 
 Na primer, ako pravilo podudaranja kombinuje prezime, grad i datum rođenja, sistem će identifikovati blizance sa istim prezime koji žive u istom gradu kao i isti profil. Možete da navedete izuzetak koji se ne podudara sa profilima ako ime u entitetima koje kombinujete nisu isti.
 
@@ -134,7 +136,7 @@ Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dost
 |---------|---------|---------|
 |Uvek se podudara     | Definiše vrednosti koje se uvek podudaraju.         |  Uvek se poklapaju *sa* Majkom *i MikeR-om*.       |
 |Nikad se ne podudara     | Definiše vrednosti koje se nikada ne podudaraju.        | Nikad se ne poklapaj *sa* Džonom i *Džonatanom*.        |
-|Prilagođeno zaobilaženje     | Definiše vrednosti koje sistem uvek treba da ignoriše u fazi podudaranja. |  Zanemari vrednosti *11111 i Nepoznato* *tokom* podudaranja.        |
+|Zaobilaženje            | Definiše vrednosti koje sistem uvek treba da ignoriše u fazi podudaranja. |  Zanemari vrednosti *11111 i Nepoznato* *tokom* podudaranja.        |
 |Mapiranje pseudonima    | Definisanje vrednosti koje sistem treba da uzme u obzir kao istu vrednost.         | Smatraj *da je Džo jednak sa Džozefom* *.*        |
 
 1. Izaberite **Prilagođeno**.

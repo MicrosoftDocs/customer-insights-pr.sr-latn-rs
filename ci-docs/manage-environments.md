@@ -1,7 +1,7 @@
 ---
-title: 'Kako da: upravljanje okruženjima'
+title: Upravljanje okruženjima
 description: Saznajte kako da upravljate postojećim okruženjima uvida klijenata kao administrator."
-ms.date: 05/31/2022
+ms.date: 08/15/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fc3b3f404cf0ac84c782778414494289c803babe
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b4a88bdb75c6e638a76c39d18647681ad4556d7
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083065"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304306"
 ---
-# <a name="how-to-manage-environments"></a>Kako da: upravljanje okruženjima
+# <a name="manage-environments"></a>Upravljanje okruženjima
 
-Administratori kreiraju [okruženja](create-environment.md) i upravljaju njima. Oni mogu da promene neke postavke u postojećim okruženjima. Posao, tip, region, opcija skladištenja i postavke Dataverse se popravljaju nakon kreiranja okruženja. Ako želite da promenite ove postavke, uspostavite početne vrednosti okruženja ili kreirajte novo okruženje.
+Administratori kreiraju [okruženja](create-environment.md) i upravljaju njima. Oni mogu da promene neke postavke u postojećim okruženjima. Posao, tip, region, opcija skladištenja i postavke Dataverse se popravljaju nakon kreiranja okruženja. Ako želite da promenite ove postavke, uspostavite [početne vrednosti okruženja](#reset-an-existing-environment-preview)[ili kreirajte novo okruženje](create-environment.md).
 
 ## <a name="edit-an-existing-environment"></a>Uređivanje postojećeg okruženja
 
-Možete da izmenite neke detalje postojećih okruženja.
+Uredite detalje postojećeg okruženja kao što je ime ili postavljanje podrazumevanog okruženja.
 
 1. Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
@@ -32,9 +32,9 @@ Možete da izmenite neke detalje postojećih okruženja.
 
    :::image type="content" source="media/edit-environment.png" alt-text="Ikona za uređivanje postavki okruženja.":::
 
-1. U okviru **Uređivanje okruženja**, možete ažurirati podešavanja okruženja.
+1. U oknu **"Uređivanje** okruženja" ažurirajte postavke okruženja.
 
-Za početak, pogledajte članak Kreiranje [novog okruženja](create-environment.md).
+1. Izaberite rediguj **i završi**, a zatim **ažuriraj** da biste primenili promene.
 
 ## <a name="change-the-owner-of-an-environment"></a>Promena vlasnika okruženja
 
@@ -44,7 +44,7 @@ Nekoliko korisnika može da ima administratorske dozvole, ali samo jedan korisni
 
 1. Izaberite ikonu **Uređivanje**.
 
-1. U okviru **Uredi okruženje** pređite na osnovni **informacioni** korak.
+1. U oknu **"Uređivanje** okruženja" pređite na **osnovni korak sa informacijama**.
 
 1. U polju **Promeni vlasnika okruženja** odaberite novog vlasnika okruženja.  
 
@@ -52,19 +52,19 @@ Nekoliko korisnika može da ima administratorske dozvole, ali samo jedan korisni
 
 ## <a name="claim-ownership-of-an-environment"></a>Tražite vlasništvo nad okruženjem
 
-Ako je korisnički nalog vlasnika izbrisan ili suspendovan, okruženje neće imati vlasnika. Svaki korisnik administratora može da preuzme vlasništvo i postane novi vlasnik. Oni mogu da nastave da poseduju životnu sredinu [ili da promene vlasništvo u drugog administratora](#change-the-owner-of-an-environment).
+Ako je korisnički nalog vlasnika izbrisan ili suspendovan, okruženje neće imati vlasnika. Svaki korisnik administratora može da preuzme vlasništvo i postane novi vlasnik. Administrator vlasnika može da nastavi da poseduje okruženje ili da [promeni vlasništvo u drugog administratora](#change-the-owner-of-an-environment).
 
 Da biste preuzeli vlasništvo, izaberite dugme **"Preuzmi vlasništvo** " koje se prikazuje na vrhu svake stranice u "Uvidima kupaca" kada je originalni vlasnik napustio organizaciju.
 
 ## <a name="reset-an-existing-environment-preview"></a>Uspostavljanje početnih vrednosti postojećeg okruženja (pregled)
 
-Kao vlasnik okruženja, možete da uspostavite početne vrednosti okruženja na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
+Kao vlasnik okruženja, vratite okruženje na prazno stanje ako želite da izbrišete sve konfiguracije i uklonite unete podatke.
 
 1. Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
 1. Izaberite okruženje koje želite da uspostavite početne vrednosti i izaberite vertikalnu elipsu (&vellip;).
 
-1. Izaberite opciju **Resetuj**.
+1. Odaberite uspostavljanje **početnih vrednosti (pregled)**.
 
    :::image type="content" source="media/reset-environment.png" alt-text="Kontrola za uspostavljanje početnih vrednosti okruženja.":::
 
@@ -74,19 +74,19 @@ Kao vlasnik okruženja, možete da uspostavite početne vrednosti okruženja na 
 
 ## <a name="delete-an-existing-environment"></a>Brisanje postojećeg okruženja
 
-Kao vlasnik okruženja, možete da izbrišete okruženje kojim upravljate.
+Kao vlasnik okruženja, možete da ga izbrišete.
+
+> [!IMPORTANT]
+> Brisanje okruženja ne uklanja vezu sa okruženjem Dataverse. Ako planirate da ubuduće povezujete Dataverse isto okruženje sa novim okruženjem "Uvidi kupaca", morate ukloniti [tu vezu sa okruženjem Dataverse](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 1. Izaberite birač **Okruženje** u zaglavlju aplikacije.
 
-1. Izaberite okruženje koje želite da uspostavite početne vrednosti i izaberite vertikalnu elipsu (&vellip;). 
+1. Izaberite okruženje koje želite da izbrišete i izaberite vertikalnu elipsu (&vellip;). 
 
-1. Odaberite opciju **Izbriši**.
+1. Odaberite stavku **Izbriši**.
 
    :::image type="content" source="media/delete-environment.png" alt-text="Kontrola za brisanje okruženja.":::
 
 1. Da biste potvrdili brisanje, unesite naziv okruženja i izaberite **Izbriši**.
-
-> [!IMPORTANT]
-> Brisanje okruženja ne uklanja vezu sa okruženjem Dataverse. Ako planirate da ubuduće povezujete Dataverse isto okruženje sa novim okruženjem "Uvidi kupaca", morate ukloniti tu vezu Saznajte [kako da uklonite postojeću vezu sa okruženjem Dataverse](customer-insights-dataverse.md#remove-an-existing-connection-to-a-dataverse-environment).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

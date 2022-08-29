@@ -1,7 +1,7 @@
 ---
 title: Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 description: Saznajte kako da povežete uvide klijenata Microsoft Dataverse i razumete izlazne entitete koji se izvoze u program Dataverse.
-ms.date: 07/15/2022
+ms.date: 08/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,25 +11,25 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
-ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
+ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/15/2022
-ms.locfileid: "9153421"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303846"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
-Uvidi klijenata pružaju opciju da izlazni entiteti budu dostupni kao [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ova integracija omogućava lako deljenje podataka i prilagođeni razvoj putem niskog koda/bez kodnog pristupa. Izlazni [entiteti su](#output-entities) dostupni kao tabele u okruženju Dataverse. Podatke možete da koristite za bilo koju drugu aplikaciju zasnovanu na Dataverse tabelama. Ove tabele omogućavaju scenarije kao što su automatizovani tokovi posla kroz Power Automate ili izradu aplikacija pomoću programa Power Apps.
+Customer Insights pruža mogućnost omogućavanja dostupnosti izlaznih entiteta u platformi [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Ova integracija omogućava lako deljenje podataka i prilagođeni razvoj putem niskog koda/bez kodnog pristupa. Izlazni [entiteti su](#output-entities) dostupni kao tabele u okruženju Dataverse. Podatke možete da koristite za bilo koju drugu aplikaciju zasnovanu na Dataverse tabelama. Ove tabele omogućavaju scenarije kao što su automatizovani tokovi posla kroz Power Automate ili izradu aplikacija pomoću programa Power Apps.
 
 Povezivanje sa okruženjem Dataverse vam takođe omogućava da unosite [podatke iz lokalni podataka pomoću Power Platform priliva podataka i mrežnih prolaza](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Preduslovi
 
 - Uvidi klijenata Dataverse i okruženja moraju biti hostovana u istom regionu.
-- Morate imati ulogu globalnog administratora u okruženju Dataverse. Proverite da [Dataverse li je ovo okruženje](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) povezano sa određenim bezbednosnim grupama i uverite se da ste dodati tim bezbednosnim grupama.
-- Nijedno drugo okruženje "Uvid u kupce" već nije povezano sa okruženjem Dataverse koje želite da povežete. Saznajte kako [da uklonite postojeću vezu sa okruženjem Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
-- Okruženje Microsoft Dataverse može da se poveže samo sa jednim nalogom za skladištenje. Primenjuje se samo ako konfigurišete okruženje tako [da koristi vaš Azure Data Lake Storage](own-data-lake-storage.md).
+- Globalna uloga administratora postavljena u okruženju Dataverse. Proverite da [Dataverse li je ovo okruženje](/power-platform/admin/control-user-access#associate-a-security-group-with-a-dataverse-environment) povezano sa određenim bezbednosnim grupama i uverite se da ste dodati tim bezbednosnim grupama.
+- Nijedno drugo okruženje "Uvidi kupaca" već nije povezano sa okruženjem Dataverse koje želite da povežete. Saznajte kako [da uklonite postojeću vezu sa okruženjem Dataverse](#remove-an-existing-connection-to-a-dataverse-environment).
+- Okruženje Microsoft Dataverse povezano sa jednim nalogom za skladištenje ako konfigurišete okruženje tako [da koristi Azure Data Lake Storage](own-data-lake-storage.md) vaš.
 
 ## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse pravo na skladišni kapacitet
 
@@ -37,7 +37,7 @@ Pretplata "Uvidi klijenata" vam daje pravo na dodatni kapacitet postojećeg kapa
 
 **Primer:**
 
-Pod pretpostavkom da dobijete skladište baze podataka od 15 GB i 20 GB skladišta datoteka na 100.000 profila klijenata. Ako pretplata uključuje 300.000 profila klijenata, ukupan kapacitet skladištenja bio bi 45 GB (3 x 15 GB) skladišta baze podataka i 60 GB skladišta datoteka (3 x 20 GB). Slično tome, ako imate B2B pretplatu sa 30K naloga, ukupan kapacitet skladištenja bio bi skladište baze podataka od 45 GB (3 x 15 GB) i skladište datoteka od 60 GB (3 x 20 GB).
+Pod pretpostavkom da dobijete skladište baze podataka od 15 GB i 20 GB skladišta datoteka na 100.000 profila klijenata. Ako pretplata uključuje 300.000 profila klijenata, ukupan kapacitet skladištenja je skladište baze podataka od 45 GB (3 x 15 GB) i skladište datoteka od 60 GB (3 x 20 GB). Slično tome, ako imate pretplatu na B-na-B sa 30K naloga, ukupan kapacitet skladištenja je skladište baze podataka od 45 GB (3 x 15 GB) i skladište datoteka od 60 GB (3 x 20 GB).
 
 Kapacitet evidencije nije postepen i fiksiran za vašu organizaciju.
 
@@ -47,70 +47,80 @@ Više informacija o pravima na detaljne kapacitete potražite u Vodiču [za lice
 
 Ovaj **Microsoft Dataverse** korak vam omogućava da povežete uvide klijenata sa okruženjem Dataverse prilikom [kreiranja okruženja "Uvid u kupce"](create-environment.md).
 
-:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka Microsoft Dataverse sa automatski omogućenim za neto nova okruženja.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="deljenje podataka Microsoft Dataverse sa automatski omogućenim za nova okruženja.":::
 
-Administratori mogu da konfigurišu uvide klijenata da povežu postojeće Dataverse okruženje. Obezbeđivanjem URL adrese okruženju Dataverse, ona se povezuje sa njihovim novim okruženjem "Uvidi kupaca". Nakon uspostavljanja veze između uvida klijenata i Dataverse, nemojte menjati ime organizacije za okruženje Dataverse. Ime organizacije se koristi u URL adresi i Dataverse promenjeno ime prekida vezu sa uvidom klijenta.
+1. Obezbedite URL adresu svom okruženju Dataverse ili ostavite praznu da bi ona bila kreirana za vas.
 
-Ako ne želite da koristite postojeće okruženje Dataverse, sistem kreira novo okruženje za podatke o uvidima klijenata u zakupca. [Power Platform administratori mogu da kontrolišu ko može da kreira okruženja](/power-platform/admin/control-environment-creation). Kada podešavate novo okruženje "Uvidi kupaca", a administrator je onemogućio Dataverse kreiranje okruženja za sve osim za administratore, možda nećete moći da kreirate novo okruženje.
+   > [!NOTE]
+   > Nakon uspostavljanja veze između uvida klijenata i Dataverse, nemojte menjati ime organizacije za okruženje Dataverse. Ime organizacije se koristi u URL adresi i Dataverse promenjeno ime prekida vezu sa uvidom klijenta.
 
-**Omogućite deljenje podataka** tako što Dataverse ćete potvrditi izbor u polju za potvrdu za deljenje podataka.
+   [Power Platform administratori mogu da kontrolišu ko može da kreira nova Dataverse okruženja](/power-platform/admin/control-environment-creation). Ako pokušavate da podesite novo okruženje "Uvidi kupaca", a ne može, administrator je možda Dataverse onemogućio kreiranje okruženja za sve osim za administratore.
 
-Ako koristite sopstveni nalog za skladištenje u jezeru Sa podacima, potreban vam je **i identifikator dozvola**. Za više informacija o tome kako da nabavite identifikator dozvole redigujte sledeći odeljak.
+1. Ako koristite sopstveni Data Lake Storage nalog:
+   1. Izaberite **opciju Omogući deljenje podataka** pomoću program Dataverse.
+   1. Unesite **identifikator dozvola**. Da biste dobili identifikator dozvole, [omogućite deljenje podataka Dataverse sa sopstvenim Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogući deljenje podataka Dataverse sa sopstvenim Azure Data Lake Storage (Pregled)
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogući deljenje podataka Dataverse sa sopstvenim Azure Data Lake Storage (pregled)
 
-Za omogućavanje deljenja podataka Microsoft Dataverse kada okruženje koristi [sopstveni nalog potrebna Azure Data Lake Storage je](own-data-lake-storage.md) dodatna konfiguracija. Korisnik koji podešava okruženje "Uvid u korisnike" mora da ima najmanje **dozvole za skladištenje blob čitalac** *na kontejneru CustomerInsights* u nalogu Azure Data Lake Storage.
-
-1. Kreirajte dve bezbednosne grupe na Azure pretplati - **jednu čitalac bezbednosnu** **grupu i saradnik bezbednosnu** grupu i podesite Microsoft Dataverse uslugu kao vlasnika za obe bezbednosne grupe.
-2. Upravljajte listom kontrole pristupa (ACL) na kontejneru CustomerInsights u nalogu za skladištenje putem ovih bezbednosnih grupa. Dodajte uslugu Microsoft Dataverse i sve Dataverse poslovne aplikacije zasnovane na sistemu Dynamics 365 Marketing **u čitalac** grupu sa **dozvolama samo** za čitanje. Dodajte *samo* aplikaciju "Uvidi klijenata **" u saradnik grupu** da biste dodelili dozvole **za** čitanje i pisanje profila i uvida.
+U [svom nalogu Azure Data Lake Storage](own-data-lake-storage.md) proverite da li korisnik koji podešava okruženje "Uvidi kupaca" ima **najmanje dozvole za skladištenje blob podataka čitalac** na `customerinsights` kontejneru u nalogu za skladištenje.
 
 ### <a name="limitations"></a>Ograničenja
 
-Postoje dva ograničenja prilikom korišćenja Dataverse sa sopstvenim nalogom Azure Data Lake Storage:
-
-- Postoji mapiranje jedan na jedan između organizacije Dataverse i naloga Azure Data Lake Storage. Kada je Dataverse organizacija povezana sa nalogom za skladištenje, ne može da se poveže sa drugim nalogom za skladištenje. Ovo ograničenje sprečava popunjavanje Dataverse više naloga za skladištenje.
+- Samo mapiranje jedan na jedan između organizacije Dataverse i naloga Azure Data Lake Storage. Kada je Dataverse organizacija povezana sa nalogom za skladištenje, ne može da se poveže sa drugim nalogom za skladištenje. Ovo ograničenje sprečava popunjavanje Dataverse više naloga za skladištenje.
 - Deljenje podataka neće funkcionisati ako je za pristup nalogu potrebno Azure Data Lake Storage podešavanje Azure privatne veze jer se nalazi iza zaštitnog zida. Dataverse trenutno ne podržava vezu sa privatnim krajnjim tačkama putem privatne veze.
+
+### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Sami podesite bezbednosne grupe Azure Data Lake Storage
+
+1. Kreirajte dve bezbednosne grupe na Azure pretplati - **jednu čitalac bezbednosnu** **grupu i saradnik bezbednosnu** grupu i podesite Microsoft Dataverse uslugu kao vlasnika za obe bezbednosne grupe.
+
+1. Upravljajte Listom kontrole pristupa (ACL) na kontejneru `customerinsights` u nalogu za skladištenje preko ovih bezbednosnih grupa.
+   1. Dodajte uslugu Microsoft Dataverse i sve Dataverse poslovne aplikacije zasnovane na sistemu Dynamics 365 Marketing **u čitalac** grupu sa **dozvolama samo** za čitanje.
+   1. Dodajte *samo* aplikaciju "Uvidi klijenata **" u saradnik grupu** da biste dodelili dozvole **za** čitanje i pisanje profila i uvida.
 
 ### <a name="set-up-powershell"></a>Podešavanje PowerShell-a
 
-Da biste izvršili PowerShell skripte, prvo morate da podesite PowerShell u skladu sa tim.
+Podesite PowerShell da izvršava PowerShell skripte.
 
 1. Instalirajte najnoviju verziju [Azure Active Directory programa PowerShell za Graph](/powershell/azure/active-directory/install-adv2).
    1. Na računaru izaberite taster Windows na tastaturi i potražite **Windows PowerShell** i izaberite **Pokreni kao administrator**.
    1. U PowerShell prozoru koji se otvori unesite `Install-Module AzureAD`.
-2. Uvezi tri modula.
-    1. U prozoru PowerShell unesite `Install-Module -Name Az.Accounts` i sledite korake.
-    1. Ponovite za `Install-Module -Name Az.Resources` i `Install-Module -Name Az.Storage`.
 
-### <a name="configuration-steps"></a>Koraci konfiguracije
+1. Uvezi tri modula.
+   1. U prozoru PowerShell unesite `Install-Module -Name Az.Accounts` i sledite korake.
+   1. Ponovite za `Install-Module -Name Az.Resources` i `Install-Module -Name Az.Storage`.
+
+### <a name="execute-powershell-scripts-and-obtain-the-permission-identifier"></a>Izvršavanje PowerShell skripti i dobijanje identifikatora dozvole
 
 1. Preuzmite dve PowerShell skripte koje treba da pokrenete sa [GitHub repoa našeg inženjera](https://github.com/trin-msft/byol).
-    1. `CreateSecurityGroups.ps1`
-       - Potrebne su vam *administratorske dozvole* zakupca da biste pokrenuli ovu PowerShell skriptu.
-       - Ova PowerShell skripta kreira dve bezbednosne grupe na Azure pretplati. Jedan za čitalac grupu i drugi za saradnik grupu i učiniće Microsoft Dataverse uslugu kao vlasnik obe ove bezbednosne grupe.
-       - Izvršite ovu PowerShell skriptu u programu Windows PowerShell tako što ćete obezbediti ID Azure pretplate koji sadrži vaš Azure Data Lake Storage. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
-       - Sačuvajte vrednosti ID-a obe bezbednosne grupe koje generiše ova skripta jer ćemo ih koristiti u skripti `ByolSetup.ps1`.
+   - `CreateSecurityGroups.ps1`: Potrebne su administratorske dozvole zakupca.
+   - `ByolSetup.ps1`: Zahteva dozvole vlasnika podataka za skladištenje na nivou naloga/kontejnera za skladištenje. Ova skripta će kreirati dozvolu za vas. Dodeljivanje uloge može biti uklonjeno ručno nakon uspešnog pokretanja skripte.
 
-        > [!NOTE]
-        > Kreiranje bezbednosne grupe može biti onemogućeno vašem stanaru. U tom slučaju, biće potrebno ručno podešavanje i administrator će Azure AD morati da omogući kreiranje [bezbednosnih grupa](/azure/active-directory/enterprise-users/groups-self-service-management).
+1. Izvršite u programu Windows PowerShell tako što ćete obezbediti ID Azure pretplate `CreateSecurityGroups.ps1` koji sadrži vaš Azure Data Lake Storage. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
 
-    2. `ByolSetup.ps1`
-        - Potrebne su vam *dozvole vlasnika podataka za skladištenje* na nalogu/kontejneru za skladištenje da biste pokrenuli ovu skriptu ili će ova skripta kreirati jednu za vas. Dodeljivanje uloge može biti uklonjeno ručno nakon uspešnog pokretanja skripte.
-        - Ova PowerShell skripta dodaje potrebnu kontrolu pristupa zasnovanu na ulozi za uslugu Microsoft Dataverse i sve poslovne Dataverse aplikacije zasnovane na ulozi. Takođe ažurira Listu kontrole pristupa (ACL) na kontejneru CustomerInsights za bezbednosne grupe kreirane pomoću skripte `CreateSecurityGroups.ps1`. Grupa saradnik će imati rwx *dozvolu* i grupa čitalaca će imati samo *r-x* dozvolu.
-        - Izvršite ovu PowerShell skriptu u programu Windows PowerShell tako što ćete obezbediti ID Azure Data Lake Storage Azure pretplate koji sadrži vaše ime naloga za skladištenje, ime grupe resursa i ID čitalac i saradnik bezbednosne grupe. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
-        - Kopirajte izlaznu nisku nakon uspešnog pokretanja skripte. Izlazna niska izgleda ovako: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+   Ova skripta kreira dve bezbednosne grupe na Azure pretplati: jednu za čitalac grupu, a drugu za saradnik grupu. Microsoft Dataverse usluga je vlasnik obe ove bezbednosne grupe.
 
-2. Unesite izlaznu nisku kopiranu odozgo u **polje identifikatora** dozvola koraka konfiguracije okruženja za Microsoft Dataverse.
+1. Sačuvajte ID vrednosti obe bezbednosne grupe koje generiše ova skripta da biste ih koristili u skripti `ByolSetup.ps1`.
 
-:::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opcije konfiguracije da biste omogućili deljenje podataka iz sopstvenih sa Azure Data Lake Storage programom Microsoft Dataverse.":::
+   > [!NOTE]
+   > Kreiranje bezbednosne grupe može biti onemogućeno vašem stanaru. U tom slučaju, biće potrebno ručno podešavanje i administrator će Azure AD morati da omogući kreiranje [bezbednosnih grupa](/azure/active-directory/enterprise-users/groups-self-service-management).
 
-### <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Uklanjanje postojeće veze sa okruženjem Dataverse
+1. Izvršite u `ByolSetup.ps1` programu Windows PowerShell tako što ćete obezbediti ID Azure Data Lake Storage Azure pretplate koji sadrži ime naloga za skladištenje, ime grupe resursa i čitalac i saradnik ID bezbednosne grupe. Otvorite PowerShell skriptu u uređivaču da biste pregledali dodatne informacije i primenjenu logiku.
+
+   Ova skripta dodaje potrebnu kontrolu pristupa zasnovanu na ulozi za uslugu i Microsoft Dataverse sve poslovne aplikacije Dataverse zasnovane na ulozi. Takođe ažurira Listu kontrole pristupa (ACL) na kontejneru za bezbednosne `customerinsights` grupe kreirane pomoću skripte `CreateSecurityGroups.ps1`. Grupa saradnik dobila dozvolu *za rwx*, a grupa čitalaca samo *r-x* dozvolu.
+
+1. Kopiraj izlaznu nisku koja izgleda kao: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+
+1. Unesite kopiranu izlaznu nisku u **polje identifikatora dozvola** koraka konfiguracije okruženja za Microsoft Dataverse.
+
+   :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opcije konfiguracije da biste omogućili deljenje podataka iz sopstvenih sa Azure Data Lake Storage programom Microsoft Dataverse.":::
+
+## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Uklanjanje postojeće veze sa okruženjem Dataverse
 
 Kada se povezujete sa okruženjem Dataverse, poruka o grešci **Ova CDS organizacija je već priložena drugoj instanci uvida klijenata** znači Dataverse da se okruženje već koristi u okruženju "Uvidi kupaca". Postojeću vezu možete da uklonite kao globalni administrator u okruženju Dataverse. Može da potraje nekoliko sati da se promene nasele.
 
 1. Idite na [Power Apps](https://make.powerapps.com).
 1. Izaberite okruženje od birača okruženja.
-1. Idi na **rešenja**
+1. Idite na **rešenja**.
 1. Deinstalirajte ili izbrišite rešenje pod imenom **Dynamics 365 Customer Insights "Programski dodatak kartice kupca " (pregled)**.
 
 ILI
@@ -163,7 +173,7 @@ Ova tabela sadrži aktivnosti korisnika koje su dostupne u usluzi Customer Insig
 | SourceActivityId  | String      | Primarni ključ iz izvornog entiteta                                                       |
 | ActivityType      | String      | Tip semantičke aktivnosti ili naziv prilagođene aktivnosti                                        |
 | ActivityTimeStamp | DATETIME    | Vremenska oznaka aktivnosti                                                                      |
-| Naziv             | String      | Naslov ili naziv aktivnosti                                                               |
+| Titula             | String      | Naslov ili naziv aktivnosti                                                               |
 | Opis       | String      | Opis aktivnosti                                                                     |
 | URL adresa               | String      | Veza do spoljne URL adrese specifične za aktivnost                                         |
 | SemanticData      | JSON niska | Sadrži listu parova vrednosti ključeva za polja semantičkog mapiranja specifična za vrstu aktivnosti |
@@ -216,38 +226,10 @@ Ova tabela sadrži informacije o članstvu u segmentu profila kupaca.
 |--------------------|--------------|-----------------------------|
 | CustomerId        | String       | ID profila klijenta        |
 | SegmentProvider      | String       | Aplikacija koja objavljuje segmente.      |
-| SegmentMembershipType | String       | Tip kupca ovaj zapis članstva u segmentima. Podržava više tipova kao što su "Kupac", "Kontakt" ili "Nalog". Podrazumevano: kupac  |
+| SegmentMembershipType | String       | Vrsta kupca za ovaj zapis članstva u segmentima. Podržava više tipova kao što su "Kupac", "Kontakt" ili "Nalog". Podrazumevano: kupac  |
 | Segmenti       | JSON niska  | Lista jedinstvenih segmenata u kojima je profil kupca član      |
 | msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | Deterministički GUID generisan iz`msdynci_identifier`          |
 
-<!--
-## FAQ: Update existing environments to use Microsoft Dataverse
 
-Between mid-May 2022 and June 13, 2022, administrators can update the environment settings with a Dataverse environment that Customer Insights can use. On June 13, 2022, your environment will be updated automatically and we'll create a Dataverse environment on your tenant for you.
-
-1. My environment uses my own Azure Data Lake Storage account. Do I still need to update?
-
-   If there's already a Dataverse environment configured in your environment, the update isn't required. If no Dataverse is environment configured, the **Update now** button will create a Dataverse environment and update from the Customer Insights database to a Dataverse database.
-
-1. Will we get extra Dataverse capacity, or will the update use my existing Dataverse capacity?
-
-   - If there's already a Dataverse environment configured in your Customer Insights environment, or connected with other Dynamics 365 or Power Apps applications, the capacity remains unchanged.
-   - If the Dataverse environment is new, it will add new storage and database capacity. The capacity added varies per environment and entitlements. You'll get 3 GB for trial and sandbox environment. Production environments get 15 GB.
-
-1. I proceeded with the update and it seems like nothing happened. Is the update complete?
-
-   If the notification in Customer Insights doesn't show anymore, the update is complete. You can check the status of the update by reviewing your environment settings.
-
-1. Why do I still see the banner after completing the update steps?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-
-1. I received a "Failed to provision Dataverse environment" error after starting the update. What happened?
-
-   It can happen due to an upgrade or refresh failure. Contact support.
-   Common causes:
-    - Insufficient capacity. There's no more capacity to create more environments. For more information, see [Manage capacity action](/power-platform/admin/capacity-storage#actions-to-take-for-a-storage-capacity-deficit).
-    - Region mismatch between tenant region and Customer Insights environment region in the Australia and India regions.
-    - Insufficient privileges to provision Dataverse. The users starting the update needs a Dynamics 365 admin role.
-    - -->
+[!INCLUDE [footer-include](includes/footer-banner.md)]

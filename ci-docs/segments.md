@@ -1,7 +1,7 @@
 ---
 title: Pregled segmenata
 description: Pregled segmenata i način kreiranja i upravljanja njima.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246310"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304812"
 ---
 # <a name="segments-overview"></a>Pregled segmenata
 
 Segmenti vam omogućavaju da grupišete klijente na osnovu demografskih, transakcionih ili atributa ponašanja. Možete da koristite segmente za ciljanje promotivnih kampanja, prodajnih aktivnosti i aktivnosti podrške klijenata kako biste postigli svoje poslovne ciljeve.
 
-Profili klijenata koji se podudaraju sa filterima definicije segmenta nazivaju se *članovi* segmenta. Neka [ograničenja usluga](/dynamics365/customer-insights/service-limits) se primenjuju.
+Profili kupaca ili kontakata koji se podudaraju sa filterima definicije segmenta nazivaju se *članovi* segmenta. Neka [ograničenja usluga](/dynamics365/customer-insights/service-limits) se primenjuju.
 
 ## <a name="create-a-segment"></a>Kreiranje segmenta
 
@@ -41,13 +41,19 @@ Odaberite način kreiranja segmenta na osnovu ciljne korisnici.
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
 
-- Jednostavni ili složeni segmenti sa graditeljem segmenata: [Napravite svoje](segment-builder.md)
+Segment naloga ili segment kontakata (pregled) sa izradom segmenata: [Napravite sopstveni](segment-builder.md)
+
+> [!NOTE]
+> Većina izvoznih odredišta zahteva kontakt informacije u marketinške svrhe. Zbog toga kreirajte segmente kontakata koje ćete koristiti za te izvoze.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Upravljanje postojećim segmentima
 
-Idite na stranicu **"Segmenti** " da biste prikazali segmente koje ste kreirali, njihov status i stanje, broj članova i poslednji put kada su podaci osveženi. Listu segmenata možete sortirati po bilo kojoj koloni ili koristiti polje za pretragu da biste pronašli segment kojim želite da upravljate.
+Idite na stranicu **"Segmenti** " da biste prikazali segmente koje ste kreirali, njihov status i stanje i poslednji put kada su podaci osveženi. Listu segmenata možete sortirati po bilo kojoj koloni ili koristiti polje za pretragu da biste pronašli segment kojim želite da upravljate.
+
+> [!TIP]
+> U B-to-B okruženjima kolona **korisnici Tip** identifikuje da li je segment zasnovan na poslovnim kontaktima ili kontaktima.
 
 Izaberite segment da biste prikazali dostupne radnje.
 
@@ -82,7 +88,7 @@ Donji deo sadrži listu članova segmenta.
 > [!NOTE]
 > Polja koja se pojavljuju na ovoj listi zasnivaju se na atributima entiteta vašeg segmenta.
 >
->Lista je pregled odgovarajućih članova segmenta i pokazuje prvih 100 zapisa vašeg segmenta tako da ga možete brzo proceniti i pregledati njegove definicije, ako je potrebno. Da biste videli sve zapise koji se podudaraju, [izvezite segment](export-destinations.md).
+> Lista je pregled odgovarajućih članova segmenta i pokazuje prvih 100 zapisa vašeg segmenta tako da ga možete brzo proceniti i pregledati njegove definicije, ako je potrebno. Da biste videli sve zapise koji se podudaraju, izaberite pogledajte **više koji otvara** stranicu [**"Entiteti"**](entities.md) ili izvezite segment [.](export-destinations.md)
 
 ## <a name="refresh-segments"></a>Osvežavanje segmenata
 

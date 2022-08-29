@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213644"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304490"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Uklanjanje duplikata pre ujedinjenja podataka
 
@@ -47,7 +47,7 @@ Ako ste obogatili entitete na nivou izvor podataka biste poboljšali rezultate u
 
 1. Na stranici **"Duplirani** zapisi" izaberite entitet i izaberite opciju **Dodaj pravilo** da biste definisali pravila deduplikacije.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Snimak ekrana stranica sa dupliranim zapisima sa prikaži istaknutije":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Prikazan je snimak ekrana stranice &quot;Duplirani zapisi&quot; sa istaknutim entitetom i prikazanim pravilom &quot;Dodaj&quot;"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. U okno **"Dodavanje** pravila" unesite sledeće informacije:
       - **Polje izaberite**: Odaberite sa liste dostupnih polja iz entiteta koje želite da proverite da li postoje duplikati. Odaberite polja koja su verovatno jedinstvena za svakog klijenta. Na primer, adresa e-pošte ili kombinacija imena, grada i broja telefona.
@@ -80,9 +80,9 @@ Ako ste obogatili entitete na nivou izvor podataka biste poboljšali rezultate u
       - **Najpopunjeniji**: Identifikuje zapis sa najviše popunjenih atributa kao dobitni zapis. To je podrazumevana opcija objedinjavanja.
       - **Najnoviji**: Identifikuje dobitni zapis na osnovu najskorijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
       - **Najkasniji**: Identifikuje dobitni zapis na osnovu najkasnijeg vremena. Zahteva datum ili numeričko polje za definisanje skorašnjosti.
-      
+
       U slučaju nerešenog rezultata, zapis pobednika je onaj sa MAKS(PK) ili većom vrednošću primarnog ključa.
-      
+
    1. Opcionalno, da biste definisali željene postavke objedinjavanja za pojedinačne atribute entiteta, kliknite **na dugme** "Više opcija" na dnu okna. Na primer, možete odabrati da zadržite najnoviju e-poštu i najspunjenu adresu iz različitih zapisa. Razvijte entitet da biste videli sve njegove atribute i definisali koju opciju da koristite za pojedinačne atribute. Ako odaberete opciju zasnovanu na recenciji, potrebno je da navedete i polje datuma/vremena koje definiše recencij.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Okno sa više opcija za objedinjavanje koje prikazuje nedavnu e-poštu i kompletnu adresu":::
@@ -96,18 +96,5 @@ Ako ste obogatili entitete na nivou izvor podataka biste poboljšali rezultate u
 
 > [!div class="nextstepaction"]
 > [Sledeći korak za više entiteta: podudarni uslovi](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Izlaz postupka uklanjanja duplikata kao entitet
-
-Proces deduplikacije kreira novi deduplicirani entitet za svaki od izvornih entiteta. Ovi entiteti se mogu naći zajedno sa **ConflationMatchPairs:CustomerInsights** u odeljku **Sistem** na stranici **Entiteti**, pod nazivom **Deduplication_DataSource_Entity**.
-
-Izlazni entitet uklanjanja duplikata sadrži sledeće informacije:
-
-- ID-ovi/Ključevi
-  - Primarni ključ i polja alternativnog ID-a. Polje alternativnog ID-a se sastoji od svih alternativnih ID-ova identifikovanih za zapis.
-  - Polje Deduplication_GroupId prikazuje grupu ili klaster identifikovane u okviru entiteta koji grupiše sve slične zapise na osnovu navedenih polja uklanjanja duplikata. Ovo se koristi u svrhe obrade sistema. Ako nisu navedena ručna pravila za uklanjanje duplikata i ako se primenjuju sistemski definisana pravila za uklanjanje duplikata, ovo polje možda nećete pronaći u izlaznom entitetu uklanjanja duplikata.
-  - Deduplication_WinnerId: Ovo polje sadrži ID pobednika iz identifikovanih grupa ili klastera. Ako je Deduplication_WinnerId ista kao vrednost primarnog ključa za zapis, to znači da je taj zapis dobitni.
-- Polja koja se koriste za definisanje pravila za uklanjanje duplikata.
-- Odredite pravila i ocenite polja da označite koja su od pravila za uklanjanje duplikata primenjena i koji rezultat vraća algoritam za podudaranje.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

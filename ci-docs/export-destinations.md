@@ -1,7 +1,7 @@
 ---
 title: Pregled izvoza (verzija za pregled)
 description: Upravljajte izvozima da biste delili podatke.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245344"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304076"
 ---
 # <a name="exports-preview-overview"></a>Pregled izvoza (verzija za pregled)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245344"
 
 Postoje dva glavna tipa izvoza:  
 
-- **Izvoz podataka: izvezite** bilo koji tip entiteta koji je dostupan u uvidima kupaca. Entiteti koje izaberete za izvoz izvoze se sa svim poljima podataka, metapodacima, šemama i detaljima mapiranja.
-- **Izvoz segmenta**: izvoz entiteta segmenta iz uvida kupaca. Segmenti predstavljaju listu profila klijenata. Prilikom konfigurisanja izvoza birate uključena polja podataka, u zavisnosti od ciljnog sistema u koji izvozite podatke.
+- **Izvoz podataka vam omogućava da izvezete** bilo koji tip entiteta koji je dostupan u "Uvidi kupaca". Entiteti koje izaberete za izvoz izvoze se sa svim poljima podataka, metapodacima, šemama i detaljima mapiranja.
+- **Izvoz segmenta vam omogućava** da izvezete entitete segmenata iz uvida kupaca. Za pojedinačne potrošače (B-to-C), segmenti predstavljaju listu profila kupaca. Segmenti za preduzeća (od B do B) [mogu predstavljati listu poslovnih kontakata ili kontakata](segment-builder.md#create-a-new-segment-with-segment-builder). Prilikom konfigurisanja izvoza birate uključena polja podataka, u zavisnosti od ciljnog sistema u koji izvozite podatke.
 
 ### <a name="export-segments"></a>Izvoz segmenata
 
@@ -38,14 +38,15 @@ Većina opcija izvoza podržava oba tipa okruženja. Izvoz segmenata u različit
 **Segmentirajte izvoze u okruženjima za individualne potrošače (B-to-C)**  
 - Segmenti u kontekstu okruženja za pojedinačne klijente izgrađeni su na entitetu *objedinjenog profila klijenta*. Svaki segment koji ispunjava zahteve ciljnih sistema (na primer, adresa e -pošte) može biti izvezena.
 
-**Okruženja izvoza segmenata za poslovne kontakte (B-to-B)**  
-- Segmenti u kontekstu okruženja za poslovne naloge izgrađeni su na entitetu *poslovni kontakt*. Da biste izvezli segmente poslovnih kontakata takvi kakvi jesu, ciljni sistem mora da podržava segmente čistih poslovnih kontakata. Ovo je slučaj za [LinkedIn](export-linkedin-ads.md) kada izaberete opciju **kompanija** prilikom definisanja izvoza.
-- Svi drugi ciljni sistemi zahtevaju polja iz entiteta kontakta. Da biste osigurali da segmenti poslovnog kontakta mogu pribaviti podatke iz povezanih kontakata, definicija segmenta mora projektovati atribute entiteta kontakta. Saznajte više o tome kako da [konfigurišete segmente i atribute projekta](segment-builder.md).
+**Izvoz segmenta u okruženjima za poslovne račune (od B do B)**  
+- Segmenti u kontekstu okruženja za poslovne naloge su izgrađeni na *entitetu* naloga ili entitetu *kontakta*. Da biste izvezli segmente poslovnih kontakata takvi kakvi jesu, ciljni sistem mora da podržava segmente čistih poslovnih kontakata. Ovo je slučaj za [LinkedIn](export-linkedin-ads.md) kada izaberete opciju **kompanija** prilikom definisanja izvoza.
+- Svi drugi ciljni sistemi zahtevaju polja iz entiteta kontakta.
+- Sa dve vrste segmenata (kontakti i konta), uvidi kupaca automatski identifikuju vrstu segmenata koji ispunjavaju uslove za izvoz na osnovu ciljnog sistema. Na primer, za ciljni sistem fokusiran na kontakt, kao što je Mailchimp, "Uvidi kupaca" vam dozvoljavaju samo da odaberete segmente kontakata za izvoz.
 
 **Ograničenja izvoza segmenata**  
 - Ciljni sistemi nezavisnih proizvođača mogu ograničiti broj profila klijenata koje možete izvesti. 
 - Za pojedinačne klijente, videćete stvarni broj članova segmenta kada izaberete segment za izvoz. Dobićete upozorenje ako je segment prevelik. 
-- Za poslovne kontakte videćete broj poslovnih naloga u segmentu; međutim, broj kontakata koji može biti projektovan se ne prikazuje. U nekim slučajevima to može dovesti do toga da izvezeni segment zapravo sadrži više profila klijenata nego što ciljni sistem prihvata. Ako su ograničenja ciljnog sistema prekoračena, izvoz se preskače.
+- Za poslovne naloge ćete videti broj konta ili kontakata u zavisnosti od segmenta. Dobićete upozorenje ako je segment prevelik. Prekoračenje ograničenja ciljnih sistema dovodi do preskakanja izvoza.
 
 ## <a name="set-up-a-new-export"></a>Podešavanje novog izvoza
 
@@ -110,6 +111,20 @@ Da biste izvezli podatke bez čekanja na zakazano osvežavanje, idite na stranic
 
 - Da biste pokrenuli sve izvoze, izaberite **Pokreni sve** u komandnoj traci. Pokreću se samo izvozi koji imaju aktivan raspored. Pokrenite jedan izvoz da biste pokrenuli izvoz koji nije aktivan.
 - Da biste pokrenuli jedan izvoz, izaberite ga na listi i izaberite **Pokreni** u komandnoj traci.
+
+## <a name="troubleshooting"></a>Rešavanje problema
+
+### <a name="segment-not-eligible-for-export"></a>Segment ne ispunjava uslove za izvoz
+
+**Problem** u okruženju poslovnih naloga vaš izvoz ne uspeva sa porukom o grešci: "Sledeći segment ne ispunjava uslove za ovo odredište izvoza: '{ime segmenta}'. Odaberite samo segmente tipa KontaktProfile i pokušajte ponovo."
+
+**Okruženja** korisničkih uvida u rešenja za poslovne naloge ažurirana su tako da podržavaju segmente kontakata pored segmenata naloga. Zbog te promene, izvozu su potrebni kontakt detalji samo sa segmentima zasnovanim na kontaktima.
+
+1. [Kreirajte segment zasnovan na kontaktima koji se](segment-builder.md) podudaraju sa prethodno korišćenim segmentom.
+
+1. Kada se taj segment kontakta pokrene, uredite odgovarajući izvoz i izaberite novi segment.
+
+1. Kliknite **na dugme "** Sačuvaj" da biste sačuvali konfiguraciju **ili sačuvajte i** odmah pokrenite da biste odmah testirali ovaj izvoz.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

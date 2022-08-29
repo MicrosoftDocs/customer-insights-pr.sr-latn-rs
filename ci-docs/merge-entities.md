@@ -2,7 +2,7 @@
 title: Objedinjavanje polja klijenata radi ujedinjenja podataka
 description: Objedinite entitete da biste kreirali objedinjene profile klijenata.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213599"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304030"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Objedinjavanje polja klijenata radi ujedinjenja podataka
+# <a name="unify-customer-fields"></a>Objedinjavanje polja kupaca
 
-U ovom koraku procesa ujedinjenja odaberite i isključite atribute za objedinjavanje unutar objedinjenog entiteta profila. Na primer, ako su tri entiteta imala podatke e-pošte, možda ćete želeti da zadržite sva tri odvojena polja e-pošte ili da ih objedinite u jedno polje e-pošte za objedinjeni profil. Sistem automatski kombinuje neke atribute. Možete kreirati stabilne i jedinstvene ID-ove klijenata i grupišeti srodne profile u klaster.
+U ovom koraku procesa ujedinjenja odaberite i isključite atribute za objedinjavanje unutar objedinjenog entiteta profila. Na primer, ako su tri entiteta imala podatke e-pošte, možda ćete želeti da zadržite sva tri odvojena polja e-pošte ili da ih objedinite u jedno polje e-pošte za objedinjeni profil. Sistem automatski kombinuje neke atribute. Možete kreirati stabilne i jedinstvene ID-ove kupaca. Za pojedinačne kupce, povezane profile možete grupišeti u klaster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Stranica objedinjavanja u procesu ujednačavanja podataka koja prikazuje tabelu sa objedinjenim poljima koja definišu ujednačeni korisnički profil.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Ujedinite stranicu sa poljima kupaca u procesu ujedinjenja podataka koja prikazuje tabelu sa objedinjenim poljima koja definišu objedinjeni profil kupca.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Redigovanje i ažuriranje polja kupaca
 
@@ -47,7 +47,7 @@ U ovom koraku procesa ujedinjenja odaberite i isključite atribute za objedinjav
 
 1. Opcionalno, [generiši konfiguraciju ID-a kupca](#configure-customer-id-generation).
 
-1. Opcionalno, [grupisanje profila u domaćinstva ili klastere](#group-profiles-into-households-or-clusters).
+1. Opcionalno za B-to-C, [grupne profile u domaćinstva ili klastere](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Sledeći korak: Preispitivanje ujedinjenja](review-unification.md)
@@ -161,7 +161,7 @@ Konfigurisanje stabilnog ID-a klijenta vam omogućava da izbegnete takvo ponaša
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Grupišite profile u domaćinstva ili klastere
 
-Pravila za grupisanje srodnih profila možete definisati u klaster. Trenutno postoje dve vrste klastera – domaćinstva i prilagođeni klasteri. Sistem automatski bira domaćinstvo sa unapred definisanim pravilima ako entitet *Klijent* sadrži semantička polja *Person.LastName* i *Location.Address*. Takođe možete kreirati klaster sa sopstvenim pravilima i uslovima, slično [pravilima podudaranja](match-entities.md#define-rules-for-match-pairs).
+Za pojedinačne kupce možete definisati pravila za grupisanje srodnih profila u klaster. Trenutno postoje dve vrste klastera – domaćinstva i prilagođeni klasteri. Sistem automatski bira domaćinstvo sa unapred definisanim pravilima ako entitet *Klijent* sadrži semantička polja *Person.LastName* i *Location.Address*. Takođe možete kreirati klaster sa sopstvenim pravilima i uslovima, slično [pravilima podudaranja](match-entities.md#define-rules-for-match-pairs).
 
 1. Izaberite klaster **naprednog** > **kreiranja**.
 
