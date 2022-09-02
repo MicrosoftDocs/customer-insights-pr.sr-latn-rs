@@ -1,19 +1,19 @@
 ---
 title: Šta je novo u sistemu Dynamics 365 Customer Insights
 description: Informacije o novim funkcijama, poboljšanjima i ispravkama grešaka.
-ms.date: 08/03/2022
+ms.date: 08/31/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: a9bb254736ae70589afb267bf0a60206a18a3385
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246028"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387311"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Šta je novo u sistemu Dynamics 365 Customer Insights
 
@@ -23,6 +23,24 @@ Ažuriranja objavljujemo od regiona do regiona. Tako da određeni regioni mogu d
 
 > [!TIP]
 > Da biste prosledili i glasali za zahteve za funkcije i predloge za proizvode, idite na [Dynamics 365 portal za ideje u aplikacijama](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="august-2022-updates"></a>Ispravke za avgust 2022.
+
+Ispravke u avgustu 2022.
+
+### <a name="contact-unification-in-b-to-b-environments"></a>Ujedinjenje kontakata u okruženjima od B do B
+
+B-to-B okruženja u uvidima klijenata sada podržavaju poboljšano iskustvo ujedinjenja podataka.
+
+Sada pored naloga možete da ujedinite kontakte da biste dobili pun prikaz poslovnih kontakata. Objedinjeni kontakti su povezani sa objedinjenim nalozima i sada su navedeni na karticama kupaca. 
+
+Više informacija potražite u članku [Kreiranje objedinjenog profila kontakata](data-unification-contacts.md).
+
+### <a name="create-and-export-of-segments-based-on-unified-contacts"></a>Kreiranje i izvoz segmenata zasnovanih na objedinjenim kontaktima
+
+Zahvaljujući novom ujedinjenju kontakata, segmente kontakata možete kreirati pomoću kriterijuma iz kontakata, naloga ili od oba. Ovi segmenti se mogu izvoziti radi aktivacije u drugim uslugama.
+
+Više informacija potražite u članku [Pregled izvoza](export-destinations.md).
 
 ## <a name="july-2022-updates"></a>Ispravke za jul 2022.
 
@@ -70,7 +88,7 @@ Više informacija potražite u članku [Bezbedan pristup podacima klijenata pomo
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Povezivanje sa podacima pomoću Azure privatne veze
 
-Azure Privatna veza omogućava korisničkim uvidima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
+Azure privatna veza omogućava korisnicima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
 
 Više informacija potražite u članku Korišćenje [privatne veze u uvidima klijenata](security-overview.md#set-up-an-azure-private-link).
 
@@ -220,7 +238,7 @@ Za prelazni period, postojeći učesnici pregleda i dalje imaju pristup nekim mo
 - Poboljšajte objedinjene profile sa prenaglašenom i prefinjenom manifestacijom kako biste imali koristi od pune vrednosti podataka korisnika
   
 Tokom prelaznog perioda, uhvaćeni događaji se i dalje strimuju do povezanog Data Jezera. Kada se ova funkcionalnost isključi, deljenje podataka će se zaustaviti i neće se novi događaji slati na povezano skladište.
-Obratite se direktno timu Microsoft naloga ako imate pitanja o kraju pregleda mogućnosti. Tim naloga će vas obaveštavati o narednim lansiranjima. 
+Obratite se direktno timu Microsoft naloga ako imate pitanja o kraju pregleda mogućnosti. Tim naloga će vas obaveštavati o pristiglim lansiranjima. 
 
 ## <a name="january-2022-updates"></a>Ispravke za januar 2022. godine
 

@@ -1,6 +1,6 @@
 ---
 title: Izvoz dijagnostičkih evidencija (pregled)
-description: Saznajte kako da pošaljete evidencije na monitor Microsoft Azure.
+description: Saznajte kako da pošaljete evidencije na monitor Microsoft Azure .
 ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: c573c46fda895d36d29712e75fe28b261c9b399a
+ms.sourcegitcommit: 0b5bfe0145dbd325fa518df4561d6a0a9a352264
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245942"
+ms.lasthandoff: 08/25/2022
+ms.locfileid: "9352818"
 ---
 # <a name="export-diagnostic-logs-preview"></a>Izvoz dijagnostičkih evidencija (pregled)
 
@@ -25,7 +25,7 @@ Prosledite evidencije iz uvida klijenata pomoću Azure monitora. Evidencije resu
 Uvidi kupaca šalju sledeće evidencije događaja:
 
 - **Događaji nadgledanja**
-  - **APIEvent** - omogućava praćenje promena putem UI Dynamics 365 Customer Insights.
+  - **APIEvent** - omogućava praćenje promena putem UI Dynamics 365 Customer Insights .
 - **Operativni događaji**
   - **WorkflowEvent** - omogućava vam da podesite izvore podataka [, ujedinite](data-sources.md), [obogatite](data-unification.md) i [izvezete](enrichment-hub.md)[podatke](export-destinations.md) u druge sisteme. Ovi koraci mogu da se urade pojedinačno (na primer, da se pokrene jedan izvoz). Oni takođe mogu da pokrenu orkestrirano (na primer, osvežavanje podataka iz izvora podataka koji pokreću proces ujedinjenja, koji će povući bogaćenja i izvesti podatke u drugi sistem). Više informacija potražite u šemi [WorkflowEvent](#workflow-event-schema).
   - **APIEvent** - šalje sve API pozive instance klijenata na Dynamics 365 Customer Insights. Više informacija potražite u apievent [šemi](#api-event-schema).
@@ -36,19 +36,19 @@ Uvidi kupaca šalju sledeće evidencije događaja:
 
 - Aktivna [Azure pretplata](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - [Administratorske](permissions.md#admin) dozvole u uvidima klijenata.
-- [saradnik administratora i administratora korisničkog pristupa](/azure/role-based-access-control/role-assignments-portal) na odredišnom resursu na Azure. Resurs može biti nalog Azure Data Lake Storage, čvorište Azure događaja ili radni prostor Azure analitike evidencije. Ova dozvola je neophodna tokom konfigurisanja dijagnostičkih postavki u programu Customer Insights, ali se može promeniti nakon uspešnog podešavanja.
-- [Ispunjeni su](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) odredišni zahtevi za Azure skladište, Azure čvorište događaja ili analitiku evidencije Azure.
+- Važeći resurs na Azure koji sledi nakon odredišnih [zahteva](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) za Azure skladište, Azure čvorište događaja ili Analitiku evidencije Azure.
+- [saradnik administratora i administratora korisničkog pristupa](/azure/role-based-access-control/role-assignments-portal) na odredišnom resursu na Azure. Resurs može biti nalog Azure Data Lake Storage , čvorište Azure događaja ili radni prostor Azure analitike evidencije. Ova dozvola je neophodna tokom konfigurisanja dijagnostičkih postavki u programu Customer Insights, ali se može promeniti nakon uspešnog podešavanja.
 - Barem uloga **čitalac** resursa kojoj resurs pripada.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Podešavanje dijagnostike pomoću Azure monitora
 
-1. U fascikli "Uvidi kupaca" idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika**.
+1. U fascikli "Uvidi kupaca" idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika** .
 
 1. Izaberite **stavku Dodaj odredište**.
 
    :::image type="content" source="media/diagnostics-pane.png" alt-text="Dijagnostička veza.":::
 
-1. Navedite ime u odredišnom **polju Ime za dijagnostiku**.
+1. Navedite ime u odredišnom **polju Ime za dijagnostiku** .
 
 1. Izaberite tip **resursa** (Nalog skladišta, Čvorište događaja ili Analitika evidencije).
 
@@ -78,7 +78,7 @@ Direktor usluge "Uvid u korisnike **" dobija dozvolu čvorišta događaja Azure 
 
 ### <a name="log-analytics"></a>Evidentiraj analitiku
 
-Direktor usluge "Uvidi korisnika" dobija dozvolu **za saradnik evidencije** o resursu. Evidencije su dostupne u okviru evidencije **Tabela** > **za evidenciju** > **na** izabranom radnom prostoru analitike evidencije. Razvijte rešenje **za upravljanje evidencijom** i pronađite tabele `CIEventsAudit``CIEventsOperational` i tabele.
+Direktor usluge "Uvidi korisnika" dobija dozvolu **za saradnik evidencije** o resursu. Evidencije su dostupne u okviru evidencije **Tabela** > **za evidenciju** > **na** izabranom radnom prostoru analitike evidencije. Razvijte rešenje **za upravljanje evidencijom** i pronađite tabele `CIEventsAudit` `CIEventsOperational` i tabele.
 
 - `CIEventsAudit` koji sadrže događaje **nadgledanja**
 - `CIEventsOperational` koji sadrže operativne **događaje**
@@ -87,7 +87,7 @@ U prozoru **Upiti** proširite rešenje **nadzora** i pronađite primer upita na
 
 ## <a name="remove-a-diagnostics-destination"></a>Uklanjanje odredišta dijagnostike
 
-1. Idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika**.
+1. Idite na **administratorski** > **sistem i** izaberite karticu **Dijagnostika** .
 
 1. Izaberite odredište dijagnostike sa liste.
 
@@ -121,14 +121,14 @@ API događaji i događaji toka posla imaju zajedničku strukturu, ali uz nekolik
 | `time`            | Vremenska oznaka | Zahtevano          | Timestamp događaja (UTC)       | `2020-09-08T09:48:14.8050869Z`         |
 | `resourceId`      | String    | Zahtevano          | ID resursa instance koja je emigrirao događaj         | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX`  |
 | `operationName`   | String    | Zahtevano          | Ime operacije predstavljene ovim događajem.                                                                                                                | `Workflows.GetWorkFlowStatusAsync`                                                                                                                                       |
-| `category`        | String    | Zahtevano          | Evidentiraj kategoriju događaja. Ili `Operational` ili `Audit`. All POST/PUT/PATCH/DELETE HTTP Requests are tagged with `Audit`, sve ostalo sa`Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
+| `category`        | String    | Zahtevano          | Evidentiraj kategoriju događaja. Ili `Operational` ili `Audit`. All POST/PUT/PATCH/DELETE HTTP Requests are tagged with `Audit`, sve ostalo sa `Operational` | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resultType`      | String    | Zahtevano          | Status događaja. `Success`, `ClientError`, `Failure`                                                                                                        |                                                                                                                                                                          |
 | `resultSignature` | String    | Opcionalno          | Status rezultata događaja. Ako operacija odgovara pozivu REST API, to je HTTP statusni kôd.        | `200`             |
 | `durationMs`      | Dugačak      | Opcionalno          | Trajanje operacije u milisekundama.     | `133`     |
 | `callerIpAddress` | String    | Opcionalno          | IP adresa pozivaoca, ako operacija odgovara API pozivu koji dolazi sa javno dostupne IP adrese.                                                 | `144.318.99.233`         |
-| `identity`        | String    | Opcionalno          | JSON objekat koji opisuje identitet korisnika ili aplikacije koja je uradila operaciju.       | Pogledajte [odeljak](#identity-schema) Identitet.     |  
-| `properties`      | String    | Opcionalno          | JSON objekat sa više svojstava prema određenoj kategoriji događaja.      | Pogledajte [odeljak Svojstva](#api-properties-schema).    |
-| `level`           | String    | Zahtevano          | Nivo ozbiljnosti događaja.    | `Informational`, `Warning`,, `Error` ili `Critical`.           |
+| `identity`        | String    | Opcionalno          | JSON objekat koji opisuje identitet korisnika ili aplikacije koja je uradila operaciju.       | Pogledajte [odeljak](#identity-schema)  Identitet.     |  
+| `properties`      | String    | Opcionalno          | JSON objekat sa više svojstava prema određenoj kategoriji događaja.      | Pogledajte [odeljak Svojstva](#api-properties-schema) .    |
+| `level`           | String    | Zahtevano          | Nivo ozbiljnosti događaja.    | `Informational`, `Warning`, , `Error` ili `Critical`.           |
 | `uri`             | String    | Opcionalno          | Apsolutni zahtev URI.    |               |
 
 #### <a name="identity-schema"></a>Šema identiteta
@@ -163,16 +163,16 @@ JSON `identity` objekat ima sledeću strukturu
 
 | Polje                        | Opis                                                                                                            |
 | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `properties.eventType`       | `ApiEvent` Uvek, označavanje događaja evidencije kao API događaja.                                                                 |
+| `properties.eventType`       | `ApiEvent` Uvek , označavanje događaja evidencije kao API događaja.                                                                 |
 | `properties.userAgent`       | Agent pregledača šalje zahtev ili `unknown`.                                                                        |
-| `properties.method`          | HTTP metod:`GET/POST/PUT/PATCH/HEAD`.                                                                                |
+| `properties.method`          | HTTP metod: `GET/POST/PUT/PATCH/HEAD`.                                                                                |
 | `properties.path`            | Relativna putanja zahteva.                                                                                          |
 | `properties.origin`          | URI koji pokazuje odakle dolazi dopremanje ili `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` za HTTP statusni kôd < 400 <br> `ClientError` za HTTP statusni kôd < 500 <br> `Error` za HTTP Status >= 500 |
 | `properties.tenantId`        | ID organizacije                                                                                                        |
 | `properties.tenantName`      | Naziv organizacije.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ID objekta pozivaoca.                                                                         |
-| `properties.instanceId`      | Uvidi kupaca`instanceId`                                                                                         |
+| `properties.instanceId`      | Uvidi kupaca `instanceId`                                                                                         |
 
 ### <a name="workflow-event-schema"></a>Šema događaja toka posla
 

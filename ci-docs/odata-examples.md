@@ -1,29 +1,29 @@
 ---
 title: Primeri upita OData za API-je korisničkih uvida
 description: Često korišćeni primeri otvorenog protokola podataka (OData) za upit API-ja korisničkih uvida za redigovanje podataka.
-ms.date: 05/25/2022
+ms.date: 08/30/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
-ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
+ms.openlocfilehash: 26e56a3bab01ba55284a52e72efbcbfbaadaad6f
+ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/06/2022
-ms.locfileid: "9121579"
+ms.lasthandoff: 08/31/2022
+ms.locfileid: "9387219"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Primeri upita OData za API-je korisničkih uvida
 
 Open Data Protocol (OData) je protokol za pristup podacima izgrađen na osnovnim protokolima kao što je HTTP. On koristi uobičajeno prihvaćene metodologije kao što je REST za Veb. Postoje razne vrste biblioteka i alatki koje se mogu koristiti za konzumiranje OData usluga.
 
-Ovaj članak navodi neke često tražene primere upita koji vam pomažu u izradi sopstvenih implementacija na osnovu [API-ja uvida klijenata](apis.md).
+Da biste pomogli u izradi sopstvenih implementacija na osnovu [API-ja korisničkih uvida](apis.md), pregledajte neke često tražene primere upita.
 
-Morate da izmenite uzorke upita da bi oni radili na ciljnim okruženjima: 
+Izmenite uzorke upita da bi oni radili na ciljnim okruženjima:
 
-- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` gde se {instanceId} nalazi GUID okruženja "Uvidi kupaca" koje želite da ispitate. Operacija [ListAllInstances vam](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) omogućava da pronađete pristup{InstanceId}.
+- {serviceRoot}: `https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` gde se {instanceId} nalazi GUID okruženja "Uvidi kupaca" koje želite da ispitate. Operacija [ListAllInstances vam](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) omogućava da pronađete pristup {InstanceId}.
 - {CID}: GUID objedinjenog zapisa kupca. Primer: `ce759201f786d590bf2134bff576c369`.
 - {AlternateKey}: Identifikator primarnog ključa zapisa kupca u izvor podataka. Primer: `CNTID_1002`
 - {DSname}: Niska sa imenom entiteta izvor podataka se unosi u uvid kupca. Primer: `Website_contacts`.
@@ -31,7 +31,7 @@ Morate da izmenite uzorke upita da bi oni radili na ciljnim okruženjima:
 
 ## <a name="customer"></a>klijentu
 
-Sledeća tabela sadrži skup probnih upita za entitet *kupca*.
+Probni upiti za entitet *kupca*.
 
 |Tip upita |Primer  | Belešku  |
 |---------|---------|---------|
@@ -46,7 +46,7 @@ Sledeća tabela sadrži skup probnih upita za entitet *kupca*.
 
 ## <a name="unified-activity"></a>Objedinjena aktivnost
 
-Sledeća tabela sadrži skup probnih upita za entitet *objedinjeneaktivnosti*.
+Probni upiti za entitet *objedinjeneaktivnosti*.
 
 |Tip upita |Primer  | Belešku  |
 |---------|---------|---------|
@@ -59,7 +59,7 @@ Sledeća tabela sadrži skup probnih upita za entitet *objedinjeneaktivnosti*.
 
 ## <a name="other-examples"></a>Drugi primeri
 
-Sledeća tabela sadrži skup probnih upita za druge entitete.
+Probni upiti za druge entitete.
 
 |Tip upita |Primer  | Belešku  |
 |---------|---------|---------|
