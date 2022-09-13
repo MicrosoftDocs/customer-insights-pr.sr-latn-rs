@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 32240c8c43751d8514d38b392f23ef4138d50ee2
+ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083107"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9411848"
 ---
 # <a name="predictions-overview"></a>Pregled predviđanja
 
@@ -39,14 +39,11 @@ Najlakši način da započnete sa predviđanjem podataka su unapred definisani m
 
 > [!TIP]
 > Preporučujemo da redovno osvežavate modele kutija sa ažuriranim podacima kako biste se uverili da tačno obaveštavaju vaš predmet o korišćenju poslovanja. Podaci se osvežavaju ad-hoc kada sistem unosi nove ili ažurirane izvore podataka. Međutim, modeli će se u ovom slučaju samo ponovo koristiti i nastaviti da koriste postojeće podatke o obuci.
-> 
+>
 > Raspored ažuriranja možete da **konfigurišete** tako što ćete podesiti raspored prekvalifikacije modela u iskustvu konfigurisanja. Model će se prekvalifikovati i ponovo oblikovati po ovom rasporedu, koji možete promeniti u bilo kom trenutku.
-
 
 ## <a name="azure-machine-learning-integration"></a>Integracija Azure mašinskog učenja
 
 Ako organizacija već koristi scenarije mašinskog učenja zasnovane na eksperimentima Azure mašinskog učenja, funkcija prilagođenih modela u usluzi Customer Insights pomaže u povezivanju tačaka. Napravite tokove posla koji vam pomažu da odaberete podatke od kojih želite da generišete uvide i mapirate rezultate u svoje objedinjene profile klijenata. Za više informacija pogledajte [Prilagođeni modeli mašinskog učenja](custom-models.md).
 
-## <a name="ai-builder-prediction"></a>AI Builder predviđanje
-
-Ponekad su skupovi podataka nepotpuni, a neke vrednosti nedostaju. Customer Insights može pomoći u predviđanju vrednosti koje nedostaju za entitet i segmente klijenta. Za više informacija, pogledajte [Dopunite svoje delimične podatke predviđanjima](predictions.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

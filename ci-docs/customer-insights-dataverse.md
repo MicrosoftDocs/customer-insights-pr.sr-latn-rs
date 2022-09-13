@@ -1,7 +1,7 @@
 ---
 title: Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 description: Saznajte kako da povežete uvide klijenata Microsoft Dataverse i razumete izlazne entitete koji se izvoze u program Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303846"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424326"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
@@ -136,6 +136,7 @@ Ako uklanjanje veze ne uspe zbog zavisnosti, morate da uklonite i zavisnosti. Vi
 Neki izlazni entiteti iz "Uvida kupaca" dostupni su kao tabele u programu Dataverse. Odeljci u nastavku opisuju očekivanu šemu ovih tabela.
 
 - [CustomerProfile](#customerprofile)
+- [ContactProfile](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
@@ -145,7 +146,32 @@ Neki izlazni entiteti iz "Uvida kupaca" dostupni su kao tabele u programu Datave
 
 ### <a name="customerprofile"></a>CustomerProfile
 
-Ova tabela sadrži objedinjeni profil klijenta iz usluge Customer Insights. Šema za objedinjeni profil klijenta zavisi od entiteta i atributa koji se koriste u procesu ujedinjenja podataka. Šema profila klijenta obično sadrži podskup atributa iz [Common Data Model definicije profila klijenta](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Ova tabela sadrži objedinjeni profil klijenta iz usluge Customer Insights. Šema za objedinjeni profil klijenta zavisi od entiteta i atributa koji se koriste u procesu ujedinjenja podataka. Šema profila klijenta obično sadrži podskup atributa iz [Common Data Model definicije profila klijenta](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Za scenario od B do B, profil kupca sadrži objedinjena konta, a šema obično sadrži podskup [atributa iz definicije uobičajenog modela podataka naloga](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>ContactProfile
+
+ContactProfile sadrži objedinjene informacije o kontaktu. Kontakti su [osobe koje su mapirane na nalog u](data-unification-contacts.md) scenariju B-na-B.
+
+| Column                       | Tip                | Opis     |
+| ---------------------------- | ------------------- | --------------- |
+|  Datum rođenja            | Datum i vreme       |  Datum rođenja kontakta               |
+|  Grad                 | Tekstualna poruka |  Grad kontakt adrese               |
+|  ID kontakta            | Tekstualna poruka |  ID profila kontakta               |
+|  IDprofile kontakta     | Jedinstveni identifikator   |  GUID za kontakt               |
+|  ZemljaOrRegion      | Tekstualna poruka |  Zemlja/region kontakt adrese               |
+|  CustomerId           | Tekstualna poruka |  ID poslovnog kontakta na koji je kontakt mapiran               |
+|  EntityName           | Tekstualna poruka |  Entitet iz koga potiиu podaci                |
+|  FirstName            | Tekstualna poruka |  Ime kontakta               |
+|  Rod               | Tekstualna poruka |  Pol kontakta               |
+|  ID                   | Tekstualna poruka |  Deterministički GUID zasnovan na`Identifier`               |
+|  Identifier           | Tekstualna poruka |  Interni ID profila kontakta: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | Tekstualna poruka |  Radno mesto kontakta               |
+|  LastName             | Tekstualna poruka |  Prezime kontakta               |
+|  PostalCode           | Tekstualna poruka |  Poštanski broj adrese kontakta               |
+|  PrimarnaEmail         | Tekstualna poruka |  E-adresa kontakta               |
+|  Primarni telefon         | Tekstualna poruka |  Broj telefona kontakta               |
+|  StateOrProvince      | Tekstualna poruka |  Država ili pokrajina kontakt adrese               |
+|  Ulična adresa        | Tekstualna poruka |  Ulica kontakt adrese               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
@@ -153,13 +179,13 @@ Tabela AlternateKey sadrži ključeve entiteta koji su učestvovali u procesu ob
 
 |Column  |Tip  |Opis  |
 |---------|---------|---------|
-|DataSourceName    |String         | Naziv izvora podataka. Na primer: `datasource5`        |
-|EntityName        | String        | Ime entiteta u uvidima kupaca. Na primer: `contact1`        |
-|AlternateValue    |String         |Alternativni ID koji se preslikava na ID klijenta. Primer: `cntid_1078`         |
-|KeyRing           | Tekst u više redova        | JSON vrednost  </br> Primer: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | String        | ID objedinjenog profila klijenta.         |
-|AlternateKeyId     | GUID         |  AlternateKey određeni GUID zasnovan na parametru msdynci_identifier       |
-|msdynci_identifier |   String      |   `DataSourceName|EntityName|AlternateValue`  </br> Primer: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |Tekstualna poruka         | Naziv izvora podataka. Na primer: `datasource5`        |
+|EntityName        | Tekstualna poruka        | Ime entiteta u uvidima kupaca. Na primer: `contact1`        |
+|AlternateValue    |Tekstualna poruka         |Alternativni ID koji se preslikava na ID klijenta. Primer: `cntid_1078`         |
+|KeyRing           | Tekstualna poruka        | JSON vrednost  </br> Primer: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | Tekstualna poruka        | ID objedinjenog profila klijenta.         |
+|AlternateKeyId     | Jedinstveni identifikator        |  AlternateKey deterministički GUID zasnovan na`Identifier`      |
+|Identifier |   Tekstualna poruka      |   `DataSourceName|EntityName|AlternateValue`  </br> Primer: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,18 +193,18 @@ Ova tabela sadrži aktivnosti korisnika koje su dostupne u usluzi Customer Insig
 
 | Column            | Tip        | Opis                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | String      | ID profila klijenta                                                                      |
-| ActivityId        | String      | Interni ID korisničke aktivnosti (primarni ključ)                                       |
-| SourceEntityName  | String      | Naziv izvornog entiteta                                                                |
-| SourceActivityId  | String      | Primarni ključ iz izvornog entiteta                                                       |
-| ActivityType      | String      | Tip semantičke aktivnosti ili naziv prilagođene aktivnosti                                        |
-| ActivityTimeStamp | DATETIME    | Vremenska oznaka aktivnosti                                                                      |
-| Titula             | String      | Naslov ili naziv aktivnosti                                                               |
-| Opis       | String      | Opis aktivnosti                                                                     |
-| URL adresa               | String      | Veza do spoljne URL adrese specifične za aktivnost                                         |
-| SemanticData      | JSON niska | Sadrži listu parova vrednosti ključeva za polja semantičkog mapiranja specifična za vrstu aktivnosti |
-| RangeIndex        | String      | Unix vremenska oznaka koja se koristi za sortiranje na vremenskoj osi aktivnosti i efikasnim upitima o opsegu |
-| mydynci_unifiedactivityid   | GUID | Interni ID korisničke aktivnosti (ActivityId) |
+| CustomerId        | Tekstualna poruka      | ID profila klijenta                                                                      |
+| ActivityId        | Tekstualna poruka      | Interni ID korisničke aktivnosti (primarni ključ)                                       |
+| SourceEntityName  | Tekstualna poruka      | Naziv izvornog entiteta                                                                |
+| SourceActivityId  | Tekstualna poruka      | Primarni ključ iz izvornog entiteta                                                       |
+| ActivityType      | Tekstualna poruka      | Tip semantičke aktivnosti ili naziv prilagođene aktivnosti                                        |
+| ActivityTimeStamp | Datum i vreme    | Vremenska oznaka aktivnosti                                                                      |
+| Titula             | Tekstualna poruka      | Naslov ili naziv aktivnosti                                                               |
+| Opis       | Tekstualna poruka      | Opis aktivnosti                                                                     |
+| URL adresa               | Tekstualna poruka      | Veza do spoljne URL adrese specifične za aktivnost                                         |
+| SemanticData      | Tekstualna poruka | Sadrži listu parova vrednosti ključeva za polja semantičkog mapiranja specifična za vrstu aktivnosti |
+| RangeIndex        | Tekstualna poruka      | Unix vremenska oznaka koja se koristi za sortiranje na vremenskoj osi aktivnosti i efikasnim upitima o opsegu |
+| ID objedinjeneaktivnosti   | Jedinstveni identifikator | Interni ID korisničke aktivnosti (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
@@ -186,11 +212,10 @@ Ova tabela sadrži izlazne podatke korisničkih mera zasnovanih na atributima.
 
 | Column             | Tip             | Opis                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | String           | ID profila klijenta        |
-| Mere           | JSON niska      | Uključuje listu parova vrednosti ključeva za ime mere i vrednosti za datog klijenta | 
-| msdynci_identifier | String           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID profila klijenta |
-
+| CustomerId         | Tekstualna poruka           | ID profila klijenta        |
+| Mere           | Tekstualna poruka      | Uključuje listu parova vrednosti ključeva za ime mere i vrednosti za datog klijenta |
+| Identifier | Tekstualna poruka           | `Customer_Measure|CustomerId` |
+| ID klijenta | Jedinstveni identifikator     | ID profila klijenta |
 
 ### <a name="enrichment"></a>Obogaćivanje
 
@@ -198,12 +223,12 @@ Ova tabela sadrži rezultate procesa obogaćivanja.
 
 | Column               | Tip             |  Opis                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | String           | ID profila klijenta                                 |
-| EnrichmentProvider   | String           | Naziv dobavljača obogaćivanja                                  |
-| EnrichmentType       | String           | Tip obogaćivanja                                      |
-| Vrednosti               | JSON niska      | Lista atributa proizvedenih postupkom obogaćivanja |
-| msdynci_enrichmentid | GUID             | Deterministički GUID generisan iz parametra msdynci_identifier |
-| msdynci_identifier   | String           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | Tekstualna poruka           | ID profila klijenta                                 |
+| EnrichmentProvider   | Tekstualna poruka           | Naziv dobavljača obogaćivanja                                  |
+| EnrichmentType       | Tekstualna poruka           | Tip obogaćivanja                                      |
+| Vrednosti               | Tekstualna poruka      | Lista atributa proizvedenih postupkom obogaćivanja |
+| ID obogaćivanja | Jedinstveni identifikator            | Deterministički GUID generisan iz`Identifier` |
+| Identifier   | Tekstualna poruka           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Predviđanje
 
@@ -211,12 +236,12 @@ Ova tabela sadrži izlaz predviđanja modela.
 
 | Column               | Tip        | Opis                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | String      | ID profila klijenta                                  |
-| ModelProvider        | String      | Naziv dobavljača modela                                      |
-| Model                | String      | Naziv modela                                                |
-| Vrednosti               | JSON niska | Lista atributa koje je napravio model |
-| msdynci_predictionid | GUID        | Deterministički GUID generisan iz parametra msdynci_identifier | 
-| msdynci_identifier   | String      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | Tekstualna poruka      | ID profila klijenta                                  |
+| ModelProvider        | Tekstualna poruka      | Naziv dobavljača modela                                      |
+| Model                | Tekstualna poruka      | Naziv modela                                                |
+| Vrednosti               | Tekstualna poruka | Lista atributa koje je napravio model |
+| ID predviđanja | Jedinstveni identifikator       | Deterministički GUID generisan iz`Identifier` |
+| Identifier   | Tekstualna poruka      |  `Model|ModelProvider|CustomerId`                      |
 
 ### <a name="segment-membership"></a>Članstvo u segmentima
 
@@ -224,12 +249,11 @@ Ova tabela sadrži informacije o članstvu u segmentu profila kupaca.
 
 | Column        | Tip | Opis                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | String       | ID profila klijenta        |
-| SegmentProvider      | String       | Aplikacija koja objavljuje segmente.      |
-| SegmentMembershipType | String       | Vrsta kupca za ovaj zapis članstva u segmentima. Podržava više tipova kao što su "Kupac", "Kontakt" ili "Nalog". Podrazumevano: kupac  |
-| Segmenti       | JSON niska  | Lista jedinstvenih segmenata u kojima je profil kupca član      |
-| msdynci_identifier  | String   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | Deterministički GUID generisan iz`msdynci_identifier`          |
-
+| CustomerId        | Tekstualna poruka       | ID profila klijenta        |
+| SegmentProvider      | Tekstualna poruka       | Aplikacija koja objavljuje segmente.      |
+| SegmentMembershipType | Tekstualna poruka       | Vrsta kupca za ovaj zapis članstva u segmentima. Podržava više tipova kao što su "Kupac", "Kontakt" ili "Nalog". Podrazumevano: kupac  |
+| Segmenti       | Tekstualna poruka  | Lista jedinstvenih segmenata u kojima je profil kupca član      |
+| Identifier  | Tekstualna poruka   | Jedinstveni identifikator zapisa članstva u segmentu. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| ID segmentaMembership | Jedinstveni identifikator      | Deterministički GUID generisan iz`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245850"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396108"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Povežite se sa podacima u usluzi Azure Data Lake Storage
 
@@ -39,6 +39,8 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
   - Čitač podataka skladišta blob objekta
   - Vlasnik podataka skladišta blob objekta
   - Saradnik za podatke skladišta blob objekta
+
+- Korisniku koji podešaje vezu izvor podataka potrebno najmanje dozvola za skladištenje blob saradnik na nalogu za skladištenje.
 
 - Podaci u skladištu jezera podataka treba da prate standard Common Data Model za skladištenje podataka i da imaju zajednički manifest modela podataka koji predstavlja šemu datoteka sa podacima (*.csv ili *.parket). Manifest mora da pruži detalje entiteta kao što su kolone entiteta i tipovi podataka, kao i lokaciju datoteke sa podacima i tip datoteke. Više informacija potražite u manifestu [Uobičajeni model podataka](/common-data-model/sdk/manifest). Ako manifest nije prisutan, administratorski korisnici sa vlasnikom podataka Storage Blob ili Storage Blob Data saradnik mogu da definišu šemu prilikom unosa podataka.
 
@@ -62,7 +64,7 @@ Unestite podatke Dynamics 365 Customer Insights u svoj Azure Data Lake Storage G
    > [!NOTE]
    > Potrebna vam je jedna od sledećih uloga kontejnera ili naloga za skladištenje da biste kreirali izvor podataka:
    >
-   >  - Podaci o skladištenju čitalac su dovoljni za čitanje sa naloga za skladištenje i unos podataka u uvide klijenata. 
+   >  - Podaci o skladištenju čitalac su dovoljni za čitanje sa naloga za skladištenje i unos podataka u uvide klijenata.
    >  - Podaci o skladištenju saradnik ili vlasnik su potrebni ako želite da uredite manifestne datoteke direktno u uvidima kupaca.  
   
 1. Odaberite ime kontejnera koji **sadrži podatke i šemu (model.json ili manifest.json datoteka) iz kojeg želite da uvezete podatke, a zatim kliknite na dugme Dalje** **.**

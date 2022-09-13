@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 1e734464cec1f66428c3a2a2e403437a2a9d8500
-ms.sourcegitcommit: 624b27bb65a0de1970dc1ac436643b493f0a31cf
+ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
+ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/31/2022
-ms.locfileid: "9387311"
+ms.lasthandoff: 09/06/2022
+ms.locfileid: "9409374"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Šta je novo u sistemu Dynamics 365 Customer Insights
 
@@ -41,6 +41,14 @@ Više informacija potražite u članku [Kreiranje objedinjenog profila kontakata
 Zahvaljujući novom ujedinjenju kontakata, segmente kontakata možete kreirati pomoću kriterijuma iz kontakata, naloga ili od oba. Ovi segmenti se mogu izvoziti radi aktivacije u drugim uslugama.
 
 Više informacija potražite u članku [Pregled izvoza](export-destinations.md).
+
+### <a name="deployment-regions-aligned-with-microsoft-dataverse"></a>Oblasti primene usklađene sa Microsoft Dataverse
+
+Prilikom kreiranja novog okruženja "Uvidi kupaca", možete izabrati region u kojem želite da usluga bude raspoređena i hostovana. Ažurirali smo izbor regiona sa kojima ćemo se uskladiti Microsoft Dataverse i Power Platform.
+
+Sada možete lako da izaberete istu oblast kao postojeće Microsoft Dataverse okruženje ili Azure Data Lake nalog za skladištenje (ako odaberete tu opciju), u zavisnosti od raspoloživosti uvida kupaca u tom regionu.
+
+Više informacija potražite u članku [Kreiranje novog okruženja](create-environment.md) i dostupnosti [proizvoda po geografiji](https://dynamics.microsoft.com/availability-reports/).
 
 ## <a name="july-2022-updates"></a>Ispravke za jul 2022.
 
@@ -88,7 +96,7 @@ Više informacija potražite u članku [Bezbedan pristup podacima klijenata pomo
 
 ### <a name="connect-to-your-data-using-azure-private-link"></a>Povezivanje sa podacima pomoću Azure privatne veze
 
-Azure privatna veza omogućava korisnicima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
+Azure Privatna veza omogućava korisničkim uvidima da se povežu sa vašim Azure Data Lake Storage nalogom preko privatnog krajnja tačka u virtuelnoj mreži. Za podatke u nalogu za skladištenje, koji nije izložen javnom Internetu, privatna veza omogućava povezivanje sa tom ograničenom mrežom.
 
 Više informacija potražite u članku Korišćenje [privatne veze u uvidima klijenata](security-overview.md#set-up-an-azure-private-link).
 
@@ -198,7 +206,7 @@ Azure Synapse Analytics je usluga analitike preduzeća koja ubrzava vreme na uvi
 
 Organizacije koje već koriste mogu Azure Synapse Analytics da uneste te podatke u uvid kupca. 
 
-Više informacija potražite u članku [Povezivanje Azure Synapse izvor podataka (pregled)](connect-synapse.md).
+Više informacija potražite u članku [Povezivanje Azure Synapse izvor podataka (Pregled)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>LiveRamp obogaćivanje (pregled)
 
@@ -238,7 +246,7 @@ Za prelazni period, postojeći učesnici pregleda i dalje imaju pristup nekim mo
 - Poboljšajte objedinjene profile sa prenaglašenom i prefinjenom manifestacijom kako biste imali koristi od pune vrednosti podataka korisnika
   
 Tokom prelaznog perioda, uhvaćeni događaji se i dalje strimuju do povezanog Data Jezera. Kada se ova funkcionalnost isključi, deljenje podataka će se zaustaviti i neće se novi događaji slati na povezano skladište.
-Obratite se direktno timu Microsoft naloga ako imate pitanja o kraju pregleda mogućnosti. Tim naloga će vas obaveštavati o pristiglim lansiranjima. 
+Obratite se direktno timu Microsoft naloga ako imate pitanja o kraju pregleda mogućnosti. Tim naloga će vas obaveštavati o narednim lansiranjima. 
 
 ## <a name="january-2022-updates"></a>Ispravke za januar 2022. godine
 

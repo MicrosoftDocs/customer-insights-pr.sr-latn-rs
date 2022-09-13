@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246264"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396018"
 ---
 # <a name="view-system-configuration"></a>Prikaži konfiguraciju sistema
 
@@ -38,12 +38,6 @@ Prikažite detalje o korišćenju API-ja u realnom vremenu i pogledajte koji su 
    - **API pozivi** – grafikon koji prikazuje ukupni broj poziva API-ju u izabranom vremenskom okviru.
    - **Prenos podataka** – grafikon koji prikazuje količinu podataka koja je preneta preko API-ja u izabranom vremenskom okviru.
    - **Operacije** – tabela sa redovima za svaku dostupnu API operaciju i detalje o upotrebi operacija. Izaberite ime operacije da biste išli [na API referencu](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
-
-   Operacije koje koriste [unošenje podataka u realnom vremenu](real-time-data-ingestion.md) sadrže dvogledni simbol za prikaz upotrebe API-ja u realnom vremenu.
-
-   1. Izaberite dvogled da biste otvorili okno **za korišćenje API-ja u realnom** vremenu koje sadrži detalje o korišćenju operacije.
-   1. **Izaberite vremenski okvir** da biste prikazali.
-   1. Koristite polje **"Grupiši** po" da biste odabrali kako da na najbolji način predstavite interakcije u realnom vremenu. Podatke grupisanje po API metodu, kvalifikovanom imenu entiteta **(uneti entitet),** kreiranom **po (izvoru događaja),** rezultatu (uspehu **ili neuspehu) ili kodovima** grešaka **.** **·** Podaci su dostupni kao vremenski grafikon i tabela.
 
 ## <a name="view-system-information"></a>Prikaz informacija o sistemu
 

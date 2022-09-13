@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Korišćenje prilagođenih modela iz Azure mašinskog učenja
           href: custom-models.md
-        - name: Dopunjavanje delimično nedostajućih podataka
-          href: predictions.md
     - name: Primeri vodiča
       items:
         - name: Primer vodiča za previđanje trajne vrednosti klijenta

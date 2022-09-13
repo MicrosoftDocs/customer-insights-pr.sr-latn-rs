@@ -1,7 +1,7 @@
 ---
 title: Ažuriranje postavki ujedinjenja klijenta, naloga ili kontakta
 description: Ažurirajte duplirana pravila, pravila podudaranja ili objedinjena polja u postavkama ujedinjenja kupca ili naloga.
-ms.date: 08/12/2022
+ms.date: 08/26/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: Scott-Stabbert
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: f2c14c169f5973b5f400989b9eeea593eba09182
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: e893e66fd7691b9703d51ed8f87cfad63880cc3b
+ms.sourcegitcommit: 560c4ee16376a9c6fdd7860988ce2d2440194fa5
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304352"
+ms.lasthandoff: 09/01/2022
+ms.locfileid: "9392488"
 ---
 # <a name="update-unification-settings"></a>Ažuriranje postavki ujedinjenja
 
@@ -38,7 +38,7 @@ Izvršite sledeće korake da biste pregledali ili promenili postavke ujedinjenja
    > Pločica **"Podudarni** uslovi" prikazuje se samo ako je izabrano više entiteta.
 
 1. Odaberite šta želite da ažurirate:
-   - [Izvorna polja](#edit-source-fields) za dodavanje entiteta ili atributa ili menjanje tipova atributa.
+   - [Izvorna polja](#edit-source-fields) za dodavanje atributa ili entiteta ili menjanje tipova atributa. Da biste uklonili atribut, pogledajte članak Uklanjanje [objedinjenog polja](#remove-a-unified-field). Da biste uklonili entitet, pogledajte članak [Uklanjanje objedinjenog entiteta](#remove-a-unified-entity).
    - [Duplirani zapisi](#manage-deduplication-rules) za upravljanje pravilima deduplikacije ili željenim opcijama objedinjavanja.
    - [Podudarni](#manage-match-rules) uslovi za ažuriranje pravila podudaranja u dva ili više entiteta.
    - [Objedinjena polja kupaca](#manage-unified-fields) za kombinovanje ili isključivanje polja. Povezane profile možete grupišeti i u klastere.
@@ -53,8 +53,6 @@ Izvršite sledeće korake da biste pregledali ili promenili postavke ujedinjenja
 
 ## <a name="edit-source-fields"></a>Uređivanje izvornih polja
 
-Ne možete ukloniti atribut ili entitet ako su već objedinjeni.
-
 1. Na **pločici** "Izvorna **polja" izaberite stavku** "Uredi".
 
    :::image type="content" source="media/m3_source_edit.png" alt-text="Snimak ekrana stranice izvornih polja koja prikazuje broj primarnih ključeva, mapiranih i nemaskidiranih polja":::
@@ -66,6 +64,80 @@ Ne možete ukloniti atribut ili entitet ako su već objedinjeni.
 1. Opcionalno, možete da promenite primarni ključ za entitet, tipove atributa i **da prebacite inteligentno mapiranje na** ili van njega. Više informacija potražite u članku [Izbor izvornih polja](map-entities.md).
 
 1. Kliknite **na dugme** "Dalje" da biste napravili promene u pravilima deduplikacije ili izaberite **stavku Sačuvaj i zatvori i** vrati se na Ažuriranje [postavki ujedinjenja](#update-unification-settings).
+
+### <a name="remove-a-unified-field"></a>Uklanjanje objedinjenog polja
+
+Da biste uklonili objedinjeno polje, polje mora biti uklonjeno iz svih zavisnosti kao što su segmenti, mere, obogaćivanje ili odnosi.
+
+1. Kada uklonite sve zavisnosti za polje, idite na opciju "Ujedinjenje **podataka** > **"**.
+
+1. Na pločici **"** Objedinjena **polja kupca" izaberite** stavku "Uredi".
+
+1. Izaberite sva pojavljivanja polja, a zatim izaberite stavku **Izuzmi**.
+
+   :::image type="content" source="media/m3_remove_attribute1.png" alt-text="Snimak ekrana stranice objedinjenih polja koja prikazuje izabrana polja i dugme &quot;Isključi&quot;":::
+
+1. Kliknite na **dugme Gotovo** da biste potvrdili, a zatim izaberite **Sačuvaj i zatvori**.
+
+   > [!TIP]
+   > Ako vidite poruku "Nije moguće sačuvati ujedinjenje. Navedeni resurs se ne može menjati ili brisati zbog zavisnosti nizvodno", zatim se polje i dalje koristi u zavisnosti nizvodno.
+
+1. Ako se polje koristi u pravilu za duplirane zapise ili uslove podudaranja, izvršite sledeće korake. U suprotnom, pređite na sledeći korak.
+   1. Na **pločici** "Duplirani **zapisi" izaberite stavku** "Uredi".
+   1. Uklonite polje iz svih pravila u kojima se koristi, ako postoje, a zatim kliknite na dugme **Dalje**.
+   1. Na stranici **Podudarni** uslovi uklonite polje iz svih pravila u kojima se koristi, ako postoje, a zatim izaberite sačuvaj **i zatvori**.
+   1. Izaberite **opciju** > **Ujedini ujedini profile i zavisnosti klijenata**. Sačekajte da se ujedinjenje završi pre nego što odete na sledeći korak.
+
+1. Na **pločici** "Izvorna **polja" izaberite stavku** "Uredi".
+
+1. Izaberite **izaberite entitete i** polja i opozovite izbor u polju za potvrdu pored svakog pojavljivanja polja.
+
+   :::image type="content" source="media/m3_remove_attribute2.png" alt-text="Snimak ekrana dijaloga &quot;Izbor entiteta i polja&quot; koji prikazuje neodovršena polja za potvrdu":::
+
+1. Izaberite **Primeni**.
+
+1. Izaberite stavku **Sačuvaj i zatvori**.
+
+1. Izaberite **opciju Ujedini** > **objedini korisničke profile i zavisnosti da biste** ažurirali objedinjeni profil.
+
+### <a name="remove-a-unified-entity"></a>Uklanjanje objedinjenog entiteta
+
+Da biste uklonili entitet koji je objedinjen, entitet mora biti uklonjen iz svih zavisnosti kao što su segmenti, mere, bogaćenja ili odnosi.
+
+1. Kada se uklone sve zavisnosti za entitet, idite na "Ujedinjenje **podataka** > **"**.
+
+1. Na pločici **"** Objedinjena **polja kupca" izaberite** stavku "Uredi".
+
+1. Izaberite sva polja za entitet, a zatim izaberite stavku **Izuzmi**.
+
+   :::image type="content" source="media/m3_remove_entity1.png" alt-text="Snimak ekrana objedinjenih polja sa svim poljima za izabrani entitet i dugme &quot;Isključi&quot;":::
+
+1. Kliknite na **dugme Gotovo** da biste potvrdili, a zatim izaberite **Sačuvaj i zatvori**.
+
+   > [!TIP]
+   > Ako vidite poruku "Nije moguće sačuvati ujedinjenje. Navedeni resurs se ne može menjati ili brisati zbog zavisnosti nizvodno", zatim se entitet i dalje koristi u zavisnosti nizvodno.
+
+1. Na **pločici** "Duplirani **zapisi" izaberite stavku** "Uredi".
+
+1. Uklonite sva pravila iz entiteta, ako postoje, a zatim kliknite na dugme **Dalje**.
+
+1. Na stranici **Podudarni** uslovi izaberite entitet, a zatim kliknite na dugme **Izbriši**.
+
+   :::image type="content" source="media/m3_remove_entity2.png" alt-text="Snimak ekrana podudarnih uslova sa izabranim entitetom i dugmetom &quot;Izbriši&quot;":::
+
+1. Izaberite stavku **Sačuvaj i zatvori**.
+
+1. Na **pločici** "Izvorna **polja" izaberite stavku** "Uredi".
+
+1. Izaberite **izaberite entitete i polja** i opozovite izbor u polju za potvrdu pored entiteta.
+
+   :::image type="content" source="media/m3_remove_entity3.png" alt-text="Snimak ekrana dijaloga &quot;Izbor entiteta i polja&quot; sa osjanjeno je polje za potvrdu entiteta":::
+
+1. Izaberite **Primeni**.
+
+1. Izaberite stavku **Sačuvaj i zatvori**.
+
+1. Izaberite **opciju Ujedini** > **objedini korisničke profile i zavisnosti da biste** ažurirali objedinjeni profil.
 
 ## <a name="manage-deduplication-rules"></a>Upravljanje pravilima deduplikacije
 
