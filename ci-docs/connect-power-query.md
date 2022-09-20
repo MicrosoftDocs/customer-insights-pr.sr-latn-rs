@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207062"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463282"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje sa Power Query izvor podataka
 
@@ -63,7 +63,9 @@ Dodavanje izvora podataka zasnovanih na Power Query linijama spajanja obično sl
 Učitavanje podataka može potrajati. Nakon uspešnog osvežavanja, uneti podaci se mogu redigovanje sa stranice [**"Entiteti**](entities.md) ".
 
 > [!CAUTION]
-> Nova izvor podataka zasnovana na Power Query kreiranju priliva [podataka u Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemojte menjati ime priliva podataka u administrativnom centru koji Power Platform se koristi u uvidima klijenata. Preisagavanje priliva podataka dovodi do problema sa referencama između izvor podataka i priliva Dataverse podataka.
+>
+> - Nova izvor podataka zasnovana na Power Query kreiranju priliva [podataka u Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nemojte menjati ime priliva podataka u administrativnom centru koji Power Platform se koristi u uvidima klijenata. Preisagavanje priliva podataka dovodi do problema sa referencama između izvor podataka i priliva Dataverse podataka.
+> - Uporedne procene za izvore podataka Power Query u uvidima klijenata imaju ista ograničenja [za osvežavanje kao Dataflows u PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Ako osvežavanje podataka ne uspe zato što je dostiglo ograničenje procene, preporučujemo da podesite raspored osvežavanja za svaki tok podataka da biste se uverili da se izvori podataka ne obrađuju u isto vreme.
 
 ### <a name="available-power-query-data-sources"></a>Dostupni Power Query izvori podataka
 
@@ -75,9 +77,9 @@ Linije spajanja sa potvrdnim znakom u koloni **"Uvidi kupaca (dataflows)"** dost
 
 Unosni podaci iz lokalni podataka su podržani na osnovu Microsoft Power Platform priliva podataka (PPDF). Priliv podataka možete da omogućite u uvidima klijenata tako što ćete [prilikom podešavanja Microsoft Dataverse okruženja obezbediti URL](create-environment.md) adresu okruženja.
 
-Izvori podataka koji su kreirani nakon povezivanje okruženja sa Dataverse uvidom klijenata podrazumevano [Power Platform koriste priliv podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Tokovi podataka podržavaju lokalnu povezanost pomoću mrežnog prolaza za podatke. Možete da uklonite i ponovo kreirate izvore podataka koji su postojali pre Dataverse nego što je okruženje [bilo povezano lokalni mrežnim prolazima podataka](/data-integration/gateway/service-gateway-app).
+Izvori podataka koji su kreirani nakon povezivanje okruženja sa Dataverse uvidom klijenata podrazumevano [Power Platform koriste priliv podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Tokovi podataka podržavaju lokalnu povezanost pomoću mrežnog prolaza za podatke. Možete da uklonite i ponovo kreirate izvore podataka koji su postojali pre Dataverse nego što je okruženje bilo [povezano lokalni mrežnim prolazima podataka](/data-integration/gateway/service-gateway-app).
 
-Mrežni prolazi podataka iz postojećeg okruženja Power BI Power Apps će biti vidljivi i možete ih ponovo koristiti u uvidima klijenata. Stranica sa izvorima podataka prikazuje veze do Microsoft Power Platform okruženja u kojem možete da pregledate i lokalne mrežne prolaze za podatke.
+Mrežni prolazi podataka iz postojećeg Power BI okruženja Power Apps će biti vidljivi i možete ih ponovo koristiti u uvidima klijenata ako su mrežni prolaz podataka i okruženje "Uvidi kupaca" u istoj Azure oblasti. Stranica sa izvorima podataka prikazuje veze do Microsoft Power Platform okruženja u kojem možete da pregledate i lokalne mrežne prolaze za podatke.
 
 > [!IMPORTANT]
 > Uverite se da su mrežni prolazi ažurirani u najnoviju verziju. Možete direktno da instalirate ispravku i ponovo konfigurišete mrežni prolaz sa upita prikazanog na ekranu mrežnog prolaza ili da preuzmete [najnoviju verziju](https://powerapps.microsoft.com/downloads/). Ako ne koristite najnoviju verziju mrežnog prolaza, osvežavanje priliva podataka neće uspeti **sa porukama o greškama kao što je Ključna reč nije podržano: svojstva konfiguracije. Naziv parametra: ključna reč**.

@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194940"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473659"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Programski dodatak za karticu kupca za Dynamics 365 aplikacije (pregled)
 
@@ -32,7 +32,8 @@ Steknite pregled svojih klijenata od 360 stepeni direktno u Dynamics 365 aplikac
 - Da bi se Vaši Dynamics 365 podaci mapirali u profile klijenata "Uvidi kupaca", preporučujemo da se oni unose [iz Dynamics 365 aplikacije pomoću Microsoft Dataverse linije spajanja](connect-power-query.md). Ako koristite drugi metod za unos Dynamics 365 kontakata (ili poslovnih kontakata), uverite se da `contactid` je polje (ili `accountid`) postavljeno [kao primarni ključ za taj izvor podataka tokom procesa ujedinjenja podataka](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Svi Dynamics 365 korisnici programskog dodatka "Kartica kupca" moraju biti [dodati kao korisnici u programu](permissions.md) Customer Insights da bi videli podatke.
 - [Konfigurisane mogućnosti pretraživanja i filtriranja](search-filter-index.md) u usluzi Customer Insights.
-- Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima klijenata. Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
+- Neki podaci i kontrole dostupni su samo u određenim tipovima okruženja. Konfiguracija programskog dodatka će vas obavestiti ako kontrola nije dostupna zbog izabranog tipa okruženja. Ova greška će se pokazati unutar kontrole prilikom prikazivanja. Saznajte više o [slučajevima upotrebe okruženja](work-with-business-accounts.md).
+- Svaka kontrola programskog dodatka oslanja se na određene podatke u uvidima klijenata.
   - **Kontrola mere** zahteva [konfigurisane mere atributa klijenta](measures.md).
   - **Kontrola obaveštajne** službe zahteva podatke generisane pomoću [predviđanja ili prilagođenih modela](predictions-overview.md).
   - **Kontrola detalja kupca** prikazuje sva polja iz profila dostupna u objedinjenom profilu kupca.
