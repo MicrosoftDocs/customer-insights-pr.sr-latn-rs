@@ -1,44 +1,43 @@
 ---
 title: Primer vodiča za predviđanje gubitka transakcija
 description: Koristite ovaj primer vodiča da biste isprobali spreman model predviđanja gubitka transakcija.
-ms.date: 05/11/2022
+ms.date: 09/19/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0ccc32b6e5e96adf6f2fa8c6d52960a07d1513f3
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741336"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609701"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Primer vodiča za predviđanje gubitka transakcija
 
-Ovaj vodič vam objašnjava vam kompletan primer predviđanja gubitka transakcija u usluzi Customer Insights pomoću podataka navedenih u nastavku. Svi podaci korišćeni u ovom vodiču nisu stvarni podaci o klijentima i deo su skupa podataka Contoso koji se nalazi u *Demo* okruženju u okviru pretplate na Customer Insights.
+Ovaj vodič će vam objasniti primer "kraj-na-kraj" transakcionog churn predviđanje korišćenjem probnih podataka. Preporučujemo da isprobate ovu predviđanje [u novom okruženju](manage-environments.md).
 
 ## <a name="scenario"></a>Scenario
 
-Contoso je kompanija koja proizvodi visokokvalitetnu kafu i aparate za kafu, koje prodaju putem svog veb-sajta Contoso Coffee. Cilj im je da saznaju koji će klijenti koji obično redovno kupuju njihove proizvode prestati da budu aktivni klijenti u narednih 60 dana. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
+Contoso je kompanija koja proizvodi visokokvalitetne aparate za kafu i kafu. Proizvode prodaju preko svog sajta Contoso Coffee. Cilj im je da saznaju koji će klijenti koji obično redovno kupuju njihove proizvode prestati da budu aktivni klijenti u narednih 60 dana. Kada znaju koje klijente će **verovatno izgubiti**, mogu da uštede na marketinškim kampanjama i fokusiraju se na njihovo zadržavanje.
 
 ## <a name="prerequisites"></a>Preduslovi
 
-- Barem [dozvole saradnika](permissions.md) u usluzi Customer Insights.
-- Preporučujemo da primenite sledeće korake [u novom okruženju](manage-environments.md).
+- Barem [Dozvole saradnika](permissions.md).
 
 ## <a name="task-1---ingest-data"></a>1. zadatak – Unos podataka
 
-Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvora podataka pomoću Power Query linija spajanja](connect-power-query.md). Sledeće informacije pretpostavljaju da ste se upoznali sa unošenjem podataka uopšte. 
+Pregledajte članke [o unošenju podataka](data-sources.md) i [povezivanju sa Power Query izvor podataka](connect-power-query.md). Sledeće informacije pretpostavljaju da ste uopšteno upoznati sa unosećim podacima.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Unesite podatke o klijentima sa platforme eCommerce
 
-1. Napravite izvor podataka pod imenom **eCommerce**, izaberite opciju uvoza i izaberite **Tekst/CSV** konektor.
+1. Kreirajte izvor podataka ime **eCommerce** i izaberite **Text/CSV** konektor.
 
 1. Unesite URL adresu za eCommerce kontakte https://aka.ms/ciadclasscontacts.
 
-1. Dok uređujete podatke, izaberite **Transformacija**, a zatim **Koristi prvi red kao zaglavlja**.
+1. Tokom uređivanja podataka izaberite stavku **Transformiši**, a **zatim koristi prvi red kao zaglavlja**.
 
 1. Ažurirajte tip podataka za dolenavedene kolone:
 
@@ -47,7 +46,7 @@ Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvo
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformišite datum rođenja u datum.":::
 
-1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kontakti**
+1. U polju **Ime u** desnom oknu preimenujte izvor podataka **eCommerceContacts**
 
 1. Sačuvajte izvor podataka.
 
@@ -55,26 +54,26 @@ Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvo
 
 1. Dodajte još jedan skup podatka u isti **eCommerce** izvor podataka. Ponovo izaberite konektor **Tekst/CSV**.
 
-1. Unesite URL za podatke o **kupovinama na mreži** https://aka.ms/ciadclassonline.
+1. Unesite URL adresu za podatke o kupovini na mreži https://aka.ms/ciadclassonline.
 
-1. Dok uređujete podatke, izaberite **Transformacija**, a zatim **Koristi prvi red kao zaglavlja**.
+1. Tokom uređivanja podataka izaberite stavku **Transformiši**, a **zatim koristi prvi red kao zaglavlja**.
 
 1. Ažurirajte tip podataka za dolenavedene kolone:
 
    - **Kupljeno dana**: Datum/vreme
    - **Ukupna cena**: Valuta
-   
-1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **eCommerce kupovine**.
+
+1. U polju **Ime u** desnom oknu preimenujte izvor podataka **eCommercePurchases**.
 
 1. Sačuvajte izvor podataka.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Unesite podatke o klijentima iz šeme lojalnosti
 
-1. Napravite izvor podataka pod imenom **Šema lojalnosti**, izaberite opciju uvoza i izaberite **Tekst/CSV** konektor.
+1. Kreirajte izvor podataka pod imenom **"LoyaltyScheme**" i izaberite **text/CSV** konektor.
 
 1. Unesite URL adresu za eCommerce kontakte https://aka.ms/ciadclasscustomerloyalty.
 
-1. Dok uređujete podatke, izaberite **Transformacija**, a zatim **Koristi prvi red kao zaglavlja**.
+1. Tokom uređivanja podataka izaberite stavku **Transformiši**, a **zatim koristi prvi red kao zaglavlja**.
 
 1. Ažurirajte tip podataka za dolenavedene kolone:
 
@@ -82,68 +81,86 @@ Posebno pregledajte članke [o unošenju podataka](data-sources.md)[i uvozu izvo
    - **Nagradni poeni**: Ceo broj
    - **Kreirano**: Datum/vreme
 
-1. U polju **Ime** u desnom oknu preimenujte izvor podataka iz **Upit** u **Lojalni klijenti**.
+1. U polju **Ime u** desnom oknu preimenujte izvor podataka **loyCustomers**.
 
 1. Sačuvajte izvor podataka.
 
 ## <a name="task-2---data-unification"></a>2. zadatak 2 – Objedinjavanje podataka
 
+Pregledajte članak o [ujedinjenju podataka](data-unification.md). Sledeće informacije pretpostavljaju da ste uopšte upoznati sa ujedinjenjem podataka.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-transaction-churn-prediction"></a>3. zadatak – Konfigurišite predviđanje gubitka transakcija
+## <a name="task-3---create-transaction-history-activity"></a>Zadatak 3 - Kreiranje aktivnosti istorije transakcija
 
-Sa objedinjenim profilima klijenata, sada možemo da pokrenemo transakciju churn predviđanje. Detaljne korake pogledajte članak [Transaction churn predviđanje](predict-transactional-churn.md). 
+Pregledajte članak o [aktivnostima klijenata](activities.md). Sledeće informacije pretpostavljaju da ste upoznati sa kreiranjem aktivnosti uopšte.
 
-1. Idite na **Obaveštavanje** > **Otkrijte** i izaberite da koristite **Model gubitka klijenata**.
+1. Kreirajte aktivnost pod nazivom eCommercePurchases **sa** entitetom eCommercePurchases:eCommerce *i njegovim primarnim ključem,* ID kupovine **.**
 
-1. Izaberite opciju **Transakcija** i **Započnite**.
+1. Kreirajte relaciju *između eCommercePurchases:eCommerce* i *eCommerceContacts:eCommerce* **sa ContactID-om** kao strani ključ za povezivanje dva entiteta.
+
+1. Izaberite **opciju TotalPrice** za **opciju "Aktiviranje** **događaja" i "Kupoprodaja**" **za vremensku kontrolu**.
+
+1. Izaberite **"Linija prodavca"** za vrstu **aktivnosti** i semantički mapiraj podatke o aktivnostima.
+
+1. Pokrenite aktivnost.
+
+## <a name="task-4---configure-transaction-churn-prediction"></a>4. zadatak – Konfigurišite predviđanje gubitka transakcija
+
+Sa objedinjenim profilima klijenata i aktivnošću, pokrenite karticu za predviđanje.
+
+1. Idite na **obaveštajna** > **predviđanja**.
+
+1. Na kartici **Kreiranje** izaberite stavku **Koristi model** na modelu **Customer** churn.
+
+1. Izaberite **Transactional** za vrstu churn-a, a zatim prvi **koraci**.
 
 1. Nazovite model **OOB predviđanje gubitka eCommerce transakcija** i izlazni entitet **OOBeCommerceChurnPrediction**.
 
-1. Definišite dva uslova za model gubitka:
+1. Izaberite **Sledeće**.
 
-   * **Prozor predviđanja**: **najmanje 60** dana. Ovo podešavanje definiše koliko u budućnosti želimo da predvidimo gubitak klijenata.
+1. Definišite željene postavke modela:
 
-   * **Definicija gubitka**: **najmanje 60** dana. Trajanje bez kupovine nakon kojeg se klijent smatra izgubljenim.
+   - **predviđanje:** **60 dana** da definišemo koliko daleko u budućnost želimo da predvidimo kupca.
 
-     :::image type="content" source="media/model-levers.PNG" alt-text="Izaberite regulatore modela Vremenski period predviđanja i Definicija gubitka.":::
+   - **Churn definicija**: **60** dana da označite trajanje bez kupovine nakon čega se kupac smatra churned.
+
+     :::image type="content" source="media/model-levers.PNG" alt-text="Izaberite željene postavke modela predviđanje prozora i Čurn definicije.":::
+
+1. Izaberite **Sledeće**.
 
 1. Izaberite **Istorija kupovine (obavezno)** i **Dodajte podatke** za istoriju kupovine.
 
-1. Dodajte entitet **eCommerce kupovine: eCommerce** i mapirajte polja iz platforme eCommerce sa odgovarajućim poljima koje traži model.
-
-1. Pridružite entite **eCommerce kupovine: eCommerce** sa **eCommerce kontakti: eCommerce**.
+1. Izaberite **SalesOrderLine** i entitet eCommercePurchases i kliknite na dugme **Dalje**. Potrebni podaci se automatski popunjavaju iz aktivnosti. Izaberite stavku **Sačuvaj**, a zatim **dalje**.
 
    :::image type="content" source="media/model-purchase-join.PNG" alt-text="Pridružite eCommerce entitete.":::
 
-1. Izaberite **Dalje** da biste postavili raspored modela.
+1. Preskočite korak **Dodatnih podataka (opcionalno**).
 
-   Model treba redovno da se obučava kako bi naučio nove obrasce kada dođe do unosa novih podataka. Za ovaj primer izaberite **Mesečno**.
+1. U koraku **ažuriranja** podataka izaberite **mesečni** za raspored modela.
 
 1. Nakon pregleda svih detalja, izaberite **Sačuvaj i pokreni**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>4. zadatak – Pregled rezultata modela i objašnjenja
+## <a name="task-5---review-model-results-and-explanations"></a>5. zadatak – Pregled rezultata modela i objašnjenja
 
-Neka model završi obuku i ocenjivanje podataka. Sada možete da pregledate objašnjenja modela Churn. Za više informacija pogledajte [Pregledajte status i rezultate predviđanja](predict-transactional-churn.md#review-a-prediction-status-and-results).
+Neka model završi obuku i ocenjivanje podataka. Pregledajte objašnjenja modela Churn. Više informacija potražite u članku [Prikaz predviđanje rezultata](predict-transactional-churn.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>5. zadatak – Kreirajte segment klijenata sa visokim rizikom od gubitka
+## <a name="task-6---create-a-segment-of-high-churn-risk-customers"></a>6. zadatak – Kreirajte segment klijenata sa visokim rizikom od gubitka
 
-Pokretanje proizvodnog modela stvara novi entitet koji možete da vidite u odeljku **Podaci** > **Entiteti**.   
+Pokretanjem modela proizvodnje kreira se novi entitet koji je naveden u entitetima **podataka** > **·**. Možete da kreirate novi segment na osnovu entiteta koji je kreirao model.
 
-Možete da kreirate novi segment na osnovu entiteta koji je kreirao model.
+1. Na stranici rezultata, izaberite **Napravi segment**.
 
-1.  Idite na **Segmenti**. Izaberite **Novo** i **Napravi od** > **Obaveštavanje**. 
+1. Kreirajte pravilo koristeći **entitet OOBeCommerceChurnPrediction** i definišite segment:
+   - **Polje**: ChurnScore
+   - **Operator**: veći od
+   - **Vrednost**: 0.6
 
-   :::image type="content" source="media/segment-intelligence.PNG" alt-text="Kreirajte segment sa izlazom modela.":::
+1. Izaberite **sačuvaj** i **pokreni** segment.
 
-1. Izaberite **OOBeCommerceChurnPrediction** krajnja tačka i definišite segment: 
-   - Polje: Ocena gubitka
-   - Operator: veće je od
-   - Vrednost: 0,6
+Sada imate segment koji se dinamički ažurira i koji identifikuje kupce sa visokim rizikom. Više informacija potražite u odeljku [Kreiranje i upravljanje segmentima](segments.md).
 
-Sada imate segment koji se dinamički ažurira i koji identifikuje kupce sa visokim rizikom.
-
-Više informacija potražite u odeljku [Kreiranje i upravljanje segmentima](segments.md).
-
+> [!TIP]
+> Segment za model "Segment" možete kreirati i predviđanje stranici "Segmenti **" tako što** ćete izabrati **stavku "Novo**" i izabrati stavku "Kreiraj **od inteligencije** > **"**. Više informacija potražite u članku [Kreiranje novog segmenta sa brzim segmentima](segment-quick.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

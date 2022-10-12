@@ -1,7 +1,7 @@
 ---
 title: Entiteti u usluzi Customer Insights
 description: Pogledajte podatke na stranici Entiteti.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183602"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610115"
 ---
 # <a name="entities-in-customer-insights"></a>Entiteti u usluzi Customer Insights
 
@@ -61,27 +61,5 @@ Idite na **entitete** > **podataka** da biste prikazali listu entiteta. Sledeće
   - **Kreirano**: Datum i vreme kreiranja entiteta.
   - **Uredio**: Ime osobe koja je izmenila entitet.
   - **Edited**: Datum i vreme izmene entiteta.
-
-## <a name="entity-specific-information"></a>Informacije određene za entitet
-
-Sledeći odeljak pruža informacije o nekim entitetima koje je kreirao sistem.
-
-### <a name="corrupted-data-sources"></a>Oštećeni izvori podataka
-
-Polja iz unetog izvora podataka mogu sadržati oštećene podatke. Zapisi sa oštećenim poljima izloženi su u sistemski kreiranim entitetima. Poznavanje oštećenih zapisa pomaže vam da identifikujete koje podatke pregledati i ažurirati na izvornom sistemu. Nakon sledećeg osvežavanja izvora podataka, korigovani zapisi se unose u rešenje Customer Insights i prosleđuju posledičnim procesima. 
-
-Na primer, kolona „rođendan“ ima tip podataka postavljen kao „datum“. U zapis klijenta ima datum rođenja unet kao „01/01/19777“. Sistem će označiti ovaj zapis kao oštećen. Neko sada može da promeni rođendan u izvornom sistemu na „1977“. Nakon automatskog osvežavanja izvora podataka, polje sada ima važeći format i zapis će biti uklonjen iz oštećenog entiteta.
-
-Idite na **Podaci** > **Entiteti** i potražite oštećene entitete u odeljku **Sistem**. Šema imenovanja oštećenih entiteta: 'NazivIzvoraPodataka_NazivEntiteta_corrupt'. Izaberite oštećeni entitet da biste identifikovali oštećena polja i razlog na pojedinačnom nivou zapisa.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Razlog korupcije.":::
-
-Customer Insights i dalje obrađuje oštećene zapise. Međutim, oni mogu dovesti do problema pri radu sa objedinjenim podacima.
-
-Sledeće provere se vrše na unetim podacima kako bi se otkrili oštećeni zapisi:
-
-- Vrednost polja se ne podudara sa tipom podataka njegove kolone.
-- Polja sadrže znakove zbog kojih se kolone ne podudaraju sa očekivanom šemom. Na primer: nepravilno oblikovani navodnici, neupareni navodnici ili znakovi novog reda.
-- Ako postoje kolone datuma/datuma/datuma/datuma, njihov format mora biti naveden u modelu ako ne sledi standardni ISO format.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

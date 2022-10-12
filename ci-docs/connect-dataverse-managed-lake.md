@@ -1,7 +1,7 @@
 ---
 title: Povežite se sa podacima u Microsoft Dataverse upravljanom jezeru podataka
 description: Uvoz podataka iz Microsoft Dataverse upravljanog jezera podataka.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206970"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609813"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Povežite se sa podacima u Microsoft Dataverse upravljanom jezeru podataka
 
@@ -70,5 +70,93 @@ Da biste se povezali sa drugim Dataverse jezerom podataka, [kreirajte novi izvor
 1. Kliknite **na dugme** "Sačuvaj" da biste primenili promene i vratili se na **stranicu "Izvori podataka** ".
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Uobičajeni razlozi za greške u brisanju ili oštećene podatke
+
+Sledeće provere se vrše na unetim podacima kako bi se otkrili oštećeni zapisi:
+
+- Vrednost polja se ne podudara sa tipom podataka njegove kolone.
+- Polja sadrže znakove zbog kojih se kolone ne podudaraju sa očekivanom šemom. Na primer: nepravilno oblikovani navodnici, neupareni navodnici ili znakovi novog reda.
+- Ako postoje kolone datuma/datuma/datuma/datuma, njihov format mora biti naveden u modelu ako ne sledi standardni ISO format.
+
+### <a name="schema-or-data-type-mismatch"></a>Nepodudaranje šeme ili tipa podataka
+
+Ako podaci nisu u skladu sa šemom, zapisi su klasifikovani kao oštećeni. Ispravite izvorne podatke ili šemu i ponovo ih unesite.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Polja datuma u pogrešnom formatu
+
+Polja datuma u entitetu nisu u ISO ili en-US formatima. Podrazumevani format datuma u uvidima klijenata je en-US format. Sva polja datuma u entitetu treba da budu u istom formatu. Uvidi klijenata podržavaju druge formate navedene beleške ili osobine koje se izlaћu na nivou izvora ili entiteta u modelu ili manifestu.json. Na primer:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  U manifestu.json, format datuma može biti naveden na nivou entiteta ili na nivou atributa. Na nivou entiteta koristite "osobine eksponata" u entitetu u *.manifest.cdm.json da biste definisali format vremena prenosa podataka. Na nivou atributa koristite "primenjene osobine" u atributu u imenu entiteta.cdm.json.
+
+**Manifest.json na nivou entiteta**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entitet.json na nivou atributa**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

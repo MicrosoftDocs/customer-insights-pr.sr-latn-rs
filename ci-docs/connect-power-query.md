@@ -1,7 +1,7 @@
 ---
 title: Povezivanje sa izvor podataka Power Query (sadrži video)
 description: Unesti podaci preko linije Power Query spajanja (sadrži video zapis).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463282"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609913"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Povezivanje sa Power Query izvor podataka
 
@@ -43,16 +43,17 @@ Dodavanje izvora podataka zasnovanih na Power Query linijama spajanja obično sl
 
 1. Izaberite **Transformacija podataka**.
 
-1. Dijalog **Power Query " - Uređivanje upita vam** omogućava da pregledate i suzite suzite broj podataka. Entiteti koje su sistemi identifikovali u vašem izabranom izvoru podataka prikazuju se u levom oknu.
+1. Redigujte i pročistite podatke na **Power Query stranici - Uređivanje** upita. Entiteti koje su sistemi identifikovali u vašem izabranom izvoru podataka prikazuju se u levom oknu.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Dijalog za uređivanje upita":::
 
-1. Takođe možete da transformišete svoje podatke. Izaberite entitet za uređivanje ili transformisanje. Koristite opcije u prozoru Power Query da biste primenili transformacije. Svaka transformacija je navedena u okviru Primenjenih **koraka**. Power Query pruža brojne [unapred izgrađene opcije](/power-query/power-query-what-is-power-query#transformations) transformacije.
+1. Transformišite svoje podatke. Izaberite entitet za uređivanje ili transformisanje. Koristite opcije u prozoru Power Query da biste primenili transformacije. Svaka transformacija je navedena u okviru Primenjenih **koraka**. Power Query pruža brojne [unapred izgrađene opcije](/power-query/power-query-what-is-power-query#transformations) transformacije.
 
-   Preporučujemo da koristite sledeće transformacije:
-
-   - Ako unosite podatke iz CSV datoteke, prvi red često sadrži zaglavlja. Idite na dugme **"Transformiši** **" i izaberite stavku Koristi prvi red kao zaglavlja**.
-   - Uverite se da je tip podataka podešen na odgovarajući način. Na primer, za polja tipa datuma izaberite tip datuma.
+   > [!IMPORTANT]
+   > Preporučujemo da koristite sledeće transformacije:
+   >
+   > - Ako unosite podatke iz CSV datoteke, prvi red često sadrži zaglavlja. Idite na dugme **"Transformiši** **" i izaberite stavku Koristi prvi red kao zaglavlja**.
+   > - Uverite se da je tip podataka postavljen na odgovarajući način i da se podudara sa podacima. Na primer, za polja tipa datuma izaberite tip datuma.
 
 1. Da biste dodali dodatne entitete u izvor podataka dijalogu "**Uređivanje upita**", idite na stavku "Početak" i **izaberite** stavku "Uzmi **podatke"**. Ponavljajte korake od 5 do 10 dok ne dodate sve entitete za ovu izvor podataka. Ako imate bazu podataka koja uključuje više skupova podataka, svaki skup podataka je svoj sopstveni entitet.
 
@@ -77,7 +78,7 @@ Linije spajanja sa potvrdnim znakom u koloni **"Uvidi kupaca (dataflows)"** dost
 
 Unosni podaci iz lokalni podataka su podržani na osnovu Microsoft Power Platform priliva podataka (PPDF). Priliv podataka možete da omogućite u uvidima klijenata tako što ćete [prilikom podešavanja Microsoft Dataverse okruženja obezbediti URL](create-environment.md) adresu okruženja.
 
-Izvori podataka koji su kreirani nakon povezivanje okruženja sa Dataverse uvidom klijenata podrazumevano [Power Platform koriste priliv podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Tokovi podataka podržavaju lokalnu povezanost pomoću mrežnog prolaza za podatke. Možete da uklonite i ponovo kreirate izvore podataka koji su postojali pre Dataverse nego što je okruženje bilo [povezano lokalni mrežnim prolazima podataka](/data-integration/gateway/service-gateway-app).
+Izvori podataka koji su kreirani nakon povezivanje okruženja sa Dataverse uvidom klijenata podrazumevano [Power Platform koriste priliv podataka](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Tokovi podataka podržavaju lokalnu povezanost pomoću mrežnog prolaza za podatke. Možete da uklonite i ponovo kreirate izvore podataka koji su postojali pre Dataverse nego što je okruženje [bilo povezano lokalni mrežnim prolazima podataka](/data-integration/gateway/service-gateway-app).
 
 Mrežni prolazi podataka iz postojećeg Power BI okruženja Power Apps će biti vidljivi i možete ih ponovo koristiti u uvidima klijenata ako su mrežni prolaz podataka i okruženje "Uvidi kupaca" u istoj Azure oblasti. Stranica sa izvorima podataka prikazuje veze do Microsoft Power Platform okruženja u kojem možete da pregledate i lokalne mrežne prolaze za podatke.
 
@@ -102,5 +103,51 @@ Mrežni prolazi podataka iz postojećeg Power BI okruženja Power Apps će biti 
 1. Kliknite **na dugme** "Sačuvaj" da biste primenili promene i vratili se na **stranicu "Izvori podataka** ".
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Uobičajeni razlozi za greške u brisanju ili oštećenje podataka
+
+### <a name="data-type-does-not-match-data"></a>Tip podataka se ne podudara sa podacima
+
+Do najčešće nepodudaranja tipa podataka dolazi kada polje datuma nije podešeno na ispravan format datuma.
+
+Podaci se mogu popraviti na izvoru i ponovo uneti. Ili popravite transformaciju u okviru uvida klijenata. Da biste popravili transformaciju:
+
+1. Idite na **Podaci** > **Izvori podataka**.
+
+1. Pored izvor podataka oštećenim podacima izaberite stavku **Uredi**.
+
+1. Izaberite **Sledeće**.
+
+1. Izaberite svaki upit i potražite transformacije primenjene unutar "Primenjenih koraka" koje su netačne ili kolone datuma koje nisu transformisane sa formatom datuma.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Uređivanje prikazivanja netačnog formata datuma":::
+
+1. Promenite tip podataka da bi se ispravno podudarali sa podacima.
+
+1. Izaberite **Sačuvaj**. Ta izvor podataka je osvežena.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Rešavanje problema sa osvežavanje izvor podataka PPDF-a Power Query
+
+Ako su podaci bajati ili dobijate greške nakon osvežavanja izvor podataka, izvršite sledeće korake:
+
+1. Idite na [Power Platform](https://make.powerapps.com)
+
+1. Izaberite okruženje **za** instancu uvida kupaca.
+
+1. Krećite se **do dataflows**.
+
+1. Za tok podataka koji odgovara izvor podataka uvidima klijenata izaberite vertikalnu elipsu () i izaberite&vellip; stavku Prikaži istoriju **osvežavanja**.
+
+1. Ako je **status** priliva podataka "Uspeh **", vlasništvo** nad Power Query izvor podataka se možda promenilo:
+
+   1. Pregledajte raspored osvežavanja iz istorije osvežavanja.
+   1. Podesite raspored novog vlasnika i sačuvajte postavke.
+
+1. Ako status **priliva** podataka nije **uspeo**:
+
+   1. Preuzmite datoteku istorije osvežavanja.
+   1. Pregledajte preuzetu datoteku zbog propusta.
+   1. Ako nije moguće razrešiti grešku, izaberite **?** Da biste otvorili tiket za podršku. Uključite preuzetu datoteku istorije osvežavanja.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

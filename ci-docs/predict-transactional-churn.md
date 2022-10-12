@@ -1,175 +1,124 @@
 ---
 title: Transaction churn predviđanje (sadrži video)
 description: Predvidite da li je klijent ugrožen zbog toga što više ne kupuje vaše proizvode ili usluge.
-ms.date: 01/13/2022
+ms.date: 09/30/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: fd8df0f0a168ddfab9e8ad3af9e1f1fc0bc1b7a2
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9171112"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610529"
 ---
-# <a name="transaction-churn-prediction"></a>Predviđanje gubitka transakcija
+# <a name="predict-transaction-churn"></a>Predviđanje gubitka transakcija
 
-Predviđanje gubitka transakcija pomaže u predviđanju da li klijent više neće kupovati vaše proizvode ili usluge u datom vremenskom periodu. Možete da kreirate nova predviđanja gubitka u odeljku **Obaveštavanje** > **Predviđanja**. Izaberite **Moja predviđanja** da vidite druga predviđanja koja ste kreirali. 
+Predviđanje gubitka transakcija pomaže u predviđanju da li klijent više neće kupovati vaše proizvode ili usluge u datom vremenskom periodu.
+
+Morate imati poslovno znanje da biste razumeli šta churn znači za vaš posao. Podržavamo definicije gubitka zasnovane na vremenu, što znači da se smatra da je klijent izgubljen nakon perioda bez kupovine.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6Eg]
 
-Za okruženja zasnovana na poslovnim kontaktima, možemo predvideti transakcioni gubitak za poslovni nalog, a takođe i poslovnog naloga i drugog nivoa informacija, poput kategorije proizvoda. Dodavanjem dimenzije možete saznati koliko je verovatno da će poslovni kontakt „Contoso“ prestati da kupuje kategoriju proizvoda „kancelarijski materijal“. Osim toga, za poslovne naloge, možemo koristiti i veštačku inteligenciju za generisanje liste potencijalnih razloga zbog kojih će poslovni kontakt verovatno otići zbog kategorije informacija sekundarnog nivoa.
+Za okruženja zasnovana na poslovnim kontaktima, možemo predvideti transakcioni gubitak za poslovni nalog, a takođe i poslovnog naloga i drugog nivoa informacija, poput kategorije proizvoda. Na primer, dodavanje dimenzije može pomoći da se utvrdi koliko je verovatno da će nalog "Contoso" prestati da kupuje kategoriju proizvoda "kancelarijska podloga za pisanje". Osim toga, za poslovne naloge, možemo koristiti i veštačku inteligenciju za generisanje liste potencijalnih razloga zbog kojih će poslovni kontakt verovatno otići zbog kategorije informacija sekundarnog nivoa.
 
 > [!TIP]
-> Isprobajte uputstvo za probni vodič za transakciju predviđanje probne podatke: [Transaction churn predviđanje probni vodič](sample-guide-predict-transactional-churn.md).
+> Isprobajte churn transakciju predviđanje probnih podataka: [Transaction churn predviđanje uzorak vodiča](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Preduslovi
 
-# <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
+- Barem [Dozvole saradnika](permissions.md).
+- Najmanje 10 profila kupaca, po mogućstvu više od 1.000 jedinstvenih kupaca.
+- Identifikator kupca, jedinstveni identifikator koji odgovara transakcijama sa kupcima.
+- Podaci o transakcijama za najmanje dvostruko više od izabranog vremenskog prozora, kao što je dve do tri godine istorije transakcija. Idealno najmanje dve transakcije po kupcu. Istorija transakcija mora da sadrži:
+  - **ID transakcije**: Jedinstveni identifikator nabavke ili transakcije.
+  - **Datum transakcije**: Datum nabavke ili transakcije.
+  - **Vrednost transakcije**: Iznos valute ili numeričke vrednosti transakcije.
+  - **Jedinstveni ID proizvoda**: ID proizvoda ili usluge kupljene ako su podaci na nivou stavke predmeta.
+  - **Da li je ova transakcija bila** povraćaj: polje tačno/netačno koje identifikuje da li je transakcija bila povraćaj ili ne. Ako je **vrednost transakcije negativna**, nalaћemo povraćaj.
+- Podaci o aktivnostima klijenta:
+  - Identifikator kupca, jedinstveni identifikator za mapiranje aktivnosti kupcima.
+  - **Primarni ključ:** Jedinstveni identifikator za aktivnost. Na primer, poseta veb lokaciji ili evidencija upotrebe koja pokazuje da je klijent isprobao uzorak vašeg proizvoda.
+  - **Vremenska osa:** Datum i vreme događaja identifikovani primarnim ključem.
+  - **Događaj:** Ime događaja koji želite da koristite. Na primer, polje pod nazivom „Radnja korisnika“ u prehrambenoj prodavnici može biti kupon koji klijent koristi.
+  - **Detalji:** Detaljne informacije o događaju. Na primer, polje pod nazivom „Vrednost kupona“ u prehrambenoj prodavnici može biti vrednost valute kupona.
+- Manje od 20% vrednosti koje nedostaju u polju podataka entiteta
 
-- Barem [dozvole saradnika](permissions.md) u usluzi Customer Insights.
-- Poslovni uvidi da biste razumeli šta znači gubitak za vaše preduzeće. Podržavamo definicije gubitka zasnovane na vremenu, što znači da se smatra da je klijent izgubljen nakon perioda bez kupovine.
-- Podaci o vašim transakcijama/kupovinama i njihova istorija:
-    - Identifikatori transakcija za razlikovanje kupovina/transakcija.
-    - Identifikatori klijenata za podudaranje transakcija sa klijentima.
-    - Datumi transakcija, koji definišu datume kada se transakcija dogodila.
-    - Šema semantičkih podataka za kupovine/transakcije zahteva sledeće informacije:
-        - **ID transakcije**: Jedinstveni identifikator kupovine ili transakcije.
-        - **Datum transakcije**: Datum kupovine ili transakcije.
-        - **Vrednost transakcije**: Iznos valute/numerička vrednost transakcije/stavke.
-        - (Opciono) **Jedinstveni ID proizvoda**: ID proizvoda ili usluge kupljene ako su vaši podaci na nivou stavke porudžbine.
-        - (Opciono) **Da li je ova transakcija bila povraćaj**: Polje sa vrednošću „tačno/netačno“ koje identifikuje da li je transakcija bila povraćaj ili ne. Ako je **Vrednost transakcije** negativna, koristićemo i ove podatke za zaključivanje da je u pitanju povraćaj.
-- (Opcionalno) Podaci o aktivnostima klijenata:
-    - Identifikatori aktivnosti za razlikovanje aktivnosti iste vrste.
-    - Identifikatori klijenata za mapiranje aktivnosti na klijente.
-    - Informacije o aktivnostima koje sadrže ime i datum aktivnosti.
-    - Šema semantičkih podataka za aktivnosti klijenata uključuje:
-        - **Primarni ključ:** Jedinstveni identifikator aktivnosti. Na primer, poseta veb lokaciji ili evidencija upotrebe koja pokazuje da je klijent isprobao uzorak vašeg proizvoda.
-        - **Vremenska oznaka:** Datum i vreme događaja koje identifikuje primarni ključ.
-        - **Događaj:** Naziv događaja koji želite da koristite. Na primer, polje pod nazivom „Radnja korisnika“ u prehrambenoj prodavnici može biti kupon koji klijent koristi.
-        - **Detalji:** Detaljne informacije o događaju. Na primer, polje pod nazivom „Vrednost kupona“ u prehrambenoj prodavnici može biti vrednost valute kupona.
-
-# <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
-
-- Barem [dozvole saradnika](permissions.md) u usluzi Customer Insights.
-- Poslovni uvidi da biste razumeli šta znači gubitak za vaše preduzeće. Podržavamo definicije gubitka zasnovane na vremenu, što znači da se smatra da je klijent izgubljen nakon perioda bez kupovine.
-- Podaci o vašim transakcijama/kupovinama i njihova istorija:
-    - Identifikatori transakcija za razlikovanje kupovina/transakcija.
-    - Identifikatori klijenata za podudaranje transakcija sa klijentima.
-    - Datumi transakcija, koji definišu datume kada se transakcija dogodila.
-    - Šema semantičkih podataka za kupovine/transakcije zahteva sledeće informacije:
-        - **ID transakcije**: Jedinstveni identifikator kupovine ili transakcije.
-        - **Datum transakcije**: Datum kupovine ili transakcije.
-        - **Vrednost transakcije**: Iznos valute/numerička vrednost transakcije/stavke.
-        - (Opciono) **Jedinstveni ID proizvoda**: ID proizvoda ili usluge kupljene ako su vaši podaci na nivou stavke porudžbine.
-        - (Opciono) **Da li je ova transakcija bila povraćaj**: Polje sa vrednošću „tačno/netačno“ koje identifikuje da li je transakcija bila povraćaj ili ne. Ako je **Vrednost transakcije** negativna, koristićemo i ove podatke za zaključivanje da je u pitanju povraćaj.
-- (Opcionalno) Podaci o aktivnostima klijenata:
-    - Identifikatori aktivnosti za razlikovanje aktivnosti iste vrste.
-    - Identifikatori klijenata za mapiranje aktivnosti na klijente.
-    - Informacije o aktivnostima koje sadrže ime i datum aktivnosti.
-    - Šema semantičkih podataka za aktivnosti klijenata uključuje:
-        - **Primarni ključ:** Jedinstveni identifikator aktivnosti. Na primer, poseta veb lokaciji ili evidencija upotrebe koja pokazuje da je klijent isprobao uzorak vašeg proizvoda.
-        - **Vremenska oznaka:** Datum i vreme događaja koje identifikuje primarni ključ.
-        - **Događaj:** Naziv događaja koji želite da koristite. Na primer, polje pod nazivom „Radnja korisnika“ u prehrambenoj prodavnici može biti kupon koji klijent koristi.
-        - **Detalji:** Detaljne informacije o događaju. Na primer, polje pod nazivom „Vrednost kupona“ u prehrambenoj prodavnici može biti vrednost valute kupona.
-- (Opcionalno) Podaci o vašim klijentima:
-    - Ovi podaci bi trebalo da budu usklađeni sa statičkijim atributima kako bi se osiguralo da model najbolje funkcioniše.
-    - Šema semantičkih podataka za podatke o klijentima uključuje:
-        - **CustomerID:** Jedinstveni identifikator klijenta.
-        - **Datum kreiranja:** Datum kada je klijent prvobitno dodat.
-        - **Država ili provincija:** Država ili provincija lokacije klijenta.
-        - **Zemlja:** Zemlja klijenta.
-        - **Delatnost:** Tip delatnosti klijenta. Na primer, polje pod nazivom „Delatnost“ u pržionici kafe može ukazivati da li je klijent bio maloprodajni.
-        - **Klasifikacija:** Kategorizacija klijenta za vaše poslovanje. Na primer, polje pod nazivom „ValueSegment“ u pržionici za kafu može biti nivo klijenta na osnovu veličine klijenta.
-
----
-
-- Predložene karakteristike podataka:
-    - Dovoljno istorijskih podataka: Podaci o transakcijama za najmanje udvostručeni izabrani vremenski period. Poželjno je dve do tri godine istorije transakcija. 
-    - Više kupovina po klijentu: Idealno najmanje dve transakcije po klijentu.
-    - Broj klijenata: Najmanje 10 profila klijenata, po mogućnosti više od 1.000 jedinstvenih klijenata. Model neće uspeti sa manje od 10 klijenata i nedovoljnom količinom istorijskih podataka.
-    - Kompletnost podataka: Manje od 20% vrednosti koje nedostaju u polju podataka datog entiteta.
+Za poslovne naloge (B-na-B), dodajte podatke klijenata poravnate prema statičnijim atributima da biste se uverili da model ima najbolje rezultate:
+- **ID kupca:** Jedinstveni identifikator za kupca.
+- **Datum kreiranja:** Datum kada je kupac prvobitno dodat.
+- **Država ili pokrajina:** lokacija državne ili pokrajine kupca.
+- **Zemlja:** Zemlja mušterija.
+- **Industrija:** Tip delatnosti kupca. Na primer, polje pod nazivom „Delatnost“ u pržionici kafe može ukazivati da li je klijent bio maloprodajni.
+- **Klasifikacija:** Kategorizacija kupca za vaše poslovanje. Na primer, polje pod nazivom „ValueSegment“ u pržionici za kafu može biti nivo klijenta na osnovu veličine klijenta.
 
 > [!NOTE]
 > Za preduzeća sa velikom učestalošću kupovine kupaca (svakih nekoliko nedelja) preporučuje se odabir kraćeg perioda predviđanja i definicija gubitka klijenta. Za nisku učestalost kupovine (svakih nekoliko meseci ili jednom godišnje), odaberite duži period predviđanja i definiciju gubitka klijenta.
 
 ## <a name="create-a-transaction-churn-prediction"></a>Kreiranje predviđanja gubitka transakcija
 
-1. U usluzi Customer Insights, idite na **Obaveštavanje** > **Predviđanja**.
+1. Idite na **obaveštajna** > **predviđanja**.
 
-1. Izaberite pločicu **modela "Kupac" i** izaberite stavku **Koristi ovaj model**.
+1. Na kartici **Kreiranje** izaberite stavku **Korišćenje modela** na pločici **modela Customer churn**.
 
-1. U oknu **Model gubitka klijenata**, odaberite **Transakcija** i izaberite **Započnite**.
+1. Izaberite **transakciju** za vrstu churn-a, a zatim prvi **koraci**.
 
-:::image type="content" source="media/select-transaction-churn.PNG" alt-text="Snimak ekrana sa izabranom opcijom transakcije u oknu modela gubitka klijenata.":::
- 
-### <a name="name-model"></a>Davanje naziva modela
-
-1. Navedite naziv modela da biste ga razlikovali od ostalih modela.
-
-1. Navedite ime izlaznog entiteta koje sadrži samo slova i brojeve, bez razmaka. To je naziv koji će entitet modela koristiti. 
+1. **Dajte ime ovom modelu** i **Izlazni naziv entiteta** da ih razlikujete od ostalih modela ili entiteta.
 
 1. Izaberite **Sledeće**.
 
 ### <a name="define-customer-churn"></a>Definisanje gubitka klijenata
 
+U **svakom trenutku izaberite** stavku Sačuvaj radnu verziju da biste sačuvali predviđanje kao radnu verziju. Radna verzija predviđanje na kartici "**Moja predviđanja**".
+
 1. Podesite **predviđanje prozor**. Na primer, predvidite rizik od gubitka klijenata tokom sledećih 90 dana kako biste se uskladili sa vašim marketinškim naporima za zadržavanje. Predviđanje rizika od gubitka na duži ili kraći vremenski period može otežati reagovanje na faktore na vašem profilu rizika od gubitka, ali to zavisi od vaših specifičnih poslovnih zahteva.
-   >[!TIP]
-   > U svakom trenutku možete **da izaberete** opciju "Sačuvaj radnu verziju" da biste sačuvali predviđanje kao radnu verziju. Da biste nastavili, radnu verziju predviđanja možete da pronađete na kartici **Moja predviđanja**.
 
-1. Unesite broj dana da biste definisali churn u polju **Churn definicija**. Na primer, ako klijent nije obavio nijednu kupovinu u poslednjih 30 dana, moglo bi se smatrati da je izgubljen za vaše preduzeće. 
+1. Unesite broj dana da biste definisali churn u polju **Churn definicija**. Na primer, ako kupac nije napravio kupovinu u poslednjih 30 dana, može se smatrati da je to zahtev za vaše poslovanje.
 
-1. Izaberite **Dalje** za nastavak.
+1. Izaberite **Sledeće**.
 
-### <a name="add-required-data"></a>Dodavanje obaveznih podataka
+### <a name="add-purchase-history"></a>Dodavanje prethodnih kupovina
 
-1. Izaberite **Dodaj podatke** i odaberite vrstu aktivnosti u bočnom oknu koja sadrži potrebne podatke o transakcijama ili istoriji kupovine.
+1. Izaberite opciju **Dodaj podatke** za istoriju **transakcija kupca**.
 
-1. U **okviru Izaberite** aktivnosti odaberite određene aktivnosti od izabranog tipa aktivnosti na koji želite da se izračunavanje fokusira.
+1. Izaberite vrstu semantičke aktivnosti, **"Prodavac" ili** " **Linija prodavca"** koja sadrži informacije o istoriji transakcije. Ako aktivnost nije podešena, izaberite je **ovde i** kreirajte je.
+
+1. U **okviru** Aktivnosti, ako su atributi aktivnosti semantički mapirani prilikom kreiranja aktivnosti, odaberite određene atribute ili entitet na koji želite da se izračunavanje fokusira. Ako nije došlo do semantičkog mapiranja, izaberite opciju Uredi **i** mapiraj svoje podatke.
 
    :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Bočno okno prikazuje odabir određenih aktivnosti prema semantičkom tipu.":::
 
-   Ako još niste mapirali aktivnost u semantički tip, izaberite **Uredi** da biste to uradili. Otvara se vođeno iskustvo za mapiranje semantičkih aktivnosti. Mapirajte podatke u odgovarajuća polja u izabranom tipu aktivnosti.
+1. Kliknite **na** dugme "Dalje" i pregledajte atribute potrebne za ovaj model.
 
-1. Mapirajte semantičke atribute u polja koja su potrebna za pokretanje modela. Ako polja u nastavku nisu popunjena, konfigurišite odnos između entiteta istorije kupovine i entiteta *Klijent*. Izaberite **Sačuvaj**.
+1. Izaberite **Sačuvaj**.
 
-1. U koraku **"Dodavanje potrebnih podataka** " kliknite **na dugme** "Dalje" da biste nastavili ako ne želite da dodate još aktivnosti.
-
+1. Dodajte još aktivnosti ili kliknite na dugme " **Dalje"**.
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
 ### <a name="add-additional-data-optional"></a>Dodavanje dodatnih podataka (opcionalno)
 
-Konfigurišite relaciju između vašeg entiteta aktivnosti klijenta i entiteta *Klijent*.
+1. Izaberite **opciju Dodaj podatke** za **aktivnosti klijenta**.
 
-1. Izaberite polje koje identifikuje klijenta na tabeli aktivnosti klijenata. Može biti direktno povezano sa primarnim ID-om klijenta entiteta *Klijent*.
+1. Izaberite tip semantičke aktivnosti koji sadrži podatke koje želite da koristite. Ako aktivnost nije podešena, izaberite je **ovde i** kreirajte je.
 
-1. Izaberite entitet koji vam je primarni entitet *Klijent*.
+1. U **okviru** Aktivnosti, ako su atributi aktivnosti semantički mapirani prilikom kreiranja aktivnosti, odaberite određene atribute ili entitet na koji želite da se izračunavanje fokusira. Ako nije došlo do semantičkog mapiranja, izaberite opciju Uredi **i** mapiraj svoje podatke.
 
-1. Unesite ime koje opisuje odnos.
+1. Kliknite **na** dugme "Dalje" i pregledajte atribute potrebne za ovaj model.
 
-#### <a name="customer-activities"></a>Aktivnosti klijenta
+1. Izaberite **Sačuvaj**.
 
-1. Po želji odaberite **Dodajte podatke** za **Aktivnosti klijenata**.
-
-1. Izaberite tip semantičke aktivnosti koja sadrži podatke koje želite koristiti, a zatim izaberite jednu ili više aktivnosti u odeljku **Aktivnosti**.
-
-1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurišete. Izaberite **Kreiraj novo** i odaberite dostupni tip aktivnosti ili kreirajte novi.
-
-1. Izaberite **Sledeće**, a zatim **Sačuvaj**.
-
-1. Ako imate druge aktivnosti klijenata koje biste želeli da uključite, ponovite gornje korake.
+1. Izaberite **Sledeće**
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
 
 ### <a name="select-prediction-level"></a>Izbor nivoa predviđanja
 
-Većina predviđanja se kreiraju na nivou klijenta. U nekim situacijama to možda nije dovoljno detaljno da odgovori na vaše poslovne potrebe. Ovu funkciju možete koristiti za predviđanje gubitka za granu klijenta, na primer, umesto za klijenta u celini.
+Većina predviđanja se kreiraju na nivou klijenta. U nekim situacijama to možda nije dovoljno detaljno da odgovori na vaše poslovne potrebe. Koristite ovu funkciju da biste predvideli churn za granu kupca, npr.
 
-1. Da biste kreirali predviđanje na detaljnijem nivou od klijenta, izaberite **Izaberite entitet za sekundarni nivo**. Ako opcija nije dostupna, uverite se da ste dovršili prethodni odeljak.
+1. Izaberite **izaberite entitet za sekundarni nivo**. Ako opcija nije dostupna, uverite se da ste dovršili prethodni odeljak.
 
 1. Proširite entitete iz kojih želite da izaberete sekundarni nivo ili koristite okvir za filtriranje pretrage da biste filtrirali izabrane opcije.
 
@@ -182,27 +131,17 @@ Većina predviđanja se kreiraju na nivou klijenta. U nekim situacijama to možd
 
 ### <a name="add-additional-data-optional"></a>Dodavanje dodatnih podataka (opcionalno)
 
-Konfigurišite relaciju između vašeg entiteta aktivnosti klijenta i entiteta *Klijent*.
+1. Izaberite **opciju Dodaj podatke** za **aktivnosti klijenta**.
 
-1. Izaberite polje koje identifikuje klijenta na tabeli aktivnosti klijenata. Može biti direktno povezano sa primarnim ID-om klijenta entiteta *Klijent*.
+1. Izaberite tip semantičke aktivnosti koji sadrži podatke koje želite da koristite. Ako aktivnost nije podešena, izaberite je **ovde i** kreirajte je.
 
-1. Izaberite entitet koji vam je primarni entitet *Klijent*.
+1. U **okviru** Aktivnosti, ako su atributi aktivnosti semantički mapirani prilikom kreiranja aktivnosti, odaberite određene atribute ili entitet na koji želite da se izračunavanje fokusira. Ako nije došlo do semantičkog mapiranja, izaberite opciju Uredi **i** mapiraj svoje podatke.
 
-1. Unesite ime koje opisuje odnos.
+1. Kliknite **na** dugme "Dalje" i pregledajte atribute potrebne za ovaj model.
 
-#### <a name="customer-activities"></a>Aktivnosti klijenta
+1. Izaberite **Sačuvaj**.
 
-1. Po želji odaberite **Dodajte podatke** za **Aktivnosti klijenata**.
-
-1. Izaberite tip semantičke aktivnosti koja sadrži podatke koje želite koristiti, a zatim izaberite jednu ili više aktivnosti u odeljku **Aktivnosti**.
-
-1. Odaberite vrstu aktivnosti koja odgovara vrsti aktivnosti klijenta koju konfigurišete. Izaberite **Kreiraj novo** i odaberite dostupni tip aktivnosti ili kreirajte novi.
-
-1. Izaberite **Sledeće**, a zatim **Sačuvaj**.
-
-1. Ako imate druge aktivnosti klijenata koje biste želeli da uključite, ponovite gornje korake.
-
-#### <a name="customers-data"></a>Podaci o klijentima
+1. Izaberite **Sledeće**
 
 1. Opciono, izaberite **Dodaj podatke** za **Podaci o klijentima**.
 
@@ -212,111 +151,78 @@ Konfigurišite relaciju između vašeg entiteta aktivnosti klijenta i entiteta *
 
 ### <a name="provide-an-optional-list-of-benchmark-accounts"></a>Navedite opcionu listu referentnih poslovnih kontakata
 
-Dodajte listu svojih poslovnih klijenata i poslovnih kontakata koje želite da koristite kao reference. Dobićete [detalje o ovim referentnim poslovnim kontaktima](#review-a-prediction-status-and-results) uključujući njihov rezultat odlaska i najuticajnije karakteristike koje su uticale na njihovo predviđanje odlaska.
+Dodajte listu svojih poslovnih klijenata i poslovnih kontakata koje želite da koristite kao reference. Detalji [za ove referentne račune](#view-prediction-results) uključuju njihov churn rezultat i najuticajnije funkcije koje su uticale na njihove predviđanje.
 
 1. Izaberite **+Dodaj klijente**.
 
 1. Odaberite klijente koji služe kao referenca.
 
-1. Izaberite **Dalje** za nastavak.
+1. Izaberite **Sledeće**.
 
 ---
 
-### <a name="set-schedule-and-review-configuration"></a>Podesite raspored i pregledajte konfiguraciju
+### <a name="set-update-schedule"></a>Podešavanje rasporeda ažuriranja
 
-1. Podesite učestalost kako biste ponovo obučili model. Ovo podešavanje je važno za ažuriranje tačnosti predviđanja kako se unose novi podaci. Većina preduzeća može da obavi ponovnu obuku jednom mesečno i dobije precizna predviđanja.
+1. Za korak ažuriranja **podataka** odaberite učestalost prekvalifikacije modela. Ova postavka je važna za ažuriranje tačnosti predviđanja jer se novi podaci unose u uvide klijenata. Većina preduzeća može da obavi ponovnu obuku jednom mesečno i dobije precizna predviđanja.
 
 1. Izaberite **Sledeće**.
 
-1. Pregledajte konfiguraciju predviđanja. Možete se vratiti na prethodne korake ako izaberete **Uredi** ispod prikazane vrednosti. Ili možete da odaberete korak konfiguracije iz indikatora napretka.
+### <a name="review-and-run-the-model-configuration"></a>Pregledajte i pokrenite konfiguraciju modela
 
-1. Ako su sve vrednosti pravilno konfigurisane, izaberite **Sačuvaj i pokreni** da biste započeli proces predviđanja. Na kartici **Moja predviđanja** možete videti status predviđanja. Za završetak procesa može biti potrebno nekoliko sati, u zavisnosti od količine podataka korišćenih u predviđanju.
+Korak **"Rediguj** i pokreni" prikazuje rezime konfiguracije i pruža šansu za promene pre nego što kreirate predviđanje.
 
-## <a name="review-a-prediction-status-and-results"></a>Pregled statusa i rezultata predviđanja
+1. Izaberite **stavku Uredi** na bilo kom koraku da biste redigoli i napravili bilo kakve promene.
 
-1. Idite na **Obaveštavanje** > **Predviđanja** i izaberite karticu **Moja predviđanja**.
+1. Ako ste zadovoljni izborom, izaberite sačuvaj i pokreni **da biste počeli** da pokrenete model. Izaberite **Gotovo**. Kartica **"Moja predviđanja**" prikazuje se predviđanje se kreira sadržaj. Za završetak procesa može biti potrebno nekoliko sati, u zavisnosti od količine podataka korišćenih u predviđanju.
 
-1. Izaberite predviđanje koje želite da pregledate.
-   - **Naziv predviđanja**: Naziv predviđanja naveden pri njegovom kreiranju.
-   - **Tip predviđanja**: Tip modela koji se koristi za predviđanje
-   - **Izlazni entitet**: Naziv entiteta za skladištenje izlaza predviđanja. Možete pronaći entitet sa ovim imenom u delu **Podaci** > **Entiteti**.
-     U izlaznom entitetu, *ChurnScore* je predviđena verovatnoća gubitka klijenta a *IsChurn* je binarna oznaka zasnovana na graničnoj vrednosti parametra *ChurnScore* od 0,5. Podrazumevana granična vrednost možda neće raditi za vaš scenario. [Napravite novi segment](segments.md#create-a-segment) sa željenom graničnom vrednošću.
-     Nisu svi klijenti nužno aktivni klijenti. Neki od njih možda već duže vreme nisu imali nikakve aktivnosti i smatraju se već izgubljenim, na osnovu vaše definicije gubitka klijenta. Predviđanje rizika od gubitka za klijente koji su već otišli nije korisno jer nisu interesna ciljna grupa.
-   - **Predviđeno polje**: Ovo polje je popunjeno samo za neke tipove predviđanja i ne koristi se za predviđanje gubitka.
-   - **Status**: Status pokretanja predviđanja.
-        - **U redu**: Predviđanje čeka da se pokrenu drugi procesi.
-        - **Osvežavanje**: Predviđanje je trenutno pokrenuto da bi dalo rezultate koji će biti prosleđeni u izlazni entitet.
-        - **Nije uspelo**: Pokretanje predviđanja nije uspelo. Detaljnije informacije potražite u [evidenciji](manage-predictions.md#troubleshoot-a-failed-prediction).
-        - **Uspelo je**: Predviđanje je uspelo. Izaberite **Pregled** u okviru uspravne tri tačke da biste pregledali predviđanje
-   - **Izmenjeno:** Datum promene konfiguracije predviđanja.
-   - **Poslednje osvežavanje**: Datum kada je predviđanje osvežilo rezultate u izlaznom entitetu.
+[!INCLUDE [progress-details](includes/progress-details-pane.md)]
 
-1. Odaberite uspravne tri tačke pored predviđanja za koje želite da pregledate rezultate i izaberite **Pregled**.
+## <a name="view-prediction-results"></a>Prikaži predviđanje rezultate
 
-   :::image type="content" source="media/model-subs-view.PNG" alt-text="Pogledajte kontrolu da biste videli rezultate predviđanja.":::
+1. Idite na **obaveštajna** > **predviđanja**.
+
+1. Na kartici **Moja predviđanja** izaberite predviđanje želite da prikažete.
 
 # <a name="individual-consumers-b-to-c"></a>[Pojedinačni potrošači (B-to-C)](#tab/b2c)
 
-1. Postoje tri primarna odeljka podataka na stranici sa rezultatima:
-   - **Performanse modela obuke**: A, B ili V su mogući rezultati. Ovaj rezultat pokazuje performanse predviđanja i može vam pomoći da donesete odluku o korišćenju rezultata sačuvanih u izlaznom entitetu. Rezultati se određuju na osnovu sledećih pravila: 
-        - **A.** Kada je model tačno predvideo najmanje 50% ukupnih predviđanja i kada je procenat tačnih predviđanja za klijente koji su izgubljeni veći od osnovne stope za najmanje 10%.
-            
-        - **B.** Kada je model tačno predvideo najmanje 50% ukupnih predviđanja i kada je procenat tačnih predviđanja za klijente koji su izgubljeni veći od osnovne stope za najviše 10%.
-            
-        - **V.** Kada je model tačno predvideo manje 50% ukupnih predviđanja ili kada je procenat tačnih predviđanja za klijente koji su izgubljeni manji od osnovne stope.
-               
-        - **Osnovno** uzima unos vremenskog perioda predviđanja za model (na primer, godinu dana) i model stvara različite delove vremena deleći ga sa 2 dok ne dostigne mesec dana ili manje. Koristi ove delove za stvaranje poslovnog pravila za klijente koji nisu kupili ništa u ovom vremenskom okviru. Ovi klijenti se smatraju izgubljenim. Poslovno pravilo zasnovano na vremenu sa najvišom sposobnošću predviđanja ko će verovatno biti izgubljen uzima se kao osnovna linija.
-            
-    - **Verovatnoća gubitka (broj klijenata)**: Grupe klijenata na osnovu predviđenog rizika od gubitka. Ovi podaci mogu vam kasnije pomoći ako želite da kreirate segment klijenata sa visokim rizikom gubitka. Takvi segmenti vam pomažu da razumete gde treba da bude prekid članstva u segmentu.
-       
-    - **Najuticajniji faktori**: Mnogo je faktora koji se uzimaju u obzir pri kreiranju predviđanja. Svaki od faktora ima svoj značaj izračunat za agregirana predviđanja koja model kreira. Pomoću ovih faktora možete potvrditi rezultate predviđanja ili ove informacije kasnije možete koristiti za [kreiranje segmenata](segments.md) koji bi mogli da utiču na rizik od gubitka za klijente.
+Postoje tri primarna odeljka podataka na stranici sa rezultatima:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
 # <a name="business-accounts-b-to-b"></a>[Poslovni nalozi (B-to-B)](#tab/b2b)
 
-1. Postoje tri primarna odeljka podataka na stranici sa rezultatima:
-   - **Performanse modela obuke**: A, B ili V su mogući rezultati. Ovaj rezultat pokazuje performanse predviđanja i može vam pomoći da donesete odluku o korišćenju rezultata sačuvanih u izlaznom entitetu. Rezultati se određuju na osnovu sledećih pravila: 
-        - **A.** Kada je model tačno predvideo najmanje 50% ukupnih predviđanja i kada je procenat tačnih predviđanja za klijente koji su izgubljeni veći od osnovne stope za najmanje 10%.
-            
-        - **B.** Kada je model tačno predvideo najmanje 50% ukupnih predviđanja i kada je procenat tačnih predviđanja za klijente koji su izgubljeni veći od osnovne stope za najviše 10%.
-            
-        - **V.** Kada je model tačno predvideo manje 50% ukupnih predviđanja ili kada je procenat tačnih predviđanja za klijente koji su izgubljeni manji od osnovne stope.
-               
-        - **Osnovno** uzima unos vremenskog perioda predviđanja za model (na primer, godinu dana) i model stvara različite delove vremena deleći ga sa 2 dok ne dostigne mesec dana ili manje. Koristi ove delove za stvaranje poslovnog pravila za klijente koji nisu kupili ništa u ovom vremenskom okviru. Ovi klijenti se smatraju izgubljenim. Poslovno pravilo zasnovano na vremenu sa najvišom sposobnošću predviđanja ko će verovatno biti izgubljen uzima se kao osnovna linija.
-            
-    - **Verovatnoća gubitka (broj klijenata)**: Grupe klijenata na osnovu predviđenog rizika od gubitka. Ovi podaci mogu vam kasnije pomoći ako želite da kreirate segment klijenata sa visokim rizikom gubitka. Takvi segmenti vam pomažu da razumete gde treba da bude prekid članstva u segmentu.
-       
-    - **Najuticajniji faktori**: Mnogo je faktora koji se uzimaju u obzir pri kreiranju predviđanja. Svaki od faktora ima svoj značaj izračunat za agregirana predviđanja koja model kreira. Pomoću ovih faktora možete potvrditi rezultate predviđanja ili ove informacije kasnije možete koristiti za [kreiranje segmenata](segments.md) koji bi mogli da utiču na rizik od gubitka za klijente.
+Postoje tri primarna odeljka podataka na stranici sa rezultatima:
 
+[!INCLUDE [predict-transaction-results](includes/predict-transaction-results.md)]
 
-1. Za poslovne naloge, pronaći ćete stranicu sa informacijama **Analiza uticajnih funkcija**. Sadrži četiri odeljka sa podacima:
+Stranica sa **informacijama o analizi** uticajnih funkcija sadrži četiri odeljka podataka:
 
-    - Stavka izabrana u desnom oknu određuje sadržaj ove stranice. Izaberite stavku iz **Glavni klijenti** ili **Referentni klijenti**. Obe liste su poređane prema opadajućoj vrednosti ocene gubitka, bilo da je ocena samo za klijenta ili kombinovana ocena za klijente i sekundarni nivo poput kategorije proizvoda.
-        
-        - **Glavni klijenti**: Spisak 10 klijenata koji imaju najveći rizik od gubitka i najmanji rizik od gubitka na osnovu njihovih rezultata za gubitak. 
-        - **Referentni klijenti**: Lista do 10 klijenata koji su izabrani prilikom konfigurisanja modela.
- 
-    - **Rezultat gubitka**: Prikazuje rezultat gubitka za izabranu stavku u desnom oknu.
-    
-    - **Distribucija rizika od gubitka:** Prikazuje raspodelu rizika od gubitka po klijentima i percentil u kom se izabrani klijent nalazi. 
-    
-    - **Glavne karakteristike koje povećavaju i smanjuju rizik od gubitka:** Za izabranu stavku u desnom oknu, navedenih je glavnih pet karakteristika koje su povećale i smanjile rizik od gubitka. Za svaku uticajnu karakteristiku pronaći ćete vrednost karakteristike za tu stavku i njen uticaj na rezultat gubitka. Prikazana je i prosečna vrednost svake funkcije u segmentima klijenata sa niskim, srednjim i visokim gubitkom. Pomaže u boljoj kontekstualizaciji vrednosti najuticajnijih karakteristika za izabranu stavku i upoređivanju sa segmentima klijenata sa niskim, srednjim i visokim gubitkom.
+- U desnom oknu izaberite stavku od najboljih kupaca **ili** benchmark **kupaca**. Obe liste su poređane prema opadajućoj vrednosti ocene gubitka, bilo da je ocena samo za klijenta ili kombinovana ocena za klijente i sekundarni nivo poput kategorije proizvoda. Izabrana stavka određuje sadržaj na ovoj stranici.
 
-       - Nisko: poslovni kontakti ili kombinacije poslovnog kontakta i sekundarnog nivoa sa ocenom gubitka između 0 i 0,33
-       - Srednje: poslovni kontakti ili kombinacije poslovnih kontakata i sekundarnih nivoa sa ocenom gubitka između 0,33 i 0,66
-       - Visoko: poslovni kontakti ili kombinacije poslovnih kontakata i sekundarnih nivoa sa ocenom gubitka većom od 0,66
-    
-       Kada predviđate gubitak na nivou poslovnog kontakta, svi poslovni kontakti se uzimaju u obzir pri izvođenju prosečnih vrednosti karakteristika za segmente gubitka. Za predviđanja gubitka na sekundarnom nivou za svaki poslovni kontakt, izvođenje segmenata gubitka zavisi od sekundarnog nivoa stavke izabrane u bočnom oknu. Na primer, ako stavka ima sekundarni nivo kategorije proizvoda = kancelarijski materijal, onda se samo artikli koji imaju kancelarijski materijal kao kategoriju proizvoda uzimaju u obzir pri izvlačenju prosečnih vrednosti karakteristika za segmente gubitka. Ova logika se primenjuje kako bi se obezbedilo fer poređenje vrednosti karakteristika stavke sa prosečnim vrednostima u segmentima sa niskim, srednjim i visokim gubitkom.
+  - **Glavni klijenti**: Spisak 10 klijenata koji imaju najveći rizik od gubitka i najmanji rizik od gubitka na osnovu njihovih rezultata za gubitak.
+  - **Referentni klijenti**: Lista do 10 klijenata koji su izabrani prilikom konfigurisanja modela.
 
-       U nekim slučajevima, prosečna vrednost segmenata niske, srednje ili visoke stope gubitka je prazna ili nije dostupna jer ne postoje stavke koje pripadaju odgovarajućim segmentima gubitka na osnovu gornje definicije.
-       
-       > [!NOTE]
-       > Tumačenje vrednosti ispod kolona prosečno niske, srednje i visoke razlikuje se za karakteristike kategorija kao što su zemlja ili delatnost. Budući da se pojam vrednosti „prosečne“ funkcije ne primenjuje na funkcije kategorija, vrednosti u ovim kolonama su proporcija klijenata u segmentima sa niskim, srednjim ili visokim gubitkom koji imaju istu vrednost funkcije kategorije u poređenju sa stavkom izabranom na bočnoj tabli.
+- **Rezultat gubitka**: Prikazuje rezultat gubitka za izabranu stavku u desnom oknu.
+
+- **Churn raspodela rizika:** Prikazuje raspodelu churn rizika po kupcima i procenat u kojem se nalazi izabrani kupac.
+
+- **Glavne funkcije povećavaju i smanjuju rizik od churn-a:** Navodi prvih pet funkcija koje su povećale i smanjile rizik od čurne izabrane stavke u desnom oknu. Prikazuje vrednost funkcije za tu stavku i njen uticaj na churn rezultat za svaku uticajnu funkciju. Prikazana je i prosečna vrednost svake funkcije u segmentima klijenata sa niskim, srednjim i visokim gubitkom. Pomaže u boljoj kontekstualizaciji vrednosti najuticajnijih karakteristika za izabranu stavku i upoređivanju sa segmentima klijenata sa niskim, srednjim i visokim gubitkom.
+
+  - Nizak: konta ili kombinacije računa i sekundarnog nivoa sa churn rezultatom između 0 i 0,33.
+  - Srednji: računi ili kombinacije konta i sekundarnih nivoa sa churn rezultatom između 0,33 i 0,66.
+  - Visok: računi ili kombinacije konta i sekundarnih nivoa sa churn ocenom većom od 0,66.
+
+  Kada predviđate gubitak na nivou poslovnog kontakta, svi poslovni kontakti se uzimaju u obzir pri izvođenju prosečnih vrednosti karakteristika za segmente gubitka. Za predviđanja gubitka na sekundarnom nivou za svaki poslovni kontakt, izvođenje segmenata gubitka zavisi od sekundarnog nivoa stavke izabrane u bočnom oknu. Na primer, ako stavka ima sekundarni nivo kategorije proizvoda (kancelarijski materijal), prilikom derunja prosečnih vrednosti funkcija za churn segmente nisu uzete u obzir samo artikli koji imaju kancelarijski pribor kao kategoriju proizvoda. Ova logika se primenjuje kako bi se obezbedilo fer poređenje vrednosti karakteristika stavke sa prosečnim vrednostima u segmentima sa niskim, srednjim i visokim gubitkom.
+
+  U nekim slučajevima, prosečna vrednost segmenata niske, srednje ili visoke stope gubitka je prazna ili nije dostupna jer ne postoje stavke koje pripadaju odgovarajućim segmentima gubitka na osnovu gornje definicije.
+
+  Tumačenje vrednosti ispod kolona prosečno niske, srednje i visoke razlikuje se za karakteristike kategorija kao što su zemlja ili delatnost. Budući da se pojam vrednosti „prosečne“ funkcije ne primenjuje na funkcije kategorija, vrednosti u ovim kolonama su proporcija klijenata u segmentima sa niskim, srednjim ili visokim gubitkom koji imaju istu vrednost funkcije kategorije u poređenju sa stavkom izabranom na bočnoj tabli.
 
 ---
 
-## <a name="manage-predictions"></a>Upravljanje predviđanjima
-
-Predviđanja je moguće optimizovati, rešavati, osvežiti ili izbrisati. Pregledajte izveštaj o upotrebljivosti ulaznih podataka da biste saznali kako da predviđanje učinite bržim i pouzdanijim. Više informacija potražite u [upravljanju predviđanjima](manage-predictions.md).
+ > [!NOTE]
+ > U izlaznom entitetu za ovaj model, *ChurnScore prikazuje* predviđenu verovatnoću churn-a *, a IsChurn je binarna* oznaka *zasnovana na ChurnScore* sa 0,5 pragom. Ako ovaj podrazumevani prag ne funkcioniše za vaš scenario, kreirajte [novi segment sa](segments.md#create-a-segment) željenim pragom. Nisu svi klijenti nužno aktivni klijenti. Neki od njih možda već duže vreme nisu imali nikakve aktivnosti i smatraju se već izgubljenim, na osnovu vaše definicije gubitka klijenta. Predviđanje rizika od gubitka za klijente koji su već otišli nije korisno jer nisu interesna ciljna grupa.
+>
+> Da biste prikazali churn rezultat, idite na **entitete** > **podataka** i prikažite karticu sa podacima za izlazni entitet koji ste definisali za ovaj model.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]
