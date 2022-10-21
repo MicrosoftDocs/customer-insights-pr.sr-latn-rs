@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
-ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
+ms.openlocfilehash: 9433c411a2c7eb0db137c6392578993d47be82a2
+ms.sourcegitcommit: 8559ca47a22d1d7cd9be13531c2eaf0c1083942b
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9424326"
+ms.lasthandoff: 10/12/2022
+ms.locfileid: "9671268"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Rad sa Customer Insights podacima u platformi Microsoft Dataverse
 
@@ -63,6 +63,9 @@ Ovaj **Microsoft Dataverse** korak vam omogućava da povežete uvide klijenata s
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Omogući deljenje podataka Dataverse sa sopstvenim Azure Data Lake Storage (pregled)
 
 U [svom nalogu Azure Data Lake Storage](own-data-lake-storage.md) proverite da li korisnik koji podešava okruženje "Uvidi kupaca" ima **najmanje dozvole za skladištenje blob podataka čitalac** na `customerinsights` kontejneru u nalogu za skladištenje.
+
+> [!NOTE]
+> Deljenje podataka je primenljivo samo ako koristite sopstveni Azure Data Lake Storage nalog. Ova postavka nije dostupna ako okruženje "Uvidi kupaca" koristi podrazumevano Dataverse skladište.
 
 ### <a name="limitations"></a>Ograničenja
 
