@@ -2,7 +2,7 @@
 title: Podudaranje uslova za ujedinjenje podataka
 description: Podudarite entitete da biste kreirali objedinjene profile klijenata.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304674"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721538"
 ---
 # <a name="match-conditions-for-data-unification"></a>Podudaranje uslova za ujedinjenje podataka
 
@@ -130,12 +130,12 @@ Na primer, ako pravilo podudaranja kombinuje prezime, grad i datum rođenja, sis
 
 ### <a name="specify-custom-match-conditions"></a>Navedite uslove za prilagođeno podudaranje
 
-Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dostupne su četiri opcije:
+Navedite uslove koji zamenjuju podrazumevanu logiku podudaranja. Dostupne su četiri opcije:
 
 |Opcija  |Opis |Primer  |
 |---------|---------|---------|
-|Uvek se podudara     | Definiše vrednosti koje se uvek podudaraju.         |  Uvek se poklapaju *sa* Majkom *i MikeR-om*.       |
-|Nikad se ne podudara     | Definiše vrednosti koje se nikada ne podudaraju.        | Nikad se ne poklapaj *sa* Džonom i *Džonatanom*.        |
+|Uvek se podudara     | Definiše vrednosti za primarne ključeve koji se uvek podudaraju.         |  Uvek uparite red sa primarnim *ključem 12345* sa redom sa primarnim ključem *54321*.       |
+|Nikad se ne podudara     | Definiše vrednosti za primarne ključeve koji se nikada ne podudaraju.        | Nikada ne uparite red sa primarnim *ključem 12345* sa redom sa primarnim ključem *54321*.        |
 |Zaobilaženje            | Definiše vrednosti koje sistem uvek treba da ignoriše u fazi podudaranja. |  Zanemari vrednosti *11111 i Nepoznato* *tokom* podudaranja.        |
 |Mapiranje pseudonima    | Definisanje vrednosti koje sistem treba da uzme u obzir kao istu vrednost.         | Smatraj *da je Džo jednak sa Džozefom* *.*        |
 
@@ -143,17 +143,18 @@ Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dost
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Prilagođeno dugme":::
 
-1. Odaberite prilagođeni **tip i** izaberite stavku **Preuzmi predložak**. Potreban vam je poseban predložak za svaku opciju podudaranja.
+1. Odaberite prilagođeni **tip i** izaberite stavku **Preuzmi predložak**. Preimenujte predložak bez korišćenja razmaka. Koristite poseban predložak za svaku opciju podudaranja.
 
-1. Otvorite preuzetu datoteku predloška i popunite detalje. Predložak sadrži polja za specifikaciju entiteta i vrednosti primarnog ključa entiteta koje će se koristiti u prilagođenom podudaranju. Na primer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvek podudara sa primarnim ključem *34567* iz entiteta *Kontakt*, popunite predložak:
-    - Entity1: Prodaja
-    - Entity1Key: 12345
-    - Entity2: Kontakt
-    - Entity2Key: 34567
+1. Otvorite preuzetu datoteku predloška i popunite detalje. Predložak sadrži polja za specifikaciju entiteta i vrednosti primarnog ključa entiteta koje će se koristiti u prilagođenom podudaranju. Imena entiteta otiиu mala i velika slova. Na primer, ako želite da se primarni ključ *12345* iz entiteta *Prodaja* uvek podudara sa primarnim ključem *34567* iz entiteta *Kontakt*, popunite predložak:
+   - Entity1: Prodaja
+   - Entity1Key: 12345
+   - Entity2: Kontakt
+   - Entity2Key: 34567
 
    Ista datoteka predloška može odrediti zapise prilagođenih podudaranja iz više entiteta.
 
-   Ako želite da navedete prilagođeno podudaranje za uklanjanje duplikata na entitetu, navedite isti entitet kao i Entity1 i Entity2 i postavite različite vrednosti primarnog ključa.
+   > [!NOTE]
+   > Ako želite da navedete prilagođeno podudaranje za uklanjanje duplikata na entitetu, navedite isti entitet kao i Entity1 i Entity2 i postavite različite vrednosti primarnog ključa. Morate definisati najmanje jedno pravilo deduplikacije entitetu da biste koristili prilagođeno podudaranje.
 
 1. Nakon dodavanja svih premošćivanja, sačuvajte datoteku predloška.
 
@@ -169,6 +170,8 @@ Možete da precizirate uslove koji zamene podrazumevanu logiku podudaranja. Dost
    - Za **bajpas** **ili mapiranje pseudonima izaberite** uredi **postojeće** pravilo podudaranja ili kreirajte novo pravilo. U padajućem meniju Normalizacije odaberite opciju mapiranja **prilagođenog bajpasa** **ili pseudonima i** izaberite **gotovo**.
 
 1. U prilagođenom **oknu** izaberite stavku **Gotovo** da biste primenili prilagođenu konfiguraciju podudaranja.
+
+   Svaka unete datoteke predloška je sopstvena izvor podataka. Ako su otkriveni zapisi kojima je potreban poseban tretman podudaranja, ažurirajte odgovarajuće izvor podataka. Ispravka će biti korišćena tokom sledećeg procesa ujedinjenja. Na primer, identifikujete blizance sa skoro istim imenom koji žive na istoj adresi koja je objedinjena kao jedna osoba. Ažurirajte izvor podataka biste identifikovali blizance kao odvojene, jedinstvene zapise.
 
 > [!div class="nextstepaction"]
 > [Sledeći korak: Objedinjavanje polja](merge-entities.md)
