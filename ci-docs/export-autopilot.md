@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 449d2c5e32697e4a5d2c9dff4a5a1cbdb26aeb4d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: b4b14ba9de2c7e20175fac664a705f2212a411fd
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195077"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724819"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Izvoz segmenata u Autopilot (verzija za pregled)
 
@@ -28,6 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u Autopilot i koristite ih za m
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do 100.000 profila kupaca po izvozu u Autopilot, što može da potraje i do nekoliko sati. Broj profila klijenata koje možete da izvezete u Autopilot zavisi od ugovora sa autopilotom.
 - Samo segmenti.
 

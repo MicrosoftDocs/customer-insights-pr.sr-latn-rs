@@ -1,12 +1,12 @@
 ---
 title: Aktivnosti kupaca ili poslovnih kontakata
 description: Definišite aktivnosti kupaca ili poslovnih kontakata i prikažite ih na vremenskoj osi profila klijenata.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,12 +17,12 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304122"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723798"
 ---
 # <a name="customer-or-business-contact-activities"></a>Aktivnosti kupaca ili poslovnih kontakata
 
@@ -41,6 +41,9 @@ Entitet mora imati najmanje jedan atribut tipa "Datum" da bi bio uključen **u**
    - **Naziv aktivnosti**: Izaberite ime za svoju aktivnost.
    - **Entitet aktivnosti: Izaberite** entitet koji uključuje transakcione podatke ili podatke o aktivnostima.
    - **Primarni ključ**: Izaberite polje koje jedinstveno identifikuje zapis. Ono ne bi smelo da sadrži duplikate, prazne vrednosti ili vrednosti koje nedostaju.
+
+     > [!NOTE]
+     > Primarni ključ za svaki red mora ostati dosledan u izvor podataka osvežava. Ako se primarni ključ za red ažurira u osvežavanju izvor podataka, on kreira duplikate u izlaznom entitetu aktivnosti. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Podesite podatke o aktivnosti sa imenom, entitetom i primarnim ključem.":::
 
@@ -132,7 +135,15 @@ Za poslovne naloge (B-na-B), koristite *entitet ContactProfile* da biste uhvatil
 
 1. Izaberite **opciju Dodaj aktivnost**.
 
-1. Imenuj aktivnost, izaberite entitet izvorne aktivnosti i izaberite primarni ključ entiteta aktivnosti.
+1. U koraku **podaci o** aktivnosti unesite sledeće informacije:
+
+   - **Naziv aktivnosti**: Izaberite ime za svoju aktivnost.
+   - **Entitet aktivnosti: Izaberite** entitet koji uključuje transakcione podatke ili podatke o aktivnostima.
+   - **Primarni ključ**: Izaberite polje koje jedinstveno identifikuje zapis. Ono ne bi smelo da sadrži duplikate, prazne vrednosti ili vrednosti koje nedostaju.
+
+     > [!NOTE]
+     > Primarni ključ za svaki red mora ostati dosledan u izvor podataka osvežava. Ako se primarni ključ za red ažurira u osvežavanju izvor podataka, on kreira duplikate u izlaznom entitetu aktivnosti. 
+
 
 1. U odnosi **koraku** kreirajte indirektnu relaciju između izvornih podataka aktivnosti sa nalozima, koristeći podatke o kontaktu kao posrednički entitet. Više informacija potražite u direktnim [i indirektnim putanjama odnosa](relationships.md#relationship-paths).
    - Primer relacije za aktivnost koja se zove "Nabavke *"*:

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196181"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725187"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Izvoz segmenata u Omnisend (verzija za pregled)
 
@@ -28,6 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u Omnisend i koristite ih za ma
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do milion profila kupaca po izvozu u Omnisend, što može da potraje i do četiri sata. Broj profila klijenata koje možete izvesti u Omnisend zavisi od vašeg ugovora sa Omnisend-om.
 - Samo segmenti.
 

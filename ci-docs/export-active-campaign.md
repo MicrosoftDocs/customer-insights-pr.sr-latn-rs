@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 178d2df8edf1abcec72664e19d73a88f2b97f12d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e62888a6d618fb1154890e607d8c23d3767d35f7
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195584"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725417"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Izvoz segmenata u ActiveCampaign (verzija za pregled)
 
@@ -29,6 +29,7 @@ Izvezite segmente objedinjenih profila kupaca u ActiveCampaign i koristite ih za
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do milion profila klijenata po izvozu u ActiveCampaign, što može da potraje i do 90 minuta. Broj profila klijenata koje možete izvesti u ActiveCampaign zavisi od vašeg ugovora sa ActiveCampaign-om.
 - Samo segmenti.
 

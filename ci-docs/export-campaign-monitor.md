@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196319"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724701"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Izvoz segmenata u Campaign Monitor (verzija za pregled)
 
@@ -29,6 +29,7 @@ Izvezite segmente objedinjenih profila klijenata u Campaign Monitor i koristite 
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do milion profila klijenata po izvozu u nadgledanje kampanje, što može da potraje i do 20 minuta. Broj profila klijenata koje možete da izvezete u nadgledanje kampanje zavisi od ugovora sa nadgledanje kampanje.
 - Samo segmenti.
 

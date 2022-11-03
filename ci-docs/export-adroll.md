@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 8110eab199920ab8fc2ea15678139faf264a242a
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 81adad4caf2d4c6f792bf920b29fc7c67eef42b0
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195767"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724729"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Izvoz segmenata u AdRoll (verzija za pregled)
 
@@ -28,6 +28,7 @@ Izvezite segmente objedinjenih profila klijenata u AdRoll i koristite ih za ogla
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do 250.000 profila kupaca po izvozu u AdRoll, što može da potraje i do 10 minuta. Broj profila klijenata koje možete da izvezete u AdRoll zavisi od ugovora sa AdRoll- om.
 - Samo segmenti. Segment mora da sadrži najmanje 100 profila kupaca.
 

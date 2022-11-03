@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0281be288b2c4d9e5da7ad8e2ed25f7b51b8498e
-ms.sourcegitcommit: f959c85871777e5f4eab289e91b2fd114cd72153
+ms.openlocfilehash: b34f1d54fa499f6c6b80fa547a8aaf61af3b35a1
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/23/2022
-ms.locfileid: "9588936"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725371"
 ---
 # <a name="export-segments-to-hubspot-preview"></a>Izvoz segmenata u HubSpot (pregled)
 
@@ -27,6 +27,7 @@ Izvezite segmente objedinjenih profila kupaca u HubSpot i koristite ih za market
 
 ## <a name="known-limitations"></a>Poznata ograničenja
 
+- Privatna veza u kombinaciji sa "Donesi sopstveno skladište" (BYOS) nije podržana.
 - Do 100'000 profila kupaca po izvozu u HubSpot, što može da potraje i do 15 minuta. Broj profila klijenata koje možete da izvezete u HubSpot zavisi i ograničen je na ugovor sa hubSpot-om.
 - Samo segmenti.
 
