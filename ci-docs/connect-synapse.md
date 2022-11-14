@@ -9,16 +9,16 @@ ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 7bc0c3614e6dd39fbd65ae098ed679d95d09de9d
-ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
+ms.openlocfilehash: 675fd03c44a7a7a492b111895d79c2e77f93a5b5
+ms.sourcegitcommit: 4ba74816ebfa46412c64c40a61e1f31c4ccc40f2
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 08/11/2022
-ms.locfileid: "9259815"
+ms.lasthandoff: 11/03/2022
+ms.locfileid: "9738173"
 ---
 # <a name="connect-an-azure-synapse-analytics-data-source-preview"></a>Povezivanje izvor podataka Azure Synapse Analytics (pregled)
 
-Azure Synapse Analytics je usluga analitike preduzeća koja ubrzava vreme na uvide u skladištima podataka i velikim sistemima podataka. Azure Synapse Analytics okuplja najbolje od SQL tehnologija koje se koriste u skladištu podataka preduzeća, Spark tehnologije koje se koriste za velike podatke, Data Explorer za analitiku evidencije i vremenskih serija, cevovode za integraciju podataka i ETL/ELT i duboku integraciju sa drugim Azure uslugama Power BI kao što su, Cosmos DB i AzureML.
+Azure Synapse Analytics je usluga analitike preduzeća koja ubrzava vreme na uvide u skladištima podataka i velikim sistemima podataka. Azure Synapse Analytics okuplja najbolje od SQL tehnologija koje se koriste u skladištu podataka preduzeća, Spark tehnologije koje se koriste za velike podatke, Data Explorer za analitiku evidencije i vremenskih serija, cevovode za integraciju podataka i ETL/ELT i duboku integraciju sa drugim Azure uslugama Power BI kao što su , Cosmos DB i AzureML.
 
 Više informacija potražite u članku [Azure Synapse Pregled](/azure/synapse-analytics/overview-what-is).
 
@@ -45,7 +45,7 @@ Više informacija potražite u članku [Azure Synapse Pregled](/azure/synapse-an
 
 - *[Upravljanom identitetu Azure Synapse radnog prostora](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* su potrebne dozvole **saradnika za podatke skladišta blob objekta** na Azure Data Lake Storage Gen2 nalogu na kojem se podaci nalaze i povezani su sa Azure Synapse radnim prostorom. Saznajte više o [korišćenju Azure portala za dodeljivanje Azure uloge za pristup blob objektu i podacima u redu](/azure/storage/common/storage-auth-aad-rbac-portal) i [dozvolama saradnika za podatke skladišta blob objekta](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Na radnom Azure Synapse prostoru, direktoru *usluge za uvide klijenata* koji je "Dynamics 365 AI za uvide klijenata" **potrebna je uloga administratora** sinapse. Za više informacija, pogledajte [Kako se postavlja kontrola pristupa za vaš Synapse radni prostor](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Na radnom Azure Synapse prostoru, direktoru *usluge za uvide klijenata* koji je "Dynamics 365 AI za uvide klijenata" **potrebna je uloga administratora** sinapse. Korisniku **je** potrebna najmanje **sinapsa saradnik** dodeljena za radni prostor. Za više informacija, pogledajte [Kako se postavlja kontrola pristupa za vaš Synapse radni prostor](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 - Ako vaše okruženje "Uvid u kupce" skladišti [podatke u sopstvenom Azure Data Lake Storage](own-data-lake-storage.md), korisniku koji podešavanje Azure Synapse Analytics veze treba barem ugrađenu **čitalac ulogu** na Data Lake Storage nalogu. Za više informacija, pogledajte [Dodeljivanje Azure uloga pomoću Azure portala](/azure/role-based-access-control/role-assignments-portal).
 
