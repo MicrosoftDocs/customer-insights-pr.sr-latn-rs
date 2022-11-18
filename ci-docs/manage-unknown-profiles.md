@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: MT
 ms.contentlocale: sr-Latn-RS
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556413"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776838"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Upravljanje nepoznatim profilima pomoću uvida klijenata
 
-Korisnici Interneta su često neidentifikovani i anonimni na mreži. Ako nisu prijavljeni zato što koriste različite uređaje ili kanale, to čak važi i za najlojalnije kupce. S tim što će kolačići nezavisnih proizvođača verovatno uskoro nestati, upravljanje željenim opcijama korisnika na osnovu podataka prvog proizvođača je od ključnog značaja za postizanje različitih personalizovanih iskustava. Za mnoge brendove, poznati ili autentifikacijski korisnici su manjina uprkos rastućim očekivanjima kupaca oko personalizacije. Sjajno je za preduzeća da znaju ko su njihovi klijenti, na osnovu pouzdanih, detaljnih i objedinjenih podataka.
+Korisnici Interneta su često neidentifikovani ili anonimni na mreži. Čak i najodaniji kupci mogu izgledati "nepoznati" ako nisu prijavljeni na različitim uređajima. Za mnoge brendove, poznati ili autentifikacijski korisnici su manjina uprkos rastućim očekivanjima kupaca oko personalizacije. S obzirom na budućnost kolačića nezavisnih proizvođača, upravljanje željenim opcijama korisnika na osnovu podataka prvog proizvođača je od ključnog značaja za postizanje personalizovanih iskustava.
 
-Pamćenje personalizacije zavisi od bogatstva i potpunosti vaših podataka o korisnicima i Uvidi klijenata vam pomažu da ostvarite ove ciljeve. Ne morate da ograničavate ili zaustavljate korišćenje podataka prikupljenih na početku put koji pređe korisnik. Uvidi klijenata vam omogućava da donesete sopstvene podatke da biste kreirali korisnički profil za nepoznate korisnike. Zatim možete da koristite taj profil za dalje radnje, uprkos tome što nedostaju kontakt informacije. Uvezite podatke prve strane iz izvora kao što su Veb, mobilni ili CRM sistemi u uvide klijenata da biste neprekidno obogatili profile klijenata. Dok ujedinjujete više interakcija, pretvorite [nepoznatog *kupca* u poznatog *kupca*](unknown-to-known.md).
+Personalizacija za pamćenje zavisi od toga koliko dobro poznajete kupca i Uvidi klijenata vam pomažu u tome tako što pratite sve svoje kupce.  Ne morate da ograničavate ili zaustavljate korišćenje podataka prikupljenih na početku put koji pređe korisnik. Uvidi klijenata vam omogućava da donesete sopstvene podatke da biste kreirali korisnički profil za nepoznate korisnike. Zatim možete da koristite taj profil za dalje radnje, uprkos tome što nedostaju kontakt informacije. Uvezite podatke prve strane iz izvora kao što su Veb, mobilni ili CRM sistemi u uvide klijenata da biste neprekidno obogatili profile klijenata. Dok ujedinjujete više interakcija, pretvorite [nepoznatog *kupca* u poznatog *kupca*](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Uzorak scenarija
 
-E-trgovina je najbrže rastući kanal u poslednjoj deceniji. Pretpostavimo da korisnik koristi mobilni uređaj za pregledanje vaše lokacije za e-trgovinu. Veb lokacija dodeljuje posetiocu "mobile_guest123" kao jedinstveni identifikator i počinjete da prikupljate aktivnosti ponašanja na osnovu njihove aktivnosti na mreži. Na primer, koje stranice su posetili, koliko su vremena potrošili na te stranice ili na koje veze su kliknuli. Ne znate njihovo ime ili e-adresu, ali ti podaci mogu da pomognu brendovima da pruže smislen uvid u vezi sa ovim određenim korisnikom. Zauzvrat, te uvide možete da stavite na posao sledeći put kada korisnik poseti sajt. Query Customer Insights for "mobile_guest123" to retrieve the user's segment list, such as "organic", "mobile pre-order customers", "high-value customers" itd., or retrieve the profile to create personalized web experiences. Podatke možete da izvezete i u bilo koji sistem aktivacije da biste uradili isto.
+Pretpostavimo da korisnik koristi mobilni uređaj za pregledanje vaše lokacije za e-trgovinu. Veb lokacija dodeljuje posetiocu "mobile_guest123" kao jedinstveni identifikator i počinjete da prikupljate aktivnosti ponašanja na osnovu njihove aktivnosti na mreži. Na primer, koje stranice su posetili, koliko su vremena potrošili na te stranice ili na koje veze su kliknuli. Ne znate njihovo ime ili e-adresu, ali ti podaci mogu da pomognu brendovima da pruže smislen uvid u vezi sa ovim određenim korisnikom. Zauzvrat, te uvide možete da stavite na posao sledeći put kada korisnik poseti sajt. Query Customer Insights for "mobile_guest123" to retrieve the user's segment list, such as "organic", "mobile pre-order customers", "high-value customers" itd., or retrieve the profile to create personalized web experiences. Podatke možete da izvezete i u bilo koji sistem aktivacije da biste uradili isto.
 
 ## <a name="prerequisites"></a>Preduslovi
 
 - Ingest first-party data into Customer Insights
 - Svaki entitet ima jedinstveni ID koji je postavljen kao primarni ključ
 - Svaki entitet sa primarnim ključem za personalizaciju je objedinjen
-- Sistem za upravljanje sadržajem Vaše Web lokacije je sposoban da koristi API(za personalizaciju veba na osnovu direktne komunikacije sa Customer Insights)
+- Sistem za upravljanje sadržajem vaše Web lokacije može da koristi API (za personalizaciju Veba na osnovu direktne komunikacije sa customer Insights)
 
 Sledeća tabela prikazuje pojednostavljeni primer kako Web događaji visoke vrednosti mogu biti uhvaćeni.
 
